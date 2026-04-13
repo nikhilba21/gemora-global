@@ -22,9 +22,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
-import type { Testimonial } from "../../backend";
 import AdminLayout from "../../components/AdminLayout";
 import { useActor } from "../../hooks/useActor";
+import type { Testimonial } from "../../types";
 
 type TForm = {
   name: string;
@@ -119,12 +119,12 @@ export default function AdminTestimonials() {
 
   return (
     <AdminLayout>
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <h1 className="font-serif text-2xl font-bold">Testimonials</h1>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button
-              className="bg-primary text-primary-foreground"
+              className="bg-primary text-primary-foreground w-full sm:w-auto"
               onClick={() => {
                 setEditing(null);
                 setForm(EMPTY);
@@ -135,7 +135,7 @@ export default function AdminTestimonials() {
               Add Testimonial
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="mx-4">
             <DialogHeader>
               <DialogTitle>{editing ? "Edit" : "Add"} Testimonial</DialogTitle>
             </DialogHeader>
@@ -213,55 +213,59 @@ export default function AdminTestimonials() {
           </DialogContent>
         </Dialog>
       </div>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Company</TableHead>
-            <TableHead>Country</TableHead>
-            <TableHead>Rating</TableHead>
-            <TableHead>Active</TableHead>
-            <TableHead>Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {testimonials?.map((t, i) => (
-            <TableRow key={String(t.id)}>
-              <TableCell>{t.name}</TableCell>
-              <TableCell>{t.company}</TableCell>
-              <TableCell>{t.country}</TableCell>
-              <TableCell>{String(t.rating)}★</TableCell>
-              <TableCell>
-                {t.active ? (
-                  <Badge className="bg-green-500/20 text-green-400">Yes</Badge>
-                ) : (
-                  <Badge variant="outline">No</Badge>
-                )}
-              </TableCell>
-              <TableCell>
-                <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => openEdit(t)}
-                    data-ocid={`admin.edit_button.${i + 1}`}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="destructive"
-                    onClick={() => deleteMut.mutate(t.id)}
-                    data-ocid={`admin.delete_button.${i + 1}`}
-                  >
-                    Delete
-                  </Button>
-                </div>
-              </TableCell>
+      <div className="overflow-x-auto rounded-lg border border-border">
+        <Table className="min-w-[480px]">
+          <TableHeader>
+            <TableRow>
+              <TableHead>Name</TableHead>
+              <TableHead>Company</TableHead>
+              <TableHead>Country</TableHead>
+              <TableHead>Rating</TableHead>
+              <TableHead>Active</TableHead>
+              <TableHead>Actions</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {testimonials?.map((t, i) => (
+              <TableRow key={String(t.id)}>
+                <TableCell>{t.name}</TableCell>
+                <TableCell>{t.company}</TableCell>
+                <TableCell>{t.country}</TableCell>
+                <TableCell>{String(t.rating)}★</TableCell>
+                <TableCell>
+                  {t.active ? (
+                    <Badge className="bg-green-500/20 text-green-400">
+                      Yes
+                    </Badge>
+                  ) : (
+                    <Badge variant="outline">No</Badge>
+                  )}
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => openEdit(t)}
+                      data-ocid={`admin.edit_button.${i + 1}`}
+                    >
+                      Edit
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      onClick={() => deleteMut.mutate(t.id)}
+                      data-ocid={`admin.delete_button.${i + 1}`}
+                    >
+                      Delete
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     </AdminLayout>
   );
 }

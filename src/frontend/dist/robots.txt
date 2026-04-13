@@ -1,5 +1,5 @@
 # robots.txt — gemoraglobal-tje.caffeine.xyz
-# Generated: March 2026
+# Updated: April 2026
 
 User-agent: *
 Allow: /
@@ -13,6 +13,7 @@ Disallow: /account/
 Disallow: /api/
 Disallow: /*.json$
 Disallow: /cdn-cgi/
+Disallow: /blog/draft-*
 
 # Allow all major search engine crawlers explicitly
 User-agent: Googlebot

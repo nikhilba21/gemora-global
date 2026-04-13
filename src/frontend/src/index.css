@@ -19,38 +19,38 @@
 @layer base {
   :root {
     --radius: 0.375rem;
-    --background: 0.12 0.008 285;
-    --foreground: 0.96 0.01 85;
-    --card: 0.16 0.01 285;
-    --card-foreground: 0.96 0.01 85;
-    --popover: 0.16 0.01 285;
-    --popover-foreground: 0.96 0.01 85;
-    --primary: 0.78 0.12 75;
-    --primary-foreground: 0.12 0.008 285;
-    --secondary: 0.22 0.012 285;
-    --secondary-foreground: 0.96 0.01 85;
-    --muted: 0.22 0.012 285;
-    --muted-foreground: 0.65 0.02 85;
-    --accent: 0.78 0.12 75;
-    --accent-foreground: 0.12 0.008 285;
-    --destructive: 0.577 0.245 27.325;
-    --destructive-foreground: 0.985 0 0;
-    --border: 0.28 0.015 285;
-    --input: 0.28 0.015 285;
-    --ring: 0.78 0.12 75;
-    --chart-1: 0.78 0.12 75;
-    --chart-2: 0.6 0.118 184.704;
-    --chart-3: 0.398 0.07 227.392;
-    --chart-4: 0.828 0.189 84.429;
-    --chart-5: 0.769 0.188 70.08;
-    --sidebar: 0.14 0.009 285;
-    --sidebar-foreground: 0.96 0.01 85;
-    --sidebar-primary: 0.78 0.12 75;
-    --sidebar-primary-foreground: 0.12 0.008 285;
-    --sidebar-accent: 0.22 0.012 285;
-    --sidebar-accent-foreground: 0.96 0.01 85;
-    --sidebar-border: 0.28 0.015 285;
-    --sidebar-ring: 0.78 0.12 75;
+    --background: 0.98 0.002 0;
+    --foreground: 0.24 0.14 264;
+    --card: 0.99 0.001 0;
+    --card-foreground: 0.24 0.14 264;
+    --popover: 0.99 0.001 0;
+    --popover-foreground: 0.24 0.14 264;
+    --primary: 0.24 0.14 264;
+    --primary-foreground: 0.99 0.001 0;
+    --secondary: 0.68 0.15 232;
+    --secondary-foreground: 0.99 0.001 0;
+    --muted: 0.92 0.005 0;
+    --muted-foreground: 0.5 0.08 264;
+    --accent: 0.75 0.17 70;
+    --accent-foreground: 0.24 0.14 264;
+    --destructive: 0.6 0.22 27;
+    --destructive-foreground: 0.99 0.001 0;
+    --border: 0.9 0.008 0;
+    --input: 0.95 0.003 0;
+    --ring: 0.75 0.17 70;
+    --chart-1: 0.24 0.14 264;
+    --chart-2: 0.75 0.17 70;
+    --chart-3: 0.68 0.15 232;
+    --chart-4: 0.6 0.22 27;
+    --chart-5: 0.5 0.08 264;
+    --sidebar: 0.24 0.14 264;
+    --sidebar-foreground: 0.99 0.001 0;
+    --sidebar-primary: 0.75 0.17 70;
+    --sidebar-primary-foreground: 0.24 0.14 264;
+    --sidebar-accent: 0.75 0.17 70;
+    --sidebar-accent-foreground: 0.24 0.14 264;
+    --sidebar-border: 0.35 0.12 264;
+    --sidebar-ring: 0.75 0.17 70;
   }
 
   * {
@@ -67,5 +67,137 @@
   h4,
   h5 {
     font-family: "Playfair Display", Georgia, serif;
+  }
+
+  /* ── Image Optimization — Core Web Vitals ──────────────── */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Content-visibility for lazy images to improve INP/LCP */
+  img[loading="lazy"] {
+    content-visibility: auto;
+  }
+}
+
+/* ============================================================
+   Scroll-reveal animations
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.65s ease both;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   Kanhai-inspired B2B design tokens & utility classes
+   ============================================================ */
+:root {
+  --shadow-card: 0 2px 8px oklch(0 0 0 / 0.08);
+  --shadow-elevated: 0 8px 24px oklch(0 0 0 / 0.12);
+  --shadow-moq: 0 4px 12px oklch(0.6 0.22 27 / 0.25);
+  --gradient-gold-accent: linear-gradient(
+    135deg,
+    oklch(0.75 0.17 70),
+    oklch(0.68 0.15 70)
+  );
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-moq {
+    box-shadow: var(--shadow-moq);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .badge-moq {
+    @apply absolute bottom-3 right-3 bg-destructive text-destructive-foreground px-2.5 py-1.5 rounded text-xs font-semibold shadow-moq;
+  }
+
+  .product-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-card hover:shadow-elevated transition-smooth border border-border;
+  }
+
+  .header-transparent-scroll {
+    @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-smooth;
+    background-color: oklch(var(--background) / 0.4);
+  }
+
+  .header-solid-scroll {
+    @apply fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-elevated;
+  }
+
+  .nav-link-active {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-accent transition-smooth;
+  }
+
+  .announcement-strip {
+    @apply w-full bg-accent text-accent-foreground py-2 px-4 text-center text-sm font-medium flex items-center justify-center gap-2;
+  }
+
+  .hero-slider {
+    @apply w-full h-96 md:h-[500px] lg:h-[600px] relative overflow-hidden rounded-none;
+  }
+
+  .product-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6;
+  }
+
+  .section-heading {
+    @apply text-2xl md:text-3xl font-serif font-bold text-foreground mb-6;
+  }
+
+  .cta-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-smooth hover:opacity-90 active:opacity-80;
+  }
+
+  .cta-secondary {
+    @apply bg-accent text-accent-foreground px-6 py-3 rounded-lg font-semibold transition-smooth hover:opacity-90 active:opacity-80;
+  }
+
+  .trust-badge {
+    @apply inline-flex items-center gap-2 bg-muted/30 text-foreground px-3 py-2 rounded-full text-xs font-medium border border-border;
   }
 }

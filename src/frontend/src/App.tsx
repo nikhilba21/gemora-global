@@ -33,6 +33,37 @@ import AdminSystemSettings from "./pages/admin/AdminSystemSettings";
 import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminWebsiteSettings from "./pages/admin/AdminWebsiteSettings";
 import AdminWhatsAppLeads from "./pages/admin/AdminWhatsAppLeads";
+import ArtificialJewelleryExporter from "./pages/seo/ArtificialJewelleryExporter";
+import ArtificialJewelleryWholesalerIndia from "./pages/seo/ArtificialJewelleryWholesalerIndia";
+import BridalImitationJewellery from "./pages/seo/BridalImitationJewellery";
+import BridalImitationJewelleryWholesale from "./pages/seo/BridalImitationJewelleryWholesale";
+import BridalJewelleryWholesale from "./pages/seo/BridalJewelleryWholesale";
+import BulkJewellerySupplier from "./pages/seo/BulkJewellerySupplier";
+import CustomJewelleryManufacturer from "./pages/seo/CustomJewelleryManufacturer";
+import FashionJewelleryExporter from "./pages/seo/FashionJewelleryExporter";
+import FashionJewelleryExporterIndia from "./pages/seo/FashionJewelleryExporterIndia";
+import FashionJewelleryManufacturerIndia from "./pages/seo/FashionJewelleryManufacturerIndia";
+import ImitationJewelleryExporterIndia from "./pages/seo/ImitationJewelleryExporterIndia";
+import ImitationJewelleryManufacturerIndia from "./pages/seo/ImitationJewelleryManufacturerIndia";
+import ImitationJewelleryManufacturerJaipur from "./pages/seo/ImitationJewelleryManufacturerJaipur";
+import ImitationJewellerySupplierUSA from "./pages/seo/ImitationJewellerySupplierUSA";
+import JewelleryExporterAustralia from "./pages/seo/JewelleryExporterAustralia";
+import JewelleryExporterCanada from "./pages/seo/JewelleryExporterCanada";
+import JewelleryExporterEurope from "./pages/seo/JewelleryExporterEurope";
+import JewelleryExporterSingapore from "./pages/seo/JewelleryExporterSingapore";
+import JewelleryExporterToUSA from "./pages/seo/JewelleryExporterToUSA";
+import JewelleryExporterUAE from "./pages/seo/JewelleryExporterUAE";
+import JewellerySupplierUK from "./pages/seo/JewellerySupplierUK";
+import KundanJewelleryWholesale from "./pages/seo/KundanJewelleryWholesale";
+import MeenakariJewelleryWholesale from "./pages/seo/MeenakariJewelleryWholesale";
+import OxidisedJewellerySupplier from "./pages/seo/OxidisedJewellerySupplier";
+import OxidisedJewelleryWholesale from "./pages/seo/OxidisedJewelleryWholesale";
+import PrivateLabelJewelleryIndia from "./pages/seo/PrivateLabelJewelleryIndia";
+import TempleJewelleryManufacturer from "./pages/seo/TempleJewelleryManufacturer";
+import WholesaleImitationJewellery from "./pages/seo/WholesaleImitationJewellery";
+import WholesaleImitationJewelleryIndia from "./pages/seo/WholesaleImitationJewelleryIndia";
+import WholesaleJewelleryRajasthan from "./pages/seo/WholesaleJewelleryRajasthan";
+import WholesaleJewelleryUK from "./pages/seo/WholesaleJewelleryUK";
 
 function VisitTracker() {
   const { actor } = useActor();
@@ -180,6 +211,130 @@ export default function App() {
               <AdminCatalogue />
             </AdminGuard>
           }
+        />
+        <Route
+          path="/imitation-jewellery-exporter-india"
+          element={<ImitationJewelleryExporterIndia />}
+        />
+        <Route
+          path="/wholesale-imitation-jewellery"
+          element={<WholesaleImitationJewellery />}
+        />
+        <Route
+          path="/bridal-jewellery-wholesale"
+          element={<BridalJewelleryWholesale />}
+        />
+        <Route
+          path="/fashion-jewellery-exporter"
+          element={<FashionJewelleryExporter />}
+        />
+        <Route
+          path="/custom-jewellery-manufacturer"
+          element={<CustomJewelleryManufacturer />}
+        />
+        <Route
+          path="/wholesale-imitation-jewellery-india"
+          element={<WholesaleImitationJewelleryIndia />}
+        />
+        <Route
+          path="/fashion-jewellery-manufacturer-india"
+          element={<FashionJewelleryManufacturerIndia />}
+        />
+        <Route
+          path="/bridal-imitation-jewellery-wholesale"
+          element={<BridalImitationJewelleryWholesale />}
+        />
+        <Route
+          path="/bulk-jewellery-supplier"
+          element={<BulkJewellerySupplier />}
+        />
+        <Route
+          path="/jewellery-exporter-to-usa"
+          element={<JewelleryExporterToUSA />}
+        />
+        <Route
+          path="/jewellery-supplier-uk"
+          element={<JewellerySupplierUK />}
+        />
+        <Route
+          path="/jewellery-exporter-uae"
+          element={<JewelleryExporterUAE />}
+        />
+        <Route
+          path="/private-label-jewellery-india"
+          element={<PrivateLabelJewelleryIndia />}
+        />
+        <Route
+          path="/kundan-jewellery-wholesale"
+          element={<KundanJewelleryWholesale />}
+        />
+        <Route
+          path="/temple-jewellery-manufacturer"
+          element={<TempleJewelleryManufacturer />}
+        />
+        <Route
+          path="/artificial-jewellery-exporter"
+          element={<ArtificialJewelleryExporter />}
+        />
+        <Route
+          path="/bridal-imitation-jewellery"
+          element={<BridalImitationJewellery />}
+        />
+        <Route
+          path="/oxidised-jewellery-wholesale"
+          element={<OxidisedJewelleryWholesale />}
+        />
+        <Route
+          path="/imitation-jewellery-manufacturer-india"
+          element={<ImitationJewelleryManufacturerIndia />}
+        />
+        <Route
+          path="/artificial-jewellery-wholesaler-india"
+          element={<ArtificialJewelleryWholesalerIndia />}
+        />
+        <Route
+          path="/fashion-jewellery-exporter-india"
+          element={<FashionJewelleryExporterIndia />}
+        />
+        <Route
+          path="/oxidised-jewellery-supplier"
+          element={<OxidisedJewellerySupplier />}
+        />
+        <Route
+          path="/imitation-jewellery-supplier-usa"
+          element={<ImitationJewellerySupplierUSA />}
+        />
+        <Route
+          path="/imitation-jewellery-manufacturer-jaipur"
+          element={<ImitationJewelleryManufacturerJaipur />}
+        />
+        <Route
+          path="/wholesale-jewellery-rajasthan"
+          element={<WholesaleJewelleryRajasthan />}
+        />
+        <Route
+          path="/meenakari-jewellery-wholesale"
+          element={<MeenakariJewelleryWholesale />}
+        />
+        <Route
+          path="/wholesale-jewellery-uk"
+          element={<WholesaleJewelleryUK />}
+        />
+        <Route
+          path="/jewellery-exporter-australia"
+          element={<JewelleryExporterAustralia />}
+        />
+        <Route
+          path="/jewellery-exporter-canada"
+          element={<JewelleryExporterCanada />}
+        />
+        <Route
+          path="/jewellery-exporter-singapore"
+          element={<JewelleryExporterSingapore />}
+        />
+        <Route
+          path="/jewellery-exporter-europe"
+          element={<JewelleryExporterEurope />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>

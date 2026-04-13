@@ -67,7 +67,6 @@ export default function Contact() {
       "content",
       "Get in touch with Gemora Global for wholesale imitation jewellery pricing, catalogue requests, and export enquiries. We respond to all wholesale inquiries within 24 hours.",
     );
-
     const existingScript = document.getElementById("page-schema");
     if (existingScript) existingScript.remove();
     const script = document.createElement("script");
@@ -92,7 +91,6 @@ export default function Contact() {
       priceRange: "$$",
     });
     document.head.appendChild(script);
-
     return () => {
       document.title =
         "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global";
@@ -108,7 +106,7 @@ export default function Contact() {
         form.country,
         form.whatsapp,
         form.requirement,
-        productId ? BigInt(productId) : null,
+        productId ? [BigInt(productId)] : [],
       ),
     onSuccess: () => {
       toast.success("Inquiry sent! We'll contact you shortly.");
@@ -132,12 +130,13 @@ export default function Contact() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-16">
-        <div className="bg-card border-b border-border py-12">
-          <div className="container">
-            <h1 className="font-serif text-4xl font-bold mb-2">
+        {/* Header */}
+        <div className="bg-card border-b border-border py-8 md:py-12 px-4">
+          <div className="container px-0">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
               Contact Us — Wholesale Enquiries Answered Within 24 Hours
             </h1>
-            <p className="text-muted-foreground max-w-2xl">
+            <p className="text-muted-foreground max-w-2xl text-sm md:text-base">
               Whether you are placing your first order or scaling an existing
               buying relationship, our team is ready to assist. Browse our{" "}
               <Link to="/products" className="text-primary hover:underline">
@@ -155,22 +154,26 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <div className="container py-12">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Form */}
+
+        <div className="container py-8 md:py-12 px-4">
+          {/* Two-column on desktop, single column on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Form — form fields full width, proper spacing */}
             <div>
-              <h2 className="font-serif text-2xl font-bold mb-2">
+              <h2 className="font-serif text-xl md:text-2xl font-bold mb-2">
                 Send an Enquiry
               </h2>
-              <p className="text-muted-foreground text-sm mb-6">
+              <p className="text-muted-foreground text-sm mb-5 md:mb-6">
                 To help us give you the best quote quickly, please include: the
                 product categories you are interested in, your target quantity
                 per design, your destination country, your preferred delivery
                 timeline, and any specific design requirements.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                 <div>
-                  <Label htmlFor="name">Your Name *</Label>
+                  <Label htmlFor="name" className="text-sm mb-1.5 block">
+                    Your Name *
+                  </Label>
                   <Input
                     id="name"
                     value={form.name}
@@ -180,10 +183,13 @@ export default function Contact() {
                     placeholder="Your full name"
                     required
                     data-ocid="inquiry.input"
+                    className="w-full min-h-[44px]"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="country">Country *</Label>
+                  <Label htmlFor="country" className="text-sm mb-1.5 block">
+                    Country *
+                  </Label>
                   <Input
                     id="country"
                     value={form.country}
@@ -192,10 +198,13 @@ export default function Contact() {
                     }
                     placeholder="Your country"
                     required
+                    className="w-full min-h-[44px]"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="whatsapp">WhatsApp Number *</Label>
+                  <Label htmlFor="whatsapp" className="text-sm mb-1.5 block">
+                    WhatsApp Number *
+                  </Label>
                   <Input
                     id="whatsapp"
                     value={form.whatsapp}
@@ -204,10 +213,13 @@ export default function Contact() {
                     }
                     placeholder="+1 234 567 8900"
                     required
+                    className="w-full min-h-[44px]"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="requirement">Your Requirement *</Label>
+                  <Label htmlFor="requirement" className="text-sm mb-1.5 block">
+                    Your Requirement *
+                  </Label>
                   <Textarea
                     id="requirement"
                     value={form.requirement}
@@ -218,12 +230,13 @@ export default function Contact() {
                     rows={4}
                     required
                     data-ocid="inquiry.textarea"
+                    className="w-full resize-none"
                   />
                 </div>
                 <Button
                   type="submit"
                   disabled={mutation.isPending}
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 min-h-[48px] text-base"
                   data-ocid="inquiry.submit_button"
                 >
                   {mutation.isPending ? (
@@ -243,13 +256,13 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6">
+            {/* Contact Info — stacked cards on mobile */}
+            <div className="space-y-5 md:space-y-6">
               <div>
-                <h2 className="font-serif text-2xl font-bold mb-6">
+                <h2 className="font-serif text-xl md:text-2xl font-bold mb-5 md:mb-6">
                   Contact Details
                 </h2>
-                <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-3">
                   {[
                     {
                       icon: "📍",
@@ -273,23 +286,28 @@ export default function Contact() {
                       value: "Mon–Sat: 10:00 AM – 6:30 PM IST",
                     },
                   ].map((item) => (
-                    <div key={item.label} className="flex gap-3">
-                      <span className="text-xl">{item.icon}</span>
-                      <div>
+                    <div
+                      key={item.label}
+                      className="flex gap-3 p-3 bg-card border border-border rounded-lg"
+                    >
+                      <span className="text-xl flex-shrink-0">{item.icon}</span>
+                      <div className="min-w-0">
                         <p className="text-xs text-muted-foreground">
                           {item.label}
                         </p>
-                        <p className="text-sm font-medium">{item.value}</p>
+                        <p className="text-sm font-medium break-words">
+                          {item.value}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-6 p-4 bg-card border border-border rounded-xl">
+                <div className="mt-4 p-4 bg-card border border-border rounded-xl">
                   <h3 className="font-semibold text-sm mb-2">
                     What to Include in Your Message
                   </h3>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1.5">
                     {[
                       "Product categories you are interested in",
                       "Target quantity per design",
@@ -299,24 +317,28 @@ export default function Contact() {
                     ].map((item) => (
                       <li
                         key={item}
-                        className="flex items-center gap-2 text-xs text-muted-foreground"
+                        className="flex items-start gap-2 text-xs text-muted-foreground"
                       >
-                        <span className="text-primary">•</span> {item}
+                        <span className="text-primary mt-0.5 flex-shrink-0">
+                          •
+                        </span>
+                        {item}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
+              {/* WhatsApp CTA — full width, large touch target */}
               <a
                 href="https://wa.me/917976341419?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20jewellery."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-lg transition-colors w-fit"
+                className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-3.5 rounded-lg transition-colors w-full min-h-[48px] font-medium"
               >
                 <svg
                   viewBox="0 0 24 24"
-                  className="w-5 h-5 fill-white"
+                  className="w-5 h-5 fill-white flex-shrink-0"
                   role="img"
                   aria-label="WhatsApp"
                 >
@@ -326,12 +348,13 @@ export default function Contact() {
                 Chat on WhatsApp
               </a>
 
-              <div className="rounded-xl overflow-hidden border border-border">
+              {/* Map — full width, proper height */}
+              <div className="rounded-xl overflow-hidden border border-border w-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.4!2d75.7384!3d26.9124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5e3e4b0b4b7%3A0x0!2sVaishali+Nagar%2C+Jaipur%2C+Rajasthan+302021!5e0!3m2!1sen!2sin!4v1703000000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Maa+Hinglaj+Nagar+Jaipur+Rajasthan+302021+India&output=embed"
                   width="100%"
-                  height="250"
-                  style={{ border: 0 }}
+                  height="220"
+                  style={{ border: 0, display: "block" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

@@ -10,6 +10,29 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
+export interface BlogPost {
+  'id' : bigint,
+  'status' : string,
+  'title' : string,
+  'content' : string,
+  'date' : string,
+  'createdAt' : bigint,
+  'slug' : string,
+  'author' : string,
+  'readTime' : string,
+  'excerpt' : string,
+  'category' : string,
+  'image' : string,
+}
+export interface Catalogue {
+  'id' : bigint,
+  'title' : string,
+  'createdAt' : bigint,
+  'description' : string,
+  'fileName' : string,
+  'uploadedAt' : string,
+  'fileUrl' : string,
+}
 export interface Category {
   'id' : bigint,
   'sortOrder' : bigint,
@@ -42,6 +65,7 @@ export interface Product {
   'imageUrls' : Array<string>,
   'name' : string,
   'createdAt' : bigint,
+  'isNewArrival' : boolean,
   'description' : string,
 }
 export interface Testimonial {
@@ -61,51 +85,82 @@ export interface UserProfile {
 export type UserRole = { 'admin' : null } |
   { 'user' : null } |
   { 'guest' : null };
-export interface _CaffeineStorageCreateCertificateResult {
+export interface _ImmutableObjectStorageCreateCertificateResult {
   'method' : string,
   'blob_hash' : string,
 }
-export interface _CaffeineStorageRefillInformation {
+export interface _ImmutableObjectStorageRefillInformation {
   'proposed_top_up_amount' : [] | [bigint],
 }
-export interface _CaffeineStorageRefillResult {
+export interface _ImmutableObjectStorageRefillResult {
   'success' : [] | [boolean],
   'topped_up_amount' : [] | [bigint],
 }
 export interface _SERVICE {
-  '_caffeineStorageBlobIsLive' : ActorMethod<[Uint8Array], boolean>,
-  '_caffeineStorageBlobsToDelete' : ActorMethod<[], Array<Uint8Array>>,
-  '_caffeineStorageConfirmBlobDeletion' : ActorMethod<
+  '_immutableObjectStorageBlobsAreLive' : ActorMethod<
+    [Array<Uint8Array>],
+    Array<boolean>
+  >,
+  '_immutableObjectStorageBlobsToDelete' : ActorMethod<[], Array<Uint8Array>>,
+  '_immutableObjectStorageConfirmBlobDeletion' : ActorMethod<
     [Array<Uint8Array>],
     undefined
   >,
-  '_caffeineStorageCreateCertificate' : ActorMethod<
+  '_immutableObjectStorageCreateCertificate' : ActorMethod<
     [string],
-    _CaffeineStorageCreateCertificateResult
+    _ImmutableObjectStorageCreateCertificateResult
   >,
-  '_caffeineStorageRefillCashier' : ActorMethod<
-    [[] | [_CaffeineStorageRefillInformation]],
-    _CaffeineStorageRefillResult
+  '_immutableObjectStorageRefillCashier' : ActorMethod<
+    [[] | [_ImmutableObjectStorageRefillInformation]],
+    _ImmutableObjectStorageRefillResult
   >,
-  '_caffeineStorageUpdateGatewayPrincipals' : ActorMethod<[], undefined>,
-  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
+  '_immutableObjectStorageUpdateGatewayPrincipals' : ActorMethod<[], undefined>,
+  '_initializeAccessControl' : ActorMethod<[], undefined>,
   'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
+  'changeAdminCredentials' : ActorMethod<
+    [string, string, string, string],
+    boolean
+  >,
+  'createBlogPost' : ActorMethod<
+    [
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+    ],
+    bigint
+  >,
+  'createCatalogue' : ActorMethod<
+    [string, string, string, string, string],
+    bigint
+  >,
   'createCategory' : ActorMethod<[string, string, string, bigint], bigint>,
   'createGalleryItem' : ActorMethod<[string, string, string, bigint], bigint>,
   'createProduct' : ActorMethod<
-    [bigint, string, string, string, Array<string>, boolean],
+    [bigint, string, string, string, Array<string>, boolean, boolean],
     bigint
   >,
   'createTestimonial' : ActorMethod<
     [string, string, string, string, bigint, boolean],
     bigint
   >,
+  'deleteBlogPost' : ActorMethod<[bigint], undefined>,
+  'deleteCatalogue' : ActorMethod<[bigint], undefined>,
   'deleteCategory' : ActorMethod<[bigint], undefined>,
   'deleteGalleryItem' : ActorMethod<[bigint], undefined>,
   'deleteProduct' : ActorMethod<[bigint], undefined>,
   'deleteTestimonial' : ActorMethod<[bigint], undefined>,
+  'getBlogPost' : ActorMethod<[string], [] | [BlogPost]>,
+  'getBlogPosts' : ActorMethod<[[] | [string]], Array<BlogPost>>,
   'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
   'getCallerUserRole' : ActorMethod<[], UserRole>,
+  'getCatalogues' : ActorMethod<[], Array<Catalogue>>,
   'getCategories' : ActorMethod<[], Array<Category>>,
   'getContent' : ActorMethod<[string], [] | [string]>,
   'getDashboardStats' : ActorMethod<
@@ -120,19 +175,34 @@ export interface _SERVICE {
   'getFeaturedProducts' : ActorMethod<[], Array<Product>>,
   'getGallery' : ActorMethod<[[] | [string]], Array<GalleryItem>>,
   'getInquiries' : ActorMethod<[], Array<Inquiry>>,
+  'getNewArrivalProducts' : ActorMethod<[], Array<Product>>,
   'getProduct' : ActorMethod<[bigint], [] | [Product]>,
   'getProducts' : ActorMethod<[[] | [bigint]], Array<Product>>,
   'getTestimonials' : ActorMethod<[], Array<Testimonial>>,
   'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
   'isCallerAdmin' : ActorMethod<[], boolean>,
-  'verifyAdminLogin' : ActorMethod<[string, string], boolean>,
-  'changeAdminCredentials' : ActorMethod<[string, string, string, string], boolean>,
   'recordVisit' : ActorMethod<[], undefined>,
   'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
   'setContent' : ActorMethod<[string, string], undefined>,
   'submitInquiry' : ActorMethod<
     [string, string, string, string, [] | [bigint]],
     bigint
+  >,
+  'updateBlogPost' : ActorMethod<
+    [
+      bigint,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+      string,
+    ],
+    undefined
   >,
   'updateCategory' : ActorMethod<
     [bigint, string, string, string, bigint],
@@ -144,13 +214,14 @@ export interface _SERVICE {
   >,
   'updateInquiryStatus' : ActorMethod<[bigint, string], undefined>,
   'updateProduct' : ActorMethod<
-    [bigint, bigint, string, string, string, Array<string>, boolean],
+    [bigint, bigint, string, string, string, Array<string>, boolean, boolean],
     undefined
   >,
   'updateTestimonial' : ActorMethod<
     [bigint, string, string, string, string, bigint, boolean],
     undefined
   >,
+  'verifyAdminLogin' : ActorMethod<[string, string], boolean>,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

@@ -65,13 +65,6 @@ const EMPTY: Customer = {
   leadStatus: "Cold Lead",
 };
 
-const BOX = {
-  background: "#111",
-  border: "1px solid #222",
-  borderRadius: 12,
-  padding: 20,
-} as const;
-
 export default function AdminCustomers() {
   const [customers, setCustomers] = useState<Customer[]>(MOCK_CUSTOMERS);
   const [open, setOpen] = useState(false);
@@ -86,37 +79,20 @@ export default function AdminCustomers() {
 
   return (
     <AdminLayout>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 20,
-        }}
-      >
-        <h2 style={{ color: "#fff", fontSize: 22, fontWeight: 700 }}>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-5">
+        <h2 style={{ color: "#1A237E", fontSize: 22, fontWeight: 700 }}>
           Customers / Buyers
         </h2>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button
-              type="button"
-              style={{
-                background: "gold",
-                color: "#111",
-                border: "none",
-                borderRadius: 8,
-                padding: "8px 18px",
-                fontWeight: 700,
-                fontSize: 14,
-                cursor: "pointer",
-              }}
+            <Button
+              className="bg-primary text-primary-foreground w-full sm:w-auto"
               data-ocid="admin.customers.open_modal_button"
             >
               + Add Customer
-            </button>
+            </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="mx-4">
             <DialogHeader>
               <DialogTitle>Add Customer / Buyer</DialogTitle>
             </DialogHeader>
@@ -201,10 +177,17 @@ export default function AdminCustomers() {
         </Dialog>
       </div>
 
-      <div style={BOX}>
-        <div style={{ overflowX: "auto" }}>
+      <div
+        style={{
+          background: "#fff",
+          border: "1px solid #e0e0e0",
+          borderRadius: 12,
+          padding: 20,
+        }}
+      >
+        <div className="overflow-x-auto">
           <table
-            style={{ width: "100%", borderCollapse: "collapse", minWidth: 700 }}
+            style={{ width: "100%", borderCollapse: "collapse", minWidth: 600 }}
             data-ocid="admin.customers.table"
           >
             <thead>
@@ -222,11 +205,11 @@ export default function AdminCustomers() {
                     style={{
                       textAlign: "left",
                       padding: "8px 10px",
-                      color: "#666",
+                      color: "#999",
                       fontSize: 11,
                       fontWeight: 600,
                       textTransform: "uppercase",
-                      borderBottom: "1px solid #222",
+                      borderBottom: "1px solid #e0e0e0",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -239,20 +222,20 @@ export default function AdminCustomers() {
               {customers.map((c, i) => (
                 <tr
                   key={`${c.email}-${c.name}`}
-                  style={{ borderBottom: "1px solid #1a1a1a" }}
+                  style={{ borderBottom: "1px solid #f5f5f5" }}
                   data-ocid={`admin.customers.item.${i + 1}`}
                 >
                   <td
                     style={{
                       padding: "10px",
                       fontSize: 14,
-                      color: "#ddd",
+                      color: "#222",
                       fontWeight: 500,
                     }}
                   >
                     {c.name}
                   </td>
-                  <td style={{ padding: "10px", fontSize: 13, color: "#aaa" }}>
+                  <td style={{ padding: "10px", fontSize: 13, color: "#666" }}>
                     {c.country}
                   </td>
                   <td style={{ padding: "10px", fontSize: 12, color: "#888" }}>
@@ -261,7 +244,7 @@ export default function AdminCustomers() {
                   <td style={{ padding: "10px", fontSize: 12, color: "#888" }}>
                     {c.whatsapp}
                   </td>
-                  <td style={{ padding: "10px", fontSize: 12, color: "#aaa" }}>
+                  <td style={{ padding: "10px", fontSize: 12, color: "#666" }}>
                     {c.businessType}
                   </td>
                   <td style={{ padding: "10px" }}>
@@ -272,7 +255,7 @@ export default function AdminCustomers() {
                             ? "rgba(255,80,80,0.15)"
                             : "rgba(100,150,255,0.15)",
                         color:
-                          c.leadStatus === "Hot Lead" ? "#ff6b6b" : "#6b9fff",
+                          c.leadStatus === "Hot Lead" ? "#e53935" : "#1A237E",
                         fontSize: 12,
                         padding: "3px 10px",
                         borderRadius: 20,

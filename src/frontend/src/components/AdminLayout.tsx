@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navItems = [
-  { label: "Dashboard", to: "/admin", icon: "🏠" },
+  { label: "Dashboard", to: "/admin", icon: "⬛" },
   { label: "Products", to: "/admin/products", icon: "📦" },
   { label: "Categories", to: "/admin/categories", icon: "📁" },
   { label: "Media", to: "/admin/gallery", icon: "🖼" },
@@ -17,14 +18,128 @@ const navItems = [
   { label: "Settings", to: "/admin/settings", icon: "⚙️" },
 ];
 
-export default function AdminLayout({ children }: { children: ReactNode }) {
+const SIDEBAR_BG = "linear-gradient(180deg, #0d1554 0%, #111b6a 100%)";
+const SIDEBAR_BORDER = "1px solid rgba(212,175,55,0.15)";
+const GOLD = "#D4AF37";
+
+function SidebarContent({
+  onNavClick,
+}: {
+  onNavClick?: () => void;
+}) {
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     sessionStorage.removeItem("adminSession");
     navigate("/admin/login");
+    onNavClick?.();
   };
+
+  return (
+    <>
+      {/* Logo */}
+      <div
+        className="p-5 flex items-center gap-3"
+        style={{ borderBottom: SIDEBAR_BORDER }}
+      >
+        <img
+          src="/assets/uploads/logo-removebg-preview-1-1.png"
+          alt="Gemora Global"
+          className="h-8 object-contain"
+        />
+        <span
+          style={{
+            color: GOLD,
+            fontWeight: 700,
+            fontSize: 16,
+            letterSpacing: "0.05em",
+          }}
+        >
+          GEMORA ADMIN
+        </span>
+      </div>
+
+      {/* Nav */}
+      <nav className="flex-1 p-3 flex flex-col gap-0.5 overflow-y-auto">
+        {navItems.map((item) => {
+          const active =
+            item.to === "/admin"
+              ? location.pathname === "/admin"
+              : location.pathname.startsWith(item.to);
+          return (
+            <Link
+              key={item.to}
+              to={item.to}
+              onClick={onNavClick}
+              className="flex items-center gap-3 px-3 rounded-lg text-sm transition-all"
+              style={{
+                minHeight: 48,
+                background: active
+                  ? "linear-gradient(90deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 100%)"
+                  : "transparent",
+                color: active ? GOLD : "rgba(255,255,255,0.6)",
+                borderLeft: active
+                  ? `3px solid ${GOLD}`
+                  : "3px solid transparent",
+                fontWeight: active ? 600 : 400,
+              }}
+              onMouseEnter={(e) => {
+                if (!active) {
+                  (e.currentTarget as HTMLAnchorElement).style.background =
+                    "rgba(212,175,55,0.08)";
+                  (e.currentTarget as HTMLAnchorElement).style.color =
+                    "rgba(255,255,255,0.9)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!active) {
+                  (e.currentTarget as HTMLAnchorElement).style.background =
+                    "transparent";
+                  (e.currentTarget as HTMLAnchorElement).style.color =
+                    "rgba(255,255,255,0.6)";
+                }
+              }}
+            >
+              <span style={{ fontSize: 15, minWidth: 18 }}>{item.icon}</span>
+              <span>{item.label}</span>
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Logout */}
+      <div className="p-3" style={{ borderTop: SIDEBAR_BORDER }}>
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm transition-all"
+          style={{ color: "rgba(255,255,255,0.35)" }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.background =
+              "rgba(212,175,55,0.08)";
+            (e.currentTarget as HTMLButtonElement).style.color =
+              "rgba(255,255,255,0.7)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.background =
+              "transparent";
+            (e.currentTarget as HTMLButtonElement).style.color =
+              "rgba(255,255,255,0.35)";
+          }}
+          data-ocid="admin.logout_button"
+        >
+          <span>🚪</span>
+          <span>Logout</span>
+        </button>
+      </div>
+    </>
+  );
+}
+
+export default function AdminLayout({ children }: { children: ReactNode }) {
+  const location = useLocation();
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const currentLabel =
     navItems.find((n) =>
@@ -36,124 +151,129 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <div
       className="min-h-screen flex"
-      style={{ background: "#0b0b0d", color: "#fff" }}
+      style={{ background: "#0a0f3c", color: "#fff" }}
     >
-      {/* Sidebar */}
+      {/* ── Desktop sidebar (lg+) ── */}
       <aside
-        className="flex flex-col flex-shrink-0"
+        className="hidden lg:flex flex-col flex-shrink-0 overflow-y-auto"
         style={{
           width: 240,
-          background: "#111",
-          borderRight: "1px solid #222",
+          background: SIDEBAR_BG,
+          borderRight: SIDEBAR_BORDER,
           minHeight: "100vh",
+          position: "sticky",
+          top: 0,
+          height: "100vh",
         }}
       >
-        {/* Logo */}
-        <div
-          className="p-5 flex items-center gap-3"
-          style={{ borderBottom: "1px solid #222" }}
-        >
-          <img
-            src="/assets/uploads/logo-removebg-preview-1-1.png"
-            alt="Gemora Global"
-            className="h-8 object-contain"
-          />
-          <span style={{ color: "gold", fontWeight: 600, fontSize: 18 }}>
-            GEMORA
-          </span>
-        </div>
-
-        {/* Nav */}
-        <nav className="flex-1 p-3 flex flex-col gap-1 overflow-y-auto">
-          {navItems.map((item) => {
-            const active =
-              item.to === "/admin"
-                ? location.pathname === "/admin"
-                : location.pathname.startsWith(item.to);
-            return (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"
-                style={{
-                  background: active ? "#1a1a1a" : "transparent",
-                  color: active ? "gold" : "rgba(255,255,255,0.6)",
-                  borderLeft: active
-                    ? "3px solid gold"
-                    : "3px solid transparent",
-                  fontWeight: active ? 600 : 400,
-                }}
-              >
-                <span style={{ fontSize: 15 }}>{item.icon}</span>
-                <span>{item.label}</span>
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Logout */}
-        <div className="p-3" style={{ borderTop: "1px solid #222" }}>
-          <button
-            type="button"
-            onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"
-            style={{ color: "rgba(255,255,255,0.4)" }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background =
-                "#1a1a1a";
-              (e.currentTarget as HTMLButtonElement).style.color =
-                "rgba(255,255,255,0.7)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.background =
-                "transparent";
-              (e.currentTarget as HTMLButtonElement).style.color =
-                "rgba(255,255,255,0.4)";
-            }}
-            data-ocid="admin.logout_button"
-          >
-            <span>🚪</span>
-            <span>Logout</span>
-          </button>
-        </div>
+        <SidebarContent />
       </aside>
 
-      {/* Main */}
-      <main className="flex-1 overflow-auto" style={{ background: "#0b0b0d" }}>
+      {/* ── Mobile drawer overlay ── */}
+      {drawerOpen && (
+        // biome-ignore lint/a11y/useKeyWithClickEvents: overlay backdrop — keyboard users use the ✕ button inside drawer
+        <div
+          className="lg:hidden fixed inset-0 z-40"
+          style={{ background: "rgba(0,0,0,0.6)" }}
+          onClick={() => setDrawerOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* ── Mobile slide-in sidebar ── */}
+      <aside
+        className="lg:hidden fixed top-0 left-0 z-50 flex flex-col h-full"
+        style={{
+          width: 260,
+          background: SIDEBAR_BG,
+          borderRight: SIDEBAR_BORDER,
+          transform: drawerOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.28s cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+        aria-label="Admin navigation"
+      >
+        {/* Close button */}
+        <button
+          type="button"
+          onClick={() => setDrawerOpen(false)}
+          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full text-sm z-10"
+          style={{
+            background: "rgba(212,175,55,0.15)",
+            color: GOLD,
+            border: "1px solid rgba(212,175,55,0.3)",
+          }}
+          aria-label="Close navigation"
+        >
+          ✕
+        </button>
+        <SidebarContent onNavClick={() => setDrawerOpen(false)} />
+      </aside>
+
+      {/* ── Main content ── */}
+      <main
+        className="flex-1 overflow-auto min-w-0"
+        style={{ background: "#f4f6ff" }}
+      >
         {/* Top bar */}
         <div
-          className="sticky top-0 z-10 flex items-center justify-between px-6"
+          className="sticky top-0 z-10 flex items-center justify-between px-4 lg:px-6"
           style={{
-            height: 60,
-            background: "rgba(17,17,17,0.95)",
+            height: 56,
+            background: "linear-gradient(90deg, #1A237E 0%, #1a2e9a 100%)",
             backdropFilter: "blur(12px)",
-            borderBottom: "1px solid #222",
+            borderBottom: "1px solid rgba(212,175,55,0.2)",
+            boxShadow: "0 2px 12px rgba(26,35,126,0.3)",
           }}
         >
-          <h1 style={{ color: "#fff", fontWeight: 600, fontSize: 18 }}>
-            {currentLabel}
-          </h1>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            {/* Hamburger — mobile only */}
+            <button
+              type="button"
+              onClick={() => setDrawerOpen(true)}
+              className="lg:hidden flex flex-col gap-1 p-1.5 rounded-md flex-shrink-0"
+              style={{ color: "rgba(255,255,255,0.9)" }}
+              aria-label="Open navigation"
+              data-ocid="admin.hamburger_button"
+            >
+              <span className="block w-5 h-0.5 bg-current rounded" />
+              <span className="block w-5 h-0.5 bg-current rounded" />
+              <span className="block w-5 h-0.5 bg-current rounded" />
+            </button>
+            <h1
+              className="truncate"
+              style={{
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 17,
+                letterSpacing: "0.01em",
+              }}
+            >
+              <span style={{ color: GOLD, marginRight: 8 }}>◆</span>
+              {currentLabel}
+            </h1>
+          </div>
+          <div className="flex items-center gap-2 flex-shrink-0">
             <input
               placeholder="Search..."
-              className="px-3 py-1.5 rounded-lg text-sm outline-none"
+              className="hidden sm:block px-3 py-1.5 rounded-lg text-sm outline-none"
               style={{
-                background: "#1a1a1a",
-                border: "1px solid #333",
-                color: "rgba(255,255,255,0.7)",
-                width: 160,
+                background: "rgba(255,255,255,0.12)",
+                border: "1px solid rgba(212,175,55,0.35)",
+                color: "rgba(255,255,255,0.9)",
+                width: 140,
               }}
+              data-ocid="admin.search_input"
             />
             <div
-              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
-              style={{ background: "gold", color: "#111" }}
+              className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+              style={{ background: GOLD, color: "#1A237E" }}
             >
               A
             </div>
           </div>
         </div>
 
-        <div className="p-6">{children}</div>
+        <div className="p-4 lg:p-6">{children}</div>
       </main>
     </div>
   );

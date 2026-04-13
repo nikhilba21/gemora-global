@@ -31,44 +31,52 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <main className="flex-1 flex items-center justify-center pt-16 pb-16">
+      <main className="flex-1 flex items-center justify-center pt-16 pb-16 px-4">
         <div className="container text-center max-w-xl">
-          <p className="text-8xl font-serif font-bold text-primary mb-4">404</p>
-          <h1 className="text-3xl font-serif font-bold mb-4">Page Not Found</h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-7xl md:text-8xl font-serif font-bold text-primary mb-4">
+            404
+          </p>
+          <h1 className="text-2xl md:text-3xl font-serif font-bold mb-4">
+            Page Not Found
+          </h1>
+          <p className="text-muted-foreground mb-8 text-sm md:text-base">
             Sorry, we couldn't find the page you were looking for. It may have
             been moved or deleted.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
+          {/* Full-width buttons on mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10 md:mb-12">
             <Link
               to="/"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg text-sm font-medium transition-colors"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg text-sm font-medium transition-colors min-h-[48px] w-full sm:w-auto"
               data-ocid="notfound.primary_button"
             >
               Back to Homepage
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-lg text-sm font-medium transition-colors"
+              className="inline-flex items-center justify-center border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-lg text-sm font-medium transition-colors min-h-[48px] w-full sm:w-auto"
               data-ocid="notfound.secondary_button"
             >
               Contact Us
             </Link>
           </div>
 
-          <div className="text-left bg-card border border-border rounded-xl p-6">
+          <div className="text-left bg-card border border-border rounded-xl p-5 md:p-6">
             <h2 className="font-semibold text-sm mb-4">Explore our pages</h2>
             <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/" className="hover:text-primary transition-colors">
+                <Link
+                  to="/"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
+                >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   to="/about"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   About Us
                 </Link>
@@ -76,7 +84,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/products"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Products
                 </Link>
@@ -84,7 +92,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/wholesale"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Wholesale &amp; Export
                 </Link>
@@ -92,7 +100,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/why-choose-us"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Why Choose Us
                 </Link>
@@ -100,7 +108,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/global-markets"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Global Markets
                 </Link>
@@ -108,7 +116,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/gallery"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Gallery
                 </Link>
@@ -116,7 +124,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/blog"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Blog
                 </Link>
@@ -124,7 +132,7 @@ export default function NotFound() {
               <li>
                 <Link
                   to="/contact"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors min-h-[36px] flex items-center"
                 >
                   Contact
                 </Link>

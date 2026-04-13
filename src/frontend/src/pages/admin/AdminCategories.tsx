@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import {
   Table,
   TableBody,
@@ -17,18 +18,20 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { Loader2, Upload, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
-import type { Category } from "../../backend";
 import AdminLayout from "../../components/AdminLayout";
 import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import type { Category } from "../../types";
 
 type CatForm = {
   name: string;
   description: string;
   imageUrl: string;
   sortOrder: string;
+  webpKB?: number;
 };
 const EMPTY: CatForm = {
   name: "",
@@ -40,7 +43,8 @@ const EMPTY: CatForm = {
 export default function AdminCategories() {
   const { actor } = useActor();
   const qc = useQueryClient();
-  const { uploadFile, uploading } = useStorageUpload();
+  const { uploadFileDetailed, uploading, converting, progress, uploadError } =
+    useStorageUpload();
   const imageFileRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Category | null>(null);
@@ -67,7 +71,7 @@ export default function AdminCategories() {
       setOpen(false);
       invalidate();
     },
-    onError: () => toast.error("Failed"),
+    onError: () => toast.error("Failed to create category"),
   });
 
   const updateMut = useMutation({
@@ -80,20 +84,20 @@ export default function AdminCategories() {
         BigInt(form.sortOrder || "0"),
       ),
     onSuccess: () => {
-      toast.success("Updated");
+      toast.success("Category updated");
       setOpen(false);
       invalidate();
     },
-    onError: () => toast.error("Failed"),
+    onError: () => toast.error("Failed to update category"),
   });
 
   const deleteMut = useMutation({
     mutationFn: (id: bigint) => actor!.deleteCategory(id),
     onSuccess: () => {
-      toast.success("Deleted");
+      toast.success("Category deleted");
       invalidate();
     },
-    onError: () => toast.error("Failed"),
+    onError: () => toast.error("Failed to delete category"),
   });
 
   const openCreate = () => {
@@ -112,21 +116,37 @@ export default function AdminCategories() {
     setOpen(true);
   };
 
+  const handleImageUpload = async (file: File) => {
+    try {
+      const result = await uploadFileDetailed(file);
+      setForm((f) => ({ ...f, imageUrl: result.url, webpKB: result.webpKB }));
+      toast.success(`Image converted to WebP (${result.webpKB.toFixed(0)}KB)`);
+    } catch {
+      toast.error(
+        "Upload failed — please check your internet connection and try again",
+      );
+    }
+  };
+
+  const uploadActive = converting || uploading;
+
   return (
     <AdminLayout>
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="font-serif text-2xl font-bold">Categories</h1>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
+        <h1 className="font-serif text-2xl font-bold text-primary">
+          Categories
+        </h1>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button
-              className="bg-primary text-primary-foreground"
+              className="bg-primary text-primary-foreground w-full sm:w-auto"
               onClick={openCreate}
               data-ocid="admin.add_button"
             >
               Add Category
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="mx-4">
             <DialogHeader>
               <DialogTitle>{editing ? "Edit" : "Add"} Category</DialogTitle>
             </DialogHeader>
@@ -156,17 +176,34 @@ export default function AdminCategories() {
                   }
                 />
               </div>
+
               <div>
-                <Label>Category Image</Label>
-                <div className="flex items-center gap-2 mt-1">
-                  <button
-                    type="button"
-                    onClick={() => imageFileRef.current?.click()}
-                    disabled={uploading}
-                    className="px-3 py-2 text-xs rounded-md border border-dashed border-muted-foreground/50 text-muted-foreground hover:border-primary hover:text-primary transition-colors"
-                  >
-                    {uploading ? "Uploading..." : "📷 Upload Image"}
-                  </button>
+                <div className="flex items-center justify-between mb-1">
+                  <Label>Category Image</Label>
+                  <span className="text-xs text-muted-foreground">
+                    Auto-converted to WebP
+                  </span>
+                </div>
+                <div
+                  className="border-2 border-dashed rounded-lg p-5 text-center cursor-pointer transition-colors"
+                  style={{
+                    borderColor: uploadActive ? "#42A5F5" : "#c5cae9",
+                    background: uploadActive ? "#e8f4fe" : "#f5f7ff",
+                  }}
+                  onClick={() => !uploadActive && imageFileRef.current?.click()}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      imageFileRef.current?.click();
+                  }}
+                  onDragOver={(e) => e.preventDefault()}
+                  onDrop={async (e) => {
+                    e.preventDefault();
+                    const file = e.dataTransfer.files?.[0];
+                    if (!file || !file.type.startsWith("image/")) return;
+                    await handleImageUpload(file);
+                  }}
+                  data-ocid="admin.categories.dropzone"
+                >
                   <input
                     ref={imageFileRef}
                     type="file"
@@ -175,30 +212,95 @@ export default function AdminCategories() {
                     onChange={async (e) => {
                       const file = e.target.files?.[0];
                       if (!file) return;
-                      try {
-                        const url = await uploadFile(file);
-                        setForm((f) => ({ ...f, imageUrl: url }));
-                      } catch {}
+                      await handleImageUpload(file);
                       if (imageFileRef.current) imageFileRef.current.value = "";
                     }}
                   />
-                  {form.imageUrl && (
-                    <img
-                      src={form.imageUrl}
-                      alt="preview"
-                      className="h-10 w-14 object-cover rounded"
-                    />
+                  {uploadActive ? (
+                    <div className="flex flex-col items-center gap-2">
+                      <Loader2
+                        size={20}
+                        className="animate-spin"
+                        style={{ color: "#42A5F5" }}
+                      />
+                      <p
+                        className="text-sm font-medium"
+                        style={{ color: "#42A5F5" }}
+                      >
+                        {converting
+                          ? "Converting to WebP..."
+                          : `Uploading... ${progress}%`}
+                      </p>
+                    </div>
+                  ) : (
+                    <>
+                      <Upload
+                        className="mx-auto mb-2 text-muted-foreground"
+                        size={20}
+                      />
+                      <p className="text-sm text-muted-foreground">
+                        Click or drag to upload category image
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        PNG, JPG → auto-converted to WebP
+                      </p>
+                    </>
                   )}
                 </div>
-                <Input
-                  className="mt-2"
-                  placeholder="or paste image URL"
-                  value={form.imageUrl}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, imageUrl: e.target.value }))
-                  }
-                />
+                {uploadError && (
+                  <p
+                    className="mt-1 text-xs text-destructive"
+                    data-ocid="admin.categories.upload_error"
+                  >
+                    {uploadError}
+                  </p>
+                )}
+                {uploading && (
+                  <div
+                    className="mt-2"
+                    data-ocid="admin.categories.loading_state"
+                  >
+                    <Progress value={progress} className="h-2" />
+                  </div>
+                )}
+                {form.imageUrl && (
+                  <div className="mt-2 relative inline-block">
+                    <img
+                      src={form.imageUrl}
+                      alt="Category preview"
+                      className="h-20 w-28 object-cover rounded-lg border border-border"
+                    />
+                    {form.webpKB !== undefined && (
+                      <span
+                        className="absolute bottom-0 left-0 right-0 text-center text-[9px] font-bold rounded-b-lg"
+                        style={{
+                          background: "rgba(46,125,50,0.85)",
+                          color: "#fff",
+                          padding: "2px 0",
+                        }}
+                      >
+                        WebP ✓ {form.webpKB.toFixed(0)}KB
+                      </span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setForm((f) => ({
+                          ...f,
+                          imageUrl: "",
+                          webpKB: undefined,
+                        }))
+                      }
+                      className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full flex items-center justify-center"
+                      style={{ background: "crimson" }}
+                      aria-label="Remove image"
+                    >
+                      <X size={10} color="#fff" />
+                    </button>
+                  </div>
+                )}
               </div>
+
               <div>
                 <Label>Sort Order</Label>
                 <Input
@@ -212,6 +314,10 @@ export default function AdminCategories() {
               <Button
                 type="submit"
                 className="w-full bg-primary text-primary-foreground"
+                disabled={
+                  createMut.isPending || updateMut.isPending || uploadActive
+                }
+                data-ocid="admin.categories.submit_button"
               >
                 Save
               </Button>
@@ -219,47 +325,75 @@ export default function AdminCategories() {
           </DialogContent>
         </Dialog>
       </div>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Description</TableHead>
-            <TableHead>Sort</TableHead>
-            <TableHead>Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {categories?.map((c, i) => (
-            <TableRow key={String(c.id)}>
-              <TableCell className="font-medium">{c.name}</TableCell>
-              <TableCell className="text-muted-foreground text-sm">
-                {c.description}
-              </TableCell>
-              <TableCell>{String(c.sortOrder)}</TableCell>
-              <TableCell>
-                <div className="flex gap-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => openEdit(c)}
-                    data-ocid={`admin.edit_button.${i + 1}`}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="destructive"
-                    onClick={() => deleteMut.mutate(c.id)}
-                    data-ocid={`admin.delete_button.${i + 1}`}
-                  >
-                    Delete
-                  </Button>
-                </div>
-              </TableCell>
+
+      <div className="overflow-x-auto rounded-lg border border-border">
+        <Table className="min-w-[480px]">
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-12">Image</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Description</TableHead>
+              <TableHead>Sort</TableHead>
+              <TableHead>Actions</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {categories?.map((c, i) => (
+              <TableRow key={String(c.id)}>
+                <TableCell>
+                  {c.imageUrl ? (
+                    <img
+                      src={c.imageUrl}
+                      alt={c.name}
+                      className="w-10 h-10 object-cover rounded-md border border-border"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-md bg-muted flex items-center justify-center text-muted-foreground text-xs">
+                      No img
+                    </div>
+                  )}
+                </TableCell>
+                <TableCell className="font-medium">{c.name}</TableCell>
+                <TableCell className="text-muted-foreground text-sm">
+                  {c.description}
+                </TableCell>
+                <TableCell>{String(c.sortOrder)}</TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => openEdit(c)}
+                      data-ocid={`admin.edit_button.${i + 1}`}
+                    >
+                      Edit
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      onClick={() => deleteMut.mutate(c.id)}
+                      data-ocid={`admin.delete_button.${i + 1}`}
+                    >
+                      Delete
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+            {(!categories || categories.length === 0) && (
+              <TableRow>
+                <TableCell
+                  colSpan={5}
+                  className="text-center text-muted-foreground py-8"
+                >
+                  No categories yet.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
     </AdminLayout>
   );
 }

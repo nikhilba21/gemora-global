@@ -3,12 +3,11 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import type { GalleryItem } from "../backend";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
-import { getCatalogues } from "../utils/catalogueStore";
+import type { GalleryItem } from "../types";
 
 const SAMPLE_GALLERY: GalleryItem[] = [
   {
@@ -82,7 +81,12 @@ export default function Gallery() {
   });
   const { actor } = useActor();
   const [filter, setFilter] = useState("");
-  const catalogues = getCatalogues();
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const { data: catalogues = [] } = useQuery({
+    queryKey: ["catalogues"],
+    queryFn: () => actor!.getCatalogues(),
+    enabled: !!actor,
+  });
 
   useEffect(() => {
     document.title =
@@ -122,9 +126,21 @@ export default function Gallery() {
     };
   }, []);
 
+  // Lock scroll when lightbox open
+  useEffect(() => {
+    if (lightboxIdx !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIdx]);
+
   const { data: items, isLoading } = useQuery<GalleryItem[]>({
     queryKey: ["gallery", filter],
-    queryFn: () => actor!.getGallery(filter || null),
+    queryFn: () => actor!.getGallery(filter ? [filter] : []),
     enabled: !!actor,
   });
 
@@ -133,16 +149,51 @@ export default function Gallery() {
       ? items
       : SAMPLE_GALLERY.filter((i) => !filter || i.itemType === filter);
 
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (lightboxIdx === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        setLightboxIdx((prev) =>
+          prev === null
+            ? null
+            : (prev - 1 + displayItems.length) % displayItems.length,
+        );
+      } else if (e.key === "ArrowRight") {
+        setLightboxIdx((prev) =>
+          prev === null ? null : (prev + 1) % displayItems.length,
+        );
+      } else if (e.key === "Escape") {
+        setLightboxIdx(null);
+      }
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIdx, displayItems.length]);
+
+  const goLightboxPrev = () =>
+    setLightboxIdx((prev) =>
+      prev === null
+        ? null
+        : (prev - 1 + displayItems.length) % displayItems.length,
+    );
+  const goLightboxNext = () =>
+    setLightboxIdx((prev) =>
+      prev === null ? null : (prev + 1) % displayItems.length,
+    );
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-16">
-        <div className="bg-card border-b border-border py-12">
-          <div className="container">
-            <h1 className="font-serif text-4xl font-bold mb-3">
+        {/* Header */}
+        <div className="bg-card border-b border-border py-8 md:py-12 px-4">
+          <div className="container px-0">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
               Jewellery Gallery — Browse Our Wholesale Collection
             </h1>
-            <p className="text-muted-foreground max-w-2xl mb-4">
+            <p className="text-muted-foreground max-w-2xl mb-4 text-sm md:text-base">
               Welcome to the Gemora Global jewellery gallery — a curated
               selection from our 500+{" "}
               <Link to="/products" className="text-primary hover:underline">
@@ -161,7 +212,7 @@ export default function Gallery() {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg text-sm font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg text-sm font-medium transition-colors min-h-[44px] w-full sm:w-auto"
               data-ocid="gallery.open_modal_button"
             >
               Request Full Catalogue &amp; Pricing
@@ -169,40 +220,52 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Browse by Category */}
-        <div className="container py-8">
-          <h2 className="font-serif text-2xl font-bold mb-4">
+        {/* Browse by Category — scrollable filter tabs on mobile */}
+        <div className="container py-6 md:py-8 px-4">
+          <h2 className="font-serif text-xl md:text-2xl font-bold mb-4">
             Browse by Category
           </h2>
-          <div className="flex gap-2 mb-8 flex-wrap">
+          <div
+            className="flex gap-2 mb-6 md:mb-8 overflow-x-auto pb-1"
+            style={{
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
             {FILTER_TYPES.map((ft) => (
               <Button
                 key={ft.value}
                 variant={filter === ft.value ? "default" : "outline"}
                 size="sm"
                 onClick={() => setFilter(ft.value)}
-                className={
+                className={`flex-shrink-0 min-h-[40px] ${
                   filter === ft.value
                     ? "bg-primary text-primary-foreground"
                     : ""
-                }
+                }`}
               >
                 {ft.label}
               </Button>
             ))}
           </div>
+
           {isLoading ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
               {["s1", "s2", "s3", "s4", "s5", "s6"].map((sk) => (
-                <Skeleton key={sk} className="aspect-video rounded-lg" />
+                <Skeleton key={sk} className="aspect-square rounded-lg" />
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
               {displayItems.map((item, idx) => (
-                <div
+                <button
                   key={String(item.id)}
-                  className="rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-colors group"
+                  type="button"
+                  className="rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-colors group cursor-pointer w-full text-left"
+                  onClick={() => setLightboxIdx(idx)}
+                  aria-label={`View ${item.caption || "image"} fullscreen`}
+                  data-ocid={`gallery.item.${idx + 1}`}
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
@@ -213,31 +276,157 @@ export default function Gallery() {
                       }
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading={idx === 0 ? "eager" : "lazy"}
-                      width={600}
-                      height={600}
+                      width={400}
+                      height={400}
                     />
                   </div>
                   {item.caption && (
-                    <div className="p-3 bg-card">
-                      <p className="text-sm font-medium text-foreground">
+                    <div className="p-2 md:p-3 bg-card">
+                      <p className="text-xs md:text-sm font-medium text-foreground line-clamp-2">
                         {item.caption}
                       </p>
                     </div>
                   )}
-                </div>
+                </button>
               ))}
             </div>
           )}
         </div>
       </div>
 
+      {/* Lightbox — fullscreen on mobile, touch-friendly controls */}
+      {lightboxIdx !== null && (
+        <dialog
+          open
+          className="fixed inset-0 z-50 flex items-center justify-center m-0 p-0 w-full h-full max-w-none max-h-none border-0"
+          aria-label="Image lightbox"
+          data-ocid="gallery.modal"
+          style={{ background: "rgba(0,0,0,0.95)" }}
+          onClick={() => setLightboxIdx(null)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setLightboxIdx(null);
+          }}
+        >
+          {/* Close button — top-right, 44px+ touch target */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIdx(null);
+            }}
+            aria-label="Close lightbox"
+            className="absolute top-3 right-3 md:top-4 md:right-4 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors z-10"
+            data-ocid="gallery.close_button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          {/* Centered image */}
+          <img
+            src={displayItems[lightboxIdx]?.imageUrl}
+            alt={
+              displayItems[lightboxIdx]?.caption || "Gemora Global jewellery"
+            }
+            className="max-h-[85vh] max-w-[85vw] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+          />
+
+          {/* Caption */}
+          {displayItems[lightboxIdx]?.caption && (
+            <div className="absolute bottom-14 md:bottom-6 left-1/2 -translate-x-1/2 bg-black/70 text-white text-sm px-4 py-2 rounded-full pointer-events-none max-w-[80vw] text-center">
+              {displayItems[lightboxIdx].caption}
+            </div>
+          )}
+
+          {/* Left arrow — 44px+ touch target */}
+          {displayItems.length > 1 && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightboxPrev();
+              }}
+              aria-label="Previous image"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
+              data-ocid="gallery.pagination_prev"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+          )}
+
+          {/* Right arrow — 44px+ touch target */}
+          {displayItems.length > 1 && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                goLightboxNext();
+              }}
+              aria-label="Next image"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
+              data-ocid="gallery.pagination_next"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          )}
+
+          {/* Counter */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-3 py-1.5 rounded-full pointer-events-none">
+            {lightboxIdx + 1} / {displayItems.length}
+          </div>
+        </dialog>
+      )}
+
       {/* Request Catalogue CTA */}
-      <div className="bg-primary/10 border-y border-primary/20 py-12">
+      <div className="bg-primary/10 border-y border-primary/20 py-10 md:py-12 px-4">
         <div className="container text-center">
-          <h2 className="font-serif text-2xl font-bold mb-3">
+          <h2 className="font-serif text-xl md:text-2xl font-bold mb-3">
             Request Our Full Catalogue
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-6">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-6 text-sm md:text-base">
             This gallery represents a selection from our 500+ design catalogue.
             New designs are added every season. Contact our team to receive the
             complete digital catalogue with wholesale pricing, MOQ details, and
@@ -245,7 +434,7 @@ export default function Gallery() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-medium transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-medium transition-colors min-h-[44px] w-full sm:w-auto"
             data-ocid="gallery.primary_button"
           >
             Request Full Catalogue &amp; Pricing
@@ -254,22 +443,22 @@ export default function Gallery() {
       </div>
 
       {/* Catalogues Download Section */}
-      <div className="bg-card border-t border-border py-12">
+      <div className="bg-card border-t border-border py-10 md:py-12 px-4">
         <div className="container">
-          <h2 className="font-serif text-2xl font-bold mb-2">
+          <h2 className="font-serif text-xl md:text-2xl font-bold mb-2">
             Download Catalogues
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base">
             Download our latest product catalogues to explore our full range.
           </p>
           {catalogues.length === 0 ? (
             <a
               href="/catalogue.pdf"
               download
-              className="inline-flex items-center gap-3 bg-primary/10 border border-primary/30 hover:bg-primary/20 px-6 py-4 rounded-xl text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-3 bg-primary/10 border border-primary/30 hover:bg-primary/20 px-6 py-4 rounded-xl text-sm font-medium transition-colors min-h-[56px]"
             >
               <svg
-                className="w-5 h-5 text-primary"
+                className="w-5 h-5 text-primary flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -293,12 +482,12 @@ export default function Gallery() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {catalogues.map((cat) => (
                 <a
-                  key={cat.id}
+                  key={String(cat.id)}
                   href={cat.fileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   download={cat.fileName}
-                  className="flex items-center gap-4 bg-background border border-border hover:border-primary/50 hover:bg-primary/5 px-5 py-4 rounded-xl transition-all group"
+                  className="flex items-center gap-4 bg-background border border-border hover:border-primary/50 hover:bg-primary/5 px-5 py-4 rounded-xl transition-all group min-h-[72px]"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-2xl group-hover:bg-primary/20 transition-colors">
                     📄

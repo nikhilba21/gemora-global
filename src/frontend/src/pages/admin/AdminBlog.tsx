@@ -1,15 +1,12 @@
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { Loader2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
+import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
-import {
-  type BlogPost,
-  generateSlug,
-  getBlogPosts,
-  saveBlogPosts,
-} from "../../utils/blogStore";
 
-const categories = [
+const BLOG_CATEGORIES = [
   "Trends",
   "Business Guide",
   "Industry Insights",
@@ -20,17 +17,17 @@ const categories = [
 
 const fieldStyle = {
   width: "100%",
-  background: "#1a1a1a",
-  border: "1px solid #333",
+  background: "#f5f7ff",
+  border: "1px solid #c5cae9",
   borderRadius: 8,
   padding: "10px 12px",
-  color: "#fff",
+  color: "#1A237E",
   fontSize: 14,
   outline: "none",
 } as React.CSSProperties;
 
 const labelStyle = {
-  color: "rgba(255,255,255,0.6)",
+  color: "#555",
   fontSize: 12,
   display: "block",
   marginBottom: 6,
@@ -38,22 +35,107 @@ const labelStyle = {
 
 const EMPTY_FORM = {
   title: "",
-  category: categories[0],
+  category: BLOG_CATEGORIES[0],
   author: "",
   date: "",
   status: "Draft",
   excerpt: "",
   content: "",
   image: "",
+  imageWebpKB: undefined as number | undefined,
 };
 
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
 export default function AdminBlog() {
-  const [posts, setPosts] = useState<BlogPost[]>(() => getBlogPosts());
+  const { actor } = useActor();
+  const qc = useQueryClient();
   const [showForm, setShowForm] = useState(false);
-  const [editId, setEditId] = useState<number | null>(null);
+  const [editId, setEditId] = useState<bigint | null>(null);
   const [form, setForm] = useState(EMPTY_FORM);
-  const { uploadFile, uploading } = useStorageUpload();
+  const { uploadFileDetailed, uploading, converting, uploadError } =
+    useStorageUpload();
   const imageFileRef = useRef<HTMLInputElement>(null);
+
+  const { data: posts = [] } = useQuery({
+    queryKey: ["blogPosts"],
+    queryFn: () => actor!.getBlogPosts([]),
+    enabled: !!actor,
+  });
+
+  const invalidate = () => qc.invalidateQueries({ queryKey: ["blogPosts"] });
+
+  const createMutation = useMutation({
+    mutationFn: () => {
+      const now = new Date().toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+      const wordCount = form.content.split(" ").length;
+      const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
+      return actor!.createBlogPost(
+        generateSlug(form.title),
+        form.title,
+        form.category,
+        form.excerpt,
+        form.author,
+        form.date || now,
+        readTime,
+        form.status,
+        form.image,
+        form.content,
+      );
+    },
+    onSuccess: () => {
+      toast.success("Post published");
+      resetForm();
+      invalidate();
+    },
+    onError: () => toast.error("Failed to create post"),
+  });
+
+  const updateMutation = useMutation({
+    mutationFn: () => {
+      const wordCount = form.content.split(" ").length;
+      const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
+      return actor!.updateBlogPost(
+        editId!,
+        generateSlug(form.title),
+        form.title,
+        form.category,
+        form.excerpt,
+        form.author,
+        form.date,
+        readTime,
+        form.status,
+        form.image,
+        form.content,
+      );
+    },
+    onSuccess: () => {
+      toast.success("Post updated");
+      resetForm();
+      invalidate();
+    },
+    onError: () => toast.error("Failed to update post"),
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: (id: bigint) => actor!.deleteBlogPost(id),
+    onSuccess: () => {
+      toast.success("Post deleted");
+      invalidate();
+    },
+    onError: () => toast.error("Failed to delete post"),
+  });
 
   const resetForm = () => {
     setForm(EMPTY_FORM);
@@ -61,7 +143,7 @@ export default function AdminBlog() {
     setShowForm(false);
   };
 
-  const handleEdit = (post: BlogPost) => {
+  const handleEdit = (post: (typeof posts)[0]) => {
     setForm({
       title: post.title,
       category: post.category,
@@ -71,28 +153,25 @@ export default function AdminBlog() {
       excerpt: post.excerpt,
       content: post.content,
       image: post.image,
+      imageWebpKB: undefined,
     });
     setEditId(post.id);
     setShowForm(true);
-  };
-
-  const handleDelete = (id: number) => {
-    if (!confirm("Delete this blog post?")) return;
-    const updated = posts.filter((p) => p.id !== id);
-    setPosts(updated);
-    saveBlogPosts(updated);
-    toast.success("Post deleted");
   };
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     try {
-      const url = await uploadFile(file);
-      setForm((f) => ({ ...f, image: url }));
-      toast.success("Image uploaded");
+      const result = await uploadFileDetailed(file);
+      setForm((f) => ({ ...f, image: result.url, imageWebpKB: result.webpKB }));
+      toast.success(
+        `Image uploaded & converted to WebP (${result.webpKB.toFixed(0)}KB)`,
+      );
     } catch {
-      toast.error("Image upload failed");
+      toast.error(
+        "Upload failed — please check your internet connection and try again",
+      );
     }
     if (imageFileRef.current) imageFileRef.current.value = "";
   };
@@ -102,63 +181,23 @@ export default function AdminBlog() {
       toast.error("Title and author are required");
       return;
     }
-    const now = new Date().toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-    let updated: BlogPost[];
-    if (editId !== null) {
-      updated = posts.map((p) =>
-        p.id === editId
-          ? {
-              ...p,
-              ...form,
-              slug: generateSlug(form.title),
-              readTime: `${Math.max(1, Math.ceil(form.content.split(" ").length / 200))} min read`,
-            }
-          : p,
-      );
-    } else {
-      const newPost: BlogPost = {
-        id: Date.now(),
-        slug: generateSlug(form.title),
-        title: form.title,
-        category: form.category,
-        author: form.author,
-        date: form.date || now,
-        readTime: `${Math.max(1, Math.ceil(form.content.split(" ").length / 200))} min read`,
-        status: form.status,
-        excerpt: form.excerpt,
-        content: form.content,
-        image: form.image,
-      };
-      updated = [newPost, ...posts];
-    }
-    setPosts(updated);
-    saveBlogPosts(updated);
-    toast.success(editId !== null ? "Post updated" : "Post published");
-    resetForm();
+    editId !== null ? updateMutation.mutate() : createMutation.mutate();
   };
 
+  const isSaving = createMutation.isPending || updateMutation.isPending;
+  const uploadActive = converting || uploading;
   const statusColor = (s: string) =>
     s === "Published" ? "#22c55e" : s === "Draft" ? "#f59e0b" : "#6b7280";
 
   return (
     <AdminLayout>
       <div style={{ maxWidth: 1000 }}>
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
           <div>
-            <h2 style={{ color: "gold", fontWeight: 700, fontSize: 20 }}>
+            <h2 style={{ color: "#1A237E", fontWeight: 700, fontSize: 20 }}>
               Blog Management
             </h2>
-            <p
-              style={{
-                color: "rgba(255,255,255,0.5)",
-                fontSize: 13,
-                marginTop: 2,
-              }}
-            >
+            <p style={{ color: "#666", fontSize: 13, marginTop: 2 }}>
               {posts.filter((p) => p.status === "Published").length} published •{" "}
               {posts.filter((p) => p.status === "Draft").length} drafts
             </p>
@@ -167,9 +206,10 @@ export default function AdminBlog() {
             <button
               type="button"
               onClick={() => setShowForm(true)}
+              className="w-full sm:w-auto"
               style={{
-                background: "gold",
-                color: "#111",
+                background: "#1A237E",
+                color: "#fff",
                 border: "none",
                 borderRadius: 8,
                 padding: "8px 18px",
@@ -187,16 +227,16 @@ export default function AdminBlog() {
         {showForm && (
           <div
             style={{
-              background: "#111",
-              border: "1px solid #222",
+              background: "#fff",
+              border: "1px solid #c5cae9",
               borderRadius: 12,
-              padding: 24,
+              padding: 20,
               marginBottom: 24,
             }}
           >
             <h3
               style={{
-                color: "gold",
+                color: "#1A237E",
                 fontWeight: 600,
                 fontSize: 16,
                 marginBottom: 20,
@@ -204,13 +244,8 @@ export default function AdminBlog() {
             >
               {editId !== null ? "Edit Post" : "New Blog Post"}
             </h3>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 16,
-              }}
-            >
+            {/* Responsive 2-col → 1-col on mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <p style={labelStyle}>Title *</p>
                 <input
@@ -232,7 +267,7 @@ export default function AdminBlog() {
                     setForm((f) => ({ ...f, category: e.target.value }))
                   }
                 >
-                  {categories.map((c) => (
+                  {BLOG_CATEGORIES.map((c) => (
                     <option key={c} value={c}>
                       {c}
                     </option>
@@ -274,27 +309,61 @@ export default function AdminBlog() {
                   <option value="Draft">Draft</option>
                 </select>
               </div>
+
+              {/* Featured Image */}
               <div>
-                <p style={labelStyle}>Featured Image</p>
-                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                  <button
-                    type="button"
-                    onClick={() => imageFileRef.current?.click()}
-                    disabled={uploading}
-                    style={{
-                      background: uploading ? "#333" : "#1a1a1a",
-                      border: "1px dashed #555",
-                      borderRadius: 8,
-                      padding: "8px 14px",
-                      color: uploading ? "gold" : "#aaa",
-                      fontSize: 13,
-                      cursor: "pointer",
-                      whiteSpace: "nowrap",
-                    }}
-                    data-ocid="admin.blog.upload_button"
-                  >
-                    {uploading ? "Uploading..." : "📷 Upload Image"}
-                  </button>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: 6,
+                  }}
+                >
+                  <p style={labelStyle}>Featured Image</p>
+                  <span style={{ color: "#888", fontSize: 11 }}>
+                    Auto-converted to WebP
+                  </span>
+                </div>
+                <div
+                  style={{
+                    border: "2px dashed #c5cae9",
+                    borderRadius: 8,
+                    padding: "14px 12px",
+                    background: uploadActive ? "#e8f4fe" : "#f5f7ff",
+                    cursor: uploadActive ? "not-allowed" : "pointer",
+                    textAlign: "center",
+                    transition: "all 0.2s",
+                    borderColor: uploadActive ? "#42A5F5" : "#c5cae9",
+                  }}
+                  onClick={() => !uploadActive && imageFileRef.current?.click()}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      imageFileRef.current?.click();
+                  }}
+                  onDragOver={(e) => e.preventDefault()}
+                  onDrop={async (e) => {
+                    e.preventDefault();
+                    const file = e.dataTransfer.files?.[0];
+                    if (!file || !file.type.startsWith("image/")) return;
+                    try {
+                      const result = await uploadFileDetailed(file);
+                      setForm((f) => ({
+                        ...f,
+                        image: result.url,
+                        imageWebpKB: result.webpKB,
+                      }));
+                      toast.success(
+                        `Image converted to WebP (${result.webpKB.toFixed(0)}KB)`,
+                      );
+                    } catch {
+                      toast.error(
+                        "Upload failed — please check your internet connection and try again",
+                      );
+                    }
+                  }}
+                  data-ocid="admin.blog.dropzone"
+                >
                   <input
                     ref={imageFileRef}
                     type="file"
@@ -302,21 +371,120 @@ export default function AdminBlog() {
                     className="hidden"
                     onChange={handleImageUpload}
                   />
-                  {form.image && (
+                  {uploadActive ? (
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 8,
+                      }}
+                    >
+                      <Loader2
+                        size={16}
+                        className="animate-spin"
+                        style={{ color: "#42A5F5" }}
+                      />
+                      <span
+                        style={{
+                          color: "#42A5F5",
+                          fontSize: 13,
+                          fontWeight: 600,
+                        }}
+                      >
+                        {converting ? "Converting to WebP..." : "Uploading..."}
+                      </span>
+                    </div>
+                  ) : (
+                    <>
+                      <span style={{ fontSize: 20 }}>📷</span>
+                      <p style={{ fontSize: 12, color: "#666", marginTop: 4 }}>
+                        Click or drag to upload
+                      </p>
+                    </>
+                  )}
+                </div>
+                {uploadError && (
+                  <p
+                    style={{ color: "crimson", fontSize: 12, marginTop: 4 }}
+                    data-ocid="admin.blog.upload_error"
+                  >
+                    {uploadError}
+                  </p>
+                )}
+                {form.image && (
+                  <div
+                    style={{
+                      marginTop: 8,
+                      position: "relative",
+                      display: "inline-block",
+                    }}
+                  >
                     <img
                       src={form.image}
                       alt="preview"
+                      className="max-w-full"
                       style={{
-                        height: 40,
-                        width: 60,
+                        height: 56,
+                        width: 80,
                         objectFit: "cover",
                         borderRadius: 6,
+                        border: "1px solid #c5cae9",
                       }}
                     />
-                  )}
-                </div>
+                    {form.imageWebpKB !== undefined && (
+                      <span
+                        style={{
+                          position: "absolute",
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          background: "rgba(46,125,50,0.85)",
+                          color: "#fff",
+                          fontSize: 9,
+                          fontWeight: 700,
+                          textAlign: "center",
+                          borderRadius: "0 0 6px 6px",
+                          padding: "2px 0",
+                        }}
+                      >
+                        WebP ✓ {form.imageWebpKB.toFixed(0)}KB
+                      </span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setForm((f) => ({
+                          ...f,
+                          image: "",
+                          imageWebpKB: undefined,
+                        }))
+                      }
+                      style={{
+                        position: "absolute",
+                        top: -6,
+                        right: -6,
+                        background: "crimson",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: 18,
+                        height: 18,
+                        color: "#fff",
+                        fontSize: 11,
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                      aria-label="Remove image"
+                    >
+                      <X size={10} color="#fff" />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
+
             <div style={{ marginTop: 16 }}>
               <p style={labelStyle}>Excerpt</p>
               <textarea
@@ -340,31 +508,39 @@ export default function AdminBlog() {
                 placeholder="Full blog post content..."
               />
             </div>
-            <div style={{ display: "flex", gap: 10, marginTop: 20 }}>
+
+            <div className="flex flex-col sm:flex-row gap-3 mt-5">
               <button
                 type="button"
                 onClick={handleSave}
+                disabled={isSaving || uploadActive}
+                className="w-full sm:w-auto"
                 style={{
-                  background: "gold",
-                  color: "#111",
+                  background: isSaving ? "#c5cae9" : "#1A237E",
+                  color: "#fff",
                   border: "none",
                   borderRadius: 8,
                   padding: "9px 24px",
                   fontWeight: 700,
                   fontSize: 14,
-                  cursor: "pointer",
+                  cursor: isSaving ? "not-allowed" : "pointer",
                 }}
                 data-ocid="admin.blog.save_button"
               >
-                {editId !== null ? "Update Post" : "Publish Post"}
+                {isSaving
+                  ? "Saving..."
+                  : editId !== null
+                    ? "Update Post"
+                    : "Publish Post"}
               </button>
               <button
                 type="button"
                 onClick={resetForm}
+                className="w-full sm:w-auto"
                 style={{
                   background: "transparent",
-                  color: "#aaa",
-                  border: "1px solid #333",
+                  color: "#666",
+                  border: "1px solid #c5cae9",
                   borderRadius: 8,
                   padding: "9px 18px",
                   fontSize: 14,
@@ -378,182 +554,315 @@ export default function AdminBlog() {
           </div>
         )}
 
-        <div
-          style={{
-            background: "#111",
-            border: "1px solid #222",
-            borderRadius: 12,
-            overflow: "hidden",
-          }}
-        >
-          <table
-            style={{ width: "100%", borderCollapse: "collapse" }}
-            data-ocid="admin.blog.table"
-          >
-            <thead>
-              <tr>
-                {[
-                  "Image",
-                  "Title",
-                  "Category",
-                  "Author",
-                  "Date",
-                  "Status",
-                  "Actions",
-                ].map((h) => (
-                  <th
-                    key={h}
-                    style={{
-                      textAlign: "left",
-                      padding: "12px 14px",
-                      color: "#666",
-                      fontSize: 11,
-                      fontWeight: 600,
-                      textTransform: "uppercase",
-                      borderBottom: "1px solid #222",
-                      background: "#0f0f0f",
-                    }}
-                  >
-                    {h}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {posts.map((post, i) => (
-                <tr
-                  key={post.id}
-                  style={{ borderBottom: "1px solid #1a1a1a" }}
-                  data-ocid={`admin.blog.item.${i + 1}`}
-                >
-                  <td style={{ padding: "10px 14px" }}>
-                    {post.image ? (
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        style={{
-                          width: 60,
-                          height: 40,
-                          objectFit: "cover",
-                          borderRadius: 6,
-                        }}
-                      />
-                    ) : (
-                      <div
-                        style={{
-                          width: 60,
-                          height: 40,
-                          background: "#1a1a1a",
-                          borderRadius: 6,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontSize: 18,
-                        }}
-                      >
-                        📷
-                      </div>
-                    )}
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px 14px",
-                      fontSize: 13,
-                      color: "#ddd",
-                      maxWidth: 200,
-                    }}
-                  >
-                    {post.title}
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px 14px",
-                      fontSize: 12,
-                      color: "#888",
-                    }}
-                  >
-                    {post.category}
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px 14px",
-                      fontSize: 12,
-                      color: "#888",
-                    }}
-                  >
-                    {post.author}
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px 14px",
-                      fontSize: 12,
-                      color: "#888",
-                    }}
-                  >
-                    {post.date}
-                  </td>
-                  <td style={{ padding: "10px 14px" }}>
-                    <span
-                      style={{
-                        color: statusColor(post.status),
-                        background: `${statusColor(post.status)}22`,
-                        fontSize: 11,
-                        padding: "3px 10px",
-                        borderRadius: 20,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {post.status}
-                    </span>
-                  </td>
-                  <td style={{ padding: "10px 14px" }}>
-                    <div style={{ display: "flex", gap: 6 }}>
-                      <button
-                        type="button"
-                        onClick={() => handleEdit(post)}
-                        style={{
-                          background: "gold",
-                          color: "#111",
-                          border: "none",
-                          borderRadius: 6,
-                          padding: "5px 12px",
-                          fontSize: 12,
-                          fontWeight: 600,
-                          cursor: "pointer",
-                        }}
-                        data-ocid={`admin.blog.edit_button.${i + 1}`}
-                      >
-                        Edit
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => handleDelete(post.id)}
-                        style={{
-                          background: "crimson",
-                          color: "#fff",
-                          border: "none",
-                          borderRadius: 6,
-                          padding: "5px 12px",
-                          fontSize: 12,
-                          fontWeight: 600,
-                          cursor: "pointer",
-                        }}
-                        data-ocid={`admin.blog.delete_button.${i + 1}`}
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* Blog list: card view on mobile, table on sm+ */}
+        {/* Mobile card view */}
+        <div className="sm:hidden flex flex-col gap-3">
           {posts.length === 0 && (
             <div
               style={{
                 padding: 40,
                 textAlign: "center",
-                color: "#555",
+                color: "#aaa",
+                fontSize: 14,
+              }}
+              data-ocid="admin.blog.empty_state"
+            >
+              No blog posts yet. Click "+ New Post" to create one.
+            </div>
+          )}
+          {posts.map((post, i) => (
+            <div
+              key={String(post.id)}
+              className="bg-white rounded-xl border border-border p-4"
+              data-ocid={`admin.blog.item.${i + 1}`}
+            >
+              <div className="flex items-start gap-3">
+                {post.image ? (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    style={{
+                      width: 56,
+                      height: 40,
+                      objectFit: "cover",
+                      borderRadius: 6,
+                      flexShrink: 0,
+                    }}
+                  />
+                ) : (
+                  <div
+                    style={{
+                      width: 56,
+                      height: 40,
+                      background: "#e8eaf6",
+                      borderRadius: 6,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 18,
+                      flexShrink: 0,
+                    }}
+                  >
+                    📷
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="font-semibold text-sm truncate"
+                    style={{ color: "#333" }}
+                  >
+                    {post.title}
+                  </p>
+                  <p className="text-xs mt-0.5" style={{ color: "#888" }}>
+                    {post.category} · {post.date}
+                  </p>
+                </div>
+                <span
+                  style={{
+                    color: statusColor(post.status),
+                    background: `${statusColor(post.status)}22`,
+                    fontSize: 11,
+                    padding: "2px 8px",
+                    borderRadius: 20,
+                    fontWeight: 600,
+                    flexShrink: 0,
+                  }}
+                >
+                  {post.status}
+                </span>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <button
+                  type="button"
+                  onClick={() => handleEdit(post)}
+                  className="flex-1"
+                  style={{
+                    background: "#1A237E",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: 6,
+                    padding: "7px 12px",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                  data-ocid={`admin.blog.edit_button.${i + 1}`}
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (confirm("Delete this blog post?"))
+                      deleteMutation.mutate(post.id);
+                  }}
+                  className="flex-1"
+                  style={{
+                    background: "crimson",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: 6,
+                    padding: "7px 12px",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                  data-ocid={`admin.blog.delete_button.${i + 1}`}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop table view */}
+        <div
+          className="hidden sm:block"
+          style={{
+            background: "#fff",
+            border: "1px solid #e0e0e0",
+            borderRadius: 12,
+            overflow: "hidden",
+          }}
+        >
+          <div className="overflow-x-auto">
+            <table
+              style={{
+                width: "100%",
+                borderCollapse: "collapse",
+                minWidth: 600,
+              }}
+              data-ocid="admin.blog.table"
+            >
+              <thead>
+                <tr>
+                  {[
+                    "Image",
+                    "Title",
+                    "Category",
+                    "Author",
+                    "Date",
+                    "Status",
+                    "Actions",
+                  ].map((h) => (
+                    <th
+                      key={h}
+                      style={{
+                        textAlign: "left",
+                        padding: "12px 14px",
+                        color: "#999",
+                        fontSize: 11,
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        borderBottom: "1px solid #e0e0e0",
+                        background: "#f5f7ff",
+                      }}
+                    >
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {posts.map((post, i) => (
+                  <tr
+                    key={String(post.id)}
+                    style={{ borderBottom: "1px solid #f5f5f5" }}
+                    data-ocid={`admin.blog.item.${i + 1}`}
+                  >
+                    <td style={{ padding: "10px 14px" }}>
+                      {post.image ? (
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          style={{
+                            width: 60,
+                            height: 40,
+                            objectFit: "cover",
+                            borderRadius: 6,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          style={{
+                            width: 60,
+                            height: 40,
+                            background: "#e8eaf6",
+                            borderRadius: 6,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: 18,
+                          }}
+                        >
+                          📷
+                        </div>
+                      )}
+                    </td>
+                    <td
+                      style={{
+                        padding: "10px 14px",
+                        fontSize: 13,
+                        color: "#333",
+                        maxWidth: 200,
+                      }}
+                    >
+                      {post.title}
+                    </td>
+                    <td
+                      style={{
+                        padding: "10px 14px",
+                        fontSize: 12,
+                        color: "#666",
+                      }}
+                    >
+                      {post.category}
+                    </td>
+                    <td
+                      style={{
+                        padding: "10px 14px",
+                        fontSize: 12,
+                        color: "#666",
+                      }}
+                    >
+                      {post.author}
+                    </td>
+                    <td
+                      style={{
+                        padding: "10px 14px",
+                        fontSize: 12,
+                        color: "#666",
+                      }}
+                    >
+                      {post.date}
+                    </td>
+                    <td style={{ padding: "10px 14px" }}>
+                      <span
+                        style={{
+                          color: statusColor(post.status),
+                          background: `${statusColor(post.status)}22`,
+                          fontSize: 11,
+                          padding: "3px 10px",
+                          borderRadius: 20,
+                          fontWeight: 600,
+                        }}
+                      >
+                        {post.status}
+                      </span>
+                    </td>
+                    <td style={{ padding: "10px 14px" }}>
+                      <div style={{ display: "flex", gap: 6 }}>
+                        <button
+                          type="button"
+                          onClick={() => handleEdit(post)}
+                          style={{
+                            background: "#1A237E",
+                            color: "#fff",
+                            border: "none",
+                            borderRadius: 6,
+                            padding: "5px 12px",
+                            fontSize: 12,
+                            fontWeight: 600,
+                            cursor: "pointer",
+                          }}
+                          data-ocid={`admin.blog.edit_button.${i + 1}`}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (confirm("Delete this blog post?"))
+                              deleteMutation.mutate(post.id);
+                          }}
+                          style={{
+                            background: "crimson",
+                            color: "#fff",
+                            border: "none",
+                            borderRadius: 6,
+                            padding: "5px 12px",
+                            fontSize: 12,
+                            fontWeight: 600,
+                            cursor: "pointer",
+                          }}
+                          data-ocid={`admin.blog.delete_button.${i + 1}`}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {posts.length === 0 && (
+            <div
+              style={{
+                padding: 40,
+                textAlign: "center",
+                color: "#aaa",
                 fontSize: 14,
               }}
               data-ocid="admin.blog.empty_state"

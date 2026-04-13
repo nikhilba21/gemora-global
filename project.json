@@ -1,0 +1,31 @@
+{
+  "overview": "GEMORA GLOBAL is a B2B mobile-first website for a luxury imitation jewellery manufacturer and exporter based in Jaipur, India. It targets wholesalers, boutiques, retailers, and international buyers with SEO-optimized pages, a full product catalogue, admin panel, and conversion-focused features.",
+  "features": [
+    "WhatsApp quick-inquiry popup with product auto-fill",
+    "Bulk order calculator with dynamic pricing tiers",
+    "Admin panel New Arrivals toggle per product",
+    "Homepage New Arrivals section showing flagged products",
+    "Hero banner mobile fix",
+    "Wholesale button contrast fix",
+    "50 SEO-optimized blog posts",
+    "30+ SEO landing pages",
+    "Full admin CRUD panel",
+    "WebP auto-conversion on image upload",
+    "Country-specific export pages",
+    "Product quick-view with WhatsApp CTA"
+  ],
+  "category": "ecommerce",
+  "tags": [
+    "jewellery",
+    "b2b",
+    "wholesale",
+    "export",
+    "imitation-jewellery",
+    "jaipur",
+    "seo",
+    "admin-panel",
+    "whatsapp",
+    "bulk-order"
+  ],
+  "last_updated": "2026-04-12T11:31:19.733Z"
+}

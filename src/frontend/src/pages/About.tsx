@@ -95,26 +95,38 @@ export default function About() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-16">
-        {/* Hero */}
-        <div className="bg-card border-b border-border py-16">
-          <div className="container text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+        {/* Hero — proper height on mobile */}
+        <div className="bg-card border-b border-border py-10 md:py-16 px-4">
+          <div className="container px-0 text-center">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
               About Gemora Global — Crafting Jewellery for the World Since 2013
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
               A legacy of craftsmanship, a vision for global excellence.
             </p>
           </div>
         </div>
 
-        <div className="container py-16 space-y-16">
-          {/* Our Story */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-serif text-3xl font-bold mb-4 text-primary">
+        <div className="container py-10 md:py-16 space-y-10 md:space-y-16 px-4">
+          {/* Our Story — image above text on mobile (flex-col) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+            {/* Image first on mobile */}
+            <div className="rounded-xl overflow-hidden w-full aspect-video md:order-2">
+              <img
+                src="/assets/generated/jewellery-bridal-hd.dim_800x800.jpg"
+                alt="Our Workshop — Gemora Global imitation jewellery manufacturing India"
+                className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+                width={800}
+                height={600}
+              />
+            </div>
+            <div className="md:order-1">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-primary">
                 Our Story
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
                 Gemora Global was founded with a single mission: to bring the
                 richness of Indian jewellery craftsmanship to buyers around the
                 world — at prices that make global retail viable. Over more than
@@ -126,7 +138,7 @@ export default function About() {
                 serving clients across Europe, the Middle East, North America,
                 and the Asia-Pacific region.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 Our name, Gemora, reflects our commitment to gem-like quality in
                 every piece — from delicate earrings to statement bridal sets.
                 We believe every retailer deserves a supplier they can trust
@@ -137,25 +149,14 @@ export default function About() {
                 to get started.
               </p>
             </div>
-            <div className="rounded-xl overflow-hidden aspect-video">
-              <img
-                src="/assets/generated/jewellery-bridal-hd.dim_800x800.jpg"
-                alt="Our Workshop — Gemora Global imitation jewellery manufacturing India"
-                className="w-full h-full object-cover"
-                loading="eager"
-                fetchPriority="high"
-                width={800}
-                height={600}
-              />
-            </div>
           </div>
 
           {/* Manufacturing Process */}
-          <div className="bg-card rounded-xl p-8 border border-border">
-            <h2 className="font-serif text-3xl font-bold mb-6 text-center">
+          <div className="bg-card rounded-xl p-6 md:p-8 border border-border">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center">
               Our Manufacturing Process
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-8">
+            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-6 md:mb-8 text-sm md:text-base">
               Our manufacturing facility in Rajasthan sits at the centre of
               India's most celebrated jewellery-making region. Our team of
               skilled artisans — many of whom trained under master craftspeople
@@ -170,18 +171,19 @@ export default function About() {
               </Link>
               .
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {/* Stats: grid-cols-2 on mobile */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
               {[
                 { value: "500+", label: "Designs in Catalogue" },
                 { value: "50+", label: "Export Countries" },
                 { value: "10,000+", label: "Happy Wholesale Clients" },
                 { value: "10+", label: "Years of Experience" },
               ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-serif text-3xl font-bold text-primary mb-2">
+                <div key={stat.label} className="p-2">
+                  <div className="font-serif text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs md:text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </div>
@@ -190,11 +192,11 @@ export default function About() {
           </div>
 
           {/* Commitment to Quality */}
-          <div className="bg-primary/10 border border-primary/20 rounded-xl p-8">
-            <h2 className="font-serif text-3xl font-bold mb-6 text-center">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 md:p-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center">
               Our Commitment to Quality
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-8">
+            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-6 md:mb-8 text-sm md:text-base">
               Quality is non-negotiable at Gemora Global. Every item undergoes
               multi-stage quality control before dispatch: raw material
               inspection, mid-production checks, and a final pre-shipment
@@ -210,7 +212,7 @@ export default function About() {
               </Link>{" "}
               highlight in repeat orders.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
                   icon: "🔬",
@@ -228,18 +230,20 @@ export default function About() {
                   desc: "Our proprietary multi-layer anti-tarnish coating dramatically extends wearable life.",
                 },
               ].map((item) => (
-                <div key={item.title} className="text-center">
+                <div key={item.title} className="text-center p-4">
                   <div className="text-4xl mb-3">{item.icon}</div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
+                  <h3 className="font-semibold mb-2 text-sm md:text-base">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Export Expertise */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-xl overflow-hidden aspect-video">
+          {/* Export Expertise — image above text on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+            <div className="rounded-xl overflow-hidden w-full aspect-video">
               <img
                 src="/assets/generated/jewellery-necklace-hd.dim_800x800.jpg"
                 alt="Global Export — Gemora Global worldwide imitation jewellery distribution"
@@ -250,10 +254,10 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="font-serif text-3xl font-bold mb-4 text-primary">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-primary">
                 Our Export Expertise
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
                 Our export team has over 10 years of experience navigating
                 international shipping, customs documentation, and
                 country-specific labelling requirements. We are experienced
@@ -278,15 +282,16 @@ export default function About() {
                 ].map((point) => (
                   <li
                     key={point}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="text-primary">✓</span> {point}
+                    <span className="text-primary flex-shrink-0 mt-0.5">✓</span>
+                    <span>{point}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 to="/contact"
-                className="inline-flex items-center bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
+                className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-3 rounded-lg text-sm font-medium transition-colors min-h-[44px] w-full sm:w-auto"
               >
                 Get a Free Quote
               </Link>

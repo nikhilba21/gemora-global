@@ -144,12 +144,13 @@ export default function ExportMarkets() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-16">
-        <div className="bg-card border-b border-border py-12">
-          <div className="container">
-            <h1 className="font-serif text-4xl font-bold mb-2">
+        {/* Header */}
+        <div className="bg-card border-b border-border py-8 md:py-12 px-4">
+          <div className="container px-0">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
               Global Jewellery Export — Market-Specific Supply for 15+ Countries
             </h1>
-            <p className="text-muted-foreground max-w-2xl">
+            <p className="text-muted-foreground max-w-2xl text-sm md:text-base">
               Gemora Global has built a deep understanding of the specific
               buying preferences, retail price points, and design tastes across
               our key international markets. We don't just ship boxes — we help
@@ -166,50 +167,83 @@ export default function ExportMarkets() {
             </p>
           </div>
         </div>
-        <div className="container py-12 space-y-8">
+
+        {/* Stats row — grid-cols-2 on mobile */}
+        <div className="container px-4 py-6 md:py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {[
+              { value: "50+", label: "Countries Served" },
+              { value: "10+", label: "Years Exporting" },
+              { value: "500+", label: "Designs Available" },
+              { value: "24h", label: "Response Time" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-card border border-border rounded-xl p-4 text-center"
+              >
+                <div className="font-bold text-primary text-xl md:text-2xl mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-xs md:text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Market cards — grid-cols-1 on mobile */}
+        <div className="container px-4 pb-10 md:pb-12 space-y-4 md:space-y-8">
           {markets.map((m) => (
             <div
               key={m.country}
               className="bg-card rounded-xl border border-border overflow-hidden"
             >
-              <div className="p-6 border-b border-border flex items-center gap-4">
-                <span className="text-5xl">{m.flag}</span>
-                <div>
-                  <h2 className="font-serif text-2xl font-bold">{m.region}</h2>
-                  <p className="text-muted-foreground text-sm">
+              {/* Header — flag + description */}
+              <div className="p-4 md:p-6 border-b border-border flex items-start gap-3 md:gap-4">
+                <span className="text-4xl md:text-5xl flex-shrink-0">
+                  {m.flag}
+                </span>
+                <div className="min-w-0">
+                  <h2 className="font-serif text-xl md:text-2xl font-bold mb-1">
+                    {m.region}
+                  </h2>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                     {m.description}
                   </p>
                 </div>
               </div>
-              <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-border">
-                <div className="p-5">
-                  <h3 className="font-semibold text-sm text-primary mb-2">
+              {/* Details — stacked on mobile, 3 cols on md */}
+              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+                <div className="p-4 md:p-5">
+                  <p className="font-semibold text-sm text-primary mb-2">
                     📦 Packaging
-                  </h3>
+                  </p>
                   <p className="text-sm text-muted-foreground">{m.packaging}</p>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-sm text-primary mb-2">
+                <div className="p-4 md:p-5">
+                  <p className="font-semibold text-sm text-primary mb-2">
                     ✈️ Shipping
-                  </h3>
+                  </p>
                   <p className="text-sm text-muted-foreground">{m.shipping}</p>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-sm text-primary mb-2">
+                <div className="p-4 md:p-5">
+                  <p className="font-semibold text-sm text-primary mb-2">
                     📊 Bulk Process
-                  </h3>
+                  </p>
                   <p className="text-sm text-muted-foreground">{m.bulk}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="bg-primary/10 border-y border-primary/20 py-12">
+
+        <div className="bg-primary/10 border-y border-primary/20 py-10 md:py-12 px-4">
           <div className="container text-center">
-            <h2 className="font-serif text-2xl font-bold mb-3">
+            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3">
               Don't see your country?
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-sm md:text-base">
               We ship to 50+ countries. Contact us for custom shipping
               arrangements or browse our{" "}
               <Link to="/products" className="text-primary hover:underline">
@@ -217,7 +251,10 @@ export default function ExportMarkets() {
               </Link>
               .
             </p>
-            <Button asChild className="bg-primary text-primary-foreground">
+            <Button
+              asChild
+              className="bg-primary text-primary-foreground w-full sm:w-auto min-h-[44px] px-8"
+            >
               <Link to="/contact">Get Shipping Quote</Link>
             </Button>
           </div>

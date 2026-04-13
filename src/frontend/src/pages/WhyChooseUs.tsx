@@ -134,13 +134,13 @@ export default function WhyChooseUs() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-16">
-        {/* Hero */}
-        <div className="bg-card border-b border-border py-16">
-          <div className="container text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+        {/* Hero — proper height on mobile */}
+        <div className="bg-card border-b border-border py-10 md:py-16 px-4">
+          <div className="container px-0 text-center">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
               Why Wholesale Buyers Around the World Choose Gemora Global
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
               Sourcing imitation jewellery internationally involves real risk —
               inconsistent quality, unreliable suppliers, and complicated
               logistics. Gemora Global was built specifically to eliminate those
@@ -157,22 +157,25 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        {/* Reasons */}
-        <div className="container py-16 space-y-8">
+        {/* Reasons — feature grid: grid-cols-1 on mobile */}
+        <div className="container py-10 md:py-16 space-y-4 md:space-y-8 px-4">
           {REASONS.map((r) => (
             <div
               key={r.title}
-              className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 transition-colors"
+              className="bg-card border border-border rounded-xl p-5 md:p-8 hover:border-primary/50 transition-colors"
             >
-              <div className="flex items-start gap-6">
-                <div className="text-5xl flex-shrink-0" aria-hidden="true">
+              <div className="flex items-start gap-4 md:gap-6">
+                <div
+                  className="text-4xl md:text-5xl flex-shrink-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center"
+                  aria-hidden="true"
+                >
                   {r.icon}
                 </div>
-                <div>
-                  <h2 className="font-serif text-2xl font-bold mb-3 text-primary">
+                <div className="min-w-0">
+                  <h2 className="font-serif text-lg md:text-2xl font-bold mb-2 md:mb-3 text-primary leading-tight">
                     {r.title}
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {r.body}
                   </p>
                 </div>
@@ -182,18 +185,20 @@ export default function WhyChooseUs() {
         </div>
 
         {/* FAQ */}
-        <div className="bg-primary/10 border-y border-primary/20 py-16">
+        <div className="bg-primary/10 border-y border-primary/20 py-12 md:py-16 px-4">
           <div className="container">
-            <h2 className="font-serif text-3xl font-bold mb-8 text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">
               Frequently Asked Questions
             </h2>
-            <div className="max-w-2xl mx-auto space-y-6">
+            <div className="max-w-2xl mx-auto space-y-4 md:space-y-6">
               {FAQ.map((f) => (
                 <div
                   key={f.q}
-                  className="bg-card border border-border rounded-xl p-6"
+                  className="bg-card border border-border rounded-xl p-5 md:p-6"
                 >
-                  <h3 className="font-semibold mb-2">{f.q}</h3>
+                  <h3 className="font-semibold mb-2 text-sm md:text-base">
+                    {f.q}
+                  </h3>
                   <p className="text-muted-foreground text-sm">{f.a}</p>
                 </div>
               ))}
@@ -201,12 +206,12 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="container py-16 text-center">
-          <h2 className="font-serif text-3xl font-bold mb-4">
+        {/* CTA — full-width buttons on mobile */}
+        <div className="container py-12 md:py-16 text-center px-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
             Ready to Start Sourcing?
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+          <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-sm md:text-base">
             Join thousands of boutiques and wholesalers who trust Gemora Global
             for premium imitation jewellery. View our{" "}
             <Link to="/gallery" className="text-primary hover:underline">
@@ -218,11 +223,11 @@ export default function WhyChooseUs() {
             </Link>
             .
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-10"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 w-full sm:w-auto min-h-[48px]"
             >
               <Link to="/contact">Send Inquiry Now</Link>
             </Button>
@@ -230,7 +235,7 @@ export default function WhyChooseUs() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 px-10"
+              className="border-primary text-primary hover:bg-primary/10 px-10 w-full sm:w-auto min-h-[48px]"
             >
               <Link to="/products">Browse Products</Link>
             </Button>
