@@ -38,7 +38,7 @@ const EMPTY_FORM = {
   category: BLOG_CATEGORIES[0],
   author: "",
   date: "",
-  status: "Draft",
+  status: "Published",
   excerpt: "",
   content: "",
   image: "",
@@ -66,11 +66,14 @@ export default function AdminBlog() {
 
   const { data: posts = [] } = useQuery({
     queryKey: ["blogPosts"],
-    queryFn: () => actor!.getBlogPosts([]),
+    queryFn: () => actor!.getBlogPosts(null),
     enabled: !!actor,
   });
 
-  const invalidate = () => qc.invalidateQueries({ queryKey: ["blogPosts"] });
+  const invalidate = () => {
+    qc.invalidateQueries({ queryKey: ["blogPosts"] });
+    qc.invalidateQueries({ queryKey: ["blog-paginated"] });
+  };
 
   const createMutation = useMutation({
     mutationFn: () => {

@@ -60,12 +60,16 @@ export interface Inquiry {
 export interface Product {
   'id' : bigint,
   'moq' : string,
+  'sku' : [] | [string],
   'categoryId' : bigint,
   'featured' : boolean,
   'imageUrls' : Array<string>,
+  'subcategory' : [] | [string],
   'name' : string,
   'createdAt' : bigint,
+  'color' : [] | [string],
   'isNewArrival' : boolean,
+  'keyFeatures' : [] | [string],
   'description' : string,
 }
 export interface Testimonial {
@@ -143,7 +147,19 @@ export interface _SERVICE {
   'createCategory' : ActorMethod<[string, string, string, bigint], bigint>,
   'createGalleryItem' : ActorMethod<[string, string, string, bigint], bigint>,
   'createProduct' : ActorMethod<
-    [bigint, string, string, string, Array<string>, boolean, boolean],
+    [
+      bigint,
+      string,
+      string,
+      string,
+      Array<string>,
+      boolean,
+      boolean,
+      [] | [string],
+      [] | [string],
+      [] | [string],
+      [] | [string],
+    ],
     bigint
   >,
   'createTestimonial' : ActorMethod<
@@ -158,6 +174,10 @@ export interface _SERVICE {
   'deleteTestimonial' : ActorMethod<[bigint], undefined>,
   'getBlogPost' : ActorMethod<[string], [] | [BlogPost]>,
   'getBlogPosts' : ActorMethod<[[] | [string]], Array<BlogPost>>,
+  'getBlogPostsPaginated' : ActorMethod<
+    [[] | [string], bigint, bigint],
+    { 'total' : bigint, 'pages' : bigint, 'items' : Array<BlogPost> }
+  >,
   'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
   'getCallerUserRole' : ActorMethod<[], UserRole>,
   'getCatalogues' : ActorMethod<[], Array<Catalogue>>,
@@ -167,23 +187,43 @@ export interface _SERVICE {
     [],
     {
       'totalProducts' : bigint,
+      'totalCatalogues' : bigint,
       'newInquiries' : bigint,
+      'totalBlogPosts' : bigint,
+      'totalGalleryItems' : bigint,
       'totalVisits' : bigint,
+      'totalCategories' : bigint,
       'totalInquiries' : bigint,
     }
   >,
   'getFeaturedProducts' : ActorMethod<[], Array<Product>>,
   'getGallery' : ActorMethod<[[] | [string]], Array<GalleryItem>>,
+  'getGalleryPaginated' : ActorMethod<
+    [[] | [string], bigint, bigint],
+    { 'total' : bigint, 'pages' : bigint, 'items' : Array<GalleryItem> }
+  >,
   'getInquiries' : ActorMethod<[], Array<Inquiry>>,
+  'getInquiriesStats' : ActorMethod<
+    [],
+    Array<{ 'country' : string, 'count' : bigint }>
+  >,
   'getNewArrivalProducts' : ActorMethod<[], Array<Product>>,
+  'getPageContent' : ActorMethod<[string], Array<[string, string]>>,
   'getProduct' : ActorMethod<[bigint], [] | [Product]>,
+  'getProductBySlug' : ActorMethod<[string], [] | [Product]>,
   'getProducts' : ActorMethod<[[] | [bigint]], Array<Product>>,
+  'getProductsByCategory' : ActorMethod<[bigint], Array<Product>>,
+  'getProductsPaginated' : ActorMethod<
+    [[] | [bigint], bigint, bigint],
+    { 'total' : bigint, 'pages' : bigint, 'items' : Array<Product> }
+  >,
   'getTestimonials' : ActorMethod<[], Array<Testimonial>>,
   'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
   'isCallerAdmin' : ActorMethod<[], boolean>,
   'recordVisit' : ActorMethod<[], undefined>,
   'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
   'setContent' : ActorMethod<[string, string], undefined>,
+  'setPageContent' : ActorMethod<[string, Array<[string, string]>], undefined>,
   'submitInquiry' : ActorMethod<
     [string, string, string, string, [] | [bigint]],
     bigint
@@ -214,7 +254,20 @@ export interface _SERVICE {
   >,
   'updateInquiryStatus' : ActorMethod<[bigint, string], undefined>,
   'updateProduct' : ActorMethod<
-    [bigint, bigint, string, string, string, Array<string>, boolean, boolean],
+    [
+      bigint,
+      bigint,
+      string,
+      string,
+      string,
+      Array<string>,
+      boolean,
+      boolean,
+      [] | [string],
+      [] | [string],
+      [] | [string],
+      [] | [string],
+    ],
     undefined
   >,
   'updateTestimonial' : ActorMethod<

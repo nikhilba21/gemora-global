@@ -87,8 +87,16 @@ export default function WholesaleImitationJewellery() {
       }
       faqs={[
         {
-          q: "What is the minimum wholesale order quantity?",
-          a: "MOQ is 50 units per design. You can mix designs within a single order as long as each design meets the 50-unit minimum.",
+          q: "What is the minimum order quantity for wholesale?",
+          a: "MOQ starts at 50 pieces per design. Bulk orders of 200+ pieces get additional discounts. You can mix designs within the same category — 25 units of design A + 25 units of design B = 50 units qualifying for standard pricing.",
+        },
+        {
+          q: "Do you supply to international buyers?",
+          a: "Yes, we export to 30+ countries including USA, UK, UAE, Australia, Canada, Singapore, France, Germany, Nigeria, Saudi Arabia, Sri Lanka, Kuwait, and Malaysia. Our export team handles all documentation, freight, and customs compliance.",
+        },
+        {
+          q: "What payment methods do you accept?",
+          a: "We accept bank transfer (TT), PayPal, and Letter of Credit for international buyers. A 30% advance payment is required to confirm the order, with the balance before dispatch.",
         },
         {
           q: "Do you offer bulk discounts for large wholesale orders?",
@@ -99,12 +107,8 @@ export default function WholesaleImitationJewellery() {
           a: "Yes. We welcome direct orders from boutique owners worldwide. Our MOQ of 50 units per design is specifically designed to be accessible for independent boutiques.",
         },
         {
-          q: "How do you package wholesale orders?",
-          a: "Individual pieces are packed in anti-tarnish poly bags, then consolidated in white gift boxes or branded retail packaging. Custom branded packaging is available for 500+ unit orders.",
-        },
-        {
           q: "Is it easy to import jewellery from India to my country?",
-          a: "Yes. Our export team prepares all documentation including commercial invoice, packing list, certificate of origin, and HS code classification. We handle the export side completely.",
+          a: "Yes. Our export team prepares all documentation including commercial invoice, packing list, certificate of origin, and HS code classification. We handle the entire export process on your behalf.",
         },
       ]}
     />

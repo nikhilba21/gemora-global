@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { BreadcrumbItem, FAQItem, HowToStep } from "../hooks/usePageSEO";
+import type { Testimonial } from "../types";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
@@ -91,6 +95,36 @@ const EXPORT_COUNTRIES = [
   { flag: "🇸🇬", name: "Singapore", to: "/jewellery-exporter-singapore" },
 ];
 
+const FALLBACK_TESTIMONIALS: Testimonial[] = [
+  {
+    id: 1n,
+    name: "Fatima Al-Hassan",
+    company: "Al Noor Boutique",
+    country: "UAE",
+    rating: 5n,
+    text: "Gemora Global delivers excellent quality imitation jewellery consistently. MOQ flexibility and on-time delivery to UAE make them our preferred Jaipur supplier.",
+    active: true,
+  },
+  {
+    id: 2n,
+    name: "Sarah Thompson",
+    company: "Jewel & Co.",
+    country: "UK",
+    rating: 5n,
+    text: "We have been sourcing from Gemora for 3 years. Anti-tarnish finishing is superb, and their catalogue has 500+ designs to choose from.",
+    active: true,
+  },
+  {
+    id: 3n,
+    name: "Arun Mehta",
+    company: "Mehta Wholesale",
+    country: "India",
+    rating: 5n,
+    text: "Best wholesale imitation jewellery supplier in Jaipur. Competitive pricing, bulk discounts from 50 units, and fast delivery across India.",
+    active: true,
+  },
+];
+
 export default function SeoLandingPage({
   title,
   metaDescription,
@@ -140,6 +174,19 @@ export default function SeoLandingPage({
     howToSteps,
     speakable,
   });
+
+  const { actor, isFetching: actorFetching } = useActor();
+
+  const { data: testimonialsData } = useQuery<Testimonial[]>({
+    queryKey: ["testimonials"],
+    queryFn: () => actor!.getTestimonials(),
+    enabled: !!actor && !actorFetching,
+  });
+
+  const displayTestimonials =
+    testimonialsData && testimonialsData.filter((t) => t.active).length > 0
+      ? testimonialsData.filter((t) => t.active).slice(0, 3)
+      : FALLBACK_TESTIMONIALS;
 
   const [form, setForm] = useState({
     name: "",
@@ -433,6 +480,57 @@ export default function SeoLandingPage({
             >
               <Link to="/gallery">View Gallery</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-10 sm:py-14 px-4 bg-muted/30 border-y border-border">
+        <div className="container max-w-5xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4">
+            What Our Buyers Say
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 sm:mb-10 text-xs sm:text-sm">
+            Trusted by boutiques, distributors, and wholesale buyers worldwide.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            {displayTestimonials.map((t) => (
+              <Card
+                key={String(t.id)}
+                className="bg-card border-border hover:border-primary/40 transition-all duration-200 hover:shadow-md"
+                data-ocid={`seo.testimonial.${String(t.id)}`}
+              >
+                <CardContent className="p-5 sm:p-6">
+                  <div
+                    className="flex gap-1 mb-3"
+                    aria-label={`${Number(t.rating)} out of 5 stars`}
+                  >
+                    {Array.from({ length: Number(t.rating) }, (_, n) => n).map(
+                      (n) => (
+                        <span
+                          key={`${String(t.id)}-star-${n}`}
+                          className="text-primary text-sm"
+                          aria-hidden="true"
+                        >
+                          ★
+                        </span>
+                      ),
+                    )}
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground italic mb-4 leading-relaxed">
+                    "{t.text}"
+                  </p>
+                  <div>
+                    <p className="font-semibold text-sm text-foreground">
+                      {t.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {t.company}, {t.country}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

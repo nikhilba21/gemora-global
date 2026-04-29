@@ -10,8 +10,22 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import WhatsAppInquiryPopup from "../components/WhatsAppInquiryPopup";
 import { useActor } from "../hooks/useActor";
+import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product, Testimonial } from "../types";
+
+/** Remove Kanhai Jewels boilerplate text from product descriptions */
+function cleanText(text: string): string {
+  return text
+    .replace(
+      /Kanhai Jewels is Mumbai based company established in 2001[^.]*\./gi,
+      "",
+    )
+    .replace(/We are manufacturer and[^.]*\./gi, "")
+    .replace(/Read More/gi, "")
+    .replace(/kanhai/gi, "Gemora")
+    .trim();
+}
 
 // ── Scroll-reveal hook ─────────────────────────────────────────
 function useScrollReveal() {
@@ -49,142 +63,6 @@ const CATEGORY_IMAGES: Record<string, string> = {
 
 const FALLBACK_IMAGE =
   "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg";
-
-const SAMPLE_CATEGORIES: Category[] = [
-  {
-    id: 1n,
-    name: "Necklaces",
-    description: "Exquisite handcrafted necklaces",
-    imageUrl: "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg",
-    sortOrder: 1n,
-  },
-  {
-    id: 2n,
-    name: "Earrings",
-    description: "Stunning earring collections",
-    imageUrl: "/assets/generated/jewellery-earrings-hd.dim_800x800.jpg",
-    sortOrder: 2n,
-  },
-  {
-    id: 3n,
-    name: "Bracelets",
-    description: "Elegant bracelet designs",
-    imageUrl: "/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg",
-    sortOrder: 3n,
-  },
-  {
-    id: 4n,
-    name: "Rings",
-    description: "Statement rings for every occasion",
-    imageUrl: "/assets/generated/jewellery-rings-hd.dim_800x800.jpg",
-    sortOrder: 4n,
-  },
-  {
-    id: 5n,
-    name: "Bridal Jewellery",
-    description: "Complete bridal jewellery sets",
-    imageUrl: "/assets/generated/jewellery-bridal-hd.dim_800x800.jpg",
-    sortOrder: 5n,
-  },
-  {
-    id: 6n,
-    name: "Minimal Fashion",
-    description: "Modern minimal fashion jewellery",
-    imageUrl: "/assets/generated/jewellery-minimal-hd.dim_800x800.jpg",
-    sortOrder: 6n,
-  },
-];
-
-const SAMPLE_PRODUCTS: Product[] = [
-  {
-    id: 1n,
-    categoryId: 1n,
-    name: "Kundan Necklace Set",
-    description: "Traditional Kundan work with polki stones",
-    moq: "50 pcs",
-    imageUrls: ["/assets/generated/jewellery-necklace-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: true,
-    createdAt: 1700000006n,
-  },
-  {
-    id: 2n,
-    categoryId: 2n,
-    name: "Jhumka Earrings Gold",
-    description: "Classic gold-plated jhumka for festive wear",
-    moq: "50 pcs",
-    imageUrls: ["/assets/generated/jewellery-earrings-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: true,
-    createdAt: 1700000005n,
-  },
-  {
-    id: 3n,
-    categoryId: 5n,
-    name: "Bridal Choker Set",
-    description: "Complete bridal set with necklace, earrings, maang tikka",
-    moq: "25 pcs",
-    imageUrls: ["/assets/generated/jewellery-bridal-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: true,
-    createdAt: 1700000004n,
-  },
-  {
-    id: 4n,
-    categoryId: 3n,
-    name: "Oxidised Bangles Set",
-    description: "Antique oxidised finish bangles",
-    moq: "100 pcs",
-    imageUrls: ["/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg"],
-    featured: false,
-    isNewArrival: true,
-    createdAt: 1700000003n,
-  },
-  {
-    id: 5n,
-    categoryId: 6n,
-    name: "Minimal Gold Hoops",
-    description: "Lightweight modern hoop earrings",
-    moq: "50 pcs",
-    imageUrls: ["/assets/generated/jewellery-minimal-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: false,
-    createdAt: 1700000002n,
-  },
-  {
-    id: 6n,
-    categoryId: 4n,
-    name: "Statement Cocktail Ring",
-    description: "Bold cocktail ring with CZ stones",
-    moq: "50 pcs",
-    imageUrls: ["/assets/generated/jewellery-rings-hd.dim_800x800.jpg"],
-    featured: false,
-    isNewArrival: false,
-    createdAt: 1700000001n,
-  },
-  {
-    id: 7n,
-    categoryId: 1n,
-    name: "Temple Necklace Long",
-    description: "South Indian temple style long necklace",
-    moq: "25 pcs",
-    imageUrls: ["/assets/generated/jewellery-necklace-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: false,
-    createdAt: 1700000000n,
-  },
-  {
-    id: 8n,
-    categoryId: 2n,
-    name: "Chandbali Drop Earrings",
-    description: "Traditional chandbali with meenakari work",
-    moq: "50 pcs",
-    imageUrls: ["/assets/generated/jewellery-earrings-hd.dim_800x800.jpg"],
-    featured: true,
-    isNewArrival: false,
-    createdAt: 1699999999n,
-  },
-];
 
 const SAMPLE_TESTIMONIALS: Testimonial[] = [
   {
@@ -249,9 +127,9 @@ const WHY_CHOOSE = [
 
 const STATS = [
   { value: "500+", label: "Designs" },
-  { value: "50+", label: "Countries" },
-  { value: "10+", label: "Years Experience" },
-  { value: "10,000+", label: "Happy Clients" },
+  { value: "10+", label: "Years Export Experience" },
+  { value: "20+", label: "Countries Served" },
+  { value: "50 Units", label: "MOQ from" },
 ];
 
 // ── Quick-View Modal ───────────────────────────────────────────
@@ -299,7 +177,7 @@ function QuickViewModal({
                 {product.name}
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
-                {product.description}
+                {cleanText(product.description)}
               </p>
               <dl className="space-y-2 text-sm">
                 <div className="flex justify-between border-b border-border pb-2">
@@ -432,16 +310,15 @@ export default function Home() {
 
   usePageSEO({
     title:
-      "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global",
+      "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
     description:
-      "India's leading imitation jewellery manufacturer & exporter in Jaipur. Wholesale fashion jewellery, bridal sets & 500+ designs. Shipping to UAE, USA, UK & worldwide.",
+      "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units, anti-tarnish finish. Shipping to 30+ countries worldwide.",
     canonical: "https://gemoraglobal-tje.caffeine.xyz/",
     ogTitle:
-      "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global",
+      "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
     ogDescription:
-      "India's leading imitation jewellery manufacturer and exporter from Jaipur. Premium wholesale pricing for global buyers in UAE, France, USA, UK and Europe.",
-    ogImage:
-      "https://gemoraglobal-tje.caffeine.xyz/assets/uploads/logo-removebg-preview-1.png",
+      "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units. Shipping to 30+ countries worldwide.",
+    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
     isHomepage: true,
     speakable: true,
     breadcrumbs: [
@@ -449,36 +326,35 @@ export default function Home() {
     ],
     faqItems: [
       {
-        q: "What is the minimum order quantity for wholesale imitation jewellery?",
-        a: "GEMORA GLOBAL's minimum order is 50 pieces per design, or a minimum order value of $300.",
+        q: "What is the minimum order quantity (MOQ)?",
+        a: "Our minimum order quantity is 50 units per design. Custom orders have a minimum of 500 units.",
       },
       {
-        q: "Do you export to the USA and UK?",
-        a: "Yes, we export to 30+ countries including USA, UK, UAE, Australia, Germany, and more.",
+        q: "Do you ship internationally?",
+        a: "Yes, we ship worldwide including UAE, France, USA, UK, Europe, Canada, Australia, Singapore, Malaysia, Saudi Arabia, Nigeria, Sri Lanka, and Kuwait.",
       },
       {
-        q: "Can I get custom designs or private label jewellery?",
-        a: "Yes, we offer custom design and private label services with your brand packaging.",
+        q: "What finishing do you use on your jewellery?",
+        a: "All our jewellery uses anti-tarnish coating (Gold Plating, Matte Gold Plating, Rhodium Plating, Rose Gold Plating, Oxidised Plating, Black Plating, Mehndi Plating, 2 Tone and 3 Tone Plating) to ensure long-lasting shine.",
       },
       {
-        q: "What payment methods do you accept for international orders?",
-        a: "We accept T/T (bank transfer), PayPal, and Letter of Credit for large orders.",
+        q: "Can I request custom or private label designs?",
+        a: "Yes. We offer private label and OEM services with a minimum of 500 units and a 3-4 week lead time.",
       },
       {
-        q: "How long does delivery take for international orders?",
-        a: "Air freight 3–7 days, sea freight 20–35 days depending on destination.",
+        q: "What types of jewellery do you manufacture?",
+        a: "We manufacture Imitation Jewellery, Artificial Jewellery, Kundan Jewellery, Antique Jewellery, Temple Jewellery, Bridal Jewellery, Oxidised Jewellery, Meenakari Jewellery, American Diamond Jewellery, Indo Western and Western Jewellery.",
       },
       {
-        q: "Are your products nickel-free and lead-free?",
-        a: "Yes, all export products meet international safety standards including US CPSC and EU REACH requirements.",
+        q: "How do I place a wholesale order?",
+        a: "Browse our catalogue, select designs, WhatsApp us at +91 7976341419 with quantity requirements. We accept T/T, LC, Western Union and PayPal.",
       },
     ],
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Gemora Global",
-      image:
-        "https://gemoraglobal-tje.caffeine.xyz/assets/uploads/logo-removebg-preview-1.png",
+      image: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
       "@id": "https://gemoraglobal-tje.caffeine.xyz",
       url: "https://gemoraglobal-tje.caffeine.xyz",
       telephone: "+91-7976341419",
@@ -509,15 +385,19 @@ export default function Home() {
       ],
       priceRange: "₹₹",
       description:
-        "Gemora Global is a leading imitation jewellery manufacturer, wholesaler and exporter based in Jaipur, Rajasthan. We supply wholesale fashion jewellery, bridal jewellery sets, Kundan jewellery, and 500+ designs to buyers in UAE, USA, UK, and 30+ countries.",
+        "Gemora Global is a Jaipur-based imitation jewellery exporter and manufacturer, established 2011. We supply wholesale fashion jewellery, bridal jewellery sets, Kundan jewellery, and 500+ designs to buyers in UAE, USA, UK, and 30+ countries.",
       sameAs: [
         "https://www.indiamart.com/gemora-global",
         "https://www.tradeindia.com/gemora-global",
         "https://www.exportersindia.com/gemora-global",
         "https://www.instagram.com/gemoraglobal",
+        "https://www.linkedin.com/company/gemoraglobal",
       ],
     },
   });
+
+  // ── Page CMS content from backend ────────────────────────────
+  const { content: pageContent } = usePageContent("homepage");
 
   // ── Backend data ─────────────────────────────────────────────
   const { data: categories } = useQuery<Category[]>({
@@ -546,16 +426,6 @@ export default function Home() {
   });
 
   useQuery({
-    queryKey: ["content", "hero_title"],
-    queryFn: () => actor!.getContent("hero_title"),
-    enabled: !!actor,
-  });
-  useQuery({
-    queryKey: ["content", "hero_subtitle"],
-    queryFn: () => actor!.getContent("hero_subtitle"),
-    enabled: !!actor,
-  });
-  const { data: heroImageRaw } = useQuery({
     queryKey: ["content", "hero_image"],
     queryFn: () => actor!.getContent("hero_image"),
     enabled: !!actor,
@@ -576,51 +446,49 @@ export default function Home() {
     enabled: !!actor,
   });
 
+  // getContent returns string | null (backend.d.ts) or [] | [string] (Motoko opt) — handle both
+  const toStr = (v: unknown): string | null => {
+    if (typeof v === "string" && v.length > 0) return v;
+    if (Array.isArray(v) && v.length > 0) return v[0] as string;
+    return null;
+  };
   const heroImageFallback =
-    (heroImageRaw && heroImageRaw.length > 0 ? heroImageRaw[0] : null) ??
     "/assets/generated/hero-jewellery-banner.dim_1600x700.jpg";
-  const heroImage1 =
-    (heroImage1Raw && heroImage1Raw.length > 0 ? heroImage1Raw[0] : null) ??
-    heroImageFallback;
-  const heroImage2 =
-    heroImage2Raw && heroImage2Raw.length > 0 ? heroImage2Raw[0] : null;
-  const heroImage3 =
-    heroImage3Raw && heroImage3Raw.length > 0 ? heroImage3Raw[0] : null;
-  const heroImages = [heroImage1, heroImage2, heroImage3].filter(
-    Boolean,
-  ) as string[];
+  const heroImage1 = toStr(heroImage1Raw) ?? heroImageFallback;
+  const heroImage2 = toStr(heroImage2Raw);
+  const heroImage3 = toStr(heroImage3Raw);
+  const heroImages: string[] = [];
+  for (const url of [heroImage1, heroImage2, heroImage3]) {
+    if (url?.startsWith("http") && !heroImages.includes(url)) {
+      heroImages.push(url);
+    }
+  }
+  // Always show at least the fallback hero
+  if (heroImages.length === 0) heroImages.push(heroImageFallback);
+  const heroSlideCount = heroImages.length;
 
   // Slider state
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    if (heroImages.length <= 1) return;
+    if (heroSlideCount <= 1) return;
     const timer = setInterval(
-      () => setCurrentSlide((p) => (p + 1) % heroImages.length),
+      () => setCurrentSlide((p) => (p + 1) % heroSlideCount),
       5000,
     );
     return () => clearInterval(timer);
-  }, [heroImages.length]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [heroSlideCount]);
 
-  // Derived data
-  const displayCategories =
-    categories && categories.length > 0 ? categories : SAMPLE_CATEGORIES;
+  // Derived data — always use backend, no hardcoded category fallbacks
+  const displayCategories = categories ?? [];
   const displayTestimonials =
     testimonials && testimonials.filter((t) => t.active).length > 0
       ? testimonials.filter((t) => t.active)
       : SAMPLE_TESTIMONIALS;
 
-  // Use backend getNewArrivalProducts; fallback to sample new arrivals
-  const newArrivals = (
-    newArrivalProducts && newArrivalProducts.length > 0
-      ? newArrivalProducts
-      : SAMPLE_PRODUCTS.filter((p) => p.isNewArrival)
-  ).slice(0, 8);
-
-  const trendingProducts = (
-    featuredProducts && featuredProducts.length > 0
-      ? featuredProducts
-      : SAMPLE_PRODUCTS.filter((p) => p.featured)
-  ).slice(0, 8);
+  // Always use backend products — show empty if none yet
+  const newArrivals = (newArrivalProducts ?? []).slice(0, 8);
+  const trendingProducts = (featuredProducts ?? []).slice(0, 8);
 
   const getCategoryImage = (cat: Category) => {
     if (cat.imageUrl && !cat.imageUrl.includes("placehold.co"))
@@ -643,38 +511,44 @@ export default function Home() {
 
       {/* ── Hero Slider — CLEAN, no text overlay ──────────────── */}
       <section
-        className="relative overflow-hidden w-full"
-        style={{ height: "clamp(300px, 50vh, 700px)" }}
+        className="relative overflow-hidden w-full bg-[#0d1130]"
+        style={{
+          height: "clamp(280px, 55vw, 680px)",
+          minHeight: "280px",
+          maxHeight: "680px",
+        }}
         aria-label="Hero image slider"
       >
         {heroImages.map((src, idx) => (
           <img
             key={src}
             src={src}
-            alt={`Gemora Global — India's Premier Imitation Jewellery slide ${idx + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+            alt={`Gemora Global — Jaipur Imitation Jewellery Manufacturer & Exporter, slide ${idx + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
             loading={idx === 0 ? "eager" : "lazy"}
             fetchPriority={idx === 0 ? "high" : undefined}
             width={1600}
             height={900}
+            style={{ display: "block" }}
           />
         ))}
+        {/* Very subtle darkening overlay — doesn't obscure banner */}
         <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: "rgba(0,0,0,0.15)" }}
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{ background: "rgba(0,0,0,0.08)" }}
           aria-hidden="true"
         />
-        {heroImages.length > 1 && (
+        {heroSlideCount > 1 && (
           <>
             <button
               type="button"
               onClick={() =>
                 setCurrentSlide(
-                  (p) => (p - 1 + heroImages.length) % heroImages.length,
+                  (p) => (p - 1 + heroSlideCount) % heroSlideCount,
                 )
               }
               aria-label="Previous slide"
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
               data-ocid="hero.pagination_prev"
             >
               <svg
@@ -695,11 +569,9 @@ export default function Home() {
             </button>
             <button
               type="button"
-              onClick={() =>
-                setCurrentSlide((p) => (p + 1) % heroImages.length)
-              }
+              onClick={() => setCurrentSlide((p) => (p + 1) % heroSlideCount)}
               aria-label="Next slide"
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
               data-ocid="hero.pagination_next"
             >
               <svg
@@ -718,7 +590,7 @@ export default function Home() {
                 />
               </svg>
             </button>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2.5">
               {heroImages.map((src, idx) => (
                 <button
                   key={src}
@@ -735,25 +607,31 @@ export default function Home() {
       </section>
 
       {/* ── Business Positioning — below hero ────── */}
-      <section className="bg-primary py-8 md:py-12 text-white">
+      <section
+        className="bg-primary border-t-4 border-accent py-8 md:py-12 text-white"
+        style={{ marginTop: 0, position: "relative", zIndex: 1 }}
+      >
         <div className="container px-4 md:px-6 text-center">
           <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
-            India's Premier Imitation Jewellery Manufacturer &amp; Global
-            Exporter
+            {pageContent.hero_title ||
+              "Imitation Jewellery Exporter India | Wholesale Manufacturer"}
           </h1>
           <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-2xl mx-auto mb-6 md:mb-8 px-2">
-            Premium handcrafted designs for wholesalers, boutiques &amp;
-            distributors worldwide.
+            {pageContent.hero_subtitle ||
+              "Factory-direct Kundan, Antique, Bridal &amp; Fashion Jewellery from Jaipur — for wholesalers, boutiques &amp; global distributors."}
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6 md:mb-8">
             <span className="bg-white/10 border border-white/20 rounded-full px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold">
-              🌍 30+ Countries Exported
+              🌍 20+ Countries Exported
             </span>
             <span className="bg-white/10 border border-white/20 rounded-full px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold">
               💎 500+ Designs
             </span>
             <span className="bg-white/10 border border-white/20 rounded-full px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold">
-              ⭐ 10+ Years Experience
+              ⭐ MOQ from 50 Units
+            </span>
+            <span className="bg-white/10 border border-white/20 rounded-full px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-semibold">
+              🏆 10+ Years Export Experience
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
@@ -761,16 +639,16 @@ export default function Home() {
               asChild
               size="lg"
               className="bg-accent text-primary font-bold hover:bg-accent/90 px-6 md:px-8 w-full sm:w-auto min-w-[200px] transition-transform duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg"
-              data-ocid="hero.cta_catalog"
+              data-ocid="hero.cta_products"
             >
-              <Link to="/products">View Collection</Link>
+              <Link to="/products">View Products</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 px-6 md:px-8 w-full sm:w-auto min-w-[200px] transition-transform duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg"
-              data-ocid="hero.cta_wholesale"
+              className="border-white text-white hover:bg-white hover:text-primary px-6 md:px-8 w-full sm:w-auto min-w-[200px] transition-all duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg font-bold"
+              data-ocid="hero.cta_catalog"
             >
               <Link to="/wholesale">Get Catalog</Link>
             </Button>
@@ -834,12 +712,13 @@ export default function Home() {
         </h2>
         <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed text-center text-sm md:text-base">
           <p>
-            Gemora Global is one of India's most trusted{" "}
+            Gemora Global is a Jaipur-based{" "}
             <Link to="/about" className="text-primary hover:underline">
-              imitation jewellery manufacturers and exporters
+              imitation jewellery manufacturer and exporter
             </Link>
-            , supplying premium handcrafted designs to wholesalers, boutiques,
-            and distributors across more than 50 countries. Based in{" "}
+            , established in 2011 with 10+ years of global export experience. We
+            supply premium handcrafted designs to wholesalers, boutiques, and
+            distributors across more than 30 countries. Based in{" "}
             <strong>Jaipur, Rajasthan</strong> — India's jewellery manufacturing
             capital — we combine traditional Indian craftsmanship with modern
             anti-tarnish finishing techniques.
@@ -857,6 +736,161 @@ export default function Home() {
               wholesale prices
             </Link>
             .
+          </p>
+        </div>
+      </section>
+
+      {/* ── Product Categories SEO Section ───────────────────── */}
+      <section className="bg-muted/20 border-y border-border py-10 md:py-16 px-4 md:px-6">
+        <div className="container">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+              Our Jewellery Categories
+            </h2>
+            <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+              Factory-direct wholesale imitation jewellery across 6 core
+              categories — all with anti-tarnish coating and MOQ from 50 units.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {[
+              {
+                title: "Necklace Sets",
+                slug: "necklaces",
+                icon: "📿",
+                desc: "Wholesale imitation necklace sets including Kundan, Polki, Zircon and layered chain styles. Choker Necklace, Chain Pendant and Pendant Set collections designed for boutique buyers. MOQ 50 units. Available in Gold Plating, Rhodium and Oxidised finishes. Ideal for UAE, UK and USA boutiques.",
+              },
+              {
+                title: "Earrings & Tikka",
+                slug: "earrings",
+                icon: "💎",
+                desc: "Wholesale fashion earrings ranging from traditional jhumkas to minimal studs. Maang Tikka, Earring Tikka and Jhuda collections for South Asian bridal and festive wear. Chandelier, hoop, drop and ear-cuff styles. Anti-tarnish coating ensures long-lasting retail quality.",
+              },
+              {
+                title: "Bridal Jewellery Sets",
+                slug: "bridal",
+                icon: "👰",
+                desc: "Full Kundan and Polki bridal sets for boutiques serving the South Asian wedding market. Bridal Set, Mangalsutra and Tikka collections. Complete necklace, earrings, maang tikka and bangles sets. Premium finishing for bridal boutiques in UK, USA and UAE. MOQ 10 sets per design.",
+              },
+              {
+                title: "Bangles & Bracelets",
+                slug: "bangles",
+                icon: "⭕",
+                desc: "Wholesale gold-plated and oxidised bangle sets for global boutique buyers. Kada, Baju Band and Hath Pan collections in sets of 2–24. Anti-tarnish coating suitable for humid markets in UAE, Singapore and Australia. Perfect for festive and wedding retail.",
+              },
+              {
+                title: "Rings & Nose Rings",
+                slug: "rings",
+                icon: "💍",
+                desc: "Statement cocktail rings and minimal stacking rings for boutique buyers. Finger Ring and Nose Ring catalogue covers adjustable, fixed and stackable designs in Kundan, stone-set and plain finishes. Ideal for fashion retailers in France, UK and USA. MOQ 50 units.",
+              },
+              {
+                title: "Traditional & Ethnic",
+                slug: "ethnic",
+                icon: "✨",
+                desc: "Complete traditional jewellery range: Mala, Payal, Anklet, Jhuda, Pasa, Bore, Damini, Sindoor Box, Brooch, Belt, Hair Clip, Hair Band and Hair Brooch. Serving South Asian cultural markets in Malaysia, Saudi Arabia, Nigeria and Sri Lanka.",
+              },
+            ].map((cat) => (
+              <div
+                key={cat.slug}
+                className="bg-card border border-border rounded-xl p-5 md:p-6 hover:border-primary/50 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl" aria-hidden="true">
+                    {cat.icon}
+                  </span>
+                  <h3 className="font-serif font-bold text-base md:text-lg">
+                    {cat.title}
+                  </h3>
+                </div>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">
+                  {cat.desc}
+                </p>
+                <Link
+                  to={`/products?category=${cat.slug}`}
+                  className="text-primary text-xs md:text-sm font-medium hover:underline"
+                  data-ocid="category.view_link"
+                >
+                  View {cat.title} →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Choose Gemora Global — Extended Copy ─────────── */}
+      <section className="container py-10 md:py-14 px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-5">
+            Why Choose Gemora Global?
+          </h2>
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+            Gemora Global is Jaipur's trusted factory-direct{" "}
+            <Link
+              to="/wholesale"
+              className="text-primary hover:underline font-medium"
+            >
+              imitation jewellery exporter
+            </Link>
+            , established in 2011 with over a decade of global export
+            experience. We manufacture{" "}
+            <Link
+              to="/kundan-jewellery-wholesale"
+              className="text-primary hover:underline"
+            >
+              Kundan Jewellery
+            </Link>
+            ,{" "}
+            <Link
+              to="/bridal-imitation-jewellery-wholesale"
+              className="text-primary hover:underline"
+            >
+              Bridal Jewellery Sets
+            </Link>
+            ,{" "}
+            <Link
+              to="/oxidised-jewellery-wholesale"
+              className="text-primary hover:underline"
+            >
+              Oxidised Jewellery
+            </Link>
+            , Meenakari, Antique, American Diamond, Indo Western and Fashion
+            Jewellery — all with anti-tarnish coating for lasting retail
+            quality. We offer wholesale pricing direct from our Jaipur
+            manufacturing unit — no middlemen. Custom OEM and{" "}
+            <Link
+              to="/private-label-jewellery-india"
+              className="text-primary hover:underline"
+            >
+              private label orders
+            </Link>{" "}
+            available from 500 units with 3–4 week lead time. GST-compliant
+            export invoices issued for all orders. Our flexible MOQ starts at
+            just 50 units per design — ideal for boutiques, wholesalers, and
+            online retailers. Whether you are a{" "}
+            <Link
+              to="/imitation-jewellery-supplier-usa"
+              className="text-primary hover:underline"
+            >
+              USA buyer
+            </Link>
+            ,{" "}
+            <Link
+              to="/wholesale-jewellery-uk"
+              className="text-primary hover:underline"
+            >
+              UK wholesaler
+            </Link>
+            ,{" "}
+            <Link
+              to="/imitation-jewellery-supplier-uae"
+              className="text-primary hover:underline"
+            >
+              UAE boutique
+            </Link>
+            , or sourcing for markets in Malaysia, Nigeria, Saudi Arabia or Sri
+            Lanka, Gemora Global delivers reliable quality on every order.
           </p>
         </div>
       </section>
@@ -1059,47 +1093,62 @@ export default function Home() {
               to buyers across the globe
             </p>
           </div>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 max-w-3xl mx-auto">
+          <div
+            className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-8 gap-3 md:gap-4 max-w-4xl mx-auto"
+            style={{ display: "grid" }}
+          >
             {[
-              { flag: "🇫🇷", country: "France", to: "/export-markets" },
-              { flag: "🇦🇪", country: "UAE", to: "/jewellery-exporter-uae" },
               {
                 flag: "🇺🇸",
                 country: "USA",
-                to: "/imitation-jewellery-supplier-usa",
+                to: "/export-markets/usa",
               },
-              { flag: "🇬🇧", country: "UK", to: "/wholesale-jewellery-uk" },
+              { flag: "🇬🇧", country: "UK", to: "/export-markets/uk" },
               {
-                flag: "🇪🇺",
-                country: "Europe",
-                to: "/jewellery-exporter-europe",
-              },
-              {
-                flag: "🇨🇦",
-                country: "Canada",
-                to: "/jewellery-exporter-canada",
+                flag: "🇦🇪",
+                country: "UAE",
+                to: "/export-markets/uae",
               },
               {
                 flag: "🇦🇺",
                 country: "Australia",
-                to: "/jewellery-exporter-australia",
+                to: "/export-markets/australia",
+              },
+              {
+                flag: "🇩🇪",
+                country: "Germany",
+                to: "/export-imitation-jewellery-germany-eu",
+              },
+              {
+                flag: "🇨🇦",
+                country: "Canada",
+                to: "/export-markets/canada",
               },
               {
                 flag: "🇸🇬",
                 country: "Singapore",
-                to: "/jewellery-exporter-singapore",
+                to: "/export-markets/singapore",
+              },
+              {
+                flag: "🇫🇷",
+                country: "France",
+                to: "/export-markets/france",
               },
             ].map((m) => (
               <Link
                 key={m.country}
                 to={m.to}
-                className="flex flex-col items-center gap-1 md:gap-2 bg-background border border-border rounded-lg p-2 md:p-3 hover:border-primary/50 transition-all duration-200 hover:scale-[1.05] hover:-translate-y-1 hover:shadow-md cursor-pointer touch-manipulation"
+                className="flex flex-col items-center gap-1.5 bg-background border border-border rounded-xl p-3 md:p-4 hover:border-primary/60 hover:bg-primary/5 transition-all duration-200 hover:scale-[1.06] hover:-translate-y-1 hover:shadow-md cursor-pointer touch-manipulation min-w-0"
                 data-ocid="country.flag_link"
               >
-                <span className="text-2xl md:text-3xl" aria-hidden="true">
+                <span
+                  className="text-3xl md:text-4xl leading-none select-none"
+                  role="img"
+                  aria-label={m.country}
+                >
                   {m.flag}
                 </span>
-                <span className="text-[10px] md:text-xs font-medium text-muted-foreground text-center leading-tight">
+                <span className="text-[10px] md:text-xs font-semibold text-foreground text-center leading-tight truncate w-full text-center">
                   {m.country}
                 </span>
               </Link>
@@ -1286,27 +1335,32 @@ export default function Home() {
               {
                 title: "How to Source Imitation Jewellery from India",
                 excerpt:
-                  "A complete guide for overseas buyers on MOQ, pricing, and supplier selection.",
+                  "A complete guide for overseas buyers on MOQ, pricing, and supplier selection when sourcing wholesale jewellery from Jaipur.",
                 category: "Business Guide",
+                slug: "how-to-source-imitation-jewellery-from-india",
               },
               {
                 title:
                   "Top Imitation Jewellery Trends for Export Markets in 2026",
                 excerpt:
-                  "What boutiques in UAE, France, and UK are buying this season.",
+                  "What boutiques in UAE, France, and UK are buying this season — from Kundan sets to minimal Indo Western jewellery.",
                 category: "Trends",
+                slug: "top-imitation-jewellery-trends-export-2026",
               },
               {
                 title:
                   "Anti-Tarnish Jewellery: Why It Matters for International Retail",
                 excerpt:
-                  "How anti-tarnish coating reduces returns and builds buyer trust.",
+                  "How anti-tarnish coating (Gold Plating, Rhodium, Oxidised finishes) reduces returns and builds buyer trust.",
                 category: "Industry Insights",
+                slug: "anti-tarnish-jewellery-international-retail",
               },
             ].map((post) => (
-              <div
+              <Link
                 key={post.title}
-                className="bg-background border border-border rounded-xl p-4 md:p-5 hover:border-primary/50 transition-all duration-200 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-md"
+                to={`/blog/${post.slug}`}
+                className="bg-background border border-border rounded-xl p-4 md:p-5 hover:border-primary/50 transition-all duration-200 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-md block"
+                data-ocid="blog.teaser_link"
               >
                 <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
                   {post.category}
@@ -1314,10 +1368,13 @@ export default function Home() {
                 <h3 className="font-serif font-semibold mt-3 mb-2 text-sm leading-snug">
                   {post.title}
                 </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                   {post.excerpt}
                 </p>
-              </div>
+                <span className="text-primary text-xs font-medium hover:underline">
+                  Read More →
+                </span>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-6 md:mt-8">
@@ -1326,6 +1383,98 @@ export default function Home() {
               className="text-primary hover:underline text-sm font-medium"
             >
               Read all export insights →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ Section ────────────────────────────────────────── */}
+      <section
+        className="bg-card border-y border-border py-10 md:py-16 px-4 md:px-6"
+        aria-label="Frequently asked questions"
+      >
+        <div className="container max-w-3xl mx-auto">
+          <div className="text-center mb-7 md:mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-muted-foreground text-sm md:text-base">
+              Common questions from wholesale buyers and{" "}
+              <Link to="/contact" className="text-primary hover:underline">
+                importers worldwide
+              </Link>
+              .
+            </p>
+          </div>
+          <div
+            className="space-y-4"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+          >
+            {[
+              {
+                q: "What is the minimum order quantity (MOQ)?",
+                a: "Our minimum order quantity is 50 units per design. Custom orders have a minimum of 500 units.",
+              },
+              {
+                q: "Do you ship internationally?",
+                a: "Yes, we ship worldwide including UAE, France, USA, UK, Europe, Canada, Australia, Singapore, Malaysia, Saudi Arabia, Nigeria, Sri Lanka, and Kuwait.",
+              },
+              {
+                q: "What finishing do you use on your jewellery?",
+                a: "All our jewellery uses anti-tarnish coating (Gold Plating, Matte Gold Plating, Rhodium Plating, Rose Gold Plating, Oxidised Plating, Black Plating, Mehndi Plating, 2 Tone and 3 Tone Plating) to ensure long-lasting shine.",
+              },
+              {
+                q: "Can I request custom or private label designs?",
+                a: "Yes. We offer private label and OEM services with a minimum of 500 units and a 3-4 week lead time.",
+              },
+              {
+                q: "What types of jewellery do you manufacture?",
+                a: "We manufacture Imitation Jewellery, Artificial Jewellery, Kundan Jewellery, Antique Jewellery, Temple Jewellery, Bridal Jewellery, Oxidised Jewellery, Meenakari Jewellery, American Diamond Jewellery, Indo Western and Western Jewellery.",
+              },
+              {
+                q: "How do I place a wholesale order?",
+                a: "Browse our catalogue, select designs, WhatsApp us at +91 7976341419 with quantity requirements. We accept T/T, LC, Western Union and PayPal.",
+              },
+            ].map((faq) => (
+              <div
+                key={faq.q}
+                className="bg-background border border-border rounded-xl p-4 md:p-5"
+                itemScope
+                itemType="https://schema.org/Question"
+                itemProp="mainEntity"
+              >
+                <h3
+                  className="font-semibold text-sm md:text-base mb-2 flex items-start gap-2"
+                  itemProp="name"
+                >
+                  <span className="text-primary font-bold flex-shrink-0">
+                    Q.
+                  </span>
+                  {faq.q}
+                </h3>
+                <div
+                  itemScope
+                  itemType="https://schema.org/Answer"
+                  itemProp="acceptedAnswer"
+                >
+                  <p
+                    className="text-xs md:text-sm text-muted-foreground leading-relaxed pl-5"
+                    itemProp="text"
+                  >
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              to="/contact"
+              className="text-primary hover:underline text-sm font-medium"
+              data-ocid="faq.contact_link"
+            >
+              Have more questions? Contact our export team →
             </Link>
           </div>
         </div>

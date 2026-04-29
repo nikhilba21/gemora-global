@@ -2,31 +2,58 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const navItems = [
-  { label: "Dashboard", to: "/admin", icon: "⬛" },
-  { label: "Products", to: "/admin/products", icon: "📦" },
-  { label: "Categories", to: "/admin/categories", icon: "📁" },
-  { label: "Media", to: "/admin/gallery", icon: "🖼" },
-  { label: "Catalogue", to: "/admin/catalogue", icon: "📑" },
-  { label: "Blog", to: "/admin/blog", icon: "✍️" },
-  { label: "Orders", to: "/admin/orders", icon: "🌍" },
-  { label: "Customers", to: "/admin/customers", icon: "👥" },
-  { label: "Enquiries", to: "/admin/inquiries", icon: "📨" },
-  { label: "WhatsApp Leads", to: "/admin/whatsapp-leads", icon: "💬" },
-  { label: "Analytics", to: "/admin/analytics", icon: "📊" },
-  { label: "Website Settings", to: "/admin/website-settings", icon: "🌐" },
-  { label: "Settings", to: "/admin/settings", icon: "⚙️" },
-];
-
+const GOLD = "#D4AF37";
 const SIDEBAR_BG = "linear-gradient(180deg, #0d1554 0%, #111b6a 100%)";
 const SIDEBAR_BORDER = "1px solid rgba(212,175,55,0.15)";
-const GOLD = "#D4AF37";
 
-function SidebarContent({
-  onNavClick,
-}: {
-  onNavClick?: () => void;
-}) {
+type NavItem = { label: string; to: string; icon: string };
+type NavGroup = { title: string; items: NavItem[] };
+
+const NAV_GROUPS: NavGroup[] = [
+  {
+    title: "MAIN",
+    items: [
+      { label: "Dashboard", to: "/admin", icon: "⬛" },
+      { label: "Analytics", to: "/admin/analytics", icon: "📊" },
+    ],
+  },
+  {
+    title: "CONTENT",
+    items: [
+      { label: "Products", to: "/admin/products", icon: "📦" },
+      { label: "Categories", to: "/admin/categories", icon: "🏷️" },
+      { label: "Gallery", to: "/admin/gallery", icon: "🖼️" },
+      { label: "Blog", to: "/admin/blog", icon: "✍️" },
+      { label: "Catalogues", to: "/admin/catalogue", icon: "📑" },
+      { label: "Testimonials", to: "/admin/testimonials", icon: "⭐" },
+      { label: "Pages (CMS)", to: "/admin/cms", icon: "📝" },
+    ],
+  },
+  {
+    title: "COMMERCE",
+    items: [
+      { label: "Orders", to: "/admin/orders", icon: "🛒" },
+      { label: "Customers / CRM", to: "/admin/customers", icon: "👥" },
+      { label: "Enquiries", to: "/admin/inquiries", icon: "📨" },
+      { label: "Marketing", to: "/admin/marketing", icon: "📣" },
+      { label: "Country Settings", to: "/admin/country-settings", icon: "🌍" },
+      { label: "Logistics", to: "/admin/logistics", icon: "🚚" },
+      { label: "Payments", to: "/admin/payments", icon: "💳" },
+      { label: "Automation", to: "/admin/automation", icon: "⚡" },
+    ],
+  },
+  {
+    title: "SETTINGS",
+    items: [
+      { label: "Website Settings", to: "/admin/website-settings", icon: "🌐" },
+      { label: "Settings", to: "/admin/settings", icon: "⚙️" },
+    ],
+  },
+];
+
+const ALL_NAV_ITEMS = NAV_GROUPS.flatMap((g) => g.items);
+
+function SidebarContent({ onNavClick }: { onNavClick?: () => void }) {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -36,11 +63,15 @@ function SidebarContent({
     onNavClick?.();
   };
 
+  const isActive = (to: string) =>
+    to === "/admin"
+      ? location.pathname === "/admin"
+      : location.pathname.startsWith(to);
+
   return (
     <>
-      {/* Logo */}
       <div
-        className="p-5 flex items-center gap-3"
+        className="p-5 flex items-center gap-3 flex-shrink-0"
         style={{ borderBottom: SIDEBAR_BORDER }}
       >
         <img
@@ -52,7 +83,7 @@ function SidebarContent({
           style={{
             color: GOLD,
             fontWeight: 700,
-            fontSize: 16,
+            fontSize: 15,
             letterSpacing: "0.05em",
           }}
         >
@@ -60,56 +91,63 @@ function SidebarContent({
         </span>
       </div>
 
-      {/* Nav */}
-      <nav className="flex-1 p-3 flex flex-col gap-0.5 overflow-y-auto">
-        {navItems.map((item) => {
-          const active =
-            item.to === "/admin"
-              ? location.pathname === "/admin"
-              : location.pathname.startsWith(item.to);
-          return (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={onNavClick}
-              className="flex items-center gap-3 px-3 rounded-lg text-sm transition-all"
-              style={{
-                minHeight: 48,
-                background: active
-                  ? "linear-gradient(90deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 100%)"
-                  : "transparent",
-                color: active ? GOLD : "rgba(255,255,255,0.6)",
-                borderLeft: active
-                  ? `3px solid ${GOLD}`
-                  : "3px solid transparent",
-                fontWeight: active ? 600 : 400,
-              }}
-              onMouseEnter={(e) => {
-                if (!active) {
-                  (e.currentTarget as HTMLAnchorElement).style.background =
-                    "rgba(212,175,55,0.08)";
-                  (e.currentTarget as HTMLAnchorElement).style.color =
-                    "rgba(255,255,255,0.9)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!active) {
-                  (e.currentTarget as HTMLAnchorElement).style.background =
-                    "transparent";
-                  (e.currentTarget as HTMLAnchorElement).style.color =
-                    "rgba(255,255,255,0.6)";
-                }
-              }}
+      <nav className="flex-1 p-2 flex flex-col gap-0 overflow-y-auto">
+        {NAV_GROUPS.map((group) => (
+          <div key={group.title} className="mb-2">
+            <p
+              className="px-3 py-1.5 text-[10px] font-bold tracking-widest"
+              style={{ color: "rgba(212,175,55,0.45)" }}
             >
-              <span style={{ fontSize: 15, minWidth: 18 }}>{item.icon}</span>
-              <span>{item.label}</span>
-            </Link>
-          );
-        })}
+              {group.title}
+            </p>
+            {group.items.map((item) => {
+              const active = isActive(item.to);
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={onNavClick}
+                  className="flex items-center gap-3 px-3 rounded-lg text-sm transition-all"
+                  style={{
+                    minHeight: 40,
+                    background: active
+                      ? "linear-gradient(90deg, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.06) 100%)"
+                      : "transparent",
+                    color: active ? GOLD : "rgba(255,255,255,0.6)",
+                    borderLeft: active
+                      ? `3px solid ${GOLD}`
+                      : "3px solid transparent",
+                    fontWeight: active ? 600 : 400,
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!active) {
+                      (e.currentTarget as HTMLAnchorElement).style.background =
+                        "rgba(212,175,55,0.08)";
+                      (e.currentTarget as HTMLAnchorElement).style.color =
+                        "rgba(255,255,255,0.9)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!active) {
+                      (e.currentTarget as HTMLAnchorElement).style.background =
+                        "transparent";
+                      (e.currentTarget as HTMLAnchorElement).style.color =
+                        "rgba(255,255,255,0.6)";
+                    }
+                  }}
+                >
+                  <span style={{ fontSize: 14, minWidth: 18 }}>
+                    {item.icon}
+                  </span>
+                  <span className="truncate">{item.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+        ))}
       </nav>
 
-      {/* Logout */}
-      <div className="p-3" style={{ borderTop: SIDEBAR_BORDER }}>
+      <div className="p-3 flex-shrink-0" style={{ borderTop: SIDEBAR_BORDER }}>
         <button
           type="button"
           onClick={handleLogout}
@@ -142,7 +180,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const currentLabel =
-    navItems.find((n) =>
+    ALL_NAV_ITEMS.find((n) =>
       n.to === "/admin"
         ? location.pathname === "/admin"
         : location.pathname.startsWith(n.to),
@@ -153,9 +191,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       className="min-h-screen flex"
       style={{ background: "#0a0f3c", color: "#fff" }}
     >
-      {/* ── Desktop sidebar (lg+) ── */}
+      {/* Desktop sidebar */}
       <aside
-        className="hidden lg:flex flex-col flex-shrink-0 overflow-y-auto"
+        className="hidden lg:flex flex-col flex-shrink-0"
         style={{
           width: 240,
           background: SIDEBAR_BG,
@@ -164,14 +202,15 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           position: "sticky",
           top: 0,
           height: "100vh",
+          overflowY: "auto",
         }}
       >
         <SidebarContent />
       </aside>
 
-      {/* ── Mobile drawer overlay ── */}
+      {/* Mobile overlay */}
       {drawerOpen && (
-        // biome-ignore lint/a11y/useKeyWithClickEvents: overlay backdrop — keyboard users use the ✕ button inside drawer
+        // biome-ignore lint/a11y/useKeyWithClickEvents: backdrop overlay
         <div
           className="lg:hidden fixed inset-0 z-40"
           style={{ background: "rgba(0,0,0,0.6)" }}
@@ -180,9 +219,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         />
       )}
 
-      {/* ── Mobile slide-in sidebar ── */}
+      {/* Mobile drawer */}
       <aside
-        className="lg:hidden fixed top-0 left-0 z-50 flex flex-col h-full"
+        className="lg:hidden fixed top-0 left-0 z-50 flex flex-col h-full overflow-y-auto"
         style={{
           width: 260,
           background: SIDEBAR_BG,
@@ -192,7 +231,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         }}
         aria-label="Admin navigation"
       >
-        {/* Close button */}
         <button
           type="button"
           onClick={() => setDrawerOpen(false)}
@@ -209,7 +247,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         <SidebarContent onNavClick={() => setDrawerOpen(false)} />
       </aside>
 
-      {/* ── Main content ── */}
+      {/* Main content */}
       <main
         className="flex-1 overflow-auto min-w-0"
         style={{ background: "#f4f6ff" }}
@@ -220,13 +258,11 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           style={{
             height: 56,
             background: "linear-gradient(90deg, #1A237E 0%, #1a2e9a 100%)",
-            backdropFilter: "blur(12px)",
             borderBottom: "1px solid rgba(212,175,55,0.2)",
             boxShadow: "0 2px 12px rgba(26,35,126,0.3)",
           }}
         >
           <div className="flex items-center gap-3 min-w-0">
-            {/* Hamburger — mobile only */}
             <button
               type="button"
               onClick={() => setDrawerOpen(true)}
@@ -241,12 +277,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             </button>
             <h1
               className="truncate"
-              style={{
-                color: "#fff",
-                fontWeight: 700,
-                fontSize: 17,
-                letterSpacing: "0.01em",
-              }}
+              style={{ color: "#fff", fontWeight: 700, fontSize: 17 }}
             >
               <span style={{ color: GOLD, marginRight: 8 }}>◆</span>
               {currentLabel}

@@ -19,6 +19,11 @@ export interface Product {
   featured: boolean;
   isNewArrival: boolean;
   createdAt: bigint;
+  // Extended fields (optional — stored in description as JSON or separate fields)
+  sku?: string;
+  subcategory?: string;
+  color?: string;
+  keyFeatures?: string;
 }
 
 export interface Inquiry {
@@ -88,7 +93,19 @@ export interface DashboardStats {
   totalVisits: bigint;
 }
 
+export interface PaginatedResult<T> {
+  items: T[];
+  total: bigint;
+  pages: bigint;
+}
+
 export interface BackendActor {
+  // Object Storage
+  _immutableObjectStorageCreateCertificate(blobHash: string): Promise<{
+    method: string;
+    blob_hash: string;
+  }>;
+
   // Auth
   verifyAdminLogin(username: string, password: string): Promise<boolean>;
   changeAdminCredentials(
@@ -100,25 +117,47 @@ export interface BackendActor {
 
   // Public API
   getCategories(): Promise<Category[]>;
-  getProducts(categoryId: [] | [bigint]): Promise<Product[]>;
-  getProduct(id: bigint): Promise<[] | [Product]>;
+  getProducts(categoryId: bigint | null): Promise<Product[]>;
+  getProduct(id: bigint): Promise<Product | null>;
   getFeaturedProducts(): Promise<Product[]>;
   getNewArrivalProducts(): Promise<Product[]>;
-  getGallery(itemType: [] | [string]): Promise<GalleryItem[]>;
+  getGallery(itemType: string | null): Promise<GalleryItem[]>;
+  getProductsPaginated(
+    categoryId: bigint | null,
+    page: bigint,
+    pageSize: bigint,
+  ): Promise<{ items: Product[]; total: bigint; pages: bigint }>;
+  getGalleryPaginated(
+    itemType: string | null,
+    page: bigint,
+    pageSize: bigint,
+  ): Promise<{ items: GalleryItem[]; total: bigint; pages: bigint }>;
+  getBlogPostsPaginated(
+    status: string | null,
+    page: bigint,
+    pageSize: bigint,
+  ): Promise<{ items: BlogPost[]; total: bigint; pages: bigint }>;
   getTestimonials(): Promise<Testimonial[]>;
-  getContent(key: string): Promise<[] | [string]>;
+  getContent(key: string): Promise<string | null>;
   submitInquiry(
     name: string,
     country: string,
     whatsapp: string,
     requirement: string,
-    productId: [] | [bigint],
+    productId: bigint | null,
   ): Promise<bigint>;
   recordVisit(): Promise<void>;
 
+  // Page CMS
+  getPageContent(pageId: string): Promise<Array<[string, string]>>;
+  setPageContent(
+    pageId: string,
+    fields: Array<[string, string]>,
+  ): Promise<void>;
+
   // Blog
-  getBlogPosts(status: [] | [string]): Promise<BlogPost[]>;
-  getBlogPost(slug: string): Promise<[] | [BlogPost]>;
+  getBlogPosts(status: string | null): Promise<BlogPost[]>;
+  getBlogPost(slug: string): Promise<BlogPost | null>;
   createBlogPost(
     slug: string,
     title: string,
@@ -182,6 +221,10 @@ export interface BackendActor {
     imageUrls: string[],
     featured: boolean,
     isNewArrival: boolean,
+    sku?: string | null,
+    subcategory?: string | null,
+    color?: string | null,
+    keyFeatures?: string | null,
   ): Promise<bigint>;
   updateProduct(
     id: bigint,
@@ -192,6 +235,10 @@ export interface BackendActor {
     imageUrls: string[],
     featured: boolean,
     isNewArrival: boolean,
+    sku?: string | null,
+    subcategory?: string | null,
+    color?: string | null,
+    keyFeatures?: string | null,
   ): Promise<void>;
   deleteProduct(id: bigint): Promise<void>;
 

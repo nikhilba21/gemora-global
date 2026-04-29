@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -70,14 +69,15 @@ const markets = [
 export default function ExportMarkets() {
   usePageSEO({
     title:
-      "Imitation Jewellery Export to UAE, France, USA, UK & Europe | Gemora Global India",
+      "Imitation Jewellery Export to UAE, France, USA & Europe | Gemora Global",
     description:
-      "Gemora Global exports wholesale imitation jewellery to UAE, France, USA, UK, Germany, Canada, Australia and Singapore. Market-specific designs, export documentation, and reliable shipping.",
+      "Gemora Global exports imitation jewellery to UAE, France, USA, UK, Germany, Canada, Australia & Singapore. Market-specific wholesale designs, export docs & reliable shipping.",
     canonical: "https://gemoraglobal-tje.caffeine.xyz/global-markets",
     ogTitle:
-      "Jewellery Export to UAE, France, USA, UK & Europe | Gemora Global India",
-    ogImage:
-      "https://gemoraglobal-tje.caffeine.xyz/images/og-global-markets.jpg",
+      "Imitation Jewellery Export UAE France USA UK | Gemora Global India",
+    ogDescription:
+      "Wholesale imitation jewellery export from Jaipur, India to UAE, France, USA, UK & Europe. Market-specific designs. MOQ 50 units.",
+    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -94,51 +94,6 @@ export default function ExportMarkets() {
       ],
     },
   });
-  useEffect(() => {
-    document.title =
-      "Imitation Jewellery Export to UAE, France, USA, UK & Europe | Gemora Global India";
-    let metaDesc = document.querySelector(
-      'meta[name="description"]',
-    ) as HTMLMetaElement | null;
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "Gemora Global exports wholesale imitation jewellery to UAE, France, USA, UK, Germany, Canada, Australia and Singapore. Market-specific designs, export documentation, and reliable shipping for each destination.",
-    );
-
-    const existingScript = document.getElementById("page-schema");
-    if (existingScript) existingScript.remove();
-    const script = document.createElement("script");
-    script.id = "page-schema";
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      name: "Jewellery Export to Global Markets",
-      provider: { "@type": "Organization", name: "Gemora Global" },
-      areaServed: [
-        { "@type": "Country", name: "United Arab Emirates" },
-        { "@type": "Country", name: "France" },
-        { "@type": "Country", name: "United Kingdom" },
-        { "@type": "Country", name: "United States" },
-        { "@type": "Country", name: "Canada" },
-        { "@type": "Country", name: "Australia" },
-        { "@type": "Country", name: "Singapore" },
-      ],
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.title =
-        "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global";
-      const s = document.getElementById("page-schema");
-      if (s) s.remove();
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">

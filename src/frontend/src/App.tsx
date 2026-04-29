@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminGuard from "./components/AdminGuard";
+import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { useActor } from "./hooks/useActor";
@@ -10,29 +11,72 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import ExportMarkets from "./pages/ExportMarkets";
+import FAQ from "./pages/FAQ";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
+import JewelleryExporterKuwait from "./pages/JewelleryExporterKuwait";
+import JewelleryExporterMalaysia from "./pages/JewelleryExporterMalaysia";
+import JewelleryExporterNigeria from "./pages/JewelleryExporterNigeria";
+import JewelleryExporterSaudiArabia from "./pages/JewelleryExporterSaudiArabia";
+import JewelleryExporterSriLanka from "./pages/JewelleryExporterSriLanka";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
+import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import Wholesale from "./pages/Wholesale";
 import WhyChooseUs from "./pages/WhyChooseUs";
+// Admin
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import AdminAutomation from "./pages/admin/AdminAutomation";
 import AdminBlog from "./pages/admin/AdminBlog";
+import AdminCMS from "./pages/admin/AdminCMS";
 import AdminCatalogue from "./pages/admin/AdminCatalogue";
 import AdminCategories from "./pages/admin/AdminCategories";
 import AdminContent from "./pages/admin/AdminContent";
+import AdminCountrySettings from "./pages/admin/AdminCountrySettings";
 import AdminCustomers from "./pages/admin/AdminCustomers";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminGallery from "./pages/admin/AdminGallery";
 import AdminInquiries from "./pages/admin/AdminInquiries";
 import AdminLogin from "./pages/admin/AdminLogin";
+import AdminLogistics from "./pages/admin/AdminLogistics";
+import AdminMarketing from "./pages/admin/AdminMarketing";
 import AdminOrders from "./pages/admin/AdminOrders";
+import AdminPayments from "./pages/admin/AdminPayments";
 import AdminProducts from "./pages/admin/AdminProducts";
+import AdminSettings from "./pages/admin/AdminSettings";
 import AdminSystemSettings from "./pages/admin/AdminSystemSettings";
 import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminWebsiteSettings from "./pages/admin/AdminWebsiteSettings";
 import AdminWhatsAppLeads from "./pages/admin/AdminWhatsAppLeads";
+// Collections
+import Bracelets from "./pages/collections/BraceletsCollection";
+import DailyWear from "./pages/collections/DailyWearJewelry";
+import Earrings from "./pages/collections/EarringsCollection";
+import Korean from "./pages/collections/KoreanJewelry";
+import Minimalist from "./pages/collections/MinimalistJewelry";
+import Necklaces from "./pages/collections/NecklacesCollection";
+import Oxidised from "./pages/collections/OxidisedJewelry";
+import PartyWear from "./pages/collections/PartyWearJewelry";
+import ProgrammaticCollection from "./pages/collections/ProgrammaticCollection";
+import Rings from "./pages/collections/RingsCollection";
+import TrendyJewelry from "./pages/collections/TrendyJewelry";
+// Export Markets
+import ExportAustralia from "./pages/export-markets/Australia";
+import ExportCanada from "./pages/export-markets/Canada";
+import ExportFrance from "./pages/export-markets/France";
+import ExportKuwait from "./pages/export-markets/Kuwait";
+import ExportMalaysia from "./pages/export-markets/Malaysia";
+import ExportNigeria from "./pages/export-markets/Nigeria";
+import ExportSaudiArabia from "./pages/export-markets/SaudiArabia";
+import ExportSingapore from "./pages/export-markets/Singapore";
+import ExportSriLanka from "./pages/export-markets/SriLanka";
+import ExportUAE from "./pages/export-markets/UAE";
+import ExportUK from "./pages/export-markets/UK";
+import ExportUSA from "./pages/export-markets/USA";
+// SEO pages
 import ArtificialJewelleryExporter from "./pages/seo/ArtificialJewelleryExporter";
 import ArtificialJewelleryWholesalerIndia from "./pages/seo/ArtificialJewelleryWholesalerIndia";
 import BridalImitationJewellery from "./pages/seo/BridalImitationJewellery";
@@ -50,6 +94,7 @@ import ImitationJewellerySupplierUSA from "./pages/seo/ImitationJewellerySupplie
 import JewelleryExporterAustralia from "./pages/seo/JewelleryExporterAustralia";
 import JewelleryExporterCanada from "./pages/seo/JewelleryExporterCanada";
 import JewelleryExporterEurope from "./pages/seo/JewelleryExporterEurope";
+import JewelleryExporterFrance from "./pages/seo/JewelleryExporterFrance";
 import JewelleryExporterSingapore from "./pages/seo/JewelleryExporterSingapore";
 import JewelleryExporterToUSA from "./pages/seo/JewelleryExporterToUSA";
 import JewelleryExporterUAE from "./pages/seo/JewelleryExporterUAE";
@@ -79,6 +124,7 @@ export default function App() {
       <ScrollToTop />
       <VisitTracker />
       <Routes>
+        {/* Core pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
@@ -91,6 +137,135 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
+
+        {/* Policy & info pages */}
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route
+          path="/return-refund-cancellation-policy"
+          element={<ReturnRefundPolicy />}
+        />
+        <Route path="/return-policy" element={<ReturnRefundPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/terms-conditions" element={<TermsAndConditions />} />
+
+        {/* Collection pages */}
+        <Route path="/collections/trendy-jewelry" element={<TrendyJewelry />} />
+        <Route path="/collections/earrings" element={<Earrings />} />
+        <Route path="/collections/necklaces" element={<Necklaces />} />
+        <Route path="/collections/rings" element={<Rings />} />
+        <Route path="/collections/bracelets" element={<Bracelets />} />
+        <Route path="/collections/party-wear-jewelry" element={<PartyWear />} />
+        <Route path="/collections/daily-wear-jewelry" element={<DailyWear />} />
+        <Route
+          path="/collections/minimalist-jewelry"
+          element={<Minimalist />}
+        />
+        <Route path="/collections/korean-jewelry" element={<Korean />} />
+        <Route path="/collections/oxidised-jewelry" element={<Oxidised />} />
+
+        {/* Programmatic collection pages */}
+        <Route
+          path="/collections/minimalist-earrings"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/party-wear-necklaces"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/oxidised-rings"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/korean-necklaces"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/daily-wear-earrings"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/statement-earrings"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/gold-plated-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/bridal-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/kundan-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/meenakari-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/antique-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/temple-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/indo-western-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/silver-oxidised-jewelry"
+          element={<ProgrammaticCollection />}
+        />
+        <Route
+          path="/collections/wholesale-bangles"
+          element={<ProgrammaticCollection />}
+        />
+
+        {/* Export market pages */}
+        <Route path="/export-markets/usa" element={<ExportUSA />} />
+        <Route path="/export-markets/uk" element={<ExportUK />} />
+        <Route path="/export-markets/australia" element={<ExportAustralia />} />
+        <Route path="/export-markets/canada" element={<ExportCanada />} />
+        <Route path="/export-markets/uae" element={<ExportUAE />} />
+        <Route path="/export-markets/kuwait" element={<ExportKuwait />} />
+        <Route path="/export-markets/malaysia" element={<ExportMalaysia />} />
+        <Route path="/export-markets/singapore" element={<ExportSingapore />} />
+        <Route
+          path="/export-markets/saudi-arabia"
+          element={<ExportSaudiArabia />}
+        />
+        <Route path="/export-markets/nigeria" element={<ExportNigeria />} />
+        <Route path="/export-markets/sri-lanka" element={<ExportSriLanka />} />
+        <Route path="/export-markets/france" element={<ExportFrance />} />
+
+        {/* Legacy Kuwait/Malaysia/Nigeria/SaudiArabia/SriLanka pages */}
+        <Route
+          path="/jewellery-exporter-kuwait"
+          element={<JewelleryExporterKuwait />}
+        />
+        <Route
+          path="/jewellery-exporter-malaysia"
+          element={<JewelleryExporterMalaysia />}
+        />
+        <Route
+          path="/jewellery-exporter-saudi-arabia"
+          element={<JewelleryExporterSaudiArabia />}
+        />
+        <Route
+          path="/jewellery-exporter-nigeria"
+          element={<JewelleryExporterNigeria />}
+        />
+        <Route
+          path="/jewellery-exporter-sri-lanka"
+          element={<JewelleryExporterSriLanka />}
+        />
+
+        {/* Admin routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route
           path="/admin"
@@ -149,6 +324,14 @@ export default function App() {
           }
         />
         <Route
+          path="/admin/cms"
+          element={
+            <AdminGuard>
+              <AdminCMS />
+            </AdminGuard>
+          }
+        />
+        <Route
           path="/admin/orders"
           element={
             <AdminGuard>
@@ -192,7 +375,47 @@ export default function App() {
           path="/admin/settings"
           element={
             <AdminGuard>
-              <AdminSystemSettings />
+              <AdminSettings />
+            </AdminGuard>
+          }
+        />
+        <Route
+          path="/admin/marketing"
+          element={
+            <AdminGuard>
+              <AdminMarketing />
+            </AdminGuard>
+          }
+        />
+        <Route
+          path="/admin/country-settings"
+          element={
+            <AdminGuard>
+              <AdminCountrySettings />
+            </AdminGuard>
+          }
+        />
+        <Route
+          path="/admin/logistics"
+          element={
+            <AdminGuard>
+              <AdminLogistics />
+            </AdminGuard>
+          }
+        />
+        <Route
+          path="/admin/payments"
+          element={
+            <AdminGuard>
+              <AdminPayments />
+            </AdminGuard>
+          }
+        />
+        <Route
+          path="/admin/automation"
+          element={
+            <AdminGuard>
+              <AdminAutomation />
             </AdminGuard>
           }
         />
@@ -212,6 +435,8 @@ export default function App() {
             </AdminGuard>
           }
         />
+
+        {/* SEO landing pages */}
         <Route
           path="/imitation-jewellery-exporter-india"
           element={<ImitationJewelleryExporterIndia />}
@@ -258,6 +483,10 @@ export default function App() {
         />
         <Route
           path="/jewellery-exporter-uae"
+          element={<JewelleryExporterUAE />}
+        />
+        <Route
+          path="/imitation-jewellery-supplier-uae"
           element={<JewelleryExporterUAE />}
         />
         <Route
@@ -336,9 +565,31 @@ export default function App() {
           path="/jewellery-exporter-europe"
           element={<JewelleryExporterEurope />}
         />
+        <Route
+          path="/export-imitation-jewellery-france"
+          element={<JewelleryExporterFrance />}
+        />
+        <Route
+          path="/export-indian-fashion-jewellery-australia"
+          element={<JewelleryExporterAustralia />}
+        />
+        <Route
+          path="/export-imitation-jewellery-germany-eu"
+          element={<JewelleryExporterEurope />}
+        />
+        <Route
+          path="/export-imitation-jewellery-canada"
+          element={<JewelleryExporterCanada />}
+        />
+        <Route
+          path="/export-imitation-jewellery-singapore"
+          element={<JewelleryExporterSingapore />}
+        />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <WhatsAppButton />
+      <BulkQuoteCart />
       <Toaster />
     </BrowserRouter>
   );

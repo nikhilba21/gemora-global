@@ -10,18 +10,21 @@ import { toast } from "sonner";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
+import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 
 export default function Contact() {
+  const { content: pageContent } = usePageContent("contact");
+
   usePageSEO({
-    title:
-      "Contact Gemora Global — Wholesale Jewellery Enquiries | India Exporter",
+    title: "Wholesale Jewellery Enquiry India — Contact Gemora Global",
     description:
-      "Get in touch with Gemora Global for wholesale imitation jewellery pricing, catalogue requests, and export enquiries. We respond to all wholesale inquiries within 24 hours.",
+      "Send a wholesale jewellery enquiry to Gemora Global India. Get pricing, MOQ details & catalogue for imitation jewellery export. Response within 24 hours.",
     canonical: "https://gemoraglobal-tje.caffeine.xyz/contact",
-    ogTitle:
-      "Contact Gemora Global — Wholesale Jewellery Enquiries | India Exporter",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-contact.jpg",
+    ogTitle: "Contact Gemora Global — Wholesale Jewellery Enquiry India",
+    ogDescription:
+      "Get wholesale imitation jewellery pricing, MOQ details & export catalogue from Gemora Global, Jaipur. We respond within 24 hours.",
+    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -30,14 +33,13 @@ export default function Contact() {
       email: "globalgemora@gmail.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress:
-          "B 66 MAA Hinglaj Nagar, Gandhi Path West, Vaishali Nagar",
+        streetAddress: "B 66 MAA Hinglaj Nagar",
         addressLocality: "Jaipur",
         addressRegion: "Rajasthan",
         postalCode: "302021",
         addressCountry: "IN",
       },
-      openingHours: "Mo-Sa 10:00-18:30",
+      openingHours: "Mo-Sa 09:00-19:00",
       priceRange: "$$",
     },
   });
@@ -47,70 +49,48 @@ export default function Contact() {
 
   const [form, setForm] = useState({
     name: "",
+    companyName: "",
+    email: "",
     country: "",
     whatsapp: "",
     requirement: "",
   });
 
   useEffect(() => {
-    document.title =
-      "Contact Gemora Global — Wholesale Jewellery Enquiries | India Exporter";
-    let metaDesc = document.querySelector(
-      'meta[name="description"]',
-    ) as HTMLMetaElement | null;
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "Get in touch with Gemora Global for wholesale imitation jewellery pricing, catalogue requests, and export enquiries. We respond to all wholesale inquiries within 24 hours.",
-    );
-    const existingScript = document.getElementById("page-schema");
-    if (existingScript) existingScript.remove();
-    const script = document.createElement("script");
-    script.id = "page-schema";
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Gemora Global",
-      telephone: "+91-7976341419",
-      email: "globalgemora@gmail.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "B 66 MAA Hinglaj Nagar, Gandhi Path West, Vaishali Nagar",
-        addressLocality: "Jaipur",
-        addressRegion: "Rajasthan",
-        postalCode: "302021",
-        addressCountry: "IN",
-      },
-      openingHours: "Mo-Sa 10:00-18:30",
-      priceRange: "$$",
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.title =
-        "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global";
-      const s = document.getElementById("page-schema");
-      if (s) s.remove();
-    };
+    // usePageSEO handles all meta — keep this effect minimal for cleanup only
+    return () => {};
   }, []);
 
   const mutation = useMutation({
-    mutationFn: () =>
-      actor!.submitInquiry(
+    mutationFn: () => {
+      // Append optional company name and email into the requirement field
+      const extraInfo = [
+        form.companyName ? `Company: ${form.companyName}` : "",
+        form.email ? `Email: ${form.email}` : "",
+      ]
+        .filter(Boolean)
+        .join(" | ");
+      const fullRequirement = extraInfo
+        ? `${form.requirement}\n\n[${extraInfo}]`
+        : form.requirement;
+      return actor!.submitInquiry(
         form.name,
         form.country,
         form.whatsapp,
-        form.requirement,
-        productId ? [BigInt(productId)] : [],
-      ),
+        fullRequirement,
+        productId ? BigInt(productId) : null,
+      );
+    },
     onSuccess: () => {
       toast.success("Inquiry sent! We'll contact you shortly.");
-      setForm({ name: "", country: "", whatsapp: "", requirement: "" });
+      setForm({
+        name: "",
+        companyName: "",
+        email: "",
+        country: "",
+        whatsapp: "",
+        requirement: "",
+      });
     },
     onError: () => toast.error("Failed to send inquiry. Please try WhatsApp."),
   });
@@ -134,7 +114,8 @@ export default function Contact() {
         <div className="bg-card border-b border-border py-8 md:py-12 px-4">
           <div className="container px-0">
             <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
-              Contact Us — Wholesale Enquiries Answered Within 24 Hours
+              {pageContent.page_title ||
+                "Contact Us — Wholesale Enquiries Answered Within 24 Hours"}
             </h1>
             <p className="text-muted-foreground max-w-2xl text-sm md:text-base">
               Whether you are placing your first order or scaling an existing
@@ -187,6 +168,21 @@ export default function Contact() {
                   />
                 </div>
                 <div>
+                  <Label htmlFor="companyName" className="text-sm mb-1.5 block">
+                    Company / Business Name
+                  </Label>
+                  <Input
+                    id="companyName"
+                    value={form.companyName}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, companyName: e.target.value }))
+                    }
+                    placeholder="Your company or store name (optional)"
+                    data-ocid="inquiry.company_input"
+                    className="w-full min-h-[44px]"
+                  />
+                </div>
+                <div>
                   <Label htmlFor="country" className="text-sm mb-1.5 block">
                     Country *
                   </Label>
@@ -198,6 +194,22 @@ export default function Contact() {
                     }
                     placeholder="Your country"
                     required
+                    className="w-full min-h-[44px]"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="email" className="text-sm mb-1.5 block">
+                    Email Address
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={form.email}
+                    onChange={(e) =>
+                      setForm((f) => ({ ...f, email: e.target.value }))
+                    }
+                    placeholder="your@email.com (optional)"
+                    data-ocid="inquiry.email_input"
                     className="w-full min-h-[44px]"
                   />
                 </div>
@@ -268,17 +280,25 @@ export default function Contact() {
                       icon: "📍",
                       label: "Address",
                       value:
+                        pageContent.address ||
+                        pageContent.contact_address ||
                         "B 66 MAA Hinglaj Nagar, Gandhi Path West, Vaishali Nagar, Jaipur 302021",
                     },
                     {
                       icon: "📧",
                       label: "Email",
-                      value: "globalgemora@gmail.com",
+                      value:
+                        pageContent.email ||
+                        pageContent.contact_email ||
+                        "globalgemora@gmail.com",
                     },
                     {
                       icon: "📱",
                       label: "Phone / WhatsApp",
-                      value: "+91 7976341419",
+                      value:
+                        pageContent.phone ||
+                        pageContent.contact_phone ||
+                        "+91 7976341419",
                     },
                     {
                       icon: "🕐",

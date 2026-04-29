@@ -78,6 +78,30 @@ const RESOURCES = [
   },
 ];
 
+const INTERNATIONAL_LINKS = [
+  { label: "USA", to: "/export-markets/usa" },
+  { label: "UK", to: "/export-markets/uk" },
+  { label: "Australia", to: "/export-markets/australia" },
+  { label: "Canada", to: "/export-markets/canada" },
+  { label: "UAE", to: "/export-markets/uae" },
+  { label: "Kuwait", to: "/export-markets/kuwait" },
+  { label: "Malaysia", to: "/export-markets/malaysia" },
+  { label: "Singapore", to: "/export-markets/singapore" },
+  { label: "Saudi Arabia", to: "/export-markets/saudi-arabia" },
+  { label: "Nigeria", to: "/export-markets/nigeria" },
+  { label: "Sri Lanka", to: "/export-markets/sri-lanka" },
+];
+
+const HELP_SUPPORT_LINKS = [
+  { label: "FAQ", to: "/faq" },
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  {
+    label: "Return, Refund, Replacement & Cancellation Policy",
+    to: "/return-refund-cancellation-policy",
+  },
+  { label: "Terms & Conditions", to: "/terms-and-conditions" },
+];
+
 function FooterLink({ label, to }: { label: string; to: string }) {
   return (
     <li>
@@ -111,24 +135,35 @@ export default function Footer() {
     <footer style={{ background: "#0d1b6e", color: "#fff" }}>
       {/* Main footer grid */}
       <div className="container px-4 sm:px-6 py-10 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {/* Brand column — centered on mobile */}
-          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 lg:gap-6">
+          {/* Brand column */}
+          <div className="sm:col-span-2 lg:col-span-3 xl:col-span-1 text-center sm:text-left">
             <div className="mb-4 flex justify-center sm:justify-start">
               <img
                 src="/assets/uploads/logo-removebg-preview-1-1.png"
-                alt="Gemora Global"
+                alt="Gemora Global — Imitation Jewellery Manufacturer Jaipur India"
                 className="h-12 w-auto object-contain"
+                width={180}
+                height={48}
+                loading="lazy"
               />
             </div>
             <p
-              className="text-sm leading-relaxed mb-4"
+              className="text-sm leading-relaxed mb-1"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
-              India&apos;s leading imitation jewellery manufacturer &amp; global
-              exporter based in Jaipur, Rajasthan. Serving boutiques, retailers
-              &amp; wholesalers worldwide.
+              Jaipur-based imitation jewellery manufacturer &amp; global
+              exporter. Established 2011. 500+ wholesale designs. MOQ from 50
+              units.
             </p>
+            <p
+              className="text-xs mb-4"
+              style={{ color: "rgba(255,255,255,0.5)" }}
+            >
+              Established 2011 · 500+ Designs · 20+ Countries
+            </p>
+
+            {/* Address & contact */}
             <div
               className="space-y-2.5 text-sm text-left"
               style={{ color: "rgba(255,255,255,0.7)" }}
@@ -138,9 +173,11 @@ export default function Footer() {
                   className="w-4 h-4 mt-0.5 flex-shrink-0"
                   style={{ color: "#D4AF37" }}
                 />
-                <span>
-                  B 66 MAA Hinglaj Nagar, Vaishali Nagar, Jaipur 302021
-                </span>
+                <address className="not-italic leading-snug">
+                  B 66 MAA Hinglaj Nagar,
+                  <br />
+                  Jaipur - 302021, Rajasthan, India
+                </address>
               </div>
               <a
                 href="tel:+917976341419"
@@ -226,6 +263,26 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* International */}
+          <div data-ocid="footer.international.section">
+            <FooterColTitle>International</FooterColTitle>
+            <ul className="space-y-0">
+              {INTERNATIONAL_LINKS.map((item) => (
+                <FooterLink key={item.to} label={item.label} to={item.to} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Help & Support */}
+          <div data-ocid="footer.help_support.section">
+            <FooterColTitle>Help &amp; Support</FooterColTitle>
+            <ul className="space-y-0">
+              {HELP_SUPPORT_LINKS.map((item) => (
+                <FooterLink key={item.to} label={item.label} to={item.to} />
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -236,8 +293,8 @@ export default function Footer() {
           style={{ color: "rgba(255,255,255,0.5)" }}
         >
           <span>
-            &copy; {year} Gemora Global — Imitation Jewellery Manufacturer,
-            Jaipur, India. All rights reserved.
+            &copy; {year} Gemora Global — Established 2011. Imitation Jewellery
+            Manufacturer &amp; Exporter, Jaipur, India. All rights reserved.
           </span>
           <span className="whitespace-nowrap">
             Built with <span aria-hidden="true">&#10084;</span> using{" "}

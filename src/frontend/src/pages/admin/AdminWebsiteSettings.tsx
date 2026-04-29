@@ -83,10 +83,16 @@ export default function AdminWebsiteSettings() {
       const entries = await Promise.all(
         keys.map(async (k) => {
           const v = await actor.getContent(k);
-          return [k, Array.isArray(v) ? (v[0] ?? "") : (v ?? "")] as [
-            string,
-            string,
-          ];
+          // getContent returns string | null (backend.d.ts)
+          const val =
+            typeof v === "string"
+              ? v
+              : v == null
+                ? ""
+                : Array.isArray(v)
+                  ? (v[0] ?? "")
+                  : "";
+          return [k, val] as [string, string];
         }),
       );
       return Object.fromEntries(entries);

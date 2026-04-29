@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Dialog,
   DialogContent,
@@ -62,9 +63,14 @@ export default function AdminGallery() {
   const [bulkRunning, setBulkRunning] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
 
+  // ── Bulk selection state ───────────────────────────────────────
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [bulkDeleteConfirm, setBulkDeleteConfirm] = useState(false);
+  const [bulkDeleting, setBulkDeleting] = useState(false);
+
   const { data: items } = useQuery<GalleryItem[]>({
     queryKey: ["gallery", ""],
-    queryFn: () => actor!.getGallery([]),
+    queryFn: () => actor!.getGallery(null),
     enabled: !!actor,
   });
 
@@ -111,6 +117,47 @@ export default function AdminGallery() {
     },
     onError: () => toast.error("Failed to delete gallery item"),
   });
+
+  // ── Bulk selection helpers ─────────────────────────────────────
+  const itemList = items ?? [];
+  const allIds = itemList.map((item) => String(item.id));
+  const allSelected =
+    allIds.length > 0 && allIds.every((id) => selectedIds.has(id));
+  const someSelected = selectedIds.size > 0;
+
+  const toggleAll = () => {
+    if (allSelected) setSelectedIds(new Set());
+    else setSelectedIds(new Set(allIds));
+  };
+
+  const toggleOne = (id: string) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const handleBulkDelete = async () => {
+    if (!actor || selectedIds.size === 0) return;
+    setBulkDeleting(true);
+    const idsToDelete = [...selectedIds];
+    let ok = 0;
+    for (const id of idsToDelete) {
+      try {
+        await actor.deleteGalleryItem(BigInt(id));
+        ok++;
+      } catch {
+        // continue on error
+      }
+    }
+    setBulkDeleting(false);
+    setSelectedIds(new Set());
+    setBulkDeleteConfirm(false);
+    invalidate();
+    toast.success(`${ok} image${ok !== 1 ? "s" : ""} deleted`);
+  };
 
   const openEdit = (item: GalleryItem) => {
     setEditing(item);
@@ -562,14 +609,104 @@ export default function AdminGallery() {
         )}
       </div>
 
+      {/* Bulk Action Bar */}
+      {someSelected && (
+        <div
+          className="flex flex-wrap items-center gap-3 mb-4 p-3 rounded-lg border"
+          style={{ background: "#fff3e0", borderColor: "#FB8C00" }}
+          data-ocid="admin.gallery.bulk_action_bar"
+        >
+          <span className="text-sm font-semibold" style={{ color: "#E65100" }}>
+            {selectedIds.size} selected
+          </span>
+          {!bulkDeleteConfirm ? (
+            <Button
+              size="sm"
+              variant="destructive"
+              onClick={() => setBulkDeleteConfirm(true)}
+              disabled={bulkDeleting}
+              data-ocid="admin.gallery.bulk_delete_button"
+            >
+              Delete Selected
+            </Button>
+          ) : (
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-destructive font-medium">
+                Delete {selectedIds.size} images?
+              </span>
+              <Button
+                size="sm"
+                variant="destructive"
+                onClick={handleBulkDelete}
+                disabled={bulkDeleting}
+                data-ocid="admin.gallery.bulk_delete_confirm_button"
+              >
+                {bulkDeleting ? (
+                  <Loader2 size={14} className="animate-spin mr-1" />
+                ) : null}
+                Yes, Delete
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setBulkDeleteConfirm(false)}
+                disabled={bulkDeleting}
+                data-ocid="admin.gallery.bulk_delete_cancel_button"
+              >
+                Cancel
+              </Button>
+            </div>
+          )}
+          <button
+            type="button"
+            className="ml-auto text-xs text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => {
+              setSelectedIds(new Set());
+              setBulkDeleteConfirm(false);
+            }}
+          >
+            Clear selection
+          </button>
+        </div>
+      )}
+
+      {/* Select All toggle when items exist */}
+      {itemList.length > 0 && (
+        <div className="flex items-center gap-2 mb-3">
+          <Checkbox
+            checked={allSelected}
+            onCheckedChange={toggleAll}
+            aria-label="Select all images"
+            data-ocid="admin.gallery.select_all_checkbox"
+          />
+          <span className="text-sm text-muted-foreground">
+            {allSelected ? "Deselect all" : "Select all"} ({itemList.length})
+          </span>
+        </div>
+      )}
+
       {/* Gallery grid: 2 cols mobile, 3 md, 4 lg */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {(items ?? []).map((item, i) => (
+        {itemList.map((item, i) => (
           <div
             key={String(item.id)}
-            className="rounded-lg overflow-hidden border border-border group relative"
+            className={`rounded-lg overflow-hidden border group relative transition-all ${selectedIds.has(String(item.id)) ? "border-primary ring-2 ring-primary/30" : "border-border"}`}
             data-ocid={`admin.gallery.item.${i + 1}`}
           >
+            {/* Selection checkbox */}
+            <div
+              className="absolute top-2 left-2 z-10"
+              onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => e.stopPropagation()}
+            >
+              <Checkbox
+                checked={selectedIds.has(String(item.id))}
+                onCheckedChange={() => toggleOne(String(item.id))}
+                aria-label={`Select ${item.caption}`}
+                className="bg-white/90 shadow"
+                data-ocid={`admin.gallery.checkbox.${i + 1}`}
+              />
+            </div>
             <img
               src={item.imageUrl}
               alt={item.caption}
@@ -603,7 +740,7 @@ export default function AdminGallery() {
             </div>
           </div>
         ))}
-        {(!items || items.length === 0) && (
+        {itemList.length === 0 && (
           <div
             className="col-span-4 text-center py-12 text-muted-foreground"
             data-ocid="admin.gallery.empty_state"

@@ -7,18 +7,34 @@ import {
   ChevronRight,
   MessageCircle,
   Phone,
+  Plus,
   Share2,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import RequestSampleModal from "../components/RequestSampleModal";
 import WhatsAppInquiryPopup from "../components/WhatsAppInquiryPopup";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
+import { useQuoteCart } from "../hooks/useQuoteCart";
 import type { Category, Product } from "../types";
 
 // ─── Fallback sample product data ─────────────────────────────────────────────
+
+/** Remove Kanhai Jewels boilerplate text injected from seeded product data */
+function cleanProductText(text: string): string {
+  return text
+    .replace(
+      /Kanhai Jewels is Mumbai based company established in 2001[^.]*\./gi,
+      "",
+    )
+    .replace(/We are manufacturer and[^.]*\./gi, "")
+    .replace(/Read More/gi, "")
+    .replace(/kanhai/gi, "Gemora")
+    .trim();
+}
 
 type NormalizedProduct = {
   id: bigint;
@@ -199,15 +215,22 @@ function RelatedProductCard({
 export default function ProductDetail() {
   const { id } = useParams() as { id: string };
   const { actor } = useActor();
+  const { addToCart, setOpen: setCartOpen } = useQuoteCart();
   const [activeImg, setActiveImg] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const [waPopupOpen, setWaPopupOpen] = useState(false);
+  const [sampleOpen, setSampleOpen] = useState(false);
 
   const { data: backendProduct, isLoading } = useQuery({
     queryKey: ["product", id],
     queryFn: async (): Promise<Product | null> => {
       const result = await actor!.getProduct(BigInt(id));
-      return result.length > 0 ? (result[0] as Product) : null;
+      // backend.d.ts: getProduct returns Product | null
+      if (result === null || result === undefined) return null;
+      // Handle legacy [] | [Product] encoding just in case
+      if (Array.isArray(result))
+        return result.length > 0 ? (result[0] as Product) : null;
+      return result as Product;
     },
     enabled: !!actor && !!id,
   });
@@ -223,8 +246,8 @@ export default function ProductDetail() {
     if (backendProduct) {
       return {
         id: backendProduct.id,
-        name: backendProduct.name,
-        description: backendProduct.description,
+        name: cleanProductText(backendProduct.name),
+        description: cleanProductText(backendProduct.description),
         categoryId: backendProduct.categoryId,
         imageUrls: backendProduct.imageUrls,
         moq: backendProduct.moq,
@@ -631,14 +654,45 @@ export default function ProductDetail() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Inquiry
                 </Button>
+                <div className="grid grid-cols-2 gap-3">
+                  <Button
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 min-h-[48px] text-sm flex items-center gap-2"
+                    onClick={() => {
+                      if (product) {
+                        addToCart({
+                          productId: String(product.id),
+                          productName: product.name,
+                          category: categoryName,
+                          imageUrl: images[0] ?? "",
+                          moq: product.moq,
+                        });
+                        setCartOpen(true);
+                      }
+                    }}
+                    data-ocid="product.add_to_quote"
+                  >
+                    <Plus className="w-4 h-4" />
+                    Add to Quote
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-primary text-primary hover:bg-primary/5 min-h-[48px] text-sm"
+                    onClick={() => setSampleOpen(true)}
+                    data-ocid="product.request_sample"
+                  >
+                    Request Sample
+                  </Button>
+                </div>
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 w-full min-h-[52px] text-sm sm:text-base"
-                  data-ocid="product.send_inquiry"
+                  variant="outline"
+                  className="w-full min-h-[48px] text-sm border-2 border-[#1A237E] text-[#1A237E] hover:bg-[#1A237E] hover:text-white"
                 >
                   <Link to={`/contact?product=${product.id}`}>
-                    Send Inquiry
+                    Send Inquiry →
                   </Link>
                 </Button>
                 <Button
@@ -765,6 +819,12 @@ export default function ProductDetail() {
       <WhatsAppInquiryPopup
         isOpen={waPopupOpen}
         onClose={() => setWaPopupOpen(false)}
+        productName={product.name}
+      />
+      {/* Request Sample Modal */}
+      <RequestSampleModal
+        isOpen={sampleOpen}
+        onClose={() => setSampleOpen(false)}
         productName={product.name}
       />
     </div>

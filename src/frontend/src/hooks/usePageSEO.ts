@@ -33,6 +33,7 @@ interface PageSEOOptions {
   ogLocale?: string;
   ogSiteName?: string;
   twitterCard?: string;
+  twitterSite?: string;
   schema?: object | object[];
   hreflangs?: HreflangEntry[];
   faqItems?: FAQItem[];
@@ -42,33 +43,51 @@ interface PageSEOOptions {
   isHomepage?: boolean;
 }
 
-function upsertMeta(selector: string, attr: string, value: string) {
-  let el = document.querySelector(selector) as HTMLMetaElement | null;
+function upsertMetaProperty(property: string, value: string) {
+  let el = document.querySelector(
+    `meta[property='${property}']`,
+  ) as HTMLMetaElement | null;
   if (!el) {
     el = document.createElement("meta");
-    const [attrName, attrVal] = attr.split("=");
-    el.setAttribute(attrName, attrVal);
+    el.setAttribute("property", property);
     document.head.appendChild(el);
   }
   el.setAttribute("content", value);
 }
 
-const BASE_URL = "https://gemoraglobal-tje.caffeine.xyz";
+function upsertMetaName(name: string, value: string) {
+  let el = document.querySelector(
+    `meta[name='${name}']`,
+  ) as HTMLMetaElement | null;
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute("name", name);
+    document.head.appendChild(el);
+  }
+  el.setAttribute("content", value);
+}
+
+export const BASE_URL = "https://gemoraglobal-tje.caffeine.xyz";
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-banner.jpg`;
+
+const DEFAULT_DESCRIPTION =
+  "Gemora Global — wholesale imitation jewellery from Jaipur. MOQ 50 units, 500+ designs, shipping to 30+ countries.";
 
 export function usePageSEO(options: PageSEOOptions) {
   const {
     title,
-    description,
+    description: rawDescription,
     canonical: canonicalProp,
     robots = "index, follow",
     googlebot = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     ogType = "website",
     ogTitle,
     ogDescription,
-    ogImage,
+    ogImage = DEFAULT_OG_IMAGE,
     ogLocale = "en_GB",
     ogSiteName = "Gemora Global",
     twitterCard = "summary_large_image",
+    twitterSite = "@gemoraglobal",
     schema,
     hreflangs,
     faqItems,
@@ -77,6 +96,12 @@ export function usePageSEO(options: PageSEOOptions) {
     speakable = false,
     isHomepage = false,
   } = options;
+
+  // Ensure description is never empty or duplicates title
+  const description =
+    rawDescription?.trim() && rawDescription.trim() !== title
+      ? rawDescription.trim()
+      : DEFAULT_DESCRIPTION;
 
   // Dynamic self-referencing canonical
   const canonical =
@@ -99,48 +124,32 @@ export function usePageSEO(options: PageSEOOptions) {
     canonicalEl.href = canonical;
 
     // Robots meta
-    upsertMeta("meta[name='robots']", "name=robots", robots);
-    upsertMeta("meta[name='googlebot']", "name=googlebot", googlebot);
+    upsertMetaName("robots", robots);
+    upsertMetaName("googlebot", googlebot);
 
     // Description
-    upsertMeta("meta[name='description']", "name=description", description);
+    upsertMetaName("description", description);
 
-    // OG tags
-    upsertMeta("meta[property='og:type']", "property=og:type", ogType);
-    upsertMeta("meta[property='og:url']", "property=og:url", canonical);
-    upsertMeta(
-      "meta[property='og:title']",
-      "property=og:title",
-      ogTitle || title,
-    );
-    upsertMeta(
-      "meta[property='og:description']",
-      "property=og:description",
-      ogDescription || description,
-    );
-    if (ogImage)
-      upsertMeta("meta[property='og:image']", "property=og:image", ogImage);
-    upsertMeta("meta[property='og:locale']", "property=og:locale", ogLocale);
-    upsertMeta(
-      "meta[property='og:site_name']",
-      "property=og:site_name",
-      ogSiteName,
-    );
+    // Author
+    upsertMetaName("author", "Gemora Global");
 
-    // Twitter
-    upsertMeta("meta[name='twitter:card']", "name=twitter:card", twitterCard);
-    upsertMeta(
-      "meta[name='twitter:title']",
-      "name=twitter:title",
-      ogTitle || title,
-    );
-    upsertMeta(
-      "meta[name='twitter:description']",
-      "name=twitter:description",
-      ogDescription || description,
-    );
-    if (ogImage)
-      upsertMeta("meta[name='twitter:image']", "name=twitter:image", ogImage);
+    // Open Graph tags — using property attribute
+    upsertMetaProperty("og:type", ogType);
+    upsertMetaProperty("og:url", canonical);
+    upsertMetaProperty("og:title", ogTitle || title);
+    upsertMetaProperty("og:description", ogDescription || description);
+    upsertMetaProperty("og:image", ogImage);
+    upsertMetaProperty("og:image:width", "1200");
+    upsertMetaProperty("og:image:height", "630");
+    upsertMetaProperty("og:locale", ogLocale);
+    upsertMetaProperty("og:site_name", ogSiteName);
+
+    // Twitter Card tags
+    upsertMetaName("twitter:card", twitterCard);
+    upsertMetaName("twitter:site", twitterSite);
+    upsertMetaName("twitter:title", ogTitle || title);
+    upsertMetaName("twitter:description", ogDescription || description);
+    upsertMetaName("twitter:image", ogImage);
 
     // Build combined schema array
     const schemas: object[] = [];
@@ -151,12 +160,13 @@ export function usePageSEO(options: PageSEOOptions) {
       else schemas.push(schema);
     }
 
-    // Organization schema — always included
+    // Organization schema — always included with full contact info
     const orgSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Gemora Global",
       url: BASE_URL,
+      email: "globalgemora@gmail.com",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/assets/uploads/logo-removebg-preview-1.png`,
@@ -164,8 +174,8 @@ export function usePageSEO(options: PageSEOOptions) {
         height: 60,
       },
       description:
-        "India's leading imitation jewellery manufacturer and exporter from Jaipur, Rajasthan.",
-      foundingDate: "2013",
+        "Jaipur-based imitation jewellery manufacturer and exporter, established 2011. 500+ wholesale designs. MOQ from 50 units. Anti-tarnish finishing. Shipping to 30+ countries worldwide.",
+      foundingDate: "2011",
       address: {
         "@type": "PostalAddress",
         streetAddress: "B 66 MAA Hinglaj Nagar",
@@ -180,17 +190,69 @@ export function usePageSEO(options: PageSEOOptions) {
         contactType: "sales",
         email: "globalgemora@gmail.com",
         availableLanguage: ["English", "Hindi"],
-        areaServed: "Worldwide",
+        areaServed: [
+          "IN",
+          "AE",
+          "FR",
+          "US",
+          "GB",
+          "CA",
+          "AU",
+          "SG",
+          "MY",
+          "SA",
+          "NG",
+          "LK",
+          "KW",
+        ],
       },
       sameAs: [
         "https://www.instagram.com/gemoraglobal",
         "https://www.indiamart.com/gemora-global",
         "https://www.tradeindia.com/gemora-global",
-        "https://www.exportersindia.com/gemora-global",
         "https://wa.me/917976341419",
       ],
     };
     schemas.push(orgSchema);
+
+    // LocalBusiness schema
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#localbusiness`,
+      name: "Gemora Global",
+      image: `${BASE_URL}/images/og-banner.jpg`,
+      telephone: "+91-7976341419",
+      email: "globalgemora@gmail.com",
+      url: BASE_URL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "B 66 MAA Hinglaj Nagar",
+        addressLocality: "Jaipur",
+        addressRegion: "Rajasthan",
+        postalCode: "302021",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 26.9124,
+        longitude: 75.7873,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      priceRange: "$$",
+    });
 
     // WebSite schema with SearchAction — homepage only
     if (isHomepage) {
@@ -314,6 +376,7 @@ export function usePageSEO(options: PageSEOOptions) {
     ogLocale,
     ogSiteName,
     twitterCard,
+    twitterSite,
     schema,
     hreflangs,
     faqItems,

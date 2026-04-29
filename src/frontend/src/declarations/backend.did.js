@@ -62,12 +62,16 @@ export const Category = IDL.Record({
 export const Product = IDL.Record({
   'id' : IDL.Nat,
   'moq' : IDL.Text,
+  'sku' : IDL.Opt(IDL.Text),
   'categoryId' : IDL.Nat,
   'featured' : IDL.Bool,
   'imageUrls' : IDL.Vec(IDL.Text),
+  'subcategory' : IDL.Opt(IDL.Text),
   'name' : IDL.Text,
   'createdAt' : IDL.Int,
+  'color' : IDL.Opt(IDL.Text),
   'isNewArrival' : IDL.Bool,
+  'keyFeatures' : IDL.Opt(IDL.Text),
   'description' : IDL.Text,
 });
 export const GalleryItem = IDL.Record({
@@ -171,6 +175,10 @@ export const idlService = IDL.Service({
         IDL.Vec(IDL.Text),
         IDL.Bool,
         IDL.Bool,
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
       ],
       [IDL.Nat],
       [],
@@ -192,6 +200,17 @@ export const idlService = IDL.Service({
       [IDL.Vec(BlogPost)],
       ['query'],
     ),
+  'getBlogPostsPaginated' : IDL.Func(
+      [IDL.Opt(IDL.Text), IDL.Nat, IDL.Nat],
+      [
+        IDL.Record({
+          'total' : IDL.Nat,
+          'pages' : IDL.Nat,
+          'items' : IDL.Vec(BlogPost),
+        }),
+      ],
+      ['query'],
+    ),
   'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
   'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
   'getCatalogues' : IDL.Func([], [IDL.Vec(Catalogue)], ['query']),
@@ -202,8 +221,12 @@ export const idlService = IDL.Service({
       [
         IDL.Record({
           'totalProducts' : IDL.Nat,
+          'totalCatalogues' : IDL.Nat,
           'newInquiries' : IDL.Nat,
+          'totalBlogPosts' : IDL.Nat,
+          'totalGalleryItems' : IDL.Nat,
           'totalVisits' : IDL.Nat,
+          'totalCategories' : IDL.Nat,
           'totalInquiries' : IDL.Nat,
         }),
       ],
@@ -215,10 +238,44 @@ export const idlService = IDL.Service({
       [IDL.Vec(GalleryItem)],
       ['query'],
     ),
+  'getGalleryPaginated' : IDL.Func(
+      [IDL.Opt(IDL.Text), IDL.Nat, IDL.Nat],
+      [
+        IDL.Record({
+          'total' : IDL.Nat,
+          'pages' : IDL.Nat,
+          'items' : IDL.Vec(GalleryItem),
+        }),
+      ],
+      ['query'],
+    ),
   'getInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], ['query']),
+  'getInquiriesStats' : IDL.Func(
+      [],
+      [IDL.Vec(IDL.Record({ 'country' : IDL.Text, 'count' : IDL.Nat }))],
+      ['query'],
+    ),
   'getNewArrivalProducts' : IDL.Func([], [IDL.Vec(Product)], ['query']),
+  'getPageContent' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(IDL.Tuple(IDL.Text, IDL.Text))],
+      ['query'],
+    ),
   'getProduct' : IDL.Func([IDL.Nat], [IDL.Opt(Product)], ['query']),
+  'getProductBySlug' : IDL.Func([IDL.Text], [IDL.Opt(Product)], ['query']),
   'getProducts' : IDL.Func([IDL.Opt(IDL.Nat)], [IDL.Vec(Product)], ['query']),
+  'getProductsByCategory' : IDL.Func([IDL.Nat], [IDL.Vec(Product)], ['query']),
+  'getProductsPaginated' : IDL.Func(
+      [IDL.Opt(IDL.Nat), IDL.Nat, IDL.Nat],
+      [
+        IDL.Record({
+          'total' : IDL.Nat,
+          'pages' : IDL.Nat,
+          'items' : IDL.Vec(Product),
+        }),
+      ],
+      ['query'],
+    ),
   'getTestimonials' : IDL.Func([], [IDL.Vec(Testimonial)], ['query']),
   'getUserProfile' : IDL.Func(
       [IDL.Principal],
@@ -229,6 +286,11 @@ export const idlService = IDL.Service({
   'recordVisit' : IDL.Func([], [], []),
   'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
   'setContent' : IDL.Func([IDL.Text, IDL.Text], [], []),
+  'setPageContent' : IDL.Func(
+      [IDL.Text, IDL.Vec(IDL.Tuple(IDL.Text, IDL.Text))],
+      [],
+      [],
+    ),
   'submitInquiry' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Text, IDL.Text, IDL.Opt(IDL.Nat)],
       [IDL.Nat],
@@ -272,6 +334,10 @@ export const idlService = IDL.Service({
         IDL.Vec(IDL.Text),
         IDL.Bool,
         IDL.Bool,
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
+        IDL.Opt(IDL.Text),
       ],
       [],
       [],
@@ -341,12 +407,16 @@ export const idlFactory = ({ IDL }) => {
   const Product = IDL.Record({
     'id' : IDL.Nat,
     'moq' : IDL.Text,
+    'sku' : IDL.Opt(IDL.Text),
     'categoryId' : IDL.Nat,
     'featured' : IDL.Bool,
     'imageUrls' : IDL.Vec(IDL.Text),
+    'subcategory' : IDL.Opt(IDL.Text),
     'name' : IDL.Text,
     'createdAt' : IDL.Int,
+    'color' : IDL.Opt(IDL.Text),
     'isNewArrival' : IDL.Bool,
+    'keyFeatures' : IDL.Opt(IDL.Text),
     'description' : IDL.Text,
   });
   const GalleryItem = IDL.Record({
@@ -450,6 +520,10 @@ export const idlFactory = ({ IDL }) => {
           IDL.Vec(IDL.Text),
           IDL.Bool,
           IDL.Bool,
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
         ],
         [IDL.Nat],
         [],
@@ -471,6 +545,17 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(BlogPost)],
         ['query'],
       ),
+    'getBlogPostsPaginated' : IDL.Func(
+        [IDL.Opt(IDL.Text), IDL.Nat, IDL.Nat],
+        [
+          IDL.Record({
+            'total' : IDL.Nat,
+            'pages' : IDL.Nat,
+            'items' : IDL.Vec(BlogPost),
+          }),
+        ],
+        ['query'],
+      ),
     'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
     'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
     'getCatalogues' : IDL.Func([], [IDL.Vec(Catalogue)], ['query']),
@@ -481,8 +566,12 @@ export const idlFactory = ({ IDL }) => {
         [
           IDL.Record({
             'totalProducts' : IDL.Nat,
+            'totalCatalogues' : IDL.Nat,
             'newInquiries' : IDL.Nat,
+            'totalBlogPosts' : IDL.Nat,
+            'totalGalleryItems' : IDL.Nat,
             'totalVisits' : IDL.Nat,
+            'totalCategories' : IDL.Nat,
             'totalInquiries' : IDL.Nat,
           }),
         ],
@@ -494,10 +583,48 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(GalleryItem)],
         ['query'],
       ),
+    'getGalleryPaginated' : IDL.Func(
+        [IDL.Opt(IDL.Text), IDL.Nat, IDL.Nat],
+        [
+          IDL.Record({
+            'total' : IDL.Nat,
+            'pages' : IDL.Nat,
+            'items' : IDL.Vec(GalleryItem),
+          }),
+        ],
+        ['query'],
+      ),
     'getInquiries' : IDL.Func([], [IDL.Vec(Inquiry)], ['query']),
+    'getInquiriesStats' : IDL.Func(
+        [],
+        [IDL.Vec(IDL.Record({ 'country' : IDL.Text, 'count' : IDL.Nat }))],
+        ['query'],
+      ),
     'getNewArrivalProducts' : IDL.Func([], [IDL.Vec(Product)], ['query']),
+    'getPageContent' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(IDL.Tuple(IDL.Text, IDL.Text))],
+        ['query'],
+      ),
     'getProduct' : IDL.Func([IDL.Nat], [IDL.Opt(Product)], ['query']),
+    'getProductBySlug' : IDL.Func([IDL.Text], [IDL.Opt(Product)], ['query']),
     'getProducts' : IDL.Func([IDL.Opt(IDL.Nat)], [IDL.Vec(Product)], ['query']),
+    'getProductsByCategory' : IDL.Func(
+        [IDL.Nat],
+        [IDL.Vec(Product)],
+        ['query'],
+      ),
+    'getProductsPaginated' : IDL.Func(
+        [IDL.Opt(IDL.Nat), IDL.Nat, IDL.Nat],
+        [
+          IDL.Record({
+            'total' : IDL.Nat,
+            'pages' : IDL.Nat,
+            'items' : IDL.Vec(Product),
+          }),
+        ],
+        ['query'],
+      ),
     'getTestimonials' : IDL.Func([], [IDL.Vec(Testimonial)], ['query']),
     'getUserProfile' : IDL.Func(
         [IDL.Principal],
@@ -508,6 +635,11 @@ export const idlFactory = ({ IDL }) => {
     'recordVisit' : IDL.Func([], [], []),
     'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
     'setContent' : IDL.Func([IDL.Text, IDL.Text], [], []),
+    'setPageContent' : IDL.Func(
+        [IDL.Text, IDL.Vec(IDL.Tuple(IDL.Text, IDL.Text))],
+        [],
+        [],
+      ),
     'submitInquiry' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text, IDL.Text, IDL.Opt(IDL.Nat)],
         [IDL.Nat],
@@ -551,6 +683,10 @@ export const idlFactory = ({ IDL }) => {
           IDL.Vec(IDL.Text),
           IDL.Bool,
           IDL.Bool,
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
+          IDL.Opt(IDL.Text),
         ],
         [],
         [],

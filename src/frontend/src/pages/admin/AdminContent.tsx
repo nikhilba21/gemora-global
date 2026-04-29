@@ -1,28 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { Loader2, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useActor } from "../../hooks/useActor";
+import { useStorageUpload } from "../../hooks/useStorageUpload";
 
-const CONTENT_SECTIONS = [
+// Normalize getContent result (string | null OR [] | [string])
+function toStr(v: unknown): string {
+  if (typeof v === "string") return v;
+  if (Array.isArray(v) && v.length > 0 && typeof v[0] === "string") return v[0];
+  return "";
+}
+
+const CONTENT_SECTIONS: {
+  section: string;
+  fields: {
+    key: string;
+    label: string;
+    multiline?: boolean;
+    isImage?: boolean;
+    placeholder?: string;
+    hint?: string;
+  }[];
+}[] = [
   {
     section: "🏠 Homepage",
     fields: [
       {
+        key: "hero_image_1",
+        label: "Hero Slider — Slide 1",
+        isImage: true,
+        hint: "Main banner image — shown first in the hero slider",
+      },
+      {
+        key: "hero_image_2",
+        label: "Hero Slider — Slide 2",
+        isImage: true,
+        hint: "Second banner image in the slider",
+      },
+      {
+        key: "hero_image_3",
+        label: "Hero Slider — Slide 3",
+        isImage: true,
+        hint: "Third banner image in the slider",
+      },
+      {
         key: "hero_title",
         label: "Hero Title",
-        multiline: false,
         placeholder:
           "India's Leading Imitation Jewellery Manufacturer & Global Exporter",
-        hint: "Main headline on the homepage hero section",
+        hint: "Main headline below the hero slider",
       },
       {
         key: "hero_subtitle",
         label: "Hero Subtitle",
-        multiline: false,
+        multiline: true,
         placeholder:
           "Premium handcrafted designs for wholesalers, boutiques & distributors worldwide.",
         hint: "Subtext below the hero headline",
@@ -30,8 +66,39 @@ const CONTENT_SECTIONS = [
     ],
   },
   {
+    section: "🖼 Logo & Branding",
+    fields: [
+      {
+        key: "logo_url",
+        label: "Website Logo",
+        isImage: true,
+        hint: "Upload your logo — shown in the header navigation bar",
+      },
+      {
+        key: "footer_tagline",
+        label: "Footer Tagline",
+        placeholder: "Global Jewellery. Indian Craftsmanship.",
+        hint: "Tagline shown in the website footer",
+      },
+      {
+        key: "footer_about",
+        label: "Footer About Text",
+        multiline: true,
+        placeholder:
+          "India's leading imitation jewellery manufacturer & global exporter...",
+        hint: "Short description shown in footer",
+      },
+    ],
+  },
+  {
     section: "📖 About Page",
     fields: [
+      {
+        key: "about_hero_image",
+        label: "About Page Hero Image",
+        isImage: true,
+        hint: "Banner image shown at the top of the About page",
+      },
       {
         key: "about_story",
         label: "Our Story Text",
@@ -53,6 +120,12 @@ const CONTENT_SECTIONS = [
     section: "📦 Products & Wholesale",
     fields: [
       {
+        key: "wholesale_hero_image",
+        label: "Wholesale Page Hero Image",
+        isImage: true,
+        hint: "Banner image on the Wholesale & Export page",
+      },
+      {
         key: "wholesale_intro",
         label: "Wholesale Page Intro",
         multiline: true,
@@ -62,9 +135,26 @@ const CONTENT_SECTIONS = [
       {
         key: "moq_text",
         label: "MOQ Details",
-        multiline: false,
         placeholder: "Minimum Order Quantity: 50 pieces per design",
         hint: "Minimum order quantity shown on wholesale page",
+      },
+    ],
+  },
+  {
+    section: "🌐 Global Markets",
+    fields: [
+      {
+        key: "global_markets_hero_image",
+        label: "Global Markets Page Hero Image",
+        isImage: true,
+        hint: "Banner image on the Global Markets page",
+      },
+      {
+        key: "global_markets_intro",
+        label: "Global Markets Intro",
+        multiline: true,
+        placeholder: "We export to 20+ countries worldwide...",
+        hint: "Intro text on the Global Markets page",
       },
     ],
   },
@@ -74,14 +164,12 @@ const CONTENT_SECTIONS = [
       {
         key: "contact_email",
         label: "Email Address",
-        multiline: false,
         placeholder: "globalgemora@gmail.com",
         hint: "Business email shown on Contact page and footer",
       },
       {
         key: "contact_phone",
         label: "Phone / WhatsApp Number",
-        multiline: false,
         placeholder: "+91 7976341419",
         hint: "Phone number shown on Contact page, footer, and WhatsApp button",
       },
@@ -96,7 +184,6 @@ const CONTENT_SECTIONS = [
       {
         key: "whatsapp_number",
         label: "WhatsApp Number (digits only, with country code)",
-        multiline: false,
         placeholder: "917976341419",
         hint: "Used for the WhatsApp chat button (no + or spaces)",
       },
@@ -108,7 +195,6 @@ const CONTENT_SECTIONS = [
       {
         key: "seo_home_title",
         label: "Homepage SEO Title",
-        multiline: false,
         placeholder: "Gemora Global | Leading Imitation Jewellery Exporter",
         hint: "Title shown in Google search results (keep under 60 chars)",
       },
@@ -123,33 +209,186 @@ const CONTENT_SECTIONS = [
       {
         key: "instagram_handle",
         label: "Instagram Handle",
-        multiline: false,
         placeholder: "gemoraglobal",
         hint: "Your Instagram username (without @)",
       },
     ],
   },
-  {
-    section: "🏷️ Footer & Branding",
-    fields: [
-      {
-        key: "footer_tagline",
-        label: "Footer Tagline",
-        multiline: false,
-        placeholder: "Global Jewellery. Indian Craftsmanship.",
-        hint: "Tagline shown in the website footer",
-      },
-      {
-        key: "footer_about",
-        label: "Footer About Text",
-        multiline: true,
-        placeholder:
-          "India's leading imitation jewellery manufacturer & global exporter...",
-        hint: "Short description shown in footer",
-      },
-    ],
-  },
 ];
+
+// ── Image Upload Field ────────────────────────────────────────────────────────
+
+function ImageField({
+  contentKey,
+  label,
+  hint,
+}: {
+  contentKey: string;
+  label: string;
+  hint?: string;
+}) {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  const fileRef = useRef<HTMLInputElement>(null);
+  const { uploadFileDetailed, uploading, converting } = useStorageUpload();
+
+  const { data } = useQuery({
+    queryKey: ["content", contentKey],
+    queryFn: () => actor!.getContent(contentKey),
+    enabled: !!actor,
+  });
+
+  const currentUrl = toStr(data);
+
+  const saveMutation = useMutation({
+    mutationFn: (url: string) => actor!.setContent(contentKey, url),
+    onSuccess: () => {
+      toast.success(`${label} updated`);
+      qc.invalidateQueries({ queryKey: ["content"] });
+      qc.invalidateQueries({ queryKey: ["content-all"] });
+    },
+    onError: () => toast.error("Failed to save"),
+  });
+
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      const result = await uploadFileDetailed(file);
+      await saveMutation.mutateAsync(result.url);
+    } catch {
+      toast.error("Upload failed — check your connection and try again");
+    }
+    if (fileRef.current) fileRef.current.value = "";
+  };
+
+  const handleRemove = async () => {
+    await saveMutation.mutateAsync("");
+  };
+
+  const active = uploading || converting;
+
+  return (
+    <div
+      style={{
+        background: "#f5f7ff",
+        border: "1px solid #c5cae9",
+        borderRadius: 10,
+        padding: 16,
+      }}
+      data-ocid={`cms.${contentKey}.card`}
+    >
+      <p
+        style={{
+          color: "#1A237E",
+          fontSize: 13,
+          fontWeight: 600,
+          display: "block",
+          marginBottom: 2,
+        }}
+      >
+        {label}
+      </p>
+      {hint && (
+        <p style={{ color: "#888", fontSize: 11, marginBottom: 10 }}>{hint}</p>
+      )}
+
+      <label
+        htmlFor={`img-input-${contentKey}`}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          border: `2px dashed ${active ? "#42A5F5" : "#c5cae9"}`,
+          borderRadius: 8,
+          padding: "14px 12px",
+          background: active ? "#e8f4fe" : "#fff",
+          cursor: active ? "not-allowed" : "pointer",
+          minHeight: 72,
+          transition: "all 0.2s",
+          gap: 6,
+        }}
+        data-ocid={`cms.${contentKey}.dropzone`}
+      >
+        <input
+          id={`img-input-${contentKey}`}
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          disabled={active}
+          onChange={handleUpload}
+        />
+        {active ? (
+          <>
+            <Loader2
+              size={16}
+              className="animate-spin"
+              style={{ color: "#42A5F5" }}
+            />
+            <p style={{ color: "#42A5F5", fontSize: 11, fontWeight: 600 }}>
+              {converting ? "Converting to WebP..." : "Uploading..."}
+            </p>
+          </>
+        ) : (
+          <p style={{ color: "#888", fontSize: 12 }}>
+            Click to upload image{currentUrl ? " (replaces current)" : ""}
+          </p>
+        )}
+      </label>
+
+      {currentUrl && (
+        <div
+          style={{
+            marginTop: 10,
+            position: "relative",
+            display: "inline-block",
+          }}
+        >
+          <img
+            src={currentUrl}
+            alt={label}
+            style={{
+              height: 96,
+              maxWidth: "100%",
+              objectFit: "cover",
+              borderRadius: 6,
+              border: "1px solid #c5cae9",
+              display: "block",
+            }}
+          />
+          <button
+            type="button"
+            onClick={handleRemove}
+            style={{
+              position: "absolute",
+              top: -6,
+              right: -6,
+              background: "crimson",
+              border: "none",
+              borderRadius: "50%",
+              width: 20,
+              height: 20,
+              color: "#fff",
+              fontSize: 11,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            aria-label="Remove image"
+            data-ocid={`cms.${contentKey}.delete_button`}
+          >
+            <X size={10} color="#fff" />
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Text Field ────────────────────────────────────────────────────────────────
 
 function ContentField({
   contentKey,
@@ -160,11 +399,12 @@ function ContentField({
 }: {
   contentKey: string;
   label: string;
-  multiline: boolean;
+  multiline?: boolean;
   placeholder?: string;
   hint?: string;
 }) {
   const { actor } = useActor();
+  const qc = useQueryClient();
   const [value, setValue] = useState("");
 
   const { data } = useQuery({
@@ -174,14 +414,18 @@ function ContentField({
   });
 
   useEffect(() => {
-    if (data !== undefined && data !== null)
-      setValue(Array.isArray(data) ? (data[0] ?? "") : (data as string));
+    if (data !== undefined) setValue(toStr(data));
   }, [data]);
 
   const mutation = useMutation({
     mutationFn: () => actor!.setContent(contentKey, value),
-    onSuccess: () =>
-      toast.success(`${label} saved — changes will reflect on the website`),
+    onSuccess: () => {
+      toast.success(
+        `${label} saved — changes reflect on the website immediately`,
+      );
+      qc.invalidateQueries({ queryKey: ["content"] });
+      qc.invalidateQueries({ queryKey: ["content-all"] });
+    },
     onError: () => toast.error("Failed to save"),
   });
 
@@ -193,6 +437,7 @@ function ContentField({
         borderRadius: 10,
         padding: 16,
       }}
+      data-ocid={`cms.${contentKey}.card`}
     >
       <div style={{ marginBottom: 6 }}>
         <label
@@ -223,6 +468,7 @@ function ContentField({
             border: "1px solid #c5cae9",
             color: "#1A237E",
           }}
+          data-ocid={`cms.${contentKey}.textarea`}
         />
       ) : (
         <Input
@@ -235,6 +481,7 @@ function ContentField({
             border: "1px solid #c5cae9",
             color: "#1A237E",
           }}
+          data-ocid={`cms.${contentKey}.input`}
         />
       )}
       <Button
@@ -248,6 +495,7 @@ function ContentField({
           fontWeight: 700,
           marginTop: 10,
         }}
+        data-ocid={`cms.${contentKey}.save_button`}
       >
         {mutation.isPending ? "Saving..." : "Save"}
       </Button>
@@ -255,10 +503,12 @@ function ContentField({
   );
 }
 
+// ── Main CMS Page ─────────────────────────────────────────────────────────────
+
 export default function AdminContent() {
   return (
     <AdminLayout>
-      <div style={{ maxWidth: 800 }}>
+      <div style={{ maxWidth: 860 }}>
         <h1
           style={{
             color: "#1A237E",
@@ -267,38 +517,47 @@ export default function AdminContent() {
             marginBottom: 6,
           }}
         >
-          Content Manager
+          Page Content Manager
         </h1>
         <p style={{ color: "#666", fontSize: 13, marginBottom: 28 }}>
-          Edit text content for any page. Changes are saved to the backend and
-          reflect on the website immediately.
+          Edit text and images for every page of your website. Changes are saved
+          to the backend and reflect immediately — no developer needed.
         </p>
 
         {CONTENT_SECTIONS.map(({ section, fields }) => (
-          <div key={section} style={{ marginBottom: 32 }}>
+          <div key={section} style={{ marginBottom: 36 }}>
             <h2
               style={{
                 color: "#1A237E",
                 fontSize: 15,
                 fontWeight: 600,
-                marginBottom: 12,
-                borderBottom: "1px solid #c5cae9",
-                paddingBottom: 8,
+                marginBottom: 14,
+                borderBottom: "2px solid #c5cae9",
+                paddingBottom: 10,
               }}
             >
               {section}
             </h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {fields.map(({ key, label, multiline, placeholder, hint }) => (
-                <ContentField
-                  key={key}
-                  contentKey={key}
-                  label={label}
-                  multiline={multiline}
-                  placeholder={placeholder}
-                  hint={hint}
-                />
-              ))}
+            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              {fields.map((f) =>
+                f.isImage ? (
+                  <ImageField
+                    key={f.key}
+                    contentKey={f.key}
+                    label={f.label}
+                    hint={f.hint}
+                  />
+                ) : (
+                  <ContentField
+                    key={f.key}
+                    contentKey={f.key}
+                    label={f.label}
+                    multiline={f.multiline}
+                    placeholder={f.placeholder}
+                    hint={f.hint}
+                  />
+                ),
+              )}
             </div>
           </div>
         ))}

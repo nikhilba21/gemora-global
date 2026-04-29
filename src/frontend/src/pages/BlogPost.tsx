@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
-import { type BlogPost, DEFAULT_POSTS } from "../utils/blogStore";
+import { ALL_BLOG_POSTS, type BlogPost } from "../utils/blogStore";
 
 /** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
 function HtmlContent({
@@ -44,19 +44,24 @@ export default function BlogPostPage() {
   const { slug } = useParams() as { slug: string };
   const { actor } = useActor();
 
-  const defaultPost = DEFAULT_POSTS.find((p) => p.slug === slug) ?? null;
+  const defaultPost = ALL_BLOG_POSTS.find((p) => p.slug === slug) ?? null;
 
   const { data: backendPost, isLoading: backendLoading } = useQuery({
     queryKey: ["blogPost", slug],
     queryFn: () => actor!.getBlogPost(slug),
     enabled: !!actor && !!slug && !defaultPost,
-    select: (data) =>
-      Array.isArray(data) ? (data[0] ?? null) : (data ?? null),
+    select: (data) => {
+      // backend.d.ts: getBlogPost returns BlogPost | null
+      if (data === null || data === undefined) return null;
+      // Handle legacy [] | [BlogPost] encoding just in case
+      if (Array.isArray(data)) return data[0] ?? null;
+      return data;
+    },
   });
 
   const { data: allBackendPosts = [] } = useQuery({
     queryKey: ["blogPosts"],
-    queryFn: () => actor!.getBlogPosts([]),
+    queryFn: () => actor!.getBlogPosts(null),
     enabled: !!actor,
   });
 
@@ -65,8 +70,8 @@ export default function BlogPostPage() {
 
   const related = (() => {
     const backendSlugs = new Set(allBackendPosts.map((p) => p.slug));
-    const defaultOnly = DEFAULT_POSTS.filter((p) => !backendSlugs.has(p.slug));
-    const all = [...allBackendPosts, ...defaultOnly] as BlogPost[];
+    const staticOnly = ALL_BLOG_POSTS.filter((p) => !backendSlugs.has(p.slug));
+    const all = [...allBackendPosts, ...staticOnly] as BlogPost[];
     return all
       .filter((p) => p.slug !== slug)
       .filter((p) => p.category === post?.category)
@@ -76,11 +81,59 @@ export default function BlogPostPage() {
   usePageSEO({
     title: post ? `${post.title} | Gemora Global` : "Blog | Gemora Global",
     description: post
-      ? post.excerpt.slice(0, 150)
+      ? post.excerpt.slice(0, 155)
       : "Read the latest insights on imitation jewellery trends, wholesale sourcing, and export tips from Gemora Global.",
     canonical: post
       ? `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`
       : "https://gemoraglobal-tje.caffeine.xyz/blog",
+    ogTitle: post ? post.title : "Blog | Gemora Global",
+    ogDescription: post ? post.excerpt.slice(0, 155) : undefined,
+    ogImage:
+      post?.image ||
+      "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    breadcrumbs: post
+      ? [
+          { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+          { name: "Blog", url: "https://gemoraglobal-tje.caffeine.xyz/blog" },
+          {
+            name: post.title,
+            url: `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+          },
+        ]
+      : undefined,
+    schema: post
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          name: post.title,
+          description: post.excerpt.slice(0, 155),
+          datePublished: post.date || new Date().toISOString().split("T")[0],
+          dateModified: post.date || new Date().toISOString().split("T")[0],
+          author: {
+            "@type": "Person",
+            name: post.author || "Gemora Global",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Gemora Global",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://gemoraglobal-tje.caffeine.xyz/assets/uploads/logo-removebg-preview-1.png",
+            },
+          },
+          image:
+            post.image ||
+            "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+          url: `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+          },
+          keywords: `imitation jewellery, wholesale jewellery India, fashion jewellery exporter, ${post.category || "jewellery export"}`,
+          inLanguage: "en",
+        }
+      : undefined,
   });
 
   if (isLoading) {

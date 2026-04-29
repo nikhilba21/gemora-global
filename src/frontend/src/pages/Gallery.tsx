@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
@@ -9,50 +10,7 @@ import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { GalleryItem } from "../types";
 
-const SAMPLE_GALLERY: GalleryItem[] = [
-  {
-    id: 1n,
-    imageUrl: "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg",
-    caption: "Gold-plated kundan necklace set wholesale India",
-    itemType: "product",
-    sortOrder: 1n,
-  },
-  {
-    id: 2n,
-    imageUrl: "/assets/generated/jewellery-earrings-hd.dim_800x800.jpg",
-    caption: "Oxidised silver jhumka earrings bulk export",
-    itemType: "product",
-    sortOrder: 2n,
-  },
-  {
-    id: 3n,
-    imageUrl: "/assets/generated/jewellery-bridal-hd.dim_800x800.jpg",
-    caption: "Bridal jewellery set manufacturer India wholesale",
-    itemType: "product",
-    sortOrder: 3n,
-  },
-  {
-    id: 4n,
-    imageUrl: "/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg",
-    caption: "Gold-plated bangle bracelet set wholesale India",
-    itemType: "product",
-    sortOrder: 4n,
-  },
-  {
-    id: 5n,
-    imageUrl: "/assets/generated/jewellery-rings-hd.dim_800x800.jpg",
-    caption: "Imitation fashion rings bulk export India",
-    itemType: "product",
-    sortOrder: 5n,
-  },
-  {
-    id: 6n,
-    imageUrl: "/assets/generated/jewellery-minimal-hd.dim_800x800.jpg",
-    caption: "Minimal contemporary jewellery wholesale boutique",
-    itemType: "product",
-    sortOrder: 6n,
-  },
-];
+const GALLERY_PAGE_SIZE = 12;
 
 const FILTER_TYPES = [
   { label: "All", value: "" },
@@ -60,6 +18,29 @@ const FILTER_TYPES = [
   { label: "Bulk Orders", value: "bulk" },
   { label: "Packaging", value: "packaging" },
 ];
+
+const GALLERY_ALT_TEXTS = [
+  "Gold-plated fashion jewellery wholesale Jaipur",
+  "Imitation necklace set wholesale manufacturer India",
+  "Kundan earrings bulk supplier Jaipur",
+  "Antique oxidised jewellery wholesale exporter",
+  "Bridal imitation jewellery set manufacturer India",
+  "American diamond CZ jewellery wholesale",
+  "Fashion bangles bulk supplier Jaipur India",
+  "Statement earrings wholesale imitation jewellery",
+  "Meenakari jewellery wholesale exporter India",
+  "Traditional ethnic jewellery bulk manufacturer",
+  "Designer artificial jewellery wholesale supplier",
+  "Oxidised silver jewellery bulk exporter Jaipur",
+];
+
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  product:
+    "Browse our wholesale product range featuring 500+ unique designs across earrings, necklace sets, bangles, rings, bridal sets, and oxidised jewellery. Each piece is crafted in Jaipur with anti-tarnish finishing. MOQ starts at 50 units per design, with competitive tiered pricing for higher volumes.",
+  bulk: "Our bulk order programme is designed for distributors, fashion retailers, and export houses. Orders of 200+ units per design attract mid-tier pricing, while 500+ unit orders unlock our best wholesale rate. We support mix-and-match across categories, custom packaging, and export documentation for all international shipments.",
+  packaging:
+    "All Gemora Global jewellery ships in export-grade packaging — individual polybags, velvet pouches, or branded boxes depending on the order type. Custom branded packaging is available for private label buyers with orders of 500+ units. Our packaging is designed to meet international retail presentation standards.",
+};
 
 export default function Gallery() {
   usePageSEO({
@@ -79,93 +60,64 @@ export default function Gallery() {
       url: "https://gemoraglobal-tje.caffeine.xyz/gallery",
     },
   });
-  const { actor } = useActor();
+
+  const { actor, isFetching: actorFetching } = useActor();
   const [filter, setFilter] = useState("");
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
-  const { data: catalogues = [] } = useQuery({
-    queryKey: ["catalogues"],
-    queryFn: () => actor!.getCatalogues(),
-    enabled: !!actor,
-  });
+  const [currentPage, setCurrentPage] = useState(0);
 
+  // Reset page when filter changes
+  // biome-ignore lint/correctness/useExhaustiveDependencies: intentional reset
   useEffect(() => {
-    document.title =
-      "Imitation Jewellery Photo Gallery — Wholesale Catalogue | Gemora Global";
-    let metaDesc = document.querySelector(
-      'meta[name="description"]',
-    ) as HTMLMetaElement | null;
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "View Gemora Global's wholesale imitation jewellery gallery — necklace sets, earrings, bridal jewellery, bangles and more. Request the full digital catalogue for pricing and MOQ details.",
-    );
-
-    const existingScript = document.getElementById("page-schema");
-    if (existingScript) existingScript.remove();
-    const script = document.createElement("script");
-    script.id = "page-schema";
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ImageGallery",
-      name: "Gemora Global Jewellery Wholesale Gallery",
-      description: "Wholesale imitation jewellery designs from Gemora Global",
-      url: "https://gemoraglobal-tje.caffeine.xyz/gallery",
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.title =
-        "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global";
-      const s = document.getElementById("page-schema");
-      if (s) s.remove();
-    };
-  }, []);
+    setCurrentPage(0);
+  }, [filter]);
 
   // Lock scroll when lightbox open
   useEffect(() => {
-    if (lightboxIdx !== null) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = lightboxIdx !== null ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [lightboxIdx]);
 
-  const { data: items, isLoading } = useQuery<GalleryItem[]>({
-    queryKey: ["gallery", filter],
-    queryFn: () => actor!.getGallery(filter ? [filter] : []),
-    enabled: !!actor,
+  const actorReady = !!actor && !actorFetching;
+
+  const { data: catalogues = [] } = useQuery({
+    queryKey: ["catalogues"],
+    queryFn: () => actor!.getCatalogues(),
+    enabled: actorReady,
   });
 
-  const displayItems =
-    items && items.length > 0
-      ? items
-      : SAMPLE_GALLERY.filter((i) => !filter || i.itemType === filter);
+  const { data: pagedResult, isLoading } = useQuery({
+    queryKey: ["gallery-paginated", filter, currentPage],
+    queryFn: () =>
+      actor!.getGalleryPaginated(
+        filter || null,
+        BigInt(currentPage),
+        BigInt(GALLERY_PAGE_SIZE),
+      ),
+    enabled: actorReady,
+  });
+
+  const displayItems: GalleryItem[] = pagedResult?.items ?? [];
+  const totalPages = pagedResult ? Number(pagedResult.pages) : 0;
+  const totalCount = pagedResult ? Number(pagedResult.total) : 0;
 
   // Keyboard navigation for lightbox
   useEffect(() => {
     if (lightboxIdx === null) return;
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft")
         setLightboxIdx((prev) =>
           prev === null
             ? null
             : (prev - 1 + displayItems.length) % displayItems.length,
         );
-      } else if (e.key === "ArrowRight") {
+      else if (e.key === "ArrowRight")
         setLightboxIdx((prev) =>
           prev === null ? null : (prev + 1) % displayItems.length,
         );
-      } else if (e.key === "Escape") {
-        setLightboxIdx(null);
-      }
+      else if (e.key === "Escape") setLightboxIdx(null);
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
@@ -199,10 +151,9 @@ export default function Gallery() {
               <Link to="/products" className="text-primary hover:underline">
                 design catalogue
               </Link>
-              . New designs are added every season across all categories. Browse
-              below and{" "}
+              . New designs are added every season.{" "}
               <Link to="/contact" className="text-primary hover:underline">
-                contact our team
+                Contact our team
               </Link>{" "}
               to request the complete digital catalogue with{" "}
               <Link to="/wholesale" className="text-primary hover:underline">
@@ -220,13 +171,13 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Browse by Category — scrollable filter tabs on mobile */}
+        {/* Browse by Category */}
         <div className="container py-6 md:py-8 px-4">
           <h2 className="font-serif text-xl md:text-2xl font-bold mb-4">
             Browse by Category
           </h2>
           <div
-            className="flex gap-2 mb-6 md:mb-8 overflow-x-auto pb-1"
+            className="flex gap-2 mb-4 overflow-x-auto pb-1"
             style={{
               WebkitOverflowScrolling: "touch",
               scrollbarWidth: "none",
@@ -239,62 +190,124 @@ export default function Gallery() {
                 variant={filter === ft.value ? "default" : "outline"}
                 size="sm"
                 onClick={() => setFilter(ft.value)}
-                className={`flex-shrink-0 min-h-[40px] ${
-                  filter === ft.value
-                    ? "bg-primary text-primary-foreground"
-                    : ""
-                }`}
+                className={`flex-shrink-0 min-h-[40px] ${filter === ft.value ? "bg-primary text-primary-foreground" : ""}`}
+                data-ocid={`gallery.filter.${ft.value || "all"}`}
               >
                 {ft.label}
               </Button>
             ))}
           </div>
+          {/* Category description — SEO text for active filter */}
+          {filter && CATEGORY_DESCRIPTIONS[filter] && (
+            <p className="text-muted-foreground text-sm mb-6 max-w-2xl leading-relaxed">
+              {CATEGORY_DESCRIPTIONS[filter]}
+            </p>
+          )}
 
           {isLoading ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
-              {["s1", "s2", "s3", "s4", "s5", "s6"].map((sk) => (
+              {["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8"].map((sk) => (
                 <Skeleton key={sk} className="aspect-square rounded-lg" />
               ))}
             </div>
-          ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
-              {displayItems.map((item, idx) => (
-                <button
-                  key={String(item.id)}
-                  type="button"
-                  className="rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-colors group cursor-pointer w-full text-left"
-                  onClick={() => setLightboxIdx(idx)}
-                  aria-label={`View ${item.caption || "image"} fullscreen`}
-                  data-ocid={`gallery.item.${idx + 1}`}
-                >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={item.imageUrl}
-                      alt={
-                        item.caption ||
-                        "Imitation jewellery wholesale India — Gemora Global"
-                      }
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading={idx === 0 ? "eager" : "lazy"}
-                      width={400}
-                      height={400}
-                    />
-                  </div>
-                  {item.caption && (
-                    <div className="p-2 md:p-3 bg-card">
-                      <p className="text-xs md:text-sm font-medium text-foreground line-clamp-2">
-                        {item.caption}
-                      </p>
-                    </div>
-                  )}
-                </button>
-              ))}
+          ) : displayItems.length === 0 ? (
+            <div
+              className="text-center py-16 md:py-20"
+              data-ocid="gallery.empty_state"
+            >
+              <p className="text-4xl mb-4">🖼️</p>
+              <p className="text-muted-foreground font-medium mb-2">
+                No gallery images yet.
+              </p>
+              <p className="text-muted-foreground text-sm mb-6">
+                Gallery images can be added from the admin panel.
+              </p>
+              <Button asChild className="bg-primary text-primary-foreground">
+                <Link to="/contact">Request Catalogue Instead</Link>
+              </Button>
             </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                {displayItems.map((item, idx) => (
+                  <button
+                    key={String(item.id)}
+                    type="button"
+                    className="rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-colors group cursor-pointer w-full text-left"
+                    onClick={() => setLightboxIdx(idx)}
+                    aria-label={`View ${item.caption || "image"} fullscreen`}
+                    data-ocid={`gallery.item.${currentPage * GALLERY_PAGE_SIZE + idx + 1}`}
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={item.imageUrl}
+                        alt={
+                          item.caption
+                            ? item.itemType
+                              ? `${item.caption} — ${item.itemType} wholesale jewellery India`
+                              : item.caption
+                            : GALLERY_ALT_TEXTS[
+                                (currentPage * GALLERY_PAGE_SIZE + idx) %
+                                  GALLERY_ALT_TEXTS.length
+                              ]
+                        }
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading={idx < 4 ? "eager" : "lazy"}
+                        width={400}
+                        height={400}
+                      />
+                    </div>
+                    {item.caption && (
+                      <div className="p-2 md:p-3 bg-card">
+                        <p className="text-xs md:text-sm font-medium text-foreground line-clamp-2">
+                          {item.caption}
+                        </p>
+                      </div>
+                    )}
+                  </button>
+                ))}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div
+                  className="flex items-center justify-center gap-3 mt-8"
+                  data-ocid="gallery.pagination"
+                >
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
+                    disabled={currentPage === 0}
+                    className="min-h-[36px]"
+                    data-ocid="gallery.pagination_prev"
+                  >
+                    <ChevronLeft className="w-4 h-4 mr-1" /> Previous
+                  </Button>
+                  <span className="text-sm text-muted-foreground">
+                    Page {currentPage + 1} of {totalPages} &nbsp;·&nbsp;{" "}
+                    {totalCount} images
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      setCurrentPage((p) => Math.min(totalPages - 1, p + 1))
+                    }
+                    disabled={currentPage >= totalPages - 1}
+                    className="min-h-[36px]"
+                    data-ocid="gallery.pagination_next"
+                  >
+                    Next <ChevronRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
 
-      {/* Lightbox — fullscreen on mobile, touch-friendly controls */}
+      {/* Lightbox */}
       {lightboxIdx !== null && (
         <dialog
           open
@@ -307,7 +320,6 @@ export default function Gallery() {
             if (e.key === "Escape") setLightboxIdx(null);
           }}
         >
-          {/* Close button — top-right, 44px+ touch target */}
           <button
             type="button"
             onClick={(e) => {
@@ -335,7 +347,6 @@ export default function Gallery() {
             </svg>
           </button>
 
-          {/* Centered image */}
           <img
             src={displayItems[lightboxIdx]?.imageUrl}
             alt={
@@ -346,74 +357,69 @@ export default function Gallery() {
             onKeyDown={(e) => e.stopPropagation()}
           />
 
-          {/* Caption */}
           {displayItems[lightboxIdx]?.caption && (
             <div className="absolute bottom-14 md:bottom-6 left-1/2 -translate-x-1/2 bg-black/70 text-white text-sm px-4 py-2 rounded-full pointer-events-none max-w-[80vw] text-center">
               {displayItems[lightboxIdx].caption}
             </div>
           )}
 
-          {/* Left arrow — 44px+ touch target */}
           {displayItems.length > 1 && (
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                goLightboxPrev();
-              }}
-              aria-label="Previous image"
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
-              data-ocid="gallery.pagination_prev"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goLightboxPrev();
+                }}
+                aria-label="Previous image"
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
+                data-ocid="gallery.lightbox_prev"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goLightboxNext();
+                }}
+                aria-label="Next image"
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
+                data-ocid="gallery.lightbox_next"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </>
           )}
 
-          {/* Right arrow — 44px+ touch target */}
-          {displayItems.length > 1 && (
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                goLightboxNext();
-              }}
-              aria-label="Next image"
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/80 text-white border border-white/30 transition-colors"
-              data-ocid="gallery.pagination_next"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          )}
-
-          {/* Counter */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-3 py-1.5 rounded-full pointer-events-none">
             {lightboxIdx + 1} / {displayItems.length}
           </div>

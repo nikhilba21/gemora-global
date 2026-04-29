@@ -71,12 +71,16 @@ export interface GalleryItem {
 export interface Product {
     id: bigint;
     moq: string;
+    sku?: string;
     categoryId: bigint;
     featured: boolean;
     imageUrls: Array<string>;
+    subcategory?: string;
     name: string;
     createdAt: bigint;
+    color?: string;
     isNewArrival: boolean;
+    keyFeatures?: string;
     description: string;
 }
 export enum UserRole {
@@ -91,7 +95,7 @@ export interface backendInterface {
     createCatalogue(title: string, description: string, fileUrl: string, fileName: string, uploadedAt: string): Promise<bigint>;
     createCategory(name: string, description: string, imageUrl: string, sortOrder: bigint): Promise<bigint>;
     createGalleryItem(imageUrl: string, caption: string, itemType: string, sortOrder: bigint): Promise<bigint>;
-    createProduct(categoryId: bigint, name: string, description: string, moq: string, imageUrls: Array<string>, featured: boolean, isNewArrival: boolean): Promise<bigint>;
+    createProduct(categoryId: bigint, name: string, description: string, moq: string, imageUrls: Array<string>, featured: boolean, isNewArrival: boolean, sku: string | null, subcategory: string | null, color: string | null, keyFeatures: string | null): Promise<bigint>;
     createTestimonial(name: string, company: string, country: string, text: string, rating: bigint, active: boolean): Promise<bigint>;
     deleteBlogPost(id: bigint): Promise<void>;
     deleteCatalogue(id: bigint): Promise<void>;
@@ -101,6 +105,11 @@ export interface backendInterface {
     deleteTestimonial(id: bigint): Promise<void>;
     getBlogPost(slug: string): Promise<BlogPost | null>;
     getBlogPosts(status: string | null): Promise<Array<BlogPost>>;
+    getBlogPostsPaginated(status: string | null, page: bigint, pageSize: bigint): Promise<{
+        total: bigint;
+        pages: bigint;
+        items: Array<BlogPost>;
+    }>;
     getCallerUserProfile(): Promise<UserProfile | null>;
     getCallerUserRole(): Promise<UserRole>;
     getCatalogues(): Promise<Array<Catalogue>>;
@@ -108,28 +117,50 @@ export interface backendInterface {
     getContent(key: string): Promise<string | null>;
     getDashboardStats(): Promise<{
         totalProducts: bigint;
+        totalCatalogues: bigint;
         newInquiries: bigint;
+        totalBlogPosts: bigint;
+        totalGalleryItems: bigint;
         totalVisits: bigint;
+        totalCategories: bigint;
         totalInquiries: bigint;
     }>;
     getFeaturedProducts(): Promise<Array<Product>>;
     getGallery(itemType: string | null): Promise<Array<GalleryItem>>;
+    getGalleryPaginated(itemType: string | null, page: bigint, pageSize: bigint): Promise<{
+        total: bigint;
+        pages: bigint;
+        items: Array<GalleryItem>;
+    }>;
     getInquiries(): Promise<Array<Inquiry>>;
+    getInquiriesStats(): Promise<Array<{
+        country: string;
+        count: bigint;
+    }>>;
     getNewArrivalProducts(): Promise<Array<Product>>;
+    getPageContent(pageId: string): Promise<Array<[string, string]>>;
     getProduct(id: bigint): Promise<Product | null>;
+    getProductBySlug(slug: string): Promise<Product | null>;
     getProducts(categoryId: bigint | null): Promise<Array<Product>>;
+    getProductsByCategory(categoryId: bigint): Promise<Array<Product>>;
+    getProductsPaginated(categoryId: bigint | null, page: bigint, pageSize: bigint): Promise<{
+        total: bigint;
+        pages: bigint;
+        items: Array<Product>;
+    }>;
     getTestimonials(): Promise<Array<Testimonial>>;
     getUserProfile(user: Principal): Promise<UserProfile | null>;
     isCallerAdmin(): Promise<boolean>;
     recordVisit(): Promise<void>;
     saveCallerUserProfile(profile: UserProfile): Promise<void>;
     setContent(key: string, value: string): Promise<void>;
+    setPageContent(pageId: string, fields: Array<[string, string]>): Promise<void>;
     submitInquiry(name: string, country: string, whatsapp: string, requirement: string, productId: bigint | null): Promise<bigint>;
     updateBlogPost(id: bigint, slug: string, title: string, category: string, excerpt: string, author: string, date: string, readTime: string, status: string, image: string, content: string): Promise<void>;
     updateCategory(id: bigint, name: string, description: string, imageUrl: string, sortOrder: bigint): Promise<void>;
     updateGalleryItem(id: bigint, imageUrl: string, caption: string, itemType: string, sortOrder: bigint): Promise<void>;
     updateInquiryStatus(id: bigint, status: string): Promise<void>;
-    updateProduct(id: bigint, categoryId: bigint, name: string, description: string, moq: string, imageUrls: Array<string>, featured: boolean, isNewArrival: boolean): Promise<void>;
+    updateProduct(id: bigint, categoryId: bigint, name: string, description: string, moq: string, imageUrls: Array<string>, featured: boolean, isNewArrival: boolean, sku: string | null, subcategory: string | null, color: string | null, keyFeatures: string | null): Promise<void>;
     updateTestimonial(id: bigint, name: string, company: string, country: string, text: string, rating: bigint, active: boolean): Promise<void>;
     verifyAdminLogin(username: string, password: string): Promise<boolean>;
 }

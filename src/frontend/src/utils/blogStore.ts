@@ -1,3 +1,14 @@
+import { BLOG_BATCH_1 } from "./blogBatch1";
+import { BLOG_BATCH_2 } from "./blogBatch2";
+import { BLOG_BATCH_3 } from "./blogBatch3";
+import { BLOG_BATCH_4 } from "./blogBatch4";
+import { BLOG_BATCH_5 } from "./blogBatch5";
+import { BLOG_BATCH_6 } from "./blogBatch6";
+import { BLOG_BATCH_7 } from "./blogBatch7";
+import { BLOG_BATCH_8 } from "./blogBatch8";
+import { BLOG_BATCH_9 } from "./blogBatch9";
+import { BLOG_BATCH_10 } from "./blogBatch10";
+
 const STORAGE_KEY = "gemora_blog_posts";
 
 export interface BlogPost {
@@ -913,6 +924,20 @@ export const DEFAULT_POSTS: BlogPost[] = [
   },
 ];
 
+export const ALL_BLOG_POSTS: BlogPost[] = [
+  ...DEFAULT_POSTS,
+  ...BLOG_BATCH_1,
+  ...BLOG_BATCH_2,
+  ...BLOG_BATCH_3,
+  ...BLOG_BATCH_4,
+  ...BLOG_BATCH_5,
+  ...BLOG_BATCH_6,
+  ...BLOG_BATCH_7,
+  ...BLOG_BATCH_8,
+  ...BLOG_BATCH_9,
+  ...BLOG_BATCH_10,
+];
+
 export function getBlogPosts(): BlogPost[] {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -921,7 +946,7 @@ export function getBlogPosts(): BlogPost[] {
       if (Array.isArray(parsed) && parsed.length > 0) return parsed;
     }
   } catch {}
-  return DEFAULT_POSTS;
+  return ALL_BLOG_POSTS;
 }
 
 export function saveBlogPosts(posts: BlogPost[]): void {
