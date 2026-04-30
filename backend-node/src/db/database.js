@@ -90,15 +90,31 @@ function initializeDatabase() {
 }
 
 function runMigrations() {
-  // Admin seed
+  const bcrypt = require('bcryptjs');
+
+  // Admin seed (first time)
   if (!db.prepare("SELECT id FROM migrations WHERE id='admin_seed_v1'").get()) {
-    const bcrypt = require('bcryptjs');
     const u = process.env.ADMIN_USERNAME || 'admin';
     const p = process.env.ADMIN_PASSWORD || 'Gemora@2024';
     db.prepare("INSERT OR REPLACE INTO admin_settings(key,value) VALUES(?,?)").run('admin_username', u);
     db.prepare("INSERT OR REPLACE INTO admin_settings(key,value) VALUES(?,?)").run('admin_password_hash', bcrypt.hashSync(p, 10));
     db.prepare("INSERT INTO migrations(id) VALUES(?)").run('admin_seed_v1');
     console.log('✅ Admin seeded');
+  }
+
+  // Always sync credentials from env vars on every restart
+  // Fixes: env vars set AFTER first DB creation cause 401
+  {
+    const u = process.env.ADMIN_USERNAME;
+    const p = process.env.ADMIN_PASSWORD;
+    if (u && p) {
+      const stored = db.prepare("SELECT value FROM admin_settings WHERE key='admin_username'").get();
+      if (!stored || stored.value !== u) {
+        db.prepare("INSERT OR REPLACE INTO admin_settings(key,value) VALUES(?,?)").run('admin_username', u);
+        db.prepare("INSERT OR REPLACE INTO admin_settings(key,value) VALUES(?,?)").run('admin_password_hash', bcrypt.hashSync(p, 10));
+        console.log('✅ Admin credentials synced from env:', u);
+      }
+    }
   }
 
   // Categories seed
