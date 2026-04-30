@@ -4,23 +4,30 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
-const ADMIN_USERNAME = "admin";
-const ADMIN_PASSWORD = "Gemora@2024";
+import { useActor } from "../../hooks/useActor";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
+  const { actor } = useActor();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      sessionStorage.setItem("adminSession", "true");
-      navigate("/admin");
-    } else {
-      toast.error("Invalid username or password.");
+    setLoading(true);
+    try {
+      const success = await actor.verifyAdminLogin(username, password);
+      if (success) {
+        navigate("/admin");
+      } else {
+        toast.error("Invalid username or password.");
+      }
+    } catch {
+      toast.error("Login failed. Please check your connection.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -97,13 +104,14 @@ export default function AdminLogin() {
             </div>
             <Button
               type="submit"
+              disabled={loading}
               className="w-full h-12 text-base font-semibold mt-2"
               style={{
                 background: "linear-gradient(135deg, #42A5F5 0%, #1976D2 100%)",
                 color: "#fff",
               }}
             >
-              Sign In
+              {loading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
         </div>

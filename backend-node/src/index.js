@@ -1,122 +1,78 @@
-// src/index.js
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
-
 const { initializeDatabase } = require('./db/database');
-
-// Routes
-const authRoutes = require('./routes/auth');
-const categoriesRoutes = require('./routes/categories');
-const productsRoutes = require('./routes/products');
-const inquiriesRoutes = require('./routes/inquiries');
-const galleryRoutes = require('./routes/gallery');
-const testimonialsRoutes = require('./routes/testimonials');
-const blogRoutes = require('./routes/blog');
-const cataloguesRoutes = require('./routes/catalogues');
-const contentRoutes = require('./routes/content');
-const dashboardRoutes = require('./routes/dashboard');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Security
-app.use(helmet());
+// ── Security ──────────────────────────────────────────────────────────────────
+app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(compression());
 
-// CORS
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'http://localhost:5173',
-  'http://localhost:3000',
-  'http://localhost:4173',
-  'https://gemora-global-frontend.vercel.app',
-].filter(Boolean);
-
+// ── CORS ──────────────────────────────────────────────────────────────────────
+const FRONTEND_URL = process.env.FRONTEND_URL || '';
 app.use(cors({
-  origin: function(origin, callback) {
-    // Allow requests with no origin (mobile apps, Postman, etc.)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.some(o => origin.startsWith(o)) || origin.includes('vercel.app')) {
-      return callback(null, true);
-    }
-    callback(new Error('Not allowed by CORS'));
+  origin: function (origin, cb) {
+    if (!origin) return cb(null, true);              // Postman / server calls
+    if (
+      origin.includes('localhost') ||
+      origin.includes('127.0.0.1') ||
+      origin.includes('vercel.app') ||
+      (FRONTEND_URL && origin.startsWith(FRONTEND_URL))
+    ) return cb(null, true);
+    cb(new Error('CORS blocked: ' + origin));
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
 }));
 
-// Body parser
+// ── Body parser ───────────────────────────────────────────────────────────────
 app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Rate limiting
-const apiLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 300,
-  standardHeaders: true,
-  legacyHeaders: false,
-});
+// ── Rate limiting ─────────────────────────────────────────────────────────────
+app.use('/api/', rateLimit({ windowMs: 15 * 60 * 1000, max: 500 }));
+app.use('/api/inquiries', rateLimit({ windowMs: 60 * 60 * 1000, max: 30 }));
 
-const inquiryLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
-  max: 20,
-  message: { error: 'Too many inquiries submitted. Please try again later.' }
-});
+// ── Health ────────────────────────────────────────────────────────────────────
+app.get('/', (req, res) => res.json({ status: 'ok', service: 'Gemora Global API', version: '2.0.0' }));
+app.get('/health', (req, res) => res.json({ status: 'healthy', timestamp: new Date().toISOString() }));
 
-app.use('/api/', apiLimiter);
-
-// Initialize DB
-initializeDatabase();
-
-// Health check
-app.get('/', (req, res) => {
-  res.json({
-    status: 'ok',
-    service: 'Gemora Global API',
-    version: '1.0.0',
-    timestamp: new Date().toISOString()
-  });
-});
-
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
-});
-
-// API Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/categories', categoriesRoutes);
-app.use('/api/products', productsRoutes);
-app.use('/api/inquiries', inquiryLimiter, inquiriesRoutes);
-app.use('/api/gallery', galleryRoutes);
-app.use('/api/testimonials', testimonialsRoutes);
-app.use('/api/blog', blogRoutes);
-app.use('/api/catalogues', cataloguesRoutes);
-app.use('/api/content', contentRoutes);
-app.use('/api/dashboard', dashboardRoutes);
-
-// Record visit (no-op for compatibility)
+// ── Routes ────────────────────────────────────────────────────────────────────
+app.use('/api/auth',         require('./routes/auth'));
+app.use('/api/categories',   require('./routes/categories'));
+app.use('/api/products',     require('./routes/products'));
+app.use('/api/inquiries',    require('./routes/inquiries'));
+app.use('/api/gallery',      require('./routes/gallery'));
+app.use('/api/testimonials', require('./routes/testimonials'));
+app.use('/api/blog',         require('./routes/blog'));
+app.use('/api/catalogues',   require('./routes/catalogues'));
+app.use('/api/content',      require('./routes/content'));
+app.use('/api/dashboard',    require('./routes/dashboard'));
 app.post('/api/visit', (req, res) => res.json({ success: true }));
 
-// 404 handler
-app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
-
-// Error handler
+// ── 404 / Error ───────────────────────────────────────────────────────────────
+app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Internal server error', message: err.message });
+  console.error('❌', err.message);
+  res.status(500).json({ error: err.message || 'Internal server error' });
 });
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Gemora Global API running on port ${PORT}`);
-  console.log(`📦 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`🌐 Allowed Origins: ${allowedOrigins.join(', ')}\n`);
-});
+// ── Start ─────────────────────────────────────────────────────────────────────
+try {
+  initializeDatabase();
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Gemora API running on port ${PORT}`);
+    console.log(`🌐 CORS allowed for: ${FRONTEND_URL || 'all vercel.app origins'}\n`);
+  });
+} catch (err) {
+  console.error('❌ Failed to start server:', err);
+  process.exit(1);
+}
 
 module.exports = app;
