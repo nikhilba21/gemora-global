@@ -1,3 +1,25 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://embed.tawk.to https://va.tawk.to https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://embed.tawk.to; font-src 'self' data: https://fonts.gstatic.com https://embed.tawk.to; img-src 'self' data: blob: https: http:; connect-src 'self' https://gemora-global-2.onrender.com https://api.cloudinary.com https://res.cloudinary.com https://www.google-analytics.com https://analytics.google.com https://embed.tawk.to https://va.tawk.to wss://embed.tawk.to wss://ws.tawk.to https://fonts.googleapis.com https://fonts.gstatic.com; frame-src 'self' https://embed.tawk.to; media-src 'self' blob: https:; object-src 'none';"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://gemora-global-2.onrender.com",
+      "VITE_CLOUDINARY_CLOUD": "dnusbgxgm",
+      "VITE_CLOUDINARY_PRESET": "gemora_unsigned"
+    }
+  }
 }
