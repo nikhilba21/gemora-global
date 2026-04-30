@@ -22,6 +22,7 @@ app.use(cors({
       origin.includes('localhost') ||
       origin.includes('127.0.0.1') ||
       origin.includes('vercel.app') ||
+      origin.includes('gemoraglobal.co') ||
       (FRONTEND_URL && origin.startsWith(FRONTEND_URL))
     ) return cb(null, true);
     cb(new Error('CORS blocked: ' + origin));

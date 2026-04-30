@@ -1,1275 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Core Pages -->
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/</loc>
+    <loc>https://www.gemoraglobal.co/</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/products</loc>
+    <loc>https://www.gemoraglobal.co/products</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale</loc>
+    <loc>https://www.gemoraglobal.co/wholesale</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/global-markets</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/gallery</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/contact</loc>
+    <loc>https://www.gemoraglobal.co/about</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/why-choose-us</loc>
+    <loc>https://www.gemoraglobal.co/contact</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/gallery</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/why-choose-us</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/faq</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Collections -->
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/earrings</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/necklaces</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/bracelets</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/rings</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/party-wear-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/daily-wear-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/minimalist-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/oxidised-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/trendy-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/korean-jewelry</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/top-imitation-jewellery-trends-2026</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/how-to-start-jewellery-wholesale-import-business</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/why-indian-imitation-jewellery-dominates-global-markets</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/bridal-jewellery-collections-international-buyers</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/export-jewellery-india-usa-guide</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/blog/private-label-jewellery-india-guide</loc>
+    <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- SEO Landing Pages -->
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-exporter-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale-imitation-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/bridal-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/fashion-jewellery-exporter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/custom-jewellery-manufacturer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale-imitation-jewellery-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/fashion-jewellery-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/bridal-imitation-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/bulk-jewellery-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-to-usa</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/private-label-jewellery-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/kundan-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/temple-jewellery-manufacturer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/artificial-jewellery-exporter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/bridal-imitation-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/oxidised-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/artificial-jewellery-wholesaler-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/fashion-jewellery-exporter-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/oxidised-jewellery-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-manufacturer-jaipur</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-rajasthan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/meenakari-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-australia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-canada</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Country Market Pages -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-uae</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-indian-fashion-jewellery-australia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-germany-eu</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-canada</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-singapore</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-france</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Collections (Fashion SEO Pages) -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/trendy-jewelry</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/earrings</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/necklaces</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/rings</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/bracelets</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/party-wear-jewelry</loc>
+    <loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-india</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/daily-wear-jewelry</loc>
+    <loc>https://www.gemoraglobal.co/artificial-jewellery-wholesaler-india</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/minimalist-jewelry</loc>
+    <loc>https://www.gemoraglobal.co/fashion-jewellery-exporter-india</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/korean-jewelry</loc>
+    <loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/oxidised-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Programmatic Collection Pages -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/minimalist-earrings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/party-wear-necklaces</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/oxidised-rings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/korean-necklaces</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/daily-wear-earrings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/statement-earrings</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/gold-plated-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/bridal-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/kundan-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/meenakari-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/antique-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/temple-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/indo-western-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/silver-oxidised-jewelry</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/collections/wholesale-bangles</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Dedicated Export Market Pages -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/france</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/kuwait</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/malaysia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/saudi-arabia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/nigeria</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/export-markets/sri-lanka</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog Posts — 50 SEO-optimized articles -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-imitation-jewellery-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/kundan-jewellery-export-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bridal-jewellery-wholesale-buyers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/imitation-jewellery-usa-market</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/artificial-jewellery-uk-buyers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/fashion-jewellery-uae-export</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/oxidised-jewellery-wholesale-trends</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/temple-jewellery-manufacturer-jaipur</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/meenakari-jewellery-export-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/gold-plated-jewellery-supplier-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/cz-jewellery-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/antique-jewellery-manufacturer-jaipur</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/ethnic-jewellery-boutique-buyers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bridal-set-wholesale-boutiques</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-packaging-export-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/imitation-jewellery-quality-standards</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/b2b-jewellery-buyer-guide-2025</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-export-canada-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-wholesale-australia</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/singapore-jewellery-import-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/germany-jewellery-export-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/france-boutique-jewellery-supplier</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/south-indian-jewellery-wholesale</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/maharashtrian-jewellery-export</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/indo-western-jewellery-trends</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bollywood-jewellery-wholesale</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/costume-jewellery-export-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/designer-jewellery-manufacturer-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/choker-necklace-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bangles-wholesale-manufacturer-jaipur</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/earrings-wholesale-supplier-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/pendant-set-wholesale-b2b</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/mangalsutra-wholesale-manufacturer</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/finger-ring-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/maang-tikka-wholesale-supplier</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/anklet-payal-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/hair-accessories-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bridal-set-complete-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/mala-kada-wholesale-manufacturer</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/rose-gold-plating-jewellery-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/rhodium-plated-jewellery-wholesale</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/black-oxidised-jewellery-export</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/american-diamond-jewellery-wholesale</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/moq-jewellery-wholesale-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/private-label-jewellery-india</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/oem-jewellery-manufacturer-jaipur</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-export-nigerian-market</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-wholesale-malaysia</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/saudi-arabia-jewellery-import-guide</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/kuwait-sri-lanka-jewellery-export</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- New SEO Blog Posts — 100 articles (IDs 101-200) -->
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-imitation-jewellery-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/top-fashion-jewellery-exporter-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-imitation-jewellery-suppliers-jaipur</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bulk-fashion-jewellery-manufacturer-global-buyers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/indian-costume-jewellery-exporter-retailers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-import-imitation-jewellery-from-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/why-buy-fashion-jewellery-indian-manufacturers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/trusted-imitation-jewellery-wholesale-supplier-worldwide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/oem-fashion-jewellery-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/private-label-imitation-jewellery-exporter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-earrings-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bulk-necklace-sets-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/fashion-bangles-exporter-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/imitation-rings-wholesale-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bridal-jewellery-set-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/trendy-anklets-supplier-boutiques</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/stainless-steel-jewellery-wholesaler-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/gold-plated-imitation-jewellery-exporter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/pearl-fashion-jewellery-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/custom-charm-bracelets-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/imitation-jewellery-supplier-usa-market</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-jewellery-exporter-to-uae</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/fashion-jewellery-suppliers-uk-retailers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bulk-costume-jewellery-australia-boutiques</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-indian-jewellery-exporter-to-canada</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/europe-fashion-jewellery-import-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-wholesalers-philippines-market</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/dubai-fashion-jewellery-sourcing-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/saudi-arabia-jewellery-import-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/singapore-fashion-jewellery-wholesale-source</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-imitation-jewellery-manufactured-jaipur</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/quality-control-fashion-jewellery-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/nickel-free-imitation-jewellery-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/anti-tarnish-jewellery-manufacturer-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/hypoallergenic-fashion-jewellery-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/handmade-vs-machine-made-imitation-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/brass-jewellery-manufacturer-india-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/zinc-alloy-jewellery-exporter-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/premium-finishing-fashion-jewellery-manufacturing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-choose-reliable-jewellery-manufacturer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/minimum-order-quantity-jewellery-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-buy-wholesale-jewellery-in-bulk</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-catalogue-for-jewellery-retailers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/start-jewellery-boutique-wholesale-stock</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-boutiques-source-imitation-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/dropshipping-fashion-jewellery-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/retail-ready-jewellery-packaging-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/jewellery-supplier-for-amazon-sellers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-jewellery-for-instagram-stores</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-jewellery-supplier-for-resellers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/top-fashion-jewellery-trends-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/trending-earrings-styles-worldwide-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/minimal-jewellery-trend-for-women</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/gen-z-jewellery-trends-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/korean-inspired-jewellery-wholesale-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/luxury-look-imitation-jewellery-trends</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/office-wear-jewellery-styles-wholesale</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/boho-jewellery-trends-for-boutiques</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/statement-necklace-trends-global-market</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bridal-fashion-jewellery-trends-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/custom-jewellery-boxes-for-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-packaging-imitation-jewellery-shipping</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-ship-jewellery-internationally</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/export-documentation-for-jewellery-business</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/safe-courier-options-jewellery-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-reduce-shipping-costs-jewellery-export</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/eco-friendly-jewellery-packaging-supplier</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/dust-bags-and-boxes-for-jewellery-brands</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/export-customs-guide-for-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/global-delivery-solutions-for-wholesalers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-start-jewellery-export-business-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/grow-wholesale-jewellery-business-globally</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-get-foreign-buyers-for-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/instagram-leads-for-jewellery-exporters</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/b2b-marketing-for-jewellery-manufacturers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/seo-for-imitation-jewellery-website</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/google-ranking-tips-for-jewellery-exporter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/linkedin-strategy-wholesale-jewellery-business</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/email-marketing-for-jewellery-buyers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-scale-jewellery-exports-fast</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/why-jaipur-is-hub-of-imitation-jewellery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/best-jewellery-manufacturing-city-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/why-global-buyers-trust-indian-suppliers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-verify-jewellery-supplier-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/choosing-certified-export-partner-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/top-mistakes-when-importing-jewellery</loc>
+    <loc>https://www.gemoraglobal.co/wholesale-jewellery-rajasthan</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/questions-to-ask-jewellery-manufacturer</loc>
+    <loc>https://www.gemoraglobal.co/meenakari-jewellery-wholesale</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/how-to-avoid-scam-wholesale-suppliers</loc>
+    <loc>https://www.gemoraglobal.co/oxidised-jewellery-wholesale</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/long-term-sourcing-partner-benefits-jewellery</loc>
+    <loc>https://www.gemoraglobal.co/oxidised-jewellery-supplier</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/why-gemora-global-manufacturers-stand-out</loc>
+    <loc>https://www.gemoraglobal.co/imitation-jewellery-supplier-usa</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/request-wholesale-jewellery-catalogue-india</loc>
+    <loc>https://www.gemoraglobal.co/wholesale-jewellery-uk</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/bulk-order-fashion-jewellery-supplier</loc>
+    <loc>https://www.gemoraglobal.co/jewellery-exporter-australia</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/get-custom-jewellery-quote-india</loc>
+    <loc>https://www.gemoraglobal.co/jewellery-exporter-canada</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/buy-latest-jewellery-collection-wholesale</loc>
+    <loc>https://www.gemoraglobal.co/jewellery-exporter-singapore</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/moq-for-custom-jewellery-manufacturer</loc>
+    <loc>https://www.gemoraglobal.co/jewellery-exporter-europe</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/fast-delivery-wholesale-jewellery-india</loc>
+    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-france</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/premium-imitation-jewellery-bulk-supplier</loc>
+    <loc>https://www.gemoraglobal.co/export-indian-fashion-jewellery-australia</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/start-private-label-jewellery-brand-today</loc>
+    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-germany-eu</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/contact-trusted-exporter-for-jewellery</loc>
+    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-canada</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-jewellery-inquiry-guide</loc>
+    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-singapore</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Additional key blog slugs from strategy -->
+  <!-- Legal -->
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/wholesale-fashion-jewellery-trends-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.gemoraglobal.co/privacy-policy</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/why-buy-jewellery-from-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.gemoraglobal.co/terms-and-conditions</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/daily-wear-jewellery-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gemoraglobal-tje.caffeine.xyz/blog/korean-jewelry-trend-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.gemoraglobal.co/return-refund-cancellation-policy</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
