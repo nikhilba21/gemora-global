@@ -1,21 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: http:; connect-src 'self' https://gemora-global-2.onrender.com https://api.cloudinary.com https://res.cloudinary.com wss:; frame-src 'self'; object-src 'none';"
-        }
-      ]
-    }
-  ],
-  "build": {
-    "env": {
-      "VITE_API_URL": "https://gemora-global-2.onrender.com",
-      "VITE_CLOUDINARY_CLOUD": "dnusbgxgm",
-      "VITE_CLOUDINARY_PRESET": "gemora_unsigned"
-    }
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
