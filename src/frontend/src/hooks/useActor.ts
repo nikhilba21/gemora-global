@@ -1,7 +1,7 @@
 // useActor.ts — REST API replacement for ICP actor
 // Provides same interface as before: { actor, isFetching }
 
-const API_BASE = (import.meta as { env: Record<string, string> }).env?.VITE_API_URL || '';
+const API_BASE = (import.meta as { env: Record<string, string> }).env?.VITE_API_URL || 'https://gemora-global-2.onrender.com';
 
 function getToken() {
   return sessionStorage.getItem('adminToken') || localStorage.getItem('admin_token') || '';

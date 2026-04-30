@@ -2,7 +2,7 @@
 // Images upload to Cloudinary unsigned upload preset
 import { useState } from 'react';
 
-const CLOUDINARY_CLOUD = (import.meta as { env: Record<string, string> }).env?.VITE_CLOUDINARY_CLOUD || 'gemora-global';
+const CLOUDINARY_CLOUD = (import.meta as { env: Record<string, string> }).env?.VITE_CLOUDINARY_CLOUD || 'dnusbgxgm';
 const UPLOAD_PRESET = (import.meta as { env: Record<string, string> }).env?.VITE_CLOUDINARY_PRESET || 'gemora_unsigned';
 
 export type UploadResult = {

@@ -1,0 +1,8 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "env": {
+    "VITE_API_URL": "https://gemora-global-2.onrender.com",
+    "VITE_CLOUDINARY_CLOUD": "dnusbgxgm",
+    "VITE_CLOUDINARY_PRESET": "gemora_unsigned"
+  }
+}

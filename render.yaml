@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: gemora-global-api
+    name: gemora-global-2
     runtime: node
     rootDir: backend-node
     buildCommand: npm install
@@ -8,8 +8,8 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NODE_VERSION
-        value: 20
+      - key: PORT
+        value: 3000
       - key: ADMIN_USERNAME
         value: admin
       - key: ADMIN_PASSWORD
@@ -17,10 +17,10 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: FRONTEND_URL
-        value: https://gemora-global.vercel.app
+        value: https://gemora-global-frontend.vercel.app
       - key: DATABASE_PATH
-        value: /var/data/gemora.db
+        value: /opt/render/project/src/gemora.db
     disk:
       name: gemora-db
-      mountPath: /var/data
+      mountPath: /opt/render/project/src
       sizeGB: 1
