@@ -71,7 +71,7 @@ export default function AdminGallery() {
   const { data: items } = useQuery<GalleryItem[]>({
     queryKey: ["gallery", ""],
     queryFn: () => actor!.getGallery(null),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["gallery"] });

@@ -73,7 +73,7 @@ export default function AdminCMS() {
       }
       return map;
     },
-    enabled: !!actor,
+    enabled: true,
   });
 
   // Populate form when data loads

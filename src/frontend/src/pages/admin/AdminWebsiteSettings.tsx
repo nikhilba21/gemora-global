@@ -97,7 +97,7 @@ export default function AdminWebsiteSettings() {
       );
       return Object.fromEntries(entries);
     },
-    enabled: !!actor,
+    enabled: true,
   });
 
   const [localMap, setLocalMap] = useState<Record<string, string>>({});

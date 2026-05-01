@@ -5,7 +5,21 @@ const router = express.Router();
 
 function parse(p) {
   if (!p) return null;
-  return { ...p, imageUrls: JSON.parse(p.imageUrls||'[]'), featured: p.featured===1||p.featured==='1'||p.featured===true, isNewArrival: p.isNewArrival===1||p.isNewArrival==='1'||p.isNewArrival===true };
+  // PostgreSQL quoted cols return as-is, handle both cases
+  const imageUrls = p.imageUrls || p.imageurl || '[]';
+  const categoryId = p.categoryId || p.categoryid;
+  const isNewArrival = p.isNewArrival ?? p.isnewarrival ?? false;
+  const keyFeatures = p.keyFeatures || p.keyfeatures || null;
+  const createdAt = p.createdAt || p.createdat || 0;
+  return {
+    ...p,
+    categoryId,
+    isNewArrival: isNewArrival===1||isNewArrival==='1'||isNewArrival===true,
+    featured: p.featured===1||p.featured==='1'||p.featured===true,
+    imageUrls: typeof imageUrls === 'string' ? JSON.parse(imageUrls) : (imageUrls || []),
+    keyFeatures,
+    createdAt,
+  };
 }
 
 router.get('/featured', async (req, res) => {

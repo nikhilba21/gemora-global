@@ -235,7 +235,7 @@ function ImageField({
   const { data } = useQuery({
     queryKey: ["content", contentKey],
     queryFn: () => actor!.getContent(contentKey),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const currentUrl = toStr(data);
@@ -410,7 +410,7 @@ function ContentField({
   const { data } = useQuery({
     queryKey: ["content", contentKey],
     queryFn: () => actor!.getContent(contentKey),
-    enabled: !!actor,
+    enabled: true,
   });
 
   useEffect(() => {

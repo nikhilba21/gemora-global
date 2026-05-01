@@ -53,7 +53,7 @@ export default function AdminTestimonials() {
   const { data: testimonials } = useQuery<Testimonial[]>({
     queryKey: ["testimonials"],
     queryFn: () => actor!.getTestimonials(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["testimonials"] });

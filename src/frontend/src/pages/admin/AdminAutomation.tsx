@@ -40,7 +40,7 @@ export default function AdminAutomation() {
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => actor!.getInquiries(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const saveEmailAuto = (v: boolean) => {

@@ -16,7 +16,7 @@ export default function AdminWhatsAppLeads() {
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => actor!.getInquiries(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const whatsappLeads = (inquiries ?? []).filter((inq) => inq.whatsapp?.trim());

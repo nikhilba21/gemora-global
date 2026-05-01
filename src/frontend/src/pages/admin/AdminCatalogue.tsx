@@ -45,7 +45,7 @@ export default function AdminCatalogue() {
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],
     queryFn: () => actor!.getCatalogues(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["catalogues"] });

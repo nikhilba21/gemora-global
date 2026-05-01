@@ -130,7 +130,7 @@ export default function AdminCustomers() {
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => actor!.getInquiries(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const saveCustomers = (updated: Customer[]) => {

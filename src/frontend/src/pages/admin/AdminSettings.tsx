@@ -102,7 +102,7 @@ export default function AdminSettings() {
       );
       return Object.fromEntries(entries) as Record<string, string>;
     },
-    enabled: !!actor,
+    enabled: true,
   });
 
   const [localSocial, setLocalSocial] = useState<Record<string, string>>({});

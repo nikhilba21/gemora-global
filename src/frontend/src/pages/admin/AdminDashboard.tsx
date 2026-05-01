@@ -25,19 +25,19 @@ export default function AdminDashboard() {
   const { data: stats } = useQuery({
     queryKey: ["dashboard-stats"],
     queryFn: () => actor!.getDashboardStats(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => actor!.getInquiries(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const { data: products } = useQuery<Product[]>({
     queryKey: ["products", null],
     queryFn: () => actor!.getProducts([] as unknown as bigint),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const orders = (() => {

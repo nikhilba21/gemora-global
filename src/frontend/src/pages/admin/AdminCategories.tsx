@@ -53,7 +53,7 @@ export default function AdminCategories() {
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
     queryFn: () => actor!.getCategories(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["categories"] });

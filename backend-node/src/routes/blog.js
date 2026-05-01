@@ -3,6 +3,15 @@ const { query } = require('../db/database');
 const { requireAdmin } = require('../middleware/auth');
 const router = express.Router();
 
+function parseBlog(b) {
+  if (!b) return null;
+  return {
+    ...b,
+    readTime: b.readTime || b.readtime || '',
+    createdAt: b.createdAt || b.createdat || 0,
+  };
+}
+
 router.get('/', async (req, res) => {
   try {
     const { status, page, pageSize } = req.query;
@@ -17,10 +26,10 @@ router.get('/', async (req, res) => {
       params.push(ps,pg*ps);
       sql += ` LIMIT $${params.length-1} OFFSET $${params.length}`;
       const r = await query(sql, params);
-      return res.json({ items: r.rows, total, pages });
+      return res.json({ items: r.rows.map(parseBlog), total, pages });
     }
     const r = await query(sql, params);
-    res.json(r.rows);
+    res.json(r.rows.map(parseBlog));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
@@ -28,7 +37,7 @@ router.get('/:slug', async (req, res) => {
   try {
     const r = await query('SELECT * FROM blog_posts WHERE slug=$1', [req.params.slug]);
     if (!r.rows[0]) return res.status(404).json({ error: 'Not found' });
-    res.json(r.rows[0]);
+    res.json(parseBlog(r.rows[0]));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
@@ -41,7 +50,7 @@ router.post('/', requireAdmin, async (req, res) => {
        VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *`,
       [slug,title,category,excerpt,author,date,readTime,status,image,content]
     );
-    res.status(201).json(r.rows[0]);
+    res.status(201).json(parseBlog(r.rows[0]));
   } catch (e) {
     if (e.code==='23505') return res.status(409).json({ error: 'Slug already exists' });
     res.status(500).json({ error: e.message });
@@ -57,7 +66,7 @@ router.put('/:id', requireAdmin, async (req, res) => {
       `UPDATE blog_posts SET slug=$1,title=$2,category=$3,excerpt=$4,author=$5,date=$6,"readTime"=$7,status=$8,image=$9,content=$10 WHERE id=$11 RETURNING *`,
       [slug??e.slug,title??e.title,category??e.category,excerpt??e.excerpt,author??e.author,date??e.date,readTime??e.readTime,status??e.status,image??e.image,content??e.content,req.params.id]
     );
-    res.json(r.rows[0]);
+    res.json(parseBlog(r.rows[0]));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

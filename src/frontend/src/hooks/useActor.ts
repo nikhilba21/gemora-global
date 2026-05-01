@@ -300,9 +300,14 @@ const actor = {
 
   // ── Blog ──────────────────────────────────────────────────────
   async getBlogPosts(status: string | null) {
-    const url = status ? `/api/blog?status=${status}` : '/api/blog';
-    const data = await apiFetch<Record<string, unknown>[]>(url);
-    return data.map(shapeBlog);
+    // Fetch up to 500 posts for admin panel
+    const s = status ? `&status=${status}` : '';
+    const r = await apiFetch<{ items: Record<string, unknown>[]; total: number; pages: number }>(
+      `/api/blog?page=0&pageSize=500${s}`
+    );
+    // Handle both paginated and array responses
+    const items = Array.isArray(r) ? r : (r.items || []);
+    return items.map(shapeBlog);
   },
 
   async getBlogPostsPaginated(status: string | null, page: bigint, pageSize: bigint) {

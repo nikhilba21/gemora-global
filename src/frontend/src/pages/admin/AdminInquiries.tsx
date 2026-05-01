@@ -34,7 +34,7 @@ export default function AdminInquiries() {
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => actor!.getInquiries(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const updateMut = useMutation({

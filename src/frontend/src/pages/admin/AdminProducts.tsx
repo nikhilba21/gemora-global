@@ -128,12 +128,12 @@ export default function AdminProducts() {
   const { data: products } = useQuery<Product[]>({
     queryKey: ["products", null],
     queryFn: () => actor!.getProducts(null),
-    enabled: !!actor,
+    enabled: true,
   });
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
     queryFn: () => actor!.getCategories(),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["products"] });

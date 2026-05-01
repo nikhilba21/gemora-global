@@ -67,7 +67,7 @@ export default function AdminBlog() {
   const { data: posts = [] } = useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => actor!.getBlogPosts(null),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const invalidate = () => {
