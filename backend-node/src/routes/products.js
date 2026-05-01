@@ -108,3 +108,35 @@ router.delete('/:id', requireAdmin, async (req, res) => {
 });
 
 module.exports = router;
+
+// POST /api/products/bulk — upload many products at once (admin only)
+router.post('/bulk', requireAdmin, async (req, res) => {
+  try {
+    const { products: items } = req.body;
+    if (!Array.isArray(items)) return res.status(400).json({ error: 'products array required' });
+    
+    let created = 0, failed = 0, errors = [];
+    
+    // Process in batches of 50 for stability
+    const BATCH = 50;
+    for (let i = 0; i < items.length; i += BATCH) {
+      const batch = items.slice(i, i + BATCH);
+      await Promise.all(batch.map(async (item) => {
+        try {
+          const { categoryId, name, description='', moq='', imageUrls=[], featured=false,
+            isNewArrival=false, sku=null, subcategory=null, color=null, keyFeatures=null } = item;
+          if (!categoryId || !name) { failed++; return; }
+          await query(
+            `INSERT INTO products("categoryId",name,description,moq,"imageUrls",featured,"isNewArrival",sku,subcategory,color,"keyFeatures")
+             VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)`,
+            [categoryId, name, description, moq, JSON.stringify(imageUrls),
+             featured?1:0, isNewArrival?1:0, sku, subcategory, color, keyFeatures]
+          );
+          created++;
+        } catch(e) { failed++; errors.push(e.message); }
+      }));
+    }
+    
+    res.json({ success: true, created, failed, total: items.length, errors: errors.slice(0,5) });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});

@@ -48,16 +48,16 @@ export default function Gallery() {
       "Imitation Jewellery Photo Gallery — Wholesale Catalogue | Gemora Global",
     description:
       "View Gemora Global's wholesale imitation jewellery gallery — necklace sets, earrings, bridal jewellery, bangles and more. Request the full digital catalogue for pricing and MOQ details.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/gallery",
+    canonical: "https://www.gemoraglobal.co/gallery",
     ogTitle:
       "Imitation Jewellery Photo Gallery — Wholesale Catalogue | Gemora Global",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-gallery.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-gallery.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "ImageGallery",
       name: "Gemora Global Jewellery Wholesale Gallery",
       description: "Wholesale imitation jewellery designs from Gemora Global",
-      url: "https://gemoraglobal-tje.caffeine.xyz/gallery",
+      url: "https://www.gemoraglobal.co/gallery",
     },
   });
 
@@ -80,7 +80,7 @@ export default function Gallery() {
     };
   }, [lightboxIdx]);
 
-  const actorReady = !!actor && !actorFetching;
+  const actorReady = true; // REST API actor is always ready
 
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],

@@ -5,7 +5,7 @@ export default function FashionJewelleryManufacturerIndia() {
     <SeoLandingPage
       title="Fashion Jewellery Manufacturer India | Gemora Global"
       metaDescription="Leading fashion jewellery manufacturer in India. Wholesale artificial jewellery with zircon, alloy, glass stone. Export quality, low MOQ."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/fashion-jewellery-manufacturer-india"
+      canonical="https://www.gemoraglobal.co/fashion-jewellery-manufacturer-india"
       h1="Fashion Jewellery Manufacturer India | Wholesale"
       targetKeyword="artificial jewellery manufacturer india"
       heroSubtitle="Gemora Global manufactures premium fashion jewellery in Jaipur, India. Zircon, alloy, glass stone, and kundan work — export quality wholesale supply for global buyers."

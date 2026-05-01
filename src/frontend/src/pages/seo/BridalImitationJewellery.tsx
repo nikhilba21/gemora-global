@@ -6,7 +6,7 @@ export default function BridalImitationJewellery() {
     <SeoLandingPage
       title="Bridal Imitation Jewellery Wholesale | Gemora Global"
       metaDescription="Premium bridal imitation jewellery wholesale from India. Complete bridal sets in kundan, polki, temple & oxidised styles. Low MOQ, global export."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/bridal-imitation-jewellery"
+      canonical="https://www.gemoraglobal.co/bridal-imitation-jewellery"
       h1="Bridal Imitation Jewellery Wholesale from India"
       targetKeyword="bridal imitation jewellery"
       heroSubtitle="Gemora Global is India's leading bridal imitation jewellery wholesale supplier. Complete bridal sets in kundan, polki, temple, and oxidised styles. MOQ-friendly pricing for boutiques and international buyers."

@@ -6,7 +6,7 @@ export default function FashionJewelleryExporterIndia() {
     <SeoLandingPage
       title="Fashion Jewellery Export India | Wholesale Supplier"
       metaDescription="Top fashion jewellery exporter from India. Wholesale trendy necklaces, earrings & sets exported worldwide. Anti-tarnish, MOQ 50 units, global shipping."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/fashion-jewellery-exporter-india"
+      canonical="https://www.gemoraglobal.co/fashion-jewellery-exporter-india"
       h1="Fashion Jewellery Exporter India | Global Wholesale"
       targetKeyword="fashion jewellery exporter india"
       heroSubtitle="Gemora Global exports premium fashion jewellery worldwide from India. Trendy 2026 designs in necklaces, earrings, bracelets, rings and sets. Factory-direct pricing, anti-tarnish finish, worldwide shipping."

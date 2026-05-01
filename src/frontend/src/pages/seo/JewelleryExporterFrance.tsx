@@ -6,37 +6,37 @@ export default function JewelleryExporterFrance() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to France | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to France. Wholesale Kundan, Bridal, Gold Plated jewellery for French boutiques. MOQ 50 units, EU-compliant export documentation, DHL delivery."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-france"
+      canonical="https://www.gemoraglobal.co/export-imitation-jewellery-france"
       h1="Imitation Jewellery Manufacturer & Exporter to France"
       targetKeyword="imitation jewellery exporter france"
       heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to French boutiques, retailers, and distributors. Factory-direct pricing, MOQ from 50 units, EU-compliant export documentation, and DHL delivery to France in 5–8 days."
       hreflangs={[
         {
           lang: "fr-FR",
-          url: "https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-france",
+          url: "https://www.gemoraglobal.co/export-imitation-jewellery-france",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk",
+          url: "https://www.gemoraglobal.co/wholesale-jewellery-uk",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-france",
+          url: "https://www.gemoraglobal.co/export-imitation-jewellery-france",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter France",
-          url: "https://gemoraglobal-tje.caffeine.xyz/export-imitation-jewellery-france",
+          url: "https://www.gemoraglobal.co/export-imitation-jewellery-france",
         },
       ]}
       faqs={[

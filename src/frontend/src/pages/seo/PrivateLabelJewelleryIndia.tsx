@@ -5,7 +5,7 @@ export default function PrivateLabelJewelleryIndia() {
     <SeoLandingPage
       title="Private Label Jewellery India | Gemora Global"
       metaDescription="Private label jewellery manufacturer India. Custom designs with your brand name, logo packaging. MOQ 500 units, 3-4 weeks. Trusted by brands worldwide."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/private-label-jewellery-india"
+      canonical="https://www.gemoraglobal.co/private-label-jewellery-india"
       h1="Private Label Jewellery India | Build Your Brand"
       targetKeyword="private label jewellery manufacturer india"
       heroSubtitle="Launch your own jewellery brand with Gemora Global's private label manufacturing service. Custom designs, branded packaging, your logo — MOQ 500 units, 3–4 weeks production."

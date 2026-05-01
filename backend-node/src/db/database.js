@@ -145,6 +145,18 @@ async function initializeDatabase() {
     );
   `);
 
+  // Add indexes for performance
+  await query(`
+    CREATE INDEX IF NOT EXISTS idx_products_category ON products("categoryId");
+    CREATE INDEX IF NOT EXISTS idx_products_featured ON products(featured);
+    CREATE INDEX IF NOT EXISTS idx_products_new_arrival ON products("isNewArrival");
+    CREATE INDEX IF NOT EXISTS idx_products_created ON products("createdAt" DESC);
+    CREATE INDEX IF NOT EXISTS idx_blog_status ON blog_posts(status);
+    CREATE INDEX IF NOT EXISTS idx_blog_slug ON blog_posts(slug);
+    CREATE INDEX IF NOT EXISTS idx_gallery_type ON gallery_items("itemType");
+    CREATE INDEX IF NOT EXISTS idx_inquiries_status ON inquiries(status);
+  `).catch(() => {}); // ignore if already exists
+
   await runMigrations();
   console.log('✅ Database ready');
 }

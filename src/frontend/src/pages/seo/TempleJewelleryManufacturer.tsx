@@ -56,19 +56,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Temple Jewellery Manufacturer",
-        item: "https://gemoraglobal-tje.caffeine.xyz/temple-jewellery-manufacturer",
+        item: "https://www.gemoraglobal.co/temple-jewellery-manufacturer",
       },
     ],
   },
@@ -78,7 +78,7 @@ const schema = [
     name: "Gemora Global",
     description:
       "Temple jewellery manufacturer and wholesale exporter from Jaipur, Rajasthan, India.",
-    url: "https://gemoraglobal-tje.caffeine.xyz/temple-jewellery-manufacturer",
+    url: "https://www.gemoraglobal.co/temple-jewellery-manufacturer",
     telephone: "+91-7976341419",
     address: {
       "@type": "PostalAddress",
@@ -100,7 +100,7 @@ export default function TempleJewelleryManufacturer() {
     <SeoLandingPage
       title="Temple Jewellery Manufacturer India | Gemora Global"
       metaDescription="Leading temple jewellery manufacturer in India. Wholesale temple necklaces, earrings & bridal sets in gold finish. Bulk supply with worldwide export."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/temple-jewellery-manufacturer"
+      canonical="https://www.gemoraglobal.co/temple-jewellery-manufacturer"
       h1="Temple Jewellery Manufacturer India | Wholesale"
       targetKeyword="temple jewellery manufacturer"
       heroSubtitle="Gemora Global manufactures and exports authentic temple jewellery in bulk to wholesalers, boutiques, and distributors worldwide. Gold-finish temple sets with intricate deity motifs — factory-direct pricing from Jaipur, India."

@@ -72,12 +72,12 @@ export default function ExportMarkets() {
       "Imitation Jewellery Export to UAE, France, USA & Europe | Gemora Global",
     description:
       "Gemora Global exports imitation jewellery to UAE, France, USA, UK, Germany, Canada, Australia & Singapore. Market-specific wholesale designs, export docs & reliable shipping.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/global-markets",
+    canonical: "https://www.gemoraglobal.co/global-markets",
     ogTitle:
       "Imitation Jewellery Export UAE France USA UK | Gemora Global India",
     ogDescription:
       "Wholesale imitation jewellery export from Jaipur, India to UAE, France, USA, UK & Europe. Market-specific designs. MOQ 50 units.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "Service",

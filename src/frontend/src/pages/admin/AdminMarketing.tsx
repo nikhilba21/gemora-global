@@ -96,13 +96,13 @@ export default function AdminMarketing() {
     }
   });
   const [waMessage, setWaMessage] = useState(
-    "Hi! We have new arrivals from Gemora Global 💎 Check our latest collection: https://gemoraglobal-tje.caffeine.xyz/products",
+    "Hi! We have new arrivals from Gemora Global 💎 Check our latest collection: https://www.gemoraglobal.co/products",
   );
   const [emailSubject, setEmailSubject] = useState(
     "New Arrivals — Gemora Global Jewellery",
   );
   const [emailBody, setEmailBody] = useState(
-    "Dear Buyer,\n\nWe are excited to share our latest jewellery collection with you.\n\nVisit: https://gemoraglobal-tje.caffeine.xyz/products\n\nBest regards,\nGemora Global Team",
+    "Dear Buyer,\n\nWe are excited to share our latest jewellery collection with you.\n\nVisit: https://www.gemoraglobal.co/products\n\nBest regards,\nGemora Global Team",
   );
 
   const saveCoupons = (updated: Coupon[]) => {

@@ -6,15 +6,15 @@ export default function BulkJewellerySupplier() {
     <SeoLandingPage
       title="Bulk Jewellery Supplier India | MOQ 50 Units | Tiered Pricing"
       metaDescription="Bulk jewellery supplier from Jaipur, India. MOQ 50 units. Tiered pricing: the more you order, the more you save. Custom packaging, private label available. Est. 2011."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/bulk-jewellery-supplier"
+      canonical="https://www.gemoraglobal.co/bulk-jewellery-supplier"
       h1="Bulk Jewellery Supplier India — MOQ 50 Units, Tiered Pricing Structure"
       targetKeyword="bulk jewellery supplier india"
       heroSubtitle="Jaipur's most transparent bulk jewellery supplier since 2011. Five-tier pricing from MOQ 50 units to 5,000+ units — the more you order, the more you save. Custom packaging, private label, and white-label available at every tier."
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Bulk Jewellery Supplier",
-          url: "https://gemoraglobal-tje.caffeine.xyz/bulk-jewellery-supplier",
+          url: "https://www.gemoraglobal.co/bulk-jewellery-supplier",
         },
       ]}
       bodyContent={

@@ -6,37 +6,37 @@ export default function JewelleryExporterSriLanka() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to Sri Lanka | Wholesale Indian Jewellery Supplier | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Sri Lanka. Wholesale bridal sets, Temple jewellery & Indian fashion jewellery for Colombo retailers. MOQ 50 units, proximity advantage, competitive pricing vs local suppliers."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-sri-lanka"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-sri-lanka"
       h1="Imitation Jewellery Exporter to Sri Lanka | Wholesale Indian Jewellery Supplier"
       targetKeyword="imitation jewellery exporter Sri Lanka wholesale"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur directly to Sri Lankan retailers, Colombo boutiques, and South Indian-influenced wedding market suppliers. Proximity advantage for fast delivery, MOQ from 50 units, comprehensive bridal and Temple jewellery collections."
       hreflangs={[
         {
           lang: "si-LK",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-sri-lanka",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
         },
         {
           lang: "ta-LK",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-sri-lanka",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
         },
         {
           lang: "en-SG",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-sri-lanka",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Sri Lanka",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-sri-lanka",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
         },
       ]}
       schema={{

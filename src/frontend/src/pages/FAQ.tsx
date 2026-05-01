@@ -145,7 +145,7 @@ export default function FAQ() {
       "FAQ — Frequently Asked Questions | Gemora Global Wholesale Jewellery",
     description:
       "Find answers to all your questions about wholesale imitation jewellery from Gemora Global — MOQ, shipping, payment terms, returns policy, product quality, and ordering process.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/faq",
+    canonical: "https://www.gemoraglobal.co/faq",
     ogTitle: "FAQ — Gemora Global Wholesale Imitation Jewellery",
     ogDescription:
       "Answers to 20+ frequently asked questions about wholesale imitation jewellery from Gemora Global — MOQ, shipping, returns, pricing, and more.",

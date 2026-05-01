@@ -6,37 +6,37 @@ export default function JewelleryExporterCanada() {
     <SeoLandingPage
       title="Indian Jewellery Exporter Canada | Wholesale Imitation Jewellery"
       metaDescription="Trusted Indian jewellery exporter to Canada. Wholesale imitation jewellery for Canadian boutiques. MOQ 50 units, FedEx/DHL, full export documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-canada"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-canada"
       h1="Indian Jewellery Exporter to Canada | Wholesale"
       targetKeyword="imitation jewellery exporter canada"
       heroSubtitle="Gemora Global is India's trusted imitation jewellery wholesale supplier for Canadian boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — FedEx delivery in 5–7 days, MOQ from 50 units, full export documentation."
       hreflangs={[
         {
           lang: "en-CA",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-canada",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-canada",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-canada",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-canada",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Canada",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-canada",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-canada",
         },
       ]}
       bodyContent={

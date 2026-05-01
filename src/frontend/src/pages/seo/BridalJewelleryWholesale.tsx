@@ -55,19 +55,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Bridal Jewellery Wholesale",
-        item: "https://gemoraglobal-tje.caffeine.xyz/bridal-jewellery-wholesale",
+        item: "https://www.gemoraglobal.co/bridal-jewellery-wholesale",
       },
     ],
   },
@@ -77,7 +77,7 @@ const schema = [
     name: "Gemora Global",
     description:
       "Bridal jewellery wholesale supplier and exporter from Jaipur, Rajasthan, India.",
-    url: "https://gemoraglobal-tje.caffeine.xyz/bridal-jewellery-wholesale",
+    url: "https://www.gemoraglobal.co/bridal-jewellery-wholesale",
     telephone: "+91-7976341419",
     address: {
       "@type": "PostalAddress",
@@ -99,7 +99,7 @@ export default function BridalJewelleryWholesale() {
     <SeoLandingPage
       title="Bridal Jewellery Wholesale Supplier India | Gemora"
       metaDescription="Wholesale bridal jewellery sets from India. Kundan, polki, zircon bridal sets for boutiques, wedding markets. MOQ-friendly pricing, global export."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/bridal-jewellery-wholesale"
+      canonical="https://www.gemoraglobal.co/bridal-jewellery-wholesale"
       h1="Bridal Jewellery Wholesale — Complete Sets from India"
       targetKeyword="bridal imitation jewellery wholesale"
       heroSubtitle="India's trusted wholesale supplier for complete bridal jewellery sets. Kundan, polki, and zircon bridal sets for boutiques serving wedding markets in UK, UAE, USA, and beyond."

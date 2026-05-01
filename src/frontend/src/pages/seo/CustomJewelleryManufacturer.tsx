@@ -5,7 +5,7 @@ export default function CustomJewelleryManufacturer() {
     <SeoLandingPage
       title="Custom Jewellery Manufacturer India | Gemora Global"
       metaDescription="Custom imitation jewellery manufacturer in India. Private label, OEM, exclusive designs for brands worldwide. MOQ 500 units, 3-4 weeks lead time."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/custom-jewellery-manufacturer"
+      canonical="https://www.gemoraglobal.co/custom-jewellery-manufacturer"
       h1="Custom Jewellery Manufacturer India | Private Label"
       targetKeyword="custom imitation jewellery manufacturer"
       heroSubtitle="Build your exclusive jewellery collection with Gemora Global's custom manufacturing service. Private label, OEM designs, and branded packaging — MOQ 500 units, 3–4 weeks lead time."

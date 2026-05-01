@@ -80,19 +80,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Wholesale Jewellery UK",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk",
+        item: "https://www.gemoraglobal.co/wholesale-jewellery-uk",
       },
     ],
   },
@@ -103,7 +103,7 @@ export default function WholesaleJewelleryUK() {
     <SeoLandingPage
       title="Wholesale Jewellery UK | Indian Imitation Jewellery Supplier"
       metaDescription="Wholesale jewellery supplier for UK boutiques. Indian imitation jewellery shipped to UK via DHL. MOQ 50 units, HMRC documentation, competitive GBP pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk"
+      canonical="https://www.gemoraglobal.co/wholesale-jewellery-uk"
       h1="Wholesale Jewellery UK — Indian Imitation Jewellery Supplier"
       targetKeyword="wholesale jewellery UK"
       heroSubtitle="Gemora Global is India's trusted wholesale jewellery supplier for the UK market. Authentic Indian imitation jewellery shipped directly to UK boutiques and distributors via DHL Express. Factory-direct pricing, MOQ from 50 units, HMRC-compliant documentation."
@@ -111,23 +111,23 @@ export default function WholesaleJewelleryUK() {
       hreflangs={[
         {
           lang: "en",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk",
+          url: "https://www.gemoraglobal.co/wholesale-jewellery-uk",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk",
+          url: "https://www.gemoraglobal.co/wholesale-jewellery-uk",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-uk",
+          url: "https://www.gemoraglobal.co/wholesale-jewellery-uk",
         },
       ]}
       bodyContent={

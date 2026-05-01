@@ -5,37 +5,37 @@ export default function JewellerySupplierUK() {
     <SeoLandingPage
       title="Jewellery Supplier UK | Indian Imitation Jewellery"
       metaDescription="Trusted jewellery supplier from India to UK. Wholesale imitation jewellery, bridal sets for UK boutiques. DHL delivery, HMRC documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk"
+      canonical="https://www.gemoraglobal.co/jewellery-supplier-uk"
       h1="Indian Jewellery Supplier to UK | Wholesale Boutiques"
       targetKeyword="imitation jewellery supplier uk"
       heroSubtitle="India's trusted wholesale jewellery supplier to the United Kingdom. DHL Express delivery in 4–6 days, HMRC-compliant documentation, 500+ designs. Serving UK boutiques since 2013."
       hreflangs={[
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Supplier UK",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
       ]}
       howToSteps={{

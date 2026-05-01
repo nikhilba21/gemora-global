@@ -290,7 +290,7 @@ export default function ProductDetail() {
     description: product
       ? `${product.description.slice(0, 150)}... Wholesale from Jaipur, India. MOQ: ${product.moq}.`
       : "Browse wholesale imitation jewellery products from Gemora Global, Jaipur India.",
-    canonical: `https://gemoraglobal-tje.caffeine.xyz/products/${id}`,
+    canonical: `https://www.gemoraglobal.co/products/${id}`,
     schema: product
       ? [
           {
@@ -325,19 +325,19 @@ export default function ProductDetail() {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://gemoraglobal-tje.caffeine.xyz/",
+                item: "https://www.gemoraglobal.co/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Products",
-                item: "https://gemoraglobal-tje.caffeine.xyz/products",
+                item: "https://www.gemoraglobal.co/products",
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: product.name,
-                item: `https://gemoraglobal-tje.caffeine.xyz/products/${id}`,
+                item: `https://www.gemoraglobal.co/products/${id}`,
               },
             ],
           },

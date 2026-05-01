@@ -89,16 +89,16 @@ export default function Blog() {
     title: "Jewellery Export Trends 2025 — Guides & Tips | Gemora Global Blog",
     description:
       "Jewellery export trends 2025: sourcing guides, MOQ advice, country strategies & market reports for wholesale buyers in UAE, France, USA, UK and Europe.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/blog",
+    canonical: "https://www.gemoraglobal.co/blog",
     ogTitle: "Jewellery Export Trends & Guides — Gemora Global Blog",
     ogDescription:
       "Expert guides on imitation jewellery export, sourcing trends, MOQ tips & wholesale strategies for global buyers.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "Blog",
       name: "Gemora Global Jewellery Blog",
-      url: "https://gemoraglobal-tje.caffeine.xyz/blog",
+      url: "https://www.gemoraglobal.co/blog",
       inLanguage: "en",
       publisher: { "@type": "Organization", name: "Gemora Global" },
     },
@@ -109,7 +109,7 @@ export default function Blog() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const { actor, isFetching: actorFetching } = useActor();
-  const actorReady = !!actor && !actorFetching;
+  const actorReady = true; // REST API actor is always ready
 
   // Paginated backend fetch — null status = fetch ALL blogs (Published + Draft)
   // This ensures all 150 admin-uploaded blogs are visible regardless of status

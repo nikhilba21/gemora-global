@@ -84,20 +84,20 @@ export default function BlogPostPage() {
       ? post.excerpt.slice(0, 155)
       : "Read the latest insights on imitation jewellery trends, wholesale sourcing, and export tips from Gemora Global.",
     canonical: post
-      ? `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`
-      : "https://gemoraglobal-tje.caffeine.xyz/blog",
+      ? `https://www.gemoraglobal.co/blog/${post.slug}`
+      : "https://www.gemoraglobal.co/blog",
     ogTitle: post ? post.title : "Blog | Gemora Global",
     ogDescription: post ? post.excerpt.slice(0, 155) : undefined,
     ogImage:
       post?.image ||
-      "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+      "https://www.gemoraglobal.co/images/og-banner.jpg",
     breadcrumbs: post
       ? [
-          { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
-          { name: "Blog", url: "https://gemoraglobal-tje.caffeine.xyz/blog" },
+          { name: "Home", url: "https://www.gemoraglobal.co/" },
+          { name: "Blog", url: "https://www.gemoraglobal.co/blog" },
           {
             name: post.title,
-            url: `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+            url: `https://www.gemoraglobal.co/blog/${post.slug}`,
           },
         ]
       : undefined,
@@ -119,16 +119,16 @@ export default function BlogPostPage() {
             name: "Gemora Global",
             logo: {
               "@type": "ImageObject",
-              url: "https://gemoraglobal-tje.caffeine.xyz/assets/uploads/logo-removebg-preview-1.png",
+              url: "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
             },
           },
           image:
             post.image ||
-            "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
-          url: `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+            "https://www.gemoraglobal.co/images/og-banner.jpg",
+          url: `https://www.gemoraglobal.co/blog/${post.slug}`,
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `https://gemoraglobal-tje.caffeine.xyz/blog/${post.slug}`,
+            "@id": `https://www.gemoraglobal.co/blog/${post.slug}`,
           },
           keywords: `imitation jewellery, wholesale jewellery India, fashion jewellery exporter, ${post.category || "jewellery export"}`,
           inLanguage: "en",

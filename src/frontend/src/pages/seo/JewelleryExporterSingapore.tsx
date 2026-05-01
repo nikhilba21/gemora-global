@@ -6,37 +6,37 @@ export default function JewelleryExporterSingapore() {
     <SeoLandingPage
       title="Indian Jewellery Exporter Singapore | Wholesale Imitation Jewellery"
       metaDescription="Trusted Indian jewellery exporter to Singapore. Wholesale imitation jewellery for Singapore boutiques. MOQ 50 units, fast air freight, full export documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-singapore"
       h1="Indian Jewellery Exporter to Singapore | Wholesale"
       targetKeyword="imitation jewellery exporter singapore"
       heroSubtitle="Gemora Global exports premium Indian imitation jewellery wholesale to Singapore boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — fast air freight in 4–6 days, MOQ from 50 units, complete export documentation."
       hreflangs={[
         {
           lang: "en-SG",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Singapore",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
         },
       ]}
       bodyContent={

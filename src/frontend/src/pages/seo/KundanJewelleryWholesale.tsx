@@ -56,19 +56,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Kundan Jewellery Wholesale",
-        item: "https://gemoraglobal-tje.caffeine.xyz/kundan-jewellery-wholesale",
+        item: "https://www.gemoraglobal.co/kundan-jewellery-wholesale",
       },
     ],
   },
@@ -78,7 +78,7 @@ const schema = [
     name: "Gemora Global",
     description:
       "Kundan jewellery wholesale manufacturer and exporter from Jaipur, Rajasthan, India.",
-    url: "https://gemoraglobal-tje.caffeine.xyz/kundan-jewellery-wholesale",
+    url: "https://www.gemoraglobal.co/kundan-jewellery-wholesale",
     telephone: "+91-7976341419",
     address: {
       "@type": "PostalAddress",
@@ -100,7 +100,7 @@ export default function KundanJewelleryWholesale() {
     <SeoLandingPage
       title="Kundan Jewellery Wholesale India | Gemora Global"
       metaDescription="Buy kundan jewellery wholesale from Jaipur, India. Bulk kundan necklace sets, earrings & bridal sets. Low MOQ, worldwide export."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/kundan-jewellery-wholesale"
+      canonical="https://www.gemoraglobal.co/kundan-jewellery-wholesale"
       h1="Kundan Jewellery Wholesale Supplier India"
       targetKeyword="kundan jewellery wholesale"
       heroSubtitle="Gemora Global is a leading kundan jewellery wholesale supplier from Jaipur, India. Factory-direct pricing on kundan necklaces, earrings, maang tikkas, and full bridal sets. MOQ from 50 units with worldwide shipping."

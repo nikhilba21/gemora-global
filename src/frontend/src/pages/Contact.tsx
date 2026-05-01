@@ -20,11 +20,11 @@ export default function Contact() {
     title: "Wholesale Jewellery Enquiry India — Contact Gemora Global",
     description:
       "Send a wholesale jewellery enquiry to Gemora Global India. Get pricing, MOQ details & catalogue for imitation jewellery export. Response within 24 hours.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/contact",
+    canonical: "https://www.gemoraglobal.co/contact",
     ogTitle: "Contact Gemora Global — Wholesale Jewellery Enquiry India",
     ogDescription:
       "Get wholesale imitation jewellery pricing, MOQ details & export catalogue from Gemora Global, Jaipur. We respond within 24 hours.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",

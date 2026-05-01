@@ -6,33 +6,33 @@ export default function JewelleryExporterKuwait() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to Kuwait | Wholesale Fashion Jewellery Supplier | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Kuwait. Wholesale Kundan, American Diamond, Gold Plated jewellery for Kuwait boutiques and souk traders. MOQ 50 units, DHL delivery 7–10 days, Arabic/English support."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-kuwait"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-kuwait"
       h1="Imitation Jewellery Exporter to Kuwait | Wholesale Fashion Jewellery Supplier"
       targetKeyword="imitation jewellery exporter Kuwait wholesale"
       heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to Kuwait City boutiques, souk traders, and Gulf fashion retailers. Factory-direct pricing, MOQ from 50 units, full GCC export documentation, and DHL delivery to Kuwait in 7–10 days."
       hreflangs={[
         {
           lang: "ar-KW",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-kuwait",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
         },
         {
           lang: "en-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-kuwait",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Kuwait",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-kuwait",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
         },
       ]}
       schema={{

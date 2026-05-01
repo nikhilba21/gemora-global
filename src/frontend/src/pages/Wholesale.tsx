@@ -133,18 +133,18 @@ export default function Wholesale() {
       "Wholesale Imitation Jewellery India — Factory Direct B2B Supplier | Gemora Global",
     description:
       "Wholesale imitation jewellery from Jaipur, India. MOQ 50 units, factory-direct prices, anti-tarnish quality. Kundan, Bridal, Oxidised & 500+ designs. Export to 20+ countries.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+    canonical: "https://www.gemoraglobal.co/wholesale",
     ogTitle:
       "Wholesale Imitation Jewellery India — MOQ & Pricing | Gemora Global",
     ogDescription:
       "Factory-direct wholesale imitation jewellery supplier from India. MOQ 50 units. Anti-tarnish finish. Shipping to 20+ countries.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     faqItems: FAQ_ITEMS,
     breadcrumbs: [
-      { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
       {
         name: "Wholesale",
-        url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        url: "https://www.gemoraglobal.co/wholesale",
       },
     ],
     schema: {
@@ -154,7 +154,7 @@ export default function Wholesale() {
       provider: {
         "@type": "Organization",
         name: "Gemora Global",
-        url: "https://gemoraglobal-tje.caffeine.xyz",
+        url: "https://www.gemoraglobal.co",
       },
       description:
         "Factory-direct wholesale imitation jewellery supplier from Jaipur, India. MOQ 50 units per design. Kundan, Bridal, Oxidised, Temple, Meenakari & Fashion jewellery. Export to USA, UK, UAE, France, Canada, Australia, Singapore, Malaysia, Saudi Arabia.",

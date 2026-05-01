@@ -6,15 +6,15 @@ export default function ArtificialJewelleryWholesalerIndia() {
     <SeoLandingPage
       title="Artificial Jewellery Wholesaler India | Distributor Programme"
       metaDescription="Gemora Global — artificial jewellery wholesaler in Jaipur. Wholesale distributor programme, credit terms, exclusive territory rights for India domestic buyers. Est. 2011."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/artificial-jewellery-wholesaler-india"
+      canonical="https://www.gemoraglobal.co/artificial-jewellery-wholesaler-india"
       h1="Artificial Jewellery Wholesaler India — Distributor & Reseller Programme"
       targetKeyword="artificial jewellery wholesaler india"
       heroSubtitle="India's domestic distributor programme from Gemora Global, Jaipur. Three-tier distributor structure (Bronze / Silver / Gold) with exclusive territory rights, credit terms, and advance catalogue access for verified wholesale partners. Established 2011."
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Artificial Jewellery Wholesaler India",
-          url: "https://gemoraglobal-tje.caffeine.xyz/artificial-jewellery-wholesaler-india",
+          url: "https://www.gemoraglobal.co/artificial-jewellery-wholesaler-india",
         },
       ]}
       bodyContent={

@@ -6,33 +6,33 @@ export default function JewelleryExporterMalaysia() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to Malaysia | Wholesale Indian Fashion Jewellery | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Malaysia. Wholesale Kundan, Temple, Bridal jewellery for KL boutiques & Indian diaspora buyers. MOQ 50 units, fast shipping to Malaysia, competitive wholesale pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-malaysia"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-malaysia"
       h1="Imitation Jewellery Exporter to Malaysia | Wholesale Indian Fashion Jewellery"
       targetKeyword="imitation jewellery exporter Malaysia wholesale"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur to Malaysian boutiques, Little India retailers, and online fashion sellers. Factory-direct pricing, MOQ from 50 units, multi-ethnic market-ready collections for Diwali, Hari Raya, and year-round festive demand."
       hreflangs={[
         {
           lang: "ms-MY",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-malaysia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-malaysia",
         },
         {
           lang: "en-SG",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-singapore",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-malaysia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-malaysia",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Malaysia",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-malaysia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-malaysia",
         },
       ]}
       schema={{

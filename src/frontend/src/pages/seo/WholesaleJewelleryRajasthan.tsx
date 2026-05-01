@@ -80,19 +80,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Wholesale Jewellery Rajasthan",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-rajasthan",
+        item: "https://www.gemoraglobal.co/wholesale-jewellery-rajasthan",
       },
     ],
   },
@@ -103,7 +103,7 @@ export default function WholesaleJewelleryRajasthan() {
     <SeoLandingPage
       title="Wholesale Jewellery Rajasthan | Bulk Imitation Supplier"
       metaDescription="Wholesale jewellery supplier from Rajasthan, India. Bulk kundan, meenakari & bridal jewellery from Jaipur. MOQ 50 units, worldwide export. Factory-direct pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/wholesale-jewellery-rajasthan"
+      canonical="https://www.gemoraglobal.co/wholesale-jewellery-rajasthan"
       h1="Wholesale Jewellery Rajasthan — Bulk Imitation Jewellery Supplier"
       targetKeyword="wholesale jewellery Rajasthan"
       heroSubtitle="Gemora Global is Rajasthan's trusted wholesale jewellery supplier, based in Jaipur — India's jewellery capital. Factory-direct wholesale pricing on kundan, meenakari, bridal, temple, and fashion imitation jewellery with MOQ from 50 units and worldwide export."

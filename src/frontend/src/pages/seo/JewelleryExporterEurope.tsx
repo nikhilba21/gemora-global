@@ -6,41 +6,41 @@ export default function JewelleryExporterEurope() {
     <SeoLandingPage
       title="Indian Jewellery Exporter Europe | Wholesale Imitation Jewellery"
       metaDescription="Trusted Indian jewellery exporter to Europe (Germany, France, Netherlands). Wholesale imitation jewellery for European boutiques. REACH compliant, full export documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-europe"
       h1="Indian Jewellery Exporter to Europe | Wholesale"
       targetKeyword="imitation jewellery exporter europe"
       heroSubtitle="Gemora Global exports REACH-compliant Indian imitation jewellery wholesale to European boutiques in Germany, France, Netherlands, and beyond. Factory-direct pricing from Jaipur — DHL delivery in 5–8 days, MOQ from 50 units."
       hreflangs={[
         {
           lang: "en",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
         },
         {
           lang: "de",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Europe",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-europe",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
         },
       ]}
       bodyContent={

@@ -23,6 +23,7 @@ app.use(cors({
       origin.includes('127.0.0.1') ||
       origin.includes('vercel.app') ||
       origin.includes('gemoraglobal.co') ||
+      origin.includes('globalgemora.co') ||
       (FRONTEND_URL && origin.startsWith(FRONTEND_URL))
     ) return cb(null, true);
     cb(new Error('CORS blocked: ' + origin));
@@ -37,7 +38,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // ── Rate limiting ─────────────────────────────────────────────────────────────
-app.use('/api/', rateLimit({ windowMs: 15 * 60 * 1000, max: 500 }));
+app.use('/api/', rateLimit({ windowMs: 15 * 60 * 1000, max: 5000 })); // High limit for bulk admin uploads
 app.use('/api/inquiries', rateLimit({ windowMs: 60 * 60 * 1000, max: 30 }));
 
 // ── Health ────────────────────────────────────────────────────────────────────

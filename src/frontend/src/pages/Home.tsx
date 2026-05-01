@@ -313,16 +313,16 @@ export default function Home() {
       "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
     description:
       "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units, anti-tarnish finish. Shipping to 30+ countries worldwide.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/",
+    canonical: "https://www.gemoraglobal.co/",
     ogTitle:
       "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
     ogDescription:
       "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units. Shipping to 30+ countries worldwide.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     isHomepage: true,
     speakable: true,
     breadcrumbs: [
-      { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
     ],
     faqItems: [
       {
@@ -354,9 +354,9 @@ export default function Home() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Gemora Global",
-      image: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
-      "@id": "https://gemoraglobal-tje.caffeine.xyz",
-      url: "https://gemoraglobal-tje.caffeine.xyz",
+      image: "https://www.gemoraglobal.co/images/og-banner.jpg",
+      "@id": "https://www.gemoraglobal.co",
+      url: "https://www.gemoraglobal.co",
       telephone: "+91-7976341419",
       email: "globalgemora@gmail.com",
       address: {

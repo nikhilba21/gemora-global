@@ -9,7 +9,7 @@ export default function ReturnRefundPolicy() {
     description:
       "Gemora Global wholesale jewellery return, refund, replacement & cancellation policy. 7-day returns for damaged/wrong items. 5–7 business day refunds. B2B wholesale policy.",
     canonical:
-      "https://gemoraglobal-tje.caffeine.xyz/return-refund-cancellation-policy",
+      "https://www.gemoraglobal.co/return-refund-cancellation-policy",
     ogTitle: "Return, Refund & Cancellation Policy | Gemora Global",
     ogDescription:
       "Return, refund, replacement & cancellation policy for wholesale imitation jewellery orders at Gemora Global.",
@@ -17,11 +17,11 @@ export default function ReturnRefundPolicy() {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Return, Refund, Replacement & Cancellation Policy — Gemora Global",
-      url: "https://gemoraglobal-tje.caffeine.xyz/return-refund-cancellation-policy",
+      url: "https://www.gemoraglobal.co/return-refund-cancellation-policy",
       publisher: {
         "@type": "Organization",
         name: "Gemora Global",
-        url: "https://gemoraglobal-tje.caffeine.xyz",
+        url: "https://www.gemoraglobal.co",
       },
     },
   });

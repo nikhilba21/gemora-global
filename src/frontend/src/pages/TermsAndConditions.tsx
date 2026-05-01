@@ -8,7 +8,7 @@ export default function TermsAndConditions() {
     title: "Terms & Conditions | Gemora Global — Wholesale Imitation Jewellery",
     description:
       "Terms and conditions for wholesale imitation jewellery purchases from Gemora Global. B2B wholesale context — ordering, pricing, shipping, intellectual property, and governing law.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/terms-and-conditions",
+    canonical: "https://www.gemoraglobal.co/terms-and-conditions",
     ogTitle: "Terms & Conditions | Gemora Global",
     ogDescription:
       "Terms and conditions for wholesale imitation jewellery from Gemora Global. B2B wholesale policy — ordering, pricing, shipping, and governing law (Rajasthan, India).",
@@ -16,11 +16,11 @@ export default function TermsAndConditions() {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Terms & Conditions — Gemora Global",
-      url: "https://gemoraglobal-tje.caffeine.xyz/terms-and-conditions",
+      url: "https://www.gemoraglobal.co/terms-and-conditions",
       publisher: {
         "@type": "Organization",
         name: "Gemora Global",
-        url: "https://gemoraglobal-tje.caffeine.xyz",
+        url: "https://www.gemoraglobal.co",
       },
     },
   });

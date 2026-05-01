@@ -21,7 +21,7 @@ export function ExportMarketTemplate({ p }: { p: ExportMarketData }) {
   usePageSEO({
     title: p.metaTitle,
     description: p.metaDesc,
-    canonical: `https://gemoraglobal-tje.caffeine.xyz/export-markets/${p.slug}`,
+    canonical: `https://www.gemoraglobal.co/export-markets/${p.slug}`,
   });
 
   return (

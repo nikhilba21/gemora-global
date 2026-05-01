@@ -201,22 +201,22 @@ export default function About() {
       "About Gemora Global — India's Premier Imitation Jewellery Manufacturer & Exporter | Jaipur",
     description:
       "Gemora Global is Jaipur's leading imitation jewellery manufacturer & exporter since 2011. 500+ designs in Kundan, Bridal, Oxidised & Fashion jewellery. MOQ 50 units.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/about",
+    canonical: "https://www.gemoraglobal.co/about",
     ogTitle:
       "About Gemora Global — Imitation Jewellery Manufacturer India Jaipur",
     ogDescription:
       "Established 2011. India's premier imitation jewellery manufacturer in Jaipur — wholesale Kundan, Bridal, Temple, Antique, Oxidised & Fashion Jewellery for global buyers.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-about.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-about.jpg",
     faqItems: FAQ_ITEMS,
     breadcrumbs: [
-      { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
-      { name: "About Us", url: "https://gemoraglobal-tje.caffeine.xyz/about" },
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
+      { name: "About Us", url: "https://www.gemoraglobal.co/about" },
     ],
     speakable: true,
     schema: {
       "@context": "https://schema.org",
       "@type": "AboutPage",
-      url: "https://gemoraglobal-tje.caffeine.xyz/about",
+      url: "https://www.gemoraglobal.co/about",
       name: "About Gemora Global — Imitation Jewellery Manufacturer India",
       description:
         "Gemora Global is a Jaipur-based imitation jewellery manufacturer established in 2011 with 10+ years of export experience serving 20+ countries.",

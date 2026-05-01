@@ -6,33 +6,33 @@ export default function JewelleryExporterNigeria() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to Nigeria | Wholesale Fashion Jewellery Africa | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Nigeria. Wholesale colourful fashion jewellery, gold-plated & oxidised sets for Lagos boutiques & West African distribution. MOQ 50 units, competitive pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-nigeria"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-nigeria"
       h1="Imitation Jewellery Exporter to Nigeria | Wholesale Fashion Jewellery Africa"
       targetKeyword="imitation jewellery exporter Nigeria wholesale Africa"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur to Nigerian boutiques, Lagos fashion retailers, and West African distributors. Colourful statement pieces, gold-plated sets, and bridal collections suited for Nigeria's vibrant fashion market. MOQ from 50 units, factory-direct pricing."
       hreflangs={[
         {
           lang: "en-NG",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-nigeria",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-nigeria",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Nigeria",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-nigeria",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
         },
       ]}
       schema={{

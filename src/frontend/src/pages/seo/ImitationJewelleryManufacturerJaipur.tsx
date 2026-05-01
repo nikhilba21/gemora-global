@@ -8,7 +8,7 @@ const schema = [
     name: "Gemora Global",
     description:
       "Imitation jewellery manufacturer and exporter in Jaipur, India. B2B wholesale supplier for global boutiques and distributors.",
-    url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-manufacturer-jaipur",
+    url: "https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur",
     telephone: "+91-7976341419",
     email: "globalgemora@gmail.com",
     address: {
@@ -122,19 +122,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Imitation Jewellery Manufacturer Jaipur",
-        item: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-manufacturer-jaipur",
+        item: "https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur",
       },
     ],
   },
@@ -145,7 +145,7 @@ export default function ImitationJewelleryManufacturerJaipur() {
     <SeoLandingPage
       title="Imitation Jewellery Manufacturer Jaipur | Gemora Global"
       metaDescription="Leading imitation jewellery manufacturer in Jaipur. Wholesale kundan, meenakari, bridal & fashion jewellery. MOQ 50 units, global export. Factory-direct pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-manufacturer-jaipur"
+      canonical="https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur"
       h1="Imitation Jewellery Manufacturer in Jaipur — GEMORA GLOBAL"
       targetKeyword="imitation jewellery manufacturer Jaipur"
       heroSubtitle="Gemora Global is Jaipur's trusted imitation jewellery manufacturer and B2B wholesale exporter. Factory-direct pricing on 500+ designs — kundan, meenakari, temple, oxidised, and bridal sets. MOQ from 50 units with worldwide shipping."

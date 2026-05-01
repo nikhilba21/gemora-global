@@ -54,11 +54,11 @@ export default function WhyChooseUs() {
       "Why Choose Gemora Global — India's Trusted Imitation Jewellery Exporter",
     description:
       "10+ years of export experience, anti-tarnish finishing, 500+ designs, factory-direct pricing, and reliable global shipping. Discover why boutiques and wholesalers in 15+ countries choose Gemora Global.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/why-choose-us",
+    canonical: "https://www.gemoraglobal.co/why-choose-us",
     ogTitle:
       "Why Choose Gemora Global — India's Trusted Imitation Jewellery Exporter",
     ogImage:
-      "https://gemoraglobal-tje.caffeine.xyz/images/og-why-choose-us.jpg",
+      "https://www.gemoraglobal.co/images/og-why-choose-us.jpg",
     schema: {
       "@context": "https://schema.org",
       "@type": "FAQPage",

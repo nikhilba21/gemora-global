@@ -109,19 +109,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Meenakari Jewellery Wholesale",
-        item: "https://gemoraglobal-tje.caffeine.xyz/meenakari-jewellery-wholesale",
+        item: "https://www.gemoraglobal.co/meenakari-jewellery-wholesale",
       },
     ],
   },
@@ -132,7 +132,7 @@ export default function MeenakariJewelleryWholesale() {
     <SeoLandingPage
       title="Meenakari Jewellery Wholesale | Jaipur Manufacturer"
       metaDescription="Meenakari jewellery wholesale from Jaipur manufacturer. Authentic enamel necklaces, earrings & bridal sets. MOQ 50 units, global export. Factory-direct pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/meenakari-jewellery-wholesale"
+      canonical="https://www.gemoraglobal.co/meenakari-jewellery-wholesale"
       h1="Meenakari Jewellery Wholesale — Jaipur Manufacturer & Exporter"
       targetKeyword="meenakari jewellery wholesale"
       heroSubtitle="Gemora Global is Jaipur's leading meenakari jewellery wholesale manufacturer and exporter. Authentic enamel-work meenakari necklaces, earrings, bangles, and bridal sets — factory-direct pricing with MOQ from 50 units and worldwide export."

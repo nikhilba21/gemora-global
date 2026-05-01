@@ -5,7 +5,7 @@ export default function BridalImitationJewelleryWholesale() {
     <SeoLandingPage
       title="Bridal Wedding Jewellery Sets Wholesale | Gemora"
       metaDescription="Wholesale bridal imitation jewellery for wedding boutiques. Complete sets with necklace, earrings, maang tikka. Export quality, worldwide shipping."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/bridal-imitation-jewellery-wholesale"
+      canonical="https://www.gemoraglobal.co/bridal-imitation-jewellery-wholesale"
       h1="Bridal Wedding Jewellery Sets Wholesale for Boutiques"
       targetKeyword="bridal jewellery sets wholesale supplier"
       heroSubtitle="Complete wholesale bridal imitation jewellery sets for wedding boutiques worldwide. Necklace, earrings, maang tikka, bangles — export quality with anti-tarnish finish."

@@ -6,15 +6,15 @@ export default function ImitationJewelleryExporterIndia() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter India | Export Docs & Trade Terms"
       metaDescription="Gemora Global exports imitation jewellery from Jaipur to 30+ countries. Complete export documentation, HS codes, FIRC certificates, international shipping. Est. 2011."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-exporter-india"
+      canonical="https://www.gemoraglobal.co/imitation-jewellery-exporter-india"
       h1="Imitation Jewellery Exporter India — Complete Export Solutions from Jaipur"
       targetKeyword="imitation jewellery exporter india"
       heroSubtitle="Established 2011, exporting to 30+ countries. Gemora Global is a Jaipur-based imitation jewellery exporter with full export documentation — commercial invoice, certificate of origin, HS code 7117, FIRC compliance, and international freight via DHL, FedEx, and sea cargo."
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Imitation Jewellery Exporter India",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-exporter-india",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-exporter-india",
         },
       ]}
       bodyContent={

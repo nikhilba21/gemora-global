@@ -5,37 +5,37 @@ export default function JewelleryExporterUAE() {
     <SeoLandingPage
       title="Jewellery Exporter UAE | Indian Imitation Jewellery"
       metaDescription="Export quality jewellery from India to UAE. Wholesale imitation jewellery for Dubai boutiques. Air freight 5-7 days, competitive wholesale pricing."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-uae"
       h1="Indian Jewellery Exporter to UAE | Dubai Wholesale"
       targetKeyword="imitation jewellery exporter uae"
       heroSubtitle="India's trusted jewellery exporter to UAE and the Middle East. Wholesale imitation jewellery for Dubai boutiques — air freight in 5–7 days, kundan & polki designs, competitive pricing."
       hreflangs={[
         {
           lang: "en-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter UAE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
       ]}
       bodyContent={

@@ -6,37 +6,37 @@ export default function JewelleryExporterAustralia() {
     <SeoLandingPage
       title="Indian Jewellery Exporter Australia | Wholesale Imitation Jewellery"
       metaDescription="Trusted Indian jewellery exporter to Australia. Wholesale imitation jewellery for Australian boutiques. MOQ 50 units, DHL/FedEx, full export documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-australia"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-australia"
       h1="Indian Jewellery Exporter to Australia | Wholesale"
       targetKeyword="imitation jewellery exporter australia"
       heroSubtitle="Gemora Global is India's trusted imitation jewellery wholesale supplier for Australian boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — DHL delivery in 5–8 days, MOQ from 50 units, full export documentation."
       hreflangs={[
         {
           lang: "en-AU",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-australia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-australia",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-australia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-australia",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Australia",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-australia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-australia",
         },
       ]}
       bodyContent={

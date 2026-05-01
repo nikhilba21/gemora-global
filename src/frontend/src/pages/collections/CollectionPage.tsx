@@ -20,7 +20,7 @@ export function CollectionPageTemplate({ p }: { p: CollectionPageData }) {
   usePageSEO({
     title: p.metaTitle,
     description: p.metaDesc,
-    canonical: `https://gemoraglobal-tje.caffeine.xyz/collections/${p.slug}`,
+    canonical: `https://www.gemoraglobal.co/collections/${p.slug}`,
   });
 
   return (

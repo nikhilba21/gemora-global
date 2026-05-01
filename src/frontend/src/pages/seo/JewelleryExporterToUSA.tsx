@@ -5,7 +5,7 @@ export default function JewelleryExporterToUSA() {
     <SeoLandingPage
       title="Jewellery Exporter to USA | Imitation Jewellery India"
       metaDescription="Export quality imitation jewellery from India to USA. Wholesale pricing, FedEx delivery, US customs documentation. Trusted supplier for US boutiques."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-to-usa"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-to-usa"
       h1="Indian Jewellery Exporter to USA | Wholesale Supply"
       targetKeyword="imitation jewellery exporter india to usa"
       heroSubtitle="Trusted imitation jewellery exporter from India to the USA. Wholesale pricing, FedEx delivery in 5–8 days, complete US customs documentation. Serving US boutiques since 2013."

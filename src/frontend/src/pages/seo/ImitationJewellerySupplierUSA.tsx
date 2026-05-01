@@ -6,41 +6,41 @@ export default function ImitationJewellerySupplierUSA() {
     <SeoLandingPage
       title="Imitation Jewellery Supplier USA | Gemora Global"
       metaDescription="Trusted imitation jewellery supplier for USA buyers. Wholesale Indian fashion jewellery shipped to all US states. MOQ 50 units, FedEx/DHL, full documentation."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa"
+      canonical="https://www.gemoraglobal.co/imitation-jewellery-supplier-usa"
       h1="Imitation Jewellery Supplier USA | Indian Wholesale"
       targetKeyword="imitation jewellery supplier usa"
       heroSubtitle="Gemora Global is India's trusted imitation jewellery supplier for the USA market. Wholesale fashion jewellery shipped directly to all US states via FedEx and DHL. Factory-direct pricing in USD, MOQ from 50 units."
       hreflangs={[
         {
           lang: "en",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-US",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
         {
           lang: "en-GB",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-supplier-uk",
+          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
         },
         {
           lang: "en-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Imitation Jewellery Supplier USA",
-          url: "https://gemoraglobal-tje.caffeine.xyz/imitation-jewellery-supplier-usa",
+          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
         },
       ]}
       bodyContent={

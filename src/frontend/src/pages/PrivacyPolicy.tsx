@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     title: "Privacy Policy | Gemora Global — Imitation Jewellery Exporter",
     description:
       "Gemora Global privacy policy — how we collect, use, and protect your personal data. B2B wholesale imitation jewellery export from Jaipur, India.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/privacy-policy",
+    canonical: "https://www.gemoraglobal.co/privacy-policy",
     ogTitle: "Privacy Policy | Gemora Global",
     ogDescription:
       "Gemora Global privacy policy — how we collect, use, and protect your personal data.",
@@ -16,11 +16,11 @@ export default function PrivacyPolicy() {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Privacy Policy — Gemora Global",
-      url: "https://gemoraglobal-tje.caffeine.xyz/privacy-policy",
+      url: "https://www.gemoraglobal.co/privacy-policy",
       publisher: {
         "@type": "Organization",
         name: "Gemora Global",
-        url: "https://gemoraglobal-tje.caffeine.xyz",
+        url: "https://www.gemoraglobal.co",
       },
     },
   });
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
               Policy explains how we collect, use, disclose, and protect
               personal information provided by visitors to our website (
               <a
-                href="https://gemoraglobal-tje.caffeine.xyz"
+                href="https://www.gemoraglobal.co"
                 className="text-primary hover:underline"
               >
                 gemoraglobal-tje.caffeine.xyz

@@ -56,19 +56,19 @@ const schema = [
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://gemoraglobal-tje.caffeine.xyz/",
+        item: "https://www.gemoraglobal.co/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Our Services",
-        item: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+        item: "https://www.gemoraglobal.co/wholesale",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Oxidised Jewellery Wholesale",
-        item: "https://gemoraglobal-tje.caffeine.xyz/oxidised-jewellery-wholesale",
+        item: "https://www.gemoraglobal.co/oxidised-jewellery-wholesale",
       },
     ],
   },
@@ -78,7 +78,7 @@ const schema = [
     name: "Gemora Global",
     description:
       "Oxidised jewellery wholesale manufacturer and exporter from Jaipur, Rajasthan, India.",
-    url: "https://gemoraglobal-tje.caffeine.xyz/oxidised-jewellery-wholesale",
+    url: "https://www.gemoraglobal.co/oxidised-jewellery-wholesale",
     telephone: "+91-7976341419",
     address: {
       "@type": "PostalAddress",
@@ -96,7 +96,7 @@ export default function OxidisedJewelleryWholesale() {
     <SeoLandingPage
       title="Oxidised Jewellery Wholesale India | Gemora Global"
       metaDescription="Premium oxidised jewellery wholesale from India. Antique silver-finish necklaces, earrings & bracelets in bulk. Low MOQ, worldwide export from Jaipur."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/oxidised-jewellery-wholesale"
+      canonical="https://www.gemoraglobal.co/oxidised-jewellery-wholesale"
       h1="Oxidised Jewellery Wholesale Supplier India"
       targetKeyword="oxidised jewellery wholesale"
       heroSubtitle="Gemora Global is a leading oxidised jewellery wholesale supplier from Jaipur, India. Antique silver-finish earrings, necklaces, bracelets, rings and sets for boutiques and international buyers. MOQ from 50 units."

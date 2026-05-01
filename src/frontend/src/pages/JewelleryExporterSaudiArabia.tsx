@@ -6,37 +6,37 @@ export default function JewelleryExporterSaudiArabia() {
     <SeoLandingPage
       title="Imitation Jewellery Exporter to Saudi Arabia | Wholesale Jewellery Supplier KSA | Gemora Global"
       metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Saudi Arabia. Wholesale gold-plated, Kundan, Bridal jewellery for Riyadh & Jeddah boutiques. MOQ 50 units, GCC export docs, DHL to KSA in 7–10 days."
-      canonical="https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-saudi-arabia"
+      canonical="https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia"
       h1="Imitation Jewellery Exporter to Saudi Arabia | Wholesale Jewellery Supplier KSA"
       targetKeyword="imitation jewellery exporter Saudi Arabia wholesale KSA"
       heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to Saudi Arabia boutiques, Riyadh mall retailers, and Jeddah wholesale traders. Factory-direct pricing, MOQ from 50 units, full GCC export documentation, and DHL delivery to KSA in 7–10 days."
       hreflangs={[
         {
           lang: "ar-SA",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-saudi-arabia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
         },
         {
           lang: "ar-AE",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-uae",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
         },
         {
           lang: "ar-KW",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-kuwait",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
         },
         {
           lang: "x-default",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-saudi-arabia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
         },
       ]}
       breadcrumbs={[
-        { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Wholesale",
-          url: "https://gemoraglobal-tje.caffeine.xyz/wholesale",
+          url: "https://www.gemoraglobal.co/wholesale",
         },
         {
           name: "Jewellery Exporter Saudi Arabia",
-          url: "https://gemoraglobal-tje.caffeine.xyz/jewellery-exporter-saudi-arabia",
+          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
         },
       ]}
       schema={{

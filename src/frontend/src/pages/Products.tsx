@@ -561,16 +561,16 @@ export default function Products() {
       "Imitation Jewellery Wholesale Catalogue — 500+ Designs | Gemora Global",
     description:
       "Browse Gemora Global's imitation jewellery wholesale catalogue — necklaces, earrings, bangles, rings, bridal sets. MOQ 50 pcs. Anti-tarnish. Export from Jaipur, India.",
-    canonical: "https://gemoraglobal-tje.caffeine.xyz/products",
+    canonical: "https://www.gemoraglobal.co/products",
     ogTitle: "Imitation Jewellery Wholesale Catalogue | Gemora Global",
     ogDescription:
       "500+ wholesale imitation jewellery designs. MOQ 50 units. Factory-direct from Jaipur, India. Shipping to UAE, USA, UK & Europe.",
-    ogImage: "https://gemoraglobal-tje.caffeine.xyz/images/og-banner.jpg",
+    ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",
     schema: [
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        url: "https://gemoraglobal-tje.caffeine.xyz/products",
+        url: "https://www.gemoraglobal.co/products",
         name: "Wholesale Imitation Jewellery Products | Gemora Global",
         description:
           "500+ wholesale imitation jewellery designs — necklaces, earrings, bangles, rings, bridal sets. Manufacturer from Jaipur, India.",
@@ -581,13 +581,13 @@ export default function Products() {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://gemoraglobal-tje.caffeine.xyz/",
+              item: "https://www.gemoraglobal.co/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Products",
-              item: "https://gemoraglobal-tje.caffeine.xyz/products",
+              item: "https://www.gemoraglobal.co/products",
             },
           ],
         },
@@ -625,7 +625,7 @@ export default function Products() {
     setCurrentPage(0);
   }, [activeCatId, search, filters]);
 
-  const actorReady = !!actor && !actorFetching;
+  const actorReady = true; // REST API actor is always ready
 
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
