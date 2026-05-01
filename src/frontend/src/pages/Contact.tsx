@@ -12,8 +12,10 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
+import { useCanonical } from '../hooks/useCanonical';
 
 export default function Contact() {
+  useCanonical();
   const { content: pageContent } = usePageContent("contact");
 
   usePageSEO({

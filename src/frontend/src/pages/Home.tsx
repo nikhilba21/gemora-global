@@ -13,6 +13,7 @@ import { useActor } from "../hooks/useActor";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product, Testimonial } from "../types";
+import { useCanonical } from '../hooks/useCanonical';
 
 /** Remove Kanhai Jewels boilerplate text from product descriptions */
 function cleanText(text: string): string {
@@ -296,6 +297,7 @@ function ProductCard({
 
 // ── Main Component ─────────────────────────────────────────────
 export default function Home() {
+  useCanonical();
   const { actor } = useActor();
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(
     null,

@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { ALL_BLOG_POSTS, type BlogPost } from "../utils/blogStore";
+import { useCanonical } from '../hooks/useCanonical';
 
 /** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
 function HtmlContent({
@@ -41,6 +42,7 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function BlogPostPage() {
+  useCanonical();
   const { slug } = useParams() as { slug: string };
   const { actor } = useActor();
 

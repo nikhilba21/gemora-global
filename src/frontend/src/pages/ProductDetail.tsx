@@ -20,6 +20,7 @@ import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useQuoteCart } from "../hooks/useQuoteCart";
 import type { Category, Product } from "../types";
+import { useCanonical } from '../hooks/useCanonical';
 
 // ─── Fallback sample product data ─────────────────────────────────────────────
 
@@ -213,6 +214,7 @@ function RelatedProductCard({
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function ProductDetail() {
+  useCanonical();
   const { id } = useParams() as { id: string };
   const { actor } = useActor();
   const { addToCart, setOpen: setCartOpen } = useQuoteCart();

@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { GalleryItem } from "../types";
+import { useCanonical } from '../hooks/useCanonical';
 
 const GALLERY_PAGE_SIZE = 12;
 
@@ -43,6 +44,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 };
 
 export default function Gallery() {
+  useCanonical();
   usePageSEO({
     title:
       "Imitation Jewellery Photo Gallery — Wholesale Catalogue | Gemora Global",

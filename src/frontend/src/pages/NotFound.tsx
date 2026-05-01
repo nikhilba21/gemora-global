@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { useCanonical } from '../hooks/useCanonical';
 
 export default function NotFound() {
+  useCanonical();
   useEffect(() => {
     // Tell search engines not to index 404 pages
     let robotsMeta = document.querySelector(

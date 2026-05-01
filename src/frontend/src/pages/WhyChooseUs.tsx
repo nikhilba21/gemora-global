@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
+import { useCanonical } from '../hooks/useCanonical';
 
 const REASONS = [
   {
@@ -49,6 +50,7 @@ const FAQ = [
 ];
 
 export default function WhyChooseUs() {
+  useCanonical();
   usePageSEO({
     title:
       "Why Choose Gemora Global — India's Trusted Imitation Jewellery Exporter",

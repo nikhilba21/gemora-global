@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
+import { useCanonical } from '../hooks/useCanonical';
 
 const BLOG_PAGE_SIZE = 12;
 
@@ -85,6 +86,7 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function Blog() {
+  useCanonical();
   usePageSEO({
     title: "Jewellery Export Trends 2025 — Guides & Tips | Gemora Global Blog",
     description:

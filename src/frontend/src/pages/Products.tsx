@@ -31,6 +31,7 @@ import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useQuoteCart } from "../hooks/useQuoteCart";
 import type { Category, Product } from "../types";
+import { useCanonical } from '../hooks/useCanonical';
 
 // ─── Static maps ──────────────────────────────────────────────────────────────
 
@@ -556,6 +557,7 @@ function ProductCard({
 // ─── Main Products Page ───────────────────────────────────────────────────────
 
 export default function Products() {
+  useCanonical();
   usePageSEO({
     title:
       "Imitation Jewellery Wholesale Catalogue — 500+ Designs | Gemora Global",

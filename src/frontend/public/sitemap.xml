@@ -1,303 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Core Pages -->
+  <!-- ═══ CORE PAGES ═══ -->
   <url>
     <loc>https://www.gemoraglobal.co/</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/products</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/products"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/products"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/wholesale</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/wholesale"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/wholesale"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/about</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/about"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/contact</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/contact"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/gallery</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/gallery"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/blog</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/blog"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/export</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/why-choose-us</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/faq</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
   </url>
 
-  <!-- Collections -->
+  <!-- ═══ COLLECTIONS ═══ -->
   <url>
     <loc>https://www.gemoraglobal.co/collections/earrings</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/collections/earrings"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.gemoraglobal.co/collections/earrings"/>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.gemoraglobal.co/collections/earrings"/>
+    <xhtml:link rel="alternate" hreflang="en-ae" href="https://www.gemoraglobal.co/collections/earrings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/collections/earrings"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/necklaces</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/collections/bracelets</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/collections/necklaces"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.gemoraglobal.co/collections/necklaces"/>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.gemoraglobal.co/collections/necklaces"/>
+    <xhtml:link rel="alternate" hreflang="en-ae" href="https://www.gemoraglobal.co/collections/necklaces"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/collections/necklaces"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/rings</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/collections/rings"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.gemoraglobal.co/collections/rings"/>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.gemoraglobal.co/collections/rings"/>
+    <xhtml:link rel="alternate" hreflang="en-ae" href="https://www.gemoraglobal.co/collections/rings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/collections/rings"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/bracelets</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/collections/bracelets"/>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.gemoraglobal.co/collections/bracelets"/>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.gemoraglobal.co/collections/bracelets"/>
+    <xhtml:link rel="alternate" hreflang="en-ae" href="https://www.gemoraglobal.co/collections/bracelets"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/collections/bracelets"/>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/party-wear-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/daily-wear-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/minimalist-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/oxidised-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/trendy-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.gemoraglobal.co/collections/korean-jewelry</loc>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/bridal-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/gold-plated-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/kundan-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/meenakari-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/antique-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/temple-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/statement-earrings</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/minimalist-earrings</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/party-wear-necklaces</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/oxidised-rings</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/korean-necklaces</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/daily-wear-earrings</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/indo-western-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/silver-oxidised-jewelry</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/collections/wholesale-bangles</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- ═══ EXPORT MARKET PAGES (with hreflang) ═══ -->
   <url>
-    <loc>https://www.gemoraglobal.co/blog/top-imitation-jewellery-trends-2026</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/usa</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://www.gemoraglobal.co/export-markets/usa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/usa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/usa"/>
   </url>
   <url>
-    <loc>https://www.gemoraglobal.co/blog/how-to-start-jewellery-wholesale-import-business</loc>
-    <lastmod>2026-02-28</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/uk</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-gb" href="https://www.gemoraglobal.co/export-markets/uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/uk"/>
   </url>
   <url>
-    <loc>https://www.gemoraglobal.co/blog/why-indian-imitation-jewellery-dominates-global-markets</loc>
-    <lastmod>2026-02-14</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/uae</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-ae" href="https://www.gemoraglobal.co/export-markets/uae"/>
+    <xhtml:link rel="alternate" hreflang="ar-ae" href="https://www.gemoraglobal.co/export-markets/uae"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/uae"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/uae"/>
   </url>
   <url>
-    <loc>https://www.gemoraglobal.co/blog/bridal-jewellery-collections-international-buyers</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/australia</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-au" href="https://www.gemoraglobal.co/export-markets/australia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/australia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/australia"/>
   </url>
   <url>
-    <loc>https://www.gemoraglobal.co/blog/export-jewellery-india-usa-guide</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/canada</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-ca" href="https://www.gemoraglobal.co/export-markets/canada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/canada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/canada"/>
   </url>
   <url>
-    <loc>https://www.gemoraglobal.co/blog/private-label-jewellery-india-guide</loc>
-    <lastmod>2025-12-20</lastmod>
+    <loc>https://www.gemoraglobal.co/export-markets/kuwait</loc>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-kw" href="https://www.gemoraglobal.co/export-markets/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/kuwait"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/kuwait"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/malaysia</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://www.gemoraglobal.co/export-markets/malaysia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/malaysia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/malaysia"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/singapore</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://www.gemoraglobal.co/export-markets/singapore"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/singapore"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/singapore"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/saudi-arabia</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-sa" href="https://www.gemoraglobal.co/export-markets/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="ar-sa" href="https://www.gemoraglobal.co/export-markets/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/saudi-arabia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/saudi-arabia"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/nigeria</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-ng" href="https://www.gemoraglobal.co/export-markets/nigeria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/nigeria"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/nigeria"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/sri-lanka</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-lk" href="https://www.gemoraglobal.co/export-markets/sri-lanka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/sri-lanka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/sri-lanka"/>
+  </url>
+  <url>
+    <loc>https://www.gemoraglobal.co/export-markets/france</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-fr" href="https://www.gemoraglobal.co/export-markets/france"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gemoraglobal.co/export-markets/france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gemoraglobal.co/export-markets/france"/>
   </url>
 
-  <!-- SEO Landing Pages -->
-  <url>
-    <loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-india</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/artificial-jewellery-wholesaler-india</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/fashion-jewellery-exporter-india</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/wholesale-jewellery-rajasthan</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/meenakari-jewellery-wholesale</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/oxidised-jewellery-wholesale</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/oxidised-jewellery-supplier</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/imitation-jewellery-supplier-usa</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/wholesale-jewellery-uk</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/jewellery-exporter-australia</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/jewellery-exporter-canada</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/jewellery-exporter-singapore</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/jewellery-exporter-europe</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-france</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/export-indian-fashion-jewellery-australia</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-germany-eu</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-canada</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/export-imitation-jewellery-singapore</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- ═══ SEO LANDING PAGES ═══ -->
+  <url><loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/artificial-jewellery-wholesaler-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/fashion-jewellery-exporter-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/imitation-jewellery-exporter-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/wholesale-imitation-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/wholesale-imitation-jewellery-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/bridal-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/bridal-imitation-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/bridal-imitation-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/fashion-jewellery-exporter</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/fashion-jewellery-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/custom-jewellery-manufacturer</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/bulk-jewellery-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/private-label-jewellery-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/kundan-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/temple-jewellery-manufacturer</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/artificial-jewellery-exporter</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/oxidised-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/oxidised-jewellery-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/meenakari-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/wholesale-jewellery-rajasthan</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-to-usa</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-supplier-uk</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-uae</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/imitation-jewellery-supplier-uae</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/imitation-jewellery-supplier-usa</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/wholesale-jewellery-uk</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-australia</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-canada</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-singapore</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-europe</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-kuwait</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-malaysia</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-nigeria</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/jewellery-exporter-sri-lanka</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/export-imitation-jewellery-france</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/export-indian-fashion-jewellery-australia</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/export-imitation-jewellery-germany-eu</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/export-imitation-jewellery-canada</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.gemoraglobal.co/export-imitation-jewellery-singapore</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Legal -->
-  <url>
-    <loc>https://www.gemoraglobal.co/privacy-policy</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/terms-and-conditions</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.gemoraglobal.co/return-refund-cancellation-policy</loc>
-    <lastmod>2026-04-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- ═══ BLOG POSTS (100 posts) ═══ -->
+  <url><loc>https://www.gemoraglobal.co/blog/best-imitation-jewellery-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/top-fashion-jewellery-exporter-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/wholesale-imitation-jewellery-suppliers-jaipur</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bulk-fashion-jewellery-manufacturer-global-buyers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/indian-costume-jewellery-exporter-retailers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-import-imitation-jewellery-from-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/why-buy-fashion-jewellery-indian-manufacturers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/trusted-imitation-jewellery-wholesale-supplier-worldwide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/oem-fashion-jewellery-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/private-label-imitation-jewellery-exporter</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/request-wholesale-jewellery-catalogue-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bulk-order-fashion-jewellery-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/anti-tarnish-jewellery-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/b2b-marketing-for-jewellery-manufacturers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/best-catalogue-for-jewellery-retailers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/best-indian-jewellery-exporter-to-canada</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/best-jewellery-manufacturing-city-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/best-jewellery-supplier-for-resellers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/best-packaging-imitation-jewellery-shipping</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/boho-jewellery-trends-for-boutiques</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/brass-jewellery-manufacturer-india-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bridal-fashion-jewellery-trends-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bridal-jewellery-set-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bulk-costume-jewellery-australia-boutiques</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bulk-necklace-sets-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/buy-latest-jewellery-collection-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/choosing-certified-export-partner-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/contact-trusted-exporter-for-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/custom-charm-bracelets-manufacturer-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/custom-jewellery-boxes-for-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/dropshipping-fashion-jewellery-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/dubai-fashion-jewellery-sourcing-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/dust-bags-and-boxes-for-jewellery-brands</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/eco-friendly-jewellery-packaging-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/email-marketing-for-jewellery-buyers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/europe-fashion-jewellery-import-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/export-customs-guide-for-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/export-documentation-for-jewellery-business</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/fashion-bangles-exporter-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/fashion-jewellery-suppliers-uk-retailers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/fast-delivery-wholesale-jewellery-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/gen-z-jewellery-trends-2026</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/get-custom-jewellery-quote-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/global-delivery-solutions-for-wholesalers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/gold-plated-imitation-jewellery-exporter</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/google-ranking-tips-for-jewellery-exporter</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/grow-wholesale-jewellery-business-globally</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/handmade-vs-machine-made-imitation-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-boutiques-source-imitation-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-imitation-jewellery-manufactured-jaipur</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-avoid-scam-wholesale-suppliers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-buy-wholesale-jewellery-in-bulk</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-choose-reliable-jewellery-manufacturer</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-get-foreign-buyers-for-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-reduce-shipping-costs-jewellery-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-scale-jewellery-exports-fast</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-ship-jewellery-internationally</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-start-jewellery-export-business-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-verify-jewellery-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/hypoallergenic-fashion-jewellery-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/imitation-jewellery-supplier-usa-market</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/imitation-rings-wholesale-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/instagram-leads-for-jewellery-exporters</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/jewellery-supplier-for-amazon-sellers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/jewellery-wholesalers-philippines-market</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/korean-inspired-jewellery-wholesale-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/linkedin-strategy-wholesale-jewellery-business</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/long-term-sourcing-partner-benefits-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/luxury-look-imitation-jewellery-trends</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/minimal-jewellery-trend-for-women</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/minimium-order-quantity-jewellery-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/moq-for-custom-jewellery-manufacturer</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/nickel-free-imitation-jewellery-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/office-wear-jewellery-styles-wholesale</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/pearl-fashion-jewellery-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/premium-finishing-fashion-jewellery-manufacturing</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/premium-imitation-jewellery-bulk-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/quality-control-fashion-jewellery-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/questions-to-ask-jewellery-manufacturer</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/retail-ready-jewellery-packaging-supplier</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/safe-courier-options-jewellery-export</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/saudi-arabia-jewellery-import-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/seo-for-imitation-jewellery-website</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/singapore-fashion-jewellery-wholesale-source</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/stainless-steel-jewellery-wholesaler-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/start-jewellery-boutique-wholesale-stock</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/start-private-label-jewellery-brand-today</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/statement-necklace-trends-global-market</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/top-fashion-jewellery-trends-2026</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/top-mistakes-when-importing-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/trending-earrings-styles-worldwide-2026</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/trendy-anklets-supplier-boutiques</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/wholesale-earrings-supplier-india</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/wholesale-jewellery-exporter-to-uae</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/wholesale-jewellery-for-instagram-stores</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/wholesale-jewellery-inquiry-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/why-gemora-global-manufacturers-stand-out</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/why-global-buyers-trust-indian-suppliers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/why-jaipur-is-hub-of-imitation-jewellery</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/zinc-alloy-jewellery-exporter-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/top-imitation-jewellery-trends-2026</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/how-to-start-jewellery-wholesale-import-business</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/why-indian-imitation-jewellery-dominates-global-markets</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/bridal-jewellery-collections-international-buyers</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/export-jewellery-india-usa-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.gemoraglobal.co/blog/private-label-jewellery-india-guide</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- ═══ LEGAL PAGES ═══ -->
+  <url><loc>https://www.gemoraglobal.co/privacy-policy</loc><lastmod>2026-05-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.gemoraglobal.co/terms-and-conditions</loc><lastmod>2026-05-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.gemoraglobal.co/return-refund-cancellation-policy</loc><lastmod>2026-05-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
 </urlset>
