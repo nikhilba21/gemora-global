@@ -1,22 +1,30 @@
-// src/routes/dashboard.js
 const express = require('express');
-const { db } = require('../db/database');
+const { query } = require('../db/database');
 const { requireAdmin } = require('../middleware/auth');
 const router = express.Router();
 
-// GET /api/dashboard/stats (Admin)
-router.get('/stats', requireAdmin, (req, res) => {
-  const stats = {
-    totalProducts: db.prepare('SELECT COUNT(*) as c FROM products').get().c,
-    totalCategories: db.prepare('SELECT COUNT(*) as c FROM categories').get().c,
-    totalInquiries: db.prepare('SELECT COUNT(*) as c FROM inquiries').get().c,
-    newInquiries: db.prepare("SELECT COUNT(*) as c FROM inquiries WHERE status = 'new'").get().c,
-    totalGalleryItems: db.prepare('SELECT COUNT(*) as c FROM gallery_items').get().c,
-    totalBlogPosts: db.prepare('SELECT COUNT(*) as c FROM blog_posts').get().c,
-    totalCatalogues: db.prepare('SELECT COUNT(*) as c FROM catalogues').get().c,
-    totalVisits: 0,
-  };
-  res.json(stats);
+router.get('/stats', requireAdmin, async (req, res) => {
+  try {
+    const [p,c,i,ni,g,b,cat] = await Promise.all([
+      query('SELECT COUNT(*) as c FROM products'),
+      query('SELECT COUNT(*) as c FROM categories'),
+      query('SELECT COUNT(*) as c FROM inquiries'),
+      query("SELECT COUNT(*) as c FROM inquiries WHERE status='new'"),
+      query('SELECT COUNT(*) as c FROM gallery_items'),
+      query('SELECT COUNT(*) as c FROM blog_posts'),
+      query('SELECT COUNT(*) as c FROM catalogues'),
+    ]);
+    res.json({
+      totalProducts: parseInt(p.rows[0].c),
+      totalCategories: parseInt(c.rows[0].c),
+      totalInquiries: parseInt(i.rows[0].c),
+      newInquiries: parseInt(ni.rows[0].c),
+      totalGalleryItems: parseInt(g.rows[0].c),
+      totalBlogPosts: parseInt(b.rows[0].c),
+      totalCatalogues: parseInt(cat.rows[0].c),
+      totalVisits: 0,
+    });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 module.exports = router;

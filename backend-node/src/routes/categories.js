@@ -1,47 +1,54 @@
 const express = require('express');
-const { db } = require('../db/database');
+const { query } = require('../db/database');
 const { requireAdmin } = require('../middleware/auth');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  try { res.json(db.prepare('SELECT * FROM categories ORDER BY sortOrder ASC').all()); }
-  catch(e) { res.status(500).json({ error: e.message }); }
-});
-
-router.get('/:id', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const row = db.prepare('SELECT * FROM categories WHERE id=?').get(req.params.id);
-    if (!row) return res.status(404).json({ error: 'Not found' });
-    res.json(row);
-  } catch(e) { res.status(500).json({ error: e.message }); }
+    const r = await query('SELECT * FROM categories ORDER BY "sortOrder" ASC');
+    res.json(r.rows);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-router.post('/', requireAdmin, (req, res) => {
+router.get('/:id', async (req, res) => {
+  try {
+    const r = await query('SELECT * FROM categories WHERE id=$1', [req.params.id]);
+    if (!r.rows[0]) return res.status(404).json({ error: 'Not found' });
+    res.json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+router.post('/', requireAdmin, async (req, res) => {
   try {
     const { name, description='', imageUrl='', sortOrder=0 } = req.body;
     if (!name) return res.status(400).json({ error: 'name required' });
-    const r = db.prepare('INSERT INTO categories(name,description,imageUrl,sortOrder) VALUES(?,?,?,?)').run(name,description,imageUrl,sortOrder);
-    res.status(201).json(db.prepare('SELECT * FROM categories WHERE id=?').get(r.lastInsertRowid));
-  } catch(e) { res.status(500).json({ error: e.message }); }
-});
-
-router.put('/:id', requireAdmin, (req, res) => {
-  try {
-    const ex = db.prepare('SELECT * FROM categories WHERE id=?').get(req.params.id);
-    if (!ex) return res.status(404).json({ error: 'Not found' });
-    const { name, description, imageUrl, sortOrder } = req.body;
-    db.prepare('UPDATE categories SET name=?,description=?,imageUrl=?,sortOrder=? WHERE id=?').run(
-      name??ex.name, description??ex.description, imageUrl??ex.imageUrl, sortOrder??ex.sortOrder, req.params.id
+    const r = await query(
+      'INSERT INTO categories(name,description,"imageUrl","sortOrder") VALUES($1,$2,$3,$4) RETURNING *',
+      [name, description, imageUrl, sortOrder]
     );
-    res.json(db.prepare('SELECT * FROM categories WHERE id=?').get(req.params.id));
-  } catch(e) { res.status(500).json({ error: e.message }); }
+    res.status(201).json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-router.delete('/:id', requireAdmin, (req, res) => {
+router.put('/:id', requireAdmin, async (req, res) => {
   try {
-    db.prepare('DELETE FROM categories WHERE id=?').run(req.params.id);
+    const ex = await query('SELECT * FROM categories WHERE id=$1', [req.params.id]);
+    if (!ex.rows[0]) return res.status(404).json({ error: 'Not found' });
+    const { name, description, imageUrl, sortOrder } = req.body;
+    const e = ex.rows[0];
+    const r = await query(
+      'UPDATE categories SET name=$1,description=$2,"imageUrl"=$3,"sortOrder"=$4 WHERE id=$5 RETURNING *',
+      [name??e.name, description??e.description, imageUrl??e.imageUrl, sortOrder??e.sortOrder, req.params.id]
+    );
+    res.json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+router.delete('/:id', requireAdmin, async (req, res) => {
+  try {
+    await query('DELETE FROM categories WHERE id=$1', [req.params.id]);
     res.json({ success: true });
-  } catch(e) { res.status(500).json({ error: e.message }); }
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 module.exports = router;

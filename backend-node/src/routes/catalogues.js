@@ -1,23 +1,30 @@
-// src/routes/catalogues.js
 const express = require('express');
-const { db } = require('../db/database');
+const { query } = require('../db/database');
 const { requireAdmin } = require('../middleware/auth');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json(db.prepare('SELECT * FROM catalogues ORDER BY createdAt DESC').all());
+router.get('/', async (req, res) => {
+  try {
+    const r = await query('SELECT * FROM catalogues ORDER BY "createdAt" DESC');
+    res.json(r.rows);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
-
-router.post('/', requireAdmin, (req, res) => {
-  const { title, description = '', fileUrl = '', fileName = '', uploadedAt = '' } = req.body;
-  if (!title) return res.status(400).json({ error: 'title required' });
-  const r = db.prepare('INSERT INTO catalogues (title, description, fileUrl, fileName, uploadedAt) VALUES (?, ?, ?, ?, ?)').run(title, description, fileUrl, fileName, uploadedAt);
-  res.status(201).json(db.prepare('SELECT * FROM catalogues WHERE id = ?').get(r.lastInsertRowid));
+router.post('/', requireAdmin, async (req, res) => {
+  try {
+    const { title,description='',fileUrl='',fileName='',uploadedAt='' } = req.body;
+    if (!title) return res.status(400).json({ error: 'title required' });
+    const r = await query(
+      'INSERT INTO catalogues(title,description,"fileUrl","fileName","uploadedAt") VALUES($1,$2,$3,$4,$5) RETURNING *',
+      [title,description,fileUrl,fileName,uploadedAt]
+    );
+    res.status(201).json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
-
-router.delete('/:id', requireAdmin, (req, res) => {
-  db.prepare('DELETE FROM catalogues WHERE id = ?').run(req.params.id);
-  res.json({ success: true });
+router.delete('/:id', requireAdmin, async (req, res) => {
+  try {
+    await query('DELETE FROM catalogues WHERE id=$1', [req.params.id]);
+    res.json({ success: true });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 module.exports = router;

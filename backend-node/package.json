@@ -1,6 +1,6 @@
 {
   "name": "gemora-global-backend",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Gemora Global Node.js Backend API",
   "main": "src/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "better-sqlite3": "^9.4.3",
+    "pg": "^8.11.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "bcryptjs": "^2.4.3",

@@ -1,40 +1,40 @@
-// src/routes/content.js
 const express = require('express');
-const { db } = require('../db/database');
+const { query } = require('../db/database');
 const { requireAdmin } = require('../middleware/auth');
 const router = express.Router();
 
-// GET /api/content/:key
-router.get('/:key', (req, res) => {
-  const row = db.prepare('SELECT value FROM content WHERE key = ?').get(req.params.key);
-  res.json({ value: row ? row.value : null });
+router.get('/page/:pageId', async (req, res) => {
+  try {
+    const prefix = req.params.pageId + '.';
+    const r = await query("SELECT key, value FROM content WHERE key LIKE $1", [prefix+'%']);
+    res.json(r.rows.map(row => [row.key.replace(prefix,''), row.value]));
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// GET /api/content/page/:pageId
-router.get('/page/:pageId', (req, res) => {
-  const prefix = req.params.pageId + '.';
-  const rows = db.prepare("SELECT key, value FROM content WHERE key LIKE ?").all(prefix + '%');
-  const result = rows.map(r => [r.key.replace(prefix, ''), r.value]);
-  res.json(result);
+router.get('/:key', async (req, res) => {
+  try {
+    const r = await query('SELECT value FROM content WHERE key=$1', [req.params.key]);
+    res.json({ value: r.rows[0]?.value || null });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// POST /api/content (Admin) - set a single key
-router.post('/', requireAdmin, (req, res) => {
-  const { key, value } = req.body;
-  if (!key) return res.status(400).json({ error: 'key required' });
-  db.prepare('INSERT OR REPLACE INTO content (key, value) VALUES (?, ?)').run(key, value);
-  res.json({ success: true });
+router.post('/', requireAdmin, async (req, res) => {
+  try {
+    const { key, value } = req.body;
+    await query('INSERT INTO content(key,value) VALUES($1,$2) ON CONFLICT(key) DO UPDATE SET value=$2', [key,value]);
+    res.json({ success: true });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// POST /api/content/page (Admin) - set multiple fields for a page
-router.post('/page', requireAdmin, (req, res) => {
-  const { pageId, fields } = req.body;
-  if (!pageId || !Array.isArray(fields)) return res.status(400).json({ error: 'pageId and fields array required' });
-  const insert = db.prepare('INSERT OR REPLACE INTO content (key, value) VALUES (?, ?)');
-  for (const [field, value] of fields) {
-    insert.run(`${pageId}.${field}`, value);
-  }
-  res.json({ success: true });
+router.post('/page', requireAdmin, async (req, res) => {
+  try {
+    const { pageId, fields } = req.body;
+    for (const [field, value] of fields) {
+      await query('INSERT INTO content(key,value) VALUES($1,$2) ON CONFLICT(key) DO UPDATE SET value=$2',
+        [`${pageId}.${field}`, value]);
+    }
+    res.json({ success: true });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 module.exports = router;
