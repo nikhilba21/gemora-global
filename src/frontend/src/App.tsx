@@ -51,6 +51,7 @@ import AdminSystemSettings from "./pages/admin/AdminSystemSettings";
 import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminWebsiteSettings from "./pages/admin/AdminWebsiteSettings";
 import AdminWhatsAppLeads from "./pages/admin/AdminWhatsAppLeads";
+import AdminGalleryFolders from "./pages/admin/AdminGalleryFolders";
 // Collections
 import Bracelets from "./pages/collections/BraceletsCollection";
 import DailyWear from "./pages/collections/DailyWearJewelry";

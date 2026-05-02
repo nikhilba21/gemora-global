@@ -23,6 +23,7 @@ const NAV_GROUPS: NavGroup[] = [
       { label: "Products", to: "/admin/products", icon: "📦" },
       { label: "Categories", to: "/admin/categories", icon: "🏷️" },
       { label: "Gallery", to: "/admin/gallery", icon: "🖼️" },
+      { label: "Gallery Folders", to: "/admin/gallery-folders", icon: "📁" },
       { label: "Blog", to: "/admin/blog", icon: "✍️" },
       { label: "Catalogues", to: "/admin/catalogue", icon: "📑" },
       { label: "Testimonials", to: "/admin/testimonials", icon: "⭐" },

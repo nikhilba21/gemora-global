@@ -97,6 +97,23 @@ async function initializeDatabase() {
       "sortOrder" INTEGER DEFAULT 0,
       "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
     );
+    CREATE TABLE IF NOT EXISTS gallery_folders (
+      id SERIAL PRIMARY KEY,
+      name TEXT NOT NULL,
+      description TEXT DEFAULT '',
+      "thumbnailUrl" TEXT DEFAULT '',
+      "sortOrder" INTEGER DEFAULT 0,
+      "imageCount" INTEGER DEFAULT 0,
+      "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
+    );
+    CREATE TABLE IF NOT EXISTS gallery_folder_images (
+      id SERIAL PRIMARY KEY,
+      "folderId" INTEGER NOT NULL REFERENCES gallery_folders(id) ON DELETE CASCADE,
+      "imageUrl" TEXT NOT NULL,
+      caption TEXT DEFAULT '',
+      "sortOrder" INTEGER DEFAULT 0,
+      "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
+    );
     CREATE TABLE IF NOT EXISTS testimonials (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,

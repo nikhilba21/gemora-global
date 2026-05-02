@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, FolderOpen, Images, ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
@@ -83,6 +83,26 @@ export default function Gallery() {
   }, [lightboxIdx]);
 
   const actorReady = true; // REST API actor is always ready
+
+  // ── Folder state ─────────────────────────────────────────────────────────────
+  const [activeTab, setActiveTab] = useState<"images" | "folders">("folders");
+  const [openFolderId, setOpenFolderId] = useState<number | null>(null);
+  const [folderLightboxIdx, setFolderLightboxIdx] = useState<number | null>(null);
+
+  // Fetch all folders
+  const { data: folders = [], isLoading: foldersLoading } = useQuery({
+    queryKey: ["gallery-folders"],
+    queryFn: () => actor!.getGalleryFolders(),
+    enabled: true,
+  });
+
+  // Fetch images inside open folder
+  const { data: folderData, isLoading: folderImgsLoading } = useQuery({
+    queryKey: ["gallery-folder-images", openFolderId],
+    queryFn: () => actor!.getGalleryFolderImages(openFolderId!),
+    enabled: !!openFolderId,
+  });
+  const folderImages = (folderData?.images ?? []) as Array<{ id: number; imageUrl: string; caption: string }>;
 
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],
@@ -175,44 +195,184 @@ export default function Gallery() {
 
         {/* Browse by Category */}
         <div className="container py-6 md:py-8 px-4">
-          <h2 className="font-serif text-xl md:text-2xl font-bold mb-4">
-            Browse by Category
-          </h2>
-          <div
-            className="flex gap-2 mb-4 overflow-x-auto pb-1"
-            style={{
-              WebkitOverflowScrolling: "touch",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
-          >
-            {FILTER_TYPES.map((ft) => (
-              <Button
-                key={ft.value}
-                variant={filter === ft.value ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter(ft.value)}
-                className={`flex-shrink-0 min-h-[40px] ${filter === ft.value ? "bg-primary text-primary-foreground" : ""}`}
-                data-ocid={`gallery.filter.${ft.value || "all"}`}
-              >
-                {ft.label}
-              </Button>
-            ))}
+          {/* ── Tab switcher: Folders / All Images ── */}
+          <div className="flex gap-2 mb-6">
+            <Button
+              variant={activeTab === "folders" ? "default" : "outline"}
+              size="sm"
+              onClick={() => { setActiveTab("folders"); setOpenFolderId(null); }}
+              className="flex items-center gap-2"
+            >
+              <FolderOpen className="w-4 h-4" /> Collections
+            </Button>
+            <Button
+              variant={activeTab === "images" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setActiveTab("images")}
+              className="flex items-center gap-2"
+            >
+              <Images className="w-4 h-4" /> All Images
+            </Button>
           </div>
+
+          {/* ── Image filter tabs (only in images tab) ── */}
+          {activeTab === "images" && (
+            <div
+              className="flex gap-2 mb-4 overflow-x-auto pb-1"
+              style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}
+            >
+              {FILTER_TYPES.map((ft) => (
+                <Button
+                  key={ft.value}
+                  variant={filter === ft.value ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setFilter(ft.value)}
+                  className={`flex-shrink-0 min-h-[40px] ${filter === ft.value ? "bg-primary text-primary-foreground" : ""}`}
+                >
+                  {ft.label}
+                </Button>
+              ))}
+            </div>
+          )}
           {/* Category description — SEO text for active filter */}
-          {filter && CATEGORY_DESCRIPTIONS[filter] && (
+          {activeTab === "images" && filter && CATEGORY_DESCRIPTIONS[filter] && (
             <p className="text-muted-foreground text-sm mb-6 max-w-2xl leading-relaxed">
               {CATEGORY_DESCRIPTIONS[filter]}
             </p>
           )}
 
-          {isLoading ? (
+          {/* ════════════════════════════════════════════════════════
+               FOLDERS TAB
+          ════════════════════════════════════════════════════════ */}
+          {activeTab === "folders" && !openFolderId && (
+            <>
+              {foldersLoading ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                  {[1,2,3,4,5,6,7,8].map(i => (
+                    <div key={i} className="aspect-square rounded-xl bg-muted animate-pulse" />
+                  ))}
+                </div>
+              ) : folders.length === 0 ? (
+                <div className="text-center py-20 text-muted-foreground">
+                  <FolderOpen className="w-14 h-14 mx-auto mb-4 opacity-20" />
+                  <p className="font-medium">No collections yet</p>
+                  <p className="text-sm mt-1">Check back soon for our photo collections</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                  {(folders as Array<{id:number;name:string;description:string;thumbnailUrl:string;imageCount:number}>).map(folder => (
+                    <button
+                      key={folder.id}
+                      type="button"
+                      onClick={() => setOpenFolderId(folder.id)}
+                      className="rounded-xl overflow-hidden border border-border hover:border-primary/50 hover:shadow-md transition-all group text-left w-full"
+                    >
+                      <div className="aspect-square overflow-hidden bg-muted relative">
+                        {folder.thumbnailUrl ? (
+                          <img
+                            src={folder.thumbnailUrl}
+                            alt={`${folder.name} jewellery collection`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center">
+                            <FolderOpen className="w-12 h-12 text-muted-foreground/30" />
+                          </div>
+                        )}
+                        {/* Image count badge */}
+                        <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
+                          {folder.imageCount} photos
+                        </div>
+                        {/* Hover overlay */}
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                      <div className="p-3 bg-card">
+                        <p className="font-semibold text-sm truncate">{folder.name}</p>
+                        {folder.description && (
+                          <p className="text-xs text-muted-foreground truncate mt-0.5">{folder.description}</p>
+                        )}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ── Open Folder — show images inside ── */}
+          {activeTab === "folders" && openFolderId && (
+            <>
+              {/* Back button + folder title */}
+              <div className="flex items-center gap-3 mb-4">
+                <Button variant="ghost" size="sm" onClick={() => { setOpenFolderId(null); setFolderLightboxIdx(null); }}>
+                  <ArrowLeft className="w-4 h-4 mr-1" /> All Collections
+                </Button>
+                <span className="text-muted-foreground text-sm">
+                  {folderData?.folder ? (folderData.folder as {name:string}).name : ""}
+                </span>
+              </div>
+              {folderImgsLoading ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  {[1,2,3,4,5,6,7,8].map(i => <div key={i} className="aspect-square rounded-xl bg-muted animate-pulse" />)}
+                </div>
+              ) : folderImages.length === 0 ? (
+                <div className="text-center py-20 text-muted-foreground">
+                  <p>No images in this collection yet</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+                  {folderImages.map((img, idx) => (
+                    <button
+                      key={img.id}
+                      type="button"
+                      onClick={() => setFolderLightboxIdx(idx)}
+                      className="rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-colors group cursor-pointer w-full"
+                    >
+                      <div className="aspect-square overflow-hidden">
+                        <img
+                          src={img.imageUrl}
+                          alt={img.caption || "jewellery wholesale India"}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading={idx < 8 ? "eager" : "lazy"}
+                        />
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Folder lightbox */}
+              {folderLightboxIdx !== null && folderImages[folderLightboxIdx] && (
+                <div
+                  className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+                  onClick={() => setFolderLightboxIdx(null)}
+                >
+                  <button className="absolute top-4 right-4 text-white p-2" onClick={() => setFolderLightboxIdx(null)}>✕</button>
+                  <button className="absolute left-4 text-white p-3 text-2xl" onClick={e => { e.stopPropagation(); setFolderLightboxIdx(i => i === null ? null : (i - 1 + folderImages.length) % folderImages.length); }}>‹</button>
+                  <img
+                    src={folderImages[folderLightboxIdx].imageUrl}
+                    alt={folderImages[folderLightboxIdx].caption || "jewellery"}
+                    className="max-h-[85vh] max-w-full object-contain rounded-lg"
+                    onClick={e => e.stopPropagation()}
+                  />
+                  <button className="absolute right-4 text-white p-3 text-2xl" onClick={e => { e.stopPropagation(); setFolderLightboxIdx(i => i === null ? null : (i + 1) % folderImages.length); }}>›</button>
+                  <div className="absolute bottom-4 text-white/60 text-sm">{folderLightboxIdx + 1} / {folderImages.length}</div>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* ════════════════════════════════════════════════════════
+               IMAGES TAB (original grid)
+          ════════════════════════════════════════════════════════ */}
+          {activeTab === "images" && isLoading ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
               {["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8"].map((sk) => (
                 <Skeleton key={sk} className="aspect-square rounded-lg" />
               ))}
             </div>
-          ) : displayItems.length === 0 ? (
+          ) : activeTab === "images" && displayItems.length === 0 ? (
             <div
               className="text-center py-16 md:py-20"
               data-ocid="gallery.empty_state"
