@@ -160,6 +160,9 @@ async function initializeDatabase() {
     );
   `);
 
+  // Add slug column if it doesn't exist (migration for existing DBs)
+  await query(`ALTER TABLE categories ADD COLUMN IF NOT EXISTS slug TEXT DEFAULT ''`).catch(() => {});
+
   // Add indexes for performance
   await query(`
     CREATE INDEX IF NOT EXISTS idx_products_category ON products("categoryId");
