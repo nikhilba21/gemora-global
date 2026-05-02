@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { useActor } from "../hooks/useActor";
 
 const MAIN_LINKS = [
   { label: "Home", to: "/" },
@@ -98,6 +100,26 @@ const SERVICE_LINKS = [
 export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [productsHover, setProductsHover] = useState(false);
+  const { actor } = useActor();
+
+  const { data: navCategories = [] } = useQuery({
+    queryKey: ["nav-categories"],
+    queryFn: () => actor!.getCategories(),
+    enabled: true,
+    staleTime: 10 * 60 * 1000,
+  });
+
+  // Subcategory map per category
+  const SUBCATS: Record<string, string[]> = {
+    "imitation-jewellery": ["Earring","Ear Chain","Necklace","Bangles","Bracelet","Bridal Set","Finger Ring","Mangalsutra","Pendant Set","Tikka","Nose Ring","Payal","Hath Pan","Belt","Baju Band","Kada","Bore","Jhuda","Chain Pendant","Hair Clip","Hair Band","Sindoor Box","Shishful","Damini","Brooch","Anklet","Pasa","Hair Brooch"],
+    "antique-jewellery": ["Earring","Ear Chain","Necklace","Bangles","Bracelet","Pendant Set","Tikka","Mangalsutra","Finger Ring","Nose Ring","Hath Pan","Pasa","Shishful","Mala","Damini","Belt","Earring Tikka","Payal"],
+    "kundan-jewellery": ["Earring","Ear Chain","Necklace","Bangles","Bracelet","Pendant Set","Tikka","Mangalsutra","Finger Ring","Nose Ring","Hath Pan","Kada","Mala","Pasa","Shishful","Belt","Bore","Damini","Payal"],
+    "american-diamond-jewellery": ["Earring","Ear Chain","Necklace","Chain","Chain Pendant","Bangles","Bracelet","Hath Pan","Tikka","Pasa","Belt","Mala","Payal","Earring Tikka"],
+    "indo-western-jewellery": ["Earring","Ear Chain","Necklace","Pendant Set","Bangles","Bracelet","Finger Ring","Tikka","Pasa","Hath Pan","Shishful","Belt","Payal","Hair Band","Hair Brooch","Earring Tikka"],
+    "oxidised-jewellery": ["Earring","Necklace","Pendant Set","Bangles","Bracelet","Kada","Finger Ring","Tikka","Belt","Jhuda","Payal"],
+    "western-jewellery": ["Earring","Necklace","Pendant Set","Chain Pendant","Bracelet","Kada","Finger Ring","Mala","Hath Pan","Brooch"],
+  };
   const [servicesHover, setServicesHover] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -165,20 +187,86 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-4">
-            {MAIN_LINKS.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                data-ocid="nav.link"
-                className={`text-sm font-medium transition-colors whitespace-nowrap ${
-                  location.pathname === l.to
-                    ? "text-accent"
-                    : "text-white/90 hover:text-accent"
-                }`}
-              >
-                {l.label}
-              </Link>
-            ))}
+            {MAIN_LINKS.map((l) => {
+              if (l.label === "Products") {
+                return (
+                  <div
+                    key={l.to}
+                    className="relative"
+                    onMouseEnter={() => setProductsHover(true)}
+                    onMouseLeave={() => setProductsHover(false)}
+                  >
+                    <Link
+                      to="/products"
+                      className={`flex items-center gap-1 text-sm font-medium transition-colors whitespace-nowrap ${
+                        location.pathname.startsWith("/products") ? "text-accent" : "text-white/90 hover:text-accent"
+                      }`}
+                    >
+                      Products
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${productsHover ? "rotate-180" : ""}`} />
+                    </Link>
+                    {productsHover && (
+                      <div className="absolute top-full left-0 mt-2 w-[820px] bg-[#0d1554] border border-white/10 rounded-xl shadow-2xl z-50 p-4">
+                        <div className="grid grid-cols-4 gap-3">
+                          {(navCategories as Array<{id:number;name:string;slug:string}>).map(cat => {
+                            const subs = SUBCATS[cat.slug] || [];
+                            return (
+                              <div key={cat.id}>
+                                <Link
+                                  to={`/products/${cat.slug}`}
+                                  className="block text-sm font-semibold text-accent mb-2 hover:underline"
+                                  onClick={() => setProductsHover(false)}
+                                >
+                                  {cat.name}
+                                </Link>
+                                <div className="space-y-1">
+                                  {subs.slice(0, 8).map(sub => (
+                                    <Link
+                                      key={sub}
+                                      to={`/products/${cat.slug}?sub=${encodeURIComponent(sub)}`}
+                                      className="block text-xs text-white/60 hover:text-white hover:text-accent transition-colors py-0.5"
+                                      onClick={() => setProductsHover(false)}
+                                    >
+                                      {sub}
+                                    </Link>
+                                  ))}
+                                  {subs.length > 8 && (
+                                    <Link
+                                      to={`/products/${cat.slug}`}
+                                      className="block text-xs text-accent/70 hover:text-accent"
+                                      onClick={() => setProductsHover(false)}
+                                    >
+                                      +{subs.length - 8} more →
+                                    </Link>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <div className="border-t border-white/10 mt-3 pt-3 flex gap-4">
+                          <Link to="/products" className="text-xs text-white/60 hover:text-accent" onClick={() => setProductsHover(false)}>All Products →</Link>
+                          <Link to="/products?newArrivals=true" className="text-xs text-white/60 hover:text-accent" onClick={() => setProductsHover(false)}>New Arrivals →</Link>
+                          <Link to="/wholesale" className="text-xs text-white/60 hover:text-accent" onClick={() => setProductsHover(false)}>Wholesale Inquiry →</Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  data-ocid="nav.link"
+                  className={`text-sm font-medium transition-colors whitespace-nowrap ${
+                    location.pathname === l.to ? "text-accent" : "text-white/90 hover:text-accent"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
 
             {/* Our Services dropdown */}
             <div

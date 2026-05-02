@@ -12,9 +12,39 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const r = await query('SELECT * FROM categories WHERE id=$1', [req.params.id]);
-    if (!r.rows[0]) return res.status(404).json({ error: 'Not found' });
+    let r;
+    if (!isNaN(req.params.id)) {
+      r = await query('SELECT * FROM categories WHERE id=$1', [req.params.id]);
+    }
+    if (!r?.rows[0]) {
+      r = await query('SELECT * FROM categories WHERE slug=$1', [req.params.id]);
+    }
+    if (!r?.rows[0]) return res.status(404).json({ error: 'Not found' });
     res.json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// GET /api/categories/:slug/subcategories — all unique subcategories for a category
+router.get('/:id/subcategories', async (req, res) => {
+  try {
+    let catRow;
+    if (!isNaN(req.params.id)) {
+      const r = await query('SELECT * FROM categories WHERE id=$1', [req.params.id]);
+      catRow = r.rows[0];
+    }
+    if (!catRow) {
+      const r = await query('SELECT * FROM categories WHERE slug=$1', [req.params.id]);
+      catRow = r.rows[0];
+    }
+    if (!catRow) return res.status(404).json({ error: 'Not found' });
+    
+    const r = await query(
+      `SELECT subcategory, COUNT(*) as count FROM products 
+       WHERE "categoryId"=$1 AND subcategory IS NOT NULL AND subcategory != ''
+       GROUP BY subcategory ORDER BY subcategory ASC`,
+      [catRow.id]
+    );
+    res.json(r.rows);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

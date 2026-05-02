@@ -40,10 +40,20 @@ router.get('/new-arrivals', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const { categoryId, page, pageSize, featured, newArrivals } = req.query;
+    const { categoryId, page, pageSize, featured, newArrivals, subcategory } = req.query;
     let sql = 'SELECT * FROM products WHERE 1=1';
     const params = [];
-    if (categoryId) { params.push(categoryId); sql += ` AND "categoryId"=$${params.length}`; }
+
+    // Support categoryId as number OR category slug
+    if (categoryId) {
+      if (isNaN(categoryId)) {
+        const catR = await query('SELECT id FROM categories WHERE slug=$1', [categoryId]);
+        if (catR.rows[0]) { params.push(catR.rows[0].id); sql += ` AND "categoryId"=$${params.length}`; }
+      } else {
+        params.push(parseInt(categoryId)); sql += ` AND "categoryId"=$${params.length}`;
+      }
+    }
+    if (subcategory) { params.push(subcategory); sql += ` AND subcategory=$${params.length}`; }
     if (featured==='true') sql += ' AND featured=1';
     if (newArrivals==='true') sql += ' AND "isNewArrival"=1';
     sql += ' ORDER BY "createdAt" DESC';

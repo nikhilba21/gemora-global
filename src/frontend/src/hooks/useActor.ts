@@ -130,6 +130,20 @@ const actor = {
     return data.map(shapeCategory);
   },
 
+  async getCategoryBySlug(slug: string) {
+    try {
+      const r = await apiFetch<Record<string, unknown>>(`/api/categories/${slug}`);
+      return shapeCategory(r);
+    } catch { return null; }
+  },
+
+  async getCategorySubcategories(categoryId: number | string) {
+    try {
+      const data = await apiFetch<{ subcategory: string; count: number }[]>(`/api/categories/${categoryId}/subcategories`);
+      return data;
+    } catch { return []; }
+  },
+
   async createCategory(name: string, description: string, imageUrl: string, sortOrder: bigint): Promise<bigint> {
     const r = await apiFetch<{ id: number }>('/api/categories', {
       method: 'POST', body: JSON.stringify({ name, description, imageUrl, sortOrder: fromBig(sortOrder) }),
@@ -159,10 +173,11 @@ const actor = {
     return data.map(shapeProduct);
   },
 
-  async getProductsPaginated(categoryId: bigint | null, page: bigint, pageSize: bigint) {
+  async getProductsPaginated(categoryId: bigint | null, page: bigint, pageSize: bigint, subcategory?: string) {
     const cid = categoryId ? `&categoryId=${fromBig(categoryId)}` : '';
+    const sub = subcategory ? `&subcategory=${encodeURIComponent(subcategory)}` : '';
     const r = await apiFetch<{ items: Record<string, unknown>[]; total: number; pages: number }>(
-      `/api/products?page=${fromBig(page)}&pageSize=${fromBig(pageSize)}${cid}`
+      `/api/products?page=${fromBig(page)}&pageSize=${fromBig(pageSize)}${cid}${sub}`
     );
     return { items: r.items.map(shapeProduct), total: toBig(r.total), pages: toBig(r.pages) };
   },

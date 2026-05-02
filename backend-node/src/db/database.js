@@ -59,6 +59,7 @@ async function initializeDatabase() {
     CREATE TABLE IF NOT EXISTS categories (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,
+      slug TEXT DEFAULT '',
       description TEXT DEFAULT '',
       "imageUrl" TEXT DEFAULT '',
       "sortOrder" INTEGER DEFAULT 0,
@@ -191,26 +192,27 @@ async function runMigrations() {
     ON CONFLICT(key) DO UPDATE SET value=$1`, [hash]);
   console.log('✅ Admin synced:', u);
 
-  // Categories
-  const m1 = await query("SELECT id FROM migrations WHERE id='cats_v1'");
+  // Categories — 7 main categories matching Kanhai structure
+  const m1 = await query("SELECT id FROM migrations WHERE id='cats_v2'");
   if (!m1.rows[0]) {
     const cats = [
-      [1,'Ear Chains','Stunning ear chain collections','/assets/generated/jewellery-earrings-hd.dim_800x800.jpg',1],
-      [2,'Earrings','Jhumkas, studs, chandelier drops, moti earrings','/assets/generated/jewellery-earrings-hd.dim_800x800.jpg',2],
-      [3,'Bangles & Bracelets','Gold-plated bangle sets, kada, bracelets','/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg',3],
-      [4,'Rings','Statement cocktail rings, finger rings','/assets/generated/jewellery-rings-hd.dim_800x800.jpg',4],
-      [5,'Bridal Jewellery','Complete bridal jewellery sets — kundan, polki, meenakari','/assets/generated/jewellery-bridal-hd.dim_800x800.jpg',5],
-      [6,'Minimal Fashion','Modern minimalist fashion jewellery','/assets/generated/jewellery-minimal-hd.dim_800x800.jpg',6],
-      [7,'Necklaces & Pendants','Exquisite handcrafted necklaces','/assets/generated/jewellery-necklace-hd.dim_800x800.jpg',7],
-      [8,'Anklets & Waist Chains','Payal, anklets, hath pan, baju band','/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg',8],
-      [9,'Sets & Collections','Complete jewellery sets','/assets/generated/jewellery-bridal-hd.dim_800x800.jpg',9],
+      [10,'Imitation Jewellery','imitation-jewellery','Complete range of imitation jewellery','/assets/generated/jewellery-earrings-hd.dim_800x800.jpg',1],
+      [11,'Antique Jewellery','antique-jewellery','Traditional antique finish jewellery','/assets/generated/jewellery-necklace-hd.dim_800x800.jpg',2],
+      [12,'Kundan Jewellery','kundan-jewellery','Royal Kundan jewellery with stone setting','/assets/generated/jewellery-bridal-hd.dim_800x800.jpg',3],
+      [13,'American Diamond Jewellery','american-diamond-jewellery','CZ / American diamond jewellery','/assets/generated/jewellery-rings-hd.dim_800x800.jpg',4],
+      [14,'Indo Western Jewellery','indo-western-jewellery','Fusion Indo-Western jewellery','/assets/generated/jewellery-minimal-hd.dim_800x800.jpg',5],
+      [15,'Oxidised Jewellery','oxidised-jewellery','Silver oxidised jewellery','/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg',6],
+      [16,'Western Jewellery','western-jewellery','Modern western fashion jewellery','/assets/generated/jewellery-minimal-hd.dim_800x800.jpg',7],
     ];
-    for (const [id,name,desc,img,order] of cats) {
-      await query(`INSERT INTO categories(id,name,description,"imageUrl","sortOrder")
-        VALUES($1,$2,$3,$4,$5) ON CONFLICT(id) DO NOTHING`, [id,name,desc,img,order]);
+    for (const [id,name,slug,desc,img,order] of cats) {
+      await query(`INSERT INTO categories(id,name,slug,description,"imageUrl","sortOrder")
+        VALUES($1,$2,$3,$4,$5,$6) ON CONFLICT(id) DO UPDATE SET name=$2,slug=$3,description=$4,"imageUrl"=$5,"sortOrder"=$6`,
+        [id,name,slug,desc,img,order]);
     }
-    await query(`SELECT setval('categories_id_seq', (SELECT MAX(id) FROM categories))`);
-    await query("INSERT INTO migrations(id) VALUES('cats_v1') ON CONFLICT DO NOTHING");
+    await query(`SELECT setval('categories_id_seq', 20)`);
+    await query("INSERT INTO migrations(id) VALUES('cats_v2') ON CONFLICT DO NOTHING");
+    console.log('✅ 7 main categories seeded');
+  }
     console.log('✅ Categories seeded');
   }
 
