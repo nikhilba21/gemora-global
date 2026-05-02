@@ -109,6 +109,11 @@ import WholesaleImitationJewellery from "./pages/seo/WholesaleImitationJewellery
 import WholesaleImitationJewelleryIndia from "./pages/seo/WholesaleImitationJewelleryIndia";
 import WholesaleJewelleryRajasthan from "./pages/seo/WholesaleJewelleryRajasthan";
 import WholesaleJewelleryUK from "./pages/seo/WholesaleJewelleryUK";
+import AmericanDiamondJewelleryWholesale from "./pages/seo/AmericanDiamondJewelleryWholesale";
+import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesale";
+import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
+import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
+import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesale";
 
 function VisitTracker() {
   const { actor } = useActor();
@@ -548,6 +553,11 @@ export default function App() {
         <Route
           path="/wholesale-jewellery-uk"
           element={<WholesaleJewelleryUK />}
+          <Route path="/american-diamond-jewellery-wholesale" element={<AmericanDiamondJewelleryWholesale />} />
+          <Route path="/gold-plated-jewellery-wholesale-india" element={<GoldPlatedJewelleryWholesale />} />
+          <Route path="/antique-jewellery-wholesale-india" element={<AntiqueJewelleryWholesale />} />
+          <Route path="/costume-jewellery-wholesale-uk" element={<CostumeJewelleryWholesaleUK />} />
+          <Route path="/artificial-jewellery-wholesale" element={<ArtificialJewelleryWholesale />} />
         />
         <Route
           path="/jewellery-exporter-australia"
