@@ -1,4 +1,4 @@
-// src/db/database.js — PostgreSQL (persistent, never wipes on Render)
+// src/db/database.js — PostgreSQL
 const { Pool } = require('pg');
 require('dotenv').config();
 
@@ -17,19 +17,16 @@ async function query(text, params) {
   }
 }
 
-// Convert SQLite ? to PostgreSQL $1,$2...
 function toPostgres(sql) {
   let i = 0;
   return sql.replace(/\?/g, () => `$${++i}`);
 }
 
-// Returns a prepared-statement-like object (async)
 function prepare(sql) {
   const pgSql = toPostgres(sql);
   return {
     async run(...params) {
       const flat = params.flat();
-      // For INSERT RETURNING id
       let finalSql = pgSql;
       if (/^insert/i.test(pgSql.trim()) && !/returning/i.test(pgSql)) {
         finalSql = pgSql + ' RETURNING id';
@@ -168,31 +165,28 @@ async function initializeDatabase() {
     CREATE INDEX IF NOT EXISTS idx_products_category ON products("categoryId");
     CREATE INDEX IF NOT EXISTS idx_products_featured ON products(featured);
     CREATE INDEX IF NOT EXISTS idx_products_new_arrival ON products("isNewArrival");
-    CREATE INDEX IF NOT EXISTS idx_products_created ON products("createdAt" DESC);
+    CREATE INDEX IF NOT EXISTS idx_products_subcategory ON products(subcategory);
     CREATE INDEX IF NOT EXISTS idx_blog_status ON blog_posts(status);
-    CREATE INDEX IF NOT EXISTS idx_blog_slug ON blog_posts(slug);
     CREATE INDEX IF NOT EXISTS idx_gallery_type ON gallery_items("itemType");
-    CREATE INDEX IF NOT EXISTS idx_inquiries_status ON inquiries(status);
-  `).catch(() => {}); // ignore if already exists
+    CREATE INDEX IF NOT EXISTS idx_cats_slug ON categories(slug);
+  `).catch(() => {});
 
   await runMigrations();
-  console.log('✅ Database ready');
+  console.log('✅ Database ready:', process.env.DATABASE_PATH || 'PostgreSQL');
 }
 
 async function runMigrations() {
   const bcrypt = require('bcryptjs');
 
-  // Always sync admin credentials from env vars
+  // ── Admin credentials — always sync from env ──────────────────────────────
   const u = process.env.ADMIN_USERNAME || 'admin';
   const p = process.env.ADMIN_PASSWORD || 'Gemora@2024';
   const hash = bcrypt.hashSync(p, 10);
-  await query(`INSERT INTO admin_settings(key,value) VALUES('admin_username',$1)
-    ON CONFLICT(key) DO UPDATE SET value=$1`, [u]);
-  await query(`INSERT INTO admin_settings(key,value) VALUES('admin_password_hash',$1)
-    ON CONFLICT(key) DO UPDATE SET value=$1`, [hash]);
+  await query(`INSERT INTO admin_settings(key,value) VALUES('admin_username',$1) ON CONFLICT(key) DO UPDATE SET value=$1`, [u]);
+  await query(`INSERT INTO admin_settings(key,value) VALUES('admin_password_hash',$1) ON CONFLICT(key) DO UPDATE SET value=$1`, [hash]);
   console.log('✅ Admin synced:', u);
 
-  // Categories — 7 main categories matching Kanhai structure
+  // ── 7 main categories (Kanhai structure) ─────────────────────────────────
   const m1 = await query("SELECT id FROM migrations WHERE id='cats_v2'");
   if (!m1.rows[0]) {
     const cats = [
@@ -205,18 +199,19 @@ async function runMigrations() {
       [16,'Western Jewellery','western-jewellery','Modern western fashion jewellery','/assets/generated/jewellery-minimal-hd.dim_800x800.jpg',7],
     ];
     for (const [id,name,slug,desc,img,order] of cats) {
-      await query(`INSERT INTO categories(id,name,slug,description,"imageUrl","sortOrder")
-        VALUES($1,$2,$3,$4,$5,$6) ON CONFLICT(id) DO UPDATE SET name=$2,slug=$3,description=$4,"imageUrl"=$5,"sortOrder"=$6`,
-        [id,name,slug,desc,img,order]);
+      await query(
+        `INSERT INTO categories(id,name,slug,description,"imageUrl","sortOrder")
+         VALUES($1,$2,$3,$4,$5,$6)
+         ON CONFLICT(id) DO UPDATE SET name=$2,slug=$3,description=$4,"imageUrl"=$5,"sortOrder"=$6`,
+        [id,name,slug,desc,img,order]
+      );
     }
     await query(`SELECT setval('categories_id_seq', 20)`);
     await query("INSERT INTO migrations(id) VALUES('cats_v2') ON CONFLICT DO NOTHING");
     console.log('✅ 7 main categories seeded');
   }
-    console.log('✅ Categories seeded');
-  }
 
-  // Testimonials
+  // ── Testimonials ─────────────────────────────────────────────────────────
   const m2 = await query("SELECT id FROM migrations WHERE id='tests_v1'");
   if (!m2.rows[0]) {
     const tests = [
@@ -226,14 +221,16 @@ async function runMigrations() {
       ['Ahmed Al-Rashidi','Gulf Wholesale','Kuwait','Fast shipping, competitive pricing.',4],
     ];
     for (const [name,company,country,text,rating] of tests) {
-      await query('INSERT INTO testimonials(name,company,country,text,rating,active) VALUES($1,$2,$3,$4,$5,1)',
-        [name,company,country,text,rating]);
+      await query(
+        'INSERT INTO testimonials(name,company,country,text,rating,active) VALUES($1,$2,$3,$4,$5,1)',
+        [name,company,country,text,rating]
+      );
     }
     await query("INSERT INTO migrations(id) VALUES('tests_v1') ON CONFLICT DO NOTHING");
     console.log('✅ Testimonials seeded');
   }
 
-  // Blog posts
+  // ── Blog posts ────────────────────────────────────────────────────────────
   const m3 = await query("SELECT id FROM migrations WHERE id='blog_v1'");
   if (!m3.rows[0]) {
     const posts = [
@@ -245,9 +242,11 @@ async function runMigrations() {
       ['private-label-jewellery-india-guide','Private Label Jewellery Manufacturing in India','Business Guide','Create your own private label jewellery collections.','Deepika Rao','December 20, 2025','5 min read','Published','/assets/generated/blog-private-label.dim_800x500.jpg','Private label jewellery is the fastest-growing segment...'],
     ];
     for (const [slug,title,cat,excerpt,author,date,readTime,status,image,content] of posts) {
-      await query(`INSERT INTO blog_posts(slug,title,category,excerpt,author,date,"readTime",status,image,content)
-        VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) ON CONFLICT(slug) DO NOTHING`,
-        [slug,title,cat,excerpt,author,date,readTime,status,image,content]);
+      await query(
+        `INSERT INTO blog_posts(slug,title,category,excerpt,author,date,"readTime",status,image,content)
+         VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) ON CONFLICT(slug) DO NOTHING`,
+        [slug,title,cat,excerpt,author,date,readTime,status,image,content]
+      );
     }
     await query("INSERT INTO migrations(id) VALUES('blog_v1') ON CONFLICT DO NOTHING");
     console.log('✅ Blog seeded');
