@@ -52,6 +52,7 @@ import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminWebsiteSettings from "./pages/admin/AdminWebsiteSettings";
 import AdminWhatsAppLeads from "./pages/admin/AdminWhatsAppLeads";
 import AdminGalleryFolders from "./pages/admin/AdminGalleryFolders";
+import AdminEmailCampaigns from "./pages/admin/AdminEmailCampaigns";
 // Collections
 import Bracelets from "./pages/collections/BraceletsCollection";
 import DailyWear from "./pages/collections/DailyWearJewelry";
@@ -596,6 +597,7 @@ export default function App() {
           element={<JewelleryExporterSingapore />}
         />
 
+        <Route path="/admin/email-campaigns" element={<AdminGuard><AdminEmailCampaigns /></AdminGuard>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <WhatsAppButton />

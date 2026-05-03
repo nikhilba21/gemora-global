@@ -24,6 +24,7 @@ const NAV_GROUPS: NavGroup[] = [
       { label: "Categories", to: "/admin/categories", icon: "🏷️" },
       { label: "Gallery", to: "/admin/gallery", icon: "🖼️" },
       { label: "Gallery Folders", to: "/admin/gallery-folders", icon: "📁" },
+      { label: "Email Campaigns", to: "/admin/email-campaigns", icon: "📧" },
       { label: "Blog", to: "/admin/blog", icon: "✍️" },
       { label: "Catalogues", to: "/admin/catalogue", icon: "📑" },
       { label: "Testimonials", to: "/admin/testimonials", icon: "⭐" },
