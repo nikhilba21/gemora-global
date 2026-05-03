@@ -145,6 +145,20 @@ async function initializeDatabase() {
       "uploadedAt" TEXT DEFAULT '',
       "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
     );
+    CREATE TABLE IF NOT EXISTS contacts (
+      id SERIAL PRIMARY KEY,
+      name TEXT DEFAULT '',
+      company TEXT DEFAULT '',
+      email TEXT DEFAULT '' UNIQUE,
+      phone TEXT DEFAULT '',
+      country TEXT DEFAULT '',
+      "productInterest" TEXT DEFAULT '',
+      source TEXT DEFAULT '',
+      tags TEXT DEFAULT '',
+      "emailStatus" TEXT DEFAULT 'pending',
+      notes TEXT DEFAULT '',
+      "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
+    );
     CREATE TABLE IF NOT EXISTS content (
       key TEXT PRIMARY KEY,
       value TEXT DEFAULT '',
