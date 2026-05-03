@@ -133,12 +133,9 @@ export default function App() {
         {/* Core pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />}
-          />
-          <Route path="/products/:categorySlug" element={<Products />}
-          />
-          <Route path="/products/item/:id" element={<ProductDetail />}
-          } />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/item/:id" element={<ProductDetail />} />
+        <Route path="/products/:categorySlug" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/wholesale" element={<Wholesale />} />
         <Route path="/export" element={<ExportMarkets />} />
