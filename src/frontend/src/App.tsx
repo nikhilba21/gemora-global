@@ -553,15 +553,12 @@ export default function App() {
           path="/meenakari-jewellery-wholesale"
           element={<MeenakariJewelleryWholesale />}
         />
-        <Route
-          path="/wholesale-jewellery-uk"
-          element={<WholesaleJewelleryUK />}
-          <Route path="/american-diamond-jewellery-wholesale" element={<AmericanDiamondJewelleryWholesale />} />
-          <Route path="/gold-plated-jewellery-wholesale-india" element={<GoldPlatedJewelleryWholesale />} />
-          <Route path="/antique-jewellery-wholesale-india" element={<AntiqueJewelleryWholesale />} />
-          <Route path="/costume-jewellery-wholesale-uk" element={<CostumeJewelleryWholesaleUK />} />
-          <Route path="/artificial-jewellery-wholesale" element={<ArtificialJewelleryWholesale />} />
-        />
+        <Route path="/wholesale-jewellery-uk" element={<WholesaleJewelleryUK />} />
+        <Route path="/american-diamond-jewellery-wholesale" element={<AmericanDiamondJewelleryWholesale />} />
+        <Route path="/gold-plated-jewellery-wholesale-india" element={<GoldPlatedJewelleryWholesale />} />
+        <Route path="/antique-jewellery-wholesale-india" element={<AntiqueJewelleryWholesale />} />
+        <Route path="/costume-jewellery-wholesale-uk" element={<CostumeJewelleryWholesaleUK />} />
+        <Route path="/artificial-jewellery-wholesale" element={<ArtificialJewelleryWholesale />} />
         <Route
           path="/jewellery-exporter-australia"
           element={<JewelleryExporterAustralia />}
