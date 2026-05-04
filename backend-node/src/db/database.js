@@ -247,6 +247,36 @@ async function runMigrations() {
     console.log('✅ Testimonials seeded');
   }
 
+  // ── Reassign old product categoryIds (1-9) to new ones (10-16) ───────────
+  const mRecat = await query("SELECT id FROM migrations WHERE id='recat_v1'");
+  if (!mRecat.rows[0]) {
+    // Check if any products have old category IDs 1-9
+    const oldProds = await query(`SELECT COUNT(*) as c FROM products WHERE "categoryId" < 10`);
+    const count = parseInt(oldProds.rows[0]?.c || 0);
+    if (count > 0) {
+      console.log(`🔄 Reassigning ${count} products from old categories to new...`);
+      // Map old IDs to new based on common subcategory patterns
+      // Old: 1=Ear Chains,2=Earrings,3=Bangles,4=Rings,5=Bridal,6=Minimal,7=Necklaces,8=Anklets,9=Sets
+      // New: 10=Imitation,11=Antique,12=Kundan,13=AmDiamond,14=IndoWestern,15=Oxidised,16=Western
+      // Strategy: look at product name to determine correct new category
+      await query('UPDATE products SET "categoryId" = CASE ' +
+        'WHEN name ILIKE $1 OR name ILIKE $2 OR name ILIKE $3 THEN 11 ' +
+        'WHEN name ILIKE $4 OR name ILIKE $5 OR name ILIKE $6 THEN 12 ' +
+        'WHEN name ILIKE $7 OR name ILIKE $8 THEN 13 ' +
+        'WHEN name ILIKE $9 OR name ILIKE $10 THEN 14 ' +
+        'WHEN name ILIKE $11 OR name ILIKE $12 THEN 16 ' +
+        'ELSE 10 END WHERE "categoryId" < 10',
+        ['%antique%','%oxidised%','%german silver%',
+         '%kundan%','%polki%','%meenakari%',
+         '%american diamond%','%rhodium%',
+         '%indo western%','%fusion%',
+         '%western%','%minimal%']
+      );
+      console.log('✅ Products reassigned to new category IDs');
+    }
+    await query("INSERT INTO migrations(id) VALUES('recat_v1') ON CONFLICT DO NOTHING");
+  }
+
   // ── Blog posts ────────────────────────────────────────────────────────────
   const m3 = await query("SELECT id FROM migrations WHERE id='blog_v1'");
   if (!m3.rows[0]) {

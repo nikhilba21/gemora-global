@@ -402,6 +402,52 @@ const actor = {
     return shapeStats(r);
   },
 
+  // ── Gallery Folders ──────────────────────────────────────────
+  async getGalleryFolders() {
+    const data = await apiFetch<Record<string, unknown>[]>('/api/gallery-folders');
+    return data.map(f => ({
+      ...f,
+      id: Number(f.id),
+      sortOrder: Number(f.sortOrder ?? 0),
+      imageCount: Number(f.imageCount ?? 0),
+    }));
+  },
+
+  async getGalleryFolderImages(folderId: number) {
+    const r = await apiFetch<{ folder: Record<string, unknown>; images: Record<string, unknown>[] }>(`/api/gallery-folders/${folderId}/images`);
+    return r;
+  },
+
+  async createGalleryFolder(name: string, description: string, sortOrder: number): Promise<number> {
+    const r = await apiFetch<{ id: number }>('/api/gallery-folders', {
+      method: 'POST',
+      body: JSON.stringify({ name, description, sortOrder }),
+    });
+    return r.id;
+  },
+
+  async addImagesToFolder(folderId: number, images: { imageUrl: string; caption: string; sortOrder: number }[]) {
+    return apiFetch<{ success: boolean; added: number }>(`/api/gallery-folders/${folderId}/images`, {
+      method: 'POST',
+      body: JSON.stringify({ images }),
+    });
+  },
+
+  async updateGalleryFolder(folderId: number, data: { name?: string; description?: string; thumbnailUrl?: string; sortOrder?: number }) {
+    return apiFetch(`/api/gallery-folders/${folderId}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+    });
+  },
+
+  async deleteFolderImage(folderId: number, imageId: number) {
+    return apiFetch(`/api/gallery-folders/${folderId}/images/${imageId}`, { method: 'DELETE' });
+  },
+
+  async deleteGalleryFolder(folderId: number) {
+    return apiFetch(`/api/gallery-folders/${folderId}`, { method: 'DELETE' });
+  },
+
   // ── Misc (no-ops for compatibility) ───────────────────────────
   async recordVisit(): Promise<void> {
     try { await apiFetch('/api/visit', { method: 'POST' }); } catch { /* ignore */ }
