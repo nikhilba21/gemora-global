@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +7,6 @@ import { Loader2, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 // Normalize getContent result (string | null OR [] | [string])
@@ -227,21 +227,20 @@ function ImageField({
   label: string;
   hint?: string;
 }) {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const fileRef = useRef<HTMLInputElement>(null);
   const { uploadFileDetailed, uploading, converting } = useStorageUpload();
 
   const { data } = useQuery({
     queryKey: ["content", contentKey],
-    queryFn: () => actor!.getContent(contentKey),
+    queryFn: () => api.getContent(contentKey),
     enabled: true,
   });
 
   const currentUrl = toStr(data);
 
   const saveMutation = useMutation({
-    mutationFn: (url: string) => actor!.setContent(contentKey, url),
+    mutationFn: (url: string) => api.setContent(contentKey, url),
     onSuccess: () => {
       toast.success(`${label} updated`);
       qc.invalidateQueries({ queryKey: ["content"] });
@@ -403,13 +402,12 @@ function ContentField({
   placeholder?: string;
   hint?: string;
 }) {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [value, setValue] = useState("");
 
   const { data } = useQuery({
     queryKey: ["content", contentKey],
-    queryFn: () => actor!.getContent(contentKey),
+    queryFn: () => api.getContent(contentKey),
     enabled: true,
   });
 
@@ -418,7 +416,7 @@ function ContentField({
   }, [data]);
 
   const mutation = useMutation({
-    mutationFn: () => actor!.setContent(contentKey, value),
+    mutationFn: () => api.setContent(contentKey, value),
     onSuccess: () => {
       toast.success(
         `${label} saved — changes reflect on the website immediately`,

@@ -298,14 +298,7 @@ export default function Footer() {
           </span>
           <span className="whitespace-nowrap">
             Built with <span aria-hidden="true">&#10084;</span> using{" "}
-            <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#D4AF37] transition-colors"
-            >
-              caffeine.ai
-            </a>
+            
           </span>
         </div>
       </div>

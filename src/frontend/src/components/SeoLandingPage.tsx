@@ -1,3 +1,4 @@
+import api from '../lib/api';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { BreadcrumbItem, FAQItem, HowToStep } from "../hooks/usePageSEO";
 import type { Testimonial } from "../types";
@@ -137,14 +137,14 @@ export default function SeoLandingPage({
   schema,
   hreflangs,
   breadcrumbs = [
-    { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+    { name: "Home", url: "https://www.gemoraglobal.co/" },
     { name: h1, url: canonical },
   ],
   howToSteps,
   speakable = true,
 }: SeoLandingPageProps) {
   const defaultBreadcrumbs: BreadcrumbItem[] = [
-    { name: "Home", url: "https://gemoraglobal-tje.caffeine.xyz/" },
+    { name: "Home", url: "https://www.gemoraglobal.co/" },
     { name: h1, url: canonical },
   ];
 
@@ -155,7 +155,7 @@ export default function SeoLandingPage({
     ogTitle: title,
     ogDescription: metaDescription,
     ogImage:
-      "https://gemoraglobal-tje.caffeine.xyz/assets/uploads/logo-removebg-preview-1.png",
+      "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
     hreflangs,
     schema: schema ?? {
       "@context": "https://schema.org",
@@ -166,7 +166,7 @@ export default function SeoLandingPage({
       publisher: {
         "@type": "Organization",
         name: "Gemora Global",
-        url: "https://gemoraglobal-tje.caffeine.xyz",
+        url: "https://www.gemoraglobal.co",
       },
     },
     faqItems: faqs,
@@ -175,11 +175,10 @@ export default function SeoLandingPage({
     speakable,
   });
 
-  const { actor, isFetching: actorFetching } = useActor();
 
   const { data: testimonialsData } = useQuery<Testimonial[]>({
     queryKey: ["testimonials"],
-    queryFn: () => actor!.getTestimonials(),
+    queryFn: () => api.getTestimonials(),
     enabled: !!actor && !actorFetching,
   });
 

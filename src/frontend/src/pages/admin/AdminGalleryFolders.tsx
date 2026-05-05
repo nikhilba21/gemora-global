@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,7 +8,6 @@ import { FolderOpen, FolderPlus, ImagePlus, Loader2, Trash2, X, ChevronLeft, Eye
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 type FolderItem = {
@@ -36,7 +36,6 @@ type UploadFile = {
 };
 
 export default function AdminGalleryFolders() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const { uploadFileDetailed } = useStorageUpload();
 
@@ -55,28 +54,28 @@ export default function AdminGalleryFolders() {
   // ── Folders list ─────────────────────────────────────────────────────────────
   const { data: folders = [], isLoading } = useQuery<FolderItem[]>({
     queryKey: ["gallery-folders"],
-    queryFn: () => actor!.getGalleryFolders() as Promise<FolderItem[]>,
+    queryFn: () => api.getGalleryFolders() as Promise<FolderItem[]>,
     enabled: true,
   });
 
   // ── Folder images ─────────────────────────────────────────────────────────────
   const { data: folderData, isLoading: imgsLoading } = useQuery({
     queryKey: ["gallery-folder-images", selectedFolder?.id],
-    queryFn: () => actor!.getGalleryFolderImages(selectedFolder!.id),
+    queryFn: () => api.getGalleryFolderImages(Number(selectedFolder!.id)),
     enabled: !!selectedFolder,
   });
   const folderImages: FolderImage[] = (folderData?.images as FolderImage[]) || [];
 
   // ── Delete folder ─────────────────────────────────────────────────────────────
   const deleteFolderMut = useMutation({
-    mutationFn: (id: number) => actor!.deleteGalleryFolder(id),
+    mutationFn: (id: number) => api.deleteGalleryFolder(Number(id)),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["gallery-folders"] }); toast.success("Folder deleted"); },
   });
 
   // ── Delete image ──────────────────────────────────────────────────────────────
   const deleteImgMut = useMutation({
     mutationFn: ({ folderId, imgId }: { folderId: number; imgId: number }) =>
-      actor!.deleteFolderImage(folderId, imgId),
+      api.deleteFolderImage(Number(folderId),Number( imgId)),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["gallery-folder-images"] }); qc.invalidateQueries({ queryKey: ["gallery-folders"] }); toast.success("Image removed"); },
   });
 
@@ -97,7 +96,7 @@ export default function AdminGalleryFolders() {
     setOverallProgress(0);
     try {
       // 1. Create folder
-      const folderId = await actor!.createGalleryFolder(newFolderName.trim(), newFolderDesc.trim(), 0);
+      const folderId = await api.createGalleryFolder(newFolderName.trim(), newFolderDesc.trim(), 0);
 
       // 2. Upload images one by one
       const uploaded: { imageUrl: string; caption: string; sortOrder: number }[] = [];
@@ -115,7 +114,7 @@ export default function AdminGalleryFolders() {
 
       // 3. Save all images to folder
       if (uploaded.length) {
-        await actor!.addImagesToFolder(folderId as number, uploaded);
+        await api.addImagesToFolder(Number(folderId as number), uploaded);
       }
 
       toast.success(`✅ Folder "${newFolderName}" created with ${uploaded.length} images!`);
@@ -146,7 +145,7 @@ export default function AdminGalleryFolders() {
       } catch { toast.error(`Failed: ${file.name}`); }
     }
     if (uploaded.length) {
-      await actor!.addImagesToFolder(selectedFolder.id, uploaded);
+      await api.addImagesToFolder(Number(selectedFolder.id), uploaded);
       qc.invalidateQueries({ queryKey: ["gallery-folder-images", selectedFolder.id] });
       qc.invalidateQueries({ queryKey: ["gallery-folders"] });
       toast.success(`${uploaded.length} images added!`);

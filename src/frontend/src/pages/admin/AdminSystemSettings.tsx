@@ -1,10 +1,10 @@
+import api from '../../lib/api';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 
 const BOX = {
   background: "#fff",
@@ -15,7 +15,6 @@ const BOX = {
 } as const;
 
 export default function AdminSystemSettings() {
-  const { actor } = useActor();
   const [form, setForm] = useState({
     currentUsername: "",
     currentPassword: "",
@@ -25,7 +24,7 @@ export default function AdminSystemSettings() {
 
   const changeCreds = useMutation({
     mutationFn: () =>
-      actor!.changeAdminCredentials(
+      api.changeCredentials(
         form.currentUsername,
         form.currentPassword,
         form.newUsername,

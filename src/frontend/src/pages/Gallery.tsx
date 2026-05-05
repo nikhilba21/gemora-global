@@ -1,3 +1,4 @@
+import api from '../lib/api';
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
@@ -6,7 +7,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { GalleryItem } from "../types";
 import { useCanonical } from '../hooks/useCanonical';
@@ -63,7 +63,6 @@ export default function Gallery() {
     },
   });
 
-  const { actor, isFetching: actorFetching } = useActor();
   const [filter, setFilter] = useState("");
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
@@ -82,40 +81,52 @@ export default function Gallery() {
     };
   }, [lightboxIdx]);
 
-  const actorReady = true; // REST API actor is always ready
+ // REST API actor is always ready
 
   // ── Folder state ─────────────────────────────────────────────────────────────
   const [activeTab, setActiveTab] = useState<"images" | "folders">("folders");
   const [openFolderId, setOpenFolderId] = useState<number | null>(null);
   const [folderLightboxIdx, setFolderLightboxIdx] = useState<number | null>(null);
 
+  const API_BASE_GAL = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
+    || 'https://gemora-global-2.onrender.com';
+  const [folders, setFolders] = useState<Array<{id:number;name:string;description:string;thumbnailUrl:string;imageCount:number}>>([]);
+  const [foldersLoading, setFoldersLoading] = useState(true);
+  const [folderData, setFolderData] = useState<{folder:Record<string,unknown>;images:Array<{id:number;imageUrl:string;caption:string}>} | null>(null);
+  const [folderImgsLoading, setFolderImgsLoading] = useState(false);
+
   // Fetch all folders
-  const { data: folders = [], isLoading: foldersLoading } = useQuery({
-    queryKey: ["gallery-folders"],
-    queryFn: () => actor!.getGalleryFolders(),
-    enabled: true,
-  });
+  useEffect(() => {
+    setFoldersLoading(true);
+    fetch(`${API_BASE_GAL}/api/gallery-folders`)
+      .then(r => r.json())
+      .then(data => setFolders(Array.isArray(data) ? data : []))
+      .catch(() => setFolders([]))
+      .finally(() => setFoldersLoading(false));
+  }, [API_BASE_GAL]);
 
   // Fetch images inside open folder
-  const { data: folderData, isLoading: folderImgsLoading } = useQuery({
-    queryKey: ["gallery-folder-images", openFolderId],
-    queryFn: () => actor!.getGalleryFolderImages(openFolderId!),
-    enabled: !!openFolderId,
-  });
-  const folderImages = (folderData?.images ?? []) as Array<{ id: number; imageUrl: string; caption: string }>;
+  useEffect(() => {
+    if (!openFolderId) { setFolderData(null); return; }
+    setFolderImgsLoading(true);
+    fetch(`${API_BASE_GAL}/api/gallery-folders/${openFolderId}/images`)
+      .then(r => r.json())
+      .then(data => setFolderData(data))
+      .catch(() => setFolderData(null))
+      .finally(() => setFolderImgsLoading(false));
+  }, [openFolderId, API_BASE_GAL]);
+  const folderImages = folderData?.images ?? [];
 
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],
-    queryFn: () => actor!.getCatalogues(),
+    queryFn: () => api.getCatalogues(),
     enabled: actorReady,
   });
 
   const { data: pagedResult, isLoading } = useQuery({
     queryKey: ["gallery-paginated", filter, currentPage],
     queryFn: () =>
-      actor!.getGalleryPaginated(
-        filter || null,
-        BigInt(currentPage),
+      api.getGalleryPaginated({page:'0',pageSize:'100'}),
         BigInt(GALLERY_PAGE_SIZE),
       ),
     enabled: actorReady,

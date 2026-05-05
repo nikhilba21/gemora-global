@@ -1,9 +1,9 @@
+import api from '../lib/api';
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { useActor } from "../hooks/useActor";
 
 const MAIN_LINKS = [
   { label: "Home", to: "/" },
@@ -101,11 +101,10 @@ export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsHover, setProductsHover] = useState(false);
-  const { actor } = useActor();
 
   const { data: navCategories = [] } = useQuery({
     queryKey: ["nav-categories"],
-    queryFn: () => actor!.getCategories(),
+    queryFn: () => api.getCategories(),
     enabled: true,
     staleTime: 10 * 60 * 1000,
   });

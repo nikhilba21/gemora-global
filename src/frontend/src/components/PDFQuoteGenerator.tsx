@@ -396,7 +396,7 @@ export default function PDFQuoteGenerator({
                       </p>
                       <p className="text-xs text-gray-500">
                         +91 7976341419 | globalgemora@gmail.com |
-                        gemoraglobal-tje.caffeine.xyz
+                        www.gemoraglobal.co
                       </p>
                     </div>
                     <div className="text-right">

@@ -1,13 +1,12 @@
+import api from '../../lib/api';
 import { Switch } from "@/components/ui/switch";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Inquiry } from "../../types";
 
 export default function AdminAutomation() {
-  const { actor } = useActor();
   const [emailAuto, setEmailAuto] = useState(() => {
     try {
       return JSON.parse(
@@ -39,7 +38,7 @@ export default function AdminAutomation() {
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
-    queryFn: () => actor!.getInquiries(),
+    queryFn: () => api.getInquiries(),
     enabled: true,
   });
 

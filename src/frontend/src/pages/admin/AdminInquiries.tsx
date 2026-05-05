@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,7 +19,6 @@ import {
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Inquiry } from "../../types";
 
 const STATUS_COLORS: Record<string, string> = {
@@ -28,18 +28,17 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 export default function AdminInquiries() {
-  const { actor } = useActor();
   const qc = useQueryClient();
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
-    queryFn: () => actor!.getInquiries(),
+    queryFn: () => api.getInquiries(),
     enabled: true,
   });
 
   const updateMut = useMutation({
     mutationFn: ({ id, status }: { id: bigint; status: string }) =>
-      actor!.updateInquiryStatus(id, status),
+      api.updateInquiryStatus(Number(id),status),
     onSuccess: () => {
       toast.success("Status updated");
       qc.invalidateQueries({ queryKey: ["inquiries"] });

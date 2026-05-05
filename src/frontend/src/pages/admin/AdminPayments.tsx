@@ -261,7 +261,7 @@ export default function AdminPayments() {
               }}
               onClick={() =>
                 alert(
-                  `${gw.name} integration requires backend configuration. Contact support@caffeine.ai for setup.`,
+                  `${gw.name} integration requires backend configuration. Contact support@gemoraglobal.co for setup.`,
                 )
               }
               data-ocid={`admin.payments.${gw.name.toLowerCase()}_connect_button`}

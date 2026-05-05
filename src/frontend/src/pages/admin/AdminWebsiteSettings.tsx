@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +7,6 @@ import { Loader2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 const BOX = {
@@ -45,7 +45,6 @@ type SlotInfo = {
 };
 
 export default function AdminWebsiteSettings() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const { uploadFileDetailed, uploading, converting, uploadError } =
     useStorageUpload();
@@ -108,7 +107,7 @@ export default function AdminWebsiteSettings() {
 
   const saveMutation = useMutation({
     mutationFn: async (key: string) => {
-      await actor!.setContent(key, getValue(key));
+      await api.setContent(key, getValue(key));
     },
     onSuccess: () => {
       toast.success("Setting saved");
@@ -122,7 +121,7 @@ export default function AdminWebsiteSettings() {
     if (!file) return;
     try {
       const result = await uploadFileDetailed(file);
-      await actor!.setContent("logo_url", result.url);
+      await api.setContent("logo_url", result.url);
       toast.success(`Logo updated (WebP, ${result.webpKB.toFixed(0)}KB)`);
       qc.invalidateQueries({ queryKey: ["content-all"] });
     } catch {
@@ -146,7 +145,7 @@ export default function AdminWebsiteSettings() {
     try {
       const result = await uploadFileDetailed(file);
       setSlotConverting((s) => ({ ...s, [slotKey]: false }));
-      await actor!.setContent(slotKey, result.url);
+      await api.setContent(slotKey, result.url);
       setSlotWebpKB((s) => ({ ...s, [slotKey]: result.webpKB }));
       toast.success(`Slide updated — WebP ${result.webpKB.toFixed(0)}KB`);
       qc.invalidateQueries({ queryKey: ["content-all"] });
@@ -164,7 +163,7 @@ export default function AdminWebsiteSettings() {
 
   const handleHeroSlideRemove = async (slotKey: string) => {
     try {
-      await actor!.setContent(slotKey, "");
+      await api.setContent(slotKey, "");
       setSlotWebpKB((s) => {
         const n = { ...s };
         delete n[slotKey];

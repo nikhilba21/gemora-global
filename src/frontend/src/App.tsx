@@ -116,6 +116,11 @@ import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesa
 import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
 import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
 import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesale";
+import ImitationJewellerySupplierUsa from "./pages/seo/ImitationJewellerySupplierUsa";
+import JewelleryExporterToUsa from "./pages/seo/JewelleryExporterToUsa";
+import JewellerySupplierUk from "./pages/seo/JewellerySupplierUk";
+import JewelleryExporterUae from "./pages/seo/JewelleryExporterUae";
+import WholesaleJewelleryUk from "./pages/seo/WholesaleJewelleryUk";
 
 function VisitTracker() {
   const { actor } = useActor();
@@ -137,7 +142,6 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/item/:id" element={<ProductDetail />} />
         <Route path="/products/:categorySlug" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/wholesale" element={<Wholesale />} />
         <Route path="/export" element={<ExportMarkets />} />
         <Route path="/global-markets" element={<ExportMarkets />} />
@@ -438,11 +442,19 @@ export default function App() {
         />
         <Route
           path="/admin/catalogue"
-          element={
-            <AdminGuard>
-              <AdminCatalogue />
-            </AdminGuard>
-          }
+          element={<AdminGuard><AdminCatalogue /></AdminGuard>}
+        />
+        <Route
+          path="/admin/gallery-folders"
+          element={<AdminGuard><AdminGalleryFolders /></AdminGuard>}
+        />
+        <Route
+          path="/admin/email-campaigns"
+          element={<AdminGuard><AdminEmailCampaigns /></AdminGuard>}
+        />
+        <Route
+          path="/admin/system-settings"
+          element={<AdminGuard><AdminSystemSettings /></AdminGuard>}
         />
 
         {/* SEO landing pages */}
@@ -597,7 +609,6 @@ export default function App() {
           element={<JewelleryExporterSingapore />}
         />
 
-        <Route path="/admin/email-campaigns" element={<AdminGuard><AdminEmailCampaigns /></AdminGuard>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <WhatsAppButton />

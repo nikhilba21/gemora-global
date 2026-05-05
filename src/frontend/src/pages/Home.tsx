@@ -299,6 +299,7 @@ function ProductCard({
 export default function Home() {
   useCanonical();
   const { actor } = useActor();
+  const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL || 'https://gemora-global-2.onrender.com';
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(
     null,
   );
@@ -401,52 +402,35 @@ export default function Home() {
   // ── Page CMS content from backend ────────────────────────────
   const { content: pageContent } = usePageContent("homepage");
 
-  // ── Backend data ─────────────────────────────────────────────
-  const { data: categories } = useQuery<Category[]>({
-    queryKey: ["categories"],
-    queryFn: () => actor!.getCategories(),
-    enabled: !!actor,
-  });
+  // ── Backend data — direct fetch ──────────────────────────────
+  const HOME_API = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
+    || 'https://gemora-global-2.onrender.com';
 
-  const { data: featuredProducts } = useQuery<Product[]>({
-    queryKey: ["featured-products"],
-    queryFn: () => actor!.getFeaturedProducts(),
-    enabled: !!actor,
-  });
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
+  const [newArrivalProducts, setNewArrivalProducts] = useState<Product[]>([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [heroImage1Raw, setHeroImage1Raw] = useState<string | null>(null);
+  const [heroImage2Raw, setHeroImage2Raw] = useState<string | null>(null);
+  const [heroImage3Raw, setHeroImage3Raw] = useState<string | null>(null);
 
-  // Use getNewArrivalProducts for New Arrivals section
-  const { data: newArrivalProducts } = useQuery<Product[]>({
-    queryKey: ["new-arrival-products"],
-    queryFn: () => actor!.getNewArrivalProducts(),
-    enabled: !!actor,
-  });
-
-  const { data: testimonials } = useQuery<Testimonial[]>({
-    queryKey: ["testimonials"],
-    queryFn: () => actor!.getTestimonials(),
-    enabled: !!actor,
-  });
-
-  useQuery({
-    queryKey: ["content", "hero_image"],
-    queryFn: () => actor!.getContent("hero_image"),
-    enabled: !!actor,
-  });
-  const { data: heroImage1Raw } = useQuery({
-    queryKey: ["content", "hero_image_1"],
-    queryFn: () => actor!.getContent("hero_image_1"),
-    enabled: !!actor,
-  });
-  const { data: heroImage2Raw } = useQuery({
-    queryKey: ["content", "hero_image_2"],
-    queryFn: () => actor!.getContent("hero_image_2"),
-    enabled: !!actor,
-  });
-  const { data: heroImage3Raw } = useQuery({
-    queryKey: ["content", "hero_image_3"],
-    queryFn: () => actor!.getContent("hero_image_3"),
-    enabled: !!actor,
-  });
+  useEffect(() => {
+    const parseProducts = (data: unknown) => {
+      const items = Array.isArray(data) ? data : ((data as Record<string,unknown>)?.items || []);
+      return (items as Record<string,unknown>[]).map(p => ({
+        ...p,
+        imageUrls: typeof p.imageUrls === 'string' ? JSON.parse(p.imageUrls as string) : (p.imageUrls || []),
+        featured: p.featured === 1 || p.featured === true,
+      } as Product));
+    };
+    fetch(`${HOME_API}/api/categories`).then(r=>r.json()).then(setCategories).catch(()=>{});
+    fetch(`${HOME_API}/api/products/featured`).then(r=>r.json()).then(parseProducts).then(setFeaturedProducts).catch(()=>{});
+    fetch(`${HOME_API}/api/products/new-arrivals`).then(r=>r.json()).then(parseProducts).then(setNewArrivalProducts).catch(()=>{});
+    fetch(`${HOME_API}/api/testimonials`).then(r=>r.json()).then(setTestimonials).catch(()=>{});
+    fetch(`${HOME_API}/api/content/hero_image_1`).then(r=>r.json()).then(d=>setHeroImage1Raw(d.value)).catch(()=>{});
+    fetch(`${HOME_API}/api/content/hero_image_2`).then(r=>r.json()).then(d=>setHeroImage2Raw(d.value)).catch(()=>{});
+    fetch(`${HOME_API}/api/content/hero_image_3`).then(r=>r.json()).then(d=>setHeroImage3Raw(d.value)).catch(()=>{});
+  }, [HOME_API]);
 
   // getContent returns string | null (backend.d.ts) or [] | [string] (Motoko opt) — handle both
   const toStr = (v: unknown): string | null => {

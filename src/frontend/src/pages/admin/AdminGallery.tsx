@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -22,7 +23,6 @@ import { CloudUpload, Images, Loader2, Upload, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 import type { GalleryItem } from "../../types";
 
@@ -49,7 +49,6 @@ type BulkItem = {
 };
 
 export default function AdminGallery() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<GalleryItem | null>(null);
@@ -70,7 +69,7 @@ export default function AdminGallery() {
 
   const { data: items } = useQuery<GalleryItem[]>({
     queryKey: ["gallery", ""],
-    queryFn: () => actor!.getGallery(null),
+    queryFn: () => api.getGallery(),
     enabled: true,
   });
 
@@ -78,7 +77,7 @@ export default function AdminGallery() {
 
   const createMut = useMutation({
     mutationFn: () =>
-      actor!.createGalleryItem(
+      api.createGalleryItem(
         form.imageUrl,
         form.caption,
         form.itemType,
@@ -94,8 +93,8 @@ export default function AdminGallery() {
 
   const updateMut = useMutation({
     mutationFn: () =>
-      actor!.updateGalleryItem(
-        editing!.id,
+      api.updateGalleryItem(Number(
+        editing!.id),
         form.imageUrl,
         form.caption,
         form.itemType,
@@ -110,7 +109,7 @@ export default function AdminGallery() {
   });
 
   const deleteMut = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteGalleryItem(id),
+    mutationFn: (id: bigint) => api.deleteGalleryItem(Number(id)),
     onSuccess: () => {
       toast.success("Deleted");
       invalidate();

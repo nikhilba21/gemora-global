@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,7 +8,6 @@ import { Edit2, Save } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 
 const PAGES = [
   {
@@ -50,7 +50,6 @@ const PAGES = [
 ];
 
 export default function AdminCMS() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [selectedPageId, setSelectedPageId] = useState(PAGES[0].id);
   const [fieldValues, setFieldValues] = useState<Record<string, string>>({});
@@ -61,7 +60,7 @@ export default function AdminCMS() {
   const { data: pageContent, isLoading } = useQuery({
     queryKey: ["page-content", selectedPageId],
     queryFn: async () => {
-      const result = await actor!.getPageContent(selectedPageId);
+      const result = await api.getPageContent(selectedPageId);
       // getPageContent returns Array<[string, string]>
       const map: Record<string, string> = {};
       if (Array.isArray(result)) {
@@ -90,7 +89,7 @@ export default function AdminCMS() {
       const fields: [string, string][] = Object.entries(fieldValues).filter(
         ([, v]) => v !== "",
       );
-      await actor!.setPageContent(selectedPageId, fields);
+      await api.setPageContent(selectedPageId, fields);
     },
     onSuccess: () => {
       toast.success("Page content saved successfully");

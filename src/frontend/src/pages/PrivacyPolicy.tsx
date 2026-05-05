@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
                 href="https://www.gemoraglobal.co"
                 className="text-primary hover:underline"
               >
-                gemoraglobal-tje.caffeine.xyz
+                www.gemoraglobal.co
               </a>
               ) and customers who engage with our wholesale services.
             </p>

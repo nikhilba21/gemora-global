@@ -1,7 +1,7 @@
+import api from '../../lib/api';
 import { useQuery } from "@tanstack/react-query";
 import { ExternalLink } from "lucide-react";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Inquiry, Product } from "../../types";
 
 const BOX = {
@@ -18,23 +18,22 @@ const CARD = {
 } as const;
 
 export default function AdminAnalytics() {
-  const { actor } = useActor();
 
   const { data: stats } = useQuery({
     queryKey: ["dashboard-stats"],
-    queryFn: () => actor!.getDashboardStats(),
+    queryFn: () => api.getStats(),
     enabled: true,
   });
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
-    queryFn: () => actor!.getInquiries(),
+    queryFn: () => api.getInquiries(),
     enabled: true,
   });
 
   const { data: products } = useQuery<Product[]>({
     queryKey: ["products", null],
-    queryFn: () => actor!.getProducts([] as unknown as bigint),
+    queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
 

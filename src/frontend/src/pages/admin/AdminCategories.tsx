@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -22,7 +23,6 @@ import { Loader2, Upload, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 import type { Category } from "../../types";
 
@@ -41,7 +41,6 @@ const EMPTY: CatForm = {
 };
 
 export default function AdminCategories() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const { uploadFileDetailed, uploading, converting, progress, uploadError } =
     useStorageUpload();
@@ -52,7 +51,7 @@ export default function AdminCategories() {
 
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
-    queryFn: () => actor!.getCategories(),
+    queryFn: () => api.getCategories(),
     enabled: true,
   });
 
@@ -60,7 +59,7 @@ export default function AdminCategories() {
 
   const createMut = useMutation({
     mutationFn: () =>
-      actor!.createCategory(
+      api.createCategory(
         form.name,
         form.description,
         form.imageUrl,
@@ -76,8 +75,8 @@ export default function AdminCategories() {
 
   const updateMut = useMutation({
     mutationFn: () =>
-      actor!.updateCategory(
-        editing!.id,
+      api.updateCategory(Number(
+        editing!.id),
         form.name,
         form.description,
         form.imageUrl,
@@ -92,7 +91,7 @@ export default function AdminCategories() {
   });
 
   const deleteMut = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteCategory(id),
+    mutationFn: (id: bigint) => api.deleteCategory(Number(id)),
     onSuccess: () => {
       toast.success("Category deleted");
       invalidate();

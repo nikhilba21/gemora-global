@@ -1,6 +1,6 @@
+import api from '../../lib/api';
 import { useQuery } from "@tanstack/react-query";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Inquiry } from "../../types";
 
 const BOX = {
@@ -11,11 +11,10 @@ const BOX = {
 } as const;
 
 export default function AdminWhatsAppLeads() {
-  const { actor } = useActor();
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
-    queryFn: () => actor!.getInquiries(),
+    queryFn: () => api.getInquiries(),
     enabled: true,
   });
 

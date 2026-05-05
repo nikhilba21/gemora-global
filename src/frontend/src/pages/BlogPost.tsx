@@ -1,3 +1,4 @@
+import api from '../lib/api';
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { motion } from "motion/react";
@@ -5,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { ALL_BLOG_POSTS, type BlogPost } from "../utils/blogStore";
 import { useCanonical } from '../hooks/useCanonical';
@@ -44,13 +44,12 @@ const categoryColors: Record<string, string> = {
 export default function BlogPostPage() {
   useCanonical();
   const { slug } = useParams() as { slug: string };
-  const { actor } = useActor();
 
   const defaultPost = ALL_BLOG_POSTS.find((p) => p.slug === slug) ?? null;
 
   const { data: backendPost, isLoading: backendLoading } = useQuery({
     queryKey: ["blogPost", slug],
-    queryFn: () => actor!.getBlogPost(slug),
+    queryFn: () => api.getBlogPost(slug),
     enabled: !!actor && !!slug && !defaultPost,
     select: (data) => {
       // backend.d.ts: getBlogPost returns BlogPost | null
@@ -63,7 +62,7 @@ export default function BlogPostPage() {
 
   const { data: allBackendPosts = [] } = useQuery({
     queryKey: ["blogPosts"],
-    queryFn: () => actor!.getBlogPosts(null),
+    queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
     enabled: !!actor,
   });
 

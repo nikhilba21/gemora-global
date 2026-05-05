@@ -1,3 +1,4 @@
+import api from '../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,7 +10,6 @@ import { Link, useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useActor } from "../hooks/useActor";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useCanonical } from '../hooks/useCanonical';
@@ -45,7 +45,6 @@ export default function Contact() {
       priceRange: "$$",
     },
   });
-  const { actor, isFetching } = useActor();
   const [searchParams] = useSearchParams();
   const productId = searchParams.get("product");
 
@@ -75,12 +74,11 @@ export default function Contact() {
       const fullRequirement = extraInfo
         ? `${form.requirement}\n\n[${extraInfo}]`
         : form.requirement;
-      return actor!.submitInquiry(
-        form.name,
-        form.country,
-        form.whatsapp,
-        fullRequirement,
-        productId ? BigInt(productId) : null,
+      return api.submitInquiry({name:
+        form.name,country:
+        form.country,whatsapp:
+        form.whatsapp,requirement:
+        fullRequirement}) : null,
       );
     },
     onSuccess: () => {

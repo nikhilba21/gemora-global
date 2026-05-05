@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useQuery } from "@tanstack/react-query";
+
 import { ChevronDown, ChevronRight, Filter, Grid2X2, Grid3X3, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useActor } from "../hooks/useActor";
 import { useCanonical } from "../hooks/useCanonical";
 
 const PAGE_SIZE = 24;
@@ -27,7 +26,6 @@ interface Product { id: number | bigint; name: string; categoryId: number | bigi
 
 export default function Products() {
   useCanonical();
-  const { actor } = useActor();
   const { categorySlug } = useParams<{ categorySlug?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const subcategoryParam = searchParams.get("sub") || "";
@@ -38,12 +36,15 @@ export default function Products() {
   const [gridCols, setGridCols] = useState<3 | 4>(4);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Fetch all categories
-  const { data: categories = [] } = useQuery<Category[]>({
-    queryKey: ["categories"],
-    queryFn: () => actor!.getCategories() as Promise<Category[]>,
-    enabled: true,
-  });
+  const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
+    || 'https://gemora-global-2.onrender.com';
+
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [allSubcats, setAllSubcats] = useState<Record<string, { subcategory: string; count: number }[]>>({});
+  const [products, setProducts] = useState<Product[]>([]);
+  const [totalPages, setTotalPages] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Active category object
   const activeCategory = useMemo(() =>
@@ -51,41 +52,58 @@ export default function Products() {
     [categories, categorySlug]
   );
 
-  // Fetch subcategories for active category
-  const { data: subcategories = [] } = useQuery({
-    queryKey: ["subcategories", activeCategory?.id],
-    queryFn: () => actor!.getCategorySubcategories(activeCategory!.slug),
-    enabled: !!activeCategory,
-  });
+  // Fetch categories once
+  useEffect(() => {
+    fetch(`${API_BASE}/api/categories`)
+      .then(r => r.json())
+      .then(data => setCategories(data))
+      .catch(() => {});
+  }, [API_BASE]);
 
-  // Fetch subcategories for ALL categories (sidebar)
-  const { data: allSubcats = {} } = useQuery({
-    queryKey: ["all-subcategories"],
-    queryFn: async () => {
+  // Fetch subcategories for all categories
+  useEffect(() => {
+    if (!categories.length) return;
+    const fetchAll = async () => {
       const result: Record<string, { subcategory: string; count: number }[]> = {};
       for (const cat of categories) {
-        result[cat.slug] = await actor!.getCategorySubcategories(cat.slug);
+        try {
+          const r = await fetch(`${API_BASE}/api/categories/${cat.slug}/subcategories`);
+          result[cat.slug] = await r.json();
+        } catch { result[cat.slug] = []; }
       }
-      return result;
-    },
-    enabled: categories.length > 0,
-  });
+      setAllSubcats(result);
+    };
+    fetchAll();
+  }, [categories, API_BASE]);
 
-  // Fetch products
-  const { data: pagedResult, isLoading } = useQuery({
-    queryKey: ["products-paginated", activeCategory?.id, pageParam, subcategoryParam, searchQuery],
-    queryFn: () => actor!.getProductsPaginated(
-      activeCategory ? BigInt(activeCategory.id) : null,
-      BigInt(pageParam),
-      BigInt(PAGE_SIZE),
-      subcategoryParam || undefined
-    ),
-    enabled: true,
-  });
+  // Fetch products on filter change
+  useEffect(() => {
+    setIsLoading(true);
+    const params = new URLSearchParams({
+      page: String(pageParam),
+      pageSize: String(PAGE_SIZE),
+    });
+    if (activeCategory) params.set('categoryId', String(activeCategory.id));
+    if (subcategoryParam) params.set('subcategory', subcategoryParam);
 
-  const products: Product[] = (pagedResult?.items ?? []) as Product[];
-  const totalPages = pagedResult ? Number(pagedResult.pages) : 0;
-  const totalCount = pagedResult ? Number(pagedResult.total) : 0;
+    fetch(`${API_BASE}/api/products?${params}`)
+      .then(r => r.json())
+      .then(data => {
+        const items = Array.isArray(data) ? data : (data.items || []);
+        const total = data.total || items.length;
+        const pages = data.pages || Math.ceil(total / PAGE_SIZE) || 1;
+        setProducts(items.map((p: Record<string,unknown>) => ({
+          ...p,
+          imageUrls: typeof p.imageUrls === 'string' ? JSON.parse(p.imageUrls as string) : (p.imageUrls || []),
+          featured: p.featured === 1 || p.featured === true,
+          isNewArrival: p.isNewArrival === 1 || p.isNewArrival === true,
+        } as Product)));
+        setTotalPages(Number(pages));
+        setTotalCount(Number(total));
+      })
+      .catch(() => setProducts([]))
+      .finally(() => setIsLoading(false));
+  }, [activeCategory, pageParam, subcategoryParam, API_BASE]);
 
   // Filter by search on client side
   const displayProducts = searchQuery

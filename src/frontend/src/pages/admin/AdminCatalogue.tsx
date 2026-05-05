@@ -1,9 +1,9 @@
+import api from '../../lib/api';
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { FileText, Loader2 } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 const fieldStyle = {
@@ -25,7 +25,6 @@ const labelStyle = {
 } as React.CSSProperties;
 
 export default function AdminCatalogue() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState({
@@ -44,7 +43,7 @@ export default function AdminCatalogue() {
 
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],
-    queryFn: () => actor!.getCatalogues(),
+    queryFn: () => api.getCatalogues(),
     enabled: true,
   });
 
@@ -57,7 +56,7 @@ export default function AdminCatalogue() {
         month: "short",
         year: "numeric",
       });
-      return actor!.createCatalogue(
+      return api.createCatalogue(
         form.title.trim(),
         form.description.trim(),
         form.fileUrl,
@@ -74,7 +73,7 @@ export default function AdminCatalogue() {
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteCatalogue(id),
+    mutationFn: (id: bigint) => api.deleteCatalogue(Number(id)),
     onSuccess: () => {
       toast.success("Catalogue deleted");
       invalidate();

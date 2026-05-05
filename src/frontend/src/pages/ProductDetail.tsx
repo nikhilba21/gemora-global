@@ -1,3 +1,4 @@
+import api from '../lib/api';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -16,7 +17,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import RequestSampleModal from "../components/RequestSampleModal";
 import WhatsAppInquiryPopup from "../components/WhatsAppInquiryPopup";
-import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useQuoteCart } from "../hooks/useQuoteCart";
 import type { Category, Product } from "../types";
@@ -216,30 +216,27 @@ function RelatedProductCard({
 export default function ProductDetail() {
   useCanonical();
   const { id } = useParams() as { id: string };
-  const { actor } = useActor();
   const { addToCart, setOpen: setCartOpen } = useQuoteCart();
   const [activeImg, setActiveImg] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const [waPopupOpen, setWaPopupOpen] = useState(false);
   const [sampleOpen, setSampleOpen] = useState(false);
 
-  const { data: backendProduct, isLoading } = useQuery({
-    queryKey: ["product", id],
-    queryFn: async (): Promise<Product | null> => {
-      const result = await actor!.getProduct(BigInt(id));
-      // backend.d.ts: getProduct returns Product | null
-      if (result === null || result === undefined) return null;
-      // Handle legacy [] | [Product] encoding just in case
-      if (Array.isArray(result))
-        return result.length > 0 ? (result[0] as Product) : null;
-      return result as Product;
-    },
-    enabled: !!actor && !!id,
-  });
+  const [product, setProduct] = useState<Product | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const PAPI = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL || 'https://gemora-global-2.onrender.com';
+  useEffect(() => {
+    if (!id) return;
+    fetch(`${PAPI}/api/products/${id}`)
+      .then(r => r.json())
+      .then(d => setProduct({...d, imageUrls: typeof d.imageUrls==='string'?JSON.parse(d.imageUrls):(d.imageUrls||[])}))
+      .catch(() => setProduct(null))
+      .finally(() => setIsLoading(false));
+  }, [id, PAPI]);
 
   const { data: backendCategories } = useQuery<Category[]>({
     queryKey: ["categories"],
-    queryFn: () => actor!.getCategories(),
+    queryFn: () => api.getCategories(),
     enabled: !!actor,
   });
 

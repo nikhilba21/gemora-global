@@ -8,7 +8,7 @@ import {
   User,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -110,25 +110,34 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
 
-  const { actor, isFetching: actorFetching } = useActor();
-  const actorReady = true; // REST API actor is always ready
+  const [backendPosts, setBackendPosts] = useState<BlogPost[]>([]);
+  const [totalPages, setTotalPages] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Paginated backend fetch — null status = fetch ALL blogs (Published + Draft)
-  // This ensures all 150 admin-uploaded blogs are visible regardless of status
-  const { data: pagedResult, isLoading } = useQuery({
-    queryKey: ["blog-paginated", currentPage, BLOG_PAGE_SIZE],
-    queryFn: () =>
-      actor!.getBlogPostsPaginated(
-        null,
-        BigInt(currentPage),
-        BigInt(BLOG_PAGE_SIZE),
-      ),
-    enabled: actorReady,
-  });
+  const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
+    || 'https://gemora-global-2.onrender.com';
 
-  const backendPosts = pagedResult?.items ?? [];
-  const totalPages = pagedResult ? Number(pagedResult.pages) : 0;
-  const totalCount = pagedResult ? Number(pagedResult.total) : 0;
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`)
+      .then(r => r.json())
+      .then(data => {
+        const items = Array.isArray(data) ? data : (data.items || []);
+        const total = data.total || items.length;
+        const pages = data.pages || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
+        setBackendPosts(items.map((b: Record<string,unknown>) => ({
+          ...b,
+          id: b.id,
+          readTime: (b.readTime || b.readtime || '5 min read') as string,
+          createdAt: b.createdAt || b.createdat || 0,
+        } as BlogPost)));
+        setTotalPages(Number(pages));
+        setTotalCount(Number(total));
+      })
+      .catch(() => { setBackendPosts([]); })
+      .finally(() => setIsLoading(false));
+  }, [currentPage, API_BASE]);
 
   // Client-side category + search filter (on current page)
   const filtered = backendPosts.filter((post) => {

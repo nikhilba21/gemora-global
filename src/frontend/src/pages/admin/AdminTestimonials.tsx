@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +24,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Testimonial } from "../../types";
 
 type TForm = {
@@ -44,7 +44,6 @@ const EMPTY: TForm = {
 };
 
 export default function AdminTestimonials() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<Testimonial | null>(null);
@@ -52,7 +51,7 @@ export default function AdminTestimonials() {
 
   const { data: testimonials } = useQuery<Testimonial[]>({
     queryKey: ["testimonials"],
-    queryFn: () => actor!.getTestimonials(),
+    queryFn: () => api.getAllTestimonials(),
     enabled: true,
   });
 
@@ -60,7 +59,7 @@ export default function AdminTestimonials() {
 
   const createMut = useMutation({
     mutationFn: () =>
-      actor!.createTestimonial(
+      api.createTestimonial(
         form.name,
         form.company,
         form.country,
@@ -78,8 +77,8 @@ export default function AdminTestimonials() {
 
   const updateMut = useMutation({
     mutationFn: () =>
-      actor!.updateTestimonial(
-        editing!.id,
+      api.updateTestimonial(Number(
+        editing!.id),
         form.name,
         form.company,
         form.country,
@@ -96,7 +95,7 @@ export default function AdminTestimonials() {
   });
 
   const deleteMut = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteTestimonial(id),
+    mutationFn: (id: bigint) => api.deleteTestimonial(Number(id)),
     onSuccess: () => {
       toast.success("Deleted");
       invalidate();

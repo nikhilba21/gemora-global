@@ -1,9 +1,9 @@
+import api from '../../lib/api';
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Loader2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 const BLOG_CATEGORIES = [
@@ -55,7 +55,6 @@ function generateSlug(title: string): string {
 }
 
 export default function AdminBlog() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState<bigint | null>(null);
@@ -66,7 +65,7 @@ export default function AdminBlog() {
 
   const { data: posts = [] } = useQuery({
     queryKey: ["blogPosts"],
-    queryFn: () => actor!.getBlogPosts(null),
+    queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
     enabled: true,
   });
 
@@ -84,7 +83,7 @@ export default function AdminBlog() {
       });
       const wordCount = form.content.split(" ").length;
       const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
-      return actor!.createBlogPost(
+      return api.createBlogPost(
         generateSlug(form.title),
         form.title,
         form.category,
@@ -109,8 +108,8 @@ export default function AdminBlog() {
     mutationFn: () => {
       const wordCount = form.content.split(" ").length;
       const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
-      return actor!.updateBlogPost(
-        editId!,
+      return api.updateBlogPost(Number(
+        editId!),
         generateSlug(form.title),
         form.title,
         form.category,
@@ -132,7 +131,7 @@ export default function AdminBlog() {
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteBlogPost(id),
+    mutationFn: (id: bigint) => api.deleteBlogPost(Number(id)),
     onSuccess: () => {
       toast.success("Post deleted");
       invalidate();

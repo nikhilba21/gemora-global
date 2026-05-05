@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
@@ -6,7 +7,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 
 type Tab = "general" | "branding" | "social" | "users" | "api";
 
@@ -25,7 +25,6 @@ interface AdminUser {
 }
 
 export default function AdminSettings() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [activeTab, setActiveTab] = useState<Tab>("general");
 
@@ -113,7 +112,7 @@ export default function AdminSettings() {
 
   const saveSocialMutation = useMutation({
     mutationFn: async (key: string) => {
-      await actor!.setContent(key, getSocial(key));
+      await api.setContent(key, getSocial(key));
     },
     onSuccess: () => {
       toast.success("Setting saved");
@@ -888,7 +887,7 @@ export default function AdminSettings() {
                     }}
                     onClick={() =>
                       toast.info(
-                        "Contact sales@caffeine.ai to set up custom integrations.",
+                        "Contact globalgemora@gmail.com to set up custom integrations.",
                       )
                     }
                   >

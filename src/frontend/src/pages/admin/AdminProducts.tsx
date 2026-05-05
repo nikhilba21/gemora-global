@@ -1,3 +1,4 @@
+import api from '../../lib/api';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -41,7 +42,6 @@ import {
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 import type { Category, Product } from "../../types";
 
@@ -102,7 +102,6 @@ function WebPBadge({ info }: { info?: WebPBadgeInfo }) {
 }
 
 export default function AdminProducts() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [csvOpen, setCsvOpen] = useState(false);
@@ -127,12 +126,12 @@ export default function AdminProducts() {
 
   const { data: products } = useQuery<Product[]>({
     queryKey: ["products", null],
-    queryFn: () => actor!.getProducts(null),
+    queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
-    queryFn: () => actor!.getCategories(),
+    queryFn: () => api.getCategories(),
     enabled: true,
   });
 
@@ -248,7 +247,7 @@ export default function AdminProducts() {
 
   const createMutation = useMutation({
     mutationFn: () =>
-      actor!.createProduct(
+      api.createProduct(
         BigInt(form.categoryId || "0"),
         form.name,
         form.description,
@@ -271,8 +270,8 @@ export default function AdminProducts() {
 
   const updateMutation = useMutation({
     mutationFn: () =>
-      actor!.updateProduct(
-        editing!.id,
+      api.updateProduct(Number(
+        editing!.id),
         BigInt(form.categoryId || "0"),
         form.name,
         form.description,
@@ -294,7 +293,7 @@ export default function AdminProducts() {
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: bigint) => actor!.deleteProduct(id),
+    mutationFn: (id: bigint) => api.deleteProduct(Number(id)),
     onSuccess: () => {
       toast.success("Product deleted");
       invalidate();
@@ -430,7 +429,7 @@ export default function AdminProducts() {
     if (catLookup[key] !== undefined) return catLookup[key];
     // Create it
     try {
-      const newId = await actor!.createCategory(
+      const newId = await api.createCategory(
         catName.trim(),
         "",
         "",

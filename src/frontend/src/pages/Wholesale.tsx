@@ -1,10 +1,10 @@
+import api from '../lib/api';
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import BulkOrderCalculator from "../components/BulkOrderCalculator";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useActor } from "../hooks/useActor";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product } from "../types";
@@ -113,18 +113,17 @@ const PRODUCT_WHOLESALE = [
 ];
 
 export default function Wholesale() {
-  const { actor } = useActor();
   const { content: pageContent } = usePageContent("wholesale");
 
   const { data: products } = useQuery<Product[]>({
     queryKey: ["products-wholesale"],
-    queryFn: () => actor!.getProducts(null),
+    queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: !!actor,
   });
 
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
-    queryFn: () => actor!.getCategories(),
+    queryFn: () => api.getCategories(),
     enabled: !!actor,
   });
 

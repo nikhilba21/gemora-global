@@ -1,10 +1,10 @@
+import api from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import AdminLayout from "../../components/AdminLayout";
-import { useActor } from "../../hooks/useActor";
 import type { Inquiry } from "../../types";
 
 interface Customer {
@@ -113,7 +113,6 @@ const EMPTY_CUSTOMER: Customer = {
 };
 
 export default function AdminCustomers() {
-  const { actor } = useActor();
   const [customers, setCustomers] = useState<Customer[]>(() => {
     try {
       const s = localStorage.getItem("gemora_customers");
@@ -129,7 +128,7 @@ export default function AdminCustomers() {
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
-    queryFn: () => actor!.getInquiries(),
+    queryFn: () => api.getInquiries(),
     enabled: true,
   });
 

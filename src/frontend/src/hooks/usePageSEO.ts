@@ -67,7 +67,7 @@ function upsertMetaName(name: string, value: string) {
   el.setAttribute("content", value);
 }
 
-export const BASE_URL = "https://gemoraglobal-tje.caffeine.xyz";
+export const BASE_URL = "https://www.gemoraglobal.co";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-banner.jpg`;
 
 const DEFAULT_DESCRIPTION =
