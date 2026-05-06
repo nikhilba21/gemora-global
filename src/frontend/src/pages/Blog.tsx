@@ -123,19 +123,53 @@ export default function Blog() {
     fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`)
       .then(r => r.json())
       .then(data => {
-        const items = Array.isArray(data) ? data : (data.items || []);
-        const total = data.total || items.length;
-        const pages = data.pages || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
-        setBackendPosts(items.map((b: Record<string,unknown>) => ({
-          ...b,
-          id: b.id,
-          readTime: (b.readTime || b.readtime || '5 min read') as string,
-          createdAt: b.createdAt || b.createdat || 0,
-        } as BlogPost)));
+        // ✅ FIX: Defensive data parsing to prevent array type errors
+        let items: BlogPost[] = [];
+        let total = 0;
+        let pages = 0;
+
+        // Handle both paginated object and raw array responses
+        if (Array.isArray(data)) {
+          items = data;
+          total = items.length;
+          pages = Math.ceil(total / BLOG_PAGE_SIZE) || 1;
+        } else if (typeof data === 'object' && data !== null && 'items' in data) {
+          // Paginated response
+          items = Array.isArray(data.items) ? data.items : [];
+          total = Number(data.total) || items.length;
+          pages = Number(data.pages) || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
+        } else {
+          items = [];
+          total = 0;
+          pages = 1;
+        }
+
+        // ✅ FIX: Type-safe mapping with explicit conversions
+        setBackendPosts(items.map((b: unknown) => {
+          const post = b as Record<string, unknown>;
+          return {
+            id: Number(post.id) || 0,
+            slug: String(post.slug || ''),
+            title: String(post.title || ''),
+            category: String(post.category || ''),
+            excerpt: String(post.excerpt || ''),
+            author: String(post.author || ''),
+            date: String(post.date || ''),
+            readTime: String(post.readTime || post.readtime || '5 min read'),
+            status: String(post.status || 'Draft'),
+            image: String(post.image || ''),
+            content: String(post.content || ''),
+            createdAt: Number(post.createdAt || post.createdat || 0),
+          } as BlogPost;
+        }));
+        
         setTotalPages(Number(pages));
         setTotalCount(Number(total));
       })
-      .catch(() => { setBackendPosts([]); })
+      .catch(err => {
+        console.error('Blog fetch error:', err);
+        setBackendPosts([]);
+      })
       .finally(() => setIsLoading(false));
   }, [currentPage, API_BASE]);
 
@@ -279,7 +313,7 @@ export default function Blog() {
                   setCurrentPage(0);
                 }}
                 data-ocid="blog.search_input"
-                className="w-full pl-11 pr-4 py-3 rounded-full bg-card border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary min-h-[44px]"
+                className="w-full pl-11 pr-4 py-3 rounded-full bg-card border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
               />
             </motion.div>
           </div>
@@ -308,7 +342,7 @@ export default function Blog() {
                 }}
                 type="button"
                 data-ocid={`blog.filter.${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 whitespace-nowrap flex-shrink-0 min-h-[36px] ${
+                className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 whitespace-nowrap flex-shrink-0 ${
                   activeCategory === cat
                     ? "bg-primary text-primary-foreground border-primary shadow-sm"
                     : "bg-card text-muted-foreground border-border hover:border-primary/50 hover:text-foreground"
@@ -483,7 +517,7 @@ export default function Blog() {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
                       disabled={currentPage === 0}
-                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px]"
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50"
                       data-ocid="blog.pagination_prev"
                     >
                       <ChevronLeft className="w-4 h-4" /> Previous
@@ -542,7 +576,7 @@ export default function Blog() {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
                       disabled={currentPage >= totalPages - 1}
-                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px]"
+                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50"
                       data-ocid="blog.pagination_next"
                     >
                       Next <ChevronRight className="w-4 h-4" />
@@ -560,4 +594,19 @@ export default function Blog() {
       <Footer />
     </div>
   );
+}
+
+interface BlogPost {
+  id: number;
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  status: string;
+  image: string;
+  content: string;
+  createdAt: number;
 }

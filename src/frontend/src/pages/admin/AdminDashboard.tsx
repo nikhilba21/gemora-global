@@ -42,7 +42,9 @@ export default function AdminDashboard() {
   const orders = (() => {
     try {
       const s = localStorage.getItem("gemora_orders");
-      return s ? (JSON.parse(s) as Array<{ status: string }>) : [];
+      // ✅ FIX: Defensive array check
+      const parsed = s ? JSON.parse(s) : [];
+      return Array.isArray(parsed) ? parsed : [];
     } catch {
       return [];
     }
@@ -56,11 +58,14 @@ export default function AdminDashboard() {
     {} as Record<string, number>,
   );
 
-  const recentInquiries = (inquiries ?? []).slice(0, 5);
+  // ✅ FIX: Ensure inquiries is always treated as an array
+  const recentInquiries = Array.isArray(inquiries) ? inquiries.slice(0, 5) : [];
 
   const countryMap: Record<string, number> = {};
-  for (const inq of inquiries ?? []) {
-    if (inq.country)
+  // ✅ FIX: Safe iteration with array check
+  const inquiryList = Array.isArray(inquiries) ? inquiries : [];
+  for (const inq of inquiryList) {
+    if (inq && inq.country)
       countryMap[inq.country] = (countryMap[inq.country] ?? 0) + 1;
   }
   const countryRows = Object.entries(countryMap)
@@ -381,7 +386,7 @@ export default function AdminDashboard() {
               </thead>
               <tbody>
                 {countryRows.map(([country, count], i) => {
-                  const total = (inquiries ?? []).length || 1;
+                  const total = inquiryList.length || 1;
                   return (
                     <tr
                       key={country}
@@ -449,7 +454,7 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {(products ?? []).length === 0 && (
+                {(Array.isArray(products) ? products : []).length === 0 && (
                   <tr>
                     <td
                       colSpan={3}
@@ -461,43 +466,45 @@ export default function AdminDashboard() {
                     </td>
                   </tr>
                 )}
-                {(products ?? []).slice(0, 5).map((p, i) => (
-                  <tr
-                    key={String(p.id)}
-                    style={{ borderBottom: "1px solid #f5f5f5" }}
-                    data-ocid={`admin.products.item.${i + 1}`}
-                  >
-                    <td
-                      style={{
-                        padding: "8px",
-                        fontSize: 13,
-                        color: "#222",
-                        fontWeight: 500,
-                      }}
+                {(Array.isArray(products) ? products : [])
+                  .slice(0, 5)
+                  .map((p, i) => (
+                    <tr
+                      key={String(p.id)}
+                      style={{ borderBottom: "1px solid #f5f5f5" }}
+                      data-ocid={`admin.products.item.${i + 1}`}
                     >
-                      {p.name}
-                    </td>
-                    <td style={{ padding: "8px", fontSize: 12, color: "#888" }}>
-                      {p.sku || "—"}
-                    </td>
-                    <td style={{ padding: "8px" }}>
-                      {p.featured ? (
-                        <span
-                          style={{
-                            background: "rgba(212,175,55,0.15)",
-                            color: "#b8860b",
-                            fontSize: 11,
-                            padding: "2px 8px",
-                            borderRadius: 20,
-                            fontWeight: 600,
-                          }}
-                        >
-                          Yes
-                        </span>
-                      ) : null}
-                    </td>
-                  </tr>
-                ))}
+                      <td
+                        style={{
+                          padding: "8px",
+                          fontSize: 13,
+                          color: "#222",
+                          fontWeight: 500,
+                        }}
+                      >
+                        {p.name}
+                      </td>
+                      <td style={{ padding: "8px", fontSize: 12, color: "#888" }}>
+                        {p.sku || "—"}
+                      </td>
+                      <td style={{ padding: "8px" }}>
+                        {p.featured ? (
+                          <span
+                            style={{
+                              background: "rgba(212,175,55,0.15)",
+                              color: "#b8860b",
+                              fontSize: 11,
+                              padding: "2px 8px",
+                              borderRadius: 20,
+                              fontWeight: 600,
+                            }}
+                          >
+                            Yes
+                          </span>
+                        ) : null}
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
