@@ -8,6 +8,7 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import { useActor } from "../../hooks/useActor";
 
 const BOX = {
   background: "#fff",
@@ -45,6 +46,7 @@ type SlotInfo = {
 };
 
 export default function AdminWebsiteSettings() {
+  const { actor } = useActor();
   const qc = useQueryClient();
   const { uploadFileDetailed, uploading, converting, uploadError } =
     useStorageUpload();

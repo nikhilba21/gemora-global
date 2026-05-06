@@ -96,7 +96,8 @@ export default function AdminGalleryFolders() {
     setOverallProgress(0);
     try {
       // 1. Create folder
-      const folderId = await api.createGalleryFolder(newFolderName.trim(), newFolderDesc.trim(), 0);
+      const result = await api.createGalleryFolder({ name: newFolderName.trim(), description: newFolderDesc.trim(), sortOrder: 0 });
+      const folderId = result.id;
 
       // 2. Upload images one by one
       const uploaded: { imageUrl: string; caption: string; sortOrder: number }[] = [];

@@ -7,6 +7,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
+import { useActor } from "../../hooks/useActor";
 
 type Tab = "general" | "branding" | "social" | "users" | "api";
 
@@ -25,6 +26,7 @@ interface AdminUser {
 }
 
 export default function AdminSettings() {
+  const { actor } = useActor();
   const qc = useQueryClient();
   const [activeTab, setActiveTab] = useState<Tab>("general");
 

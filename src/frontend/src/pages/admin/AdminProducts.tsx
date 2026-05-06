@@ -43,6 +43,7 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import { useActor } from "../../hooks/useActor";
 import type { Category, Product } from "../../types";
 
 type WebPBadgeInfo = {
@@ -102,6 +103,7 @@ function WebPBadge({ info }: { info?: WebPBadgeInfo }) {
 }
 
 export default function AdminProducts() {
+  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [csvOpen, setCsvOpen] = useState(false);

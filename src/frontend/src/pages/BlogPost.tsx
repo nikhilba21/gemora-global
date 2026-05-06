@@ -50,7 +50,7 @@ export default function BlogPostPage() {
   const { data: backendPost, isLoading: backendLoading } = useQuery({
     queryKey: ["blogPost", slug],
     queryFn: () => api.getBlogPost(slug),
-    enabled: !!actor && !!slug && !defaultPost,
+    enabled: !!slug && !defaultPost,
     select: (data) => {
       // backend.d.ts: getBlogPost returns BlogPost | null
       if (data === null || data === undefined) return null;
@@ -63,7 +63,7 @@ export default function BlogPostPage() {
   const { data: allBackendPosts = [] } = useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
-    enabled: !!actor,
+    enabled: true,
   });
 
   const post: BlogPost | null = (backendPost as BlogPost | null) ?? defaultPost;

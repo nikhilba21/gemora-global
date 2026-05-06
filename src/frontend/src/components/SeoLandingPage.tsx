@@ -179,7 +179,7 @@ export default function SeoLandingPage({
   const { data: testimonialsData } = useQuery<Testimonial[]>({
     queryKey: ["testimonials"],
     queryFn: () => api.getTestimonials(),
-    enabled: !!actor && !actorFetching,
+    enabled: true,
   });
 
   const displayTestimonials =

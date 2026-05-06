@@ -24,6 +24,7 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import { useActor } from "../../hooks/useActor";
 import type { GalleryItem } from "../../types";
 
 type GForm = {
@@ -49,6 +50,7 @@ type BulkItem = {
 };
 
 export default function AdminGallery() {
+  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [editing, setEditing] = useState<GalleryItem | null>(null);

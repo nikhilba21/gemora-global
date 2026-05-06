@@ -4,9 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
+import { useActor } from "../../hooks/useActor";
 import type { Inquiry } from "../../types";
 
 export default function AdminAutomation() {
+  const { actor } = useActor();
   const [emailAuto, setEmailAuto] = useState(() => {
     try {
       return JSON.parse(
