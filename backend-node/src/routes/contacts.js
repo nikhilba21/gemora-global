@@ -17,7 +17,7 @@ router.get('/', requireAdmin, async (req, res) => {
     sql += ' ORDER BY "createdAt" DESC';
     if (page !== undefined && pageSize !== undefined) {
       const pg = parseInt(page)||0, ps = parseInt(pageSize)||50;
-      const cR = await query(sql.replace('SELECT *','SELECT COUNT(*) as c'), params);
+      const cR = await query(sql.replace('SELECT *','SELECT COUNT(*) as c').split(' ORDER BY')[0], params);
       const total = parseInt(cR.rows[0]?.c||0);
       params.push(ps, pg*ps);
       sql += ` LIMIT $${params.length-1} OFFSET $${params.length}`;

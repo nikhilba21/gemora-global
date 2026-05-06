@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     sql += ' ORDER BY "createdAt" DESC';
     if (page !== undefined && pageSize !== undefined) {
       const pg=parseInt(page)||0, ps=parseInt(pageSize)||10;
-      const cR = await query(sql.replace('SELECT *','SELECT COUNT(*) as count'), params);
+      const cR = await query(sql.replace('SELECT *','SELECT COUNT(*) as count').split(' ORDER BY')[0], params);
       const total=parseInt(cR.rows[0]?.count||0), pages=Math.max(1,Math.ceil(total/ps));
       params.push(ps,pg*ps);
       sql += ` LIMIT $${params.length-1} OFFSET $${params.length}`;

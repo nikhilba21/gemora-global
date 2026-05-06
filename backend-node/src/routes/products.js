@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
 
     if (page !== undefined && pageSize !== undefined) {
       const pg = parseInt(page)||0, ps = parseInt(pageSize)||20;
-      const countSql = sql.replace('SELECT *','SELECT COUNT(*) as count');
+      const countSql = sql.replace('SELECT *','SELECT COUNT(*) as count').split(' ORDER BY')[0];
       const countR = await query(countSql, params);
       const total = parseInt(countR.rows[0]?.count||0);
       const pages = Math.max(1, Math.ceil(total/ps));
@@ -131,7 +131,7 @@ router.delete('/:id', requireAdmin, async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-module.exports = router;
+
 
 // POST /api/products/bulk — upload many products at once (admin only)
 router.post('/bulk', requireAdmin, async (req, res) => {
@@ -164,3 +164,5 @@ router.post('/bulk', requireAdmin, async (req, res) => {
     res.json({ success: true, created, failed, total: items.length, errors: errors.slice(0,5) });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
+
+module.exports = router;
