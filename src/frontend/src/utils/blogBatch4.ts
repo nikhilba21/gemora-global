@@ -10,8 +10,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
     tags: ["manufacturing", "jaipur", "imitation jewellery", "process"],
     content: `
       <h2>The Step-by-Step <a href="/imitation-jewellery-manufacturer-jaipur">Jaipur Jewellery</a> Manufacturing Process</h2>
@@ -43,8 +42,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
     tags: ["quality control", "fashion jewellery", "export", "qc"],
     content: `
       <h2>Why Quality Control is Critical for Export Jewellery</h2>
@@ -73,8 +71,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
     tags: ["nickel free", "imitation jewellery", "supplier", "india"],
     content: `
       <h2>Why Nickel-Free Jewellery Matters</h2>
@@ -102,8 +99,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
     tags: ["anti tarnish", "jewellery", "manufacturer", "india"],
     content: `
       <h2>What Causes Jewellery to Tarnish?</h2>
@@ -131,8 +127,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
     tags: [
       "hypoallergenic",
       "fashion jewellery",
@@ -165,8 +160,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
     tags: ["handmade", "machine made", "imitation jewellery", "manufacturing"],
     content: `
       <h2>Key Differences Between Handmade and Machine-Made Jewellery</h2>
@@ -193,8 +187,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
     tags: ["brass jewellery", "manufacturer", "india", "materials"],
     content: `
       <h2>Why Brass is the Preferred Base Metal for Indian Fashion Jewellery</h2>
@@ -221,8 +214,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
     tags: ["zinc alloy", "jewellery", "exporter", "guide"],
     content: `
       <h2>What is Zinc Alloy Jewellery?</h2>
@@ -249,8 +241,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1576022161797-e48b64e6bd1d?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
     tags: ["finishing", "fashion jewellery", "manufacturing", "premium"],
     content: `
       <h2>What Separates Premium from Ordinary Imitation Jewellery</h2>
@@ -279,8 +270,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
     tags: ["reliable manufacturer", "jewellery", "guide", "b2b"],
     content: `
       <h2>10-Step Guide to Choosing a Reliable Jewellery Manufacturer</h2>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_30 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
     tags: ["tennis bracelet", "wrist luxury", "diamond bracelet", "2026 jewelry trends", "classic style"],
     content: `<h2>The Timeless Line of Light</h2>
 <p>The 'Tennis Bracelet'—a continuous line of diamonds or gemstones—is one of the most iconic pieces of jewelry in history. It got its name in 1987 when tennis star Chris Evert lost her diamond bracelet during a match at the US Open. Today, in 2026, the tennis bracelet has moved beyond the tennis court to become the definitive 'Everyday-Luxury' accessory. It's the piece that every woman wants to see peeking out from under her cuff.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_30 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
     tags: ["eternity band", "wedding bands", "stacking rings", "diamond bands", "jewelry trends 2026"],
     content: `<h2>The Circle of Infinity</h2>
 <p>The 'Eternity Band'—a ring featuring a continuous line of identical gemstones—has long been a symbol of everlasting love, traditionally given on a major anniversary. But in 2026, the eternity band has broken out of the 'Anniversary' category. It's now the #1 'Self-Purchase' ring for women who want to build a powerful, sparkling 'Finger-Stack.' It's a celebration of personal strength, milestones, and of course, infinite style.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_30 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
     tags: ["solitaire pendant", "diamond necklace", "classic jewelry", "jewelry staples", "2026 trends"],
     content: `<h2>The Power of One</h2>
 <p>In a world of complex designs and 'Neck-Stacks,' the solitaire pendant remains the ultimate symbol of 'Understated-Luxury.' A single, perfect gemstone hanging from a delicate chain is the most versatile piece of jewelry a woman can own. It works with a white T-shirt, a power suit, or a wedding dress. In 2026, the solitaire pendant is experiencing a 'Minimalist-Revival,' with a focus on stone quality and innovative settings.</p>
@@ -161,7 +161,7 @@ export const BLOG_BATCH_30 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
     tags: ["chandelier earrings", "statement earrings", "evening jewelry", "2026 fashion trends", "maximalist jewelry"],
     content: `<h2>The Return of High Drama</h2>
 <p>After years of 'dainty' ear curation, the fashion world in 2026 is hungry for drama. Chandelier earrings—large, ornate, multi-tiered drops that move with the wearer—have become the definitive 'Party-Piece' of the season. Inspired by everything from 18th-century French court fashion to 1920s Art Deco glamour, chandelier earrings are designed to frame the face and capture every ray of light.</p>
@@ -208,7 +208,7 @@ export const BLOG_BATCH_30 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
     tags: ["anklet trends", "summer jewelry", "ankle bracelets", "boho style", "2026 fashion"],
     content: `<h2>The Shimmering Step</h2>
 <p>From the ancient temples of India to the beaches of 90s Ibiza, the 'Anklet' (or 'Payal') has always been a symbol of femininity, movement, and summer freedom. In 2026, the anklet has made a massive comeback, evolving from a simple 'beach accessory' into a sophisticated piece of high-fashion jewelry. It's the finishing touch that adds a touch of 'Unexpected-Glow' to any summer outfit.</p>

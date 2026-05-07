@@ -9,7 +9,7 @@ export const BLOG_BATCH_39 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["amethyst meaning", "purple gemstones", "february birthstone", "serenity stone", "gemstone education"],
     content: `<h2>The Royal Violet</h2>
 <p>In the world of 2026 gemstones, Amethyst is the definitive 'Stone of Peace.' Famous for its vibrant purple-to-violet hues, its name comes from the Ancient Greek 'Amethystos' (Not Intoxicated), as it was believed to prevent drunkenness. For millennia, it was considered a 'Cardinal-Gem,' as valuable as Diamond or Ruby and reserved for royalty and clergy. Today, it is prized as a symbol of spiritual growth, mental clarity, and 'Serene-Luxury.' In 2026, Amethyst has become a top choice for the 'Wellness-Luxe' and 'Modern-Mystic' fashion movements.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_39 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
     tags: ["rose quartz meaning", "pink gemstones", "love stone", "wellness jewelry", "gemstone education"],
     content: `<h2>The Glow of the Heart</h2>
 <p>In the gallery of 2026 wellness gemstones, Rose Quartz is the undisputed queen of 'Compassion.' Known for its soft, 'Strawberry-Milk' pink hues, it has been a symbol of love, beauty, and emotional healing for millennia. For the Ancient Greeks and Romans, it was believed to have been brought to Earth by Eros, the God of Love. Today, it is prized as a symbol of unconditional love, self-care, and 'Gentle-Luxury.' In 2026, Rose Quartz has become the #1 choice for the 'Self-Care' and 'Mindful-Gifting' markets.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_39 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
     tags: ["black onyx meaning", "black gemstones", "protection stone", "focus jewelry", "gemstone education"],
     content: `<h2>The Shield of the Night</h2>
 <p>In the world of 2026 gemstones, Black Onyx is the definitive 'Stone of Strength.' Known for its deep, opaque, 'Ink-Black' surface, it has been a symbol of protection, discipline, and mental focus for millennia. For the Ancient Romans, it was the stone of courage, often carved with the image of Mars (the God of War). Today, it is prized as a symbol of resilience, grounding, and 'Sleek-Luxury.' In 2026, Black Onyx has become the #1 choice for 'Gender-Neutral' and 'Modern-Professional' fashion movements.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_39 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["labradorite meaning", "grey gemstones", "magic stone", "transformation jewelry", "gemstone education"],
     content: `<h2>The Frozen Northern Lights</h2>
 <p>In the world of 2026 mystical gemstones, Labradorite is the definitive 'Stone of Magic.' Named after the Canadian region of Labrador where it was first discovered, its most famous feature is 'Labradorescence'—a mesmerizing play of iridescent colors (blue, green, gold, and orange) that flashes across its dark grey surface as it moves. For the Inuit people, it was believed to be the Northern Lights frozen in the earth. Today, it is prized as a symbol of transformation, intuition, and 'Hidden-Power.' In 2026, Labradorite is the #1 choice for the 'Modern-Mystic' and 'Artisan-Luxury' fashion movements.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_39 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
     tags: ["tigers eye meaning", "brown gemstones", "courage stone", "protection jewelry", "gemstone education"],
     content: `<h2>The Eye of the Protector</h2>
 <p>In the world of 2026 gemstones, Tiger's Eye is the definitive 'Stone of Vitality.' Famous for its silky, 'Chatoyant' bands of gold, brown, and honey, it has been a symbol of courage, focus, and protection for millennia. For the Ancient Egyptians, it was the 'All-Seeing-Eye,' representing divine vision and the power of the sun. Today, it is prized as a symbol of grounding, confidence, and 'Rugged-Luxury.' In 2026, Tiger's Eye is the #1 choice for 'Gender-Neutral' and 'Modern-Professional' fashion movements.</p>

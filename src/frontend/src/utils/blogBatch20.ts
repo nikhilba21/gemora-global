@@ -9,7 +9,7 @@ export const BLOG_BATCH_20 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
     tags: ["gothic jewelry", "modern goth", "dark fashion", "alternative jewelry", "goth style 2026"],
     content: `<h2>The Evolution of Modern Goth</h2>
 <p>Gothic jewelry is no longer just for the 'alternative' scene. In 2026, it has been fully embraced by high fashion, appearing on global runways and in luxury editorial shoots. This 'Modern Goth' aesthetic—sometimes referred to as 'Goth-Leisure' or 'Whimsigoth'—blends traditional dark, moody elements with contemporary silhouettes and high-quality materials.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_20 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
     tags: ["festival jewelry", "coachella style", "boho festival", "glitter jewelry", "statement festival"],
     content: `<h2>Festival Season: The Ultimate Fashion Playground</h2>
 <p>Festival jewelry is all about freedom, expression, and going 'over the top.' It's the one time of year when 'too much' is just right. In 2026, festival jewelry trends are a vibrant mix of 70s boho nostalgia, futuristic 'Cyber-Y2K' elements, and massive statement pieces that are made to be seen from the front row.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_20 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e02?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
     tags: ["zodiac jewelry", "astrology fashion", "birthstone jewelry", "star sign jewelry", "spiritual jewelry"],
     content: `<h2>The Eternal Appeal of the Stars</h2>
 <p>Astrology has been a part of human culture for thousands of years, but in 2026, it is experiencing a massive resurgence, especially among Gen Z and Millennials. Zodiac jewelry allows people to carry a piece of their identity with them, serving as a talisman of their personality, strengths, and cosmic connection. It's the ultimate 'Personalized Jewelry' because it's based on something as unique as your birth chart.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_20 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
     tags: ["personalized jewelry", "nameplate necklace", "initial jewelry", "custom jewelry", "gifting trends"],
     content: `<h2>The Rise of 'Me-Jewelry'</h2>
 <p>In a world of mass production, people are increasingly looking for things that are unique to them. Jewelry is the perfect medium for this. Personalized jewelry—or 'Me-Jewelry'—has evolved from simple engraved rings into a massive, multi-faceted category that includes everything from 3D-printed nameplates to jewelry featuring your actual handwriting or thumbprint.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_20 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617113938472-38c4d06813a0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
     tags: ["mens jewelry", "mens fashion 2026", "masculine style", "mens rings", "mens necklaces"],
     content: `<h2>The New Era of Men's Adornment</h2>
 <p>The days of men being restricted to a watch and a wedding band are over. In 2026, men's jewelry is one of the fastest-growing categories in the entire fashion industry. Driven by a new generation that rejects traditional gender roles and influenced by style icons like Harry Styles, Lewis Hamilton, and Timothée Chalamet, men are using jewelry to express their personality, status, and creative flair.</p>

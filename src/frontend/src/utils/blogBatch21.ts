@@ -9,7 +9,7 @@ export const BLOG_BATCH_21 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617114919297-3c8ddb01f599?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
     tags: ["art deco jewelry", "vintage style 2026", "geometric jewelry", "1920s jewelry", "glamour fashion"],
     content: `<h2>The Return of the Roaring Twenties</h2>
 <p>Exactly one hundred years after its peak, Art Deco is having a massive revival in the jewelry world of 2026. Born in the 1920s as a celebration of modernity, technology, and luxury, Art Deco is defined by its bold geometric shapes, strong symmetry, and high-contrast color palettes. In 2026, this 'Vintage-Glamour' aesthetic has captured the imagination of a generation looking for structure and sophistication in an unpredictable world.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_21 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590736962235-85d858380486?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
     tags: ["baroque pearls", "pearl jewelry 2026", "organic jewelry", "modern pearls", "jewelry trends"],
     content: `<h2>The Rise of the 'Organic' Pearl</h2>
 <p>For centuries, the 'ideal' pearl was perfectly round and perfectly white. But in 2026, the world has fallen in love with the 'Baroque' pearl. These are pearls that are irregular, asymmetrical, and unique in shape. From long 'teardrops' to flat 'coins' to completely abstract 'blobs,' baroque pearls represent a shift toward celebrating nature's imperfections.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_21 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
     tags: ["enamel jewelry", "colorful jewelry", "meenakari", "jewelry trends 2026", "vibrant fashion"],
     content: `<h2>The Color Revolution in Jewelry</h2>
 <p>After several years of 'minimalist gold' dominance, the fashion world in 2026 is hungry for color. Enamel jewelry—where colored glass is fused to metal—has emerged as the perfect way to add vibrant, saturated hues to any look. This isn't just about 'playful' jewelry; it's about using color as a sophisticated design element.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_21 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1630019014644-f282d8dd9561?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
     tags: ["hoop earrings", "statement earrings", "fashion trends 2026", "jewelry staples", "gold hoops"],
     content: `<h2>The Unstoppable Hoop</h2>
 <p>If there's one piece of jewelry that has survived every fashion era, it's the hoop earring. From ancient civilizations to the 90s hip-hop scene to the modern runway, hoops are a symbol of confidence, culture, and timeless style. In 2026, the hoop is having its biggest moment yet—literally. We're moving away from 'huggie' hoops and toward oversized, architectural statement hoops that frame the face and define the outfit.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_21 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085510592-af392bc6825c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
     tags: ["snake jewelry", "serpent motifs", "symbolic jewelry", "ancient trends 2026", "power jewelry"],
     content: `<h2>The Allure of the Serpent</h2>
 <p>The snake is one of the oldest and most powerful symbols in jewelry history. Representing everything from eternal life and rebirth to wisdom and danger, serpent motifs have been worn by royalty and rebels for thousands of years. In 2026, snake jewelry is having a major resurgence, appearing as the 'it' accessory for those who want to add a touch of mystery and edge to their look.</p>

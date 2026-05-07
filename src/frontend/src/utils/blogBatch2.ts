@@ -10,8 +10,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
     tags: ["earrings", "wholesale", "supplier", "india"],
     content: `<h2>India's Wholesale Earring Market</h2>
 <p>India is one of the world's largest wholesale earring suppliers, producing millions of pieces annually for export to the USA, UK, UAE, Australia, and beyond. Jaipur, in particular, is a hub for fashion earring manufacturing, combining traditional craftsmanship with modern design sensibilities to serve boutiques and retailers globally.</p>
@@ -44,8 +43,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
     tags: ["necklace sets", "bulk", "manufacturer", "india"],
     content: `<h2>India's Bulk Necklace Sets Industry</h2>
 <p>India manufactures an extraordinary range of necklace sets for wholesale buyers worldwide. From intricate ethnic Kundan sets to sleek layered chain necklaces, Indian manufacturers cater to every retail segment — from high-street boutiques in London to ethnic jewellery stores in Dubai and bridal shops across North America.</p>
@@ -78,8 +76,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1576022161797-e48b64e6bd1d?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     tags: ["bangles", "exporter", "india", "fashion"],
     content: `<h2>India's Fashion Bangle Export Industry</h2>
 <p>India is the world's leading exporter of fashion bangles, and Jaipur stands at the heart of this industry. With thousands of artisans and manufacturing units producing everything from simple metal kadas to intricate meenakari bangle sets, Indian exporters serve boutiques, ethnic stores, and online retailers across 40+ countries.</p>
@@ -113,8 +110,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
     tags: ["rings", "wholesale", "imitation", "supplier"],
     content: `<h2>Wholesale Imitation Rings from India</h2>
 <p>The global fashion ring market is booming, and Indian manufacturers are perfectly positioned to serve it. Imitation rings from India are crafted on brass, zinc alloy, and stainless steel bases — offering boutiques and online retailers exceptional margins with wholesale prices typically 80–90% below retail.</p>
@@ -148,8 +144,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
     tags: ["bridal jewellery", "manufacturer", "india", "wedding"],
     content: `<h2>India's Bridal Jewellery Manufacturing Hub</h2>
 <p>India is the world's largest producer of bridal imitation jewellery, serving wedding markets across the UK, Canada, USA, UAE, and Australia where South Asian diaspora communities spend heavily on bridal occasion wear. Full bridal sets combining necklace, earrings, maang tikka, bangles, and nose ring are the top wholesale category for ethnic bridal boutiques globally.</p>
@@ -182,8 +177,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["anklets", "supplier", "boutiques", "trendy"],
     content: `<h2>Why Anklets Are a Must-Stock Category</h2>
 <p>Anklets have surged in popularity globally, driven by summer fashion trends, beach and boho aesthetics, and Y2K revival styles. For boutiques, anklets offer an excellent entry-level price point with strong impulse-buy potential. Indian manufacturers supply the full range — from delicate gold-plated chains to layered bohemian beaded styles — at wholesale prices that enable attractive retail margins.</p>
@@ -216,8 +210,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
     tags: ["stainless steel", "jewellery", "wholesaler", "india"],
     content: `<h2>The Rise of Stainless Steel Fashion Jewellery</h2>
 <p>Stainless steel jewellery is one of the fastest-growing segments in the wholesale fashion jewellery market. Buyers in Western markets — particularly the USA, UK, Australia, and Germany — increasingly prefer stainless steel pieces for their durability, tarnish resistance, and hypoallergenic properties. Indian manufacturers have rapidly scaled up 316L surgical steel and IP-coated steel production to meet this demand.</p>
@@ -249,8 +242,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
     tags: ["gold plated", "imitation jewellery", "exporter", "wholesale"],
     content: `<h2>What Is Gold Plated Imitation Jewellery?</h2>
 <p>Gold plated imitation jewellery is fashion jewellery made from a base metal (typically brass or zinc alloy) that is electroplated with a layer of real gold. This process creates pieces that look visually identical to solid gold jewellery at a fraction of the cost — making it the backbone of the global fashion jewellery industry, with India as one of the largest producers worldwide.</p>
@@ -283,8 +275,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["pearl jewellery", "supplier", "fashion", "wholesale"],
     content: `<h2>Fashion Pearl Jewellery — A Global Bestseller</h2>
 <p>Pearl fashion jewellery has experienced a remarkable renaissance, driven by the "old money aesthetic," minimalist fashion, and modest fashion trends across markets from Southeast Asia to the Middle East and Western boutiques. Indian manufacturers produce high-quality imitation pearl jewellery using shell pearls, acrylic, resin, and glass beads that closely replicate the look of natural pearls at wholesale prices accessible to fashion retailers of all sizes.</p>
@@ -316,8 +307,7 @@ export const BLOG_BATCH_2 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
     tags: ["charm bracelets", "custom", "manufacturer", "india"],
     content: `<h2>India's Custom Charm Bracelet Manufacturing Sector</h2>
 <p>Custom charm bracelets are a booming category in fashion accessories, combining personalization appeal with affordable pricing. Indian manufacturers — particularly in Jaipur — have built strong capabilities in producing a wide variety of charm bracelet styles with customization options for overseas buyers, from gift shops and boutiques to online jewellery brands looking to build their own product lines.</p>

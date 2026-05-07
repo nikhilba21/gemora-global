@@ -10,8 +10,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
     tags: ["jaipur", "imitation jewellery", "hub", "india"],
     content: `<h2>Jaipur's Royal Jewellery Legacy</h2>
 <p>Jaipur's jewellery tradition stretches back over 400 years, shaped by the patronage of Rajasthan's Maharajas and the artistic influence of the Mughal Empire. These royal courts demanded the finest jewellery, training generations of master craftsmen — or <em>karigars</em> — whose skills have been passed down to this day. This deep cultural and artistic foundation is why Jaipur emerged as India's jewellery capital.</p>
@@ -44,8 +43,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
     tags: ["jewellery manufacturing", "india", "jaipur", "cities"],
     content: `<h2>India's Jewellery Manufacturing Cities — A Comparison</h2>
 <p>India is home to several world-class jewellery manufacturing clusters, each specialising in different segments. Understanding which city leads in your product category is essential for smart sourcing decisions.</p>
@@ -80,8 +78,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1576022161797-e48b64e6bd1d?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
     tags: ["global buyers", "trust", "indian suppliers", "jewellery"],
     content: `<h2>India's 50+ Year Export Track Record</h2>
 <p>Indian jewellery suppliers have been exporting to global markets for over five decades. This long track record has built institutional trust — buyers from the USA, UK, UAE, and Europe know that Indian suppliers understand international standards, documentation requirements, and delivery timelines. Trust is earned through consistent performance, and India's jewellery industry has consistently delivered.</p>
@@ -114,8 +111,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
     tags: ["verify supplier", "india", "jewellery", "b2b"],
     content: `<h2>Why Supplier Verification is Non-Negotiable</h2>
 <p>Placing a bulk jewellery order with an unverified supplier is one of the most common — and costly — mistakes international buyers make. A thorough verification process takes a few hours but can save you thousands of dollars and protect your business reputation. Here is a step-by-step guide.</p>
@@ -150,8 +146,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
     tags: ["certified export partner", "india", "jewellery", "certifications"],
     content: `<h2>Why Certifications Matter in <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
 <p>Not all Indian jewellery exporters are equal. Legitimate, professional exporters hold specific registrations and certifications that demonstrate compliance, legal standing, and commitment to quality. Before selecting a supplier, verify these credentials — they are the minimum standard for any serious B2B partnership.</p>
@@ -184,8 +179,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1576022161797-e48b64e6bd1d?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
     tags: [
       "mistakes importing jewellery",
       "buyer guide",
@@ -225,8 +219,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
     tags: [
       "questions jewellery manufacturer",
       "buyer guide",
@@ -284,8 +277,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
     tags: ["avoid scam", "wholesale suppliers", "jewellery", "b2b safety"],
     content: `<h2>Jewellery Wholesale Scams Are More Common Than You Think</h2>
 <p>The Indian jewellery wholesale market is largely legitimate and professional — but like any large industry, it attracts bad actors targeting international buyers who cannot easily visit in person. Knowing the warning signs before you engage will protect your business and money.</p>
@@ -320,8 +312,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
     tags: [
       "long term sourcing",
       "benefits",
@@ -370,8 +361,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
     tags: ["gemora global", "manufacturers", "jaipur", "quality"],
     content: `<h2>What Separates the Best Jaipur Manufacturers from the Rest</h2>
 <p>Jaipur has thousands of jewellery manufacturers. The difference between an average supplier and an exceptional one is not just price — it is consistency, communication, and the ability to genuinely serve international B2B buyers. Here is what the top tier of Jaipur manufacturers does differently.</p>

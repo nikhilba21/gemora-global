@@ -10,8 +10,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
     tags: ["usa", "imitation jewellery", "supplier", "import"],
     content: `<h2>The USA Fashion Jewellery Market</h2>
 <p>The United States is the world's largest fashion jewellery market, valued at over $35 billion annually. American consumers spend heavily on affordable, trend-driven accessories — making it a prime destination for Indian imitation jewellery exporters. Indian manufacturers supply a significant portion of the jewellery sold in US boutiques, online stores, and wholesale markets.</p>
@@ -41,8 +40,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
     tags: ["uae", "wholesale jewellery", "exporter", "dubai"],
     content: `<h2>UAE Jewellery Market Overview</h2>
 <p>The United Arab Emirates — particularly Dubai — is one of the world's most important jewellery trading hubs. Dubai's Gold Souk handles billions in jewellery transactions annually, attracting buyers from across the Middle East, Africa, and Asia. The market spans both luxury gold jewellery and fashion imitation pieces for the large expat community.</p>
@@ -72,8 +70,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
     tags: ["uk", "fashion jewellery", "supplier", "retailers"],
     content: `<h2>UK Fashion Jewellery Retail Market</h2>
 <p>The United Kingdom's fashion jewellery market is valued at over £1.5 billion, with strong demand across high street boutiques, online retailers, and independent stores. UK consumers are style-conscious and trend-aware, making Indian fashion jewellery an ideal fit — especially for retailers looking for affordable yet stylish collections.</p>
@@ -103,8 +100,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
     tags: ["australia", "costume jewellery", "boutiques", "wholesale"],
     content: `<h2>Australian Fashion Jewellery Market</h2>
 <p>Australia has a vibrant fashion boutique culture, with independent stores and online retailers driving strong demand for affordable costume jewellery. The market favours casual, beach-inspired, and boho aesthetic pieces — categories where Indian manufacturers excel. Australian buyers are price-sensitive but expect good quality packaging and reliable delivery.</p>
@@ -134,8 +130,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
     tags: ["canada", "indian jewellery", "exporter", "wholesale"],
     content: `<h2>Canada's Multicultural Jewellery Market</h2>
 <p>Canada is home to one of the largest South Asian diaspora communities outside India, creating a dual-market opportunity for Indian jewellery exporters. The Indian-Canadian community in Toronto, Brampton, Vancouver, and Calgary drives strong year-round demand for ethnic jewellery — particularly for weddings, Diwali, and cultural celebrations.</p>
@@ -164,8 +159,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
     tags: ["europe", "fashion jewellery", "import", "india"],
     content: `<h2>European Fashion Jewellery Market</h2>
 <p>Europe is a major destination for Indian fashion jewellery exports, with Germany, France, the Netherlands, Italy, and Belgium among the top importing countries. European consumers value quality, design, and sustainability — creating a strong market for well-finished, compliant imitation jewellery from Indian manufacturers.</p>
@@ -195,8 +189,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
     tags: ["philippines", "jewellery", "wholesale", "southeast asia"],
     content: `<h2>Philippine Jewellery Market Overview</h2>
 <p>The Philippines is a rapidly growing market for fashion and costume jewellery, driven by a young, social-media-active population and a growing middle class. Filipino consumers love gold-look jewellery for everyday wear, fiestas, and religious occasions. The market is highly receptive to Indian imitation jewellery — especially gold-plated pieces that offer a luxurious look at affordable prices.</p>
@@ -226,8 +219,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
     tags: ["dubai", "fashion jewellery", "sourcing", "uae"],
     content: `<h2>Dubai as a Global Jewellery Trading Hub</h2>
 <p>Dubai occupies a unique position in the global jewellery trade — it is simultaneously a retail market, a wholesale centre, and a re-export hub for the entire Middle East, Africa, and Central Asia. Indian suppliers are the backbone of Dubai's fashion and imitation jewellery market, with regular shipments arriving daily from Jaipur, Mumbai, and Surat.</p>
@@ -257,8 +249,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
     tags: ["saudi arabia", "jewellery", "import", "supplier"],
     content: `<h2>Saudi Arabia's Booming Fashion Market</h2>
 <p>Saudi Arabia's Vision 2030 economic reform programme has dramatically transformed the country's retail landscape. With entertainment sectors opening, a young population embracing fashion, and international retail brands expanding — Saudi Arabia is now a significant and growing market for fashion jewellery imports. Indian manufacturers are well-positioned to benefit from this growth.</p>
@@ -288,8 +279,7 @@ export const BLOG_BATCH_3 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
     tags: ["singapore", "fashion jewellery", "wholesale", "southeast asia"],
     content: `<h2>Singapore as a Regional Jewellery Hub</h2>
 <p>Singapore's strategic location makes it the ideal re-export hub for Indian fashion jewellery distributed across Southeast Asia. Singapore-based importers buy from Indian manufacturers and re-distribute to Indonesia, Malaysia, Thailand, Vietnam, and beyond. The city-state's efficient port, business-friendly regulations, and low tariffs make it a preferred entry point for the ASEAN region.</p>

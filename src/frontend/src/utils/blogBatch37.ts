@@ -9,7 +9,7 @@ export const BLOG_BATCH_37 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
     tags: ["aquamarine meaning", "gemstone education", "blue gemstones", "march birthstone", "serenity stone"],
     content: `<h2>The Breath of the Ocean</h2>
 <p>In the world of 2026 gemstones, Aquamarine is the definitive 'Stone of Calm.' Its name, derived from the Latin 'Aqua Marinus' (Water of the Sea), perfectly describes its mesmerizing blue-to-green hues. For centuries, sailors carried aquamarine to protect them from the dangers of the ocean. Today, it is prized as a symbol of peace, clear communication, and the 'Fearless-Cool' of the modern woman. In 2026, Aquamarine has become a top choice for those seeking a 'Zen' aesthetic in their fine jewelry.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_37 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
     tags: ["morganite meaning", "pink gemstones", "bridal trends 2026", "compassion stone", "gemstone education"],
     content: `<h2>The Heart's Glow</h2>
 <p>In the spectrum of 2026 gemstones, Morganite is the undisputed queen of 'Romance.' A variety of Beryl (like Emerald and Aquamarine), Morganite is famous for its soft, 'Peachy-Pink' hues that seem to glow from within. It was named after the legendary financier and gem collector J.P. Morgan. Today, it is prized as a symbol of divine love, emotional healing, and 'Compassionate-Grace.' In 2026, Morganite has become the #1 'Alternative-Bridal' gemstone for the bride who wants something softer and more feminine than a diamond.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_37 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
     tags: ["tanzanite meaning", "violet gemstones", "december birthstone", "investment jewelry", "gemstone education"],
     content: `<h2>A Gem of a Single Generation</h2>
 <p>In the global market of 2026, Tanzanite is the definitive 'Stone of Rarity.' Found in only one place on Earth—a small 4km strip near Mount Kilimanjaro in Tanzania—it is 1,000 times rarer than a diamond. With geologists predicting the mines will be exhausted within the next two decades, Tanzanite has become a top 'Investment-Gem' for collectors. Its mesmerizing 'Violet-Blue' color is unique in the gemstone world, symbolizing transformation, spiritual expansion, and 'Exclusivity.'</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_37 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
     tags: ["opal meaning", "rainbow gemstones", "october birthstone", "creativity stone", "gemstone education"],
     content: `<h2>The Universe in a Stone</h2>
 <p>In the gallery of 2026 gemstones, Opal is the definitive 'Stone of Magic.' Shakespeare once called it 'The Queen of Gems,' and it's easy to see why. A single opal can contain every color of the rainbow, shifting and dancing as the stone moves—a phenomenon known as 'Play-of-Color.' For centuries, it was a symbol of hope, purity, and creative power. In 2026, Opal has become the #1 choice for the 'Maximalist-Boho' market, where every piece is as unique as a fingerprint.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_37 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
     tags: ["moonstone meaning", "white gemstones", "june birthstone", "intuition stone", "gemstone education"],
     content: `<h2>The Light of the Night Sky</h2>
 <p>In the world of 2026 spiritual jewelry, Moonstone is the definitive 'Stone of Connection.' Prized for its 'Adularescence'—a ghostly, billowing light that moves across the surface like moonlight on water—Moonstone has been a sacred gem for thousands of years. From ancient India to the Art Nouveau masters of Paris, it has always symbolized the divine feminine, new beginnings, and the cycles of life. In 2026, Moonstone is the #1 choice for the 'Modern-Mystic' and 'Wellness' markets.</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_35 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
     tags: ["indian jewelry", "polki jewelry", "kundan jewelry", "bridal jewelry", "heritage jewelry"],
     content: `<h2>The Royal Legacy of India</h2>
 <p>In the world of 2026 luxury, 'Heritage' is the ultimate status symbol. No jewelry style embodies this more than the royal jewelry of India—specifically Polki and Kundan. These ancient techniques, which originated in the Mughal courts centuries ago, have become the definitive choice for modern Indian brides and global 'High-Fashion' collectors. They are pieces of wearable history, representing the absolute pinnacle of Indian artisan craftsmanship.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_35 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
     tags: ["middle eastern jewelry", "hamsa meaning", "evil eye meaning", "protection jewelry", "2026 trends"],
     content: `<h2>Symbols of Protection</h2>
 <p>In the culture of the Middle East and Mediterranean, symbols are more than just decoration; they are a form of spiritual defense. Two of the most powerful and enduring symbols are the **Hamsa (Hand of Fatima)** and the **Evil Eye (Nazar)**. In 2026, these ancient talismans have transcended their cultural roots to become global fashion icons, worn by millions as a symbol of protection, luck, and 'Good-Vibes.'</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_35 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["celtic jewelry", "claddagh ring", "trinity knot", "heritage jewelry", "jewelry meanings"],
     content: `<h2>The Eternal Weave</h2>
 <p>In the world of jewelry design, few styles are as instantly recognizable as Celtic jewelry. Defined by its 'Knotwork'—continuous, interlocking lines with no beginning and no end—this style is a powerful symbol of eternity, faith, and the interconnectedness of all life. In 2026, as we seek deeper 'Roots' and 'Meaning' in our fashion, Celtic jewelry has seen a massive global resurgence, appealing to those with Irish/Scottish heritage and those who simply love the 'Timeless-Artisan' aesthetic.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_35 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["native american jewelry", "southwestern jewelry", "turquoise silver", "boho style", "heritage fashion"],
     content: `<h2>The Spirit of the Land</h2>
 <p>Native American jewelry style—specifically the 'Southwestern' look defined by vibrant Turquoise and heavy Sterling Silver—is one of the most powerful and enduring aesthetics in the fashion world. In 2026, this style has moved beyond its regional roots to become a global symbol of 'Boho-Luxe' and 'Independent-Spirit.' It's a look that feels connected to the earth, the sky, and a deep history of artisan craftsmanship.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_35 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["jade jewelry", "chinese culture", "heritage jewelry", "wellness trends", "meaningful jewelry"],
     content: `<h2>The Gem of the Emperors</h2>
 <p>In China, Jade is known as 'The Stone of Heaven.' Confucius said that Jade possesses eleven virtues, including benevolence, justice, and truth. For 5,000 years, it has been the ultimate symbol of status, spirituality, and longevity. In 2026, this 'Ancient-Luxury' has become a global phenomenon. No longer restricted to the Asian market, Jade is being embraced by the world's most innovative jewelry brands as the definitive 'Wellness' and 'Quiet-Luxury' gemstone.</p>

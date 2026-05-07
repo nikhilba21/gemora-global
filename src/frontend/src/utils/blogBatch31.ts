@@ -9,7 +9,7 @@ export const BLOG_BATCH_31 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
     tags: ["jewelry factory", "jewelry manufacturing", "B2B", "production process", "quality control"],
     content: `<h2>Behind the Sparkle</h2>
 <p>When you hold a piece of jewelry, you see the shine. But behind that shine lies a complex ecosystem of artists, engineers, and quality controllers. In 2026, a world-class jewelry factory is a blend of ancient hand-craftsmanship and cutting-edge digital technology. At <a href="/">Gemora Global</a>, we believe in transparency—we want our partners to understand the 'Anatomy' of where their jewelry is born.</p>
@@ -62,7 +62,7 @@ export const BLOG_BATCH_31 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
     tags: ["quality control", "jewelry standards", "B2B manufacturing", "product testing", "jewelry quality"],
     content: `<h2>The Zero-Defect Goal</h2>
 <p>In the global jewelry market of 2026, 'Quality' is the most powerful marketing tool. A single defective piece can damage a brand's reputation and lead to costly returns. At <a href="/">Gemora Global</a>, we don't see Quality Control (QC) as a final inspection; we see it as a 'System of Excellence' integrated into every minute of our production day. Our goal is simple: zero defects, every time.</p>
@@ -112,7 +112,7 @@ export const BLOG_BATCH_31 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
     tags: ["sustainable jewelry", "ethical sourcing", "B2B", "jewelry industry", "2026 trends"],
     content: `<h2>The Rise of the Conscious Consumer</h2>
 <p>In 2026, 'Sustainability' is no longer a niche marketing term; it's a fundamental requirement for any successful jewelry brand. Consumers, especially Gen Z and Millennials, want to know where their jewelry came from, who made it, and what impact it had on the planet. Sourcing sustainably isn't just 'good for the world'; it's 'good for business.'</p>
@@ -162,7 +162,7 @@ export const BLOG_BATCH_31 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
     tags: ["custom jewelry", "jewelry design", "B2B", "manufacturing process", "product development"],
     content: `<h2>Turning Vision into Reality</h2>
 <p>In the competitive jewelry market of 2026, 'Originality' is your greatest asset. While sourcing ready-made designs is great for building a baseline, developing your own 'Custom Collections' allows you to build a unique brand identity and offer something your competitors don't have. At <a href="/">Gemora Global</a>, we specialize in helping B2B partners bring their sketches to life.</p>
@@ -212,7 +212,7 @@ export const BLOG_BATCH_31 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
     tags: ["wholesale jewelry", "pricing strategy", "B2B", "jewelry business", "retail margins"],
     content: `<h2>The Math of Success</h2>
 <p>In the jewelry business, 'Price' is about more than just cost plus profit. It's a statement of value, a tool for competition, and the engine of your brand's growth. In 2026, as the market becomes more transparent, having a smart 'Wholesale-to-Retail' pricing strategy is the difference between a thriving business and one that struggles to stay afloat.</p>

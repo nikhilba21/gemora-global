@@ -9,7 +9,7 @@ export const BLOG_BATCH_43 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
     tags: ["gemstone hardness", "mohs scale", "jewelry care", "gemstone education", "B2B guide"],
     content: `<h2>The Science of Survival</h2>
 <p>In the world of 2026 fine jewelry, beauty is only half the story. The other half is 'Durability.' Whether you're choosing an engagement ring to last decades or a fashion piece for the season, understanding 'Gemstone Hardness' is essential. Not every gem is built for daily life. Some are 'Tough' enough to survive a gym session, while others are so 'Soft' that even a household cleaning cloth could scratch them. This is measured by the **Mohs Scale of Hardness**.</p>
@@ -62,7 +62,7 @@ export const BLOG_BATCH_43 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
     tags: ["jewelry cleaning", "home care", "gemstone cleaning", "silver polish", "maintenance guide"],
     content: `<h2>The Professional Polish at Home</h2>
 <p>Jewelry is a magnet for life. Skin oils, lotions, perfumes, and everyday dust create a 'Film' on your gemstones and metal, stealing their brilliance and making even a million-dollar diamond look like a piece of glass. In 2026, you don't need expensive machines to keep your jewels looking 'Red-Carpet-Ready.' With the right techniques and a few household items, you can safely restore the 'Factory-Shine' to your collection in minutes.</p>
@@ -118,7 +118,7 @@ export const BLOG_BATCH_43 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
     tags: ["jewelry storage", "home organization", "travel jewelry", "tarnish prevention", "maintenance guide"],
     content: `<h2>The Sanctuary of Style</h2>
 <p>The way you store your jewelry is just as important as the way you wear it. In fact, most jewelry damage happens while it's *not* being worn. Rings scratching each other in a bowl, necklaces tangling into 'Impossible-Knots,' and silver tarnishing in the air—all of these are preventable with the right storage strategy. In 2026, jewelry storage has evolved from the 'Cluttered-Box' to the 'Curated-Archive'—utilizing technology and design to protect and organize your most precious assets.</p>
@@ -165,7 +165,7 @@ export const BLOG_BATCH_43 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
     tags: ["jewelry inspection", "maintenance tips", "loose stones", "prongs and settings", "care guide"],
     content: `<h2>The 60-Second Security Check</h2>
 <p>Most lost gemstones aren't the result of a 'Sudden-Accident.' They are the result of weeks or months of gradual wear that went unnoticed. A bent prong, a worn-down clasp, or a stretched-out chain—these are all 'Warning-Signs' that your jewelry needs professional attention. In 2026, as we move toward 'Sustainable-Luxury,' maintaining the integrity of our pieces is more important than ever. By performing a simple, 5-point inspection at home every month, you can prevent heart-breaking loss.</p>
@@ -215,7 +215,7 @@ export const BLOG_BATCH_43 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
     tags: ["professional jeweler", "jewelry repair", "jewelry valuation", "polishing and plating", "care guide"],
     content: `<h2>The Guardian of Your Treasures</h2>
 <p>While at-home care is essential, there are moments in a jewelry's life that require the hand of a 'Master-Craftsman.' A professional jeweler isn't just someone who sells rings; they are a scientist, an artist, and a guardian. In 2026, as jewelry becomes increasingly complex—utilizing high-tech alloys, delicate 'Micro-Settings,' and 'Ethical-Materials'—the role of the professional jeweler is more critical than ever. Knowing *when* to stop the DIY and seek expert help is the key to preserving your heirlooms for the next generation.</p>

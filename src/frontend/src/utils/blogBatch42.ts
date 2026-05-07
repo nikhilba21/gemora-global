@@ -9,7 +9,7 @@ export const BLOG_BATCH_42 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
     tags: ["first date jewelry", "styling tips", "date night", "jewelry trends 2026", "lifestyle jewelry"],
     content: `<h2>The Subtle Language of Style</h2>
 <p>First dates are about 'Connection' and 'Authenticity.' You want to look like the best version of yourself, but you also want to feel comfortable and confident. In the world of 2026 dating, your jewelry acts as a 'Silent-Introduction'—it tells a story about your personality, your tastes, and your attention to detail before you even say a word. The key to first-date jewelry is 'Balance': you want pieces that are interesting enough to be conversation starters, but subtle enough not to distract from the most important thing—you.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_42 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
     tags: ["interview jewelry", "professional style", "career tips", "jewelry trends 2026", "corporate fashion"],
     content: `<h2>The Professional Anchor</h2>
 <p>In the job market of 2026, your 'Personal-Brand' is everything. While your resume gets you in the door, your presentation seals the deal. In an interview, your jewelry should serve one purpose: to anchor your professional look and signal 'Competence,' 'Reliability,' and 'Attention to Detail.' The goal is to look 'Polished' but not 'Distracting.' In 2026, the 'Business-Luxe' aesthetic has moved away from 'Invisible' jewelry to 'Significant' but 'Structured' pieces.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_42 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
     tags: ["gala jewelry", "formal events", "red carpet style", "luxury jewelry", "2026 trends"],
     content: `<h2>The Night of the Stars</h2>
 <p>A formal gala or red-carpet event is the one time of the year when 'More' is truly 'More.' This is the arena for 'High-Jewelry'—the absolute pinnacle of design, gemstone quality, and artisan craft. In 2026, gala jewelry has moved away from 'Traditional-Safe' looks toward 'Architectural-Drama.' It's about pieces that command the room, catch every photographer's flash, and tell a story of 'Power' and 'Prestige.' When the dress code is Black Tie, your jewelry should be the 'Main-Event.'</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_42 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
     tags: ["vacation jewelry", "beach style", "jewelry care", "resort wear", "2026 trends"],
     content: `<h2>Resort-Ready Luxury</h2>
 <p>A beach vacation is the time for 'Effortless' glamour. You want pieces that look stunning with a bikini or a sundress but can also handle the sun, the sand, and the saltwater. In 2026, vacation jewelry has moved away from 'Cheap-Plastic' toward 'Organic-Luxury'—pieces made of high-quality natural materials that actually look better as they get 'Lived-In.' The goal is to look like a 'Sea-Goddess' who doesn't have a care in the world.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_42 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
     tags: ["festival jewelry", "party style", "statement jewelry", "2026 trends", "boho jewelry"],
     content: `<h2>The Arena of Expression</h2>
 <p>A music festival (like Coachella, Glastonbury, or Tomorrowland) is the one place where fashion rules don't apply. It's the ultimate playground for 'Maximalist' expression and 'Experimental' styling. In 2026, festival jewelry has moved beyond 'Cheap-Plastic-Beads' toward 'Festival-Fine'—high-impact, durable pieces made of gold-vermeil and vibrant lab-gems that can survive a 3-day dance party and still look amazing on Instagram. It's a look that is 'Loud,' 'Proud,' and 'Priceless.'</p>

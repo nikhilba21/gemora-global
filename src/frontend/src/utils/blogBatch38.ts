@@ -9,7 +9,7 @@ export const BLOG_BATCH_38 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
     tags: ["citrine meaning", "yellow gemstones", "november birthstone", "wealth stone", "gemstone education"],
     content: `<h2>The Golden Ray</h2>
 <p>In the world of 2026 gemstones, Citrine is the definitive 'Stone of Positivity.' Its name, derived from the French 'Citron' (Lemon), perfectly describes its range of sunny, golden, and honey-toned hues. For centuries, it was known as the 'Merchant's Stone,' believed to attract wealth and abundance to those who carry it. Today, it is prized as a symbol of joy, creativity, and 'Personal-Power.' In 2026, Citrine has become a top choice for the 'Success-Minded' and 'Manifestation' communities.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_38 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
     tags: ["peridot meaning", "green gemstones", "august birthstone", "renewal stone", "gemstone education"],
     content: `<h2>The Gem of the Sun</h2>
 <p>In the garden of 2026 gemstones, Peridot is the definitive 'Stone of Growth.' Famous for its vibrant, 'Lime-Green' color—which doesn't change even under artificial light—the ancient Egyptians called it 'The Gem of the Sun.' For centuries, it was believed to protect the wearer from the night and bring peace to the heart. Today, it is prized as a symbol of renewal, prosperity, and 'Compassionate-Strength.' In 2026, Peridot is a favorite for the 'Eco-Conscious' and 'Nature-Luxe' fashion movements.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_38 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     tags: ["topaz meaning", "blue topaz", "imperial topaz", "november birthstone", "manifestation stone"],
     content: `<h2>The Beam of Light</h2>
 <p>In the spectrum of 2026 gemstones, Topaz is the definitive 'Stone of Intention.' Known for its incredible clarity and wide range of colors—from the common but stunning 'Swiss Blue' to the incredibly rare 'Imperial Orange'—Topaz has been a symbol of wealth, protection, and mental clarity for millennia. In 2026, Topaz is the #1 choice for those looking for 'High-Sparkle' and 'High-Impact' jewelry that remains accessible and durable.</p>
@@ -164,7 +164,7 @@ export const BLOG_BATCH_38 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
     tags: ["garnet meaning", "red gemstones", "january birthstone", "passion stone", "gemstone education"],
     content: `<h2>The Living Fire</h2>
 <p>In the world of 2026 gemstones, Garnet is the definitive 'Stone of Vitality.' Known primarily for its deep, wine-red hues that resemble pomegranate seeds (from which it gets its name), Garnet has been a symbol of passion, safe travel, and 'Eternal-Health' for over 5,000 years. In 2026, Garnet is experiencing a 'Gothic-Luxe' and 'Vintage-Modern' revival, appealing to those who want a piece of jewelry with 'Heat' and 'History.'</p>
@@ -220,7 +220,7 @@ export const BLOG_BATCH_38 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
     tags: ["turquoise meaning", "blue gemstones", "december birthstone", "wisdom stone", "gemstone education"],
     content: `<h2>The Bridge Between Earth and Sky</h2>
 <p>In the world of 2026 gemstones, Turquoise is the definitive 'Stone of Connection.' Prized by the Ancient Egyptians, the Persians, and the Native American tribes for millennia, its unique 'Robin's-Egg' blue color has always been a symbol of health, protection, and 'Heavenly-Wisdom.' In 2026, Turquoise is the #1 choice for the 'Boho-Luxe' and 'Modern-Western' markets, where the desire for 'Organic' and 'Hand-Crafted' jewelry is at an all-time high.</p>

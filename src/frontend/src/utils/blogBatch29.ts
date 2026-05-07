@@ -9,7 +9,7 @@ export const BLOG_BATCH_29 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e02?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["labradorite jewelry", "labradorescence", "spiritual jewelry", "mystical gemstones", "jewelry trends 2026"],
     content: `<h2>The Gem of the Northern Lights</h2>
 <p>Labradorite is a stone of transformation and mystery. Legend says that the Northern Lights were trapped inside the rocks along the coast of Labrador, Canada, until an ancient warrior struck them with his spear, releasing the lights into the sky but leaving a portion of them trapped in the stone. This 'trap' of light is what we call 'Labradorescence'—the stunning, iridescent flashes of blue, green, and gold that appear when the stone is turned.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_29 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590736962235-85d858380486?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
     tags: ["morganite jewelry", "pink gemstones", "engagement ring trends", "modern bride", "jewelry trends 2026"],
     content: `<h2>The Gem of Divine Love</h2>
 <p>Morganite—the pink-to-peach variety of the mineral beryl—is one of the most romantic gemstones in the world. Named after the financier and gem collector J.P. Morgan, it has become the definitive choice for the 'Modern-Romantic' aesthetic in 2026. Its soft, pastel tones provide a sophisticated alternative to the 'boldness' of pink sapphires or the high cost of pink diamonds.</p>
@@ -103,7 +103,7 @@ export const BLOG_BATCH_29 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
     tags: ["tanzanite jewelry", "blue gemstones", "african gems", "december birthstone", "luxury trends 2026"],
     content: `<h2>The 'One-Generation' Gemstone</h2>
 <p>Tanzanite is one of the most remarkable stories in the gemstone world. It was discovered in 1967 in the foothills of Mount Kilimanjaro in Tanzania—the only place on Earth it is found. Experts believe the supply will be exhausted within the next 20-30 years, making Tanzanite a 'One-Generation' gem. In 2026, this extreme rarity has made Tanzanite a top-tier choice for luxury collections and investment-grade jewelry.</p>
@@ -150,7 +150,7 @@ export const BLOG_BATCH_29 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590736962235-85d858380486?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["opal jewelry", "opal care", "rainbow gemstones", "october birthstone", "jewelry education"],
     content: `<h2>The Gem of the Gods</h2>
 <p>Ancient Romans believed Opals were the most powerful gems of all because they contained the colors of every other gemstone—the red of ruby, the green of emerald, and the blue of sapphire. This unique optical effect is known as 'Play-of-Color.' In 2026, as we move toward 'Individualism' in fashion, Opal has become a top-tier choice because no two opals are ever the same. Every stone is a unique, miniature universe.</p>
@@ -200,7 +200,7 @@ export const BLOG_BATCH_29 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
     tags: ["jade jewelry", "green gemstones", "wellness jewelry", "chinese culture", "gemstone meanings"],
     content: `<h2>The Gem of the East</h2>
 <p>In many Asian cultures, Jade is more valuable than gold. It's a stone of immense history, representing virtue, longevity, and status. In 2026, Jade has seen a massive global resurgence, driven by the 'Wellness' movement and a new appreciation for 'Ancient-Luxury.' Its soft, waxy luster and soothing green tones make it the perfect 'Zodiac' and 'Self-Care' accessory.</p>

@@ -10,7 +10,7 @@ export const BLOG_BATCH_11 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "/assets/blog/jewellery-export-india.png",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
     tags: ["wholesale jewellery", "export india", "b2b buyer guide", "logistics", "customs"],
     content: `
       <h2>The Definitive Masterclass on <a href="/wholesale-imitation-jewellery-manufacturer-exporter">Wholesale Imitation Jewellery</a> Export</h2>
@@ -86,7 +86,7 @@ export const BLOG_BATCH_11 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "/assets/blog/jaipur-manufacturing-hub.png",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
     tags: ["jaipur jewellery", "manufacturing hub", "kundan", "artisan craft", "wholesale"],
     content: `
       <h2>Jaipur: The Undisputed Capital of Global Jewellery Manufacturing</h2>

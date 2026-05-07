@@ -9,7 +9,7 @@ export const BLOG_BATCH_41 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
     tags: ["minimalist jewelry", "quiet luxury", "jewelry capsule", "2026 trends", "everyday jewelry"],
     content: `<h2>The Beauty of Subtlety</h2>
 <p>In the world of 2026 fashion, 'Minimalism' isn't just a trend; it's a lifestyle. Known for its clean lines, simple geometric shapes, and 'Quiet-Luxury' aesthetic, minimalist jewelry is the definitive choice for the modern, urban professional. It's about pieces that enhance the wearer's natural beauty without distracting from it. In 2026, the focus has shifted from 'Invisible' jewelry to 'Essential' jewelry—pieces that have a presence but remain perfectly balanced and understated.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_41 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
     tags: ["maximalist jewelry", "statement jewelry", "jewelry stacking", "2026 trends", "layered luxury"],
     content: `<h2>The Joy of Excess</h2>
 <p>In the world of 2026 fashion, 'Maximalism' is the definitive 'Shout' of personality. While minimalism is about the 'Quiet,' maximalism is about the 'Party.' Known for its bold colors, oversized shapes, and 'More-is-More' philosophy, this style is a celebration of creativity and self-expression. In 2026, maximalism has evolved from 'Cluttered' to 'Curated'—it's not just about wearing everything you own; it's about layering and stacking with a sense of 'High-Fashion' purpose.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_41 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
     tags: ["boho luxe", "bohemian jewelry", "nature inspired jewelry", "2026 trends", "spiritual jewelry"],
     content: `<h2>The Soulful Aesthetic</h2>
 <p>In the world of 2026 fashion, 'Boho-Luxe' is the definitive 'Heart-Centered' style. It's the point where the 'Free-Spirit' of the 1970s meets the 'High-Quality' demands of the modern luxury consumer. Known for its use of organic shapes, meaningful symbols, and vibrant 'Earth-Toned' gemstones, Boho-Luxe is jewelry that feels like it has a soul. In 2026, this style has evolved from 'Crafty' to 'Couture'—utilizing 18k gold and precious gems to create 'Museum-Quality' pieces with a bohemian heart.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_41 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
     tags: ["art deco jewelry", "vintage revival", "geometric jewelry", "2026 trends", "engagement rings"],
     content: `<h2>The Return of the Roaring Twenties</h2>
 <p>In the world of 2026 fashion, 'Art Deco' is the definitive 'High-Glamour' style. Originally born in the 1920s, Art Deco is famous for its bold geometric shapes, clean lines, and symmetrical patterns. A century later, it is experiencing a massive global revival. In 2026, this style has been updated for the modern era—combining 'Vintage-Charm' with 'Modern-Precision' to create pieces that feel both 'Heirloom' and 'Cutting-Edge.'</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_41 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617114919297-3c8ddb01f599?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
     tags: ["gothic jewelry", "modern gothic", "blackened metal", "2026 trends", "edgy jewelry"],
     content: `<h2>The Allure of the Shadow</h2>
 <p>In the world of 2026 fashion, 'Gothic-Modern' is the definitive 'Indie-Luxe' style. Born from a blend of Victorian mourning jewelry, high-fashion subcultures, and the 'Dark-Academia' aesthetic, it is a style defined by blackened metals, deep-red gemstones, and 'Romantic-Edgy' motifs. In 2026, Gothic jewelry has been elevated from 'Costume' to 'Couture'—utilizing Black Rhodium, Rubies, and Black Diamonds to create pieces that are both 'Hauntingly-Beautiful' and 'Incredibly-Premium.'</p>

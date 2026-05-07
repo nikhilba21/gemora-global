@@ -9,7 +9,7 @@ export const BLOG_BATCH_33 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
     tags: ["thailand jewelry", "silver jewelry", "B2B sourcing", "gemstone cutting", "global manufacturing"],
     content: `<h2>The Land of Smiles and Silver</h2>
 <p>In the global jewelry industry of 2026, Thailand remains one of the top three manufacturing hubs in the world. Famous for its precision-cut gemstones (especially Rubies and Sapphires) and its massive output of high-quality Sterling Silver jewelry, Thailand offers a unique blend of skilled labor and high-volume capacity. For brands looking to scale their silver collections, Thailand is an essential part of the global sourcing map.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_33 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
     tags: ["italian jewelry", "vicenzaoro", "luxury jewelry", "B2B sourcing", "gold manufacturing"],
     content: `<h2>The Heart of Jewelry Artistry</h2>
 <p>Italy is not just a country; it's a global brand for 'Excellence.' In the jewelry world of 2026, 'Made in Italy' remains the gold standard for design, innovation, and technical mastery. From the massive machine-made chain production of Vicenza to the delicate, hand-crafted 'Haute-Joaillerie' of Valenza, Italy defines what luxury looks and feels like. For a brand looking to position itself at the top of the market, understanding the Italian landscape is essential.</p>
@@ -103,7 +103,7 @@ export const BLOG_BATCH_33 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
     tags: ["china jewelry", "mass production", "B2B manufacturing", "jewelry technology", "global supply chain"],
     content: `<h2>The Power of Scale</h2>
 <p>In 2026, China remains the undisputed heavyweight champion of jewelry manufacturing. While other hubs (like India and Italy) lead in 'Artistry' and 'Design,' China leads in 'Speed,' 'Scale,' and 'Technological Innovation.' From the massive fashion jewelry factories of Panyu to the high-tech lab-grown diamond reactors of Henan, China's jewelry ecosystem is a marvel of 21st-century engineering. For any brand looking for high-volume, cost-effective production, China is an unavoidable partner.</p>
@@ -155,7 +155,7 @@ At <a href="/">Gemora Global</a>, we often work with Chinese tech-partners for s
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
     tags: ["USA jewelry", "consumer trends", "market analysis", "B2B", "2026 fashion"],
     content: `<h2>The Diamond of the Global Market</h2>
 <p>The United States remains the largest and most influential jewelry market in the world. In 2026, the US consumer is driving the global shift toward 'Self-Expression,' 'Sustainability,' and 'Experience-First' luxury. For any global jewelry brand or wholesaler, the US is not just a market; it's a trend-setter. What happens on the streets of New York, LA, and Miami today becomes the global standard tomorrow.</p>
@@ -205,7 +205,7 @@ At <a href="/">Gemora Global</a>, we often work with Chinese tech-partners for s
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
     tags: ["Middle East jewelry", "gold jewelry", "21k gold", "luxury trends", "B2B market"],
     content: `<h2>The Land of Gold</h2>
 <p>The Middle East (specifically the GCC countries like Dubai, Saudi Arabia, and Qatar) is home to the world's most passionate jewelry consumers. In this region, jewelry is not just an accessory; it is a symbol of status, a store of wealth, and a central part of cultural tradition. In 2026, the Middle East is the 'Capital of High-Karat Gold' and 'Maximalist-Luxury,' where 'Bigger is Always Better.'</p>

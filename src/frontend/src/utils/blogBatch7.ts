@@ -10,8 +10,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
     tags: ["custom jewellery boxes", "export", "packaging", "branding"],
     content: `
       <h2>Why Custom Packaging Matters for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
@@ -46,8 +45,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
     tags: ["packaging", "shipping", "imitation jewellery", "export"],
     content: `
       <h2>Inner Packaging: Protecting Each Piece</h2>
@@ -82,8 +80,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     tags: ["shipping jewellery", "international", "export", "logistics"],
     content: `
       <h2>Choosing the Right Courier for Jewellery</h2>
@@ -117,8 +114,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
     tags: ["export documentation", "jewellery", "business", "india"],
     content: `
       <h2>Essential Export Documents for Indian Jewellery Exporters</h2>
@@ -154,8 +150,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
     tags: ["courier", "jewellery export", "shipping", "logistics"],
     content: `
       <h2>Best Courier Services for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> from India</h2>
@@ -191,8 +186,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["shipping costs", "jewellery export", "reduce costs", "logistics"],
     content: `
       <h2>Why Shipping Costs Hurt <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Margins</h2>
@@ -229,8 +223,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
     tags: ["eco friendly", "packaging", "jewellery", "sustainable"],
     content: `
       <h2>Why Eco-Friendly Packaging Is Now a B2B Requirement</h2>
@@ -267,8 +260,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
     tags: ["dust bags", "jewellery boxes", "packaging", "branding"],
     content: `
       <h2>Why Dust Bags and Boxes Define Brand Perception</h2>
@@ -303,8 +295,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["customs guide", "jewellery", "export", "import duties"],
     content: `
       <h2>HS Codes for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
@@ -340,8 +331,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
     tags: ["global delivery", "wholesale", "logistics", "distribution"],
     content: `
       <h2>Building a Global Delivery Infrastructure</h2>

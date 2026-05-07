@@ -9,7 +9,7 @@ export const BLOG_BATCH_45 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
     tags: ["custom engagement ring", "ring design guide", "jewelry customization", "bridal 2026", "B2B design"],
     content: `<h2>The Ultimate Personal Statement</h2>
 <p>In the world of 2026 weddings, 'Off-the-Shelf' is out, and 'One-of-a-Kind' is in. Couples today want a ring that tells their unique story—a piece that no one else in the world owns. Designing your own engagement ring might seem intimidating, but with modern technology and a clear process, it is one of the most rewarding journeys you can take. It's the difference between buying a product and creating an heirloom.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_45 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
     tags: ["upcycled jewelry", "heirloom redesign", "sustainable jewelry", "vintage modernization", "B2B guide"],
     content: `<h2>The Sustainable Sentiment</h2>
 <p>Many of us have a jewelry box full of 'History'—pieces passed down from grandmothers or aunts that carry immense sentimental value but simply don't fit our modern style. In 2026, 'Jewelry-Upcycling' is the definitive 'Ethical-Luxury' choice. Instead of letting these treasures sit in a drawer, we can harvest the gold and the gemstones to create a new piece that reflects your personality while keeping the 'Soul' of the original intact. It's the ultimate way to wear your history.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_45 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["jewelry sketching", "jewelry rendering", "design process", "artisan jewelry", "B2B guide"],
     content: `<h2>The Visual Blueprint</h2>
 <p>Every masterpiece begins with a single line. In the world of 2026 jewelry design, sketching is the critical bridge between a 'Dream' and a 'Product.' It's where the proportions are tested, the light-play is imagined, and the 'Soul' of the piece is first captured. Whether it's a quick graphite sketch in an artist's notebook or a high-def digital painting, the 'Render' is the definitive document of a brand's vision. It's the most 'Human' part of the high-tech manufacturing process.</p>
@@ -156,7 +156,7 @@ export const BLOG_BATCH_45 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["CAD jewelry", "hand carved jewelry", "jewelry manufacturing", "modern vs traditional", "B2B guide"],
     content: `<h2>The Evolution of the Craft</h2>
 <p>In the world of 2026 jewelry manufacturing, there is a fundamental question every brand must answer: 'CAD or Hand-Carved?' For thousands of years, every piece of jewelry was 'Hand-Carved' in wax or metal. Today, 'CAD' (Computer-Aided Design) allows us to create pieces with 'NASA-Level' precision. Is the 'Soul' of jewelry lost in the computer, or is it 'Perfected'? The answer is that both have a critical place in the modern market, and the best brands use both to their advantage.</p>
@@ -204,7 +204,7 @@ export const BLOG_BATCH_45 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["jewelry settings", "prong setting", "bezel setting", "channel setting", "B2B guide"],
     content: `<h2>The Foundation of the Jewel</h2>
 <p>In the world of 2026 jewelry, the 'Setting' is the 'Unsung-Hero.' It's the metal structure that holds the gemstone in place, but it does much more than just provide security. The right setting can make a stone look twice as big, change the 'Vibe' of the design from 'Antique' to 'Modern,' and protect a delicate gem from the dangers of daily wear. Choosing the right setting is a balance between 'Aesthetics,' 'Safety,' and 'Wearability.' It's the difference between a ring that stays in the family for 100 years and one that loses its stone in the first month.</p>

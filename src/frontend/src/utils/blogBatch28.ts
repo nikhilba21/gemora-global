@@ -9,7 +9,7 @@ export const BLOG_BATCH_28 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590736962235-85d858380486?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
     tags: ["aquamarine jewelry", "blue gemstones", "march birthstone", "jewelry trends 2026", "gemstone meanings"],
     content: `<h2>The Breath of the Ocean</h2>
 <p>Aquamarine, the light blue variety of the mineral beryl, has been associated with the sea for millennia. Its name literally means 'Sea Water.' In the world of 2026 jewelry, where we are all looking for a sense of calm and clarity, Aquamarine's soothing blue tones have become a major trend. It's a gem that feels fresh, youthful, and incredibly sophisticated.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_28 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
     tags: ["peridot jewelry", "green gemstones", "august birthstone", "volcanic gems", "jewelry trends 2026"],
     content: `<h2>The Gem of Light</h2>
 <p>Peridot is one of the few gemstones that occurs in only one color: green. But what a green it is! Ranging from a soft lime to a deep olive, Peridot is a gem of high energy and vibrancy. In the world of 2026 jewelry, where 'Earthy' and 'Nature-Core' aesthetics are dominant, Peridot's unique olive-gold glow has become a favorite for those who want a green gem that is more accessible and youthful than an emerald.</p>
@@ -103,7 +103,7 @@ export const BLOG_BATCH_28 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1535633302704-c02fbcaf8c2a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     tags: ["topaz jewelry", "blue topaz", "imperial topaz", "gemstone education", "november birthstone"],
     content: `<h2>The Gem of Many Colors</h2>
 <p>Topaz is one of the most misunderstood gemstones. While most people know it as a blue stone, Topaz actually occurs in a stunning range of colors—yellow, pink, orange, violet, and even colorless. In 2026, Topaz has become a favorite for 'High-Impact' jewelry because of its incredible clarity, high hardness, and vibrant color options.</p>
@@ -155,7 +155,7 @@ export const BLOG_BATCH_28 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
     tags: ["garnet jewelry", "red gemstones", "january birthstone", "protection jewelry", "gemstone meanings"],
     content: `<h2>The Gem of Fire and Passion</h2>
 <p>Garnet is one of the world's most ancient gemstones, worn by pharaohs and emperors for thousands of years. While most people know it as a deep, brownish-red stone, the Garnet family is actually a rainbow of colors—including the vibrant green 'Tsavorite' and the orange 'Spessartite.' In 2026, Garnet has seen a massive resurgence, especially in 'Antique-Revival' and 'Modern-Goth' fashion trends.</p>
@@ -202,7 +202,7 @@ export const BLOG_BATCH_28 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
     tags: ["turquoise jewelry", "boho jewelry", "spiritual jewelry", "december birthstone", "gemstone trends 2026"],
     content: `<h2>The Gem of the Sky and Water</h2>
 <p>Turquoise is one of the oldest gemstones in human history, prized by the Pharaohs of Egypt, the Aztecs of Mexico, and the Native American tribes of the Southwest. In 2026, Turquoise has moved beyond its traditional 'Western' associations to become a global 'Boho-Luxe' staple. Its vibrant robin's-egg blue provides an instant 'Cool-Factor' that feels both ancient and incredibly modern.</p>

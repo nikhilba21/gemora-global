@@ -10,8 +10,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
     tags: ["imitation jewellery", "manufacturer", "india", "jaipur"],
     content: `<h2>India: The World's Leading <a href="/wholesale-imitation-jewellery-manufacturer-exporter">Imitation Jewellery Manufacturer</a></h2>
 <p>India has long been recognized as the global leader in imitation jewellery manufacturing. With over 400 years of craftsmanship heritage, cities like Jaipur have evolved into world-class production hubs that export to 50+ countries. Indian manufacturers combine traditional artistry with modern manufacturing techniques to produce jewellery that rivals fine jewellery in appearance at a fraction of the cost.</p>
@@ -43,8 +42,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
     tags: ["fashion jewellery", "exporter", "india", "export"],
     content: `<h2>India's Fashion <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Industry</h2>
 <p>India's fashion <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> industry is valued at over $3 billion annually and growing at 12% year-on-year. The country exports to more than 50 nations, with the UAE, USA, UK, Europe, and Australia being the top destinations. Indian exporters have earned a global reputation for delivering trend-forward, high-quality pieces at competitive wholesale prices.</p>
@@ -76,8 +74,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
     tags: ["wholesale", "jaipur", "imitation jewellery", "supplier"],
     content: `<h2>Jaipur: India's Jewellery Capital</h2>
 <p>Jaipur's Johari Bazaar has been the heart of India's jewellery trade for over 400 years. Today, the city is home to thousands of manufacturers and wholesale suppliers offering every style — from traditional kundan and meenakari to contemporary oxidised and gold-plated fashion jewellery. International buyers from the UAE, UK, USA, and Europe regularly visit Jaipur to source directly from manufacturers.</p>
@@ -109,8 +106,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
     tags: ["bulk", "manufacturer", "global buyers", "fashion jewellery"],
     content: `<h2>What Global Buyers Need from Bulk Manufacturers</h2>
 <p>Global buyers — from boutique owners in Paris to Amazon sellers in New York — share common requirements when sourcing bulk fashion jewellery: consistent quality across large orders, flexible minimum order quantities, ability to customize designs, and reliable shipping timelines. Indian bulk manufacturers, particularly those in Jaipur, have refined their operations over decades to meet exactly these needs.</p>
@@ -141,8 +137,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
     tags: ["costume jewellery", "retailer", "exporter", "india"],
     content: `<h2>Why Retailers Choose Indian Costume Jewellery</h2>
 <p>Retailers across the USA, UK, and Europe are discovering that sourcing costume jewellery directly from Indian exporters is one of the highest-margin retail strategies available. With wholesale prices ranging from $1.50 to $8 per piece and typical retail prices of $15–$50, retailers regularly achieve 200–500% markups. Indian manufacturers produce trend-driven designs that match what consumers are buying in real-time.</p>
@@ -173,8 +168,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
     tags: ["import", "imitation jewellery", "india", "guide"],
     content: `<h2>Step-by-Step Guide to Importing Imitation Jewellery from India</h2>
 <p>Importing imitation jewellery from India is straightforward once you understand the process. Thousands of retailers and boutiques worldwide do it profitably every month. Here is the exact process from finding a supplier to receiving your shipment.</p>
@@ -208,8 +202,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
     tags: [
       "indian manufacturers",
       "fashion jewellery",
@@ -247,8 +240,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
     tags: ["trusted supplier", "wholesale", "imitation jewellery", "worldwide"],
     content: `<h2>How to Identify a Trusted Wholesale Supplier</h2>
 <p>With thousands of jewellery suppliers claiming to be "the best," identifying truly trustworthy wholesale partners requires due diligence. Experienced buyers look for specific trust signals before placing their first bulk order. The cost of a bad supplier — delayed shipments, poor quality, or outright scams — far outweighs the effort of proper verification.</p>
@@ -280,8 +272,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
     tags: ["oem", "manufacturer", "india", "fashion jewellery"],
     content: `<h2>What is OEM Jewellery Manufacturing?</h2>
 <p>OEM (Original Equipment Manufacturer) jewellery manufacturing means the buyer provides the design specifications and the manufacturer produces those exact designs at scale. This is different from buying from a manufacturer's existing catalogue. OEM is ideal for brands, designers, and large retailers who want unique pieces that competitors cannot easily copy.</p>
@@ -311,8 +302,7 @@ export const BLOG_BATCH_1 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
     tags: ["private label", "imitation jewellery", "exporter", "branding"],
     content: `<h2>What is Private Label Jewellery?</h2>
 <p>Private label jewellery means selling products manufactured by another company under your own brand name. Instead of creating designs from scratch, you select from an established manufacturer's collection and apply your own branding — logo tags, custom packaging, and brand identity. This gives boutiques and online stores the look of a jewellery brand without the cost of full OEM manufacturing.</p>

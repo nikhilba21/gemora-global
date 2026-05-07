@@ -9,7 +9,7 @@ export const BLOG_BATCH_13 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562153305-24b6c9e35a22?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
     tags: ["jewelry trends 2026", "fashion jewelry", "latest trends", "women jewelry"],
     content: `<h2>Introduction: Why 2026 Is a Landmark Year for Jewelry Trends</h2>
 <p>The global fashion jewelry market is experiencing its most dynamic period in decades. Post-pandemic consumer behavior has fundamentally shifted — people are celebrating life more boldly, dressing with more intention, and investing in jewelry that tells their unique story. In 2026, jewelry trends are not just about aesthetics; they are cultural statements, mood amplifiers, and identity markers.</p>

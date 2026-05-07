@@ -9,7 +9,7 @@ export const BLOG_BATCH_17 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1566743916720-4c4e7f28a1b1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
     tags: ["boho jewelry 2026", "bohemian jewelry women", "boho style", "free spirit jewelry"],
     content: `<h2>The Enduring Power of Bohemian Jewelry</h2>
 <p>Bohemian jewelry occupies a unique position in fashion — it is simultaneously always on-trend and never fully mainstream. The boho aesthetic, rooted in counter-cultural movements of the 1960s and 1970s and revived in every decade since, speaks to a deep human desire for freedom, connection to nature, and rejection of rigid social codes. In 2026, the bohemian jewelry movement is arguably stronger than at any point in the last decade, driven by the sustained popularity of the "cottage-core," "earth aesthetic," and "free spirit" visual languages on social media.</p>
@@ -69,7 +69,7 @@ export const BLOG_BATCH_17 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
     tags: ["street style jewelry", "fashion week jewelry", "street fashion jewelry 2026", "urban jewelry trends"],
     content: `<h2>Street Style as the New Fashion Authority</h2>
 <p>The rise of street style photography — capturing real people wearing real clothes outside fashion shows — has fundamentally changed how jewelry trends are identified and disseminated. Runway jewelry in 2026 is often too extreme or conceptual for everyday consumption. The truly influential jewelry trends emerge on the streets outside fashion week venues, in the looks of fashion editors, buyers, influencers, and stylish civilians who attend shows and are photographed by the world's street style photographers.</p>

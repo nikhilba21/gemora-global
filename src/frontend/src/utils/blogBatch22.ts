@@ -9,7 +9,7 @@ export const BLOG_BATCH_22 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
     tags: ["geometric jewelry", "modern jewelry", "minimalist style", "2026 fashion trends", "architectural jewelry"],
     content: `<h2>The Architecture of Style</h2>
 <p>In 2026, jewelry is becoming more architectural. Geometric jewelry—defined by its use of clean lines, sharp angles, and mathematical proportions—has become a cornerstone of modern style. It's the ultimate 'Sophisticated-Minimalist' choice, providing a sense of order and structure that complements the fluid lines of contemporary fashion.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_22 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
     tags: ["initial necklace", "alphabet jewelry", "personalized gifts", "letter pendants", "2026 jewelry trends"],
     content: `<h2>The Alphabet of Identity</h2>
 <p>Personalization is the biggest driver of the jewelry industry in 2026, and at the heart of this movement is the initial pendant. Whether it's your own initial, your child's, or a loved one's, wearing a letter is a subtle but powerful way to carry a piece of your identity with you. Initial necklaces are the ultimate 'No-Fail' gift and a staple for every jewelry collection.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_22 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1535633302704-c02fbcaf8c2a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
     tags: ["evil eye jewelry", "protection jewelry", "spiritual style", "talisman jewelry", "2026 fashion"],
     content: `<h2>The Eye that Watches Over You</h2>
 <p>The 'Evil Eye' (or 'Nazar') is one of the world's most enduring and universal symbols. Found in cultures from the Mediterranean to the Middle East to South Asia, the eye is believed to protect the wearer from negative energy and the 'jealous gaze' of others. In 2026, the Evil Eye has moved beyond its traditional roots to become a global fashion staple—a 'Spiritual-Chic' accessory that is as meaningful as it is beautiful.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_22 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
     tags: ["birthstone jewelry", "gemstone meanings", "personalized jewelry", "birthstone guide", "2026 trends"],
     content: `<h2>Your Month, Your Gem</h2>
 <p>Birthstone jewelry is one of the most perennial and beloved categories in the world of fashion. It combines the beauty of colorful gemstones with the personal connection of one's birth month. Whether it's a birthday gift, a treat for yourself, or a way to represent your children, birthstones are a 'Forever-Trend' that never goes out of style.</p>
@@ -222,7 +222,7 @@ export const BLOG_BATCH_22 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
     tags: ["locket necklace", "sentimental jewelry", "vintage style", "2026 fashion trends", "memorial jewelry"],
     content: `<h2>The Secret Inside</h2>
 <p>In a digital age where we have thousands of photos on our phones, the locket necklace represents a return to something tactile, private, and deeply personal. A locket is more than just jewelry; it's a vessel for a secret, a memory, or a loved one. In 2026, lockets have become the 'it' item for the 'Cottagecore,' 'Vintage-Revival,' and 'Sentimental' fashion movements.</p>

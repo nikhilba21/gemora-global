@@ -10,8 +10,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
     tags: [
       "wholesale catalogue",
       "jewellery india",
@@ -47,8 +46,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
     tags: ["bulk order", "fashion jewellery supplier", "wholesale", "b2b"],
     content: `<h2>What Qualifies as a Bulk Order</h2>
 <p>In Indian fashion jewellery manufacturing, "bulk" typically means 500+ total units across an order. However, tier pricing begins at 100 units per design. For businesses just starting, an order of 5-10 designs at 100 pieces each is a practical entry point — enough to access competitive pricing without overcommitting to inventory.</p>
@@ -79,8 +77,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
     tags: ["custom quote", "jewellery india", "custom jewellery", "wholesale"],
     content: `<h2>What Information You Need to Provide</h2>
 <p>An accurate custom jewellery quote from India starts with a detailed brief. Provide a design sketch or reference image, dimensions and measurements, material preferences (brass, zinc alloy, or stainless steel), plating type and color (gold, rose gold, rhodium, oxidised), stone types and colors if applicable, your preferred finishing style, target quantity, and required timeline. The more precise your brief, the more accurate — and faster — your quote will be.</p>
@@ -111,8 +108,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
     tags: ["latest collection", "wholesale", "jewellery", "new arrivals"],
     content: `<h2>Why Buying Latest Collections Matters</h2>
 <p>Customers in fashion jewellery demand freshness. Boutiques that refresh their jewellery inventory with the latest collections see 30-40% higher repeat customer rates than those running stale stock. Indian manufacturers typically release major new collections for Spring-Summer and Autumn-Winter, with additional festival and seasonal drops throughout the year — giving you 4-6 opportunities annually to bring in fresh inventory.</p>
@@ -143,8 +139,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
     tags: [
       "moq custom jewellery",
       "manufacturer",
@@ -180,8 +175,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
     tags: [
       "fast delivery",
       "wholesale jewellery india",
@@ -217,8 +211,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
     tags: [
       "premium imitation jewellery",
       "bulk supplier",
@@ -254,8 +247,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: [
       "private label jewellery",
       "start brand",
@@ -291,8 +283,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["trusted exporter", "jewellery", "contact", "wholesale inquiry"],
     content: `<h2>How to Reach Out Effectively</h2>
 <p>Your first message to an Indian <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> should establish you as a serious buyer immediately. Include your business type (retailer, online store, boutique), your target market and country, the jewellery categories you're interested in, your approximate annual purchase volume, and your MOQ requirements per design. Buyers who provide this context upfront receive priority responses and more accurate initial pricing.</p>
@@ -323,8 +314,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["wholesale inquiry", "jewellery guide", "b2b buyer", "wholesale"],
     content: `<h2>What Suppliers Need to Know From You</h2>
 <p>A winning <a href="/wholesale">Wholesale Jewellery</a> inquiry answers six key questions: your business type (retailer, boutique, online store, reseller), your target market and country, the jewellery categories you need, your approximate annual purchase budget, the MOQ you can commit to per design, and any special requirements such as nickel-free materials, eco-friendly packaging, or private label branding. Suppliers who receive complete inquiries respond faster and with more competitive initial pricing.</p>

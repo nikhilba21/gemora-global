@@ -9,7 +9,7 @@ export const BLOG_BATCH_36 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
     tags: ["personalized jewelry", "initial necklace", "zodiac jewelry", "nameplate necklace", "jewelry gifting"],
     content: `<h2>The Power of Identity</h2>
 <p>In a world of mass-produced fashion, 'Personalization' is the ultimate luxury. It's the difference between a beautiful piece of jewelry and a treasured 'Keepsake.' In 2026, personalized jewelry has become the #1 category for gifting, as consumers look for ways to make their jewelry tell a story. Whether it's your own initial, your child's birthstone, or your star sign, personalized jewelry is a statement of identity and love.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_36 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
     tags: ["push presents", "motherhood jewelry", "baby shower gifts", "birthstone jewelry", "jewelry gifting"],
     content: `<h2>A Milestone of Love</h2>
 <p>A 'Push Present' (a gift given to a new mother by her partner to celebrate the birth of a child) has become one of the most significant jewelry-buying occasions of the year. In 2026, the push present is more than just a reward; it's a symbol of a life-changing milestone. Jewelry is the perfect choice for this occasion because it doesn't 'expire' like flowers or clothing. It's a piece that she can wear every day and eventually pass down to the child it celebrates.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_36 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
     tags: ["graduation gifts", "professional jewelry", "career milestones", "jewelry gifting", "2026 trends"],
     content: `<h2>Investing in the Future</h2>
 <p>Graduation is more than just the end of school; it's the beginning of a professional life. A gift of jewelry for a graduate is a vote of confidence in their future. In 2026, the trend for graduation gifting has shifted from 'Sentimental-Trinkets' to 'Professional-Staples'—high-quality pieces that a young graduate can wear to their first job interview and for years to come. These are 'Foundation' pieces for a life of success.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_36 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
     tags: ["friendship jewelry", "bestie gifts", "matching jewelry", "jewelry gifting", "2026 trends"],
     content: `<h2>The Soulmate Friendship</h2>
 <p>In 2026, we've realized that some of our most important 'Soulmates' aren't romantic partners—they're our friends. 'Friendship Jewelry' has evolved from the colorful string bracelets of our childhood into sophisticated, 'Grown-Up' pieces of fine fashion. It's a way to celebrate the bond of loyalty, shared history, and mutual support that defines our inner circle. In 2026, friendship jewelry is about 'Shared-Luxury' and 'Personal-Meaning.'</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_36 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
     tags: ["pet memorial jewelry", "dog memorial", "cat memorial", "personalized jewelry", "sentimental jewelry"],
     content: `<h2>A Bond Like No Other</h2>
 <p>For many of us, our pets are not just animals; they are family members, companions, and keepers of our hearts. When we lose them, the grief is deep and real. In 2026, 'Pet Memorial Jewelry' has become a significant and beautiful way to process that loss and keep the memory of a beloved companion close. It's a way to turn a moment of sadness into a lasting symbol of love and loyalty.</p>

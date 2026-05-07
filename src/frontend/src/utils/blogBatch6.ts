@@ -10,8 +10,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
     tags: [
       "trends 2026",
       "fashion jewellery",
@@ -46,8 +45,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
     tags: ["earrings", "trends", "worldwide", "fashion"],
     content: `<h2>Global Earring Trends by Market in 2026</h2>
 <p>Earrings are the single highest-volume product category in fashion jewellery retail worldwide. Understanding which styles are trending in which markets is essential intelligence for wholesale buyers placing bulk orders. Here's what's driving sales globally right now.</p>
@@ -74,8 +72,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
     tags: ["minimal jewellery", "trends", "women", "dainty jewelry"],
     content: `<h2>Why Minimal Jewellery is the Wholesale Goldmine for Boutiques</h2>
 <p>Minimalist jewellery — defined by clean lines, understated elegance, and everyday wearability — has become one of the most consistent wholesale categories globally. Unlike statement pieces that are occasion-specific, minimal jewellery sells year-round because it suits every outfit, every age group, and every lifestyle.</p>
@@ -103,8 +100,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
     tags: ["gen z", "jewellery trends", "2026", "youth fashion"],
     content: `<h2>What Gen Z Wants from Jewellery in 2026</h2>
 <p>Generation Z (born 1997–2012) now represents the largest jewellery-buying demographic globally, and their preferences are fundamentally different from previous generations. For wholesale buyers and boutique owners, understanding Gen Z is no longer optional — it's essential for staying relevant.</p>
@@ -133,8 +129,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
     tags: ["korean jewelry", "k-pop", "wholesale", "supplier"],
     content: `<h2>The K-Pop Effect on Global Jewellery Wholesale</h2>
 <p>The explosive global growth of K-pop, K-drama, and K-beauty has created a significant new jewellery buying category: Korean-inspired fashion jewellery. Driven by idols like BTS, BLACKPINK, and popular Korean drama series, this aesthetic now commands wholesale demand in Southeast Asia, China, Australia, USA, and beyond.</p>
@@ -163,8 +158,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
     tags: ["luxury look", "imitation jewellery", "trends", "premium"],
     content: `<h2>The Luxury-Look Imitation Market: Why It's Booming</h2>
 <p>One of the fastest-growing segments in global fashion jewellery is "luxury-look imitation" — pieces designed to replicate the aesthetic of high-end designer jewellery at a fraction of the cost. Customers across all income levels are increasingly choosing affordable alternatives to $500+ designer pieces, creating enormous wholesale opportunity.</p>
@@ -191,8 +185,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
     tags: ["office wear", "jewellery", "wholesale", "professional"],
     content: `<h2>Office Wear Jewellery: A High-Demand Wholesale Category</h2>
 <p>The post-pandemic return to offices and the rise of hybrid work culture has created a distinct and growing demand for office-appropriate jewellery. Working women globally are investing in professional jewellery that enhances their appearance without being distracting — making this a consistent year-round wholesale category.</p>
@@ -220,8 +213,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
     tags: ["boho jewellery", "boutiques", "trends", "fashion"],
     content: `<h2>Boho Jewellery: A Global Boutique Bestseller</h2>
 <p>Bohemian-inspired jewellery consistently ranks among the top wholesale categories for festival boutiques, beach retailers, lifestyle stores, and independent fashion boutiques worldwide. Its free-spirited, nature-inspired aesthetic has timeless appeal that transcends seasonal trends.</p>
@@ -251,8 +243,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
     tags: ["statement necklace", "trends", "global market", "wholesale"],
     content: `<h2>Statement Necklace Trends 2026: What's Selling Globally</h2>
 <p>Statement necklaces — bold, eye-catching pieces that anchor an entire outfit — are a perennial top-seller in wholesale fashion jewellery. Unlike trend-driven micro-categories, statement necklaces have consistent demand year-round because they serve occasion dressing, gifting, and everyday style elevation.</p>
@@ -279,8 +270,7 @@ export const BLOG_BATCH_6 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
     tags: ["bridal jewellery", "trends", "export", "wedding"],
     content: `<h2>Global Bridal <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>: 2025–2026 Trends</h2>
 <p>The South Asian wedding industry is experiencing unprecedented global growth. With large diaspora communities across the UK, USA, Canada, UAE, and Australia, demand for Indian bridal jewellery — both traditional and fusion — has never been stronger. For wholesale buyers, bridal jewellery represents the highest average order value category in fashion jewellery.</p>

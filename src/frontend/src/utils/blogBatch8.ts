@@ -10,8 +10,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
     tags: [
       "jewellery export",
       "business india",
@@ -49,8 +48,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
     tags: ["wholesale jewellery", "global business", "growth", "export"],
     content: `<h2>Building a Global <a href="/wholesale">Wholesale Jewellery</a> Business</h2>
 <p>Scaling a <a href="/wholesale">Wholesale Jewellery</a> business beyond your home market requires a structured approach. The most successful Indian jewellery exporters follow a proven playbook: master 2-3 markets before expanding, invest in digital presence, and attend the right trade shows consistently.</p>
@@ -81,8 +79,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
     tags: ["foreign buyers", "jewellery", "export", "b2b marketing"],
     content: `<h2>10 Proven Ways to Attract International Jewellery Buyers</h2>
 <p>Finding foreign buyers for Indian jewellery used to mean relying entirely on trade shows. Today, digital channels have opened up far more efficient routes to international buyers — if you know where to look and how to approach them.</p>
@@ -116,8 +113,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
     tags: ["instagram", "leads", "jewellery exporters", "social media"],
     content: `<h2>Why Instagram Works for B2B Jewellery Leads</h2>
 <p>Jewellery is a visual product, and boutique owners and importers around the world scroll Instagram to discover new suppliers. Unlike LinkedIn, Instagram lets your products do the talking — a well-lit product reel can reach thousands of potential wholesale buyers organically, without paid advertising.</p>
@@ -148,8 +144,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
     tags: [
       "b2b marketing",
       "jewellery manufacturers",
@@ -187,8 +182,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
     tags: [
       "seo",
       "imitation jewellery website",
@@ -224,8 +218,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
     tags: [
       "google ranking",
       "jewellery exporter",
@@ -264,8 +257,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
     tags: ["linkedin", "wholesale jewellery", "b2b", "business strategy"],
     content: `<h2>LinkedIn for <a href="/wholesale">Wholesale Jewellery</a> B2B Marketing</h2>
 <p>Most Indian jewellery exporters ignore LinkedIn entirely. This is a significant missed opportunity — LinkedIn is where importers, boutique owners, and wholesale buyers from UAE, UK, and USA are actively looking for suppliers. A professional LinkedIn presence can generate serious B2B enquiries at zero cost.</p>
@@ -295,8 +287,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
     tags: ["email marketing", "jewellery buyers", "b2b", "wholesale"],
     content: `<h2>Email Marketing for B2B Jewellery Businesses</h2>
 <p>Email marketing remains one of the highest ROI channels for B2B jewellery businesses. Unlike social media, email reaches your buyers directly in their inbox — and for wholesale buyers who place large repeat orders, staying consistently in front of them is directly tied to revenue.</p>
@@ -326,8 +317,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
     tags: ["scale exports", "jewellery", "business growth", "india"],
     content: `<h2>Scaling Jewellery Exports to ₹1 Crore+ Monthly</h2>
 <p>Most jewellery exporters plateau after their first few buyers. Breaking through that ceiling to ₹1 Crore+ monthly revenue requires a deliberate phase-by-phase approach — not just working harder but building the right systems at the right time.</p>

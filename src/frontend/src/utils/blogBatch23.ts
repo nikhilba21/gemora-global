@@ -9,7 +9,7 @@ export const BLOG_BATCH_23 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
     tags: ["chunky gold jewelry", "bold gold", "statement jewelry", "gold trends 2026", "maximalist style"],
     content: `<h2>The Return of Maximalist Gold</h2>
 <p>For several years, jewelry was dominated by 'micro-dainty' pieces that were almost invisible. But in 2026, the pendulum has swung back to the extreme. Chunky gold jewelry—heavy chains, thick bangles, and oversized rings—is the dominant trend of the season. This move toward 'Maximalist Gold' is a celebration of power, confidence, and unapologetic glamour.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_23 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a18b5ce7142?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
     tags: ["silver jewelry", "silver comeback", "cool tone jewelry", "silver trends 2026", "jewelry materials"],
     content: `<h2>The Return of the Cool Metal</h2>
 <p>For the last ten years, 'Yellow Gold' has been the undisputed king of jewelry. But in 2026, a shift is happening. Driven by a desire for something 'fresh,' 'industrial,' and 'modern,' silver jewelry is making a massive comeback. From high-fashion runways to street-style influencers, the 'Cool Tones' of silver and rhodium are reclaiming their place at the top of the jewelry hierarchy.</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_23 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
     tags: ["mixed metal jewelry", "gold and silver", "two tone jewelry", "styling trends 2026", "modern jewelry"],
     content: `<h2>The End of the 'One-Metal' Rule</h2>
 <p>For decades, fashion experts told us never to mix gold and silver jewelry. But in 2026, that rule has been completely abandoned. Mixed-metal jewelry—wearing gold, silver, and even rose gold together—has become one of the most powerful styling trends of the year. It represents a shift toward 'Individualism,' 'Creative Freedom,' and a more 'Curated' approach to accessorizing.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_23 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
     tags: ["matte jewelry", "brushed metal", "satin finish", "quiet luxury 2026", "modern jewelry finishes"],
     content: `<h2>The Beauty of Subtlety</h2>
 <p>In 2026, luxury is getting 'quieter.' While high-shine gold will always have its place, a massive trend has emerged for non-reflective metal finishes. Matte, brushed, and satin finishes provide a sophisticated, 'understated' look that prioritizes texture and form over 'bling.' This trend aligns perfectly with the 'Quiet Luxury' and 'Minimalist' movements that are currently dominating the fashion world.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_23 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
     tags: ["gold jewelry guide", "gold plating", "gold vermeil", "solid gold", "jewelry education", "buying guide"],
     content: `<h2>Understanding the World of Gold</h2>
 <p>Buying gold jewelry in 2026 can be confusing. With terms like 'Gold-Plated,' 'Vermeil,' 'Gold-Filled,' and 'Solid Gold' used across every website, it's difficult to know what you're actually paying for. For most consumers and wholesale buyers, the choice comes down to a balance between 'Price,' 'Quality,' and 'Longevity.'</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_49 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["wedding ring history", "jewelry evolution", "bridal traditions", "cultural jewelry", "B2B guide"],
     content: `<h2>The Symbol of the Infinite</h2>
 <p>The wedding ring is perhaps the most universally recognized piece of jewelry in the world. Its shape—a circle with no beginning and no end—is the ultimate symbol of 'Infinity' and 'Eternal-Love.' But where did this tradition come from? In the 2026 bridal market, couples are increasingly looking to the past to find 'Meaning' and 'Depth' for their modern ceremonies. From the papyrus rings of Ancient Egypt to the high-tech Tantalum bands of today, the wedding ring tells a story of human connection that spans five millennia.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_49 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
     tags: ["victorian jewelry", "jewelry symbolism", "history of jewelry", "romantic jewelry", "B2B guide"],
     content: `<h2>The Secret Language of the 1800s</h2>
 <p>In the Victorian era (1837-1901), jewelry was a 'Silent-Messenger.' Because open displays of emotion were often discouraged by social rules, people used jewelry to convey secret messages of love, grief, hope, and friendship. Every stone, every motif, and every color carried a specific meaning. In the world of 2026, these 'Secret-Messages' have experienced a massive revival. Modern consumers are looking for jewelry that has a 'Voice'—pieces that aren't just beautiful but actually *say* something about their lives.</p>
@@ -115,7 +115,7 @@ export const BLOG_BATCH_49 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596433809252-260c2745dfdd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
     tags: ["art nouveau jewelry", "jewelry history", "organic design", "enamel jewelry", "B2B guide"],
     content: `<h2>The Poetry of Nature</h2>
 <p>Between 1890 and 1910, a revolutionary movement swept the jewelry world. **Art Nouveau** (New Art) was a rebellion against the 'Industrial-Stiffness' of the Victorian era. It replaced rigid symmetry with flowing, 'Whiplash' lines inspired by the natural world—flowers, dragonflies, butterflies, and the female form. In the world of 2026, Art Nouveau has experienced a massive 'Sustainability-Led' revival. As we seek a deeper connection to nature, the 'Organic-Spirit' of this movement has become the definitive 'Artisan-Luxury' aesthetic.</p>
@@ -167,7 +167,7 @@ export const BLOG_BATCH_49 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["jaipur jewelry", "maharaja jewelry", "kundan polki", "meenakari", "B2B heritage"],
     content: `<h2>The Pink City's Royal Legacy</h2>
 <p>Jaipur, India's 'Pink City,' was founded in 1727 as a center for the arts, and for nearly 300 years, it has been the world's premier hub for 'Royal-Jewelry.' The Maharajas of Jaipur were some of the most prolific jewelry patrons in history, commissioning pieces of 'Impossible-Scale' and 'Breathtaking-Detail.' In the global market of 2026, the 'Jaipur-Style' has become the definitive 'Maximum-Luxe' aesthetic. From the 'Red-Carpets' of Hollywood to the 'Royal-Weddings' of Europe, the heritage of Jaipur is the benchmark for high-end craftsmanship.</p>
@@ -217,7 +217,7 @@ export const BLOG_BATCH_49 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
     tags: ["tiara history", "hair jewelry", "bridal crowns", "royal jewelry", "2026 trends"],
     content: `<h2>The Zenith of Status</h2>
 <p>There is no piece of jewelry more dramatic, more prestigious, or more 'Royal' than the tiara. It is the only jewel that sits at the very highest point of the body, literally crowning the wearer. From the gold laurel wreaths of Ancient Greece to the massive diamond 'Fringe' tiaras of the Russian Tsars, it has always been the ultimate symbol of 'Power' and 'Exclusivity.' In the world of 2026, the tiara has been 'Democratized.' It is no longer just for queens; it is the definitive choice for the 'High-Fashion' bride and the 'Red-Carpet' star.</p>

@@ -10,8 +10,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
     tags: ["moq", "minimum order", "jewellery export", "wholesale"],
     content: `<h2>What Is Minimum Order Quantity (MOQ)?</h2>
 <p>MOQ — Minimum Order Quantity — is the smallest number of units a manufacturer will produce or sell in a single order. For jewellery manufacturers in India, MOQ exists because every production run involves real setup costs: cutting dies, mould preparation, plating bath setup, and material purchasing in bulk. Producing fewer units than the MOQ makes the run economically unviable for the factory.</p>
@@ -43,8 +42,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
     tags: ["wholesale jewellery", "bulk buying", "guide", "b2b"],
     content: `<h2>Step-by-Step Guide to Buying <a href="/wholesale">Wholesale Jewellery</a></h2>
 <p>Buying <a href="/wholesale">Wholesale Jewellery</a> from India involves a clear process. First, define your target market: who is your end customer, what styles do they prefer, and what price point are you targeting at retail? This narrows your supplier search and prevents costly mis-buys. Next, set your total budget — factoring in product cost, international shipping, import duties, and your desired margin target.</p>
@@ -76,8 +74,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
     tags: ["catalogue", "jewellery retailers", "wholesale", "b2b"],
     content: `<h2>Why Jewellery Catalogues Matter</h2>
 <p>For jewellery retailers and wholesale buyers, a well-organised catalogue is the primary buying tool. It replaces the need to visit a factory showroom and lets buyers browse, select, and plan purchases at their own pace. A strong catalogue builds trust — it signals that the supplier is organised, professional, and capable of managing volume orders consistently.</p>
@@ -111,8 +108,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
     tags: ["jewellery boutique", "wholesale stock", "startup", "business"],
     content: `<h2>Why Source from Indian Wholesale Suppliers?</h2>
 <p>India — particularly Jaipur — is the global hub for imitation and fashion jewellery manufacturing. Sourcing from Indian wholesale suppliers gives boutique owners access to the widest variety of designs at the lowest unit prices. A piece that retails at $25–$40 in the USA or UK typically costs $3–$6 wholesale, giving boutiques a 5–8x margin — the highest in fashion retail.</p>
@@ -145,8 +141,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
     tags: ["boutiques", "imitation jewellery", "sourcing", "wholesale"],
     content: `<h2>How Boutiques Build Their Jewellery Sourcing Strategy</h2>
 <p>Successful jewellery boutiques don't buy randomly — they source strategically, planning by season, customer demographic, and margin target. The most profitable boutiques treat their Indian supplier relationships like long-term partnerships: regular communication, early ordering before peak seasons, and consistent feedback on what's selling and what isn't.</p>
@@ -178,8 +173,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
     tags: ["dropshipping", "fashion jewellery", "supplier", "india"],
     content: `<h2>What Is Jewellery Dropshipping?</h2>
 <p>Dropshipping means selling products online without holding any physical inventory yourself. In jewellery dropshipping, you list products from an Indian supplier on your online store; when a customer orders, you purchase from the supplier who ships directly to your customer. You never touch the product — your value is in marketing and customer acquisition.</p>
@@ -212,8 +206,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
     tags: ["retail packaging", "jewellery", "supplier", "wholesale"],
     content: `<h2>What Is Retail-Ready Packaging?</h2>
 <p>Retail-ready packaging means jewellery arrives from your supplier already packaged in a format that can go directly onto your retail display or into a customer shipment — no repackaging required. For boutique owners and online sellers, this saves significant labour time and improves consistency. It also signals professionalism to your end customers and elevates perceived product value.</p>
@@ -246,8 +239,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
     tags: ["amazon sellers", "jewellery supplier", "fba", "wholesale"],
     content: `<h2>Sourcing Jewellery from India for Amazon FBA</h2>
 <p>Amazon FBA jewellery sellers who source from India consistently achieve the best margins in the category. With wholesale prices of $2–$6 per piece for fashion jewellery that retails at $15–$45 on Amazon USA, the margin structure is among the most attractive in all of Amazon's categories — even after FBA fees (typically 30–40% of sale price).</p>
@@ -279,8 +271,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
     tags: ["instagram", "wholesale jewellery", "social commerce", "boutique"],
     content: `<h2>Instagram Jewellery Boutiques and Indian Wholesale</h2>
 <p>Instagram has become the most powerful sales channel for independent jewellery boutiques globally. Stores that source from Indian wholesale suppliers and sell via Instagram can build six-figure revenue businesses with minimal overhead. The key is combining trend-responsive sourcing with strong visual content — both areas where Indian fashion jewellery excels.</p>
@@ -312,8 +303,7 @@ export const BLOG_BATCH_5 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image:
-      "https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?w=800&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["resellers", "jewellery supplier", "wholesale", "b2b"],
     content: `<h2>What Resellers Need from a Jewellery Supplier</h2>
 <p>Jewellery resellers have different requirements from boutiques or Amazon sellers. Resellers — whether operating home parties, market stalls, gift shops, or salon displays — need a supplier who offers consistent quality across reorders, flexible low-MOQ restocking, trend-relevant designs, and a clear replacement policy for defective items. Reliability matters more than the absolute lowest price.</p>
