@@ -182,6 +182,7 @@ export default function AdminOrders() {
     }
   });
   const [addOpen, setAddOpen] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [detailOrder, setDetailOrder] = useState<Order | null>(null);
   const [filterStatus, setFilterStatus] = useState<string>("All");
   const [filterCountry, setFilterCountry] = useState<string>("All");
@@ -204,22 +205,165 @@ export default function AdminOrders() {
       setDetailOrder((p) => (p ? { ...p, status: newStatus } : p));
   };
 
+  const deleteOrder = (id: string) => {
+    if (confirm("Are you sure you want to delete this order?")) {
+      const updated = orders.filter((o) => o.id !== id);
+      saveOrders(updated);
+      setSelected((prev) => {
+        const next = new Set(prev);
+        next.delete(id);
+        return next;
+      });
+      if (detailOrder?.id === id) setDetailOrder(null);
+    }
+  };
+
+  const startEdit = (order: Order) => {
+    setEditingId(order.id);
+    setForm({
+      buyer: order.buyer,
+      company: order.company,
+      email: order.email,
+      phone: order.phone,
+      country: order.country,
+      address: order.address,
+      amount: order.amount,
+      currency: order.currency,
+      paymentMethod: order.paymentMethod,
+      type: order.type,
+      status: order.status,
+      trackingNumber: order.trackingNumber,
+      courier: order.courier,
+      notes: order.notes,
+    });
+    setItems(order.items.length > 0 ? [...order.items] : [{ ...EMPTY_ITEM }]);
+    setAddOpen(true);
+  };
+
   const addOrder = (e: React.FormEvent) => {
     e.preventDefault();
-    const newOrder: Order = {
-      id: `ORD-${String(orders.length + 1).padStart(3, "0")}`,
-      ...form,
-      items: items.filter((it) => it.name.trim()),
-      createdAt: new Date().toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-      }),
-    };
-    saveOrders([newOrder, ...orders]);
+    if (editingId) {
+      const updated = orders.map((o) =>
+        o.id === editingId
+          ? {
+              ...o,
+              ...form,
+              items: items.filter((it) => it.name.trim()),
+            }
+          : o,
+      );
+      saveOrders(updated);
+      setEditingId(null);
+    } else {
+      const newOrder: Order = {
+        id: `ORD-${String(orders.length + 1).padStart(3, "0")}`,
+        ...form,
+        items: items.filter((it) => it.name.trim()),
+        createdAt: new Date().toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        }),
+      };
+      saveOrders([newOrder, ...orders]);
+    }
     setForm(EMPTY_ORDER);
     setItems([{ ...EMPTY_ITEM }]);
     setAddOpen(false);
+  };
+
+  const generateInvoice = (order: Order) => {
+    const printWindow = window.open("", "_blank");
+    if (!printWindow) return;
+
+    const html = `
+      <html>
+        <head>
+          <title>Invoice - ${order.id}</title>
+          <style>
+            body { font-family: sans-serif; padding: 40px; color: #333; }
+            .header { display: flex; justify-content: space-between; border-bottom: 2px solid #1A237E; padding-bottom: 20px; }
+            .logo { font-size: 24px; font-weight: bold; color: #1A237E; }
+            .invoice-info { text-align: right; }
+            .details { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+            .section-title { color: #1A237E; font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+            th { text-align: left; background: #f5f7ff; padding: 10px; border-bottom: 2px solid #eee; }
+            td { padding: 10px; border-bottom: 1px solid #eee; }
+            .total { margin-top: 30px; text-align: right; font-size: 20px; font-weight: bold; color: #1A237E; }
+            .footer { margin-top: 50px; font-size: 12px; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+            @media print { .no-print { display: none; } }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <div class="logo">GEMORA GLOBAL</div>
+            <div class="invoice-info">
+              <h1 style="margin:0">INVOICE</h1>
+              <p>Order ID: ${order.id}</p>
+              <p>Date: ${order.createdAt}</p>
+            </div>
+          </div>
+          
+          <div class="details">
+            <div>
+              <div class="section-title">BILL TO</div>
+              <p><strong>${order.buyer}</strong></p>
+              ${order.company ? `<p>${order.company}</p>` : ""}
+              <p>${order.country}</p>
+              <p>${order.email || ""}</p>
+              <p>${order.phone || ""}</p>
+            </div>
+            <div>
+              <div class="section-title">PAYMENT & SHIPPING</div>
+              <p>Method: ${order.paymentMethod}</p>
+              <p>Type: ${order.type}</p>
+              ${order.address ? `<p>Address: ${order.address}</p>` : ""}
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Item Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${order.items
+                .map(
+                  (it) => `
+                <tr>
+                  <td>${it.name}</td>
+                  <td>${it.qty}</td>
+                  <td>${it.price}</td>
+                </tr>
+              `,
+                )
+                .join("")}
+            </tbody>
+          </table>
+
+          <div class="total">
+            Total Amount: ${order.amount}
+          </div>
+
+          <div class="footer">
+            Thank you for your business!<br>
+            Gemora Global — Premium Imitation Jewellery Manufacturer & Exporter<br>
+            Jaipur, India | www.gemoraglobal.co
+          </div>
+          
+          <script>
+            window.onload = function() { window.print(); }
+          </script>
+        </body>
+      </html>
+    `;
+
+    printWindow.document.write(html);
+    printWindow.document.close();
   };
 
   const exportCSV = () => {
@@ -290,7 +434,17 @@ export default function AdminOrders() {
           >
             Export CSV
           </button>
-          <Dialog open={addOpen} onOpenChange={setAddOpen}>
+          <Dialog
+            open={addOpen}
+            onOpenChange={(open) => {
+              setAddOpen(open);
+              if (!open) {
+                setEditingId(null);
+                setForm(EMPTY_ORDER);
+                setItems([{ ...EMPTY_ITEM }]);
+              }
+            }}
+          >
             <DialogTrigger asChild>
               <button
                 type="button"
@@ -306,7 +460,9 @@ export default function AdminOrders() {
               style={{ maxWidth: 640 }}
             >
               <DialogHeader>
-                <DialogTitle>Add Export Order</DialogTitle>
+                <DialogTitle>
+                  {editingId ? "Edit Export Order" : "Add Export Order"}
+                </DialogTitle>
               </DialogHeader>
               <form onSubmit={addOrder} className="space-y-3 mt-2">
                 <div className="grid grid-cols-2 gap-3">
@@ -567,7 +723,7 @@ export default function AdminOrders() {
                   }}
                   data-ocid="admin.orders.submit_button"
                 >
-                  Add Order
+                  {editingId ? "Update Order" : "Add Order"}
                 </button>
               </form>
             </DialogContent>
@@ -826,37 +982,62 @@ export default function AdminOrders() {
                     {order.createdAt}
                   </td>
                   <td style={{ padding: "10px" }}>
-                    <select
-                      value={order.status}
-                      onChange={(e) =>
-                        updateOrderStatus(
-                          order.id,
-                          e.target.value as OrderStatus,
-                        )
-                      }
-                      style={{
-                        background: "#f5f7ff",
-                        border: "1px solid #c5cae9",
-                        borderRadius: 6,
-                        padding: "4px 8px",
-                        color: "#1A237E",
-                        fontSize: 12,
-                        cursor: "pointer",
-                      }}
-                      data-ocid={`admin.orders.select.${i + 1}`}
-                    >
-                      {[
-                        "Pending",
-                        "Processing",
-                        "Shipped",
-                        "Delivered",
-                        "Cancelled",
-                      ].map((s) => (
-                        <option key={s} value={s}>
-                          {s}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="flex items-center gap-2">
+                      <select
+                        value={order.status}
+                        onChange={(e) =>
+                          updateOrderStatus(
+                            order.id,
+                            e.target.value as OrderStatus,
+                          )
+                        }
+                        style={{
+                          background: "#f5f7ff",
+                          border: "1px solid #c5cae9",
+                          borderRadius: 6,
+                          padding: "4px 8px",
+                          color: "#1A237E",
+                          fontSize: 12,
+                          cursor: "pointer",
+                        }}
+                        data-ocid={`admin.orders.select.${i + 1}`}
+                      >
+                        {[
+                          "Pending",
+                          "Processing",
+                          "Shipped",
+                          "Delivered",
+                          "Cancelled",
+                        ].map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
+                        ))}
+                      </select>
+                      <button
+                        type="button"
+                        onClick={() => startEdit(order)}
+                        title="Edit Order"
+                        style={{ color: "#1A237E" }}
+                      >
+                        ✏️
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => generateInvoice(order)}
+                        title="Generate Invoice"
+                      >
+                        📄
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => deleteOrder(order.id)}
+                        title="Delete Order"
+                        style={{ color: "crimson" }}
+                      >
+                        🗑️
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -945,6 +1126,54 @@ export default function AdminOrders() {
                     </option>
                   ))}
                 </select>
+                <button
+                  type="button"
+                  onClick={() => generateInvoice(detailOrder)}
+                  style={{
+                    background: "#E8EAF6",
+                    border: "1px solid #c5cae9",
+                    color: "#1A237E",
+                    borderRadius: 8,
+                    padding: "6px 12px",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                >
+                  Invoice 📄
+                </button>
+                <button
+                  type="button"
+                  onClick={() => startEdit(detailOrder)}
+                  style={{
+                    background: "#E8EAF6",
+                    border: "1px solid #c5cae9",
+                    color: "#1A237E",
+                    borderRadius: 8,
+                    padding: "6px 12px",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                >
+                  Edit ✏️
+                </button>
+                <button
+                  type="button"
+                  onClick={() => deleteOrder(detailOrder.id)}
+                  style={{
+                    background: "#FEE2E2",
+                    border: "1px solid #FECACA",
+                    color: "#B91C1C",
+                    borderRadius: 8,
+                    padding: "6px 12px",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                >
+                  Delete 🗑️
+                </button>
                 <button
                   type="button"
                   onClick={() => setDetailOrder(null)}
