@@ -165,9 +165,10 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isSolid
-            ? "bg-primary shadow-elevated border-b border-primary/60"
+            ? "shadow-elevated border-b border-primary/60"
             : "bg-transparent border-b border-transparent"
         }`}
+        style={isSolid ? { background: "#0d1554" } : {}}
         data-ocid="nav.bar"
       >
         <div className="container flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">

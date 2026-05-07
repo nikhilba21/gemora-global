@@ -132,7 +132,7 @@ export default function Footer() {
     typeof window !== "undefined" ? window.location.hostname : "";
 
   return (
-    <footer style={{ background: "#0d1b6e", color: "#fff" }}>
+    <footer style={{ background: "#0d1554", color: "#fff" }}>
       {/* Main footer grid */}
       <div className="container px-4 sm:px-6 py-10 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 lg:gap-6">
