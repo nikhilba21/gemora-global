@@ -281,44 +281,60 @@ export default function AdminOrders() {
         <head>
           <title>Invoice - ${order.id}</title>
           <style>
-            body { font-family: sans-serif; padding: 40px; color: #333; }
-            .header { display: flex; justify-content: space-between; border-bottom: 2px solid #1A237E; padding-bottom: 20px; }
-            .logo { font-size: 24px; font-weight: bold; color: #1A237E; }
-            .invoice-info { text-align: right; }
-            .details { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-            .section-title { color: #1A237E; font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-            table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-            th { text-align: left; background: #f5f7ff; padding: 10px; border-bottom: 2px solid #eee; }
-            td { padding: 10px; border-bottom: 1px solid #eee; }
-            .total { margin-top: 30px; text-align: right; font-size: 20px; font-weight: bold; color: #1A237E; }
-            .footer { margin-top: 50px; font-size: 12px; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+            body { font-family: 'Inter', sans-serif; padding: 40px; color: #1a1a1a; line-height: 1.5; }
+            .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0d1554; padding-bottom: 30px; margin-bottom: 30px; }
+            .brand-box { display: flex; align-items: center; gap: 15px; }
+            .logo { height: 60px; width: auto; object-fit: contain; }
+            .company-name { font-size: 18px; font-weight: 700; color: #0d1554; }
+            .invoice-meta { text-align: right; }
+            .invoice-meta h1 { margin: 0; font-size: 32px; color: #0d1554; letter-spacing: -0.02em; }
+            .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+            .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em; margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; }
+            .info-box p { margin: 4px 0; font-size: 13px; }
+            table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+            th { background: #f8fafc; padding: 12px 15px; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; color: #64748b; border-bottom: 2px solid #e2e8f0; }
+            td { padding: 15px; font-size: 13px; border-bottom: 1px solid #f1f5f9; }
+            .qty-col { text-align: center; }
+            .price-col { text-align: right; }
+            .total-row { margin-top: 30px; display: flex; justify-content: flex-end; }
+            .total-box { background: #0d1554; color: #fff; padding: 20px 40px; border-radius: 8px; text-align: right; min-width: 200px; }
+            .total-label { font-size: 11px; text-transform: uppercase; opacity: 0.8; margin-bottom: 4px; }
+            .total-value { font-size: 24px; font-weight: 700; }
+            .footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #64748b; }
+            .footer p { margin: 4px 0; }
             @media print { .no-print { display: none; } }
           </style>
         </head>
         <body>
           <div class="header">
-            <div class="logo">GEMORA GLOBAL</div>
-            <div class="invoice-info">
-              <h1 style="margin:0">INVOICE</h1>
-              <p>Order ID: ${order.id}</p>
-              <p>Date: ${order.createdAt}</p>
+            <div class="brand-box">
+              <img src="/logo.png" class="logo" alt="Gemora Global" />
+              <div class="company-name">Gemora Global Private Limited</div>
+            </div>
+            <div class="invoice-meta">
+              <h1>INVOICE</h1>
+              <p style="margin:5px 0 0; color:#64748b; font-weight:600;">Order ID: #${order.id}</p>
+              <p style="margin:2px 0 0; color:#64748b;">Date: ${order.createdAt}</p>
             </div>
           </div>
-          
-          <div class="details">
-            <div>
-              <div class="section-title">BILL TO</div>
+
+          <div class="meta-grid">
+            <div class="info-box">
+              <div class="section-title">Bill To</div>
               <p><strong>${order.buyer}</strong></p>
               ${order.company ? `<p>${order.company}</p>` : ""}
+              <p>${order.address || ""}</p>
               <p>${order.country}</p>
               <p>${order.email || ""}</p>
               <p>${order.phone || ""}</p>
             </div>
-            <div>
-              <div class="section-title">PAYMENT & SHIPPING</div>
-              <p>Method: ${order.paymentMethod}</p>
-              <p>Type: ${order.type}</p>
-              ${order.address ? `<p>Address: ${order.address}</p>` : ""}
+            <div class="info-box">
+              <div class="section-title">Order Details</div>
+              <p><strong>Payment Method:</strong> ${order.paymentMethod}</p>
+              <p><strong>Category:</strong> ${order.type}</p>
+              ${order.courier ? `<p><strong>Shipping:</strong> ${order.courier}</p>` : ""}
+              ${order.trackingNumber ? `<p><strong>Tracking:</strong> ${order.trackingNumber}</p>` : ""}
             </div>
           </div>
 
@@ -326,8 +342,9 @@ export default function AdminOrders() {
             <thead>
               <tr>
                 <th>Item Description</th>
-                <th>Quantity</th>
-                <th>Price</th>
+                <th class="qty-col">Qty</th>
+                <th class="price-col">Unit Price</th>
+                <th class="price-col">Total</th>
               </tr>
             </thead>
             <tbody>
@@ -335,9 +352,10 @@ export default function AdminOrders() {
                 .map(
                   (it) => `
                 <tr>
-                  <td>${it.name}</td>
-                  <td>${it.qty}</td>
-                  <td>${it.price}</td>
+                  <td style="font-weight:500;">${it.name}</td>
+                  <td class="qty-col">${it.qty}</td>
+                  <td class="price-col">${it.price}</td>
+                  <td class="price-col">${it.price}</td> 
                 </tr>
               `,
                 )
@@ -345,18 +363,27 @@ export default function AdminOrders() {
             </tbody>
           </table>
 
-          <div class="total">
-            Total Amount: ${order.amount}
+          <div class="total-row">
+            <div class="total-box">
+              <div class="total-label">Grand Total</div>
+              <div class="total-value">${order.amount}</div>
+            </div>
           </div>
 
           <div class="footer">
-            Thank you for your business!<br>
-            Gemora Global — Premium Imitation Jewellery Manufacturer & Exporter<br>
-            Jaipur, India | www.gemoraglobal.co
+            <p><strong>Gemora Global Private Limited</strong></p>
+            <p>Premium Imitation Jewellery Manufacturer & Exporter | Established 2011</p>
+            <p>B 66 MAA Hinglaj Nagar, Jaipur - 302021, Rajasthan, India</p>
+            <p>www.gemoraglobal.co | globalgemora@gmail.com | +91 7976341419</p>
+            <p style="margin-top:20px; font-style:italic;">Thank you for your business!</p>
           </div>
-          
+
           <script>
-            window.onload = function() { window.print(); }
+            window.onload = function() { 
+              setTimeout(() => {
+                window.print();
+              }, 500);
+            }
           </script>
         </body>
       </html>
