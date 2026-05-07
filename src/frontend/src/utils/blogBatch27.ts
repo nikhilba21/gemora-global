@@ -28,7 +28,7 @@ export const BLOG_BATCH_27 = [
 <p>For a more modern, architectural look, Amethysts are being cut with 'Checkerboard' facets on the top surface. This creates a mesmerizing play of light and highlights the stone's color saturation. These cuts are a top choice for bold cocktail rings and modern pendant designs.</p>
 
 <h2>Sourcing Amethyst from Jaipur</h2>
-<p>Jaipur is one of the world's largest centers for semi-precious stone cutting. We source high-quality Amethyst from Brazil and Africa and cut them in our Jaipur workshops into every imaginable shape—from classic ovals to custom geometric designs. At Gemora Global, we specialize in 'Amethyst-Gold' combinations, providing our wholesale partners with vibrant, high-margin collections that appeal to a global audience.</p>
+<p>Jaipur is one of the world's largest centers for semi-precious stone cutting. We source high-quality Amethyst from Brazil and Africa and cut them in our Jaipur workshops into every imaginable shape—from classic ovals to custom geometric designs. At <a href="/">Gemora Global</a>, we specialize in 'Amethyst-Gold' combinations, providing our wholesale partners with vibrant, high-margin collections that appeal to a global audience.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Amethyst expensive?</strong><br/>A: Amethyst is very affordable compared to stones like sapphire or emerald. This allows for large, statement pieces to be created at a reasonable price point.</p>
@@ -75,7 +75,7 @@ export const BLOG_BATCH_27 = [
 <p>A fun and artistic trend for 2026 is 'Cluster' jewelry—where multiple small citrines of different shapes and sizes are set together to look like a scattering of sunlight. It's a playful, organic look that works beautifully for rings and statement pendants.</p>
 
 <h2>Sourcing Citrine from Jaipur</h2>
-<p>Jaipur is a world leader in the processing and setting of Citrine. We source our raw material from Brazil and Madagascar and use precision-cutting techniques to bring out the maximum 'glow' in every stone. At Gemora Global, we specialize in 'High-Shine' Citrine settings, ensuring that our wholesale partners have access to jewelry that literally glows on the shelf. Our Citrine collections are a top-seller for the US and Asian markets.</p>
+<p>Jaipur is a world leader in the processing and setting of Citrine. We source our raw material from Brazil and Madagascar and use precision-cutting techniques to bring out the maximum 'glow' in every stone. At <a href="/">Gemora Global</a>, we specialize in 'High-Shine' Citrine settings, ensuring that our wholesale partners have access to jewelry that literally glows on the shelf. Our Citrine collections are a top-seller for the US and Asian markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Citrine a real gemstone?</strong><br/>A: Yes! It is a natural variety of the mineral quartz. While rare in its natural state, most citrine on the market today is heat-treated amethyst, which is a stable and permanent industry-standard process.</p>
@@ -125,7 +125,7 @@ export const BLOG_BATCH_27 = [
 <p>Reflecting the 'Wellness' trend, simple bracelets made of smooth, tumbled Rose Quartz beads are everywhere in 2026. They are often worn in 'Stacks' alongside other crystal beads to create a personalized 'Energy Palette' on the wrist.</p>
 
 <h2>Sourcing Rose Quartz from Jaipur</h2>
-<p>Jaipur is a world center for gemstone carving. We source high-quality Rose Quartz from Madagascar and Brazil and use our expertise to carve it into every imaginable shape—from classic beads to intricate heart and flower motifs. At Gemora Global, we specialize in 'Soft-Tone' settings, ensuring our Rose Quartz jewelry has the delicate, feminine feel that the market demands. Our collections are a top-seller for the European and US markets.</p>
+<p>Jaipur is a world center for gemstone carving. We source high-quality Rose Quartz from Madagascar and Brazil and use our expertise to carve it into every imaginable shape—from classic beads to intricate heart and flower motifs. At <a href="/">Gemora Global</a>, we specialize in 'Soft-Tone' settings, ensuring our Rose Quartz jewelry has the delicate, feminine feel that the market demands. Our collections are a top-seller for the European and US markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Rose Quartz 'real' quartz?</strong><br/>A: Yes, it is a variety of the mineral quartz that gets its pink color from trace amounts of titanium, iron, or manganese.</p>
@@ -175,7 +175,7 @@ export const BLOG_BATCH_27 = [
 <p>While high-polish onyx is classic, the 2026 trend is for 'Matte' or 'Frosted' onyx. This non-reflective finish gives the stone a soft, velvet-like look that is incredibly cool and 'Industrial-Chic.' It's a top choice for men's jewelry and minimalist designs.</p>
 
 <h2>Sourcing Black Onyx from Jaipur</h2>
-<p>Jaipur is a world leader in Onyx processing. We source high-quality black onyx and use specialized cutting and polishing equipment to achieve that mirror-like shine or the perfect matte finish. At Gemora Global, we specialize in 'Onyx-Metal Fusion'—creating pieces where the stone and the metal are seamlessly integrated. Our Onyx collections are a perennial top-seller for our global wholesale partners.</p>
+<p>Jaipur is a world leader in Onyx processing. We source high-quality black onyx and use specialized cutting and polishing equipment to achieve that mirror-like shine or the perfect matte finish. At <a href="/">Gemora Global</a>, we specialize in 'Onyx-Metal Fusion'—creating pieces where the stone and the metal are seamlessly integrated. Our Onyx collections are a perennial top-seller for our global wholesale partners.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Black Onyx a real gemstone?</strong><br/>A: Yes! It is a variety of chalcedony quartz. While it naturally occurs in layers (often with white bands), most black onyx on the market today is treated to achieve that uniform, deep black color. This is a stable and permanent industry-standard process.</p>
@@ -225,7 +225,7 @@ export const BLOG_BATCH_27 = [
 <p>While cabochons are traditional, 'Rose-Cut' moonstones are trending for 2026. These have many small, triangular facets on the surface, which catch the light and add a layer of 'glitter' to the stone's internal glow. It's a beautiful, feminine look for rings and earrings.</p>
 
 <h2>Sourcing Moonstone from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for Moonstone processing. We source high-quality raw material from Sri Lanka (the source of the finest blue-glow moonstone) and India. Our artisans are experts at cutting moonstone to maximize its 'Adularescence'—a process that requires precise orientation of the stone. At Gemora Global, we specialize in 'Ethereal-Chic' moonstone collections, providing our wholesale partners with pieces that truly glow. Our moonstone range is one of our most successful international lines.</p>
+<p>Jaipur is one of the world's leading centers for Moonstone processing. We source high-quality raw material from Sri Lanka (the source of the finest blue-glow moonstone) and India. Our artisans are experts at cutting moonstone to maximize its 'Adularescence'—a process that requires precise orientation of the stone. At <a href="/">Gemora Global</a>, we specialize in 'Ethereal-Chic' moonstone collections, providing our wholesale partners with pieces that truly glow. Our moonstone range is one of our most successful international lines.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Adularescence'?</strong><br/>A: It's the unique optical effect of Moonstone. It's caused by the way light scatters between the internal layers of the stone, creating a 'shimmer' that seems to float just below the surface.</p>

@@ -31,7 +31,7 @@ export const BLOG_BATCH_38 = [
 <p>In the playful fashion world of 2026, wearing two different shades of Citrine (e.g., one Pale Lemon and one Deep Madeira) in the same earring set is huge. This 'Tonal-Duo' look is a favorite for influencers and those looking for a modern twist on a classic gem.</p>
 
 <h2>Sourcing Citrine from Jaipur</h2>
-<p>Jaipur is a world leader in the 'Treatment' and 'Cutting' of Citrine. Our lapidaries are masters at 'Step-Cuts' that enhance the stone's depth of color. At Gemora Global, we source our Citrine from high-quality mines in Brazil and Africa. We offer everything from 'Calibrated-Squares' for fashion lines to 'One-of-a-Kind-Museum' Madeira statements. Let us help you add a touch of sunshine to your brand.</p>
+<p>Jaipur is a world leader in the 'Treatment' and 'Cutting' of Citrine. Our lapidaries are masters at 'Step-Cuts' that enhance the stone's depth of color. At <a href="/">Gemora Global</a>, we source our Citrine from high-quality mines in Brazil and Africa. We offer everything from 'Calibrated-Squares' for fashion lines to 'One-of-a-Kind-Museum' Madeira statements. Let us help you add a touch of sunshine to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Citrine a birthstone for?</strong><br/>A: It is the traditional birthstone for **November** (alongside Topaz). It is also the designated gem for the **13th wedding anniversary**.</p>
@@ -81,7 +81,7 @@ export const BLOG_BATCH_38 = [
 <p>The ultimate 2026 'Conversation-Piece' is Pallasite Peridot—peridot that has been found inside meteorites from outer space. These 'Star-Gems' are incredibly rare and are highly prized by collectors and those who want a piece of jewelry with a truly 'Universal' story.</p>
 
 <h2>Sourcing Peridot from Jaipur</h2>
-<p>Jaipur is one of the world's most important centers for the cutting of Peridot. Our artisans are experts at 'Brilliant-Cuts' that eliminate the 'doubling' effect sometimes seen in peridot, resulting in a cleaner, sharper sparkle. At Gemora Global, we source high-quality peridots from mines in Arizona, Pakistan, and China. We offer a full range of sizes, from 'Dainty-Accents' for fashion lines to '10-Carat-Statements.' Let us help you add a touch of renewal to your brand.</p>
+<p>Jaipur is one of the world's most important centers for the cutting of Peridot. Our artisans are experts at 'Brilliant-Cuts' that eliminate the 'doubling' effect sometimes seen in peridot, resulting in a cleaner, sharper sparkle. At <a href="/">Gemora Global</a>, we source high-quality peridots from mines in Arizona, Pakistan, and China. We offer a full range of sizes, from 'Dainty-Accents' for fashion lines to '10-Carat-Statements.' Let us help you add a touch of renewal to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Peridot a birthstone for?</strong><br/>A: It is the traditional birthstone for **August**. It is also the designated gem for the **15th wedding anniversary**.</p>
@@ -136,7 +136,7 @@ export const BLOG_BATCH_38 = [
 <p>In the high-end bridal market of 2026, 'Pink Imperial Topaz' is a rising trend for those who want a 'Rare-and-Romantic' center stone. It offers a warmth and rarity that rivals fancy-colored diamonds but with its own unique 'Velvety' glow.</p>
 
 <h2>Sourcing Topaz from Jaipur</h2>
-<p>Jaipur is one of the world's most important processing centers for Blue Topaz. Our artisans are experts at the 'Coating' and 'Heating' processes (like Mystic Topaz or London Blue) that create the stone's iconic colors. At Gemora Global, we source high-quality raw topaz from Brazil and Nigeria. We offer a vast range of 'Precision-Cuts' that maximize the stone's brilliance. Let us help you add a beam of light to your brand.</p>
+<p>Jaipur is one of the world's most important processing centers for Blue Topaz. Our artisans are experts at the 'Coating' and 'Heating' processes (like Mystic Topaz or London Blue) that create the stone's iconic colors. At <a href="/">Gemora Global</a>, we source high-quality raw topaz from Brazil and Nigeria. We offer a vast range of 'Precision-Cuts' that maximize the stone's brilliance. Let us help you add a beam of light to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Topaz a birthstone for?</strong><br/>A: **Blue Topaz** is a birthstone for **December**. **Yellow/Imperial Topaz** is the birthstone for **November**. It is also the designated gem for the **4th and 16th wedding anniversaries**.</p>
@@ -192,7 +192,7 @@ export const BLOG_BATCH_38 = [
 <p>Using different types of garnet (Red, Orange, and Pink) in a single 'Gradient-Stack' is a massive 2026 trend. This 'Warm-Tonal' look is rich, sophisticated, and highlights the incredible diversity of the garnet family.</p>
 
 <h2>Sourcing Garnet from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting and trading of Garnet. Our lapidaries are masters at 'Deep-Cuts' that maximize the stone's color without making it look too 'black.' At Gemora Global, we source high-quality garnets from mines in Africa, India, and Sri Lanka. We offer a full range of sizes, from 'Dainty-Pave' for fashion lines to 'One-of-a-Kind-Museum' Tsavorite statements. Let us help you add a spark of fire to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting and trading of Garnet. Our lapidaries are masters at 'Deep-Cuts' that maximize the stone's color without making it look too 'black.' At <a href="/">Gemora Global</a>, we source high-quality garnets from mines in Africa, India, and Sri Lanka. We offer a full range of sizes, from 'Dainty-Pave' for fashion lines to 'One-of-a-Kind-Museum' Tsavorite statements. Let us help you add a spark of fire to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Garnet a birthstone for?</strong><br/>A: It is the traditional birthstone for **January**. It is also the designated gem for the **2nd wedding anniversary**.</p>
@@ -246,7 +246,7 @@ export const BLOG_BATCH_38 = [
 <p>A massive 2026 styling trend is the 'Chunky-Turquoise' collar—multiple strands of natural turquoise beads worn together. This 'Maximalist-Boho' look is a favorite for festivals, vacations, and making a bold style statement on social media.</p>
 
 <h2>Sourcing Turquoise from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting and polishing of Turquoise. Our artisans are experts at 'Cabochan' (smooth-top) cutting and 'Inlay' work. At Gemora Global, we source high-quality turquoise from ethical mines in the US, Iran, and China. We offer a full range of qualities, from 'Top-Grade-Clean' to 'Character-Matrix' for artisan lines. Let us help you add the soul of the sky to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting and polishing of Turquoise. Our artisans are experts at 'Cabochan' (smooth-top) cutting and 'Inlay' work. At <a href="/">Gemora Global</a>, we source high-quality turquoise from ethical mines in the US, Iran, and China. We offer a full range of qualities, from 'Top-Grade-Clean' to 'Character-Matrix' for artisan lines. Let us help you add the soul of the sky to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Turquoise a birthstone for?</strong><br/>A: It is the traditional birthstone for **December**. It is also the designated gem for the **11th wedding anniversary**.</p>

@@ -19,7 +19,7 @@ export const BLOG_BATCH_10 = [
       "b2b",
     ],
     content: `<h2>What a Quality Jewellery Catalogue Should Contain</h2>
-<p>A professional wholesale jewellery catalogue is more than just product photos. Look for SKU codes for every item, material specifications (brass, zinc alloy, steel), pricing tiers by quantity (50, 100, 500+ pieces), MOQ per design, available colors and finishes, and seasonal collection tags. Digital PDF catalogues shared via WhatsApp or email are standard for Indian suppliers, while printed catalogues are typically reserved for trade shows.</p>
+<p>A professional <a href="/wholesale">Wholesale Jewellery</a> catalogue is more than just product photos. Look for SKU codes for every item, material specifications (brass, zinc alloy, steel), pricing tiers by quantity (50, 100, 500+ pieces), MOQ per design, available colors and finishes, and seasonal collection tags. Digital PDF catalogues shared via WhatsApp or email are standard for Indian suppliers, while printed catalogues are typically reserved for trade shows.</p>
 
 <h2>How to Request a Catalogue</h2>
 <p>When requesting a catalogue, provide context to get the most relevant version. Share your business type (retailer, boutique, online store), your target market and country, your preferred product categories, and your approximate annual purchase volume. This helps suppliers send the right catalogue segment rather than an overwhelming 500-page general document.</p>
@@ -34,7 +34,7 @@ export const BLOG_BATCH_10 = [
   <li>Always request samples before your first bulk order</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 192,
@@ -66,7 +66,7 @@ export const BLOG_BATCH_10 = [
   <li>Confirm with written Purchase Order</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 193,
@@ -98,7 +98,7 @@ export const BLOG_BATCH_10 = [
   <li>Larger quantities significantly reduce per-unit cost</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 194,
@@ -130,7 +130,7 @@ export const BLOG_BATCH_10 = [
   <li>Festival collections can be your highest-margin opportunity</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 195,
@@ -167,7 +167,7 @@ export const BLOG_BATCH_10 = [
   <li>Always clarify mold ownership before production</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 196,
@@ -189,13 +189,13 @@ export const BLOG_BATCH_10 = [
       "b2b",
     ],
     content: `<h2>What Affects Delivery Speed</h2>
-<p>The fastest wholesale jewellery deliveries from India come from ordering in-stock products — these can be packed and dispatched within 2-3 business days. Made-to-order items require 2-4 weeks of production time before shipping begins. For time-sensitive orders, always confirm stock availability with the supplier via WhatsApp before placing your order to avoid unexpected delays.</p>
+<p>The fastest <a href="/wholesale">Wholesale Jewellery</a> deliveries from India come from ordering in-stock products — these can be packed and dispatched within 2-3 business days. Made-to-order items require 2-4 weeks of production time before shipping begins. For time-sensitive orders, always confirm stock availability with the supplier via WhatsApp before placing your order to avoid unexpected delays.</p>
 
 <h2>Express Options for Urgent Orders</h2>
 <p>If you need a rush order, most experienced Indian suppliers can prioritise manufacturing for smaller quantities (under 200 pieces) at a 20-30% production premium. DHL Express from India to the USA, UK, or UAE takes 3-7 business days after dispatch. For larger urgent orders, discuss the fastest feasible timeline with your supplier before committing — transparent communication prevents disappointment.</p>
 
 <h2>Avoiding Customs Delays</h2>
-<p>Customs clearance is often the biggest variable in delivery timelines. Ensure your supplier provides accurate commercial invoices with correct HS codes for jewellery (typically 7117 for imitation jewellery). Have your import documentation ready in advance. In the UAE and UK, pre-registering as an importer can significantly speed up clearance. Gemora Global provides all necessary export documentation with every shipment.</p>
+<p>Customs clearance is often the biggest variable in delivery timelines. Ensure your supplier provides accurate commercial invoices with correct HS codes for jewellery (typically 7117 for imitation jewellery). Have your import documentation ready in advance. In the UAE and UK, pre-registering as an importer can significantly speed up clearance. <a href="/">Gemora Global</a> provides all necessary export documentation with every shipment.</p>
 
 <ul>
   <li>In-stock orders dispatch in 2-3 business days</li>
@@ -241,7 +241,7 @@ export const BLOG_BATCH_10 = [
   <li>Premium quality supports higher retail prices and fewer returns</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 198,
@@ -278,7 +278,7 @@ export const BLOG_BATCH_10 = [
   <li>Target 3-5x retail markup on wholesale cost</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 199,
@@ -295,7 +295,7 @@ export const BLOG_BATCH_10 = [
       "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=800&h=500&fit=crop",
     tags: ["trusted exporter", "jewellery", "contact", "wholesale inquiry"],
     content: `<h2>How to Reach Out Effectively</h2>
-<p>Your first message to an Indian jewellery exporter should establish you as a serious buyer immediately. Include your business type (retailer, online store, boutique), your target market and country, the jewellery categories you're interested in, your approximate annual purchase volume, and your MOQ requirements per design. Buyers who provide this context upfront receive priority responses and more accurate initial pricing.</p>
+<p>Your first message to an Indian <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> should establish you as a serious buyer immediately. Include your business type (retailer, online store, boutique), your target market and country, the jewellery categories you're interested in, your approximate annual purchase volume, and your MOQ requirements per design. Buyers who provide this context upfront receive priority responses and more accurate initial pricing.</p>
 
 <h2>Evaluating a Supplier's Response Quality</h2>
 <p>A trustworthy exporter responds within 24-48 hours, asks intelligent questions about your business needs rather than immediately pushing products, and provides specific answers about pricing, MOQ, and lead times. Red flags include pressure for an immediate deposit before you've seen samples, refusal to provide references from existing buyers, or vague answers about production location and quality processes.</p>
@@ -310,7 +310,7 @@ export const BLOG_BATCH_10 = [
   <li>Always request references from existing buyers</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 200,
@@ -327,7 +327,7 @@ export const BLOG_BATCH_10 = [
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["wholesale inquiry", "jewellery guide", "b2b buyer", "wholesale"],
     content: `<h2>What Suppliers Need to Know From You</h2>
-<p>A winning wholesale jewellery inquiry answers six key questions: your business type (retailer, boutique, online store, reseller), your target market and country, the jewellery categories you need, your approximate annual purchase budget, the MOQ you can commit to per design, and any special requirements such as nickel-free materials, eco-friendly packaging, or private label branding. Suppliers who receive complete inquiries respond faster and with more competitive initial pricing.</p>
+<p>A winning <a href="/wholesale">Wholesale Jewellery</a> inquiry answers six key questions: your business type (retailer, boutique, online store, reseller), your target market and country, the jewellery categories you need, your approximate annual purchase budget, the MOQ you can commit to per design, and any special requirements such as nickel-free materials, eco-friendly packaging, or private label branding. Suppliers who receive complete inquiries respond faster and with more competitive initial pricing.</p>
 
 <h2>How to Write a Winning Inquiry Message</h2>
 <p>Keep your inquiry concise and specific. State your business clearly, mention the categories you're looking for, and include one key number — your approximate order value or annual budget. If you have previous experience sourcing from Indian suppliers, mention it — it signals you understand the process and are not a first-time buyer who needs extensive hand-holding. End with a specific question like "Can you share your current catalogue for earrings and necklaces?"</p>
@@ -342,6 +342,6 @@ export const BLOG_BATCH_10 = [
   <li>Request samples before committing to bulk orders</li>
 </ul>
 
-<p><strong>Ready to make your first inquiry?</strong><br/>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p><strong>Ready to make your first inquiry?</strong><br/>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

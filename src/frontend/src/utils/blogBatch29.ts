@@ -28,7 +28,7 @@ export const BLOG_BATCH_29 = [
 <p>To emphasize the 'Mysterious' look of Labradorite, many designers are setting it in oxidized silver or black-rhodium plated gold. This dark backdrop makes the electric blue and green flashes of the stone look even more vibrant and futuristic. It's a key look for the 'Modern-Goth' and 'Industrial' fashion sets.</p>
 
 <h2>Sourcing Labradorite from Jaipur</h2>
-<p>Jaipur is a major global hub for Labradorite processing. We source raw material from Madagascar (which produces the most vibrant 'blue-flash' stones) and Canada. Our artisans are experts at 'Orienting' the stone before cutting, ensuring that every piece has maximum labradorescence on the top surface. At Gemora Global, we specialize in 'High-Flash' Labradorite collections, providing our wholesale partners with pieces that truly 'glow' from within.</p>
+<p>Jaipur is a major global hub for Labradorite processing. We source raw material from Madagascar (which produces the most vibrant 'blue-flash' stones) and Canada. Our artisans are experts at 'Orienting' the stone before cutting, ensuring that every piece has maximum labradorescence on the top surface. At <a href="/">Gemora Global</a>, we specialize in 'High-Flash' Labradorite collections, providing our wholesale partners with pieces that truly 'glow' from within.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Labradorescence'?</strong><br/>A: It's a unique optical effect caused by light scattering between the internal layers of the stone. Unlike a surface reflection, the light comes from **within** the stone, appearing as flashes of blue, green, gold, and sometimes purple.</p>
@@ -60,7 +60,7 @@ export const BLOG_BATCH_29 = [
     tags: ["morganite jewelry", "pink gemstones", "engagement ring trends", "modern bride", "jewelry trends 2026"],
     content: `<h2>The Gem of Divine Love</h2>
 <p>Morganite—the pink-to-peach variety of the mineral beryl—is one of the most romantic gemstones in the world. Named after the financier and gem collector J.P. Morgan, it has become the definitive choice for the 'Modern-Romantic' aesthetic in 2026. Its soft, pastel tones provide a sophisticated alternative to the 'boldness' of pink sapphires or the high cost of pink diamonds.</p>
-<p>At Gemora Global, we've seen a massive surge in Morganite demand, especially for the bridal market. We're breaking down the appeal of this 'Blushing Beryl.'</p>
+<p>At <a href="/">Gemora Global</a>, we've seen a massive surge in Morganite demand, especially for the bridal market. We're breaking down the appeal of this 'Blushing Beryl.'</p>
 
 <h2>Meaning: The Stone of Compassion and Promise</h2>
 <p>In the world of gemstones, Morganite is believed to carry the energy of divine love and compassion. It's said to heal the heart and attract abundance of love into the wearer's life. In 2026, Morganite is the top choice for 'Promise Rings' and 'Self-Love' jewelry, representing a commitment to emotional well-being and kindness.</p>
@@ -122,7 +122,7 @@ export const BLOG_BATCH_29 = [
 <p>To match the 'Icy' and 'Modern' feel of Tanzanite, setting it in Silver or White Gold is the dominant trend for 2026. This emphasizes the violet undertones of the stone and creates a look that is both regal and futuristic.</p>
 
 <h2>Sourcing Tanzanite from Jaipur</h2>
-<p>Jaipur is one of the world's primary cutting and trading centers for Tanzanite. We source raw material directly from the Merelani Hills in Tanzania and use our specialized expertise to cut and polish it to the highest international standards. At Gemora Global, we specialize in 'Investment-Grade' Tanzanite jewelry, providing our wholesale partners with access to one of the world's rarest and most beautiful gems. Our Tanzanite range is a top-seller for the US, Middle East, and Asian markets.</p>
+<p>Jaipur is one of the world's primary cutting and trading centers for Tanzanite. We source raw material directly from the Merelani Hills in Tanzania and use our specialized expertise to cut and polish it to the highest international standards. At <a href="/">Gemora Global</a>, we specialize in 'Investment-Grade' Tanzanite jewelry, providing our wholesale partners with access to one of the world's rarest and most beautiful gems. Our Tanzanite range is a top-seller for the US, Middle East, and Asian markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for December?</strong><br/>A: Tanzanite was officially added as a December birthstone (alongside Turquoise and Zircon) in 2002. It is the most valuable and 'luxury' choice for the month.</p>
@@ -172,7 +172,7 @@ export const BLOG_BATCH_29 = [
 <p>Opals are different from other gems—they contain 3% to 21% water. This makes them 'Hydrophane' (sensitive to moisture) and delicate. They are a 5.5 to 6.5 on the Mohs scale, meaning they are quite soft. **Never** use an ultrasonic or steam cleaner. **Never** expose them to sudden temperature changes. And be careful with chemicals; certain lotions and perfumes can penetrate the stone and dull its color permanently.</p>
 
 <h2>Sourcing Opals from Jaipur</h2>
-<p>Jaipur is a world leader in Opal cutting and setting. We source raw material from Australia and Ethiopia and use our specialized expertise to cut them into 'Cabochons' and 'Rose-Cuts' that maximize the internal play-of-color. At Gemora Global, we specialize in 'Protective' settings—bezel or halo designs that frame the stone and protect its delicate edges. Our Opal collection is a top-seller for the US, European, and Australian markets.</p>
+<p>Jaipur is a world leader in Opal cutting and setting. We source raw material from Australia and Ethiopia and use our specialized expertise to cut them into 'Cabochons' and 'Rose-Cuts' that maximize the internal play-of-color. At <a href="/">Gemora Global</a>, we specialize in 'Protective' settings—bezel or halo designs that frame the stone and protect its delicate edges. Our Opal collection is a top-seller for the US, European, and Australian markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for October?</strong><br/>A: Opal is the primary birthstone for October. It represents hope, creativity, and the transition into autumn.</p>
@@ -226,7 +226,7 @@ export const BLOG_BATCH_29 = [
 <p>The solid jade bangle is a timeless classic, but for 2026, the trend is for 'Organic-Style' bangles—where the jade is hand-carved with subtle floral or geometric patterns. These pieces feel more like wearable art than just jewelry.</p>
 
 <h2>Sourcing Jade from Jaipur</h2>
-<p>While Jade primarily comes from Myanmar (Burma) and Canada, Jaipur is a global center for the 'Carving' and 'Setting' of Jade into jewelry. Our artisans are experts at the delicate work required to carve jade without cracking it. At Gemora Global, we specialize in 'Artisan-Set' Jade, providing our wholesale partners with pieces that combine Chinese heritage with Western design. Our Jade range is a top-seller for the US, Asian, and European markets.</p>
+<p>While Jade primarily comes from Myanmar (Burma) and Canada, Jaipur is a global center for the 'Carving' and 'Setting' of Jade into jewelry. Our artisans are experts at the delicate work required to carve jade without cracking it. At <a href="/">Gemora Global</a>, we specialize in 'Artisan-Set' Jade, providing our wholesale partners with pieces that combine Chinese heritage with Western design. Our Jade range is a top-seller for the US, Asian, and European markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Why is Jade so tough?</strong><br/>A: Jade is made of interlocking microscopic crystals, making it the toughest gemstone in the world. While a diamond is harder (hard to scratch), Jade is tougher (hard to break/shatter). This is why it was used to make axe-heads in ancient times.</p>

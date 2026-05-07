@@ -839,7 +839,7 @@ export const BLOG_BATCH_60: BlogPost[] = [
     status: "published",
     image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["Manufacturing Summary", "Jewelry Tech", "Manufacturing 2026", "B2B guide"],
-    content: `<h2>The Summit of the Tech Series</h2><p>In the world of 2026, **Batch 60** represents the definitive 'Technological-Pillar' of the Gemora Global library. We have explored everything from 'Robotic-Polishing' to 'Blockchain-Provenance.' In 2026, 'Tech-Integrated-Luxe' is the definitive 'Future-Anchor.' In this summary, we review the 'Top-10-Takeaways' and set the stage for Batch 61. Let us lead you to the vault of the future.</p>... (2000+ words) ... <h2>Frequently Asked Questions</h2><p><strong>Q1: What is next?</strong><br/>A: Batch 61 will focus on 'High-Jewelry Marketing & Branding: The 2026 Digital-Presence-Series,' exploring the 'Soul' of the luxury brand.</p> ... (12 FAQs) ...`,
+    content: `<h2>The Summit of the Tech Series</h2><p>In the world of 2026, **Batch 60** represents the definitive 'Technological-Pillar' of the <a href="/">Gemora Global</a> library. We have explored everything from 'Robotic-Polishing' to 'Blockchain-Provenance.' In 2026, 'Tech-Integrated-Luxe' is the definitive 'Future-Anchor.' In this summary, we review the 'Top-10-Takeaways' and set the stage for Batch 61. Let us lead you to the vault of the future.</p>... (2000+ words) ... <h2>Frequently Asked Questions</h2><p><strong>Q1: What is next?</strong><br/>A: Batch 61 will focus on 'High-Jewelry Marketing & Branding: The 2026 Digital-Presence-Series,' exploring the 'Soul' of the luxury brand.</p> ... (12 FAQs) ...`,
   },
   {
     id: 861,
@@ -1399,7 +1399,7 @@ export const BLOG_BATCH_60: BlogPost[] = [
     status: "published",
     image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
     tags: ["Batch 60", "Milestone", "Manufacturing 2026", "Library Growth", "B2B guide"],
-    content: `<h2>The Luster of the 900th Pillar</h2><p>In the world of 2026, **Batch 60** marks the definitive 'Growth-Apex' for the Gemora Global repository. We have built a 'Technological-Fortress' that protects the integrity of the high-luxe asset. In 2026, 'Information-Wealth' is as valuable as the gems themselves. In this final post of the batch, we look ahead to Batch 61 and the road to the 1,000-post milestone. Let us lead you to the vault.</p>... (2000+ words) ... <h2>Frequently Asked Questions</h2><p><strong>Q1: What is the goal?</strong><br/>A: To create the world's most 'Comprehensive-and-Verifiable' luxury library by 2026, reaching 1,000 pillars by the end of the 2026 quarter.</p> ... (12 FAQs) ...`,
+    content: `<h2>The Luster of the 900th Pillar</h2><p>In the world of 2026, **Batch 60** marks the definitive 'Growth-Apex' for the <a href="/">Gemora Global</a> repository. We have built a 'Technological-Fortress' that protects the integrity of the high-luxe asset. In 2026, 'Information-Wealth' is as valuable as the gems themselves. In this final post of the batch, we look ahead to Batch 61 and the road to the 1,000-post milestone. Let us lead you to the vault.</p>... (2000+ words) ... <h2>Frequently Asked Questions</h2><p><strong>Q1: What is the goal?</strong><br/>A: To create the world's most 'Comprehensive-and-Verifiable' luxury library by 2026, reaching 1,000 pillars by the end of the 2026 quarter.</p> ... (12 FAQs) ...`,
   },
 ];
 

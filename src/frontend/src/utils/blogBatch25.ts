@@ -34,7 +34,7 @@ export const BLOG_BATCH_25 = [
 <h2>When to See a Professional</h2>
 <p>While home cleaning is great for maintenance, some things require a professional. If a stone is loose, if a clasp feels weak, or if a high-value piece has become severely tarnished, take it to a professional jeweler. They have the specialized tools and expertise to repair and restore your jewelry safely.</p>
 
-<h2>Gemora Global's Commitment to Longevity</h2>
+<h2><a href="/">Gemora Global</a>'s Commitment to Longevity</h2>
 <p>We don't just sell jewelry; we want you to love it for years. That's why we use professional-grade plating and 'e-coat' protection on our fashion jewelry lines. We also provide a care card with every wholesale order, ensuring our partners can educate their customers on how to maintain their new purchases. Quality manufacturing is only half the battle; proper care is the rest.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -67,7 +67,7 @@ export const BLOG_BATCH_25 = [
     tags: ["gold plated care", "cleaning gold", "vermeil care", "jewelry maintenance", "home cleaning tips"],
     content: `<h2>The Delicate Nature of Gold Plating</h2>
 <p>Gold plated jewelry (including Gold Vermeil) is a favorite for its beautiful look and accessible price. However, because the gold layer is a thin coating over a base metal, it requires more careful handling than solid gold. The goal of cleaning plated jewelry is to remove dirt and oils without rubbing away the gold layer itself.</p>
-<p>At Gemora Global, we use high-micron plating that is designed to last. But even the best plating needs proper care. Here are the 'do's and 'don'ts' of cleaning your gold plated pieces.</p>
+<p>At <a href="/">Gemora Global</a>, we use high-micron plating that is designed to last. But even the best plating needs proper care. Here are the 'do's and 'don'ts' of cleaning your gold plated pieces.</p>
 
 <h2>The 'Don'ts' (Avoid These at All Costs!)</h2>
 <ul>
@@ -135,7 +135,7 @@ export const BLOG_BATCH_25 = [
 <h2>Principle 5: High-Value Items in Airtight Bags</h2>
 <p>For pieces you don't wear every day—like formal silver items or high-micron gold pieces—consider storing them in small, airtight zip-lock bags. Removing the air almost completely stops the tarnishing process. This is the 'Insider Secret' used by many professional jewelers for their back-stock.</p>
 
-<h2>Gemora Global's Packaging Philosophy</h2>
+<h2><a href="/">Gemora Global</a>'s Packaging Philosophy</h2>
 <p>We provide high-quality pouches and boxes with our wholesale orders because we know that storage is part of the product's life. We also offer branded 'Anti-Tarnish' strips and care kits for our partners. Proper storage doesn't just protect the jewelry; it shows that you value and respect the craftsmanship of the piece.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -185,7 +185,7 @@ export const BLOG_BATCH_25 = [
 <h2>Rule 5: Be Mindful of the Elements</h2>
 <p>Traveling often involves more exposure to the elements—sun, sand, and swimming pools. Remember that chlorine and salt water are the enemies of gold plating and certain gemstones. If you're spending the day at the beach, leave your jewelry in the hotel safe. If you must wear it, give it a thorough rinse in clean water and pat it dry as soon as you get back.</p>
 
-<h2>Gemora Global's Travel-Friendly Designs</h2>
+<h2><a href="/">Gemora Global</a>'s Travel-Friendly Designs</h2>
 <p>We've designed many of our collections with the traveler in mind. Our 'Mix-and-Match' sets allow you to create multiple looks with just a few pieces, and our lightweight 'Hollow-Tube' hoops provide a big look without taking up space or being heavy. We also offer branded travel pouches and rolls for our wholesale partners, making our jewelry the perfect choice for the modern nomad.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -218,7 +218,7 @@ export const BLOG_BATCH_25 = [
     tags: ["jewelry cleaning", "professional cleaning", "home cleaning", "jewelry maintenance", "pro vs home"],
     content: `<h2>The Great Cleaning Debate</h2>
 <p>We all want our jewelry to sparkle like the day we bought it. But when it comes to cleaning, there's a lot of conflicting advice. Should you use a professional ultrasonic cleaner, or is a bowl of dish soap just as good? In 2026, the answer depends on two things: the material of your jewelry and the 'level' of cleaning required.</p>
-<p>At Gemora Global, we manufacture thousands of pieces every month and know exactly what works (and what destroys jewelry). We're breaking down the pros and cons of professional versus home cleaning methods.</p>
+<p>At <a href="/">Gemora Global</a>, we manufacture thousands of pieces every month and know exactly what works (and what destroys jewelry). We're breaking down the pros and cons of professional versus home cleaning methods.</p>
 
 <h2>Home Cleaning: The Gentle Hero</h2>
 <p>For 90% of fashion and semi-precious jewelry, home cleaning is actually the **better** choice. Why? Because it's gentle. Most 'Home Methods' (mild soap and lukewarm water) don't use harsh chemicals or high-frequency vibrations that can degrade plating or loosen stones. It's the perfect method for regular maintenance of your 'Everyday' collection.</p>

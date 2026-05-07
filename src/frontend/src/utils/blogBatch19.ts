@@ -33,7 +33,7 @@ export const BLOG_BATCH_19 = [
 <p>Korean designers have been instrumental in modernizing pearls. Instead of traditional matched strands, they use irregular baroque pearls, tiny seed pearls layered with gold chains, and pearls used in unexpected ways—like on ear cuffs or as part of a chunky ring setting. This 'Modern Pearl' movement is one of the most successful exports of K-jewelry style.</p>
 
 <h2>How to Source Korean Style Jewelry from Jaipur</h2>
-<p>Many retailers are surprised to learn that much of the world's 'Korean style' jewelry is actually manufactured in Jaipur. The artisans in Jaipur have the precision skills required for dainty gold-plated pieces and the expertise in stone-setting that K-style demands. By sourcing directly from a Jaipur manufacturer like Gemora Global, you can get the high-fashion K-style look with the quality and price advantage of Indian manufacturing.</p>
+<p>Many retailers are surprised to learn that much of the world's 'Korean style' jewelry is actually manufactured in Jaipur. The artisans in Jaipur have the precision skills required for dainty gold-plated pieces and the expertise in stone-setting that K-style demands. By sourcing directly from a Jaipur manufacturer like <a href="/">Gemora Global</a>, you can get the high-fashion K-style look with the quality and price advantage of Indian manufacturing.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Korean jewelry only for young people?</strong><br/>A: Not at all. While the more playful resin trends skew younger, the 'dainty minimalist' and 'modern pearl' trends are highly popular among professional women in their 30s and 40s who appreciate the subtle elegance of the style.</p>
@@ -83,7 +83,7 @@ export const BLOG_BATCH_19 = [
 <p>Pinterest users are increasingly pinning jewelry that features realistic botanical elements. Not just generic flowers, but specific species like ginkgo leaves, mushrooms, ferns, and wildflowers. This trend is a subset of the larger 'Cottagecore' and 'Earth-Core' movements, reflecting a global desire to feel more connected to the natural world.</p>
 
 <h2>How Retailers Can Use Pinterest Data</h2>
-<p>For jewelry brands, Pinterest is a goldmine of data. By seeing what's being pinned, you can predict what will sell. For example, if you see a surge in pins for 'chunky silver rings,' it's time to increase your silver inventory. Gemora Global uses these visual insights to inform our product development, ensuring our wholesale partners always have the most 'pinnable' pieces in stock.</p>
+<p>For jewelry brands, Pinterest is a goldmine of data. By seeing what's being pinned, you can predict what will sell. For example, if you see a surge in pins for 'chunky silver rings,' it's time to increase your silver inventory. <a href="/">Gemora Global</a> uses these visual insights to inform our product development, ensuring our wholesale partners always have the most 'pinnable' pieces in stock.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Why is Pinterest so important for jewelry trends?</strong><br/>A: Pinterest is a visual search engine. People go there specifically to find inspiration for things they want to buy or create. This makes it a direct reflection of future consumer intent.</p>
@@ -132,7 +132,7 @@ export const BLOG_BATCH_19 = [
 <h2>Trend 4: Sustainable and 'Vintage' Gems</h2>
 <p>In 2026, many celebrities are choosing to wear 'archival' jewelry from the 50s, 60s, and 70s, or pieces made with lab-grown diamonds and recycled metals. This is a powerful statement about sustainability in luxury. When a major star wears a vintage piece, it instantly drives demand for 'vintage-style' designs in the wholesale market.</p>
 
-<h2>How Gemora Global Replicates the Red Carpet Look</h2>
+<h2>How <a href="/">Gemora Global</a> Replicates the Red Carpet Look</h2>
 <p>You don't need a Hollywood budget to get the celebrity look. At Gemora Global, our designers monitor the red carpets in real-time. We take the high-end concepts—the proportions, the movement, the stone combinations—and translate them into affordable, high-quality jewelry for our wholesale partners. We use premium Cubic Zirconia and professional-grade plating to ensure our pieces have that 'red carpet' sparkle.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -165,7 +165,7 @@ export const BLOG_BATCH_19 = [
     tags: ["instagram jewelry", "jewelry marketing", "social media fashion", "brand building", "jewelry branding"],
     content: `<h2>The Instagram 'Aesthetic' is the New Storefront</h2>
 <p>In 2026, most jewelry discovery happens on Instagram. For a jewelry brand or retailer, your Instagram feed is more than just a marketing tool; it's your primary storefront. Customers don't just want to see the jewelry; they want to see the 'vibe' it creates. An 'Instagram-worthy' brand is one that understands the visual language of the platform—lighting, composition, and most importantly, the shareability of the products themselves.</p>
-<p>At Gemora Global, we've helped hundreds of brands launch and scale by providing them with jewelry that isn't just beautiful, but 'viral-ready.' Here are the secrets to building a jewelry brand that pops on social media.</p>
+<p>At <a href="/">Gemora Global</a>, we've helped hundreds of brands launch and scale by providing them with jewelry that isn't just beautiful, but 'viral-ready.' Here are the secrets to building a jewelry brand that pops on social media.</p>
 
 <h2>Secret 1: Designing for the 'Macro' Shot</h2>
 <p>On Instagram, the 'macro' shot (the extreme close-up) is king. People love to see the texture of the metal, the sparkle of the stone, and the tiny details that show craftsmanship. When designing or sourcing jewelry, think: 'How will this look under a macro lens?' Pieces with intricate textures, high-quality stone settings, and unique finishes perform significantly better on social media than plain designs.</p>
@@ -247,7 +247,7 @@ export const BLOG_BATCH_19 = [
 <p><strong>Q9: Is Cottagecore jewelry sustainable?</strong><br/>A: The aesthetic itself celebrates sustainability. By choosing high-quality, artisan-made pieces instead of mass-produced plastic items, you are supporting a more sustainable and ethical fashion model.</p>
 <p><strong>Q10: What's the difference between 'Fairycore' and 'Cottagecore'?</strong><br/>A: They are related but different. Fairycore is more magical and ethereal (think wings and glitter), while Cottagecore is more grounded and practical (think gardens and baking).</p>
 <p><strong>Q11: How do I find authentic vintage Cottagecore pieces?</strong><br/>A: Look in antique shops, thrift stores, and online marketplaces like Etsy. However, if you want consistent quality and multiple pieces for a store, 'vintage-inspired' wholesale is the way to go.</p>
-<p><strong>Q12: Can Gemora Global create custom Cottagecore designs?</strong><br/>A: Yes! We can help you design a custom collection featuring your favorite botanical motifs, stone combinations, and finishes. Contact us to start the process.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom Cottagecore designs?</strong><br/>A: Yes! We can help you design a custom collection featuring your favorite botanical motifs, stone combinations, and finishes. Contact us to start the process.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> to source our whimsical Cottagecore collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

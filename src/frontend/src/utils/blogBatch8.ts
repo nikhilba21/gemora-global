@@ -34,7 +34,7 @@ export const BLOG_BATCH_8 = [
 <h2>Finding Your First Buyers</h2>
 <p>List on B2B platforms like IndiaMART, TradeIndia, and Alibaba. Attend trade shows like IIJS (India International Jewellery Show) to meet international buyers face-to-face. Send samples to 10-15 serious prospects, follow up consistently, and convert your first export order. Once you have 5-10 regular buyers, scale production and expand to new markets.</p>
 
-<h2>Scale with Gemora Global</h2>
+<h2>Scale with <a href="/">Gemora Global</a></h2>
 <p>Gemora Global has been exporting imitation jewellery from Jaipur for over a decade. We can guide you or supply wholesale stock for your export business.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -52,7 +52,7 @@ export const BLOG_BATCH_8 = [
     image:
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["wholesale jewellery", "global business", "growth", "export"],
-    content: `<h2>Building a Global Wholesale Jewellery Business</h2>
+    content: `<h2>Building a Global <a href="/wholesale">Wholesale Jewellery</a> Business</h2>
 <p>Scaling a wholesale jewellery business beyond your home market requires a structured approach. The most successful Indian jewellery exporters follow a proven playbook: master 2-3 markets before expanding, invest in digital presence, and attend the right trade shows consistently.</p>
 
 <h2>Market Expansion Strategy</h2>
@@ -67,7 +67,7 @@ export const BLOG_BATCH_8 = [
 <p>Customer retention is cheaper than acquisition in B2B. Offer loyalty discounts for repeat orders, give access to exclusive designs before public release, and assign a dedicated account manager for your top buyers. Regular WhatsApp updates with new arrivals and seasonal collections keep you top of mind.</p>
 
 <h2>Ready to Scale?</h2>
-<p>Gemora Global partners with wholesale buyers from 20+ countries, providing premium imitation jewellery at competitive prices with reliable delivery.</p>
+<p><a href="/">Gemora Global</a> partners with wholesale buyers from 20+ countries, providing premium imitation jewellery at competitive prices with reliable delivery.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -97,13 +97,13 @@ export const BLOG_BATCH_8 = [
   <li>Direct email outreach to boutiques in your target countries</li>
   <li>Partner with freight forwarders who connect suppliers with international importing clients</li>
   <li>IndiaMART Premium listing for inbound enquiries from serious buyers</li>
-  <li>GJEPC (Gems & Jewellery Export Promotion Council) membership — includes buyer matching services</li>
+  <li>GJEPC (Gems & <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Promotion Council) membership — includes buyer matching services</li>
   <li>B2B WhatsApp and Telegram groups in your target markets</li>
 </ul>
 
 <h2>Start with the Right Foundation</h2>
 <p>Before reaching out to any buyer, ensure your catalogue is professional, your pricing is competitive, and your sample turnaround is fast. Buyers decide within minutes whether to engage with a supplier.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 174,
@@ -134,7 +134,7 @@ export const BLOG_BATCH_8 = [
 <p>Post a mix of product showcases (60%), factory/behind-the-scenes (20%), and trend content (20%). Use specific hashtags rather than generic ones: #wholesalejewellery, #fashionjewellerywholesale, #imitationjewellerywholesale, and country-specific tags like #ukjewellerywholesale. When buyers DM you, respond within 2 hours, send your digital catalogue, and move the conversation to WhatsApp quickly.</p>
 
 <h2>Start Getting Instagram Leads Today</h2>
-<p>Follow Gemora Global on Instagram for inspiration on how we showcase our imitation jewellery collections to international wholesale buyers.</p>
+<p>Follow <a href="/">Gemora Global</a> on Instagram for inspiration on how we showcase our imitation jewellery collections to international wholesale buyers.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -170,10 +170,10 @@ export const BLOG_BATCH_8 = [
 </ul>
 
 <h2>Content Marketing That Attracts Buyers</h2>
-<p>Publish blog posts targeting what buyers search: "MOQ for jewellery export India", "how to import jewellery from Jaipur", "anti-tarnish jewellery wholesale". Monthly email newsletters with new collection previews and festival offers keep your buyer database engaged. GJEPC and CII memberships add credibility and provide buyer introduction services.</p>
+<p>Publish blog posts targeting what buyers search: "MOQ for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> India", "how to import jewellery from Jaipur", "anti-tarnish jewellery wholesale". Monthly email newsletters with new collection previews and festival offers keep your buyer database engaged. GJEPC and CII memberships add credibility and provide buyer introduction services.</p>
 
 <h2>Build Your B2B Marketing Engine</h2>
-<p>Gemora Global has built a global buyer network using these exact strategies. Reach out to learn more about our wholesale programme.</p>
+<p><a href="/">Gemora Global</a> has built a global buyer network using these exact strategies. Reach out to learn more about our wholesale programme.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -195,14 +195,14 @@ export const BLOG_BATCH_8 = [
       "digital marketing",
       "google ranking",
     ],
-    content: `<h2>SEO Guide for Imitation Jewellery Exporter Websites</h2>
+    content: `<h2>SEO Guide for Imitation <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> Websites</h2>
 <p>SEO for imitation jewellery exporters is different from fashion retail SEO. Your buyers are B2B importers, boutique owners, and wholesale traders — they search very differently from end consumers. Target the right keywords and you can build a steady stream of qualified enquiries from Google.</p>
 
 <h2>Keyword Strategy for Exporters</h2>
 <ul>
   <li>Target: "imitation jewellery exporter india", "wholesale earrings supplier Jaipur", "bulk fashion jewellery manufacturer"</li>
   <li>Avoid: "gold jewellery", "diamond rings" — these are dominated by luxury brands with massive authority</li>
-  <li>Country pages: "jewellery supplier UAE", "wholesale jewellery UK retailers", "imitation jewellery USA market"</li>
+  <li>Country pages: "jewellery supplier UAE", "<a href="/wholesale">Wholesale Jewellery</a> UK retailers", "imitation jewellery USA market"</li>
   <li>Product pages: "wholesale kundan necklace sets India", "bulk oxidised earrings supplier"</li>
 </ul>
 
@@ -211,7 +211,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Content That Ranks</h2>
 <p>Publish blog posts targeting buyer questions: "MOQ for jewellery from India", "how to import jewellery from Jaipur", "best wholesale jewellery supplier". Regular, helpful content builds authority and brings long-tail traffic that converts.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 177,
@@ -233,13 +233,13 @@ export const BLOG_BATCH_8 = [
       "digital marketing",
     ],
     content: `<h2>10 Google Ranking Tips for Jewellery Exporters</h2>
-<p>Ranking on Google for B2B jewellery export terms is very achievable for Indian manufacturers — competition is far lower than in retail jewellery. These 10 practical tips will help you climb to page one for the keywords your buyers are searching.</p>
+<p>Ranking on Google for B2B <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> terms is very achievable for Indian manufacturers — competition is far lower than in retail jewellery. These 10 practical tips will help you climb to page one for the keywords your buyers are searching.</p>
 
 <h2>The Top 10 Ranking Actions</h2>
 <ul>
   <li><strong>1. Google Business Profile</strong> — Claim, verify, and fully optimize your Jaipur listing</li>
   <li><strong>2. Long-tail keywords</strong> — Easier to rank: "wholesale gold plated earrings supplier India" beats "earrings"</li>
-  <li><strong>3. Country-specific pages</strong> — Create dedicated pages for each export market ("jewellery exporter to UAE")</li>
+  <li><strong>3. Country-specific pages</strong> — Create dedicated pages for each export market ("<a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> to UAE")</li>
   <li><strong>4. Regular blog content</strong> — Fresh content signals an active, authoritative website</li>
   <li><strong>5. B2B directory listings</strong> — IndiaMART, TradeIndia, Alibaba rank on Google and pass link equity</li>
   <li><strong>6. Core Web Vitals</strong> — Fast loading (WebP images, minimal JS) now directly impacts rankings</li>
@@ -251,7 +251,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Start Ranking This Month</h2>
 <p>Even implementing 3-4 of these tips can produce measurable ranking improvements within 60-90 days. Focus on local SEO and long-tail terms first for the fastest results.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 178,
@@ -267,12 +267,12 @@ export const BLOG_BATCH_8 = [
     image:
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["linkedin", "wholesale jewellery", "b2b", "business strategy"],
-    content: `<h2>LinkedIn for Wholesale Jewellery B2B Marketing</h2>
+    content: `<h2>LinkedIn for <a href="/wholesale">Wholesale Jewellery</a> B2B Marketing</h2>
 <p>Most Indian jewellery exporters ignore LinkedIn entirely. This is a significant missed opportunity — LinkedIn is where importers, boutique owners, and wholesale buyers from UAE, UK, and USA are actively looking for suppliers. A professional LinkedIn presence can generate serious B2B enquiries at zero cost.</p>
 
 <h2>Setting Up for Success</h2>
 <ul>
-  <li><strong>Company page</strong> — Keyword-rich description: "Jaipur-based imitation jewellery manufacturer and exporter. MOQ 50 units. Shipping to 20+ countries." Add catalogue PDF as a featured document.</li>
+  <li><strong>Company page</strong> — Keyword-rich description: "Jaipur-based <a href="/wholesale-imitation-jewellery-manufacturer-exporter">Imitation Jewellery Manufacturer</a> and exporter. MOQ 50 units. Shipping to 20+ countries." Add catalogue PDF as a featured document.</li>
   <li><strong>Founder profile</strong> — Connect with buyers, importers, and boutique owners globally with personalised notes</li>
   <li><strong>Content strategy</strong> — Share new collection teasers, factory photos, buyer testimonials, and export milestones weekly</li>
 </ul>
@@ -281,7 +281,7 @@ export const BLOG_BATCH_8 = [
 <p>Search "jewellery boutique owner" + your target country on LinkedIn. Send connection requests with a personalised note mentioning their business specifically. Once connected, follow up with a brief introduction and catalogue link — never pitch immediately. LinkedIn InMail has a significantly higher response rate than cold email for B2B outreach. For budget campaigns, LinkedIn Ads targeting jewellery buyers and importers delivers highly qualified leads.</p>
 
 <h2>Start Your LinkedIn Outreach</h2>
-<p>Gemora Global's LinkedIn page features our latest collections and export capabilities. Connect with us for partnership opportunities.</p>
+<p><a href="/">Gemora Global</a>'s LinkedIn page features our latest collections and export capabilities. Connect with us for partnership opportunities.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -313,7 +313,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Ready to Start Email Marketing?</h2>
 <p>Sign up for our wholesale newsletter and receive our latest jewellery catalogue directly in your inbox every month.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 180,
@@ -343,7 +343,7 @@ export const BLOG_BATCH_8 = [
 <p>The four main scaling levers are product diversification, geographic expansion, channel diversification (adding new platforms and markets), and automation. The most common bottlenecks that stop growth are production capacity constraints, working capital shortfalls, and quality inconsistency as volume grows. Proactively address these before they become crises. Government schemes like MEIS (now RoDTEP), export credit from ECGC, and NSIC subsidies can help fund scaling without diluting equity.</p>
 
 <h2>Scale with an Established Partner</h2>
-<p>Gemora Global is already at scale — partner with us to source premium imitation jewellery for your growing export business, or white-label our products under your brand.</p>
+<p><a href="/">Gemora Global</a> is already at scale — partner with us to source premium imitation jewellery for your growing export business, or white-label our products under your brand.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

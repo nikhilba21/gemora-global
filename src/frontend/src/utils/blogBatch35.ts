@@ -31,7 +31,7 @@ export const BLOG_BATCH_35 = [
 <p>A major trend for 2026 is 'Meenakari'—the ancient Persian art of enameling on metal. In high-end Kundan jewelry, the reverse side of the piece is often covered in vibrant, hand-painted floral motifs in blue, green, and red. This 'Hidden-Art' is a sign of true quality and heritage.</p>
 
 <h2>Sourcing Heritage Jewelry from Jaipur</h2>
-<p>Jaipur is the world capital of Kundan and Polki manufacturing. The city's 'Jahari' (jeweler) community has been perfecting these techniques for over 400 years. At Gemora Global, we work with the finest master-artisans in Jaipur to create 'Museum-Quality' heritage jewelry. We offer both 'Fine-Gold' and 'Premium-Silver' versions of these styles, allowing our wholesale partners to offer the grandeur of Indian royalty at multiple price points.</p>
+<p>Jaipur is the world capital of Kundan and Polki manufacturing. The city's 'Jahari' (jeweler) community has been perfecting these techniques for over 400 years. At <a href="/">Gemora Global</a>, we work with the finest master-artisans in Jaipur to create 'Museum-Quality' heritage jewelry. We offer both 'Fine-Gold' and 'Premium-Silver' versions of these styles, allowing our wholesale partners to offer the grandeur of Indian royalty at multiple price points.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What's the difference between Polki and Kundan?</strong><br/>A: Polki refers to the *stone* (uncut diamond). Kundan refers to the *setting technique* (using 24k gold foil). A piece can be 'Polki-Kundan' if it uses uncut diamonds set in the Kundan style.</p>
@@ -81,7 +81,7 @@ export const BLOG_BATCH_35 = [
 <p>In the maximalist fashion world of 2026, the 'Oversized Hamsa' ring is huge. These are large, detailed gold or silver rings that cover the knuckle, often featuring intricate filigree work. It's a bold 'Power-Accessory' that makes a statement about the wearer's identity and beliefs.</p>
 
 <h2>Sourcing Protection Jewelry from Jaipur</h2>
-<p>Jaipur is a primary hub for the manufacturing of spiritual and cultural jewelry. Our artisans are experts at the 'Micro-Setting' and 'Filigree' work required to make these symbols look truly high-end. At Gemora Global, we specialize in 'Modern-Mystic' collections, providing our wholesale partners with pieces that combine ancient meaning with 2026 fashion aesthetics. Our Hamsa and Evil Eye ranges are perennial top-sellers globally.</p>
+<p>Jaipur is a primary hub for the manufacturing of spiritual and cultural jewelry. Our artisans are experts at the 'Micro-Setting' and 'Filigree' work required to make these symbols look truly high-end. At <a href="/">Gemora Global</a>, we specialize in 'Modern-Mystic' collections, providing our wholesale partners with pieces that combine ancient meaning with 2026 fashion aesthetics. Our Hamsa and Evil Eye ranges are perennial top-sellers globally.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What does the Hamsa symbolize?</strong><br/>A: Protection, strength, and blessings. It's believed to ward off the 'Evil Eye' and bring good fortune to the wearer.</p>
@@ -131,7 +131,7 @@ export const BLOG_BATCH_35 = [
 <p>To honor the 'Emerald Isle' heritage, pairing Celtic jewelry with green gemstones is the dominant trend. Emeralds, Tsavorite garnets, and green Sapphires are used to add a 'Pop' of color and luxury to traditional silver and gold knotwork designs.</p>
 
 <h2>Sourcing Heritage Jewelry from Jaipur</h2>
-<p>While the designs are Celtic, the artistry of 'Wire-Work' and 'Casting' used in these pieces is a specialty of Jaipur's master-craftsmen. At Gemora Global, we specialize in 'High-Detail' Celtic collections, providing our wholesale partners in the UK, US, and Ireland with pieces that have the 'Antique-Feel' but modern durability. Our Celtic range is a perennial favorite for the heritage market.</p>
+<p>While the designs are Celtic, the artistry of 'Wire-Work' and 'Casting' used in these pieces is a specialty of Jaipur's master-craftsmen. At <a href="/">Gemora Global</a>, we specialize in 'High-Detail' Celtic collections, providing our wholesale partners in the UK, US, and Ireland with pieces that have the 'Antique-Feel' but modern durability. Our Celtic range is a perennial favorite for the heritage market.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What does a Celtic Knot mean?</strong><br/>A: It represents 'Eternity' and 'Interconnectedness.' Because the line has no beginning and no end, it is a symbol of the eternal cycle of life and love.</p>
@@ -181,7 +181,7 @@ export const BLOG_BATCH_35 = [
 <p>A major styling trend for 2026 is the 'Turquoise-Wrist.' Wearing 3-5 different turquoise and silver cuffs together creates a 'Boho-Queen' look that is very popular for festivals and summer fashion. The key is to mix different types of turquoise (e.g., 'Sleeping Beauty' blue with 'Royston' green) for a layered, organic feel.</p>
 
 <h2>Sourcing Southwestern Style from Jaipur</h2>
-<p>While the designs are rooted in the American Southwest, the artisans of Jaipur are some of the world's leading experts in 'Hand-Stamping' and 'Stone-Inlay.' At Gemora Global, we specialize in 'Modern-Southwestern' collections, providing our wholesale partners with the 'Artisan-Look' but with the consistent quality and scale that a global brand requires. Our Southwestern range is a top-seller for the US and Australian markets.</p>
+<p>While the designs are rooted in the American Southwest, the artisans of Jaipur are some of the world's leading experts in 'Hand-Stamping' and 'Stone-Inlay.' At <a href="/">Gemora Global</a>, we specialize in 'Modern-Southwestern' collections, providing our wholesale partners with the 'Artisan-Look' but with the consistent quality and scale that a global brand requires. Our Southwestern range is a top-seller for the US and Australian markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Southwestern' jewelry?</strong><br/>A: It's a style primarily defined by the work of Native American tribes in the US Southwest (Navajo, Zuni, Hopi). It features heavy silver, turquoise, coral, and hand-crafted techniques like stamping and inlay.</p>
@@ -235,7 +235,7 @@ export const BLOG_BATCH_35 = [
 <p>Following the 'Customization' trend, simple cord bracelets with a single carved jade charm (like a 'Lucky-Coin' or a 'Pixiu' for wealth) are everywhere in 2026. These 'Entry-Level' luxury pieces are a favorite for the younger generation who want to connect with their heritage in an everyday way.</p>
 
 <h2>Sourcing Jade Jewelry from Jaipur</h2>
-<p>Jaipur is a world center for the specialized 'Carving' of Jade. While the stones may come from Myanmar or Canada, the intricate work of turning them into wearable art is done in our Jaipur workshops. At Gemora Global, we specialize in 'Heritage-Modern' Jade collections, providing our wholesale partners with pieces that bridge the gap between ancient Chinese wisdom and 2026 global style. Our Jade range is a top-seller in the US, Asian, and European markets.</p>
+<p>Jaipur is a world center for the specialized 'Carving' of Jade. While the stones may come from Myanmar or Canada, the intricate work of turning them into wearable art is done in our Jaipur workshops. At <a href="/">Gemora Global</a>, we specialize in 'Heritage-Modern' Jade collections, providing our wholesale partners with pieces that bridge the gap between ancient Chinese wisdom and 2026 global style. Our Jade range is a top-seller in the US, Asian, and European markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Why is Jade so important in Chinese culture?</strong><br/>A: It represents the five virtues: benevolence, integrity, wisdom, courage, and purity. It's also believed to protect the physical body and enhance the soul.</p>

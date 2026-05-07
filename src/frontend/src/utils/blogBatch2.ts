@@ -31,7 +31,7 @@ export const BLOG_BATCH_2 = [
 <h2>Trending Styles for 2025–2026</h2>
 <p>Buyers are sourcing chunky gold hoops, baroque pearl drops, evil eye studs, and minimalist ear crawlers. Explore our full earring collection at <a href="/collections/earrings">Gemora Global Earrings Collection</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 112,
@@ -65,7 +65,7 @@ export const BLOG_BATCH_2 = [
 <h2>Market-Specific Bestsellers</h2>
 <p>UAE and India buyers prefer heavy ethnic sets; USA and UK buyers lean toward minimal layered designs; African markets favour bold statement pieces. Browse our range at <a href="/collections/necklaces">Gemora Global Necklaces Collection</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 113,
@@ -100,7 +100,7 @@ export const BLOG_BATCH_2 = [
 <h2>How to Order Wholesale Bangles</h2>
 <p>Most Indian bangle exporters accept orders from 50 dozen (600 pieces) upward. Custom sizes, colours, and meenakari patterns are available on MOQ 500+ units with 4–6 week lead time.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 114,
@@ -135,7 +135,7 @@ export const BLOG_BATCH_2 = [
 <h2>Pricing and Margins</h2>
 <p>Wholesale imitation rings range from ₹80 to ₹800 per piece. A minimal stackable ring retails for ₹499–₹999 in Indian boutiques and $8–$18 in Western markets, offering 5–10x markup potential for stockists.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 115,
@@ -169,7 +169,7 @@ export const BLOG_BATCH_2 = [
 <h2>Key Export Markets</h2>
 <p>UK, Canada, and USA lead imports for diaspora bridal markets. UAE and Saudi Arabia are strong markets for festive and wedding season buying. Explore our wholesale bridal range at <a href="/wholesale">Gemora Global Wholesale</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 116,
@@ -203,7 +203,7 @@ export const BLOG_BATCH_2 = [
 <h2>Wholesale Pricing and MOQ</h2>
 <p>Wholesale anklet prices range from ₹50 to ₹300 per piece. Most styles are available from MOQ of 50 units per design. Mixed-style assortments are available for testing new markets without committing to single designs.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 117,
@@ -236,7 +236,7 @@ export const BLOG_BATCH_2 = [
 <h2>Pricing vs Brass Jewellery</h2>
 <p>Stainless steel jewellery commands a 20–40% premium over equivalent brass pieces at wholesale, but this is recovered easily in retail given the higher perceived quality and "waterproof/tarnish-free" marketing claims that drive higher consumer price acceptance.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 118,
@@ -270,7 +270,7 @@ export const BLOG_BATCH_2 = [
 <h2>Wholesale Pricing Range</h2>
 <p>Gold plated imitation jewellery wholesale prices range from $2 for simple pieces (basic pendants, small earrings) to $20+ for intricate multi-stone statement pieces. Retail prices are typically 4–8x wholesale cost, offering strong margins for boutiques and online sellers.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 119,
@@ -303,7 +303,7 @@ export const BLOG_BATCH_2 = [
 <h2>Markets That Love Pearl Jewellery</h2>
 <p>UK boutiques serving modest fashion and classic styling, USA bridal accessories stores, Southeast Asian markets (Malaysia, Singapore), and Middle Eastern buyers for elegant occasion wear all show consistent demand for wholesale pearl fashion jewellery.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 120,
@@ -338,6 +338,6 @@ export const BLOG_BATCH_2 = [
 <h2>Top Markets for Charm Bracelets</h2>
 <p>USA, UK, and European gift shops and boutiques are the largest buyers of wholesale charm bracelets. Online Etsy and Amazon jewellery sellers frequently source from Indian manufacturers for private label charm bracelet ranges.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

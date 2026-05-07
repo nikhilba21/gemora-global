@@ -28,7 +28,7 @@ export const BLOG_BATCH_28 = [
 <p>While gold is popular, Aquamarine looks its best when set in silver or white gold. The cool tones of the metal enhance the stone's icy blue color, creating a look that is futuristic and crisp. This 'Cool-Tone' jewelry is a major trend for the European and Scandinavian markets in 2026.</p>
 
 <h2>Sourcing Aquamarine from Jaipur</h2>
-<p>Jaipur is a global leader in Beryl processing. We source our raw Aquamarine from Brazil, Africa, and Pakistan and use specialized cutting techniques to maximize the stone's clarity and 'glow.' At Gemora Global, we specialize in 'High-Clarity' Aquamarine settings, ensuring that our wholesale partners have access to pieces that look like liquid light. Our Aquamarine collections are a perennial top-seller for our global partners.</p>
+<p>Jaipur is a global leader in Beryl processing. We source our raw Aquamarine from Brazil, Africa, and Pakistan and use specialized cutting techniques to maximize the stone's clarity and 'glow.' At <a href="/">Gemora Global</a>, we specialize in 'High-Clarity' Aquamarine settings, ensuring that our wholesale partners have access to pieces that look like liquid light. Our Aquamarine collections are a perennial top-seller for our global partners.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for March?</strong><br/>A: Aquamarine is the primary birthstone for March. It represents youth, health, and hope—the perfect symbols for the start of spring.</p>
@@ -75,7 +75,7 @@ export const BLOG_BATCH_28 = [
 <p>A major trend for 2026 is stacking Peridot rings with both gold and silver bands. The green-gold color of the stone acts as a 'bridge' between the two metal tones, creating a cohesive and modern look.</p>
 
 <h2>Sourcing Peridot from Jaipur</h2>
-<p>Jaipur is a primary hub for cutting Peridot from Pakistan and Africa. Our artisans are experts at 'brilliant' facetting, which brings out the stone's unique 'double refraction' (making it sparkle even more). At Gemora Global, we specialize in 'Vibrant-Green' collections, providing our wholesale partners with pieces that stand out in any display. Our Peridot range is a top-seller for the US and European markets.</p>
+<p>Jaipur is a primary hub for cutting Peridot from Pakistan and Africa. Our artisans are experts at 'brilliant' facetting, which brings out the stone's unique 'double refraction' (making it sparkle even more). At <a href="/">Gemora Global</a>, we specialize in 'Vibrant-Green' collections, providing our wholesale partners with pieces that stand out in any display. Our Peridot range is a top-seller for the US and European markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for August?</strong><br/>A: Peridot is the primary birthstone for August. Its bright green color is perfect for the peak of summer.</p>
@@ -127,7 +127,7 @@ export const BLOG_BATCH_28 = [
 <p>One of the best things about Topaz is its hardness. It's an 8 on the Mohs scale, meaning only sapphires and diamonds are harder. This makes it an excellent choice for 'Everyday' rings that need to withstand life's knocks without scratching. It's a much more durable choice than quartz-based gems like Amethyst.</p>
 
 <h2>Sourcing Topaz from Jaipur</h2>
-<p>Jaipur is the world's primary hub for Blue Topaz processing. We source our raw colorless topaz from around the world and use specialized treatments and precision-cutting to achieve the perfect blue hues. At Gemora Global, we specialize in 'Large-Carat' Topaz statement pieces, providing our wholesale partners with 'Red-Carpet' looks at an affordable price point. Our Topaz range is a perennial best-seller globally.</p>
+<p>Jaipur is the world's primary hub for Blue Topaz processing. We source our raw colorless topaz from around the world and use specialized treatments and precision-cutting to achieve the perfect blue hues. At <a href="/">Gemora Global</a>, we specialize in 'Large-Carat' Topaz statement pieces, providing our wholesale partners with 'Red-Carpet' looks at an affordable price point. Our Topaz range is a perennial best-seller globally.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for November?</strong><br/>A: Blue Topaz is the modern birthstone for November (alongside Citrine). It represents strength and wisdom.</p>
@@ -174,7 +174,7 @@ export const BLOG_BATCH_28 = [
 <p>For the high-end market, 'Tsavorite' (green garnet) is a massive 2026 trend. It is more vibrant and durable than emerald and is a top-tier choice for fine jewelry boutiques looking for a 'Natural-Green' alternative that is rarer than sapphire.</p>
 
 <h2>Sourcing Garnet from Jaipur</h2>
-<p>Jaipur is a world leader in Garnet processing, especially for the deep red varieties. We source raw material from Africa, India, and Sri Lanka and cut them in our workshops into every imaginable shape. At Gemora Global, we specialize in 'Deep-Saturation' Garnet jewelry, providing our wholesale partners with pieces that have a rich, consistent color. Our Garnet collections are a top-seller for the US and European markets.</p>
+<p>Jaipur is a world leader in Garnet processing, especially for the deep red varieties. We source raw material from Africa, India, and Sri Lanka and cut them in our workshops into every imaginable shape. At <a href="/">Gemora Global</a>, we specialize in 'Deep-Saturation' Garnet jewelry, providing our wholesale partners with pieces that have a rich, consistent color. Our Garnet collections are a top-seller for the US and European markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for January?</strong><br/>A: Garnet is the primary birthstone for January. It represents protection and safe travel for the start of the year.</p>
@@ -221,7 +221,7 @@ export const BLOG_BATCH_28 = [
 <p>A massive trend for 2026 is the fusion of vibrant Turquoise with chunky, 18k gold chains. The contrast between the matte blue of the stone and the high-shine gold is visually striking and feels very 'Luxe-Boho.' It's a favorite for the Ibiza and Coachella fashion sets.</p>
 
 <h2>Sourcing Turquoise from Jaipur</h2>
-<p>Jaipur is a major global hub for Turquoise processing. We source raw material from the US (Arizona), Iran (Persian), and Tibet and use our expertise to cut and polish it into every imaginable shape. At Gemora Global, we specialize in 'Stabilized' and 'Natural' Turquoise collections, providing our wholesale partners with pieces that are both beautiful and durable. Our Turquoise range is a top-seller for the US, Australian, and European markets.</p>
+<p>Jaipur is a major global hub for Turquoise processing. We source raw material from the US (Arizona), Iran (Persian), and Tibet and use our expertise to cut and polish it into every imaginable shape. At <a href="/">Gemora Global</a>, we specialize in 'Stabilized' and 'Natural' Turquoise collections, providing our wholesale partners with pieces that are both beautiful and durable. Our Turquoise range is a top-seller for the US, Australian, and European markets.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the birthstone for December?</strong><br/>A: Turquoise is the primary birthstone for December. It represents health, luck, and protection for the winter season.</p>

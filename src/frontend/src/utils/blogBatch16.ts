@@ -56,7 +56,7 @@ export const BLOG_BATCH_16 = [
 
 <p><strong>Q9: What is the easiest layered jewelry look to put together for a beginner?</strong><br/>A: The two-necklace start: a fine chain choker (38–40cm) worn with a slightly heavier chain at 45cm with a small pendant. This minimal stack immediately creates the layered effect with almost no risk of looking overdone. Add a third necklace at 50cm as your confidence grows.</p>
 
-<p><strong>Q10: How do I source mix-and-match layering sets wholesale from India?</strong><br/>A: At Gemora Global, we offer individual layering pieces (chains in multiple gauges and lengths, small pendant options, thin bands) as well as pre-curated layering assortments. Wholesale buyers can mix and match from our range to create their own curated layering kits. Contact us for our layering collection catalogue and pricing.</p>
+<p><strong>Q10: How do I source mix-and-match layering sets wholesale from India?</strong><br/>A: At <a href="/">Gemora Global</a>, we offer individual layering pieces (chains in multiple gauges and lengths, small pendant options, thin bands) as well as pre-curated layering assortments. Wholesale buyers can mix and match from our range to create their own curated layering kits. Contact us for our layering collection catalogue and pricing.</p>
 
 <p><strong>Q11: What is a "jewelry curating" subscription service and is it viable?</strong><br/>A: A jewelry subscription service sends subscribers a curated selection of pieces monthly to help them build their layered collection over time. It is a viable business model for jewelry retailers with a strong aesthetic identity and loyal following. Indian wholesale sourcing makes the economics work well: low per-piece cost allows generous value delivery to subscribers at competitive subscription price points.</p>
 
@@ -121,7 +121,7 @@ export const BLOG_BATCH_16 = [
 
 <p><strong>Q11: How do I market Y2K jewelry to Millennial vs Gen Z consumers differently?</strong><br/>A: For Millennials: lead with nostalgia ("remember when..."), focus on quality reinterpretations of original pieces, emphasize premium materials that make Y2K aesthetics suitable for adult life. For Gen Z: lead with discovery and aesthetic ("this is the aesthetic of an era you missed"), focus on styling potential and social media shareability, emphasize the mix-and-match potential for building their own Y2K-aesthetic stack.</p>
 
-<p><strong>Q12: Where can I source wholesale Y2K aesthetic jewelry from India?</strong><br/>A: Gemora Global sources and produces enamel butterfly motifs, celestial pendant collections, charm bracelets, and initial jewelry that serves the Y2K revival market effectively. Contact us for catalogue access and wholesale pricing. Minimum order 50 pieces per design, with express shipping to USA, UK, UAE, and Australia.</p>
+<p><strong>Q12: Where can I source wholesale Y2K aesthetic jewelry from India?</strong><br/>A: <a href="/">Gemora Global</a> sources and produces enamel butterfly motifs, celestial pendant collections, charm bracelets, and initial jewelry that serves the Y2K revival market effectively. Contact us for catalogue access and wholesale pricing. Minimum order 50 pieces per design, with express shipping to USA, UK, UAE, and Australia.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our Y2K jewelry collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

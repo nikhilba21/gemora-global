@@ -13,7 +13,7 @@ export const BLOG_BATCH_1 = [
     image:
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["imitation jewellery", "manufacturer", "india", "jaipur"],
-    content: `<h2>India: The World's Leading Imitation Jewellery Manufacturer</h2>
+    content: `<h2>India: The World's Leading <a href="/wholesale-imitation-jewellery-manufacturer-exporter">Imitation Jewellery Manufacturer</a></h2>
 <p>India has long been recognized as the global leader in imitation jewellery manufacturing. With over 400 years of craftsmanship heritage, cities like Jaipur have evolved into world-class production hubs that export to 50+ countries. Indian manufacturers combine traditional artistry with modern manufacturing techniques to produce jewellery that rivals fine jewellery in appearance at a fraction of the cost.</p>
 
 <h2>Jaipur's Jewellery Manufacturing Legacy</h2>
@@ -28,7 +28,7 @@ export const BLOG_BATCH_1 = [
 <li><strong>Quality Control:</strong> 3-stage QC before dispatch including anti-tarnish testing</li>
 </ul>
 
-<h2>Why Choose Gemora Global</h2>
+<h2>Why Choose <a href="/">Gemora Global</a></h2>
 <p>At Gemora Global, we offer MOQ from just 50 units with anti-tarnish coating on all pieces, ensuring your customers enjoy long-lasting quality. Our factory in Jaipur produces 500+ designs across all jewellery categories. Explore our full collection at <a href="/products">our products page</a>.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -46,7 +46,7 @@ export const BLOG_BATCH_1 = [
     image:
       "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
     tags: ["fashion jewellery", "exporter", "india", "export"],
-    content: `<h2>India's Fashion Jewellery Export Industry</h2>
+    content: `<h2>India's Fashion <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Industry</h2>
 <p>India's fashion jewellery export industry is valued at over $3 billion annually and growing at 12% year-on-year. The country exports to more than 50 nations, with the UAE, USA, UK, Europe, and Australia being the top destinations. Indian exporters have earned a global reputation for delivering trend-forward, high-quality pieces at competitive wholesale prices.</p>
 
 <h2>Top Export Destinations</h2>
@@ -61,7 +61,7 @@ export const BLOG_BATCH_1 = [
 <h2>Why Indian Exporters Dominate Global Markets</h2>
 <p>Indian fashion jewellery exporters offer an unbeatable combination of design diversity, skilled craftsmanship, and cost competitiveness. A piece that retails for $30 in the USA can be sourced wholesale from India for $3–$5, giving retailers a 500%+ markup opportunity. Indian manufacturers also adapt designs rapidly to global trends, from Korean minimalism to Middle Eastern opulence.</p>
 
-<h2>Start Exporting with Gemora Global</h2>
+<h2>Start Exporting with <a href="/">Gemora Global</a></h2>
 <p>Gemora Global ships to the <a href="/export-markets/usa">USA</a>, UAE, UK, and 20+ other countries with reliable freight partners. Our export team handles all documentation, customs clearance, and packaging. Whether you need 50 pieces or 5,000, we deliver on time with full quality assurance.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -84,9 +84,9 @@ export const BLOG_BATCH_1 = [
 
 <h2>Types of Imitation Jewellery Available Wholesale</h2>
 <ul>
-<li><strong>Kundan Jewellery:</strong> Traditional Rajasthani style with glass stones set in gold foil</li>
+<li><strong><a href="/kundan-jewellery-wholesale-manufacturer">Kundan Jewellery</a>:</strong> Traditional Rajasthani style with glass stones set in gold foil</li>
 <li><strong>Meenakari:</strong> Colourful enamel work on brass or silver-toned base metals</li>
-<li><strong>Oxidised Jewellery:</strong> Antique-finish silver-toned pieces, hugely popular globally</li>
+<li><strong><a href="/oxidized-jewellery-wholesale-india">Oxidised Jewellery</a>:</strong> Antique-finish silver-toned pieces, hugely popular globally</li>
 <li><strong>Gold Plated:</strong> Brass base with thick gold plating for a premium look</li>
 <li><strong>CZ/American Diamond:</strong> Cubic zirconia stones for a luxury appearance</li>
 </ul>
@@ -94,7 +94,7 @@ export const BLOG_BATCH_1 = [
 <h2>MOQ Requirements and How to Order</h2>
 <p>Most Jaipur wholesale suppliers require MOQs between 50–100 pieces per design. Prices are typically quoted per piece and reduce significantly at higher quantities (100+, 500+). Many suppliers offer catalogues for online ordering, eliminating the need for buyers to travel to Jaipur. Payment is usually 30–50% advance with the balance before shipment.</p>
 
-<h2>Find Reliable Suppliers at Gemora Global</h2>
+<h2>Find Reliable Suppliers at <a href="/">Gemora Global</a></h2>
 <p>Gemora Global is a verified Jaipur-based wholesale supplier with MOQ from 50 units. We offer a full catalogue of 500+ designs with transparent pricing. Visit our <a href="/wholesale">wholesale page</a> for pricing tiers and catalogue download.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -126,7 +126,7 @@ export const BLOG_BATCH_1 = [
 <h2>Shipping and Payment for International Bulk Orders</h2>
 <p>Bulk orders are shipped via sea freight (cost-effective for large volumes) or air freight (2–5 days for urgent orders). Shipping costs are calculated based on volume and destination. Standard payment terms are 30–50% advance, with the balance paid before dispatch. For verified buyers, net-30 payment terms may be available.</p>
 
-<h2>Partner with Gemora Global for Bulk Orders</h2>
+<h2>Partner with <a href="/">Gemora Global</a> for Bulk Orders</h2>
 <p>Gemora Global handles bulk orders from 50 to 10,000+ pieces for buyers in the USA, UAE, UK, Europe, and Southeast Asia. Each order includes anti-tarnish coating, quality-checked packaging, and export documentation. Get a custom quote based on your quantity and design requirements today.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -159,7 +159,7 @@ export const BLOG_BATCH_1 = [
 <p>Indian exporters offer retail-ready packaging including velvet pouches, branded boxes, price tags, and anti-tarnish polybags. Custom packaging with your logo is available for orders of 500+ pieces, helping your retail brand stand out on shelves and online listings.</p>
 
 <h2>Popular Categories for Retail Buyers</h2>
-<p>The best-selling categories for international retailers include gold-plated necklace sets, oxidised earrings, kundan bridal sets, and minimalist everyday pieces. Gemora Global updates its collection quarterly with trend-forecasted designs to keep your inventory fresh and your customers returning.</p>
+<p>The best-selling categories for international retailers include gold-plated necklace sets, oxidised earrings, kundan bridal sets, and minimalist everyday pieces. <a href="/">Gemora Global</a> updates its collection quarterly with trend-forecasted designs to keep your inventory fresh and your customers returning.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -192,7 +192,7 @@ export const BLOG_BATCH_1 = [
 <p>Imitation jewellery is classified under HS Code 7117. Import duties vary by country: USA (11% for metal base imitation jewellery), UK (4%), UAE (5%). Most countries allow commercial importers to register for duty refunds or use free trade zones to reduce costs significantly.</p>
 
 <h2>Shipping Options</h2>
-<p>Air freight delivers in 3–7 days and suits smaller, high-value orders. Sea freight takes 15–30 days but costs 70% less, making it ideal for orders above 500 pieces. Gemora Global works with DHL, FedEx, and freight forwarders to ensure reliable delivery.</p>
+<p>Air freight delivers in 3–7 days and suits smaller, high-value orders. Sea freight takes 15–30 days but costs 70% less, making it ideal for orders above 500 pieces. <a href="/">Gemora Global</a> works with DHL, FedEx, and freight forwarders to ensure reliable delivery.</p>
 
 <p>Ready to import? <a href="/contact">Contact us</a> for a custom quote and sample order.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
@@ -232,7 +232,7 @@ export const BLOG_BATCH_1 = [
 <h2>India vs China vs Turkey: A Quick Comparison</h2>
 <p>Chinese manufacturers offer lower prices on mass-produced basics but lack the design variety and craftsmanship for premium retail. Turkish jewellery has strong design quality but at 2–3x the price of Indian pieces. Indian manufacturers sit in the sweet spot — artisanal quality at competitive wholesale pricing — which is why global buyers consistently return.</p>
 
-<h2>Start Sourcing with Gemora Global</h2>
+<h2>Start Sourcing with <a href="/">Gemora Global</a></h2>
 <p>Gemora Global is your trusted Indian manufacturing partner for fashion jewellery. With Jaipur-based production, 500+ designs, anti-tarnish coating, and MOQ from 50 units, we are the preferred supplier for boutiques and retailers worldwide.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -266,7 +266,7 @@ export const BLOG_BATCH_1 = [
 <p>Request a video call to see the factory and meet the team. Ask for references from existing international buyers. For large orders, consider a third-party quality inspection before shipment. Use escrow payments or Letters of Credit for first-time orders to protect your funds. A reliable supplier will welcome all these verification steps — it shows they have nothing to hide.</p>
 
 <h2>Long-Term Partnership Benefits</h2>
-<p>Once you establish a reliable supplier relationship, you gain priority production slots, better pricing at volume, early access to new designs, and flexibility on MOQ for repeat orders. Gemora Global has long-term partnerships with buyers in 20+ countries who trust us for consistent quality and transparent communication.</p>
+<p>Once you establish a reliable supplier relationship, you gain priority production slots, better pricing at volume, early access to new designs, and flexibility on MOQ for repeat orders. <a href="/">Gemora Global</a> has long-term partnerships with buyers in 20+ countries who trust us for consistent quality and transparent communication.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -297,7 +297,7 @@ export const BLOG_BATCH_1 = [
 <p>The OEM process starts with the buyer submitting design files (CAD, sketches, or physical samples). The manufacturer creates a prototype within 7–14 days. After buyer approval, production begins on the agreed quantity. Indian OEM manufacturers typically require MOQ of 500+ units per design, with lead times of 4–8 weeks depending on complexity.</p>
 
 <h2>Design Protection and NDA Agreements</h2>
-<p>Reputable Indian OEM manufacturers will sign Non-Disclosure Agreements (NDAs) to protect your designs. This ensures your unique designs are not sold to other buyers. Gemora Global offers full OEM services with NDA protection, dedicated production lines for OEM orders, and strict quality control to match your specifications precisely.</p>
+<p>Reputable Indian OEM manufacturers will sign Non-Disclosure Agreements (NDAs) to protect your designs. This ensures your unique designs are not sold to other buyers. <a href="/">Gemora Global</a> offers full OEM services with NDA protection, dedicated production lines for OEM orders, and strict quality control to match your specifications precisely.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -328,7 +328,7 @@ export const BLOG_BATCH_1 = [
 <h2>The Private Label Process</h2>
 <p>Start by selecting 20–50 designs from the manufacturer's catalogue that suit your brand aesthetic. The manufacturer applies your custom branding (logo tags, stickers, or embossing on boxes) and packages everything in your branded boxes or pouches. Typical MOQ for private label is 500–1,000 units per design, with full production completed in 3–5 weeks.</p>
 
-<h2>Build Your Private Label Brand with Gemora Global</h2>
+<h2>Build Your Private Label Brand with <a href="/">Gemora Global</a></h2>
 <p>Gemora Global offers complete private label services including custom logo tags, branded velvet pouches, printed gift boxes, and anti-tarnish packaging. With 500+ designs to choose from and MOQ starting at 500 units, we have helped boutiques in the UK, USA, and UAE build successful private label jewellery brands from scratch.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },

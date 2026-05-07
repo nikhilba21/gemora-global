@@ -31,7 +31,7 @@ export const BLOG_BATCH_39 = [
 <p>Following the 'Complementary-Colors' trend, pairing Amethyst with green stones like Peridot or Emerald is a massive 2026 look. This 'Nature-Rich' palette is vibrant, high-energy, and incredibly popular for the 'Boho-Luxe' market.</p>
 
 <h2>Sourcing Amethyst from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting and polishing of Amethyst. Our lapidaries are masters at 'Precision-Cuts' that maximize the stone's color and clarity. At Gemora Global, we source high-quality Amethyst from ethical mines in Brazil, Zambia, and Uruguay. We offer a full range of sizes, from 'Dainty-Pave' for fashion lines to 'One-of-a-Kind-Museum' statements. Let us help you add a touch of royalty to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting and polishing of Amethyst. Our lapidaries are masters at 'Precision-Cuts' that maximize the stone's color and clarity. At <a href="/">Gemora Global</a>, we source high-quality Amethyst from ethical mines in Brazil, Zambia, and Uruguay. We offer a full range of sizes, from 'Dainty-Pave' for fashion lines to 'One-of-a-Kind-Museum' statements. Let us help you add a touch of royalty to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Amethyst a birthstone for?</strong><br/>A: It is the traditional birthstone for **February**. It is also the designated gem for the **6th and 33rd wedding anniversaries**.</p>
@@ -81,7 +81,7 @@ export const BLOG_BATCH_39 = [
 <p>Following the 'Romantic-Minimalist' trend, pairing Rose Quartz with other pink stones like Morganite and Pink Tourmaline in thin gold bands is a massive 2026 look. This 'Tonal-Pink' palette is warm, feminine, and perfect for the 'Everyday-Luxury' consumer.</p>
 
 <h2>Sourcing Rose Quartz from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the carving of Rose Quartz. Our artisans are masters at creating smooth, mirror-like finishes on this delicate stone. At Gemora Global, we source high-quality Rose Quartz from ethical mines in Brazil, Madagascar, and South Africa. We offer everything from 'Bulk-Beads' for fashion lines to 'Large-Carved-Hearts' for fine jewelry. Let us help you add a touch of love to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the carving of Rose Quartz. Our artisans are masters at creating smooth, mirror-like finishes on this delicate stone. At <a href="/">Gemora Global</a>, we source high-quality Rose Quartz from ethical mines in Brazil, Madagascar, and South Africa. We offer everything from 'Bulk-Beads' for fashion lines to 'Large-Carved-Hearts' for fine jewelry. Let us help you add a touch of love to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Rose Quartz a birthstone for?</strong><br/>A: While not a traditional month-birthstone, it is often associated with **January** and the zodiac sign **Libra**. It is a popular gift for the **5th wedding anniversary**.</p>
@@ -131,7 +131,7 @@ export const BLOG_BATCH_39 = [
 <p>In the 'Quiet-Luxury' market of 2026, simple Black Onyx studs are huge. They provide a sharp, professional 'Point' to any outfit and are the perfect 'Everyday-Accessory' for those who want a break from the traditional sparkle of diamonds.</p>
 
 <h2>Sourcing Black Onyx from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting and 'Dyeing' of Black Onyx. While natural black onyx is rare, our artisans are masters at the industry-standard process of turning natural chalcedony into the perfect, consistent 'Ink-Black' onyx we love. At Gemora Global, we source high-quality raw materials and ensure a 'Master-Polish' on every piece. We offer everything from 'Bulk-Beads' to 'Custom-Carved-Slabs.' Let us help you add a touch of strength to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting and 'Dyeing' of Black Onyx. While natural black onyx is rare, our artisans are masters at the industry-standard process of turning natural chalcedony into the perfect, consistent 'Ink-Black' onyx we love. At <a href="/">Gemora Global</a>, we source high-quality raw materials and ensure a 'Master-Polish' on every piece. We offer everything from 'Bulk-Beads' to 'Custom-Carved-Slabs.' Let us help you add a touch of strength to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Black Onyx a birthstone for?</strong><br/>A: It is often associated with the zodiac sign **Leo** and is a popular choice for **December** birthstone alternatives. It is also the designated gem for the **7th and 10th wedding anniversaries**.</p>
@@ -181,7 +181,7 @@ export const BLOG_BATCH_39 = [
 <p>A massive 2026 styling trend is the use of small, faceted Labradorite beads. Strung on gold wire, these beads provide a 'Constant-Shimmer' that looks incredible when layered with simple gold chains. It's a 'Mystic-Minimalist' staple.</p>
 
 <h2>Sourcing Labradorite from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting of Labradorite. Our artisans are experts at 'Angle-Cutting'—the precise technique of cutting the stone so that the 'Flash' is most visible from the top view. At Gemora Global, we source high-quality Labradorite from ethical mines in Madagascar and Canada. We offer a full range of sizes and qualities, from 'Bulk-Beads' for fashion lines to 'One-of-a-Kind-Museum' statements. Let us help you add a touch of magic to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting of Labradorite. Our artisans are experts at 'Angle-Cutting'—the precise technique of cutting the stone so that the 'Flash' is most visible from the top view. At <a href="/">Gemora Global</a>, we source high-quality Labradorite from ethical mines in Madagascar and Canada. We offer a full range of sizes and qualities, from 'Bulk-Beads' for fashion lines to 'One-of-a-Kind-Museum' statements. Let us help you add a touch of magic to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is Labradorite a 'Natural' stone?</strong><br/>A: Yes! It is a naturally occurring member of the Feldspar family. Its incredible colors are 100% natural and are not typically treated.</p>
@@ -231,7 +231,7 @@ export const BLOG_BATCH_39 = [
 <p>In the 'Quiet-Luxury' market of 2026, thin gold chains featuring a single, high-quality Tiger's Eye pendant are huge. The warm gold metal enhances the stone's golden bands, creating a look that is elegant, subtle, and incredibly sophisticated.</p>
 
 <h2>Sourcing Tiger's Eye from Jaipur</h2>
-<p>Jaipur is one of the world's leading centers for the cutting of Tiger's Eye. Our artisans are experts at 'Cabochan' (smooth-top) cutting, which is essential to show the stone's 'Chatoyancy.' At Gemora Global, we source high-quality Tiger's Eye from ethical mines in South Africa and Australia. We offer everything from 'Bulk-Beads' for fashion lines to 'One-of-a-Kind-Museum' statement slabs. Let us help you add a touch of courage to your brand.</p>
+<p>Jaipur is one of the world's leading centers for the cutting of Tiger's Eye. Our artisans are experts at 'Cabochan' (smooth-top) cutting, which is essential to show the stone's 'Chatoyancy.' At <a href="/">Gemora Global</a>, we source high-quality Tiger's Eye from ethical mines in South Africa and Australia. We offer everything from 'Bulk-Beads' for fashion lines to 'One-of-a-Kind-Museum' statement slabs. Let us help you add a touch of courage to your brand.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is Tiger's Eye a birthstone for?</strong><br/>A: While not a traditional month-birthstone, it is often associated with the zodiac sign **Gemini** and **Leo**. It is a popular gift for the **9th wedding anniversary**.</p>

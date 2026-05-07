@@ -13,7 +13,7 @@ export const BLOG_BATCH_26 = [
     tags: ["diamond guide", "4cs of diamonds", "buying diamonds", "diamond quality", "jewelry education"],
     content: `<h2>The Universal Language of Diamonds</h2>
 <p>Whether you're buying an engagement ring or a pair of classic studs, understanding diamonds is essential. Since the 1940s, the jewelry world has used a universal language to describe diamond quality: The 4Cs. In 2026, while technology has changed how we buy diamonds, the 4Cs remain the fundamental pillars of value and beauty.</p>
-<p>At Gemora Global, we believe that an educated buyer is a happy buyer. We're breaking down the 4Cs—Cut, Color, Clarity, and Carat—to help you understand what you're seeing on the screen or in the store.</p>
+<p>At <a href="/">Gemora Global</a>, we believe that an educated buyer is a happy buyer. We're breaking down the 4Cs—Cut, Color, Clarity, and Carat—to help you understand what you're seeing on the screen or in the store.</p>
 
 <h2>The 1st C: Cut (The Most Important One)</h2>
 <p>Of all the 4Cs, Cut has the biggest impact on a diamond's beauty. It doesn't refer to the shape (like Round or Pear) but to how well the diamond's facets interact with light. A well-cut diamond reflects light from one facet to another and then out through the top, creating that signature 'sparkle' (brilliance) and 'rainbow' (fire). Even a diamond with perfect color and clarity will look dull if it's cut poorly.</p>
@@ -60,7 +60,7 @@ export const BLOG_BATCH_26 = [
     tags: ["lab grown diamonds", "natural diamonds", "diamond guide 2026", "ethical jewelry", "sustainable diamonds"],
     content: `<h2>The Diamond Revolution</h2>
 <p>In 2026, the question is no longer 'Are lab-grown diamonds real?' (they are). The question is 'Which is right for me?' Lab-grown diamonds have reached a point of quality and price that has completely transformed the jewelry industry. While natural diamonds remain a symbol of rarity and heritage, lab-grown diamonds offer a modern, ethical, and highly accessible alternative.</p>
-<p>At Gemora Global, we work with both. We're breaking down the science and the market reality of lab-grown versus natural diamonds to help you decide.</p>
+<p>At <a href="/">Gemora Global</a>, we work with both. We're breaking down the science and the market reality of lab-grown versus natural diamonds to help you decide.</p>
 
 <h2>The Science: They are Identical</h2>
 <p>A lab-grown diamond is chemically, physically, and optically identical to a natural diamond. They are both made of pure carbon crystallized in an isometric-cubic system. They have the same hardness (10 on the Mohs scale), the same refractive index, and the same 'fire.' To the naked eye—and even to most professional jewelers—they are indistinguishable. Only specialized equipment that detects 'growth patterns' can tell them apart.</p>
@@ -110,7 +110,7 @@ export const BLOG_BATCH_26 = [
     tags: ["moissanite jewelry", "diamond alternative", "moissanite vs diamond", "affordable luxury", "2026 trends"],
     content: `<h2>The Gem from the Stars</h2>
 <p>Originally discovered in a meteor crater, natural moissanite is incredibly rare. Today, the moissanite we wear is grown in labs to produce gems that are almost as hard as diamonds but actually have **more** fire and brilliance. In 2026, Moissanite has become the definitive choice for the 'Maximalist-on-a-Budget'—offering a huge, shimmering look at a fraction of the cost of a diamond.</p>
-<p>At Gemora Global, we've seen a massive surge in demand for Moissanite. We're breaking down why this 'Space Gem' is the ultimate diamond alternative for your collection.</p>
+<p>At <a href="/">Gemora Global</a>, we've seen a massive surge in demand for Moissanite. We're breaking down why this 'Space Gem' is the ultimate diamond alternative for your collection.</p>
 
 <h2>Moissanite vs Diamond: The Sparkle Test</h2>
 <p>Moissanite has a higher 'Refractive Index' than a diamond, meaning it reflects more light. It also has much more 'Fire' (the rainbow flashes). While a diamond has a 'white' sparkle, Moissanite has a 'Disco-Ball' effect. If you love maximum shimmer, Moissanite is actually the 'better' stone for you. It's also incredibly durable, with a hardness of 9.25 (only diamonds are harder), making it perfect for everyday wear.</p>
@@ -154,7 +154,7 @@ export const BLOG_BATCH_26 = [
     tags: ["sapphire guide", "blue sapphire", "fancy sapphires", "gemstone education", "sapphire meaning"],
     content: `<h2>The Gem of Royalty and Wisdom</h2>
 <p>When people think of Sapphires, they think of the deep, velvety blue of Princess Diana's (and Kate Middleton's) engagement ring. But in the world of 2026 jewelry, the sapphire is a 'Rainbow Gem.' Sapphires come in every color of the rainbow—except red (which is a Ruby). From the 'Sunset-Pink' of the Padparadscha to the electric 'Neon' yellows and greens, sapphires are the ultimate gem for the color-loving fashionista.</p>
-<p>At Gemora Global, we love the versatility and durability of sapphires. We're sharing our guide to understanding and styling this 'Eternal Gem.'</p>
+<p>At <a href="/">Gemora Global</a>, we love the versatility and durability of sapphires. We're sharing our guide to understanding and styling this 'Eternal Gem.'</p>
 
 <h2>The 'Big Blue': Classic Sapphire</h2>
 <p>The blue sapphire remains the standard of elegance. Representing wisdom, virtue, and good fortune, it's a 'Forever Gem' that works across generations. In 2026, the trend is for 'Cornflower' blue (a bright, electric blue) and 'Teal' sapphires (a moody mix of blue and green) which feel more modern than the traditional dark navy.</p>
@@ -218,7 +218,7 @@ export const BLOG_BATCH_26 = [
 </ul>
 
 <h2>Sourcing Emeralds from Jaipur</h2>
-<p>Jaipur is the world's leading center for emerald cutting. Thousands of carats of emeralds from Zambia, Brazil, and Colombia flow through the city every week. At Gemora Global, we specialize in 'Artisan-Set' emeralds—using protective bezel or halo settings that frame the stone and protect its edges. Our emerald collection is a favorite for boutique jewelry brands in Paris, Milan, and New York.</p>
+<p>Jaipur is the world's leading center for emerald cutting. Thousands of carats of emeralds from Zambia, Brazil, and Colombia flow through the city every week. At <a href="/">Gemora Global</a>, we specialize in 'Artisan-Set' emeralds—using protective bezel or halo settings that frame the stone and protect its edges. Our emerald collection is a favorite for boutique jewelry brands in Paris, Milan, and New York.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Why are emeralds more expensive than some diamonds?</strong><br/>A: Rare, high-quality, vivid green emeralds are significantly rarer in nature than white diamonds. A top-tier 5-carat emerald can command a higher price-per-carat than a similar-sized diamond.</p>

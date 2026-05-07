@@ -13,7 +13,7 @@ export const BLOG_BATCH_48 = [
     tags: ["pearl care", "jewelry maintenance", "organic gemstones", "jewelry storage", "B2B guide"],
     content: `<h2>The Living Gem</h2>
 <p>Unlike diamonds or sapphires which are minerals formed deep in the earth, pearls are 'Organic'—created by living mollusks in the ocean. This makes them one of the most beautiful gems, but also the most delicate. A pearl is composed of thousands of microscopic layers of 'Nacre' (mother-of-pearl). These layers are sensitive to chemicals, heat, and even the natural acids in your skin. In 2026, as we embrace 'Slow-Fashion' and heirlooms, knowing how to care for your pearls is the key to ensuring they stay lustrous for a lifetime.</p>
-<p>At Gemora Global, we are pearl specialists. We're breaking down the 2026 guide to pearl longevity.</p>
+<p>At <a href="/">Gemora Global</a>, we are pearl specialists. We're breaking down the 2026 guide to pearl longevity.</p>
 
 <h2>The #1 Rule: 'Last On, First Off'</h2>
 <p>This is the golden rule of pearl care. Pearls are highly porous and can be permanently damaged by the chemicals in perfume, hairspray, makeup, and sunscreen. These substances can strip the 'Luster' (the shine) from the pearl, leaving it looking dull and 'Chalky.' Always put your pearls on *after* you've finished your entire beauty routine, and take them off as soon as you get home.</p>
@@ -60,7 +60,7 @@ export const BLOG_BATCH_48 = [
     tags: ["opal care", "moonstone care", "adularescence", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Phenomenal Challenge</h2>
 <p>Opals and Moonstones are some of the most magical gems in the world, prized for their 'Play-of-Color' and 'Adularescence' (the moony glow). However, this magic comes with a price: they are among the most delicate and 'Temperamental' stones in the fine jewelry market. In 2026, as 'Mystic' and 'Boho-Luxe' styles dominate, understanding the specific maintenance needs of these stones is essential for any jewelry owner or retailer. They are not 'Set-and-Forget' gems; they are 'Living-Art' that requires constant awareness.</p>
-<p>At Gemora Global, we are specialists in phenomenal gems. We're breaking down the 2026 guide to protecting the glow.</p>
+<p>At <a href="/">Gemora Global</a>, we are specialists in phenomenal gems. We're breaking down the 2026 guide to protecting the glow.</p>
 
 <h2>The Opal Secret: Water Content</h2>
 <p>Opals contain between 3% and 21% water. If an opal 'Dries-Out,' it can develop a network of tiny cracks called 'Crazing,' which permanently destroys its beauty. In 2026, we recommend:
@@ -114,7 +114,7 @@ export const BLOG_BATCH_48 = [
     tags: ["emerald care", "jewelry maintenance", "emerald inclusions", "precious gemstones", "B2B guide"],
     content: `<h2>The Delicate Green</h2>
 <p>Emeralds are one of the 'Big Three' precious gemstones, but they are fundamentally different from Diamonds and Sapphires. Almost every natural emerald contains internal fractures and inclusions, which gemologists affectionately call the **'Jardin'** (The Garden). While these inclusions prove the stone's natural origin, they also make the emerald more 'Brittle.' In 2026, as high-end emerald jewelry sees a massive resurgence, knowing how to handle this delicate garden is the difference between a lifelong treasure and a broken stone.</p>
-<p>At Gemora Global, we are emerald experts. We're breaking down the 2026 guide to emerald safety.</p>
+<p>At <a href="/">Gemora Global</a>, we are emerald experts. We're breaking down the 2026 guide to emerald safety.</p>
 
 <h2>The 'Oiling' Reality</h2>
 <p>Because of their natural fractures, nearly all emeralds are 'Oiled'—a process where clear cedar oil or specialized resins are used to fill the fractures and make them less visible. In 2026, we focus on:
@@ -163,7 +163,7 @@ export const BLOG_BATCH_48 = [
     tags: ["turquoise care", "lapis lazuli care", "porous gemstones", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Absorbent Ancients</h2>
 <p>Turquoise and Lapis Lazuli have been used in jewelry for over 5,000 years, but in the modern world of 2026, they face a new set of challenges. These stones are 'Porous,' meaning they act like a sponge, absorbing oils, perfumes, and chemicals from the air and your skin. This can lead to permanent color changes—turning a bright sky-blue turquoise into a dull green, or a vibrant blue lapis into a 'Cloudy' grey. Understanding their 'Absorbent' nature is the key to maintaining their ancient beauty.</p>
-<p>At Gemora Global, we are turquoise and lapis specialists. We're breaking down the 2026 guide to porous gem care.</p>
+<p>At <a href="/">Gemora Global</a>, we are turquoise and lapis specialists. We're breaking down the 2026 guide to porous gem care.</p>
 
 <h2>The 'Stain' Reality</h2>
 <p>Because they are porous, these stones are vulnerable to everything they touch:
@@ -212,7 +212,7 @@ export const BLOG_BATCH_48 = [
     tags: ["diamond care", "sapphire care", "jewelry maintenance", "gemstone sparkle", "B2B guide"],
     content: `<h2>The Durability Kings</h2>
 <p>Diamonds and Sapphires are the 'Workhorses' of the fine jewelry world. With hardness ratings of 10 and 9 respectively, they are tough enough for daily wear, gym sessions, and showers. But being 'Indestructible' doesn't mean they are 'Maintenance-Free.' In fact, because they are so durable, we often forget to clean them, leading to a buildup of 'Bio-Film' (skin oils, soaps, and lotions) that acts like a blanket over the stone, killing its sparkle. In 2026, a dirty diamond is the #1 'Fashion-Crime.' A clean diamond is a 'Power-Statement.'</p>
-<p>At Gemora Global, we are masters of brilliance. We're breaking down the 2026 guide to high-octane maintenance.</p>
+<p>At <a href="/">Gemora Global</a>, we are masters of brilliance. We're breaking down the 2026 guide to high-octane maintenance.</p>
 
 <h2>The 'Oil-Magnet' Problem</h2>
 <p>Diamonds have a natural affinity for grease. The tiny amount of oil from your fingertip will stick to the surface of a diamond instantly, attracting dust and creating a 'Dull' look. In 2026, we focus on:

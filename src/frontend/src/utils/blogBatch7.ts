@@ -14,8 +14,8 @@ export const BLOG_BATCH_7 = [
       "https://images.unsplash.com/photo-1568944691613-6b09c4ab0e15?w=800&h=500&fit=crop",
     tags: ["custom jewellery boxes", "export", "packaging", "branding"],
     content: `
-      <h2>Why Custom Packaging Matters for Jewellery Export</h2>
-      <p>In wholesale jewellery, packaging is not an afterthought — it's a core part of your product offering. Custom jewellery boxes improve brand perception, create a memorable unboxing experience, enhance retail display value, and protect pieces from damage during transit. Buyers in UAE, UK, and USA increasingly expect retail-ready packaging as part of their wholesale order.</p>
+      <h2>Why Custom Packaging Matters for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
+      <p>In <a href="/wholesale">Wholesale Jewellery</a>, packaging is not an afterthought — it's a core part of your product offering. Custom jewellery boxes improve brand perception, create a memorable unboxing experience, enhance retail display value, and protect pieces from damage during transit. Buyers in UAE, UK, and USA increasingly expect retail-ready packaging as part of their wholesale order.</p>
 
       <h2>Types of Custom Jewellery Boxes</h2>
       <ul>
@@ -30,7 +30,7 @@ export const BLOG_BATCH_7 = [
       <p>Box materials range from standard cardboard and rigid board to premium leatherette and velvet-lined interiors. Customization options include logo printing (foil stamp, deboss, or print), custom brand colors, velvet or foam inserts cut to shape, ribbon pulls, and gold foil stamping for a luxury finish. Standard sizing covers earring cards, ring boxes, pendant boxes, bangle boxes, and full bridal set boxes.</p>
 
       <h2>MOQ and Ordering</h2>
-      <p>Custom box orders typically have an MOQ of 500–1000 units per design. Gemora Global can help source and coordinate custom branded packaging for wholesale clients placing large orders, ensuring your products arrive retail-ready in every destination market.</p>
+      <p>Custom box orders typically have an MOQ of 500–1000 units per design. <a href="/">Gemora Global</a> can help source and coordinate custom branded packaging for wholesale clients placing large orders, ensuring your products arrive retail-ready in every destination market.</p>
 
       <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
@@ -68,7 +68,7 @@ export const BLOG_BATCH_7 = [
       <h2>Labeling and Bulk Shipment Requirements</h2>
       <p>Mark outer cartons as FRAGILE and THIS SIDE UP. Include a packing list inside each master carton showing contents, weight, and quantity. Proper packaging significantly reduces insurance claims, return rates, and customer complaints from international buyers.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -101,7 +101,7 @@ export const BLOG_BATCH_7 = [
       <p>Every international jewellery shipment requires a commercial invoice (with accurate value declaration), packing list, and HS code. Imitation jewellery falls under HS code 7117 in most countries. A Certificate of Origin from DGFT or FIEO can unlock reduced import duties under GSP agreements for buyers in USA, EU, and UK.</p>
 
       <h2>Insurance and Common Shipping Issues</h2>
-      <p>Standard carrier insurance covers limited amounts — purchase additional marine cargo insurance for high-value shipments. Common issues include customs holds (caused by incomplete documentation), unexpected duty bills (caused by wrong HS code), and damage claims (prevented by correct packaging). Gemora Global guides all export clients through the full shipping process.</p>
+      <p>Standard carrier insurance covers limited amounts — purchase additional marine cargo insurance for high-value shipments. Common issues include customs holds (caused by incomplete documentation), unexpected duty bills (caused by wrong HS code), and damage claims (prevented by correct packaging). <a href="/">Gemora Global</a> guides all export clients through the full shipping process.</p>
 
       <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
@@ -140,7 +140,7 @@ export const BLOG_BATCH_7 = [
       <h2>How DGFT and FIEO Help Exporters</h2>
       <p>The Directorate General of Foreign Trade (DGFT) and Federation of Indian Export Organisations (FIEO) both support Indian jewellery exporters with IEC registration, Certificate of Origin issuance, export incentive claims, and regulatory guidance. New exporters should register with both before their first shipment.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -158,7 +158,7 @@ export const BLOG_BATCH_7 = [
       "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=800&h=500&fit=crop",
     tags: ["courier", "jewellery export", "shipping", "logistics"],
     content: `
-      <h2>Best Courier Services for Jewellery Export from India</h2>
+      <h2>Best Courier Services for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> from India</h2>
       <p>Selecting the right courier is critical for international jewellery export — it affects delivery speed, shipment safety, insurance coverage, and your buyer's overall experience. The best option depends on your destination market, shipment weight, and order value.</p>
 
       <h2>Courier Comparison by Market</h2>
@@ -177,7 +177,7 @@ export const BLOG_BATCH_7 = [
       <h2>Insurance Limits and Claims</h2>
       <p>Standard courier liability is limited (typically USD 100–500). For shipments over USD 500, purchase declared value coverage or a separate cargo insurance policy. Aramex and DHL both offer competitive jewellery shipment insurance — always get coverage in writing before dispatch.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -195,7 +195,7 @@ export const BLOG_BATCH_7 = [
       "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
     tags: ["shipping costs", "jewellery export", "reduce costs", "logistics"],
     content: `
-      <h2>Why Shipping Costs Hurt Jewellery Export Margins</h2>
+      <h2>Why Shipping Costs Hurt <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Margins</h2>
       <p>Imitation jewellery is typically low-value but moderate-weight, which means shipping costs represent a larger percentage of the order value compared to fine jewellery. A ₹50,000 order shipped via DHL Express to USA might cost ₹5,000–8,000 in freight — that's 10–16% of order value before any other costs. Reducing this is essential for competitive pricing.</p>
 
       <h2>10 Strategies to Reduce Jewellery Shipping Costs</h2>
@@ -215,7 +215,7 @@ export const BLOG_BATCH_7 = [
       <h2>Volume Discounts and Long-Term Savings</h2>
       <p>Exporters shipping 50+ shipments per month can typically negotiate 20–40% discounts directly with DHL, FedEx, or Aramex account managers. Building a consistent shipping volume over 3–6 months is the fastest path to significant rate reductions.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -253,7 +253,7 @@ export const BLOG_BATCH_7 = [
       <h2>Cost and Marketing Premium</h2>
       <p>Eco-friendly packaging typically costs 20–40% more than standard packaging. However, many brands pass this cost to consumers as a premium, and studies show eco-conscious buyers pay 10–15% more for products with genuinely sustainable packaging. Tell your sustainability story on the hang tag itself.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -287,7 +287,7 @@ export const BLOG_BATCH_7 = [
       <p>Custom options include logo printing (screen print, foil stamp, or embroidery on pouches), custom brand colors, drawstring vs cinch-close closure, and multiple size options to fit earrings, rings, necklaces, and full bridal sets. Box types include ring boxes, earring boxes, pendant boxes, bangle boxes, and full set presentation boxes with foam or velvet inserts.</p>
 
       <h2>MOQ and Ordering for Custom Packaging</h2>
-      <p>Custom dust bags and boxes typically have a minimum order of 500–1000 units per design. For wholesale buyers, Gemora Global coordinates retail-ready packaging as part of bulk orders, making it easy to receive branded, shelf-ready jewellery without a separate packaging supplier relationship.</p>
+      <p>Custom dust bags and boxes typically have a minimum order of 500–1000 units per design. For wholesale buyers, <a href="/">Gemora Global</a> coordinates retail-ready packaging as part of bulk orders, making it easy to receive branded, shelf-ready jewellery without a separate packaging supplier relationship.</p>
 
       <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
@@ -307,7 +307,7 @@ export const BLOG_BATCH_7 = [
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["customs guide", "jewellery", "export", "import duties"],
     content: `
-      <h2>HS Codes for Jewellery Export</h2>
+      <h2>HS Codes for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
       <p>The correct Harmonized System (HS) code is the foundation of all customs declarations. For imitation and costume jewellery — which includes all base metal jewellery, gold-plated pieces, and fashion accessories — the primary HS code is <strong>7117</strong>. Precious metal jewellery uses 7113, and natural stone jewellery uses 7116. Using the wrong code leads to incorrect duty rates and potential customs holds.</p>
 
       <h2>Import Duty Rates by Country</h2>
@@ -321,7 +321,7 @@ export const BLOG_BATCH_7 = [
       </ul>
 
       <h2>Value Declaration and What Customs Inspectors Check</h2>
-      <p>Customs officers check material authenticity (precious vs imitation), value declaration accuracy, and prohibited materials. EU and California prop 65 regulations restrict lead content above 0.1% and cadmium above 0.01% in jewellery. Gemora Global uses nickel-free, low-lead alloys in all export products to comply with international safety standards.</p>
+      <p>Customs officers check material authenticity (precious vs imitation), value declaration accuracy, and prohibited materials. EU and California prop 65 regulations restrict lead content above 0.1% and cadmium above 0.01% in jewellery. <a href="/">Gemora Global</a> uses nickel-free, low-lead alloys in all export products to comply with international safety standards.</p>
 
       <h2>Duty-Saving Strategies</h2>
       <p>Indian exporters can reduce buyer duty costs through GSP (Generalised System of Preferences) preference certificates, which provide duty-free or reduced-rate access for eligible products to USA, UK, and EU. The India-UAE CEPA (Comprehensive Economic Partnership Agreement) also provides preferential duty rates for UAE buyers importing Indian jewellery.</p>
@@ -362,7 +362,7 @@ export const BLOG_BATCH_7 = [
       <h2>Regional Distribution Hubs and Free Shipping Thresholds</h2>
       <p>High-volume exporters can set up regional distribution hubs (Dubai JAFZA for Middle East, Singapore for ASEAN, UK for Europe) to ship in bulk to the hub and distribute locally. This reduces per-order courier costs by 40–60%. Setting a free shipping threshold for orders above a minimum value (e.g., free shipping on orders over $500 FOB) encourages larger average order sizes and simplifies the buyer's decision-making.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
 ];

@@ -13,7 +13,7 @@ export const BLOG_BATCH_45 = [
     tags: ["custom engagement ring", "ring design guide", "jewelry customization", "bridal 2026", "B2B design"],
     content: `<h2>The Ultimate Personal Statement</h2>
 <p>In the world of 2026 weddings, 'Off-the-Shelf' is out, and 'One-of-a-Kind' is in. Couples today want a ring that tells their unique story—a piece that no one else in the world owns. Designing your own engagement ring might seem intimidating, but with modern technology and a clear process, it is one of the most rewarding journeys you can take. It's the difference between buying a product and creating an heirloom.</p>
-<p>At Gemora Global, we are custom design specialists. We're breaking down the 2026 step-by-step process to bringing your dream ring to life.</p>
+<p>At <a href="/">Gemora Global</a>, we are custom design specialists. We're breaking down the 2026 step-by-step process to bringing your dream ring to life.</p>
 
 <h2>Step 1: The 'Inspiration-Board'</h2>
 <p>Before you talk to a jeweler, start collecting. Use Pinterest, Instagram, and jewelry blogs to find elements you love. Don't look for the 'Perfect Ring'; look for the 'Perfect Details.' Maybe you love the prongs on one ring, the metal texture on another, and the stone shape on a third. This 'Visual-Language' is the foundation of your design.</p>
@@ -63,7 +63,7 @@ export const BLOG_BATCH_45 = [
     tags: ["upcycled jewelry", "heirloom redesign", "sustainable jewelry", "vintage modernization", "B2B guide"],
     content: `<h2>The Sustainable Sentiment</h2>
 <p>Many of us have a jewelry box full of 'History'—pieces passed down from grandmothers or aunts that carry immense sentimental value but simply don't fit our modern style. In 2026, 'Jewelry-Upcycling' is the definitive 'Ethical-Luxury' choice. Instead of letting these treasures sit in a drawer, we can harvest the gold and the gemstones to create a new piece that reflects your personality while keeping the 'Soul' of the original intact. It's the ultimate way to wear your history.</p>
-<p>At Gemora Global, we are restoration and redesign experts. We're breaking down the 2026 approach to modernizing heirlooms.</p>
+<p>At <a href="/">Gemora Global</a>, we are restoration and redesign experts. We're breaking down the 2026 approach to modernizing heirlooms.</p>
 
 <h2>The Philosophy: 'Respect the Past, Design for the Future'</h2>
 <p>Upcycling is about more than just 'Melting-Down-Gold.' it's about identifying the 'Hero' elements of an old piece—perhaps a unique hand-cut diamond, a beautiful filigree pattern, or a rare colored gem—and placing them in a 'Modern-Context.' This 'Hybrid-Style' is a major trend for 2026, appealing to the 'Environmentally-Conscious' and the 'Sentimental' alike.</p>
@@ -113,7 +113,7 @@ export const BLOG_BATCH_45 = [
     tags: ["jewelry sketching", "jewelry rendering", "design process", "artisan jewelry", "B2B guide"],
     content: `<h2>The Visual Blueprint</h2>
 <p>Every masterpiece begins with a single line. In the world of 2026 jewelry design, sketching is the critical bridge between a 'Dream' and a 'Product.' It's where the proportions are tested, the light-play is imagined, and the 'Soul' of the piece is first captured. Whether it's a quick graphite sketch in an artist's notebook or a high-def digital painting, the 'Render' is the definitive document of a brand's vision. It's the most 'Human' part of the high-tech manufacturing process.</p>
-<p>At Gemora Global, we are design-led. We're breaking down the 2026 art of the jewelry sketch.</p>
+<p>At <a href="/">Gemora Global</a>, we are design-led. We're breaking down the 2026 art of the jewelry sketch.</p>
 
 <h2>The Traditional 'Hand-Render'</h2>
 <p>In the high-end ateliers of Jaipur, the 'Gouache' render is still the gold standard for luxury. Using fine brushes and opaque watercolors, an artist creates a life-sized, incredibly detailed painting of the piece. They map every facet of the diamond and every reflection on the gold. This 'Art-First' approach ensures that the finished piece has the 'Grace' and 'Balance' that only a human eye can provide.</p>
@@ -160,7 +160,7 @@ export const BLOG_BATCH_45 = [
     tags: ["CAD jewelry", "hand carved jewelry", "jewelry manufacturing", "modern vs traditional", "B2B guide"],
     content: `<h2>The Evolution of the Craft</h2>
 <p>In the world of 2026 jewelry manufacturing, there is a fundamental question every brand must answer: 'CAD or Hand-Carved?' For thousands of years, every piece of jewelry was 'Hand-Carved' in wax or metal. Today, 'CAD' (Computer-Aided Design) allows us to create pieces with 'NASA-Level' precision. Is the 'Soul' of jewelry lost in the computer, or is it 'Perfected'? The answer is that both have a critical place in the modern market, and the best brands use both to their advantage.</p>
-<p>At Gemora Global, we are masters of both the 'Mouse' and the 'Knife.' We're breaking down the debate for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are masters of both the 'Mouse' and the 'Knife.' We're breaking down the debate for the 2026 market.</p>
 
 <h2>CAD: The King of Precision</h2>
 <p>CAD involves creating a 3D digital model of the jewelry.
@@ -208,7 +208,7 @@ export const BLOG_BATCH_45 = [
     tags: ["jewelry settings", "prong setting", "bezel setting", "channel setting", "B2B guide"],
     content: `<h2>The Foundation of the Jewel</h2>
 <p>In the world of 2026 jewelry, the 'Setting' is the 'Unsung-Hero.' It's the metal structure that holds the gemstone in place, but it does much more than just provide security. The right setting can make a stone look twice as big, change the 'Vibe' of the design from 'Antique' to 'Modern,' and protect a delicate gem from the dangers of daily wear. Choosing the right setting is a balance between 'Aesthetics,' 'Safety,' and 'Wearability.' It's the difference between a ring that stays in the family for 100 years and one that loses its stone in the first month.</p>
-<p>At Gemora Global, we are master-setters. We're breaking down the 2026 guide to the 'Perfect-Frame.'</p>
+<p>At <a href="/">Gemora Global</a>, we are master-setters. We're breaking down the 2026 guide to the 'Perfect-Frame.'</p>
 
 <h2>The 'Prong' Setting: The Classic Maximizer</h2>
 <p>Prongs are tiny metal 'claws' (usually 4 or 6) that hold the stone at its 'Girdle' (widest part).

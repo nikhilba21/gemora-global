@@ -13,7 +13,7 @@ export const BLOG_BATCH_40 = [
     tags: ["gold purity", "gold jewelry", "karat guide", "jewelry education", "B2B guide"],
     content: `<h2>The Golden Standard</h2>
 <p>Gold has been the ultimate symbol of wealth and status for thousands of years. But in the modern jewelry market of 2026, 'Gold' isn't just one thing. It's a spectrum of purities, each with its own strengths, weaknesses, and 'Vibe.' Whether you're buying a wedding ring to last a lifetime or a fashion-forward piece for the season, understanding 'Karats' (K) is essential. It's the difference between a piece that stays beautiful and one that bends, scratches, or tarnishes.</p>
-<p>At Gemora Global, we manufacture in every gold karat. We're breaking down the science of gold purity to help you choose the right metal for your needs.</p>
+<p>At <a href="/">Gemora Global</a>, we manufacture in every gold karat. We're breaking down the science of gold purity to help you choose the right metal for your needs.</p>
 
 <h2>What is a 'Karat'? (The Math of Gold)</h2>
 <p>Gold purity is measured in karats out of 24. 24k gold is 100% pure gold. 18k is 18 parts gold and 6 parts other metals (alloys). The math is simple: Divide the karat by 24 to get the percentage of pure gold. Why mix it? Because pure 24k gold is incredibly soft—too soft for most jewelry. Alloys (like Copper, Silver, and Zinc) are added to make the gold harder and more durable.</p>
@@ -75,7 +75,7 @@ export const BLOG_BATCH_40 = [
     tags: ["sterling silver", "925 silver", "jewelry guide", "silver care", "B2B silver"],
     content: `<h2>The Eternal Shine of Silver</h2>
 <p>In the world of 2026 jewelry, Sterling Silver is the definitive 'Democratic-Metal.' It offers the beauty, the brilliance, and the prestige of a precious metal but at a price point that is accessible to everyone. From the runways of Milan to the artisan markets of Jaipur, Sterling Silver—marked as '925'—is the foundation of the global fashion jewelry industry. It is the metal of 'Freedom,' 'Modernity,' and 'Endless-Possibility.'</p>
-<p>At Gemora Global, we are silver specialists. We're breaking down everything you need to know about the world's favorite white metal.</p>
+<p>At <a href="/">Gemora Global</a>, we are silver specialists. We're breaking down everything you need to know about the world's favorite white metal.</p>
 
 <h2>What is '925' Sterling Silver?</h2>
 <p>Pure silver (99.9%) is too soft for jewelry—it would bend and scratch with just a touch. 'Sterling Silver' is an alloy consisting of 92.5% pure silver and 7.5% other metals (usually Copper). This specific ratio—established in 13th-century England—provides the perfect balance of 'Silver-Shine' and 'Industrial-Strength.' The '925' stamp is the international hallmark that guarantees this purity.</p>
@@ -122,7 +122,7 @@ export const BLOG_BATCH_40 = [
     tags: ["gold vermeil", "gold plated", "jewelry education", "B2B guide", "plating standards"],
     content: `<h2>The Golden Illusion</h2>
 <p>Everyone loves the look of gold. But not everyone can afford the price of solid 18k gold. In 2026, the jewelry industry has perfected the art of 'Gold-Plating,' allowing us to create pieces that look identical to solid gold for a fraction of the cost. However, there is a massive difference between 'Gold-Plated' and 'Gold-Vermeil.' Understanding this difference is the key to buying (and selling) jewelry that lasts. It's the difference between a piece that stays golden for years and one that turns green in a week.</p>
-<p>At Gemora Global, we specialize in high-end plating. We're breaking down the 'Vermeil vs Plated' battle for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we specialize in high-end plating. We're breaking down the 'Vermeil vs Plated' battle for the 2026 market.</p>
 
 <h2>What is 'Gold Plated'? (The Fashion Standard)</h2>
 <p>Gold plating is the process of depositing a very thin layer of gold (usually 0.5 microns or less) onto a base metal like Brass, Copper, or Steel.
@@ -175,7 +175,7 @@ export const BLOG_BATCH_40 = [
     tags: ["platinum", "white gold", "jewelry education", "bridal metals", "B2B guide"],
     content: `<h2>The White Metal Debate</h2>
 <p>When choosing an engagement ring or a high-end wedding band in 2026, the choice usually comes down to two 'White Metals': Platinum or White Gold. At first glance, they look identical. But they are fundamentally different materials with different weights, different durability, and different long-term maintenance needs. Choosing the wrong one can lead to a ring that looks dull, turns yellow, or wears down faster than expected.</p>
-<p>At Gemora Global, we manufacture in both. We're breaking down the 'White Metal Battle' to help you make the right choice for your lifetime piece.</p>
+<p>At <a href="/">Gemora Global</a>, we manufacture in both. We're breaking down the 'White Metal Battle' to help you make the right choice for your lifetime piece.</p>
 
 <h2>White Gold: The Practical Classic</h2>
 <p>White gold is an alloy of pure yellow gold and white metals like Manganese, Palladium, or Silver. To give it its bright, mirror-like finish, it is then plated in **Rhodium** (a member of the platinum family).
@@ -223,7 +223,7 @@ export const BLOG_BATCH_40 = [
     tags: ["alternative metals", "titanium jewelry", "tungsten rings", "tantalum", "men's jewelry trends"],
     content: `<h2>Beyond the Precious</h2>
 <p>In the jewelry world of 2026, Gold and Silver are no longer the only players. A new category of 'Alternative Metals'—originally used in aerospace and medical technology—has taken the jewelry market by storm, especially for men's wedding bands. These metals offer a 'Modern-Industrial' look, incredible durability, and a price point that makes 'High-End-Design' accessible to everyone. They are the metals of 'Strength,' 'Innovation,' and 'Individual-Style.'</p>
-<p>At Gemora Global, we are at the forefront of the alternative metal revolution. We're breaking down the 'Big Three' for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are at the forefront of the alternative metal revolution. We're breaking down the 'Big Three' for the 2026 market.</p>
 
 <h2>Titanium: The Lightweight Champion</h2>
 <p>Titanium is famous for being as strong as steel but as light as aluminum.

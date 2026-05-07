@@ -51,7 +51,7 @@ export const BLOG_BATCH_13 = [
 <p>Indian antique-finish jewelry (sometimes called "oxidized" or "antique gold") is ideally positioned for this trend. A Jaipur-made antique-finish necklace with temple-inspired motifs or Mughal floral patterns looks authentically vintage while being brand new, durable, and compliant with international quality standards. This combination of authentic heritage aesthetics with modern manufacturing quality is a powerful value proposition in 2026's market.</p>
 
 <h2>How to Source 2026 Trend Jewelry from India</h2>
-<p>Sourcing trend-aligned jewelry from India requires working with a manufacturer who actively monitors global trend data and refreshes their collection accordingly. The best Indian exporters — including Gemora Global — release seasonal trend collections (typically before major Western shopping seasons: Summer, Holiday, Valentine's Day) that reflect current global fashion movements.</p>
+<p>Sourcing trend-aligned jewelry from India requires working with a manufacturer who actively monitors global trend data and refreshes their collection accordingly. The best Indian exporters — including <a href="/">Gemora Global</a> — release seasonal trend collections (typically before major Western shopping seasons: Summer, Holiday, Valentine's Day) that reflect current global fashion movements.</p>
 <p>When evaluating trend pieces from Indian suppliers, look for: accurate trend interpretation (not a poor imitation), quality materials that justify the retail price, and anti-tarnish treatments that ensure the piece maintains its appearance throughout the season. The best wholesale relationships are built with manufacturers who are genuine trend collaborators, not just order takers.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -142,7 +142,7 @@ export const BLOG_BATCH_13 = [
 
 <p><strong>Q11: How important is jewelry packaging in 2026?</strong><br/>A: Very important — especially for gifting occasions. Premium packaging (velvet boxes, branded pouches, beautiful tissue and ribbon) elevates the perceived value of fashion jewelry dramatically. Studies show that well-packaged jewelry gifts feel more luxurious and are rated more favorably by recipients, even when the jewelry piece itself is identical.</p>
 
-<p><strong>Q12: Where can I source on-trend women's jewelry wholesale from India?</strong><br/>A: Gemora Global provides a comprehensive catalogue of trend-aligned women's jewelry for international wholesale buyers. With MOQs starting at 50 pieces per design and express shipping worldwide, we make sourcing on-trend Indian jewelry straightforward and accessible for boutiques and retailers of all sizes.</p>
+<p><strong>Q12: Where can I source on-trend women's jewelry wholesale from India?</strong><br/>A: <a href="/">Gemora Global</a> provides a comprehensive catalogue of trend-aligned women's jewelry for international wholesale buyers. With MOQs starting at 50 pieces per design and express shipping worldwide, we make sourcing on-trend Indian jewelry straightforward and accessible for boutiques and retailers of all sizes.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our latest women's jewelry catalogue. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

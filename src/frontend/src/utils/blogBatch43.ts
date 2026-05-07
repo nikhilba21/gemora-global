@@ -13,7 +13,7 @@ export const BLOG_BATCH_43 = [
     tags: ["gemstone hardness", "mohs scale", "jewelry care", "gemstone education", "B2B guide"],
     content: `<h2>The Science of Survival</h2>
 <p>In the world of 2026 fine jewelry, beauty is only half the story. The other half is 'Durability.' Whether you're choosing an engagement ring to last decades or a fashion piece for the season, understanding 'Gemstone Hardness' is essential. Not every gem is built for daily life. Some are 'Tough' enough to survive a gym session, while others are so 'Soft' that even a household cleaning cloth could scratch them. This is measured by the **Mohs Scale of Hardness**.</p>
-<p>At Gemora Global, we prioritize both beauty and longevity. We're breaking down the science of hardness to help you protect your investment.</p>
+<p>At <a href="/">Gemora Global</a>, we prioritize both beauty and longevity. We're breaking down the science of hardness to help you protect your investment.</p>
 
 <h2>What is the Mohs Scale?</h2>
 <p>Created by Friedrich Mohs in 1812, this scale ranks minerals from 1 (softest) to 10 (hardest) based on their ability to scratch one another. A mineral can scratch anything with a lower number but will be scratched by anything with a higher number. For example, a Diamond (10) can scratch a Sapphire (9), but a Sapphire cannot scratch a Diamond.</p>
@@ -69,7 +69,7 @@ export const BLOG_BATCH_43 = [
 <p>We're breaking down the safe, expert-approved methods for at-home jewelry cleaning.</p>
 
 <h2>The 'Universal' Cleaning Method (Safe for most items)</h2>
-<p>This is the #1 method recommended by Gemora Global for Gold, Platinum, Diamonds, Sapphires, and Rubies.
+<p>This is the #1 method recommended by <a href="/">Gemora Global</a> for Gold, Platinum, Diamonds, Sapphires, and Rubies.
 <ol>
 <li>**The Soak:** Fill a small bowl with warm (not boiling) water and a few drops of mild dish soap. Avoid 'Moisturizing' or 'Antibacterial' soaps which can leave a residue. Soak for 20-30 minutes.</li>
 <li>**The Scrub:** Use a new, 'Extra-Soft' toothbrush to gently scrub the piece. Pay special attention to the *back* of the stone and the 'nooks and crannies' of the setting.</li>
@@ -136,7 +136,7 @@ export const BLOG_BATCH_43 = [
 <h2>Rule 4: 'Climate-Control' for Organic Gems</h2>
 <p>Organic gems like Pearls, Opals, and Amber are 'Alive' in a way. They contain water and need to 'breathe.' If they are kept in a completely airtight plastic bag or a very dry safe for years, they can 'dry out' and crack. Store these in a soft silk or velvet pouch in a room with stable temperature and humidity.</p>
 
-<h2>Sourcing Storage Solutions from Gemora Global</h2>
+<h2>Sourcing Storage Solutions from <a href="/">Gemora Global</a></h2>
 <p>We help our wholesale partners add 'Value' to their brand by providing premium storage solutions. From our 'Travel-Jewelry-Rolls' to branded anti-tarnish pouches, we ensure that your customers have everything they need to protect their Gemora jewelry. A well-stored piece is a piece that stays beautiful, leading to higher customer satisfaction and brand loyalty. Let us help you protect the sparkle.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -187,7 +187,7 @@ export const BLOG_BATCH_43 = [
 <p>For pearl necklaces, look at the knots between each pearl. Is the thread looking 'Frayed' or 'Dirty'? If you pull gently on the necklace, is there a gap between the pearls and the knots? This means the silk thread has stretched. Pearls should be 'Re-Strung' every 1-2 years to prevent the thread from snapping.</p>
 
 <h2>Sourcing Reliable Jewelry from Jaipur</h2>
-<p>At Gemora Global, we manufacture for 'Durability.' We use 'Heavy-Gauge' prongs and high-quality 'German-Made' clasps to ensure our jewelry stands up to the test of time. Our quality-control team in Jaipur performs a 10-point inspection on every single piece before it leaves our facility. We help our wholesale partners provide their customers with 'Confidence-for-Life.' Let us build your most reliable collection yet.</p>
+<p>At <a href="/">Gemora Global</a>, we manufacture for 'Durability.' We use 'Heavy-Gauge' prongs and high-quality 'German-Made' clasps to ensure our jewelry stands up to the test of time. Our quality-control team in Jaipur performs a 10-point inspection on every single piece before it leaves our facility. We help our wholesale partners provide their customers with 'Confidence-for-Life.' Let us build your most reliable collection yet.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: How often should I inspect my jewelry?</strong><br/>A: We recommend a quick 'Self-Check' once a month. Have a professional jeweler perform a deep inspection and cleaning once a year.</p>
@@ -236,7 +236,7 @@ export const BLOG_BATCH_43 = [
 <h2>5. 'Stone-Upgrading' and 'Redesign'</h2>
 <p>Ready for a bigger diamond? Or want to turn your grandmother's brooch into a modern pendant? This is where the 'Artistry' of the jeweler shines. They can help you source new stones and create 'CAD' designs to show you exactly how your 'New-Heirloom' will look before any metal is touched.</p>
 
-<h2>Sourcing Support from Gemora Global</h2>
+<h2>Sourcing Support from <a href="/">Gemora Global</a></h2>
 <p>We help our wholesale partners become the 'Trusted-Expert' for their customers. We provide the technical specifications, 'Repair-Guides,' and 'Gemstone-Reports' you need to answer every professional question. Our facility in Jaipur is also available for 'Master-Repairs' and 'Restorations' for our partners' most valuable clients. Let us be the 'Secret-Craftsman' behind your success.</p>
 
 <h2>Frequently Asked Questions</h2>

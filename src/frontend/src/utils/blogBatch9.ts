@@ -31,7 +31,7 @@ export const BLOG_BATCH_9 = [
 <h2>Jaipur vs. Other Indian Jewellery Cities</h2>
 <p>Compared to Mumbai (diamonds, high-end gold) or Delhi (bullion trading), Jaipur offers unmatched variety in imitation and fashion jewellery at wholesale prices. For global B2B buyers seeking affordable, trend-forward pieces, no city in India offers the same depth of product range and supplier ecosystem. <a href="/wholesale">Explore our wholesale offer</a> and experience Jaipur's best.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 182,
@@ -61,13 +61,13 @@ export const BLOG_BATCH_9 = [
   <li><strong>Kolkata</strong> — Gold filigree, traditional Bengali jewellery craftsmanship.</li>
 </ul>
 
-<h2>Why Jaipur Wins for Imitation and Fashion Jewellery Export</h2>
+<h2>Why Jaipur Wins for Imitation and Fashion <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
 <p>No other Indian city matches Jaipur's breadth of imitation jewellery styles, density of wholesale suppliers, and B2B export ecosystem. Buyers from the USA, UAE, UK, and Europe consistently source from Jaipur because of its widest product variety, competitive pricing, and strong artisan community.</p>
 
 <h2>Choosing the Right Source City</h2>
 <p>If you're a retailer, boutique, or distributor looking for fashion-forward, affordable imitation jewellery in volume, Jaipur is your answer. The city's infrastructure, logistics, and supplier network are purpose-built for international B2B trade. <a href="/contact">Contact our Jaipur-based team today</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 183,
@@ -101,7 +101,7 @@ export const BLOG_BATCH_9 = [
 <h2>Cultural Appeal and Design Uniqueness</h2>
 <p>Indian jewellery designs are globally coveted — the richness of Kundan, the vibrancy of meenakari, and the intricacy of handcrafted pieces cannot be replicated at the same price point anywhere else in the world. This design uniqueness gives global buyers a competitive edge in their home markets.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 184,
@@ -135,7 +135,7 @@ export const BLOG_BATCH_9 = [
 </ul>
 
 <h2>Start Safe, Scale Smart</h2>
-<p>Gemora Global welcomes verification from all new buyers. We provide GSTIN, IEC, and buyer references on request. Start with a sample order — we are confident you will return for bulk.</p>
+<p><a href="/">Gemora Global</a> welcomes verification from all new buyers. We provide GSTIN, IEC, and buyer references on request. Start with a sample order — we are confident you will return for bulk.</p>
 
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -153,7 +153,7 @@ export const BLOG_BATCH_9 = [
     image:
       "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&h=500&fit=crop",
     tags: ["certified export partner", "india", "jewellery", "certifications"],
-    content: `<h2>Why Certifications Matter in Jewellery Export</h2>
+    content: `<h2>Why Certifications Matter in <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
 <p>Not all Indian jewellery exporters are equal. Legitimate, professional exporters hold specific registrations and certifications that demonstrate compliance, legal standing, and commitment to quality. Before selecting a supplier, verify these credentials — they are the minimum standard for any serious B2B partnership.</p>
 
 <h2>Essential Certifications and Memberships to Check</h2>
@@ -171,7 +171,7 @@ export const BLOG_BATCH_9 = [
 <h2>Which Certifications Matter Most for Your Market</h2>
 <p>For EU buyers, REACH compliance is non-negotiable. For US buyers, country of origin documentation and HS code accuracy matter most. For UAE and Gulf buyers, certificate of origin from the Indian Chamber of Commerce is typically required. Ask your supplier specifically about compliance for your destination country.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 186,
@@ -210,7 +210,7 @@ export const BLOG_BATCH_9 = [
 </ul>
 
 <h2>Import Smart, Profit More</h2>
-<p>Working with an established exporter like Gemora Global eliminates most of these risks — we provide documented quality standards, clear PO processes, proper packaging, and full export documentation.</p>
+<p>Working with an established exporter like <a href="/">Gemora Global</a> eliminates most of these risks — we provide documented quality standards, clear PO processes, proper packaging, and full export documentation.</p>
 
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -271,7 +271,7 @@ export const BLOG_BATCH_9 = [
   <li>What is your policy on defective pieces after delivery?</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 188,
@@ -305,7 +305,7 @@ export const BLOG_BATCH_9 = [
 </ul>
 
 <h2>How to Protect Your Business</h2>
-<p>Verify GSTIN on the GST portal, use escrow or LC payment for first orders, start with small sample orders, and get all terms in a written purchase order. Working with established, referenced suppliers like Gemora Global removes these risks entirely.</p>
+<p>Verify GSTIN on the GST portal, use escrow or LC payment for first orders, start with small sample orders, and get all terms in a written purchase order. Working with established, referenced suppliers like <a href="/">Gemora Global</a> removes these risks entirely.</p>
 
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -355,7 +355,7 @@ export const BLOG_BATCH_9 = [
 </ul>
 
 <h2>Building the Relationship Right</h2>
-<p>Communicate regularly, pay on time, provide clear and constructive quality feedback, and visit the factory when possible. These simple practices build the trust that unlocks all the benefits above. If you're ready to build a long-term jewellery sourcing partnership, Gemora Global is here for it.</p>
+<p>Communicate regularly, pay on time, provide clear and constructive quality feedback, and visit the factory when possible. These simple practices build the trust that unlocks all the benefits above. If you're ready to build a long-term jewellery sourcing partnership, <a href="/">Gemora Global</a> is here for it.</p>
 
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -402,6 +402,6 @@ export const BLOG_BATCH_9 = [
 <h2>Community Reputation</h2>
 <p>The best Jaipur manufacturers have longstanding relationships with buyers across 20+ countries built on years of consistent delivery. That reputation — earned through honest business practices — is their most valuable asset. <a href="/about">Learn about Gemora Global's story</a> or <a href="/contact">get in touch with our team</a> to start your sourcing journey.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

@@ -13,7 +13,7 @@ export const BLOG_BATCH_44 = [
     tags: ["gemstone sparkle", "brilliance and fire", "scintillation", "jewelry education", "B2B guide"],
     content: `<h2>The Symphony of Light</h2>
 <p>When you look at a high-quality diamond or gemstone, it doesn't just sit there—it 'Performs.' It catches the light, breaks it apart, and sends it back to your eye in a dazzling display of white light, rainbows, and movement. But why do some stones look like 'Fire-Crackers' while others look 'Flat' and 'Dead'? In the world of 2026 gemology, 'Sparkle' is broken down into three distinct scientific components: **Brilliance**, **Fire**, and **Scintillation**. Understanding these is the key to choosing a gem that truly 'Pops.'</p>
-<p>At Gemora Global, we are masters of light performance. We're breaking down the science of the sparkle for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are masters of light performance. We're breaking down the science of the sparkle for the 2026 market.</p>
 
 <h2>1. Brilliance: The White Light Return</h2>
 <p>Brilliance is the total amount of white light that is reflected back to your eye from the inside and surface of the stone. It's what gives a diamond its 'Inner-Glow.' Brilliance is determined by the stone's 'Refractive Index' (how much it slows down light) and the quality of the 'Cut.' If a stone is cut too deep or too shallow, the light 'leaks' out the back, and the stone loses its brilliance. This is called a 'Window' or an 'Extinction' zone.</p>
@@ -60,7 +60,7 @@ export const BLOG_BATCH_44 = [
     tags: ["gemstone color", "chromophores", "trace elements", "gemstone education", "B2B guide"],
     content: `<h2>The Magic of the Elements</h2>
 <p>Have you ever wondered why an Emerald is green while a Ruby is red? In their 'Pure' state, most gemstone minerals (like Corundum or Beryl) are actually colorless. The vibrant colors we love are caused by tiny 'Impurities'—trace elements that were present during the stone's formation millions of years ago. These elements, known as **Chromophores**, absorb certain wavelengths of light and reflect others back to our eyes. In the 2026 market, understanding this 'Nature-Paintbox' is the key to appreciating the rarity and beauty of fine gems.</p>
-<p>At Gemora Global, we are color experts. We're breaking down the science of the rainbow for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are color experts. We're breaking down the science of the rainbow for the 2026 market.</p>
 
 <h2>The 'Chromophore' Cast List</h2>
 <p>Here are the primary elements responsible for the colors of the world's most famous gems:
@@ -111,7 +111,7 @@ export const BLOG_BATCH_44 = [
     tags: ["fancy sapphires", "padparadscha", "pink sapphire", "yellow sapphire", "gemstone education"],
     content: `<h2>The Spectrum of Corundum</h2>
 <p>When most people hear 'Sapphire,' they think of the deep, velvety blue of a royal engagement ring. But in the global market of 2026, 'Blue' is just the beginning. Sapphire is a variety of the mineral **Corundum**, and it comes in every color of the rainbow except red (which we call Ruby). These 'Fancy Sapphires'—in pink, yellow, orange, green, and even purple—are the definitive choice for the 'Modern-Luxe' consumer who wants the durability of a sapphire with a unique, personal color.</p>
-<p>At Gemora Global, we are fancy sapphire specialists. We're breaking down the rainbow for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are fancy sapphire specialists. We're breaking down the rainbow for the 2026 market.</p>
 
 <h2>The Crown Jewel: Padparadscha</h2>
 <p>The rarest and most valuable of all fancy sapphires is the **Padparadscha** (derived from the Sinhalese word for 'Lotus Blossom'). It features a unique, delicate blend of pink and orange. In 2026, Padparadschas are the ultimate 'Investment-Gem,' prized for their 'Sunset-Glow' and incredible scarcity. They are the #1 choice for high-end alternative engagement rings.</p>
@@ -160,7 +160,7 @@ export const BLOG_BATCH_44 = [
     tags: ["mystic topaz", "coated gemstones", "jewelry education", "2026 trends", "affordable luxury"],
     content: `<h2>The High-Tech Rainbow</h2>
 <p>Have you ever seen a gemstone that looks like it has a 'Rainbow-Oil-Slick' or a 'Galaxy' inside it? In the 2026 market, these are known as **Mystic** or **Coated** gemstones. While they look like magic, they are actually the result of high-tech 'Vacuum-Deposition' technology (the same tech used by NASA). By applying a microscopic layer of metal onto a natural, colorless gemstone (usually Topaz or Quartz), we can create an iridescent glow that is impossible to find in nature. It's the ultimate 'Statement-on-a-Budget.'</p>
-<p>At Gemora Global, we are pioneers of 'Enhanced-Gems.' We're breaking down the science of the mystic glow for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are pioneers of 'Enhanced-Gems.' We're breaking down the science of the mystic glow for the 2026 market.</p>
 
 <h2>The Process: 'Chemical Vapor Deposition' (CVD)</h2>
 <p>The 'Mystic' effect is created by placing a natural, faceted white topaz in a vacuum chamber. A thin, microscopic film of Titanium or other metals is then bonded to the **bottom** (pavilion) of the stone. This film is so thin it's measured in atoms. When light enters the stone, it reflects off this film, creating 'Thin-Film-Interference' (the same effect you see on a soap bubble or a CD). This results in the stunning play of green, purple, blue, and gold colors.</p>
@@ -204,7 +204,7 @@ export const BLOG_BATCH_44 = [
     tags: ["color change gemstones", "alexandrite", "zultanite", "jewelry education", "2026 trends"],
     content: `<h2>The Shape-Shifters of Nature</h2>
 <p>Imagine a gemstone that is a vibrant green in the morning sun but turns into a deep, moody purple when you sit down for dinner under a lamp. This isn't a magic trick—it's a rare scientific phenomenon known as the 'Alexandrite-Effect.' In the world of 2026 gemstones, **Color-Change** gems are the definitive choice for the 'Connoisseur.' They are the ultimate 'Conversation-Piece,' offering two (or even three) stones for the price of one. They are symbols of transformation, flexibility, and 'Hidden-Complexity.'</p>
-<p>At Gemora Global, we are phenomenal gem specialists. We're breaking down the magic of the color-change for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we are phenomenal gem specialists. We're breaking down the magic of the color-change for the 2026 market.</p>
 
 <h2>The Legend: Alexandrite</h2>
 <p>The most famous color-change gem is Alexandrite (a variety of Chrysoberyl). Discovered in Russia's Ural Mountains in the 1830s, its 'Green-to-Red' change matched the colors of the Russian Imperial flag. In 2026, natural Alexandrite is one of the world's most expensive and rare gems. However, high-quality **Lab-Grown Alexandrite** has become a major trend, offering the same stunning 'Emerald-by-Day, Ruby-by-Night' magic at a price that allows it to be used in modern bridal jewelry.</p>

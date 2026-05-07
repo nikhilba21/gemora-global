@@ -30,7 +30,7 @@ export const BLOG_BATCH_24 = [
 <h2>Step 5: The 'Unboxing' Experience</h2>
 <p>The gift starts with the box. In 2026, the presentation is just as important as the jewelry itself. Choose a brand that provides aesthetic, high-quality packaging. A beautiful box, branded tissue paper, and a personalized care card elevate the gifting experience and make the recipient feel truly special.</p>
 
-<h2>Gifting Solutions from Gemora Global</h2>
+<h2>Gifting Solutions from <a href="/">Gemora Global</a></h2>
 <p>We've designed our entire collection with gifting in mind. From our best-selling 'Alphabet' pendants to our 'Birthstone' rings and 'Sentimental' lockets, we offer pieces that are meaningful, high-quality, and beautifully presented. We also provide 'Gift-Ready' wholesale options for our partners, ensuring they have everything they need to delight their customers.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -75,7 +75,7 @@ export const BLOG_BATCH_24 = [
 <p>Don't just ask for 'Gold Plated.' Be specific. Ask for the 'Micron' thickness, the 'Base Metal' (Brass or Sterling Silver), and whether they use 'Anti-Tarnish' lacquer (e-coat). Providing clear technical specifications ensures that you get exactly the quality level you are paying for and reduces the risk of surprises when the order arrives.</p>
 
 <h2>Step 4: Start with 'Samples'</h2>
-<p>Never place a large bulk order without seeing physical samples first. This allows you to test the quality, the weight, the plating color, and the overall finish. Reputable manufacturers like Gemora Global welcome sample orders as they build the trust needed for a long-term partnership.</p>
+<p>Never place a large bulk order without seeing physical samples first. This allows you to test the quality, the weight, the plating color, and the overall finish. Reputable manufacturers like <a href="/">Gemora Global</a> welcome sample orders as they build the trust needed for a long-term partnership.</p>
 
 <h2>Step 5: Navigate 'Shipping and Customs'</h2>
 <p>Modern logistics have made importing from India easier than ever. Most manufacturers use express couriers like DHL or FedEx, which handle the 'Door-to-Door' delivery and can assist with customs clearance. Ensure you understand the import duties and taxes in your specific country (e.g., VAT in the UK, Customs Duty in the US) to calculate your true landed cost.</p>
@@ -113,7 +113,7 @@ export const BLOG_BATCH_24 = [
     tags: ["jewelry quality control", "manufacturing standards", "b2b jewelry", "jewelry production", "quality assurance"],
     content: `<h2>The Foundation of Brand Trust</h2>
 <p>In the jewelry industry, quality is everything. For a brand or retailer, a single batch of poor-quality products can destroy years of hard-earned customer trust. Quality Control (QC) is the process of ensuring that every piece of jewelry meets the required standards of 'Materials,' 'Craftsmanship,' and 'Durability' before it reaches the customer.</p>
-<p>At Gemora Global, we believe that QC shouldn't just happen at the end; it must be integrated into every step of the manufacturing process. We're sharing our 'Professional QC Checklist' to help you understand what to look for when sourcing jewelry.</p>
+<p>At <a href="/">Gemora Global</a>, we believe that QC shouldn't just happen at the end; it must be integrated into every step of the manufacturing process. We're sharing our 'Professional QC Checklist' to help you understand what to look for when sourcing jewelry.</p>
 
 <h2>Check 1: Material Purity</h2>
 <p>The first step in QC is verifying the raw materials. For Sterling Silver, this means 'XRF' testing to ensure it contains 92.5% pure silver. For Brass, it means ensuring the alloy is 'Lead and Nickel-Free' to comply with international safety standards like 'REACH' (EU) and 'Prop 65' (California).</p>
@@ -180,7 +180,7 @@ export const BLOG_BATCH_24 = [
 <h2>Trend 5: 'Micro-Experience' Inserts</h2>
 <p>In 2026, the box contains more than just jewelry. We're seeing 'Micro-Inserts' like a small polishing cloth, a tiny vial of jewelry-cleaning solution, or even a 'Scented Card' that makes the box smell like the brand's signature fragrance. These sensory details make the unboxing truly memorable.</p>
 
-<h2>Custom Packaging Solutions from Gemora Global</h2>
+<h2>Custom Packaging Solutions from <a href="/">Gemora Global</a></h2>
 <p>We understand that packaging is a key part of our wholesale partners' success. We offer custom packaging design and production services, helping you create 'Instagram-Worthy' boxes and pouches that reflect your brand identity. We prioritize sustainable materials and high-quality finishes, ensuring your customers have a world-class unboxing experience every time.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -213,7 +213,7 @@ export const BLOG_BATCH_24 = [
     tags: ["online shopping", "jewelry guide 2026", "buying tips", "jewelry quality", "safe shopping"],
     content: `<h2>The Digital Jewelry Box</h2>
 <p>In 2026, the majority of fashion jewelry is discovered and purchased online. While this offers incredible choice and convenience, it also carries risks. How do you know the quality is what it looks like in the photo? How do you ensure the site is secure? And what do all those technical terms actually mean?</p>
-<p>At Gemora Global, we want every jewelry lover to have a positive online experience. We're sharing our 'Insider Tips' to help you shop for jewelry online like a pro.</p>
+<p>At <a href="/">Gemora Global</a>, we want every jewelry lover to have a positive online experience. We're sharing our 'Insider Tips' to help you shop for jewelry online like a pro.</p>
 
 <h2>Tip 1: Look Beyond the 'Hero' Shot</h2>
 <p>Anyone can take a single beautiful photo. To judge quality, look for multiple angles—close-up 'Macro' shots of the settings, photos of the piece being worn (to judge scale), and ideally a video showing how the jewelry catches the light. If a site only has one photo of a product, be cautious.</p>

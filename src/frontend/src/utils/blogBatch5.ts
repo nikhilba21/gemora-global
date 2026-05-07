@@ -22,7 +22,7 @@ export const BLOG_BATCH_5 = [
   <li><strong>Customised or modified designs:</strong> 200–500 pieces per design</li>
   <li><strong>OEM / private label (your own brand):</strong> 500–1,000 pieces per design</li>
 </ul>
-<p>At Gemora Global, our MOQ starts at just 50 units per design — one of the lowest in the Indian wholesale market, making us accessible to boutiques, startups, and first-time importers.</p>
+<p>At <a href="/">Gemora Global</a>, our MOQ starts at just 50 units per design — one of the lowest in the Indian wholesale market, making us accessible to boutiques, startups, and first-time importers.</p>
 
 <h2>How to Negotiate MOQ</h2>
 <p>MOQ is not always fixed. You can negotiate by offering advance payment, committing to regular repeat orders, or mixing multiple designs into a single production batch. Suppliers are more flexible with buyers who show long-term intent. Requesting slightly adjusted standard designs (rather than fully custom) also lowers MOQ significantly.</p>
@@ -46,7 +46,7 @@ export const BLOG_BATCH_5 = [
     image:
       "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
     tags: ["wholesale jewellery", "bulk buying", "guide", "b2b"],
-    content: `<h2>Step-by-Step Guide to Buying Wholesale Jewellery</h2>
+    content: `<h2>Step-by-Step Guide to Buying <a href="/wholesale">Wholesale Jewellery</a></h2>
 <p>Buying wholesale jewellery from India involves a clear process. First, define your target market: who is your end customer, what styles do they prefer, and what price point are you targeting at retail? This narrows your supplier search and prevents costly mis-buys. Next, set your total budget — factoring in product cost, international shipping, import duties, and your desired margin target.</p>
 
 <h2>Finding the Right Supplier</h2>
@@ -63,7 +63,7 @@ export const BLOG_BATCH_5 = [
 <h2>Tips for First-Time Bulk Buyers</h2>
 <p>Start smaller than you think you need — a mixed trial order of 200–500 pieces across 5–10 designs lets you test your market before committing to full containers. Prioritise suppliers with clear communication and fast sample turnaround. These are the habits that predict reliability on large orders.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 143,
@@ -82,7 +82,7 @@ export const BLOG_BATCH_5 = [
     content: `<h2>Why Jewellery Catalogues Matter</h2>
 <p>For jewellery retailers and wholesale buyers, a well-organised catalogue is the primary buying tool. It replaces the need to visit a factory showroom and lets buyers browse, select, and plan purchases at their own pace. A strong catalogue builds trust — it signals that the supplier is organised, professional, and capable of managing volume orders consistently.</p>
 
-<h2>What to Look for in a Wholesale Jewellery Catalogue</h2>
+<h2>What to Look for in a <a href="/wholesale">Wholesale Jewellery</a> Catalogue</h2>
 <ul>
   <li>Clear product photography from multiple angles (front, side, clasp close-up)</li>
   <li>Accurate dimensions and weight specifications</li>
@@ -98,7 +98,7 @@ export const BLOG_BATCH_5 = [
 <h2>How to Use Catalogues Effectively</h2>
 <p>Plan purchases seasonally — review new catalogues 6–8 weeks before peak selling seasons (Christmas, Eid, Valentine's Day, wedding season). Use catalogues to train your sales staff on product features and materials. Cross-reference catalogue SKUs with your bestseller data to identify reorder candidates versus new additions.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 144,
@@ -132,7 +132,7 @@ export const BLOG_BATCH_5 = [
 <h2>Managing Growth</h2>
 <p>Once you have 3 months of sales data, your reorder decisions become data-driven rather than guesswork. Build supplier relationships that allow flexible reorders at low MOQ — this keeps your boutique fresh without overcommitting cash to slow-moving inventory.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 145,
@@ -165,7 +165,7 @@ export const BLOG_BATCH_5 = [
 <h2>Seasonal Sourcing Calendar</h2>
 <p>Smart boutiques order 6–8 weeks ahead of their peak selling seasons. Plan your largest orders for pre-Christmas (September–October), pre-Eid, pre-Valentine's, and wedding season. Keep 20–30% of your open-to-buy for in-season trend replenishment — the designs that go viral on Instagram in February need to be in your store by March.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 146,
@@ -199,7 +199,7 @@ export const BLOG_BATCH_5 = [
 <h2>Best Platforms for Indian Jewellery Dropshipping</h2>
 <p>Etsy is the strongest platform for handcrafted and ethnic jewellery from India. Shopify gives full brand control and the best margins. eBay works well for volume at lower price points. TikTok Shop is growing rapidly for fashion jewellery. Choose based on your target market and traffic acquisition strategy.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 147,
@@ -233,7 +233,7 @@ export const BLOG_BATCH_5 = [
 <h2>Sustainable Packaging Trends</h2>
 <p>European and Australian buyers increasingly require eco-friendly packaging options. Kraft paper boxes, recycled card earring boards, and bamboo or cotton pouches are in strong demand. If your target market includes environmentally conscious buyers, requesting sustainable packaging options from your Indian supplier is a commercial advantage worth pursuing.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 148,
@@ -266,7 +266,7 @@ export const BLOG_BATCH_5 = [
 <h2>Scaling Your Amazon Jewellery Business</h2>
 <p>Once you find winning ASINs, the path to scaling is straightforward: lower your unit costs by increasing order quantities, expand your ASIN catalogue with complementary designs, and expand to Amazon UK, DE, and CA once you have a proven US playbook. Indian suppliers with experience serving Amazon sellers understand packaging and labelling requirements well.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 149,
@@ -299,7 +299,7 @@ export const BLOG_BATCH_5 = [
 <h2>Growing Your Instagram Jewellery Store</h2>
 <p>Content strategy is as important as product. Post consistently — daily Reels perform best for discovery, Stories for engagement and sales, and feed posts for permanent product display. Use jewellery hashtags strategically. Collaborate with micro-influencers (10K–100K followers) in your niche for cost-effective reach. Customer photos and testimonials convert better than studio photography alone.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 150,
@@ -330,7 +330,7 @@ export const BLOG_BATCH_5 = [
 <p>The standard reseller pricing model is 3–5x the wholesale cost. A piece that costs $3 wholesale should retail at $9–$15. Statement pieces with higher perceived value can command 5–8x markup. The most successful resellers price at the upper end of what their market will bear, not at the lowest possible margin. Better margin per piece means you need fewer sales to reach your income target.</p>
 
 <h2>Building a Sustainable Reselling Business</h2>
-<p>The resellers who build lasting businesses are those who treat their supplier relationship as a partnership. Communicate regularly about what's selling and what isn't. Provide photos of your display — good suppliers use this feedback to improve their catalogues. Gemora Global offers WhatsApp support and digital catalogue access for all reseller accounts, making reorder decisions fast and efficient.</p>
+<p>The resellers who build lasting businesses are those who treat their supplier relationship as a partnership. Communicate regularly about what's selling and what isn't. Provide photos of your display — good suppliers use this feedback to improve their catalogues. <a href="/">Gemora Global</a> offers WhatsApp support and digital catalogue access for all reseller accounts, making reorder decisions fast and efficient.</p>
 
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },

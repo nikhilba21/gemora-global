@@ -13,7 +13,7 @@ export const BLOG_BATCH_32 = [
     tags: ["online boutique", "jewelry business", "B2B", "entrepreneurship", "2026 trends"],
     content: `<h2>Your Sparkle, Your Brand</h2>
 <p>In 2026, the barrier to entry for the jewelry market has never been lower, but the competition has never been higher. Starting an online jewelry boutique is a dream for many, but turning it into a profitable business requires more than just good taste. It requires a solid strategy, a reliable supply chain, and a deep understanding of the digital landscape.</p>
-<p>At Gemora Global, we've helped hundreds of entrepreneurs launch their brands. We're sharing the definitive step-by-step guide to starting your online jewelry boutique in 2026.</p>
+<p>At <a href="/">Gemora Global</a>, we've helped hundreds of entrepreneurs launch their brands. We're sharing the definitive step-by-step guide to starting your online jewelry boutique in 2026.</p>
 
 <h2>Step 1: Find Your Niche (The 'Why')</h2>
 <p>The biggest mistake is trying to sell 'everything to everyone.' In 2026, the most successful brands are specialized. Are you the 'Sustainable-Boho' brand? The 'Minimalist-Professional' brand? The 'Modern-Goth' brand? Define your 'Niche' and your 'Target Audience' before you buy a single piece of inventory. Your niche dictates your designs, your pricing, and your marketing.</p>
@@ -86,7 +86,7 @@ export const BLOG_BATCH_32 = [
 <h2>Secret 6: Consistent Editing</h2>
 <p>In 2026, a 'Cohesive' Instagram grid is a sign of a professional brand. Use the same editing style (brightness, contrast, and warmth) for all your photos. Free apps like Lightroom Mobile or VSCO are perfect for creating a signature 'Brand Look' that makes your grid look like a high-end magazine.</p>
 
-<h2>Gemora Global's Marketing Support</h2>
+<h2><a href="/">Gemora Global</a>'s Marketing Support</h2>
 <p>We know that photography is a major hurdle for new brands. That's why we provide high-resolution 'Stock Photos' and videos for many of our core collections. We want to give you the visual tools you need to start selling from day one. When you succeed, we succeed.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -142,7 +142,7 @@ This builds authority and trust, making the 'Sell' post much more effective when
 <h2>Engagement: The 'Social' in Social Media</h2>
 <p>In 2026, the algorithm rewards 'Engagement.' Don't just post and ghost! Reply to every comment, engage with your followers' stories, and build a real relationship with your community. A small, loyal audience that talks to you is 10x more valuable than a large, silent audience.</p>
 
-<h2>Gemora Global's Content Support</h2>
+<h2><a href="/">Gemora Global</a>'s Content Support</h2>
 <p>We provide our wholesale partners with 'Content-Toolkits'—including videos of our manufacturing process in Jaipur, gemstone education graphics, and high-res lifestyle photos. We give you the raw material to tell a great story on your social media, so you can focus on building your community. Our success depends on your ability to reach your customers.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -192,7 +192,7 @@ This builds authority and trust, making the 'Sell' post much more effective when
 <h2>Step 5: Content Ownership</h2>
 <p>The most valuable part of an influencer partnership in 2026 isn't the 'Post' itself—it's the 'Content.' Ensure your contract allows you to use their photos and videos on your own website and social media. These high-quality 'Lifestyle' shots are the best social proof you can have on your product pages.</p>
 
-<h2>Gemora Global: Supporting Your Growth</h2>
+<h2><a href="/">Gemora Global</a>: Supporting Your Growth</h2>
 <p>We provide the high-quality, 'Gift-Worthy' jewelry that influencers love to show off. By providing our wholesale partners with premium, on-trend pieces at a lower cost, we give them more 'Marketing-Budget' to invest in influencer partnerships. We also share data on which of our collections are currently trending with influencers globally, so you can stay ahead of the curve.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -248,7 +248,7 @@ This builds a relationship before you even ask for the next sale.</p>
 <h2>Step 5: The 'Re-Engagement' Campaign</h2>
 <p>If a customer hasn't bought in 6 months, send them a 'We Miss You' email with a special 'Loyalty-Reward.' This 'Win-Back' strategy is much cheaper than finding a new customer. In 2026, successful brands use email to turn 'One-Time Buyers' into 'Brand Advocates.'</p>
 
-<h2>Gemora Global's Marketing Toolkit</h2>
+<h2><a href="/">Gemora Global</a>'s Marketing Toolkit</h2>
 <p>We provide our wholesale partners with 'Email-Ready' assets—including professional product photography, gift guides, and educational content about our Jaipur manufacturing process. We give you the beautiful visuals and stories you need to keep your customers engaged and coming back for more. Your business growth is our primary goal.</p>
 
 <h2>Frequently Asked Questions</h2>

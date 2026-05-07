@@ -31,7 +31,7 @@ export const BLOG_BATCH_23 = [
 <p>Drawing on ancient and classical influences, 'Gold-Coin' pendants and bracelets are huge. These pieces feature replicas of ancient Roman or Greek coins, often in heavy, ornate settings. It's a look that feels both historic and incredibly modern.</p>
 
 <h2>Sourcing Chunky Gold Wholesale from Jaipur</h2>
-<p>At Gemora Global, we specialize in 'Hollow-Casting' and 'Tube-Forming'—the two essential techniques for creating chunky jewelry that is comfortable to wear. Our 18k and 22k gold plating is professionally applied to ensure a rich, deep color that lasts. Our chunky gold collections are a top-seller for high-end boutiques in the Middle East, US, and Europe.</p>
+<p>At <a href="/">Gemora Global</a>, we specialize in 'Hollow-Casting' and 'Tube-Forming'—the two essential techniques for creating chunky jewelry that is comfortable to wear. Our 18k and 22k gold plating is professionally applied to ensure a rich, deep color that lasts. Our chunky gold collections are a top-seller for high-end boutiques in the Middle East, US, and Europe.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Is chunky gold jewelry too 'heavy' to wear all day?</strong><br/>A: Not if it's made correctly! Quality manufacturers use 'Hollow' construction for large pieces, which gives the appearance of solid gold without the weight or the cost.</p>
@@ -81,7 +81,7 @@ export const BLOG_BATCH_23 = [
 <p>Thin silver wire—bent into abstract, geometric, or organic shapes—is a key trend for the 'Art-School' aesthetic. These pieces look like drawings in space and are incredibly lightweight and wearable. It's a sophisticated take on the silver comeback.</p>
 
 <h2>Sourcing Silver Jewelry Wholesale from Jaipur</h2>
-<p>Jaipur has a centuries-old tradition of silver craftsmanship. We are one of the world's leading hubs for 925 Sterling Silver production. At Gemora Global, we use high-quality rhodium plating on our silver pieces to prevent tarnishing and ensure a lasting, bright finish. Our silver collections are a top choice for brands in the UK, Scandinavia, and the US West Coast.</p>
+<p>Jaipur has a centuries-old tradition of silver craftsmanship. We are one of the world's leading hubs for 925 Sterling Silver production. At <a href="/">Gemora Global</a>, we use high-quality rhodium plating on our silver pieces to prevent tarnishing and ensure a lasting, bright finish. Our silver collections are a top choice for brands in the UK, Scandinavia, and the US West Coast.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Does silver jewelry tarnish?</strong><br/>A: Natural silver does tarnish when exposed to air. However, at Gemora Global, we apply a professional 'Rhodium Plating' to our silver jewelry, which acts as a protective barrier and keeps it bright for much longer.</p>
@@ -139,7 +139,7 @@ export const BLOG_BATCH_23 = [
 <p><strong>Q3: How do I start mixing metals if I'm nervous?</strong><br/>A: Start with a 'Two-Tone' watch or a ring that features both gold and silver. This provides an easy base to add other individual pieces to.</p>
 <p><strong>Q4: Can I mix Rose Gold with Yellow Gold and Silver?</strong><br/>A: Yes! The 'Triple-Metal' look is very trendy. The rose gold acts as a warm 'middle-ground' between the bright yellow gold and the cool silver.</p>
 <p><strong>Q5: What's the 'best' ratio for mixing metals?</strong><br/>A: There's no fixed rule, but a '60/40' split often looks the most balanced—making one metal the 'dominant' tone and the other the 'accent.'</p>
-<p><strong>Q6: Does mixed metal jewelry tarnish differently?</strong><br/>A: It depends on the base. At Gemora Global, we use professional plating that ensures both the gold and silver sections remain bright and durable at the same rate.</p>
+<p><strong>Q6: Does mixed metal jewelry tarnish differently?</strong><br/>A: It depends on the base. At <a href="/">Gemora Global</a>, we use professional plating that ensures both the gold and silver sections remain bright and durable at the same rate.</p>
 <p><strong>Q7: Are mixed-metal rings suitable for stacking?</strong><br/>A: They are the best for stacking! Mixing gold and silver bands in a single stack is the definitive 'Modern-Stack' look for 2026.</p>
 <p><strong>Q8: What is 'Bonded' metal jewelry?</strong><br/>A: It's a process where a thick layer of one metal is mechanically bonded to another. In 2026, we're seeing more 'Gold-Bonded-Silver' pieces which offer the look of two-tone luxury at a fashion-jewelry price point.</p>
 <p><strong>Q9: Can men wear mixed-metal jewelry?</strong><br/>A: Yes! Two-tone watches have always been a men's staple, and we're now seeing mixed-metal chains and rings becoming huge in men's fashion.</p>
@@ -181,7 +181,7 @@ export const BLOG_BATCH_23 = [
 <p>A major design trend for 2026 is using both matte and high-shine finishes in a single piece. For example, a ring might have a brushed top surface with high-polish inner edges. This contrast highlights the geometry of the piece and adds a 'Boutique-Luxury' feel.</p>
 
 <h2>The Craft of Surface Finishing in Jaipur</h2>
-<p>At Gemora Global, we use a range of specialized tools—from industrial sandblasters to fine-wire brushes and velvet-wheels—to achieve these specific finishes. Surface finishing is an art form in itself, requiring a steady hand and a deep understanding of metal behavior. Our 'Textured' collections are a top-seller for design-conscious retailers in Japan, Germany, and the US.</p>
+<p>At <a href="/">Gemora Global</a>, we use a range of specialized tools—from industrial sandblasters to fine-wire brushes and velvet-wheels—to achieve these specific finishes. Surface finishing is an art form in itself, requiring a steady hand and a deep understanding of metal behavior. Our 'Textured' collections are a top-seller for design-conscious retailers in Japan, Germany, and the US.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is the difference between Matte and Satin?</strong><br/>A: Matte is completely non-reflective (like a chalkboard). Satin has a very subtle, soft 'glow' but no sharp reflections. Satin feels more 'luxury,' while matte feels more 'industrial.'</p>
@@ -213,7 +213,7 @@ export const BLOG_BATCH_23 = [
     tags: ["gold jewelry guide", "gold plating", "gold vermeil", "solid gold", "jewelry education", "buying guide"],
     content: `<h2>Understanding the World of Gold</h2>
 <p>Buying gold jewelry in 2026 can be confusing. With terms like 'Gold-Plated,' 'Vermeil,' 'Gold-Filled,' and 'Solid Gold' used across every website, it's difficult to know what you're actually paying for. For most consumers and wholesale buyers, the choice comes down to a balance between 'Price,' 'Quality,' and 'Longevity.'</p>
-<p>At Gemora Global, we believe in complete transparency. We're breaking down the technical differences between the different types of gold jewelry to help you make an informed decision for your collection or your business.</p>
+<p>At <a href="/">Gemora Global</a>, we believe in complete transparency. We're breaking down the technical differences between the different types of gold jewelry to help you make an informed decision for your collection or your business.</p>
 
 <h2>Type 1: Gold-Plated Jewelry</h2>
 <p>This is the most common type of fashion jewelry. A thin layer of gold (usually 0.5 to 1.0 microns) is electroplated over a base metal like Brass or Copper. In 2026, 'Professional-Grade' plating has become incredibly high quality, offering a beautiful gold look at a very accessible price point.</p>

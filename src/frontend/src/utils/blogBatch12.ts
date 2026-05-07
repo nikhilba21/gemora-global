@@ -17,7 +17,7 @@ export const BLOG_BATCH_12 = [
 <p>Understanding which trends are driving wholesale orders in 2026 is not just academic knowledge for a retailer — it is the difference between fast-moving inventory and dead stock. In this comprehensive guide, we break down every major trend, the markets where each style performs best, the wholesale price ranges involved, and practical sourcing tips for international buyers.</p>
 
 <h2>Trend 1: The Kundan & Polki Revival</h2>
-<p>Kundan jewellery — the ancient Rajasthani art of setting stones in refined gold foil — is experiencing a massive global revival in 2026. Driven by the explosion of South Asian weddings globally, the rise of "bridgerton-core" aesthetic on TikTok, and the increasing popularity of Indian bridal looks in Western fashion media, Kundan is now being sourced by boutiques that have never previously stocked ethnic Indian jewellery.</p>
+<p><a href="/kundan-jewellery-wholesale-manufacturer">Kundan Jewellery</a> — the ancient Rajasthani art of setting stones in refined gold foil — is experiencing a massive global revival in 2026. Driven by the explosion of South Asian weddings globally, the rise of "bridgerton-core" aesthetic on TikTok, and the increasing popularity of Indian bridal looks in Western fashion media, Kundan is now being sourced by boutiques that have never previously stocked ethnic Indian jewellery.</p>
 <p>The imitation Kundan market is particularly strong because the authentic technique — using real 24K gold and uncut diamonds — costs tens of thousands of dollars per set. Jaipur's artisans have perfected the art of creating visually identical imitation Kundan using gold-plated brass and glass stones for a fraction of the cost. A wholesale Kundan bridal set from Jaipur (necklace + earrings + maang tikka + bangles) typically ranges from $18 to $55, retailing at $120 to $350 in Western boutiques.</p>
 <p>Key markets: UAE (bridal season Oct–Feb), USA (South Asian diaspora communities in New Jersey, California, Texas), UK (Leicester, Birmingham), Canada (Toronto, Vancouver). The key differentiator buyers look for is the quality of the stone setting — stones must be perfectly flush, with no visible glue, and the gold tone must be rich and even.</p>
 
@@ -28,7 +28,7 @@ export const BLOG_BATCH_12 = [
 
 <h2>Trend 3: Oxidized Silver & Artisan Boho Styles</h2>
 <p>The sustained global appetite for "conscious fashion" and "authentic handcrafted" products has made oxidized silver jewellery from India a perennial bestseller in Western boutiques. In 2026, this trend is being supercharged by the "artisan aesthetic" movement — consumers in Europe, Australia, and the US Pacific Northwest are actively seeking products with a visible human story behind them.</p>
-<p>Oxidized jewellery's dark, antique finish tells that story visually. Unlike shiny gold or silver pieces that could be mass-produced anywhere, oxidized tribal, floral, and Rajasthani-motif pieces carry an irreplaceable cultural fingerprint. For boutiques in Berlin, Melbourne, Portland, and Paris, "handcrafted oxidized silver from Jaipur" is a powerful retail narrative that commands premium pricing.</p>
+<p><a href="/oxidized-jewellery-wholesale-india">Oxidized Jewellery</a>'s dark, antique finish tells that story visually. Unlike shiny gold or silver pieces that could be mass-produced anywhere, oxidized tribal, floral, and Rajasthani-motif pieces carry an irreplaceable cultural fingerprint. For boutiques in Berlin, Melbourne, Portland, and Paris, "handcrafted oxidized silver from Jaipur" is a powerful retail narrative that commands premium pricing.</p>
 <p>Wholesale prices for oxidized earrings range from $1.50–$4.50 per pair, with retail prices of $15–$45 — delivering excellent margins. The trick for buyers is sourcing pieces with consistent oxidization depth — pieces should be uniformly dark, not patchy, and should be coated with a sealant lacquer to prevent further oxidation in transit.</p>
 
 <h2>Trend 4: Minimalist Layering Jewellery</h2>
@@ -55,7 +55,7 @@ export const BLOG_BATCH_12 = [
 
 <h2>Sourcing Strategy for Trend-Aligned Buying</h2>
 <p>The most profitable wholesale buyers don't just react to trends — they anticipate them. Follow these sourcing strategies to stay ahead: First, monitor Pinterest Trends weekly — Pinterest data lags retail sales by 3–6 months, making it an excellent leading indicator of what will sell at retail in the coming season. Second, attend IIJS (India International Jewellery Show) in Mumbai each August — this is where Jaipur manufacturers preview their next season collections, giving you exclusive early access to trends before they hit mainstream wholesale portals. Third, follow key jewellery influencers in your target market — their content directly predicts what their boutique followers will order within 30–90 days.</p>
-<p>Working with a trusted Jaipur manufacturer like Gemora Global gives you an additional advantage: direct conversations with the production team about what designs are currently selling in volume to buyers in your target region. This real-time market intelligence is invaluable and not available through any B2B portal.</p>
+<p>Working with a trusted Jaipur manufacturer like <a href="/">Gemora Global</a> gives you an additional advantage: direct conversations with the production team about what designs are currently selling in volume to buyers in your target region. This real-time market intelligence is invaluable and not available through any B2B portal.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -81,7 +81,7 @@ export const BLOG_BATCH_12 = [
 
 <p><strong>Q11: Which trends are emerging for late 2026 and early 2027?</strong><br/>A: Watch for: (1) Mother-of-pearl inlay jewellery, (2) Mismatched earring sets, (3) Ear cuff stacks, (4) Sustainable brass with visible hammer texture. These are gaining traction on Pinterest and Instagram in Q1 2026.</p>
 
-<p><strong>Q12: What is the best platform to reach boutique buyers interested in trend jewellery?</strong><br/>A: Faire.com is currently the most effective B2B platform for reaching boutique buyers in the USA, UK, and Australia who are specifically looking for trend-forward wholesale jewellery. Pair it with an active Instagram presence for maximum reach.</p>
+<p><strong>Q12: What is the best platform to reach boutique buyers interested in trend jewellery?</strong><br/>A: Faire.com is currently the most effective B2B platform for reaching boutique buyers in the USA, UK, and Australia who are specifically looking for trend-forward <a href="/wholesale">Wholesale Jewellery</a>. Pair it with an active Instagram presence for maximum reach.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our latest trend catalogue and wholesale pricing. <a href="/products">Browse our full product range</a> or explore <a href="/wholesale">wholesale terms</a>.</p>
     `,

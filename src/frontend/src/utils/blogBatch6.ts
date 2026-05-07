@@ -32,7 +32,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Personalised and initial jewellery</strong> — Name plates, zodiac pieces, and custom charms.</li>
   <li><strong>Ethnic-Western fusion</strong> — Kundan and meenakari designs with contemporary silhouettes for the diaspora market.</li>
 </ul>
-<p>At Gemora Global, we manufacture all of the above categories with wholesale MOQ from 50 units. Explore our <a href="/collections/trendy-jewelry">trendy jewellery collections</a> and request your 2026 wholesale catalogue today.</p>
+<p>At <a href="/">Gemora Global</a>, we manufacture all of the above categories with wholesale MOQ from 50 units. Explore our <a href="/collections/trendy-jewelry">trendy jewellery collections</a> and request your 2026 wholesale catalogue today.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -60,7 +60,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Southeast Asia</strong> — Korean-inspired small hoops, threader earrings, and delicate cluster earrings.</li>
 </ul>
 <p>Other fast-growing styles include ear cuffs (no-pierce option driving impulse buys), tassel drop earrings for festival season, and asymmetric statement pieces for fashion-forward markets. Threading and pulling earrings are popular with younger buyers aged 18–30 in Western markets.</p>
-<p>Browse Gemora Global's full <a href="/collections/earrings">wholesale earrings range</a> with MOQ from 50 units per style.</p>
+<p>Browse <a href="/">Gemora Global</a>'s full <a href="/collections/earrings">wholesale earrings range</a> with MOQ from 50 units per style.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -90,7 +90,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Western markets — particularly the USA, UK, Australia, Canada, and Scandinavia — are the strongest buyers of minimal jewellery. These customers typically purchase multiple pieces per visit, as minimal items are easy to stack and style together. This makes the average order value significantly higher per customer than with statement jewellery.</p>
 <p>From a pricing perspective, minimal jewellery sits in the mid-range retail bracket (₹200–₹800 or $3–$12 wholesale) while carrying strong perceived value due to its design simplicity and premium feel when plated correctly.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 154,
@@ -120,7 +120,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Personalization</strong> — Initials, birthstones, zodiac signs, and custom engravings</li>
 </ul>
 <p>Top TikTok-viral Gen Z categories include tennis necklaces and bracelets (CZ stone line), huggie earrings in chunky styles, bold cuffs and arm candy stacks. Boutiques targeting Gen Z should display pieces as "curated sets" rather than individual items, enabling higher basket values and natural social sharing.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 155,
@@ -148,7 +148,7 @@ export const BLOG_BATCH_6 = [
   <li>Cute motifs — hearts, stars, bows, cherries, daisies</li>
   <li>Pearl accents combined with metal settings</li>
 </ul>
-<p>Indian manufacturers like Gemora Global produce Korean-inspired jewellery using thin wire craftsmanship, minimal finishing, and the specific delicate proportions that define this aesthetic. The category is particularly strong in Southeast Asia, where Korean cultural influence is highest, but demand is growing rapidly in Western markets too.</p>
+<p>Indian manufacturers like <a href="/">Gemora Global</a> produce Korean-inspired jewellery using thin wire craftsmanship, minimal finishing, and the specific delicate proportions that define this aesthetic. The category is particularly strong in Southeast Asia, where Korean cultural influence is highest, but demand is growing rapidly in Western markets too.</p>
 <p>Explore our <a href="/collections/korean-jewelry">Korean-inspired jewellery wholesale collection</a> with MOQ from 50 units.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
@@ -178,7 +178,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Top-selling luxury-look categories include tennis necklaces and bracelets with CZ stone lines, chunky link chains (Cartier-inspired), statement cocktail rings, and oversized hoop earrings. The key differentiator from cheap imitation is craftsmanship detail — precise stone alignment, smooth finishes, and consistent plating depth.</p>
 <p>Boutiques that position these pieces correctly — premium display, story selling, quality certification — can achieve retail margins of 3–5x on luxury-look imitation jewellery.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 157,
@@ -207,7 +207,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Dress code considerations vary by market: UK corporate environments favour understated classic pieces; USA creative industries allow more expressive jewellery; UAE workplaces prefer tastefully modest designs with quality finishes. Healthcare and food industry workers specifically need lightweight, hygienic, and snag-free designs.</p>
 <p>Boutiques targeting professional women should stock office jewellery sets — curated combinations of earring + necklace + ring that can be sold as a coordinated work wardrobe set. Explore our <a href="/collections/minimalist-jewelry">minimalist jewellery collection</a> for wholesale office-appropriate styles.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 158,
@@ -237,7 +237,7 @@ export const BLOG_BATCH_6 = [
   <li>Woven macrame cord with metal accents</li>
 </ul>
 <p>Boho jewellery has strong seasonal peaks — summer, festival season, and beach holidays generate the highest volumes. Key markets include Australia (beach culture), USA West Coast, UK festival circuit (Glastonbury season), Brazil, South Africa, and Bali/Thailand tourism retail.</p>
-<p>India is the world's leading manufacturer of boho jewellery, particularly oxidised silver-look pieces, tribal motif designs, and natural material combinations. Gemora Global supplies boho-inspired wholesale collections with full customisation available from 100 units.</p>
+<p>India is the world's leading manufacturer of boho jewellery, particularly oxidised silver-look pieces, tribal motif designs, and natural material combinations. <a href="/">Gemora Global</a> supplies boho-inspired wholesale collections with full customisation available from 100 units.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -265,7 +265,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Australia/Canada</strong> — Beaded statement layers, colourful floral collars, and nature-inspired oversized pieces</li>
 </ul>
 <p>Styling considerations matter for statement necklace retail — showcasing pieces against specific necklines (V-neck vs crew neck vs off-shoulder) helps customers visualise and purchase. Occasion merchandising (party, wedding guest, office) also drives higher conversion in boutique settings.</p>
-<p>Browse Gemora Global's wholesale <a href="/collections/necklaces">necklace collection</a> with MOQ from 50 units per design.</p>
+<p>Browse <a href="/">Gemora Global</a>'s wholesale <a href="/collections/necklaces">necklace collection</a> with MOQ from 50 units per design.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -282,7 +282,7 @@ export const BLOG_BATCH_6 = [
     image:
       "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&h=500&fit=crop",
     tags: ["bridal jewellery", "trends", "export", "wedding"],
-    content: `<h2>Global Bridal Jewellery Export: 2025–2026 Trends</h2>
+    content: `<h2>Global Bridal <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>: 2025–2026 Trends</h2>
 <p>The South Asian wedding industry is experiencing unprecedented global growth. With large diaspora communities across the UK, USA, Canada, UAE, and Australia, demand for Indian bridal jewellery — both traditional and fusion — has never been stronger. For wholesale buyers, bridal jewellery represents the highest average order value category in fashion jewellery.</p>
 <h2>Trending Bridal Jewellery for 2025–2026</h2>
 <ul>
@@ -293,7 +293,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Statement maang tikka</strong> — Headpiece jewellery as the focal bridal accessory</li>
   <li><strong>Fusion bridal</strong> — Ethnic earrings paired with simple Western gown, or minimal meenakari with contemporary silhouettes</li>
 </ul>
-<p>Export markets for Indian bridal jewellery are clear: UK South Asian diaspora (largest market outside India), UAE (both resident South Asians and Arab brides drawn to Indian craftsmanship), USA (second-largest diaspora), and Canada. Wholesale bridal sets from Gemora Global include necklace, earring, maang tikka, and bangles, with custom packaging available.</p>
+<p>Export markets for Indian bridal jewellery are clear: UK South Asian diaspora (largest market outside India), UAE (both resident South Asians and Arab brides drawn to Indian craftsmanship), USA (second-largest diaspora), and Canada. Wholesale bridal sets from <a href="/">Gemora Global</a> include necklace, earring, maang tikka, and bangles, with custom packaging available.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

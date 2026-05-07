@@ -39,7 +39,7 @@ export const BLOG_BATCH_34 = [
 <h2>The Rise of 'Lab-Grown' and 'Alternative' Gems</h2>
 <p>In 2026, over 60% of US engagement rings feature a Lab-Grown diamond. This allows for a much larger, higher-quality stone within the same budget. We also see a surge in 'Alternative-Brides' choosing Sapphires, Emeralds, or Morganite for their center stone to add a personal 'Pop' of color and meaning to their ring.</p>
 
-<h2>Sourcing Engagement Rings from Gemora Global</h2>
+<h2>Sourcing Engagement Rings from <a href="/">Gemora Global</a></h2>
 <p>We understand that an engagement ring is more than just jewelry. Our 'Bridal-Line' is manufactured with extreme care in our Jaipur facility. We use the same high-precision setting and polishing techniques for our wholesale 'Fashion-Bridal' collections as we do for our custom 'Fine-Jewelry' orders. We help our B2B partners provide 'Dream-Rings' at an accessible price point, ensuring they are the #1 choice for the modern bride.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -89,7 +89,7 @@ export const BLOG_BATCH_34 = [
 <h2>Trend 5: 'Vintage-Revival' Millgrain Detail</h2>
 <p>Drawing on Art Deco and Victorian aesthetics, bands with 'Millgrain' (tiny metal beads along the edges) are huge for 2026. This detail adds a sense of history and 'Artisan-Quality' to a simple band, making it look like a precious family heirloom from day one.</p>
 
-<h2>Sourcing Wedding Bands from Gemora Global</h2>
+<h2>Sourcing Wedding Bands from <a href="/">Gemora Global</a></h2>
 <p>Wedding bands are our specialty. We offer a vast range of 'Ready-to-Ship' bands in every metal and style, as well as a 'Custom-Contour' service for our B2B partners. We help jewelry retailers build 'Bridal-Bar' collections that allow their customers to mix, match, and stack until they find their perfect set. Our bands are built for a lifetime of daily wear.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -138,7 +138,7 @@ export const BLOG_BATCH_34 = [
 <h2>Trend 5: Personalized 'Bridesmaid' Gift Jewelry</h2>
 <p>Bridal jewelry isn't just for the bride. In 2026, giving 'Coordinated' jewelry to the bridesmaids is a top-seller. 'Initial' necklaces or 'Birthstone' earrings that match the wedding color palette are the most popular choices. These serve as both a 'thank you' gift and a way to ensure the bridal party looks cohesive in photos.</p>
 
-<h2>Sourcing Bridal Collections from Gemora Global</h2>
+<h2>Sourcing Bridal Collections from <a href="/">Gemora Global</a></h2>
 <p>We offer a dedicated 'Bridal-B2B' collection that covers everything from 'Classic-Timeless' to 'Runway-Modern.' We use high-quality Moissanite, CZ, and Semi-Precious gems to create pieces that have the 'Fine-Jewelry-Glow' at a wholesale price that works for your retail margins. We help our partners curate 'Wedding-Ready' displays that attract brides and bridal parties year-round.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -188,7 +188,7 @@ export const BLOG_BATCH_34 = [
 <h2>Trend 5: 'Men's-Brooches' and Lapel Pins</h2>
 <p>A surprising and high-fashion trend for 2026 is the 'Groom-Brooch.' Instead of a floral boutonniere, many grooms are choosing a small, jeweled lapel pin or a vintage-style brooch. This adds a touch of 'Dandy-Sophistication' that looks incredible in wedding photos.</p>
 
-<h2>Sourcing Men's Collections from Gemora Global</h2>
+<h2>Sourcing Men's Collections from <a href="/">Gemora Global</a></h2>
 <p>We have seen the massive growth in men's jewelry first-hand. Our 'Groom-Line' includes everything from 'Comfort-Fit' bands in various metals to high-quality silver and gold-plated cufflinks. We help our wholesale partners tap into this lucrative market by providing men's jewelry that is 'Masculine,' 'Durable,' and 'High-Design.' The modern groom is a sophisticated customer, and we have the products to match his expectations.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -250,7 +250,7 @@ export const BLOG_BATCH_34 = [
 <h2>Trend 2026: The 'Eternity-Stack'</h2>
 <p>A major trend for 2026 is the 'Anniversary-Stack.' instead of one big ring, couples are giving a new 'Thin-Eternity-Band' every 5 years. By the 25th anniversary, the bride has a stunning stack of 5 different bands that together tell the story of their journey. It's a romantic and visually beautiful tradition.</p>
 
-<h2>Sourcing Anniversary Collections from Gemora Global</h2>
+<h2>Sourcing Anniversary Collections from <a href="/">Gemora Global</a></h2>
 <p>We help our wholesale partners build 'Anniversary-Ready' displays. We provide the variety of gemstones and metals required to cover every milestone, from the affordable 'Early-Year' gifts to the high-end 'Investment' pieces for the 25th and 50th. Our goal is to help you be the 'Family-Jeweler' for your customers, celebrating every year of their love story with them.</p>
 
 <h2>Frequently Asked Questions</h2>

@@ -13,7 +13,7 @@ export const BLOG_BATCH_46 = [
     tags: ["conflict free diamonds", "kimberley process", "ethical jewelry", "diamond sourcing", "B2B ethics"],
     content: `<h2>The Evolution of Accountability</h2>
 <p>In the jewelry world of 2026, 'Conflict-Free' is no longer just a marketing buzzword—it's a 'License-to-Operate.' For decades, the **Kimberley Process (KP)** was the only shield against 'Blood Diamonds.' But as the global consumer becomes more sophisticated and demands transparency, we've realized that KP—while a good start—has gaps. In 2026, 'Truly-Ethical' sourcing means looking beyond just 'Conflict' to environmental impact, fair wages, and community support. It's about a 'Holistic-Accountability' that spans the entire supply chain.</p>
-<p>At Gemora Global, we are leaders in transparent sourcing. We're breaking down the 2026 standards for 'Diamond-Integrity.'</p>
+<p>At <a href="/">Gemora Global</a>, we are leaders in transparent sourcing. We're breaking down the 2026 standards for 'Diamond-Integrity.'</p>
 
 <h2>What is the Kimberley Process (KP)?</h2>
 <p>Established in 2003, the KP is a joint initiative between governments, the industry, and civil society to stem the flow of 'Conflict-Diamonds'—rough diamonds used by rebel movements to finance wars against legitimate governments. It uses a 'System-of-Warranties' to track diamonds from the mine to the border of the country of origin. In 2026, over 99% of diamonds are KP-certified.</p>
@@ -62,7 +62,7 @@ export const BLOG_BATCH_46 = [
     tags: ["recycled gold", "fairmined gold", "ethical jewelry", "sustainable gold", "B2B guide"],
     content: `<h2>The Standard for the Soul</h2>
 <p>Gold is eternal. It can be melted down and repurposed an infinite number of times without losing its purity. But in the 2026 jewelry market, the 'Origin' of that gold is the #1 concern for the 'Ethical-Consumer.' The choice usually comes down to two paths: **Recycled Gold** or **Fairmined Gold**. Both are vastly better than 'Standard-Mined' gold, but they solve different problems. One focuses on 'Environmental-Efficiency,' while the other focuses on 'Social-Justice.' Understanding the difference is key to building an 'Impact-First' jewelry brand.</p>
-<p>At Gemora Global, we offer both. We're breaking down the 'Golden-Choice' for the 2026 market.</p>
+<p>At <a href="/">Gemora Global</a>, we offer both. We're breaking down the 'Golden-Choice' for the 2026 market.</p>
 
 <h2>Recycled Gold: The Environmental Champion</h2>
 <p>Recycled gold is sourced from existing jewelry, industrial waste, and electronics. It is refined back to 24k and then re-alloyed.
@@ -110,7 +110,7 @@ export const BLOG_BATCH_46 = [
     tags: ["sustainable gemstones", "gemstone sourcing", "transparent supply chain", "ethical jewelry", "B2B guide"],
     content: `<h2>The Rainbow of Responsibility</h2>
 <p>While diamonds have the Kimberley Process, the world of 'Colored-Gemstones' (Sapphires, Emeralds, Rubies, and more) is traditionally more fragmented and difficult to trace. However, in the jewelry market of 2026, the demand for 'Traceability' has led to a revolution in the way colored gems are sourced. From 'Community-Mining' in Madagascar to 'Green-Cutting' in Jaipur, the industry is moving toward a model where the 'Story' of the stone is as important as its 'Hue.' A sustainable gemstone is one that supports the people who found it and the earth it came from.</p>
-<p>At Gemora Global, we are pioneers in 'Transparent-Color.' We're breaking down the 2026 journey from mine to market.</p>
+<p>At <a href="/">Gemora Global</a>, we are pioneers in 'Transparent-Color.' We're breaking down the 2026 journey from mine to market.</p>
 
 <h2>The 'Community-Mining' Model</h2>
 <p>In 2026, the 'Ethical-Gold-Standard' for colored gems is the **Community-Led** mine. These are small, artisanal operations where the local community owns the mining rights and keeps the majority of the profit. Programs like 'Gem-Fair' and 'Virtu-Gems' ensure these miners have safe equipment, healthcare, and direct access to the global market, cutting out the middle-men who traditionally took most of the value.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_46 = [
     tags: ["environmental impact", "sustainable jewelry", "responsible shopping", "carbon footprint", "B2B guide"],
     content: `<h2>The Footprint of the Finery</h2>
 <p>A single gold ring or a one-carat diamond can tell a story of beauty and love, but it also carries an 'Environmental-Legacy.' From the massive amounts of earth moved during mining to the water and chemicals used in refining, the traditional jewelry industry has a significant footprint. In 2026, the 'Conscious-Consumer' is asking: 'What is the true cost of my sparkle?' Understanding the environmental impact of your jewelry isn't about feeling guilty; it's about having the knowledge to make 'Earth-First' choices that support a cleaner, greener future.</p>
-<p>At Gemora Global, we are committed to 'Low-Impact-Luxury.' We're breaking down the 2026 guide to responsible jewelry shopping.</p>
+<p>At <a href="/">Gemora Global</a>, we are committed to 'Low-Impact-Luxury.' We're breaking down the 2026 guide to responsible jewelry shopping.</p>
 
 <h2>The 'Big Three' Environmental Challenges</h2>
 <p><ul>
@@ -213,7 +213,7 @@ export const BLOG_BATCH_46 = [
     tags: ["blockchain jewelry", "traceability", "jewelry technology", "provenance proof", "B2B tech"],
     content: `<h2>The Immutable Story</h2>
 <p>In the traditional jewelry industry, a gemstone might pass through twenty hands between the mine and the consumer, with the 'Story' of its origin often getting lost or 'Muddied' along the way. In the world of 2026, we have a solution: **Blockchain**. By creating a digital, unhackable record of every step in a gemstone's journey, we can provide the 'Ultimate-Proof' of its origin, ethics, and value. It's the end of 'Guesswork' and the beginning of 'Absolute-Transparency.' Blockchain is the digital armor that protects both the consumer and the honest manufacturer.</p>
-<p>At Gemora Global, we are tech-forward. We're breaking down how blockchain is changing the jewelry world in 2026.</p>
+<p>At <a href="/">Gemora Global</a>, we are tech-forward. We're breaking down how blockchain is changing the jewelry world in 2026.</p>
 
 <h2>What is Blockchain (In Jewelry Terms)?</h2>
 <p>Think of it as a 'Digital-Passport' for a diamond or gemstone. When a stone is found at the mine, a 'Block' of data is created (time, date, weight, photo). Every time the stone moves (to the cutter, the grader, the jeweler), a new block is added. These blocks are 'Chained' together with cryptographic security. No one can go back and change the data. If a stone says it came from a specific ethical mine in Canada, the blockchain provides 'Immutable-Proof' of that claim.</p>
