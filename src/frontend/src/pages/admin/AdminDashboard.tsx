@@ -33,16 +33,19 @@ export default function AdminDashboard() {
     enabled: true,
   });
 
-  const { data: products } = useQuery<Product[]>({
+  const { data: productsRes } = useQuery({
     queryKey: ["products", null],
     queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
+  const products = productsRes?.items || [];
 
   const orders = (() => {
     try {
       const s = localStorage.getItem("gemora_orders");
-      return s ? (JSON.parse(s) as Array<{ status: string }>) : [];
+      if (!s) return [];
+      const parsed = JSON.parse(s);
+      return Array.isArray(parsed) ? (parsed as Array<{ status: string }>) : [];
     } catch {
       return [];
     }

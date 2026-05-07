@@ -63,11 +63,12 @@ export default function AdminBlog() {
     useStorageUpload();
   const imageFileRef = useRef<HTMLInputElement>(null);
 
-  const { data: posts = [] } = useQuery({
+  const { data: postsRes } = useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
     enabled: true,
   });
+  const posts = postsRes?.items || [];
 
   const invalidate = () => {
     qc.invalidateQueries({ queryKey: ["blogPosts"] });
@@ -83,18 +84,18 @@ export default function AdminBlog() {
       });
       const wordCount = form.content.split(" ").length;
       const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
-      return api.createBlogPost(
-        generateSlug(form.title),
-        form.title,
-        form.category,
-        form.excerpt,
-        form.author,
-        form.date || now,
+      return api.createBlogPost({
+        slug: generateSlug(form.title),
+        title: form.title,
+        category: form.category,
+        excerpt: form.excerpt,
+        author: form.author,
+        date: form.date || now,
         readTime,
-        form.status,
-        form.image,
-        form.content,
-      );
+        status: form.status,
+        image: form.image,
+        content: form.content,
+      });
     },
     onSuccess: () => {
       toast.success("Post published");
@@ -108,19 +109,18 @@ export default function AdminBlog() {
     mutationFn: () => {
       const wordCount = form.content.split(" ").length;
       const readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min read`;
-      return api.updateBlogPost(Number(
-        editId!),
-        generateSlug(form.title),
-        form.title,
-        form.category,
-        form.excerpt,
-        form.author,
-        form.date,
+      return api.updateBlogPost(Number(editId!), {
+        slug: generateSlug(form.title),
+        title: form.title,
+        category: form.category,
+        excerpt: form.excerpt,
+        author: form.author,
+        date: form.date,
         readTime,
-        form.status,
-        form.image,
-        form.content,
-      );
+        status: form.status,
+        image: form.image,
+        content: form.content,
+      });
     },
     onSuccess: () => {
       toast.success("Post updated");

@@ -19,7 +19,7 @@ export default function ProductDetail() {
 
   const { data, isLoading } = useQuery({
     queryKey: ["product", id],
-    queryFn: () => api.getProductById(id),
+    queryFn: () => api.getProduct(id as string),
     enabled: !!id,
   });
 

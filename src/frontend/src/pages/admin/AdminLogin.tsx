@@ -4,11 +4,10 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { useActor } from "../../hooks/useActor";
+import api from "../../lib/api";
 
 export default function AdminLogin() {
   const navigate = useNavigate();
-  const { actor } = useActor();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -18,8 +17,13 @@ export default function AdminLogin() {
     e.preventDefault();
     setLoading(true);
     try {
-      const success = await actor.verifyAdminLogin(username, password);
-      if (success) {
+      const result = await api.login(username, password);
+      if (result?.success && result?.token) {
+        // Store token for API calls
+        sessionStorage.setItem("adminToken", result.token);
+        localStorage.setItem("admin_token", result.token);
+        // Mark session as authenticated (used by AdminGuard)
+        sessionStorage.setItem("adminSession", "true");
         navigate("/admin");
       } else {
         toast.error("Invalid username or password.");

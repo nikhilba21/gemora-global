@@ -126,11 +126,12 @@ export default function AdminProducts() {
   const [bulkDeleteConfirm, setBulkDeleteConfirm] = useState(false);
   const [bulkActioning, setBulkActioning] = useState(false);
 
-  const { data: products } = useQuery<Product[]>({
+  const { data: productsRes } = useQuery({
     queryKey: ["products", null],
     queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
+  const products = productsRes?.items || [];
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
     queryFn: () => api.getCategories(),
@@ -249,19 +250,19 @@ export default function AdminProducts() {
 
   const createMutation = useMutation({
     mutationFn: () =>
-      api.createProduct(
-        BigInt(form.categoryId || "0"),
-        form.name,
-        form.description,
-        form.moq,
-        form.imageUrls,
-        form.featured,
-        form.isNewArrival,
-        form.sku || null,
-        form.subcategory || null,
-        form.color || null,
-        form.keyFeatures || null,
-      ),
+      api.createProduct({
+        categoryId: Number(form.categoryId || "0"),
+        name: form.name,
+        description: form.description,
+        moq: form.moq,
+        imageUrls: form.imageUrls,
+        featured: form.featured,
+        isNewArrival: form.isNewArrival,
+        sku: form.sku || undefined,
+        subcategory: form.subcategory || undefined,
+        color: form.color || undefined,
+        keyFeatures: form.keyFeatures || undefined,
+      }),
     onSuccess: () => {
       toast.success("Product created");
       setOpen(false);
@@ -272,20 +273,19 @@ export default function AdminProducts() {
 
   const updateMutation = useMutation({
     mutationFn: () =>
-      api.updateProduct(Number(
-        editing!.id),
-        BigInt(form.categoryId || "0"),
-        form.name,
-        form.description,
-        form.moq,
-        form.imageUrls,
-        form.featured,
-        form.isNewArrival,
-        form.sku || null,
-        form.subcategory || null,
-        form.color || null,
-        form.keyFeatures || null,
-      ),
+      api.updateProduct(Number(editing!.id), {
+        categoryId: Number(form.categoryId || "0"),
+        name: form.name,
+        description: form.description,
+        moq: form.moq,
+        imageUrls: form.imageUrls,
+        featured: form.featured,
+        isNewArrival: form.isNewArrival,
+        sku: form.sku || undefined,
+        subcategory: form.subcategory || undefined,
+        color: form.color || undefined,
+        keyFeatures: form.keyFeatures || undefined,
+      }),
     onSuccess: () => {
       toast.success("Product updated");
       setOpen(false);

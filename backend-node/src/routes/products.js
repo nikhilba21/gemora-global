@@ -24,14 +24,14 @@ function parse(p) {
 
 router.get('/featured', async (req, res) => {
   try {
-    const r = await query('SELECT * FROM products WHERE featured=1 ORDER BY "createdAt" DESC');
+    const r = await query('SELECT * FROM products WHERE featured=true ORDER BY "createdAt" DESC');
     res.json(r.rows.map(parse));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 router.get('/new-arrivals', async (req, res) => {
   try {
-    const r = await query('SELECT * FROM products WHERE "isNewArrival"=1 ORDER BY "createdAt" DESC LIMIT 8');
+    const r = await query('SELECT * FROM products WHERE "isNewArrival"=true ORDER BY "createdAt" DESC LIMIT 8');
     if (r.rows.length) return res.json(r.rows.map(parse));
     const fallback = await query('SELECT * FROM products ORDER BY "createdAt" DESC LIMIT 8');
     res.json(fallback.rows.map(parse));
@@ -54,8 +54,8 @@ router.get('/', async (req, res) => {
       }
     }
     if (subcategory) { params.push(subcategory); sql += ` AND subcategory=$${params.length}`; }
-    if (featured==='true') sql += ' AND featured=1';
-    if (newArrivals==='true') sql += ' AND "isNewArrival"=1';
+    if (featured==='true') sql += ' AND featured=true';
+    if (newArrivals==='true') sql += ' AND "isNewArrival"=true';
     sql += ' ORDER BY "createdAt" DESC';
 
     if (page !== undefined && pageSize !== undefined) {
@@ -81,10 +81,10 @@ router.get('/:id', async (req, res) => {
     if (!isNaN(id)) {
       r = await query('SELECT * FROM products WHERE id=$1', [id]);
     }
-    if (!r?.rows[0]) {
+    if (!r || !r.rows || !r.rows[0]) {
       // slug lookup
       const all = await query('SELECT * FROM products');
-      const match = all.rows.find(p => p.name.toLowerCase().replace(/ /g,'-') === id);
+      const match = all.rows.find(p => p.name?.toLowerCase()?.replace(/ /g,'-') === id);
       if (match) return res.json(parse(match));
       return res.status(404).json({ error: 'Not found' });
     }

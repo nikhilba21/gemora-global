@@ -20,11 +20,12 @@ export default function ImitationJewellerySupplierUsa() {
         { name: "Imitation Jewellery Supplier USA — Factory Direct from Jaipur, India", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" },
       ]}
       faqs={[
-        { question: "Do you export to USA?", answer: "Yes, Gemora Global regularly exports wholesale jewellery to USA. We provide full export documentation, competitive pricing, and reliable shipping via DHL/FedEx." },
-        { question: "What is the MOQ for wholesale orders?", answer: "Minimum order quantity is 50 units per design. Mix designs allowed for larger orders." },
-        { question: "How long does delivery take?", answer: "Standard DHL delivery takes 5-8 business days. Express options available." },
-        { question: "Do you provide export documentation?", answer: "Yes. We provide commercial invoice, packing list, certificate of origin, and all required export documents for smooth customs clearance." },
+        { q: "Do you export to USA?", a: "Yes, Gemora Global regularly exports wholesale jewellery to USA. We provide full export documentation, competitive pricing, and reliable shipping via DHL/FedEx." },
+        { q: "What is the MOQ for wholesale orders?", a: "Minimum order quantity is 50 units per design. Mix designs allowed for larger orders." },
+        { q: "How long does delivery take?", a: "Standard DHL delivery takes 5-8 business days. Express options available." },
+        { q: "Do you provide export documentation?", a: "Yes. We provide commercial invoice, packing list, certificate of origin, and all required export documents for smooth customs clearance." },
       ]}
+          bodyContent={<></>}
     />
   );
 }

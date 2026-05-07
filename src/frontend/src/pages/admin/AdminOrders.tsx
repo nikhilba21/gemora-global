@@ -174,7 +174,9 @@ export default function AdminOrders() {
   const [orders, setOrders] = useState<Order[]>(() => {
     try {
       const saved = localStorage.getItem("gemora_orders");
-      return saved ? (JSON.parse(saved) as Order[]) : SAMPLE_ORDERS;
+      if (!saved) return SAMPLE_ORDERS;
+      const parsed = JSON.parse(saved);
+      return Array.isArray(parsed) ? (parsed as Order[]) : SAMPLE_ORDERS;
     } catch {
       return SAMPLE_ORDERS;
     }

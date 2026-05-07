@@ -22,11 +22,11 @@ export default function GoldPlatedJewelleryWholesale() {
         { name: "Gold Plated Jewellery Wholesale", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
       ]}
       faqs={[
-        { question: "What is the difference between 1 micron and 2 micron gold plating?", answer: "1 micron gold plating is standard and lasts 6–12 months with proper care. 2 micron gold plating is thicker, lasts 12–24 months, and is recommended for bridal and premium jewellery lines. Gemora Global offers both options." },
-        { question: "Is your gold plated jewellery anti-tarnish?", answer: "Yes. All our gold plated jewellery is treated with an anti-tarnish lacquer coating after plating. This significantly extends the shelf life and maintains the gold finish even in humid conditions." },
-        { question: "What is the MOQ for gold plated jewellery wholesale?", answer: "Minimum order is 50 pieces per design. For mixed orders across multiple designs, the total order value minimum is ₹5,000 (approximately $60 USD)." },
-        { question: "Which base metal do you use for gold plating?", answer: "We use brass and zinc alloy (zamak) as base metals, both of which are industry standard for high-quality gold plated fashion jewellery." },
-        { question: "How do I place a wholesale order?", answer: "Submit an inquiry through our website with your design requirements, quantity, and destination country. Our team will respond with pricing and lead time within 24 hours." },
+        { q: "What is the difference between 1 micron and 2 micron gold plating?", a: "1 micron gold plating is standard and lasts 6–12 months with proper care. 2 micron gold plating is thicker, lasts 12–24 months, and is recommended for bridal and premium jewellery lines. Gemora Global offers both options." },
+        { q: "Is your gold plated jewellery anti-tarnish?", a: "Yes. All our gold plated jewellery is treated with an anti-tarnish lacquer coating after plating. This significantly extends the shelf life and maintains the gold finish even in humid conditions." },
+        { q: "What is the MOQ for gold plated jewellery wholesale?", a: "Minimum order is 50 pieces per design. For mixed orders across multiple designs, the total order value minimum is ₹5,000 (approximately $60 USD)." },
+        { q: "Which base metal do you use for gold plating?", a: "We use brass and zinc alloy (zamak) as base metals, both of which are industry standard for high-quality gold plated fashion jewellery." },
+        { q: "How do I place a wholesale order?", a: "Submit an inquiry through our website with your design requirements, quantity, and destination country. Our team will respond with pricing and lead time within 24 hours." },
       ]}
       bodyContent={
         <>

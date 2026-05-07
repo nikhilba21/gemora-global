@@ -49,22 +49,29 @@ export default function BlogPostPage() {
 
   const { data: backendPost, isLoading: backendLoading } = useQuery({
     queryKey: ["blogPost", slug],
-    queryFn: () => api.getBlogPost(slug),
+    queryFn: async () => {
+      try {
+        const result = await api.getBlogPost(slug);
+        return result;
+      } catch {
+        // 404 or any error — treat as "not found"
+        return null;
+      }
+    },
     enabled: !!slug && !defaultPost,
     select: (data) => {
-      // backend.d.ts: getBlogPost returns BlogPost | null
       if (data === null || data === undefined) return null;
-      // Handle legacy [] | [BlogPost] encoding just in case
       if (Array.isArray(data)) return data[0] ?? null;
       return data;
     },
   });
 
-  const { data: allBackendPosts = [] } = useQuery({
+  const { data: allBackendPostsRes } = useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
     enabled: true,
   });
+  const allBackendPosts = allBackendPostsRes?.items || [];
 
   const post: BlogPost | null = (backendPost as BlogPost | null) ?? defaultPost;
   const isLoading = backendLoading && !defaultPost;
@@ -82,13 +89,13 @@ export default function BlogPostPage() {
   usePageSEO({
     title: post ? `${post.title} | Gemora Global` : "Blog | Gemora Global",
     description: post
-      ? post.excerpt.slice(0, 155)
+      ? (post.excerpt || '').slice(0, 155)
       : "Read the latest insights on imitation jewellery trends, wholesale sourcing, and export tips from Gemora Global.",
     canonical: post
       ? `https://www.gemoraglobal.co/blog/${post.slug}`
       : "https://www.gemoraglobal.co/blog",
     ogTitle: post ? post.title : "Blog | Gemora Global",
-    ogDescription: post ? post.excerpt.slice(0, 155) : undefined,
+    ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage:
       post?.image ||
       "https://www.gemoraglobal.co/images/og-banner.jpg",
@@ -108,7 +115,7 @@ export default function BlogPostPage() {
           "@type": "BlogPosting",
           headline: post.title,
           name: post.title,
-          description: post.excerpt.slice(0, 155),
+          description: (post.excerpt || '').slice(0, 155),
           datePublished: post.date || new Date().toISOString().split("T")[0],
           dateModified: post.date || new Date().toISOString().split("T")[0],
           author: {
@@ -156,7 +163,7 @@ export default function BlogPostPage() {
 
   if (!post) return <Navigate to="/blog" replace />;
 
-  const isHtmlContent = post.content.includes("<");
+  const isHtmlContent = post.content?.includes("<") ?? false;
 
   return (
     <div className="min-h-screen bg-background text-foreground">

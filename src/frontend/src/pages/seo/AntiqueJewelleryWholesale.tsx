@@ -19,11 +19,11 @@ export default function AntiqueJewelleryWholesale() {
         { name: "Antique Jewellery Wholesale", url: "https://www.gemoraglobal.co/antique-jewellery-wholesale-india" },
       ]}
       faqs={[
-        { question: "What is antique jewellery in wholesale context?", answer: "Antique jewellery refers to fashion jewellery with an aged, vintage appearance achieved through oxidised plating — typically in dark silver or aged gold finish. Popular in boho, ethnic, and traditional jewellery markets." },
-        { question: "What materials are used in antique jewellery wholesale?", answer: "We use brass base metal and zinc alloy (zamak) with oxidised silver plating, German silver, or antique gold finish. Some designs incorporate stone setting with kundan, meenakari, and semi-precious stones." },
-        { question: "Is antique jewellery the same as oxidised jewellery?", answer: "They are closely related. Oxidised jewellery specifically refers to pieces with a chemically darkened silver finish. Antique jewellery is a broader term that includes oxidised, aged gold, and vintage-look finishes." },
-        { question: "What is the MOQ for antique jewellery wholesale?", answer: "Minimum 50 units per design. Mixed designs welcome for orders above 200 total pieces." },
-        { question: "Which markets have highest demand for antique jewellery?", answer: "UK, USA (boho market), Australia, and Middle East markets have strong demand for antique and oxidised jewellery. Indian diaspora communities worldwide also drive significant demand." },
+        { q: "What is antique jewellery in wholesale context?", a: "Antique jewellery refers to fashion jewellery with an aged, vintage appearance achieved through oxidised plating — typically in dark silver or aged gold finish. Popular in boho, ethnic, and traditional jewellery markets." },
+        { q: "What materials are used in antique jewellery wholesale?", a: "We use brass base metal and zinc alloy (zamak) with oxidised silver plating, German silver, or antique gold finish. Some designs incorporate stone setting with kundan, meenakari, and semi-precious stones." },
+        { q: "Is antique jewellery the same as oxidised jewellery?", a: "They are closely related. Oxidised jewellery specifically refers to pieces with a chemically darkened silver finish. Antique jewellery is a broader term that includes oxidised, aged gold, and vintage-look finishes." },
+        { q: "What is the MOQ for antique jewellery wholesale?", a: "Minimum 50 units per design. Mixed designs welcome for orders above 200 total pieces." },
+        { q: "Which markets have highest demand for antique jewellery?", a: "UK, USA (boho market), Australia, and Middle East markets have strong demand for antique and oxidised jewellery. Indian diaspora communities worldwide also drive significant demand." },
       ]}
       bodyContent={
         <>

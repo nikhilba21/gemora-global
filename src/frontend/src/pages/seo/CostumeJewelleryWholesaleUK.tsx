@@ -20,11 +20,11 @@ export default function CostumeJewelleryWholesaleUK() {
         { name: "Costume Jewellery Wholesale UK", url: "https://www.gemoraglobal.co/costume-jewellery-wholesale-uk" },
       ]}
       faqs={[
-        { question: "Can UK businesses buy costume jewellery wholesale from India?", answer: "Yes. UK boutiques and retailers regularly import Indian costume jewellery wholesale. Import duties from India to UK post-Brexit are 2.5–4% for fashion jewellery (HS code 7117). Gemora Global provides all required export documentation for smooth UK customs clearance." },
-        { question: "How long does delivery take from India to UK?", answer: "Standard DHL delivery from India to UK takes 5–8 business days. Express options (3–5 days) are available at additional cost. We ship from Jaipur every Monday and Thursday." },
-        { question: "What are UK customs rules for importing costume jewellery?", answer: "UK import duty on imitation jewellery (HS 7117) is approximately 2.5–4%. VAT at 20% is charged on import value plus duty. For orders above £135, import VAT must be paid. We provide commercial invoice with accurate HS codes for all UK shipments." },
-        { question: "Do you offer nickel-free jewellery for the UK market?", answer: "Yes. The UK and EU have strict nickel regulations. We offer nickel-free costume jewellery collections specifically for UK and European markets. All pieces are tested for nickel content compliance." },
-        { question: "What is the minimum order for UK buyers?", answer: "Minimum order is 50 pieces for UK buyers. For first-time orders, we recommend a sample order of 10–20 pieces (available at retail pricing) before placing a wholesale order." },
+        { q: "Can UK businesses buy costume jewellery wholesale from India?", a: "Yes. UK boutiques and retailers regularly import Indian costume jewellery wholesale. Import duties from India to UK post-Brexit are 2.5–4% for fashion jewellery (HS code 7117). Gemora Global provides all required export documentation for smooth UK customs clearance." },
+        { q: "How long does delivery take from India to UK?", a: "Standard DHL delivery from India to UK takes 5–8 business days. Express options (3–5 days) are available at additional cost. We ship from Jaipur every Monday and Thursday." },
+        { q: "What are UK customs rules for importing costume jewellery?", a: "UK import duty on imitation jewellery (HS 7117) is approximately 2.5–4%. VAT at 20% is charged on import value plus duty. For orders above £135, import VAT must be paid. We provide commercial invoice with accurate HS codes for all UK shipments." },
+        { q: "Do you offer nickel-free jewellery for the UK market?", a: "Yes. The UK and EU have strict nickel regulations. We offer nickel-free costume jewellery collections specifically for UK and European markets. All pieces are tested for nickel content compliance." },
+        { q: "What is the minimum order for UK buyers?", a: "Minimum order is 50 pieces for UK buyers. For first-time orders, we recommend a sample order of 10–20 pieces (available at retail pricing) before placing a wholesale order." },
       ]}
       bodyContent={
         <>

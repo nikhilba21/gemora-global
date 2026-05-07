@@ -61,6 +61,8 @@ function SidebarContent({ onNavClick }: { onNavClick?: () => void }) {
 
   const handleLogout = () => {
     sessionStorage.removeItem("adminSession");
+    sessionStorage.removeItem("adminToken");
+    localStorage.removeItem("admin_token");
     navigate("/admin/login");
     onNavClick?.();
   };

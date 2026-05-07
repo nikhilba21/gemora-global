@@ -22,11 +22,11 @@ export default function AmericanDiamondJewelleryWholesale() {
         { name: "American Diamond Jewellery Wholesale", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
       ]}
       faqs={[
-        { question: "What is American diamond jewellery?", answer: "American diamond jewellery uses cubic zirconia (CZ) stones that mimic the brilliance of real diamonds at a fraction of the cost. Popular in wholesale markets globally for their sparkle and affordability." },
-        { question: "What is the MOQ for American diamond jewellery wholesale?", answer: "Gemora Global's minimum order quantity for American diamond jewellery is 50 units per design. Mix-and-match across designs is available for larger orders." },
-        { question: "Do you export American diamond jewellery to the USA and UK?", answer: "Yes. We regularly export American diamond jewellery to the USA, UK, UAE, Australia, Canada, and 30+ other countries. Full export documentation including invoice, packing list, and certificate of origin provided." },
-        { question: "What plating options are available?", answer: "We offer gold plating (1 micron, 2 micron), rhodium plating (silver finish), and rose gold plating on American diamond pieces. All plating is anti-tarnish coated." },
-        { question: "Can I get custom designs in American diamond jewellery?", answer: "Yes. We accept custom design requests with a minimum of 100 units per custom design. Share your design references and we'll provide a sample within 15–20 days." },
+        { q: "What is American diamond jewellery?", a: "American diamond jewellery uses cubic zirconia (CZ) stones that mimic the brilliance of real diamonds at a fraction of the cost. Popular in wholesale markets globally for their sparkle and affordability." },
+        { q: "What is the MOQ for American diamond jewellery wholesale?", a: "Gemora Global's minimum order quantity for American diamond jewellery is 50 units per design. Mix-and-match across designs is available for larger orders." },
+        { q: "Do you export American diamond jewellery to the USA and UK?", a: "Yes. We regularly export American diamond jewellery to the USA, UK, UAE, Australia, Canada, and 30+ other countries. Full export documentation including invoice, packing list, and certificate of origin provided." },
+        { q: "What plating options are available?", a: "We offer gold plating (1 micron, 2 micron), rhodium plating (silver finish), and rose gold plating on American diamond pieces. All plating is anti-tarnish coated." },
+        { q: "Can I get custom designs in American diamond jewellery?", a: "Yes. We accept custom design requests with a minimum of 100 units per custom design. Share your design references and we'll provide a sample within 15–20 days." },
       ]}
       bodyContent={
         <>
