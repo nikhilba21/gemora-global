@@ -115,11 +115,12 @@ const PRODUCT_WHOLESALE = [
 export default function Wholesale() {
   const { content: pageContent } = usePageContent("wholesale");
 
-  const { data: products } = useQuery<Product[]>({
+  const { data: productsData } = useQuery({
     queryKey: ["products-wholesale"],
     queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
+  const products = productsData?.items ?? [];
 
   const { data: categories } = useQuery<Category[]>({
     queryKey: ["categories"],
