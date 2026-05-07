@@ -178,9 +178,9 @@ export default function Navbar() {
             onClick={closeMobile}
           >
             <img
-              src="/assets/uploads/logo-removebg-preview-1-1.png"
-              alt="Gemora Global"
-              className="h-9 sm:h-12 w-auto object-contain max-w-[140px] sm:max-w-[180px]"
+              src="/logo.png"
+              alt="Gemora Global Private Limited"
+              className="h-10 sm:h-14 w-auto object-contain max-w-[150px] sm:max-w-[200px]"
             />
           </Link>
 
@@ -392,9 +392,9 @@ export default function Navbar() {
             onClick={closeMobile}
           >
             <img
-              src="/assets/uploads/logo-removebg-preview-1-1.png"
-              alt="Gemora Global"
-              className="h-9 sm:h-12 w-auto object-contain max-w-[140px]"
+              src="/logo.png"
+              alt="Gemora Global Private Limited"
+              className="h-10 sm:h-14 w-auto object-contain max-w-[150px]"
             />
           </Link>
           <button
