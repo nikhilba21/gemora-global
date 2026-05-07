@@ -75,7 +75,7 @@ export const BLOG_BATCH_12 = [
 
 <p><strong>Q8: What's the lead time for custom trend pieces from Jaipur?</strong><br/>A: Standard designs: 7–14 days. New designs using existing molds: 14–21 days. Brand new mold + production: 30–45 days. Plan seasonal inventory 6–8 weeks ahead of your peak selling period.</p>
 
-<p><strong>Q9: Do Jaipur manufacturers update their designs frequently?</strong><br/>A: Top manufacturers like Gemora Global release 2 major collections per year (pre-summer and pre-holiday) plus smaller festival capsule collections. New designs are typically available for WhatsApp preview before official launch.</p>
+<p><strong>Q9: Do Jaipur manufacturers update their designs frequently?</strong><br/>A: Top manufacturers like <a href="/">Gemora Global</a> release 2 major collections per year (pre-summer and pre-holiday) plus smaller festival capsule collections. New designs are typically available for WhatsApp preview before official launch.</p>
 
 <p><strong>Q10: Can I order a mix of trend styles in one wholesale order?</strong><br/>A: Yes. Most Indian manufacturers accept mixed-category orders — you can combine Kundan, oxidized, CZ, and Meenakari pieces in one shipment, subject to the MOQ per design being met.</p>
 

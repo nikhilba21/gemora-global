@@ -245,7 +245,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q9: What is the 'Ouroboros'?</strong><br/>A: It's an ancient symbol of a snake eating its own tail, representing infinity and the cyclical nature of life. It's a very popular motif for rings and circular pendants.</p>
 <p><strong>Q10: Why is snake jewelry often associated with Cleopatra?</strong><br/>A: Queen Cleopatra of Egypt was famously associated with snakes, often wearing them as symbols of her divine power. This association has kept the serpent trend 'Regal' and 'Powerful' for millennia.</p>
 <p><strong>Q11: Are there 'Sustainable' snake designs?</strong><br/>A: At <a href="/">Gemora Global</a>, we use recycled metals for our casting, allowing you to offer these ancient symbols with a modern, eco-conscious conscience.</p>
-<p><strong>Q12: Can I get custom snake designs made?</strong><br/>A: Yes! We can help you design a unique serpent collection, from 'Cutesy' snakes to 'Gothic' vipers. Contact Gemora Global to discuss your ideas.</p>
+<p><strong>Q12: Can I get custom snake designs made?</strong><br/>A: Yes! We can help you design a unique serpent collection, from 'Cutesy' snakes to 'Gothic' vipers. Contact <a href="/">Gemora Global</a> to discuss your ideas.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our modern serpent collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

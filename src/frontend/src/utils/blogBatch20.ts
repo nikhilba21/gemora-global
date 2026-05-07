@@ -95,7 +95,7 @@ export const BLOG_BATCH_20 = [
 <p><strong>Q9: What are 'Ear Cuffs' and why are they good for festivals?</strong><br/>A: Ear cuffs don't require a piercing, so you can add a lot of 'drama' to your ear without the commitment. They are also less likely to fall out during active dancing.</p>
 <p><strong>Q10: Is festival jewelry sustainable?</strong><br/>A: At <a href="/">Gemora Global</a>, we encourage our partners to prioritize quality over 'single-use' festival fashion. By offering pieces that customers will want to wear again, we contribute to a more sustainable fashion cycle.</p>
 <p><strong>Q11: What's the 'Next Big' festival destination?</strong><br/>A: While Coachella and Glastonbury are the giants, 'Boutique' festivals in exotic locations like Bali, Mexico, and Thailand are where the most interesting new jewelry trends are emerging.</p>
-<p><strong>Q12: Can I get custom festival-branded jewelry?</strong><br/>A: Yes, Gemora Global can create custom collections for festivals or brands, including pieces featuring specific logos or event colors. Contact us for details.</p>
+<p><strong>Q12: Can I get custom festival-branded jewelry?</strong><br/>A: Yes, <a href="/">Gemora Global</a> can create custom collections for festivals or brands, including pieces featuring specific logos or event colors. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our ultimate festival collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -185,7 +185,7 @@ export const BLOG_BATCH_20 = [
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Why is personalized jewelry so popular for gifts?</strong><br/>A: It shows effort. A personalized piece can't be bought last-minute at a generic store; it requires knowing the recipient's name, birth date, or a special location, which makes the gift much more meaningful.</p>
-<p><strong>Q2: How long does custom engraving take?</strong><br/>A: At Gemora Global, we've streamlined our process so that simple custom engraving can be completed within 2-3 business days, ensuring you can meet your customers' needs quickly.</p>
+<p><strong>Q2: How long does custom engraving take?</strong><br/>A: At <a href="/">Gemora Global</a>, we've streamlined our process so that simple custom engraving can be completed within 2-3 business days, ensuring you can meet your customers' needs quickly.</p>
 <p><strong>Q3: Can I personalize pieces with symbols or emojis?</strong><br/>A: Yes! Modern laser-engraving can handle almost any graphic, from simple hearts and stars to more complex symbols and custom-designed icons.</p>
 <p><strong>Q4: What is a 'Monogram' and how is it different from an 'Initial'?</strong><br/>A: A monogram is a design made by overlapping or combining two or more letters (usually your initials). It's a more 'decorative' and 'traditional' way to personalize jewelry.</p>
 <p><strong>Q5: What's the best font for a nameplate necklace?</strong><br/>A: In 2026, 'Old English' (for a gothic look) and 'Sleek Serif' (for a luxury look) are the top choices. However, providing a range of options for your customers is always best.</p>

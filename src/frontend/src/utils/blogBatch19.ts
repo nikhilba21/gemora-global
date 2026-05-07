@@ -45,7 +45,7 @@ export const BLOG_BATCH_19 = [
 <p><strong>Q7: What is 'Aegyo-sal' jewelry?</strong><br/>A: While Aegyo-sal refers to the under-eye area in makeup, in jewelry, it sometimes refers to very subtle, delicate pieces that enhance one's natural features without overpowering them—a core tenet of the 'soft' Korean beauty look.</p>
 <p><strong>Q8: Is Korean jewelry high quality?</strong><br/>A: Like any market, it varies. However, the 'K-style' aesthetic prioritizes a high-end look. By sourcing from reputable manufacturers who use quality plating and stones, you can offer K-style pieces that are both beautiful and durable.</p>
 <p><strong>Q9: What are 'Midi Rings' and are they still trending?</strong><br/>A: Midi rings are worn above the knuckle. They were popularized in Korea and remain a staple of the 'ring party' stacking trend in 2026.</p>
-<p><strong>Q10: Can I get custom Korean-style designs made?</strong><br/>A: Yes, Gemora Global specializes in taking trend inspirations and turning them into custom wholesale orders. You can provide us with the 'K-style' references you love, and we can manufacture them to your specifications.</p>
+<p><strong>Q10: Can I get custom Korean-style designs made?</strong><br/>A: Yes, <a href="/">Gemora Global</a> specializes in taking trend inspirations and turning them into custom wholesale orders. You can provide us with the 'K-style' references you love, and we can manufacture them to your specifications.</p>
 <p><strong>Q11: Are pearls in K-style real or imitation?</strong><br/>A: Both are used. Higher-end K-style uses real freshwater pearls (often baroque), while more accessible fashion jewelry uses high-quality shell pearls or glass pearls with a realistic luster.</p>
 <p><strong>Q12: Why is the butterfly motif so common in Korean jewelry?</strong><br/>A: The butterfly represents transformation and delicate beauty. It's a recurring motif in Korean art and has become a signature element of the 'soft-feminine' K-style aesthetic.</p>
 
@@ -147,7 +147,7 @@ export const BLOG_BATCH_19 = [
 <p><strong>Q9: Is 'Mixed Metal' a celebrity trend?</strong><br/>A: Yes, many stars are now comfortably mixing gold and silver, or choosing 'two-tone' pieces that feature both. It creates a more layered, curated look.</p>
 <p><strong>Q10: Who are the most influential 'Jewelry Icons' of 2026?</strong><br/>A: It's no longer just Hollywood stars; K-Pop idols, viral TikTok creators, and even high-profile athletes are now setting the agenda for jewelry trends.</p>
 <p><strong>Q11: How quickly does a red carpet look hit the stores?</strong><br/>A: With modern manufacturing, a 'celebrity-inspired' version of a red carpet look can be in production within weeks of the event.</p>
-<p><strong>Q12: Can I request a custom 'celebrity-inspired' collection?</strong><br/>A: Yes, Gemora Global works with wholesale partners to create custom collections based on current fashion week and red carpet trends. Contact us for details.</p>
+<p><strong>Q12: Can I request a custom 'celebrity-inspired' collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> works with wholesale partners to create custom collections based on current fashion week and red carpet trends. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> to bring red carpet style to your customers. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -197,7 +197,7 @@ export const BLOG_BATCH_19 = [
 <p><strong>Q9: What is a 'Flat Lay' and is it still popular?</strong><br/>A: A flat lay is a photo taken from directly above, with the jewelry arranged on a flat surface alongside other aesthetic objects. It's still a very popular way to show 'lifestyle' context on Instagram.</p>
 <p><strong>Q10: How can I track my Instagram performance?</strong><br/>A: Use 'Instagram Insights' (available for business accounts) to see which posts are getting the most engagement, when your followers are most active, and where they are located.</p>
 <p><strong>Q11: What is 'Collaborative Posting'?</strong><br/>A: It's a feature that allows you to co-author a post with another account (like an influencer). The post appears on both feeds, doubling your reach.</p>
-<p><strong>Q12: How do I source 'Instagram-worthy' jewelry wholesale?</strong><br/>A: Gemora Global specializes in trend-forward, photogenic jewelry. Browse our online catalogue or contact us for a curated selection of our most 'social-ready' pieces.</p>
+<p><strong>Q12: How do I source 'Instagram-worthy' jewelry wholesale?</strong><br/>A: <a href="/">Gemora Global</a> specializes in trend-forward, photogenic jewelry. Browse our online catalogue or contact us for a curated selection of our most 'social-ready' pieces.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> to build your Instagram-worthy brand. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

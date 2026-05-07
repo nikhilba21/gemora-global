@@ -57,7 +57,7 @@ export const BLOG_BATCH_40 = [
 <p><strong>Q9: Can I wear 10k and 18k together?</strong><br/>A: Yes! However, remember that 18k is softer. If they rub against each other constantly, the 10k piece might scratch the 18k one over time.</p>
 <p><strong>Q10: What is 'Chiro' or 'Italian' Gold?</strong><br/>A: These are trade terms for specific design styles, but the karat (14k or 18k) remains the only measure of its purity.</p>
 <p><strong>Q11: What's the 'Next Big' gold trend?</strong><br/>A: 'Fairmined' and 'Recycled' gold—where the purity is guaranteed along with the ethical origin—is a major 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global manufacture in 22k?</strong><br/>A: Yes, we specialize in high-karat 22k gold for the traditional Indian and Middle-Eastern markets. Contact us to discuss your specific requirements.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> manufacture in 22k?</strong><br/>A: Yes, we specialize in high-karat 22k gold for the traditional Indian and Middle-Eastern markets. Contact us to discuss your specific requirements.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your premium gold collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -104,7 +104,7 @@ export const BLOG_BATCH_40 = [
 <p><strong>Q9: Why did my silver turn my skin green?</strong><br/>A: This is usually a reaction between the copper in the silver and the acids in your skin. It is harmless and happens more in humid environments. Choosing 'Rhodium-Plated' silver prevents this.</p>
 <p><strong>Q10: What is 'Hill-Tribe' Silver?</strong><br/>A: It's high-purity silver (99%+) handcrafted by tribes in Northern Thailand and India. It has a beautiful 'Rustic' look that is very popular in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' silver trend?</strong><br/>A: 'Recycled-Silver'—where the metal is sourced 100% from existing silver objects rather than new mining—is a major 2026 consumer demand.</p>
-<p><strong>Q12: Can Gemora Global manufacture custom silver designs?</strong><br/>A: Yes! We have a dedicated 'Small-Batch' silver department for boutique brands. Contact us to discuss your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> manufacture custom silver designs?</strong><br/>A: Yes! We have a dedicated 'Small-Batch' silver department for boutique brands. Contact us to discuss your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your brilliant silver collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -148,7 +148,7 @@ export const BLOG_BATCH_40 = [
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: How do I pronounce 'Vermeil'?</strong><br/>A: It is a French word pronounced **'ver-may.'**</p>
 <p><strong>Q2: Will Gold Vermeil turn my skin green?</strong><br/>A: No! Because the base is Sterling Silver and the gold layer is thick, there is no copper or nickel to react with your skin. It is the best choice for sensitive skin.</p>
-<p><strong>Q3: How long does the gold last?</strong><br/>A: With proper care, Gemora Global's 2.5-micron Vermeil can stay bright and golden for 2-5 years of daily wear. Standard 0.5-micron plating may only last 3-6 months.</p>
+<p><strong>Q3: How long does the gold last?</strong><br/>A: With proper care, <a href="/">Gemora Global</a>'s 2.5-micron Vermeil can stay bright and golden for 2-5 years of daily wear. Standard 0.5-micron plating may only last 3-6 months.</p>
 <p><strong>Q4: Can I shower in my Gold Vermeil?</strong><br/>A: We recommend against it. Soaps, shampoos, and chlorine can slowly wear down the gold layer. To maximize the life of your piece, 'Last On, First Off' is the golden rule.</p>
 <p><strong>Q5: What is a 'Micron'?</strong><br/>A: It's a unit of measurement (one-millionth of a meter). In jewelry, it measures the thickness of the gold plating. The higher the microns, the better the quality.</p>
 <p><strong>Q6: How do I clean Vermeil?</strong><br/>A: Only use a soft, dry cloth. **Never** use silver polish or jewelry cleaner, as these have chemicals designed to strip away tarnish, which will also strip away the gold layer.</p>
@@ -205,7 +205,7 @@ export const BLOG_BATCH_40 = [
 <p><strong>Q9: Which metal shows off a Diamond better?</strong><br/>A: Both are excellent. The 'White' background ensures there is no yellow reflection in the stone, making the diamond look whiter and more brilliant.</p>
 <p><strong>Q10: What is the '950' stamp?</strong><br/>A: It is the hallmark for Platinum, indicating 95% purity.</p>
 <p><strong>Q11: What's the 'Next Big' white metal trend?</strong><br/>A: 'Black-Platinum'—platinum that has been surface-treated to a deep, dark grey/black—is a major 2026 trend for men's wedding bands.</p>
-<p><strong>Q12: Can Gemora Global manufacture in 19k White Gold?</strong><br/>A: Yes! 19k White Gold is a 'Super-Premium' alloy that is incredibly white and hard. Contact us to learn more about our high-karat white gold options.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> manufacture in 19k White Gold?</strong><br/>A: Yes! 19k White Gold is a 'Super-Premium' alloy that is incredibly white and hard. Contact us to learn more about our high-karat white gold options.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your premium white metal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -258,7 +258,7 @@ export const BLOG_BATCH_40 = [
 <p><strong>Q9: Is Tantalum more expensive than Gold?</strong><br/>A: No, it is still much more affordable than gold, but it is the most 'Premium' priced of the alternative metal family.</p>
 <p><strong>Q10: Why are these called 'Contemporary Metals'?</strong><br/>A: Because their use in jewelry is a modern innovation, driven by the desire for 'Industrial' aesthetics and high-performance durability.</p>
 <p><strong>Q11: What's the 'Next Big' alternative metal trend?</strong><br/>A: 'Carbon Fiber' inlays—using high-tech carbon fiber patterns inside titanium or tantalum bands—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global manufacture 'Custom-Inlay' alternative bands?</strong><br/>A: Yes! We can help you develop a unique line of 'Hybrid' bands for your brand. Contact us to start your modern jewelry project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> manufacture 'Custom-Inlay' alternative bands?</strong><br/>A: Yes! We can help you develop a unique line of 'Hybrid' bands for your brand. Contact us to start your modern jewelry project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your modern metal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

@@ -42,7 +42,7 @@ export const BLOG_BATCH_33 = [
 <p><strong>Q9: What is 'Hill-Tribe' Silver?</strong><br/>A: It's high-purity silver (often 99% pure) hand-crafted by the ethnic tribes of Northern Thailand. It has a beautiful, 'Rustic' look that is very popular in the boho-chic market.</p>
 <p><strong>Q10: Are there 'Tariffs' on jewelry from Thailand?</strong><br/>A: This depends on your country. The US and EU have various trade agreements with Thailand. Check your local customs regulations for 'GSP' (Generalized System of Preferences) benefits.</p>
 <p><strong>Q11: What's the 'Next Big' thing in Thai jewelry?</strong><br/>A: 'Sustainable Silver'—using 100% recycled silver and solar-powered factories—is a major 2026 trend in the Bangkok manufacturing sector.</p>
-<p><strong>Q12: Can Gemora Global help me source from Thailand?</strong><br/>A: Yes! While our main facilities are in Jaipur, we have an extensive network of partner factories in Bangkok for specific silver requirements. Contact us to discuss your global sourcing strategy.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> help me source from Thailand?</strong><br/>A: Yes! While our main facilities are in Jaipur, we have an extensive network of partner factories in Bangkok for specific silver requirements. Contact us to discuss your global sourcing strategy.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your global sourcing needs. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -88,7 +88,7 @@ export const BLOG_BATCH_33 = [
 <p><strong>Q8: How do I verify 'Made in Italy' status?</strong><br/>A: Every piece must be hallmarked with a specific factory ID and the city of origin. This 'Hallmark' is a legal guarantee of origin and quality.</p>
 <p><strong>Q9: Are Italian jewelry costs higher?</strong><br/>A: Yes, primarily due to higher labor costs and the cost of maintaining high-tech machinery. Italy is a 'Premium' sourcing choice.</p>
 <p><strong>Q10: What's the 'Next Big' Italian jewelry trend?</strong><br/>A: 'Fluid-Metal'—jewelry that looks like liquid gold dripping or flowing—is a massive 2026 trend from the Milanese design studios.</p>
-<p><strong>Q11: Can Gemora Global provide 'Italian-Style' chains?</strong><br/>A: Yes! We have invested in Italian-made machinery in our Jaipur factory to produce high-quality chains with the same 'Fluidity' and 'Finish' as the Vicenza originals but at an Indian production cost. Contact us for samples.</p>
+<p><strong>Q11: Can <a href="/">Gemora Global</a> provide 'Italian-Style' chains?</strong><br/>A: Yes! We have invested in Italian-made machinery in our Jaipur factory to produce high-quality chains with the same 'Fluidity' and 'Finish' as the Vicenza originals but at an Indian production cost. Contact us for samples.</p>
 <p><strong>Q12: Is Italian jewelry a good investment?</strong><br/>A: From a brand perspective, having 'Italian Design' or 'Italian-Made' in your marketing increases your brand's perceived value and allows for higher retail margins.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your premium sourcing needs. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
@@ -140,7 +140,7 @@ At <a href="/">Gemora Global</a>, we often work with Chinese tech-partners for s
 <p><strong>Q8: How do I handle 'Shipping' from China?</strong><br/>A: Most B2B buyers use specialized jewelry couriers like Malca-Amit or Brinks. China has a world-class logistics network that makes shipping fast and secure.</p>
 <p><strong>Q9: Are there tariffs on Chinese jewelry?</strong><br/>A: This depends on your country. The US has various 'Section 301' tariffs on Chinese jewelry. Check your local customs regulations carefully.</p>
 <p><strong>Q10: What is the 'Next Big' thing in Chinese jewelry?</strong><br/>A: 'AI-Generated-Custom-Design'—where a customer enters their preferences and an AI instantly generates a manufacturable CAD file—is a major 2026 trend.</p>
-<p><strong>Q11: Does Gemora Global use Chinese components?</strong><br/>A: Yes, we source high-quality Lab-Grown diamonds and certain precision-cast components from our trusted partners in China to ensure our wholesale collections are the most competitive in the world.</p>
+<p><strong>Q11: Does <a href="/">Gemora Global</a> use Chinese components?</strong><br/>A: Yes, we source high-quality Lab-Grown diamonds and certain precision-cast components from our trusted partners in China to ensure our wholesale collections are the most competitive in the world.</p>
 <p><strong>Q12: Can I trust Chinese 'Certificates'?</strong><br/>A: Always prioritize international certificates (GIA, IGI) even when sourcing from China. While Chinese domestic labs (like NGTC) are reputable, GIA/IGI are the global standard for resale value.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your global supply chain strategy. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
@@ -191,7 +191,7 @@ At <a href="/">Gemora Global</a>, we often work with Chinese tech-partners for s
 <p><strong>Q9: Are there specific 'Compliance' rules for the US?</strong><br/>A: Yes, particularly the 'FTC Guidelines' for jewelry descriptions and 'Prop 65' for material safety in California. Ensure your wholesale partner (like <a href="/">Gemora Global</a>) is compliant.</p>
 <p><strong>Q10: Why is 'Jaipur' popular in the US market?</strong><br/>A: Because it offers the 'Handcrafted-Artisan' look that US consumers crave, but at a price point that allows for accessible luxury.</p>
 <p><strong>Q11: What is 'Insta-Worthy' packaging?</strong><br/>A: Packaging that is so beautiful that customers want to take a photo of it and share it on social media. In 2026, this is a key part of US jewelry marketing.</p>
-<p><strong>Q12: Can Gemora Global help me enter the US market?</strong><br/>A: Absolutely! We have helped many international brands launch in the US by providing the right products, quality standards, and marketing assets. Contact us for a strategic consultation.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> help me enter the US market?</strong><br/>A: Absolutely! We have helped many international brands launch in the US by providing the right products, quality standards, and marketing assets. Contact us for a strategic consultation.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your US market strategy. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -241,7 +241,7 @@ At <a href="/">Gemora Global</a>, we often work with Chinese tech-partners for s
 <p><strong>Q9: What is 'Eid' jewelry shopping?</strong><br/>A: The holidays of Eid al-Fitr and Eid al-Adha are the peak jewelry-buying seasons in the region, similar to Christmas in the West.</p>
 <p><strong>Q10: Why is Jaipur a top sourcing destination for the Middle East?</strong><br/>A: Because Jaipur can provide the large-scale, gem-heavy 'Royal' designs that Middle East consumers love at a better production cost than Europe.</p>
 <p><strong>Q11: What is 'Turkish-Style' gold?</strong><br/>A: It's a specific type of lightweight, machine-made 14k and 18k gold jewelry that is very popular in the Middle East for its 'Modern-Luxury' look.</p>
-<p><strong>Q12: Can Gemora Global create 'Middle-East-Scale' designs?</strong><br/>A: Absolutely! We understand the preference for larger, more ornate pieces and can help you develop a collection specifically for the GCC market. Contact us for a consultation.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create 'Middle-East-Scale' designs?</strong><br/>A: Absolutely! We understand the preference for larger, more ornate pieces and can help you develop a collection specifically for the GCC market. Contact us for a consultation.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your Middle East market strategy. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

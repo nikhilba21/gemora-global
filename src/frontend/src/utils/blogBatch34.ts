@@ -104,7 +104,7 @@ export const BLOG_BATCH_34 = [
 <p><strong>Q9: What is 'Engraving' on the inside of the band?</strong><br/>A: It's a classic way to personalize your rings—usually with the wedding date, your partner's initials, or a short meaningful phrase. We offer laser-engraving for all our wholesale orders.</p>
 <p><strong>Q10: Are 'Alternative' metals (like Tungsten) popular?</strong><br/>A: They are very popular for men's bands due to their extreme hardness and 'Industrial' look. However, for women, precious metals remain the top choice.</p>
 <p><strong>Q11: What's the 'Next Big' wedding band trend?</strong><br/>A: 'Open-Gap' bands—where the ring has a small opening at the top to accommodate a large engagement ring stone—is a major trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom 'Shadow' bands?</strong><br/>A: Yes! A shadow band is a wedding band that follows the exact contour of a specific engagement ring. We can create these via our CAD/CAM services. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom 'Shadow' bands?</strong><br/>A: Yes! A shadow band is a wedding band that follows the exact contour of a specific engagement ring. We can create these via our CAD/CAM services. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your perfect wedding set. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

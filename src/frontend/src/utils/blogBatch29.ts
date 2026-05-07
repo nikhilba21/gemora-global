@@ -42,7 +42,7 @@ export const BLOG_BATCH_29 = [
 <p><strong>Q9: Is Labradorite expensive?</strong><br/>A: No, it is a very high-value and affordable gem. It allows for large, stunning statement pieces to be created at a fraction of the cost of other 'Flashy' stones like Opal.</p>
 <p><strong>Q10: Can men wear Labradorite?</strong><br/>A: Absolutely! The dark, moody base and 'industrial' look of Labradorite make it a top choice for men's signet rings and heavy cuff bracelets.</p>
 <p><strong>Q11: What's the 'Next Big' labradorite trend?</strong><br/>A: 'Faceted' Labradorite—where the stone is cut with many tiny facets rather than a smooth cabochon—is a growing trend for the 'Modern-Maximalist' market in late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'High-Flash' Labradorite in bulk?</strong><br/>A: Yes! We have a vast stock of Madagascar Labradorite in all shapes and sizes. Contact us for wholesale pricing and custom cut options.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'High-Flash' Labradorite in bulk?</strong><br/>A: Yes! We have a vast stock of Madagascar Labradorite in all shapes and sizes. Contact us for wholesale pricing and custom cut options.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our magical labradorite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -89,7 +89,7 @@ export const BLOG_BATCH_29 = [
 <p><strong>Q9: Does Morganite fade in the sun?</strong><br/>A: No, Morganite is very stable and its color will not fade with exposure to sunlight.</p>
 <p><strong>Q10: What is 'Peach' Morganite?</strong><br/>A: It's a variety with more orange/salmon undertones. It's often considered more 'Modern' and 'Chic' than the traditional baby-pink stones.</p>
 <p><strong>Q11: What's the 'Next Big' morganite trend?</strong><br/>A: 'Emerald-Cut' Morganite—a rectangular cut that emphasizes the stone's clarity and soft color—is a growing trend for the 'Modern-Vintage' bridal market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Calibrated' Morganite for my brand?</strong><br/>A: Yes! We can provide stones in specific sizes and shapes to fit your production designs perfectly. Contact us for bulk pricing.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Calibrated' Morganite for my brand?</strong><br/>A: Yes! We can provide stones in specific sizes and shapes to fit your production designs perfectly. Contact us for bulk pricing.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our romantic morganite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -186,7 +186,7 @@ export const BLOG_BATCH_29 = [
 <p><strong>Q9: What is a 'Doublet' or 'Triplet' Opal?</strong><br/>A: These are 'composite' stones where a thin slice of real opal is glued to a dark backing (and sometimes a clear cap). They offer a 'Black Opal' look for a much lower price. At <a href="/">Gemora Global</a>, we prioritize 'Solid' opals for their higher quality.</p>
 <p><strong>Q10: Are Opals suitable for men?</strong><br/>A: Yes! Darker 'Black' or 'Boulder' opals set in heavy silver signet rings are a powerful and unique choice for men's fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' opal trend?</strong><br/>A: 'Faceted' Opals—where the stone is cut with facets like a diamond rather than a smooth cabochon—is a massive 'Early-Adopter' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Rainbow' Opals in bulk?</strong><br/>A: Yes! We have a vast stock of Welo Opals in all shapes and sizes. Contact us for wholesale pricing and custom cut options for your brand.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Rainbow' Opals in bulk?</strong><br/>A: Yes! We have a vast stock of Welo Opals in all shapes and sizes. Contact us for wholesale pricing and custom cut options for your brand.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our shimmering opal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -240,7 +240,7 @@ export const BLOG_BATCH_29 = [
 <p><strong>Q9: Does Jade change color?</strong><br/>A: There is a common belief that jade gets greener the more you wear it, as it 'feeds' on the wearer's skin oils. While scientifically it's just the stone becoming more polished/shiny, the belief remains a beautiful part of jade lore.</p>
 <p><strong>Q10: Are Jade rings suitable for men?</strong><br/>A: Absolutely. Heavy gold signet rings with a flat piece of dark green jade are a classic and powerful choice for men's fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' jade trend?</strong><br/>A: 'White' Mutton-Fat Jade—the highest grade of Nephrite—is currently a massive trend for the 'Zen-Luxury' aesthetic in late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Carved' Jade pendants?</strong><br/>A: Yes! We are experts in gemstone carving and can provide dragons, flowers, and custom motifs in bulk for your brand. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Carved' Jade pendants?</strong><br/>A: Yes! We are experts in gemstone carving and can provide dragons, flowers, and custom motifs in bulk for your brand. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our timeless jade collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

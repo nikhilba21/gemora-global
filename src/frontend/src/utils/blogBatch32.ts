@@ -33,7 +33,7 @@ export const BLOG_BATCH_32 = [
 <h2>Step 6: Packaging and the 'Unboxing' Experience</h2>
 <p>In the online world, the first physical touchpoint with your brand is the package. In 2026, a 'Premium Unboxing Experience' is a major driver of social media shares and customer loyalty. Use eco-friendly, branded packaging that makes the customer feel like they are receiving a special gift. This 'Small Detail' has a 'Big Impact' on your brand's perceived value.</p>
 
-<h2>Gemora Global: Your Launch Partner</h2>
+<h2><a href="/">Gemora Global</a>: Your Launch Partner</h2>
 <p>We don't just sell you jewelry; we want to help you build a brand. We offer 'Starter Packs' for new boutiques, low MOQs for custom designs, and expert advice on everything from pricing to photography. Our success depends on your success. Let's build your jewelry empire together.</p>
 
 <h2>Frequently Asked Questions</h2>

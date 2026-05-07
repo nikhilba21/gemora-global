@@ -243,7 +243,7 @@ export const BLOG_BATCH_36 = [
 <p><strong>Q7: What are 'Urn-Pendants'?</strong><br/>A: These are small, hollow pendants with a secure screw-top that can hold a tiny amount of a pet's ashes. They are designed to be 100% secure and discreet.</p>
 <p><strong>Q8: How long does custom memorial jewelry take?</strong><br/>A: Typically 1-2 weeks, as every piece is custom-engraved or handcrafted. We offer 'Express-Service' for those who need comfort quickly.</p>
 <p><strong>Q9: Is it okay to memorialize a non-traditional pet (like a bird or rabbit)?</strong><br/>A: Yes! The bond with any companion is worth celebrating. We can engrave prints and portraits for any type of animal.</p>
-<p><strong>Q10: Can Gemora Global help me design a 'Pet-Brand' memorial line?</strong><br/>A: Yes! We work with many pet-focused brands to develop unique, high-quality memorial collections. Contact us to learn more.</p>
+<p><strong>Q10: Can <a href="/">Gemora Global</a> help me design a 'Pet-Brand' memorial line?</strong><br/>A: Yes! We work with many pet-focused brands to develop unique, high-quality memorial collections. Contact us to learn more.</p>
 <p><strong>Q11: What's the 'Next Big' memorial trend?</strong><br/>A: 'Diamond-from-Ashes'—where a lab-grown diamond is created using the carbon from a pet's ashes—is a growing 'Ultra-Luxury' trend for late 2026.</p>
 <p><strong>Q12: Why is this category growing in 2026?</strong><br/>A: Because pets are increasingly seen as 'equal' members of the family, and the desire to honor their life with the same quality as a human memorial is a natural evolution of that bond.</p>
 

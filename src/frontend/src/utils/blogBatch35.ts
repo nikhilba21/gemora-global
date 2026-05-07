@@ -145,7 +145,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q9: What is the 'Celtic Cross'?</strong><br/>A: It's a traditional cross featuring a circle around the intersection. It's a symbol of faith and the sun, and remains a top-selling religious and heritage piece in 2026.</p>
 <p><strong>Q10: Are these designs trademarked?</strong><br/>A: Most traditional Celtic symbols are in the public domain. However, specific modern 'Interpretations' by designers (like those we create at <a href="/">Gemora Global</a>) are protected.</p>
 <p><strong>Q11: What's the 'Next Big' Celtic trend?</strong><br/>A: 'Black-Rhodium-Knotwork'—darkening the silver to make the knotwork look 'Gothic' and more defined—is a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom 'Family' knots?</strong><br/>A: Yes! We can help you design a unique knot that incorporates specific symbols or initials for a truly personalized heritage collection. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom 'Family' knots?</strong><br/>A: Yes! We can help you design a unique knot that incorporates specific symbols or initials for a truly personalized heritage collection. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your timeless Celtic collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

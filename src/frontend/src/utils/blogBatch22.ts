@@ -258,7 +258,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q9: Is the locket trend only for 'Cottagecore'?</strong><br/>A: No, while Cottagecore loves them, lockets are also a key part of the 'Grandmillennial' and 'Dark Academia' aesthetics in 2026.</p>
 <p><strong>Q10: Can I get my locket 'Photo-Engraved'?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers professional laser photo-engraving for our wholesale partners, providing a permanent and high-end personalization option.</p>
 <p><strong>Q11: What's the 'Next Big' locket trend?</strong><br/>A: 'Locket Rings'—rings that feature a tiny opening compartment on the top—are currently a huge 'early-adopter' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom locket shape for me?</strong><br/>A: Absolutely! We can help you design a unique locket—from a custom star to a branded geometric shape. Contact us to discuss your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom locket shape for me?</strong><br/>A: Absolutely! We can help you design a unique locket—from a custom star to a branded geometric shape. Contact us to discuss your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our sentimental locket collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

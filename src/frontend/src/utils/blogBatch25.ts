@@ -49,7 +49,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q9: Can I use lemon juice or vinegar to clean gold?</strong><br/>A: These are acidic and can be too harsh for plated jewelry. While they might work for solid gold in a pinch, mild soap is always the safer choice.</p>
 <p><strong>Q10: Why does my gold plating look 'faded'?</strong><br/>A: This is usually 'wear and tear' where the gold layer has physically rubbed off over time. It can be restored by a professional re-plating service.</p>
 <p><strong>Q11: What is the 'Anti-Tarnish' strip in my jewelry box?</strong><br/>A: It's a small piece of treated paper that absorbs the sulfur in the air (the cause of tarnish) before it reaches your jewelry. They are very effective and should be replaced every 6 months.</p>
-<p><strong>Q12: Does Gemora Global provide cleaning supplies?</strong><br/>A: We can provide branded polishing cloths and care kits for our wholesale partners to sell or gift to their customers. Contact us to learn more.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> provide cleaning supplies?</strong><br/>A: We can provide branded polishing cloths and care kits for our wholesale partners to sell or gift to their customers. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our high-quality, long-lasting collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -100,7 +100,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q9: Can I use 'Alcohol' to clean my jewelry?</strong><br/>A: No, alcohol can be too harsh for many types of plating and can damage certain gemstones.</p>
 <p><strong>Q10: Why does my jewelry look 'patchy' after cleaning?</strong><br/>A: This usually happens if it wasn't dried properly. Always pat dry immediately with a soft cloth to avoid water spots.</p>
 <p><strong>Q11: How do I store my gold plated jewelry to prevent tarnish?</strong><br/>A: In a dry, airtight place (like a small zip-lock bag or a dedicated jewelry box) with an anti-tarnish strip.</p>
-<p><strong>Q12: Does Gemora Global offer re-plating services?</strong><br/>A: While we don't offer consumer re-plating, we work with our wholesale partners to ensure their stock is always in perfect condition. Contact us for details.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> offer re-plating services?</strong><br/>A: While we don't offer consumer re-plating, we work with our wholesale partners to ensure their stock is always in perfect condition. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our durable gold plated collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -253,7 +253,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q9: Can I clean jewelry with 'Baking Soda' and 'Aluminum Foil'?</strong><br/>A: This is a popular home method for silver. It works well but can be a bit harsh on the metal surface if done too often. For plated items, we recommend avoiding it.</p>
 <p><strong>Q10: How often should I have my 'Fine' jewelry professionally checked?</strong><br/>A: Once a year. A jeweler will check the stone settings to ensure they haven't become loose—a common cause of stone loss.</p>
 <p><strong>Q11: What's the 'Next Big' thing in jewelry cleaning?</strong><br/>A: 'Laser Cleaning'—using precision lasers to vaporize dirt and tarnish without touching the metal—is a high-end professional trend for 2026.</p>
-<p><strong>Q12: Can Gemora Global provide cleaning advice for my specific collection?</strong><br/>A: Absolutely! We help our wholesale partners develop specific care instructions for the collections they source from us. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide cleaning advice for my specific collection?</strong><br/>A: Absolutely! We help our wholesale partners develop specific care instructions for the collections they source from us. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our easy-care artisan collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

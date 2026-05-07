@@ -235,7 +235,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q9: Can I wear my turquoise ring every day?</strong><br/>A: Yes, but be careful. It can be scratched by harder objects. We recommend 'Bezel' settings for turquoise rings to protect the edges of the stone.</p>
 <p><strong>Q10: What is 'Reconstituted' Turquoise?</strong><br/>A: It's made from turquoise dust and resin. At <a href="/">Gemora Global</a>, we prioritize 'Natural' and 'Stabilized' stones over reconstituted ones to ensure a higher quality for our partners.</p>
 <p><strong>Q11: What's the 'Next Big' turquoise trend?</strong><br/>A: 'Purple' and 'White' Turquoise—actually different minerals like Magnesite—are currently a growing 'boho-alternative' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Persian' style Turquoise?</strong><br/>A: Yes, we have a curated stock of the finest pure-blue stones. Contact us for wholesale availability and pricing for your high-end collection.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Persian' style Turquoise?</strong><br/>A: Yes, we have a curated stock of the finest pure-blue stones. Contact us for wholesale availability and pricing for your high-end collection.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our soulful turquoise collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

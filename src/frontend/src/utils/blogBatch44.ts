@@ -42,7 +42,7 @@ export const BLOG_BATCH_44 = [
 <p><strong>Q9: Does the metal color affect the sparkle?</strong><br/>A: Yes! White metals (Platinum/White Gold) can make white diamonds look more brilliant. Yellow Gold can enhance the 'Fire' and warmth of colored gemstones.</p>
 <p><strong>Q10: What is a 'Rose-Cut'?</strong><br/>A: An antique cut with a flat bottom and a domed, faceted top. It has very low 'Brilliance' but a soft, 'Moony' glow that is very trendy for 2026 'Artisan' jewelry.</p>
 <p><strong>Q11: What's the 'Next Big' sparkle trend?</strong><br/>A: 'Fluorescent-Diamonds'—diamonds that glow blue under UV light—is being marketed as a 'Hidden-Sparkle' feature for the 2026 festival and nightlife market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Light-Performance-Reports'?</strong><br/>A: Yes! For our premium stones, we provide 'Sarine' or 'OGI' reports that map the Brilliance, Fire, and Scintillation of the specific stone. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Light-Performance-Reports'?</strong><br/>A: Yes! For our premium stones, we provide 'Sarine' or 'OGI' reports that map the Brilliance, Fire, and Scintillation of the specific stone. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your high-performance collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -91,7 +91,7 @@ export const BLOG_BATCH_44 = [
 <p><strong>Q7: What is 'Saturation'?</strong><br/>A: It's the 'Purity' or 'Intensity' of the color. A 'Highly-Saturated' gem has a very deep, vivid color with no 'Grey' or 'Brown' mask.</p>
 <p><strong>Q8: Is the 'Tone' of the stone important?</strong><br/>A: Tone refers to how 'Light' or 'Dark' the stone is. In 2026, the trend is for 'Medium-Rich' tones that allow for both color intensity and high brilliance.</p>
 <p><strong>Q9: What is 'Intervalence-Charge-Transfer'?</strong><br/>A: A complex physics term for how two elements (like Iron and Titanium in Blue Sapphire) exchange an electron, which creates the blue color. It's the ultimate 'Science-of-Beauty.'</p>
-<p><strong>Q10: Can Gemora Global provide 'Color-Matched' lots?</strong><br/>A: Yes! We use digital 'Color-Scanners' in Jaipur to ensure every stone in your wholesale lot has the exact same hue, tone, and saturation. Contact us for details.</p>
+<p><strong>Q10: Can <a href="/">Gemora Global</a> provide 'Color-Matched' lots?</strong><br/>A: Yes! We use digital 'Color-Scanners' in Jaipur to ensure every stone in your wholesale lot has the exact same hue, tone, and saturation. Contact us for details.</p>
 <p><strong>Q11: What's the 'Next Big' color trend?</strong><br/>A: 'Pastel-Electric'—using rare, light-toned but highly saturated gems like Lavender Spinel or Mint Tourmaline—is a growing 2026 trend.</p>
 <p><strong>Q12: Is 'Color-Treatment' bad?</strong><br/>A: No, provided it is disclosed. Many treatments (like heating) simply 'finish' what nature started, and they allow more people to enjoy vibrant colors at a better price point.</p>
 
@@ -142,7 +142,7 @@ export const BLOG_BATCH_44 = [
 <p><strong>Q9: What is 'White Sapphire'?</strong><br/>A: It's pure Corundum with no trace elements. In 2026, it's a popular 'Natural' alternative to Diamonds and Moissanite for those who want a clear stone with a 'Soft-Sparkle.'</p>
 <p><strong>Q10: Can men wear fancy sapphires?</strong><br/>A: Absolutely! 'Teal' and 'Inky-Blue' fancy sapphires are a major trend for men's signet rings and wedding bands in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' sapphire trend?</strong><br/>A: 'Pastel-Multi-Stone' eternity bands—featuring a gradient of light pink, purple, and blue sapphires—is a growing 2026 'Rainbow-Luxe' trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Rainbow-Layouts'?</strong><br/>A: Yes! We specialize in creating pre-matched layouts for 'Rainbow-Eternity' rings or 'Ombre' pendants. Contact us to see our available layouts.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Rainbow-Layouts'?</strong><br/>A: Yes! We specialize in creating pre-matched layouts for 'Rainbow-Eternity' rings or 'Ombre' pendants. Contact us to see our available layouts.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your vibrant sapphire collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -186,7 +186,7 @@ export const BLOG_BATCH_44 = [
 <p><strong>Q9: What is 'Azotic' Topaz?</strong><br/>A: Azotic is the name of the original patent-holding company that developed this coating technology. You will often see 'Azotic-Topaz' used in premium collections.</p>
 <p><strong>Q10: Can men wear Mystic gems?</strong><br/>A: Yes! 'Deep-Blue' and 'Gunmetal' mystic coatings are very popular in men's signet rings for a 'High-Tech-Industrial' look in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' coating trend?</strong><br/>A: 'Matte-Mystic'—applying the coating to a sandblasted or 'Frosted' stone to create a soft, non-reflective rainbow—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Custom-Coatings'?</strong><br/>A: Yes! We can work with our tech partners to develop unique color combinations that are exclusive to your brand. Contact us to start your innovation project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Custom-Coatings'?</strong><br/>A: Yes! We can work with our tech partners to develop unique color combinations that are exclusive to your brand. Contact us to start your innovation project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your iridescent collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -235,7 +235,7 @@ export const BLOG_BATCH_44 = [
 <p><strong>Q9: What is 'Synthetic Corundum with Alexandrite-Like Change'?</strong><br/>A: This was a popular 'Costume' stone in the mid-20th century. It is a purple synthetic sapphire that turns blue. In 2026, we focus on genuine Alexandrite (Chrysoberyl).</p>
 <p><strong>Q10: Can men wear color-change gems?</strong><br/>A: Absolutely! The 'Moody' shift of color-change Garnet or Sapphire in a heavy signet ring is a major trend for the 'Modern-Mystic' man.</p>
 <p><strong>Q11: What's the 'Next Big' color-change trend?</strong><br/>A: 'Tri-Color-Change'—stones like certain Diaspore or Turkish Garnets that show three distinct colors in different lights—is a growing 2026 'Connoisseur' trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Video-Proof' of the change?</strong><br/>A: Yes! For all our color-change wholesale orders, we provide high-def videos showing the stone shifting between light sources. Contact us to see our current inventory.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Video-Proof' of the change?</strong><br/>A: Yes! For all our color-change wholesale orders, we provide high-def videos showing the stone shifting between light sources. Contact us to see our current inventory.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your magical shape-shifter collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

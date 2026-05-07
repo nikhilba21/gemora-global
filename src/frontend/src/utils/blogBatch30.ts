@@ -194,7 +194,7 @@ export const BLOG_BATCH_30 = [
 <p><strong>Q9: What is 'Articulation' in jewelry?</strong><br/>A: It's the use of hinges or links to allow a piece of jewelry to move. Chandelier earrings are 'Highly Articulated,' which is what gives them their beautiful, swaying movement.</p>
 <p><strong>Q10: Are chandelier earrings good for 'Round' faces?</strong><br/>A: Yes! The long, vertical line of a chandelier earring helps to elongate the face, making it a very flattering choice for round or square face shapes.</p>
 <p><strong>Q11: What's the 'Next Big' chandelier trend?</strong><br/>A: 'Mismatched' chandeliers—wearing one long chandelier and one simple stud—is a growing 'Edgy-Editorial' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom 'Themed' chandeliers?</strong><br/>A: Absolutely! From 'Celestial' motifs to 'Botanical' tiers, we can help you design a unique statement collection for your brand. Contact us to start your design journey.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom 'Themed' chandeliers?</strong><br/>A: Absolutely! From 'Celestial' motifs to 'Botanical' tiers, we can help you design a unique statement collection for your brand. Contact us to start your design journey.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our dramatic chandelier collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -244,7 +244,7 @@ export const BLOG_BATCH_30 = [
 <p><strong>Q9: Is it okay to wear an anklet with sneakers?</strong><br/>A: Absolutely! A dainty gold anklet peeking out from a white sneaker is a very popular 'Casual-Chic' look for 2026.</p>
 <p><strong>Q10: What is 'Hollow' vs 'Solid' anklet chains?</strong><br/>A: Hollow chains are lighter and more affordable, but less durable. At <a href="/">Gemora Global</a>, we prioritize 'Solid-Link' construction for our anklets to ensure they can handle the physical stress of being worn on the ankle.</p>
 <p><strong>Q11: What's the 'Next Big' anklet trend?</strong><br/>A: 'Shell-and-Gold' combinations—pairing natural cowrie shells with chunky gold links—is a massive 'High-Summer' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide custom 'Initial' anklets?</strong><br/>A: Yes! We can add any initial or charm to our anklet designs for your brand. Contact us to learn more about our personalized wholesale options.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide custom 'Initial' anklets?</strong><br/>A: Yes! We can add any initial or charm to our anklet designs for your brand. Contact us to learn more about our personalized wholesale options.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our shimmering anklet collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

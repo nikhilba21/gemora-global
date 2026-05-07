@@ -95,7 +95,7 @@ export const BLOG_BATCH_23 = [
 <p><strong>Q9: What is 'Rhodium Plating'?</strong><br/>A: Rhodium is a rare, precious metal in the platinum family. It's used as a plating over silver to provide a bright, tarnish-resistant, and scratch-resistant finish.</p>
 <p><strong>Q10: Are silver rings suitable for wedding bands?</strong><br/>A: While silver is beautiful, it is softer than gold or platinum. For a 'forever' ring like a wedding band, we recommend gold or a very heavy-duty silver band that can handle daily wear.</p>
 <p><strong>Q11: What's the 'Next Big' silver trend?</strong><br/>A: 'Brushed' silver—a matte, non-reflective finish that looks like stainless steel—is currently a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Silver' collection for me?</strong><br/>A: Yes! We are experts in 925 Sterling Silver manufacturing and can help you develop a unique collection featuring your specific designs and finishes. Contact us to start.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Silver' collection for me?</strong><br/>A: Yes! We are experts in 925 Sterling Silver manufacturing and can help you develop a unique collection featuring your specific designs and finishes. Contact us to start.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our modern silver collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -235,7 +235,7 @@ export const BLOG_BATCH_23 = [
 <p>We specialize in 'High-Micron' plating and Gold Vermeil. We use professional-grade electroplating tanks and 'Anti-Tarnish' lacquer (e-coat) to ensure our fashion jewelry has the longest possible lifespan. We provide detailed specifications for every wholesale order, ensuring our partners can sell to their customers with absolute confidence.</p>
 
 <h2>Frequently Asked Questions</h2>
-<p><strong>Q1: Will gold-plated jewelry turn my skin green?</strong><br/>A: Only if the plating is very thin and the base metal contains a lot of nickel or copper. At Gemora Global, all our pieces are lead and nickel-free, and we use a protective 'e-coat' to prevent skin reactions.</p>
+<p><strong>Q1: Will gold-plated jewelry turn my skin green?</strong><br/>A: Only if the plating is very thin and the base metal contains a lot of nickel or copper. At <a href="/">Gemora Global</a>, all our pieces are lead and nickel-free, and we use a protective 'e-coat' to prevent skin reactions.</p>
 <p><strong>Q2: How long does gold plating last?</strong><br/>A: It depends on the thickness (microns) and how you care for it. Standard fashion plating (0.5 microns) lasts 1-2 seasons of regular wear. Our high-micron plating (1.0 - 2.0 microns) can last significantly longer.</p>
 <p><strong>Q3: Can I shower with Gold Vermeil?</strong><br/>A: We don't recommend it. While the gold layer is thick, chemicals in soaps and chlorine in water can slowly break down the plating. To keep it bright for years, take it off before showering or swimming.</p>
 <p><strong>Q4: What is a 'Micron'?</strong><br/>A: It's a unit of measurement for the thickness of the gold layer. One micron is 1/1000th of a millimeter. In 2026, the industry standard for 'Quality' fashion jewelry is 1.0 micron.</p>

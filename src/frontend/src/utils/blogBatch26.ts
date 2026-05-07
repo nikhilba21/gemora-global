@@ -42,7 +42,7 @@ export const BLOG_BATCH_26 = [
 <p><strong>Q9: How do I clean my diamond ring at home?</strong><br/>A: Diamonds are magnets for grease and oils. Soak in warm water with mild dish soap and gently brush with a soft toothbrush. Rinse and pat dry with a lint-free cloth.</p>
 <p><strong>Q10: Are 'Champagne' and 'Black' diamonds graded the same?</strong><br/>A: No, 'Fancy Color' diamonds have their own grading system that focuses primarily on the intensity and rarity of the color rather than the absence of it.</p>
 <p><strong>Q11: What's the 'Next Big' thing in diamond technology?</strong><br/>A: 'Digital Twins'—where every diamond has a 3D digital file that tracks its history and allows for virtual inspection—is a massive trend for 2026.</p>
-<p><strong>Q12: Can Gemora Global help me source a specific diamond?</strong><br/>A: Absolutely. We have deep connections in the Indian diamond market (Mumbai and Surat) and can help you find certified stones that meet your specific 4Cs requirements. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> help me source a specific diamond?</strong><br/>A: Absolutely. We have deep connections in the Indian diamond market (Mumbai and Surat) and can help you find certified stones that meet your specific 4Cs requirements. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our certified diamond collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -136,7 +136,7 @@ export const BLOG_BATCH_26 = [
 <p><strong>Q9: What is 'GRA' certification?</strong><br/>A: It's the most common grading report for Moissanite. It verifies the color, clarity, and cut quality of the stone.</p>
 <p><strong>Q10: Are Moissanite stones good for 'Tennis' bracelets?</strong><br/>A: They are perfect! A Moissanite tennis bracelet has an incredible 'Red-Carpet' shine that is indistinguishable from a $20,000 diamond version at a fraction of the cost.</p>
 <p><strong>Q11: What's the 'Next Big' thing in Moissanite?</strong><br/>A: 'Crushed Ice' cuts—a specific way of facetting that makes the stone look exactly like a diamond with less 'rainbow' fire—is a massive trend for 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom Moissanite line for me?</strong><br/>A: Absolutely! We have a dedicated Moissanite workshop and can help you develop a stunning collection of rings, earrings, and necklaces. Contact us to get started.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom Moissanite line for me?</strong><br/>A: Absolutely! We have a dedicated Moissanite workshop and can help you develop a stunning collection of rings, earrings, and necklaces. Contact us to get started.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our shimmering moissanite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -180,7 +180,7 @@ export const BLOG_BATCH_26 = [
 <p><strong>Q9: How do I clean my sapphire jewelry?</strong><br/>A: Mild soap, warm water, and a soft brush. Sapphires are tough, so they can handle a thorough cleaning to get that sparkle back.</p>
 <p><strong>Q10: What is a 'Padparadscha' Sapphire?</strong><br/>A: It's an incredibly rare pink-orange sapphire named after the Sanskrit word for 'lotus blossom.' It's one of the most valuable gems in the world.</p>
 <p><strong>Q11: What's the 'Next Big' sapphire trend?</strong><br/>A: 'Bi-Color' and 'Parti' sapphires—stones that naturally show two or three distinct colors in one crystal—are a huge collector trend for 2026.</p>
-<p><strong>Q12: Does Gemora Global offer 'Rainbow' sapphire collections?</strong><br/>A: Yes! We are famous for our multi-color sapphire tennis bracelets and necklaces. Contact us to see our vibrant B2B catalogue.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> offer 'Rainbow' sapphire collections?</strong><br/>A: Yes! We are famous for our multi-color sapphire tennis bracelets and necklaces. Contact us to see our vibrant B2B catalogue.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our vibrant sapphire collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

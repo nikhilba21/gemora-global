@@ -42,7 +42,7 @@ export const BLOG_BATCH_31 = [
 <p><strong>Q3: What is 'Pavé' setting?</strong><br/>A: It's a technique where many small stones are set very close together, covering the surface of the metal like a 'pavement' of diamonds.</p>
 <p><strong>Q4: How many people work on a single piece of jewelry?</strong><br/>A: In a high-quality factory, a single ring can pass through the hands of 10-15 different specialists (CAD designer, caster, filer, polisher, setter, QC officer, etc.).</p>
 <p><strong>Q5: What is 'Lost-Wax Casting'?</strong><br/>A: It's an ancient technique (over 5,000 years old) where a wax model is 'lost' and replaced by molten metal. Modern technology has simply made it more precise.</p>
-<p><strong>Q6: Does Gemora Global use ethical manufacturing?</strong><br/>A: Absolutely. Our factories follow strict international standards for worker safety, fair wages, and environmental management. We are a 'Responsible Jewelry Council' (RJC) compliant facility.</p>
+<p><strong>Q6: Does <a href="/">Gemora Global</a> use ethical manufacturing?</strong><br/>A: Absolutely. Our factories follow strict international standards for worker safety, fair wages, and environmental management. We are a 'Responsible Jewelry Council' (RJC) compliant facility.</p>
 <p><strong>Q7: What is 'Bench Jewelry'?</strong><br/>A: It refers to the traditional hand-work done at a jeweler's bench—filing, soldering, and repairing. Even with high-tech machines, 'Bench' skills remain essential.</p>
 <p><strong>Q8: How long does it take to manufacture a bulk order?</strong><br/>A: For a standard wholesale order, our lead time is typically 3-5 weeks from design approval to shipping. Custom developments may take slightly longer.</p>
 <p><strong>Q9: What is 'Micro-Setting'?</strong><br/>A: It's a setting technique done under a high-power microscope, allowing for incredibly small stones to be set with extreme precision.</p>
@@ -92,7 +92,7 @@ export const BLOG_BATCH_31 = [
 <p><strong>Q3: What is 'Porosity' in metal?</strong><br/>A: Tiny holes or bubbles in the metal caused during casting. It weakens the piece and makes it look poor under magnification. We use vacuum casting to prevent this.</p>
 <p><strong>Q4: How do you test chain strength?</strong><br/>A: We use calibrated 'Tensile Testing' machines that apply a specific amount of force to ensure the chain and its links can handle everyday stress.</p>
 <p><strong>Q5: What is 'Lead and Nickel' testing?</strong><br/>A: It's an essential health-safety test. We ensure all our jewelry is 100% Lead-Free and Nickel-Free to prevent skin allergies and meet global regulations (like REACH and Prop 65).</p>
-<p><strong>Q6: How many QC stages does a piece pass through?</strong><br/>A: At Gemora Global, a piece passes through 4 major QC stages: Post-Casting, Post-Setting, Post-Polishing, and Final Pre-Shipment Inspection.</p>
+<p><strong>Q6: How many QC stages does a piece pass through?</strong><br/>A: At <a href="/">Gemora Global</a>, a piece passes through 4 major QC stages: Post-Casting, Post-Setting, Post-Polishing, and Final Pre-Shipment Inspection.</p>
 <p><strong>Q7: What is an 'AQL' standard?</strong><br/>A: Acceptable Quality Level. It's a statistical tool used in manufacturing to determine if a batch meets quality requirements. We aim for a 'Zero-Defect' AQL.</p>
 <p><strong>Q8: Can Gemora Global provide QC reports?</strong><br/>A: Yes, for large custom orders, we can provide detailed inspection reports and material certifications upon request.</p>
 <p><strong>Q9: What is 'Tarnish Testing'?</strong><br/>A: We place sample pieces in a 'Sulfur Chamber' to simulate months of environmental exposure, ensuring our plating and e-coat are performing correctly.</p>
@@ -141,7 +141,7 @@ export const BLOG_BATCH_31 = [
 <p><strong>Q2: What is the 'Kimberley Process'?</strong><br/>A: It's an international certification scheme designed to prevent 'conflict diamonds' from entering the mainstream rough diamond market.</p>
 <p><strong>Q3: Are lab-grown diamonds really more sustainable?</strong><br/>A: Yes. They require significantly less land displacement and water usage compared to mining. However, it's important to choose labs that use renewable energy to power their reactors.</p>
 <p><strong>Q4: What is the 'Responsible Jewelry Council' (RJC)?</strong><br/>A: It's the world's leading standard-setting organization for the jewelry and watch industry, covering ethics, human rights, social and environmental performance.</p>
-<p><strong>Q5: How can I prove my brand is sustainable?</strong><br/>A: By working with certified partners (like Gemora Global) and sharing their certifications and 'Impact Reports' with your customers. Transparency is the key to trust.</p>
+<p><strong>Q5: How can I prove my brand is sustainable?</strong><br/>A: By working with certified partners (like <a href="/">Gemora Global</a>) and sharing their certifications and 'Impact Reports' with your customers. Transparency is the key to trust.</p>
 <p><strong>Q6: Does sustainable sourcing increase the cost?</strong><br/>A: Initially, there might be a small premium for recycled materials or certified ethical gems. However, in 2026, the marketing value and customer loyalty far outweigh this minor cost increase.</p>
 <p><strong>Q7: What is 'Ethical' Gold?</strong><br/>A: It's gold that is mined in a way that protects the environment and the rights of the miners, or gold that is recycled. 'Fairmined' is one of the top certifications for this.</p>
 <p><strong>Q8: Is Indian jewelry manufacturing sustainable?</strong><br/>A: Yes, many top-tier factories in Jaipur (like Gemora Global) lead the world in sustainable practices and social responsibility. We are setting the global standard.</p>
@@ -194,7 +194,7 @@ export const BLOG_BATCH_31 = [
 <p><strong>Q5: Can I use my own gemstones?</strong><br/>A: Yes, we can 'Job-Set' your own stones, or we can source any specific gems you require through our extensive network in Jaipur.</p>
 <p><strong>Q6: Is my design protected?</strong><br/>A: Absolutely. We sign Non-Disclosure Agreements (NDAs) with our custom development partners to ensure their intellectual property is 100% secure.</p>
 <p><strong>Q7: What is a 'Master Model'?</strong><br/>A: It's the original metal piece (usually silver) used to create the rubber molds for bulk casting. It's the 'Blueprint' of your jewelry piece.</p>
-<p><strong>Q8: Can Gemora Global help with branding?</strong><br/>A: Yes! We can laser-engrave your logo on each piece and provide custom-branded packaging to match your collection's aesthetic.</p>
+<p><strong>Q8: Can <a href="/">Gemora Global</a> help with branding?</strong><br/>A: Yes! We can laser-engrave your logo on each piece and provide custom-branded packaging to match your collection's aesthetic.</p>
 <p><strong>Q9: What if I want to change the design after seeing the sample?</strong><br/>A: That's part of the process! We offer revision stages to ensure you are 100% happy before we start bulk manufacturing.</p>
 <p><strong>Q10: Can I develop a full collection at once?</strong><br/>A: Yes, we specialize in developing 'Themed' collections (e.g., a matching ring, earring, and necklace set) to ensure a cohesive brand look.</p>
 <p><strong>Q11: What's the 'Next Big' custom design trend?</strong><br/>A: 'Virtual Sampling'—using high-fidelity VR (Virtual Reality) to 'wear' the 3D model before it's even printed—is a growing trend for late 2026.</p>
@@ -239,7 +239,7 @@ export const BLOG_BATCH_31 = [
 <p>Increase your Average Order Value (AOV) by offering 'Bundles.' For example, a 'Necklace and Earring Set' for 15% less than if bought separately. This moves more inventory and makes the customer feel like they are getting a 'Deal' while you maintain a healthy total profit.</p>
 
 <h2><a href="/">Gemora Global</a>'s Pricing Support</h2>
-<p>We design our wholesale prices to ensure our partners can achieve at least a 3x-5x markup. By manufacturing directly in Jaipur and eliminating middlemen, we pass the savings on to you. We also provide 'MSRP' (Manufacturer's Suggested Retail Price) guidelines to help you position your new Gemora Global collection for success. Your profit is our success.</p>
+<p>We design our wholesale prices to ensure our partners can achieve at least a 3x-5x markup. By manufacturing directly in Jaipur and eliminating middlemen, we pass the savings on to you. We also provide 'MSRP' (Manufacturer's Suggested Retail Price) guidelines to help you position your new <a href="/">Gemora Global</a> collection for success. Your profit is our success.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Keystone' pricing?</strong><br/>A: It's the standard practice of doubling the wholesale price to set the retail price (e.g., buy for $10, sell for $20).</p>

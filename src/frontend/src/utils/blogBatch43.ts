@@ -104,7 +104,7 @@ export const BLOG_BATCH_43 = [
 <p><strong>Q9: Can I use a 'Steam-Cleaner'?</strong><br/>A: Like ultrasonics, steam is great for diamonds but dangerous for most colored gems. The sudden heat can cause stones to 'thermal shock' and crack.</p>
 <p><strong>Q10: Why did my Pearls turn 'Yellow'?</strong><br/>A: Pearls are organic. They can 'dry out' if kept in a safe too long, or turn yellow from contact with skin acids and perfumes. Regular wear and a simple wipe is the best care.</p>
 <p><strong>Q11: What's the 'Next Big' cleaning trend?</strong><br/>A: 'UV-C-Sterilization-Boxes'—using UV light to kill bacteria on jewelry while gently loosening dirt—is a growing 2026 home care trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Care-Cards' for my brand?</strong><br/>A: Yes! We can provide custom-printed care instruction cards with your logo for every piece of jewelry we manufacture. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Care-Cards' for my brand?</strong><br/>A: Yes! We can provide custom-printed care instruction cards with your logo for every piece of jewelry we manufacture. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your professional care collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

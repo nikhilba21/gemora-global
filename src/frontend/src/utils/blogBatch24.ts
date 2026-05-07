@@ -85,7 +85,7 @@ export const BLOG_BATCH_24 = [
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What are MOQs?</strong><br/>A: MOQ stands for 'Minimum Order Quantity.' It's the smallest number of pieces per design that a manufacturer will produce. In Jaipur, MOQs for fashion jewelry typically range from 20 to 50 pieces.</p>
-<p><strong>Q2: Can I get my own designs made?</strong><br/>A: Yes! Most Jaipur manufacturers (including Gemora Global) offer 'OEM' (Original Equipment Manufacturer) services, where we produce jewelry based on your specific designs and technical drawings.</p>
+<p><strong>Q2: Can I get my own designs made?</strong><br/>A: Yes! Most Jaipur manufacturers (including <a href="/">Gemora Global</a>) offer 'OEM' (Original Equipment Manufacturer) services, where we produce jewelry based on your specific designs and technical drawings.</p>
 <p><strong>Q3: How long does production take?</strong><br/>A: For standard designs, production usually takes 2-3 weeks. For custom designs, allow 4-6 weeks for sample development and bulk production.</p>
 <p><strong>Q4: How do I pay an Indian manufacturer?</strong><br/>A: The standard methods are Bank Transfer (T/T) or secure online platforms like Wise or PayPal. Reputable manufacturers will provide a formal 'Proforma Invoice' with their bank details.</p>
 <p><strong>Q5: What is 'Jaipur Blue Pottery' and is it used in jewelry?</strong><br/>A: It's a traditional ceramic craft of Jaipur. While distinct from metal jewelry, some contemporary designers use 'Blue Pottery' beads and pendants for a unique, artisan look.</p>
@@ -195,7 +195,7 @@ export const BLOG_BATCH_24 = [
 <p><strong>Q9: What is 'QR Code' packaging?</strong><br/>A: It's a QR code printed on the box that the customer can scan with their phone. It can lead to your website, a styling video, or even a social media 'AR Filter' that lets them 'try on' other pieces.</p>
 <p><strong>Q10: Is 'Minimalist' packaging cheaper?</strong><br/>A: Not necessarily. Minimalist design requires high-quality materials and flawless production, as there's nowhere to 'hide' imperfections.</p>
 <p><strong>Q11: What's the 'Next Big' packaging trend?</strong><br/>A: 'Plantable' packaging—paper that contains seeds so the customer can literally plant the box and grow flowers—is a massive sustainable trend for late 2026.</p>
-<p><strong>Q12: How do I get a custom packaging quote from Gemora Global?</strong><br/>A: Simply send us your logo and your preferred style/colors. Our design team will provide you with options and a wholesale quote based on your volume. Contact us today.</p>
+<p><strong>Q12: How do I get a custom packaging quote from <a href="/">Gemora Global</a>?</strong><br/>A: Simply send us your logo and your preferred style/colors. Our design team will provide you with options and a wholesale quote based on your volume. Contact us today.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> to design your ultimate unboxing experience. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -245,7 +245,7 @@ export const BLOG_BATCH_24 = [
 <p><strong>Q9: How do I clean my jewelry when it arrives?</strong><br/>A: You shouldn't need to! But a quick wipe with a soft, dry cloth will remove any fingerprints from the packing process and make it shine.</p>
 <p><strong>Q10: Is it safe to use my credit card on jewelry sites?</strong><br/>A: Yes, as long as they use a secure payment gateway (like Stripe, PayPal, or Shopify). Look for the 'HTTPS' in the URL.</p>
 <p><strong>Q11: What's the 'Next Big' thing in online jewelry shopping?</strong><br/>A: 'Virtual Try-On' using AR (Augmented Reality) is becoming more common, allowing you to see how a pair of earrings or a necklace looks on you through your phone's camera.</p>
-<p><strong>Q12: Can I get wholesale pricing on Gemora Global's website?</strong><br/>A: Yes! We have a dedicated 'Wholesale Portal' for business buyers. Contact us to get access and see our B2B pricing and MOQs.</p>
+<p><strong>Q12: Can I get wholesale pricing on <a href="/">Gemora Global</a>'s website?</strong><br/>A: Yes! We have a dedicated 'Wholesale Portal' for business buyers. Contact us to get access and see our B2B pricing and MOQs.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for a safe and beautiful shopping experience. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
