@@ -7,7 +7,8 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
-import { ALL_BLOG_POSTS, type BlogPost } from "../utils/blogStore";
+import { type BlogPost } from "../utils/blogStore";
+import { blogService } from "../utils/blogService";
 import { useCanonical } from '../hooks/useCanonical';
 
 /** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
@@ -45,25 +46,21 @@ export default function BlogPostPage() {
   useCanonical();
   const { slug } = useParams() as { slug: string };
 
-  const defaultPost = ALL_BLOG_POSTS.find((p) => p.slug === slug) ?? null;
-
-  const { data: backendPost, isLoading: backendLoading } = useQuery({
+  const { data: post, isLoading: isPostLoading } = useQuery({
     queryKey: ["blogPost", slug],
     queryFn: async () => {
+      // 1. Try backend API first (if enabled/needed)
       try {
-        const result = await api.getBlogPost(slug);
-        return result;
-      } catch {
-        // 404 or any error — treat as "not found"
-        return null;
+        const backendResult = await api.getBlogPost(slug);
+        if (backendResult) return backendResult as BlogPost;
+      } catch (e) {
+        console.warn("Backend blog fetch failed, falling back to service", e);
       }
+
+      // 2. Fallback to BlogService (handles static and JSON)
+      return await blogService.getPostBySlugAsync(slug);
     },
-    enabled: !!slug && !defaultPost,
-    select: (data) => {
-      if (data === null || data === undefined) return null;
-      if (Array.isArray(data)) return data[0] ?? null;
-      return data;
-    },
+    enabled: !!slug,
   });
 
   const { data: allBackendPostsRes } = useQuery({
@@ -73,13 +70,11 @@ export default function BlogPostPage() {
   });
   const allBackendPosts = allBackendPostsRes?.items || [];
 
-  const post: BlogPost | null = (backendPost as BlogPost | null) ?? defaultPost;
-  const isLoading = backendLoading && !defaultPost;
+  const isLoading = isPostLoading;
 
   const related = (() => {
-    const backendSlugs = new Set(allBackendPosts.map((p) => p.slug));
-    const staticOnly = ALL_BLOG_POSTS.filter((p) => !backendSlugs.has(p.slug));
-    const all = [...allBackendPosts, ...staticOnly] as BlogPost[];
+    if (!post) return [];
+    const all = blogService.getAllPosts();
     return all
       .filter((p) => p.slug !== slug)
       .filter((p) => p.category === post?.category)

@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import AdminGuard from "./components/AdminGuard";
 import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
@@ -80,7 +80,6 @@ import ExportUK from "./pages/export-markets/UK";
 import ExportUSA from "./pages/export-markets/USA";
 // SEO pages
 import ArtificialJewelleryExporter from "./pages/seo/ArtificialJewelleryExporter";
-import ArtificialJewelleryWholesalerIndia from "./pages/seo/ArtificialJewelleryWholesalerIndia";
 import BridalImitationJewellery from "./pages/seo/BridalImitationJewellery";
 import BridalImitationJewelleryWholesale from "./pages/seo/BridalImitationJewelleryWholesale";
 import BridalJewelleryWholesale from "./pages/seo/BridalJewelleryWholesale";
@@ -90,7 +89,6 @@ import FashionJewelleryExporter from "./pages/seo/FashionJewelleryExporter";
 import FashionJewelleryExporterIndia from "./pages/seo/FashionJewelleryExporterIndia";
 import FashionJewelleryManufacturerIndia from "./pages/seo/FashionJewelleryManufacturerIndia";
 import ImitationJewelleryExporterIndia from "./pages/seo/ImitationJewelleryExporterIndia";
-import ImitationJewelleryManufacturerIndia from "./pages/seo/ImitationJewelleryManufacturerIndia";
 import ImitationJewelleryManufacturerJaipur from "./pages/seo/ImitationJewelleryManufacturerJaipur";
 import ImitationJewellerySupplierUSA from "./pages/seo/ImitationJewellerySupplierUSA";
 import JewelleryExporterAustralia from "./pages/seo/JewelleryExporterAustralia";
@@ -107,11 +105,10 @@ import OxidisedJewellerySupplier from "./pages/seo/OxidisedJewellerySupplier";
 import OxidisedJewelleryWholesale from "./pages/seo/OxidisedJewelleryWholesale";
 import PrivateLabelJewelleryIndia from "./pages/seo/PrivateLabelJewelleryIndia";
 import TempleJewelleryManufacturer from "./pages/seo/TempleJewelleryManufacturer";
-import WholesaleImitationJewellery from "./pages/seo/WholesaleImitationJewellery";
-import WholesaleImitationJewelleryIndia from "./pages/seo/WholesaleImitationJewelleryIndia";
 import WholesaleJewelleryRajasthan from "./pages/seo/WholesaleJewelleryRajasthan";
 import WholesaleJewelleryUK from "./pages/seo/WholesaleJewelleryUK";
 import AmericanDiamondJewelleryWholesale from "./pages/seo/AmericanDiamondJewelleryWholesale";
+import WholesaleImitationJewelleryManufacturerExporter from "./pages/seo/WholesaleImitationJewelleryManufacturerExporter";
 import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesale";
 import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
 import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
@@ -147,6 +144,29 @@ export default function App() {
         <Route path="/global-markets" element={<ExportMarkets />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog" element={<Blog />} />
+        {/* 301 Redirects for deleted/merged blogs */}
+        <Route path="/blog/global-delivery-solutions-for-wholesalers" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/blog/fast-delivery-wholesale-jewellery-india" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/blog/factory-direct-jewellery-supplier" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/blog/wholesale-imitation-jewellery-exporter" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        
+        {/* Phase 2: Redirects to Wholesale Jewellery Export India Guide */}
+        <Route path="/blog/how-to-start-imitation-jewellery-export-business" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/moq-explained-wholesale-jewellery-buyers" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/export-artificial-jewellery-jaipur-usa" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/imitation-jewellery-export-documentation-checklist" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/find-international-buyers-imitation-jewellery" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/hs-code-customs-duties-imitation-jewellery" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/export-imitation-jewellery-usa-guide" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/exporting-artificial-jewellery-uk-post-brexit" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/uae-jewellery-market-dubai-buyers" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/sell-indian-fashion-jewellery-australia" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        <Route path="/blog/export-imitation-jewellery-germany-eu" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
+        
+        {/* Phase 2: Redirects to Jaipur Manufacturing Hub Guide */}
+        <Route path="/blog/jaipur-vs-mumbai-jewellery-wholesale" element={<Navigate replace to="/blog/jaipur-jewellery-manufacturing-hub" />} />
+        <Route path="/blog/india-vs-china-imitation-jewellery-suppliers" element={<Navigate replace to="/blog/jaipur-jewellery-manufacturing-hub" />} />
+        
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/why-choose-us" element={<WhyChooseUs />} />
@@ -459,13 +479,18 @@ export default function App() {
 
         {/* SEO landing pages */}
         <Route
+          path="/wholesale-imitation-jewellery-manufacturer-exporter-india"
+          element={<WholesaleImitationJewelleryManufacturerExporter />}
+        />
+        <Route
           path="/imitation-jewellery-exporter-india"
           element={<ImitationJewelleryExporterIndia />}
         />
-        <Route
-          path="/wholesale-imitation-jewellery"
-          element={<WholesaleImitationJewellery />}
-        />
+        {/* 301 Redirects for merged SEO Landing Pages */}
+        <Route path="/wholesale-imitation-jewellery" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/wholesale-imitation-jewellery-india" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/imitation-jewellery-manufacturer-india" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
+        <Route path="/artificial-jewellery-wholesaler-india" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />
         <Route
           path="/bridal-jewellery-wholesale"
           element={<BridalJewelleryWholesale />}
@@ -477,10 +502,6 @@ export default function App() {
         <Route
           path="/custom-jewellery-manufacturer"
           element={<CustomJewelleryManufacturer />}
-        />
-        <Route
-          path="/wholesale-imitation-jewellery-india"
-          element={<WholesaleImitationJewelleryIndia />}
         />
         <Route
           path="/fashion-jewellery-manufacturer-india"
@@ -533,14 +554,6 @@ export default function App() {
         <Route
           path="/oxidised-jewellery-wholesale"
           element={<OxidisedJewelleryWholesale />}
-        />
-        <Route
-          path="/imitation-jewellery-manufacturer-india"
-          element={<ImitationJewelleryManufacturerIndia />}
-        />
-        <Route
-          path="/artificial-jewellery-wholesaler-india"
-          element={<ArtificialJewelleryWholesalerIndia />}
         />
         <Route
           path="/fashion-jewellery-exporter-india"

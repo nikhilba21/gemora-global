@@ -15,6 +15,8 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useCanonical } from '../hooks/useCanonical';
+import { blogService } from "../utils/blogService";
+import { type BlogPost } from "../utils/blogStore";
 
 const BLOG_PAGE_SIZE = 12;
 
@@ -119,24 +121,35 @@ export default function Blog() {
     || 'https://gemora-global-2.onrender.com';
 
   useEffect(() => {
-    setIsLoading(true);
-    fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`)
-      .then(r => r.json())
-      .then(data => {
-        const items = Array.isArray(data) ? data : (data.items || []);
-        const total = data.total || items.length;
-        const pages = data.pages || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
-        setBackendPosts(items.map((b: Record<string,unknown>) => ({
-          ...b,
-          id: b.id,
-          readTime: (b.readTime || b.readtime || '5 min read') as string,
-          createdAt: b.createdAt || b.createdat || 0,
-        } as BlogPost)));
-        setTotalPages(Number(pages));
-        setTotalCount(Number(total));
-      })
-      .catch(() => { setBackendPosts([]); })
-      .finally(() => setIsLoading(false));
+    const loadData = async () => {
+      setIsLoading(true);
+      try {
+        // 1. Ensure Batch 62 is loaded (dynamic layer example)
+        await blogService.loadBatchFromJson(62);
+
+        // 2. Fetch backend posts
+        const response = await fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`);
+        const data = await response.json();
+        const backendItems = (Array.isArray(data) ? data : (data.items || [])) as BlogPost[];
+        
+        // 3. Combine with static/dynamic service posts
+        const servicePosts = blogService.getAllPosts();
+        const allPosts = [...servicePosts, ...backendItems];
+        
+        // Filter unique by slug
+        const uniquePosts = Array.from(new Map(allPosts.map(p => [p.slug, p])).values());
+        
+        setBackendPosts(uniquePosts);
+        setTotalPages(data.pages || Math.ceil(uniquePosts.length / BLOG_PAGE_SIZE) || 1);
+        setTotalCount(uniquePosts.length);
+      } catch (error) {
+        console.error("Failed to load blog data:", error);
+        setBackendPosts(blogService.getAllPosts());
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    loadData();
   }, [currentPage, API_BASE]);
 
   // Client-side category + search filter (on current page)

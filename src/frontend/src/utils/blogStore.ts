@@ -8,6 +8,59 @@ import { BLOG_BATCH_7 } from "./blogBatch7";
 import { BLOG_BATCH_8 } from "./blogBatch8";
 import { BLOG_BATCH_9 } from "./blogBatch9";
 import { BLOG_BATCH_10 } from "./blogBatch10";
+import { BLOG_BATCH_11 } from "./blogBatch11";
+import { BLOG_BATCH_12 } from "./blogBatch12";
+import { BLOG_BATCH_13 } from "./blogBatch13";
+import { BLOG_BATCH_14 } from "./blogBatch14";
+import { BLOG_BATCH_15 } from "./blogBatch15";
+import { BLOG_BATCH_16 } from "./blogBatch16";
+import { BLOG_BATCH_17 } from "./blogBatch17";
+import { BLOG_BATCH_18 } from "./blogBatch18";
+import { BLOG_BATCH_19 } from "./blogBatch19";
+import { BLOG_BATCH_20 } from "./blogBatch20";
+import { BLOG_BATCH_21 } from "./blogBatch21";
+import { BLOG_BATCH_22 } from "./blogBatch22";
+import { BLOG_BATCH_23 } from "./blogBatch23";
+import { BLOG_BATCH_24 } from "./blogBatch24";
+import { BLOG_BATCH_25 } from "./blogBatch25";
+import { BLOG_BATCH_26 } from "./blogBatch26";
+import { BLOG_BATCH_27 } from "./blogBatch27";
+import { BLOG_BATCH_28 } from "./blogBatch28";
+import { BLOG_BATCH_29 } from "./blogBatch29";
+import { BLOG_BATCH_30 } from "./blogBatch30";
+import { BLOG_BATCH_31 } from "./blogBatch31";
+import { BLOG_BATCH_32 } from "./blogBatch32";
+import { BLOG_BATCH_33 } from "./blogBatch33";
+import { BLOG_BATCH_34 } from "./blogBatch34";
+import { BLOG_BATCH_35 } from "./blogBatch35";
+import { BLOG_BATCH_36 } from "./blogBatch36";
+import { BLOG_BATCH_37 } from "./blogBatch37";
+import { BLOG_BATCH_38 } from "./blogBatch38";
+import { BLOG_BATCH_39 } from "./blogBatch39";
+import { BLOG_BATCH_40 } from "./blogBatch40";
+import { BLOG_BATCH_41 } from "./blogBatch41";
+import { BLOG_BATCH_42 } from "./blogBatch42";
+import { BLOG_BATCH_43 } from "./blogBatch43";
+import { BLOG_BATCH_44 } from "./blogBatch44";
+import { BLOG_BATCH_45 } from "./blogBatch45";
+import { BLOG_BATCH_46 } from "./blogBatch46";
+import { BLOG_BATCH_47 } from "./blogBatch47";
+import { BLOG_BATCH_48 } from "./blogBatch48";
+import { BLOG_BATCH_49 } from "./blogBatch49";
+import { BLOG_BATCH_50 } from "./blogBatch50";
+import { BLOG_BATCH_51 } from "./blogBatch51";
+import { BLOG_BATCH_52 } from "./blogBatch52";
+import { BLOG_BATCH_53 } from "./blogBatch53";
+import { BLOG_BATCH_54 } from "./blogBatch54";
+import { BLOG_BATCH_55 } from "./blogBatch55";
+import { BLOG_BATCH_56 } from "./blogBatch56";
+import { BLOG_BATCH_57 } from "./blogBatch57";
+import { BLOG_BATCH_58 } from "./blogBatch58";
+import { BLOG_BATCH_59 } from "./blogBatch59";
+import { BLOG_BATCH_60 } from "./blogBatch60";
+import { BLOG_BATCH_61 } from "./blogBatch61";
+// BLOG_BATCH_62 is now dynamic
+
 
 const STORAGE_KEY = "gemora_blog_posts";
 
@@ -936,6 +989,57 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
   ...BLOG_BATCH_8,
   ...BLOG_BATCH_9,
   ...BLOG_BATCH_10,
+  ...BLOG_BATCH_11,
+  ...BLOG_BATCH_12,
+  ...BLOG_BATCH_13,
+  ...BLOG_BATCH_14,
+  ...BLOG_BATCH_15,
+  ...BLOG_BATCH_16,
+  ...BLOG_BATCH_17,
+  ...BLOG_BATCH_18,
+  ...BLOG_BATCH_19,
+  ...BLOG_BATCH_20,
+  ...BLOG_BATCH_21,
+  ...BLOG_BATCH_22,
+  ...BLOG_BATCH_23,
+  ...BLOG_BATCH_24,
+  ...BLOG_BATCH_25,
+  ...BLOG_BATCH_26,
+  ...BLOG_BATCH_27,
+  ...BLOG_BATCH_28,
+  ...BLOG_BATCH_29,
+  ...BLOG_BATCH_30,
+  ...BLOG_BATCH_31,
+  ...BLOG_BATCH_32,
+  ...BLOG_BATCH_33,
+  ...BLOG_BATCH_34,
+  ...BLOG_BATCH_35,
+  ...BLOG_BATCH_36,
+  ...BLOG_BATCH_37,
+  ...BLOG_BATCH_38,
+  ...BLOG_BATCH_39,
+  ...BLOG_BATCH_40,
+  ...BLOG_BATCH_41,
+  ...BLOG_BATCH_42,
+  ...BLOG_BATCH_43,
+  ...BLOG_BATCH_44,
+  ...BLOG_BATCH_45,
+  ...BLOG_BATCH_46,
+  ...BLOG_BATCH_47,
+  ...BLOG_BATCH_48,
+  ...BLOG_BATCH_49,
+  ...BLOG_BATCH_50,
+  ...BLOG_BATCH_51,
+  ...BLOG_BATCH_52,
+  ...BLOG_BATCH_53,
+  ...BLOG_BATCH_54,
+  ...BLOG_BATCH_55,
+  ...BLOG_BATCH_56,
+  ...BLOG_BATCH_57,
+  ...BLOG_BATCH_58,
+  ...BLOG_BATCH_59,
+  ...BLOG_BATCH_60,
+  ...BLOG_BATCH_61,
 ];
 
 export function getBlogPosts(): BlogPost[] {
