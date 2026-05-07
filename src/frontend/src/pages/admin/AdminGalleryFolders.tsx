@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { FolderOpen, FolderPlus, ImagePlus, Loader2, Trash2, X, ChevronLeft, Eye } from "lucide-react";
+import { FolderOpen, FolderPlus, ImagePlus, Loader2, Trash2, X, ChevronLeft, Eye, Upload } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
@@ -49,7 +49,13 @@ export default function AdminGalleryFolders() {
   const [overallProgress, setOverallProgress] = useState(0);
   const folderInputRef = useRef<HTMLInputElement>(null);
   const addMoreRef = useRef<HTMLInputElement>(null);
+  const bulkInputRef = useRef<HTMLInputElement>(null);
   const [isDragOver, setIsDragOver] = useState(false);
+
+  // ── Bulk multi-folder upload state ─────────────────────────────────────────
+  const [bulkUploading, setBulkUploading] = useState(false);
+  const [bulkProgress, setBulkProgress] = useState({ folder: '', folderIdx: 0, totalFolders: 0, imgIdx: 0, totalImgs: 0, pct: 0 });
+  const [bulkResults, setBulkResults] = useState<{ name: string; count: number; status: 'ok' | 'err' }[]>([]);
 
   // ── Folders list ─────────────────────────────────────────────────────────────
   const { data: folders = [], isLoading } = useQuery<FolderItem[]>({
@@ -167,6 +173,68 @@ export default function AdminGalleryFolders() {
     handleFiles(e.dataTransfer.files);
   }
 
+  // ── Bulk multi-folder upload handler ──────────────────────────────────────────
+  async function handleBulkFolderUpload(fileList: FileList | null) {
+    if (!fileList || !fileList.length) return;
+
+    // Group files by their top-level folder name using webkitRelativePath
+    const folderMap = new Map<string, File[]>();
+    for (const file of Array.from(fileList)) {
+      if (!file.type.startsWith('image/')) continue;
+      const path = (file as File & { webkitRelativePath?: string }).webkitRelativePath || '';
+      // path looks like "FolderName/image.jpg" or "FolderName/subfolder/image.jpg"
+      const parts = path.split('/');
+      const folderName = parts.length > 1 ? parts[0] : 'Untitled';
+      if (!folderMap.has(folderName)) folderMap.set(folderName, []);
+      folderMap.get(folderName)!.push(file);
+    }
+
+    if (folderMap.size === 0) { toast.error('No image files found in selected folders'); return; }
+
+    setBulkUploading(true);
+    setBulkResults([]);
+    const results: { name: string; count: number; status: 'ok' | 'err' }[] = [];
+    const folderNames = Array.from(folderMap.keys());
+
+    for (let fi = 0; fi < folderNames.length; fi++) {
+      const name = folderNames[fi];
+      const files = folderMap.get(name)!;
+      setBulkProgress({ folder: name, folderIdx: fi + 1, totalFolders: folderNames.length, imgIdx: 0, totalImgs: files.length, pct: Math.round(((fi) / folderNames.length) * 100) });
+
+      try {
+        // 1. Create folder
+        const folderRes = await api.createGalleryFolder({ name, description: '', sortOrder: 0 });
+        const folderId = folderRes.id;
+
+        // 2. Upload images one by one
+        const uploaded: { imageUrl: string; caption: string; sortOrder: number }[] = [];
+        for (let ii = 0; ii < files.length; ii++) {
+          setBulkProgress(p => ({ ...p, imgIdx: ii + 1, pct: Math.round(((fi + (ii + 1) / files.length) / folderNames.length) * 100) }));
+          try {
+            const result = await uploadFileDetailed(files[ii]);
+            uploaded.push({ imageUrl: result.url, caption: files[ii].name.replace(/\.[^/.]+$/, ''), sortOrder: ii });
+          } catch { /* skip failed image */ }
+        }
+
+        // 3. Save images to folder
+        if (uploaded.length) {
+          await api.addImagesToFolder(Number(folderId as number), uploaded);
+        }
+        results.push({ name, count: uploaded.length, status: 'ok' });
+      } catch {
+        results.push({ name, count: 0, status: 'err' });
+      }
+      setBulkResults([...results]);
+    }
+
+    setBulkProgress(p => ({ ...p, pct: 100 }));
+    qc.invalidateQueries({ queryKey: ['gallery-folders'] });
+    const ok = results.filter(r => r.status === 'ok');
+    toast.success(`✅ ${ok.length} folder(s) created with ${ok.reduce((s, r) => s + r.count, 0)} total images!`);
+    setBulkUploading(false);
+    if (bulkInputRef.current) bulkInputRef.current.value = '';
+  }
+
   // ─────────────────────────────────────────────────────────────────────────────
   // RENDER
   // ─────────────────────────────────────────────────────────────────────────────
@@ -251,10 +319,56 @@ export default function AdminGalleryFolders() {
             <h1 className="text-2xl font-bold">Gallery Folders</h1>
             <p className="text-sm text-muted-foreground">Upload a folder of images — they appear as a collection on the gallery page</p>
           </div>
-          <Button onClick={() => setCreatingFolder(true)}>
-            <FolderPlus className="w-4 h-4 mr-2" /> New Folder
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={() => bulkInputRef.current?.click()} disabled={bulkUploading}>
+              <Upload className="w-4 h-4 mr-2" /> Bulk Import Folders
+            </Button>
+            <input
+              ref={bulkInputRef}
+              type="file"
+              className="hidden"
+              // @ts-ignore — webkitdirectory for folder selection
+              webkitdirectory=""
+              multiple
+              onChange={e => handleBulkFolderUpload(e.target.files)}
+            />
+            <Button onClick={() => setCreatingFolder(true)}>
+              <FolderPlus className="w-4 h-4 mr-2" /> New Folder
+            </Button>
+          </div>
         </div>
+
+        {/* Bulk Upload Progress */}
+        {(bulkUploading || bulkResults.length > 0) && (
+          <div className="border rounded-xl p-6 mb-6 bg-card">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold">Bulk Folder Import</h2>
+              {!bulkUploading && <button onClick={() => setBulkResults([])}><X className="w-5 h-5" /></button>}
+            </div>
+            {bulkUploading && (
+              <div className="mb-4">
+                <div className="flex justify-between text-sm mb-1">
+                  <span>Uploading folder <strong>{bulkProgress.folderIdx}</strong> of {bulkProgress.totalFolders}: <strong>{bulkProgress.folder}</strong></span>
+                  <span>{bulkProgress.pct}%</span>
+                </div>
+                <Progress value={bulkProgress.pct} className="h-2 mb-1" />
+                <p className="text-xs text-muted-foreground">Image {bulkProgress.imgIdx} of {bulkProgress.totalImgs}</p>
+              </div>
+            )}
+            {bulkResults.length > 0 && (
+              <div className="border rounded-lg divide-y text-sm max-h-48 overflow-y-auto">
+                {bulkResults.map((r, i) => (
+                  <div key={i} className="flex items-center gap-3 px-3 py-2">
+                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${r.status === 'ok' ? 'bg-green-500' : 'bg-red-500'}`} />
+                    <span className="flex-1 truncate">{r.name}</span>
+                    <span className="text-xs text-muted-foreground">{r.count} images</span>
+                    {r.status === 'ok' ? <span className="text-green-600 text-xs">✓</span> : <span className="text-red-500 text-xs">✗</span>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Create Folder Panel */}
         {creatingFolder && (
