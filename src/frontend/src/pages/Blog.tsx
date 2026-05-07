@@ -85,6 +85,20 @@ const categoryColors: Record<string, string> = {
   "Private Label": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
 };
 
+interface BlogPost {
+  id: number | string;
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  status: string;
+  image: string;
+  content: string;
+}
+
 export default function Blog() {
   useCanonical();
   usePageSEO({
@@ -114,64 +128,71 @@ export default function Blog() {
   const [totalPages, setTotalPages] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
     || 'https://gemora-global-2.onrender.com';
 
   useEffect(() => {
     setIsLoading(true);
+    setError(null);
     fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`)
       .then(r => r.json())
       .then(data => {
-        // ✅ FIX: Defensive data parsing to prevent array type errors
-        let items: BlogPost[] = [];
-        let total = 0;
-        let pages = 0;
+        try {
+          // ✅ FIX: Defensive parsing - handle all response formats
+          let items: BlogPost[] = [];
+          let total = 0;
+          let pages = 1;
 
-        // Handle both paginated object and raw array responses
-        if (Array.isArray(data)) {
-          items = data;
-          total = items.length;
-          pages = Math.ceil(total / BLOG_PAGE_SIZE) || 1;
-        } else if (typeof data === 'object' && data !== null && 'items' in data) {
-          // Paginated response
-          items = Array.isArray(data.items) ? data.items : [];
-          total = Number(data.total) || items.length;
-          pages = Number(data.pages) || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
-        } else {
-          items = [];
-          total = 0;
-          pages = 1;
+          if (Array.isArray(data)) {
+            // Response is array of blog posts
+            items = data.map((b: any) => safeBlogPost(b));
+            total = items.length;
+            pages = Math.ceil(total / BLOG_PAGE_SIZE) || 1;
+          } else if (data && typeof data === 'object') {
+            // Response is paginated object
+            const responseItems = data.items || data.data || [];
+            if (Array.isArray(responseItems)) {
+              items = responseItems.map((b: any) => safeBlogPost(b));
+            }
+            total = Number(data.total) || items.length;
+            pages = Number(data.pages) || Math.ceil(total / BLOG_PAGE_SIZE) || 1;
+          }
+
+          setBackendPosts(items);
+          setTotalPages(pages);
+          setTotalCount(total);
+        } catch (err) {
+          console.error('Blog data parsing error:', err);
+          setError('Failed to parse blog data');
+          setBackendPosts([]);
         }
-
-        // ✅ FIX: Type-safe mapping with explicit conversions
-        setBackendPosts(items.map((b: unknown) => {
-          const post = b as Record<string, unknown>;
-          return {
-            id: Number(post.id) || 0,
-            slug: String(post.slug || ''),
-            title: String(post.title || ''),
-            category: String(post.category || ''),
-            excerpt: String(post.excerpt || ''),
-            author: String(post.author || ''),
-            date: String(post.date || ''),
-            readTime: String(post.readTime || post.readtime || '5 min read'),
-            status: String(post.status || 'Draft'),
-            image: String(post.image || ''),
-            content: String(post.content || ''),
-            createdAt: Number(post.createdAt || post.createdat || 0),
-          } as BlogPost;
-        }));
-        
-        setTotalPages(Number(pages));
-        setTotalCount(Number(total));
       })
-      .catch(err => {
+      .catch((err) => {
         console.error('Blog fetch error:', err);
+        setError('Failed to load blog posts');
         setBackendPosts([]);
       })
       .finally(() => setIsLoading(false));
   }, [currentPage, API_BASE]);
+
+  // ✅ Safe blog post converter
+  function safeBlogPost(b: any): BlogPost {
+    return {
+      id: Number(b.id) || 0,
+      slug: String(b.slug || b.id || ''),
+      title: String(b.title || 'Untitled'),
+      category: String(b.category || ''),
+      excerpt: String(b.excerpt || ''),
+      author: String(b.author || 'Gemora Global'),
+      date: String(b.date || ''),
+      readTime: String(b.readTime || b.readtime || '5 min read'),
+      status: String(b.status || 'Draft'),
+      image: String(b.image || ''),
+      content: String(b.content || ''),
+    };
+  }
 
   // Client-side category + search filter (on current page)
   const filtered = backendPosts.filter((post) => {
@@ -180,9 +201,9 @@ export default function Blog() {
     const q = searchQuery.toLowerCase();
     const matchSearch =
       !q ||
-      post.title.toLowerCase().includes(q) ||
-      post.excerpt.toLowerCase().includes(q) ||
-      post.category.toLowerCase().includes(q);
+      String(post.title).toLowerCase().includes(q) ||
+      String(post.excerpt).toLowerCase().includes(q) ||
+      String(post.category).toLowerCase().includes(q);
     return matchCat && matchSearch;
   });
 
@@ -216,41 +237,6 @@ export default function Blog() {
             <li>
               <a href="/blog/how-to-import-imitation-jewellery-from-india">
                 How to Import Imitation Jewellery from India
-              </a>
-            </li>
-            <li>
-              <a href="/blog/best-imitation-jewellery-manufacturer-india">
-                Best Imitation Jewellery Manufacturer in India
-              </a>
-            </li>
-            <li>
-              <a href="/blog/wholesale-imitation-jewellery-suppliers-jaipur">
-                Wholesale Imitation Jewellery Suppliers in Jaipur
-              </a>
-            </li>
-            <li>
-              <a href="/blog/top-fashion-jewellery-trends-2026">
-                Top Fashion Jewellery Trends 2026
-              </a>
-            </li>
-            <li>
-              <a href="/blog/why-buy-fashion-jewellery-indian-manufacturers">
-                Why Buy Fashion Jewellery from Indian Manufacturers
-              </a>
-            </li>
-            <li>
-              <a href="/blog/wholesale-jewellery-exporter-to-uae">
-                Wholesale Jewellery Exporter to UAE
-              </a>
-            </li>
-            <li>
-              <a href="/blog/fashion-jewellery-suppliers-uk-retailers">
-                Fashion Jewellery Suppliers for UK Retailers
-              </a>
-            </li>
-            <li>
-              <a href="/blog/minimum-order-quantity-jewellery-export">
-                Minimum Order Quantity for Jewellery Export
               </a>
             </li>
           </ul>
@@ -313,7 +299,7 @@ export default function Blog() {
                   setCurrentPage(0);
                 }}
                 data-ocid="blog.search_input"
-                className="w-full pl-11 pr-4 py-3 rounded-full bg-card border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full pl-11 pr-4 py-3 rounded-full bg-card border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </motion.div>
           </div>
@@ -378,6 +364,18 @@ export default function Blog() {
               </p>
             )}
           </div>
+
+          {error && (
+            <div className="text-center py-16 md:py-20">
+              <p className="text-red-500 font-semibold mb-4">{error}</p>
+              <button
+                onClick={() => window.location.reload()}
+                className="text-primary hover:underline"
+              >
+                Retry
+              </button>
+            </div>
+          )}
 
           {isLoading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
@@ -594,19 +592,4 @@ export default function Blog() {
       <Footer />
     </div>
   );
-}
-
-interface BlogPost {
-  id: number;
-  slug: string;
-  title: string;
-  category: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  readTime: string;
-  status: string;
-  image: string;
-  content: string;
-  createdAt: number;
 }
