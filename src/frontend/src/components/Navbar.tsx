@@ -179,7 +179,7 @@ export default function Navbar() {
           >
             <img
               src="/assets/uploads/logo-removebg-preview-1-1.png"
-              alt="Gemora Global"
+              alt="Gemora Global Private Limited"
               className="h-9 sm:h-12 w-auto object-contain max-w-[140px] sm:max-w-[180px]"
             />
           </Link>
@@ -393,7 +393,7 @@ export default function Navbar() {
           >
             <img
               src="/assets/uploads/logo-removebg-preview-1-1.png"
-              alt="Gemora Global"
+              alt="Gemora Global Private Limited"
               className="h-9 sm:h-12 w-auto object-contain max-w-[140px]"
             />
           </Link>
