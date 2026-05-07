@@ -165,10 +165,9 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isSolid
-            ? "shadow-elevated border-b border-primary/60"
+            ? "bg-primary shadow-elevated border-b border-primary/60"
             : "bg-transparent border-b border-transparent"
         }`}
-        style={isSolid ? { background: "#0d1554" } : {}}
         data-ocid="nav.bar"
       >
         <div className="container flex items-center justify-between h-14 sm:h-16 px-4 sm:px-6">
@@ -179,9 +178,9 @@ export default function Navbar() {
             onClick={closeMobile}
           >
             <img
-              src="/logo.png"
-              alt="Gemora Global Private Limited"
-              className="h-10 sm:h-14 w-auto object-contain max-w-[150px] sm:max-w-[200px]"
+              src="/assets/uploads/logo-removebg-preview-1-1.png"
+              alt="Gemora Global"
+              className="h-9 sm:h-12 w-auto object-contain max-w-[140px] sm:max-w-[180px]"
             />
           </Link>
 
@@ -393,9 +392,9 @@ export default function Navbar() {
             onClick={closeMobile}
           >
             <img
-              src="/logo.png"
-              alt="Gemora Global Private Limited"
-              className="h-10 sm:h-14 w-auto object-contain max-w-[150px]"
+              src="/assets/uploads/logo-removebg-preview-1-1.png"
+              alt="Gemora Global"
+              className="h-9 sm:h-12 w-auto object-contain max-w-[140px]"
             />
           </Link>
           <button
