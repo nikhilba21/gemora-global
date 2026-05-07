@@ -9,7 +9,7 @@ export const BLOG_BATCH_46 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?auto=format&fit=crop&w=800&q=80",
     tags: ["conflict free diamonds", "kimberley process", "ethical jewelry", "diamond sourcing", "B2B ethics"],
     content: `<h2>The Evolution of Accountability</h2>
 <p>In the jewelry world of 2026, 'Conflict-Free' is no longer just a marketing buzzword—it's a 'License-to-Operate.' For decades, the **Kimberley Process (KP)** was the only shield against 'Blood Diamonds.' But as the global consumer becomes more sophisticated and demands transparency, we've realized that KP—while a good start—has gaps. In 2026, 'Truly-Ethical' sourcing means looking beyond just 'Conflict' to environmental impact, fair wages, and community support. It's about a 'Holistic-Accountability' that spans the entire supply chain.</p>
@@ -58,7 +58,7 @@ export const BLOG_BATCH_46 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?auto=format&fit=crop&w=800&q=80",
     tags: ["recycled gold", "fairmined gold", "ethical jewelry", "sustainable gold", "B2B guide"],
     content: `<h2>The Standard for the Soul</h2>
 <p>Gold is eternal. It can be melted down and repurposed an infinite number of times without losing its purity. But in the 2026 jewelry market, the 'Origin' of that gold is the #1 concern for the 'Ethical-Consumer.' The choice usually comes down to two paths: **Recycled Gold** or **Fairmined Gold**. Both are vastly better than 'Standard-Mined' gold, but they solve different problems. One focuses on 'Environmental-Efficiency,' while the other focuses on 'Social-Justice.' Understanding the difference is key to building an 'Impact-First' jewelry brand.</p>
@@ -106,7 +106,7 @@ export const BLOG_BATCH_46 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?auto=format&fit=crop&w=800&q=80",
     tags: ["sustainable gemstones", "gemstone sourcing", "transparent supply chain", "ethical jewelry", "B2B guide"],
     content: `<h2>The Rainbow of Responsibility</h2>
 <p>While diamonds have the Kimberley Process, the world of 'Colored-Gemstones' (Sapphires, Emeralds, Rubies, and more) is traditionally more fragmented and difficult to trace. However, in the jewelry market of 2026, the demand for 'Traceability' has led to a revolution in the way colored gems are sourced. From 'Community-Mining' in Madagascar to 'Green-Cutting' in Jaipur, the industry is moving toward a model where the 'Story' of the stone is as important as its 'Hue.' A sustainable gemstone is one that supports the people who found it and the earth it came from.</p>
@@ -155,7 +155,7 @@ export const BLOG_BATCH_46 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
     tags: ["environmental impact", "sustainable jewelry", "responsible shopping", "carbon footprint", "B2B guide"],
     content: `<h2>The Footprint of the Finery</h2>
 <p>A single gold ring or a one-carat diamond can tell a story of beauty and love, but it also carries an 'Environmental-Legacy.' From the massive amounts of earth moved during mining to the water and chemicals used in refining, the traditional jewelry industry has a significant footprint. In 2026, the 'Conscious-Consumer' is asking: 'What is the true cost of my sparkle?' Understanding the environmental impact of your jewelry isn't about feeling guilty; it's about having the knowledge to make 'Earth-First' choices that support a cleaner, greener future.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_46 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?auto=format&fit=crop&w=800&q=80",
     tags: ["blockchain jewelry", "traceability", "jewelry technology", "provenance proof", "B2B tech"],
     content: `<h2>The Immutable Story</h2>
 <p>In the traditional jewelry industry, a gemstone might pass through twenty hands between the mine and the consumer, with the 'Story' of its origin often getting lost or 'Muddied' along the way. In the world of 2026, we have a solution: **Blockchain**. By creating a digital, unhackable record of every step in a gemstone's journey, we can provide the 'Ultimate-Proof' of its origin, ethics, and value. It's the end of 'Guesswork' and the beginning of 'Absolute-Transparency.' Blockchain is the digital armor that protects both the consumer and the honest manufacturer.</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_24 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry gifting", "gift guide 2026", "personalized gifts", "anniversary jewelry", "birthday gifts"],
     content: `<h2>The Magic of the Little Box</h2>
 <p>Few things carry the emotional weight of a gift of jewelry. It's a symbol of love, appreciation, and shared history. But for many, the process of choosing the 'perfect' piece can be incredibly stressful. How do you know what they'll like? How much should you spend? Is gold better than silver?</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_24 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["wholesale jewelry india", "sourcing guide", "jaipur jewelry manufacturer", "b2b jewelry", "importing jewelry"],
     content: `<h2>The Global Jewelry Hub</h2>
 <p>For centuries, India—and specifically the city of Jaipur—has been the beating heart of the global jewelry industry. From raw gemstone processing to intricate hand-enameling and high-tech manufacturing, Jaipur offers a level of expertise and value that is unmatched anywhere else in the world. For international retailers and brands, sourcing from India is the key to offering high-quality, trend-forward jewelry at competitive price points.</p>
@@ -90,7 +90,7 @@ export const BLOG_BATCH_24 = [
 <p><strong>Q4: How do I pay an Indian manufacturer?</strong><br/>A: The standard methods are Bank Transfer (T/T) or secure online platforms like Wise or PayPal. Reputable manufacturers will provide a formal 'Proforma Invoice' with their bank details.</p>
 <p><strong>Q5: What is 'Jaipur Blue Pottery' and is it used in jewelry?</strong><br/>A: It's a traditional ceramic craft of Jaipur. While distinct from metal jewelry, some contemporary designers use 'Blue Pottery' beads and pendants for a unique, artisan look.</p>
 <p><strong>Q6: Are there 'Jewelry Fairs' in India?</strong><br/>A: Yes, the IIJS (India International Jewellery Show) and the IHGF Delhi Fair (for handicrafts and jewelry) are massive events for wholesale buyers.</p>
-<p><strong>Q7: Is the jewelry ethically made?</strong><br/>A: This depends on the manufacturer. At Gemora Global, we prioritize fair wages, safe working conditions, and ethical material sourcing. We encourage our partners to ask about our social responsibility practices.</p>
+<p><strong>Q7: Is the jewelry ethically made?</strong><br/>A: This depends on the manufacturer. At <a href="/">Gemora Global</a>, we prioritize fair wages, safe working conditions, and ethical material sourcing. We encourage our partners to ask about our social responsibility practices.</p>
 <p><strong>Q8: What is 'EPCH'?</strong><br/>A: It's the Export Promotion Council for Handicrafts, a government-linked body that regulates and promotes Indian exports. Membership is a strong indicator of a legitimate manufacturer.</p>
 <p><strong>Q9: Can I visit the factory?</strong><br/>A: Yes! We welcome international clients to visit our office and manufacturing unit in Jaipur. It's the best way to see our process and meet our team.</p>
 <p><strong>Q10: What happens if there's a quality issue?</strong><br/>A: A professional manufacturer will have a clear 'Return and Refund' policy. Always inspect your order as soon as it arrives and report any issues within a specified time frame (usually 7 days).</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_24 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry quality control", "manufacturing standards", "b2b jewelry", "jewelry production", "quality assurance"],
     content: `<h2>The Foundation of Brand Trust</h2>
 <p>In the jewelry industry, quality is everything. For a brand or retailer, a single batch of poor-quality products can destroy years of hard-earned customer trust. Quality Control (QC) is the process of ensuring that every piece of jewelry meets the required standards of 'Materials,' 'Craftsmanship,' and 'Durability' before it reaches the customer.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_24 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry packaging", "unboxing experience", "sustainable packaging", "branding 2026", "retail trends"],
     content: `<h2>The Power of First Impressions</h2>
 <p>In 2026, the 'Product' is more than just the piece of jewelry; it's the entire experience of receiving it. In an age dominated by social media, the 'Unboxing' moment has become a powerful marketing tool. High-quality packaging doesn't just protect the jewelry; it builds brand value, justifies a premium price point, and encourages customers to share their purchase with their followers.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_24 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["online shopping", "jewelry guide 2026", "buying tips", "jewelry quality", "safe shopping"],
     content: `<h2>The Digital Jewelry Box</h2>
 <p>In 2026, the majority of fashion jewelry is discovered and purchased online. While this offers incredible choice and convenience, it also carries risks. How do you know the quality is what it looks like in the photo? How do you ensure the site is secure? And what do all those technical terms actually mean?</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_40 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["gold purity", "gold jewelry", "karat guide", "jewelry education", "B2B guide"],
     content: `<h2>The Golden Standard</h2>
 <p>Gold has been the ultimate symbol of wealth and status for thousands of years. But in the modern jewelry market of 2026, 'Gold' isn't just one thing. It's a spectrum of purities, each with its own strengths, weaknesses, and 'Vibe.' Whether you're buying a wedding ring to last a lifetime or a fashion-forward piece for the season, understanding 'Karats' (K) is essential. It's the difference between a piece that stays beautiful and one that bends, scratches, or tarnishes.</p>
@@ -71,7 +71,7 @@ export const BLOG_BATCH_40 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["sterling silver", "925 silver", "jewelry guide", "silver care", "B2B silver"],
     content: `<h2>The Eternal Shine of Silver</h2>
 <p>In the world of 2026 jewelry, Sterling Silver is the definitive 'Democratic-Metal.' It offers the beauty, the brilliance, and the prestige of a precious metal but at a price point that is accessible to everyone. From the runways of Milan to the artisan markets of Jaipur, Sterling Silver—marked as '925'—is the foundation of the global fashion jewelry industry. It is the metal of 'Freedom,' 'Modernity,' and 'Endless-Possibility.'</p>
@@ -118,7 +118,7 @@ export const BLOG_BATCH_40 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["gold vermeil", "gold plated", "jewelry education", "B2B guide", "plating standards"],
     content: `<h2>The Golden Illusion</h2>
 <p>Everyone loves the look of gold. But not everyone can afford the price of solid 18k gold. In 2026, the jewelry industry has perfected the art of 'Gold-Plating,' allowing us to create pieces that look identical to solid gold for a fraction of the cost. However, there is a massive difference between 'Gold-Plated' and 'Gold-Vermeil.' Understanding this difference is the key to buying (and selling) jewelry that lasts. It's the difference between a piece that stays golden for years and one that turns green in a week.</p>
@@ -157,7 +157,7 @@ export const BLOG_BATCH_40 = [
 <p><strong>Q9: What is 'Gold-Filled'?</strong><br/>A: It's a different process where a thick layer of gold is mechanically bonded to a base metal using heat and pressure. It is very durable but harder to use for intricate 'Artisan' designs.</p>
 <p><strong>Q10: Why is Vermeil popular in 2026?</strong><br/>A: Because it fills the gap between 'Cheap Costume' and 'Expensive Fine' jewelry. It is the metal of the 'Affordable Luxury' revolution.</p>
 <p><strong>Q11: What's the 'Next Big' plating trend?</strong><br/>A: 'Nano-Plating'—using molecular technology to create even more durable and scratch-resistant gold layers—is a major 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global provide plating in different gold colors?</strong><br/>A: Yes! We offer 14k Yellow, 18k Yellow, and Rose Gold plating for all our silver and brass collections. Contact us for our plating menu.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide plating in different gold colors?</strong><br/>A: Yes! We offer 14k Yellow, 18k Yellow, and Rose Gold plating for all our silver and brass collections. Contact us for our plating menu.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your high-quality plated collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -171,7 +171,7 @@ export const BLOG_BATCH_40 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["platinum", "white gold", "jewelry education", "bridal metals", "B2B guide"],
     content: `<h2>The White Metal Debate</h2>
 <p>When choosing an engagement ring or a high-end wedding band in 2026, the choice usually comes down to two 'White Metals': Platinum or White Gold. At first glance, they look identical. But they are fundamentally different materials with different weights, different durability, and different long-term maintenance needs. Choosing the wrong one can lead to a ring that looks dull, turns yellow, or wears down faster than expected.</p>
@@ -219,7 +219,7 @@ export const BLOG_BATCH_40 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["alternative metals", "titanium jewelry", "tungsten rings", "tantalum", "men's jewelry trends"],
     content: `<h2>Beyond the Precious</h2>
 <p>In the jewelry world of 2026, Gold and Silver are no longer the only players. A new category of 'Alternative Metals'—originally used in aerospace and medical technology—has taken the jewelry market by storm, especially for men's wedding bands. These metals offer a 'Modern-Industrial' look, incredible durability, and a price point that makes 'High-End-Design' accessible to everyone. They are the metals of 'Strength,' 'Innovation,' and 'Individual-Style.'</p>

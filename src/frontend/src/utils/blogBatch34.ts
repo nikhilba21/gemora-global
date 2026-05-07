@@ -9,7 +9,7 @@ export const BLOG_BATCH_34 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: ["engagement rings", "bridal trends 2026", "diamond rings", "wedding planning", "jewelry guide"],
     content: `<h2>A Symbol of Forever</h2>
 <p>Buying an engagement ring is one of life's most significant and emotional decisions. It's a piece of jewelry that will be worn every day for decades, carrying the weight of a lifetime of promises. In 2026, the 'Modern-Engagement' is about personal expression. Gone are the days of 'one-size-fits-all.' Today's brides want a ring that reflects their unique style, their values (ethics), and their personal story.</p>
@@ -68,7 +68,7 @@ export const BLOG_BATCH_34 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?auto=format&fit=crop&w=800&q=80",
     tags: ["wedding bands", "bridal sets", "wedding rings", "stacking rings", "2026 bridal trends"],
     content: `<h2>The Eternal Circle</h2>
 <p>The wedding band is the most enduring piece of the wedding ceremony. While the engagement ring is about the 'Proposal,' the wedding band is about the 'Daily-Promise.' In 2026, the trend for wedding bands has shifted from simple 'plain bands' to complex, curated 'Stacks.' Couples are choosing bands that complement their engagement rings while also standing alone as a powerful statement of style.</p>
@@ -118,7 +118,7 @@ export const BLOG_BATCH_34 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80",
     tags: ["bridal jewelry", "wedding accessories", "2026 bridal trends", "bridal earrings", "colored gems for brides"],
     content: `<h2>The Final Flourish</h2>
 <p>A bride's look is only complete when the right jewelry is added. In 2026, 'Bridal Jewelry' has moved beyond the simple pearl stud. Today's brides are using their accessories to add personality, color, and drama to their wedding day. The trend is for 'Investment-Fashion'—high-quality pieces that the bride can wear again long after the wedding is over. From 'Statement-Back-Necklaces' to 'Cerulean-Blue' accents, we're breaking down the bridal jewelry trends of 2026.</p>
@@ -167,7 +167,7 @@ export const BLOG_BATCH_34 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["groom jewelry", "men's wedding bands", "cufflinks", "men's fashion 2026", "wedding watch"],
     content: `<h2>The Modern Groom</h2>
 <p>In 2026, the groom's style is just as important as the bride's. Gone are the days when the only piece of jewelry a man wore was a plain gold band. Today's grooms are using jewelry to express their personality, their heritage, and their taste for quality. From 'Alternative-Metal' bands to 'Custom-Engraved' cufflinks, the men's bridal market is one of the fastest-growing sectors in the industry.</p>
@@ -217,7 +217,7 @@ export const BLOG_BATCH_34 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: ["anniversary gifts", "anniversary jewelry", "jewelry gift guide", "milestone jewelry", "2026 gifting"],
     content: `<h2>A Lifetime of Celebration</h2>
 <p>Every year of marriage is a milestone worth celebrating, and jewelry is the universal language of anniversary appreciation. Whether it's the 'Paper' of year one or the 'Diamond' of year sixty, a gift of jewelry says 'I still do' and 'I love you more today than yesterday.' In 2026, the trend for anniversary gifting is for 'Meaningful-Continuity'—pieces that can be added to the existing 'Stack' to tell the story of your life together.</p>

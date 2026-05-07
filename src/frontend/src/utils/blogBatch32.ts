@@ -9,7 +9,7 @@ export const BLOG_BATCH_32 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["online boutique", "jewelry business", "B2B", "entrepreneurship", "2026 trends"],
     content: `<h2>Your Sparkle, Your Brand</h2>
 <p>In 2026, the barrier to entry for the jewelry market has never been lower, but the competition has never been higher. Starting an online jewelry boutique is a dream for many, but turning it into a profitable business requires more than just good taste. It requires a solid strategy, a reliable supply chain, and a deep understanding of the digital landscape.</p>
@@ -37,7 +37,7 @@ export const BLOG_BATCH_32 = [
 <p>We don't just sell you jewelry; we want to help you build a brand. We offer 'Starter Packs' for new boutiques, low MOQs for custom designs, and expert advice on everything from pricing to photography. Our success depends on your success. Let's build your jewelry empire together.</p>
 
 <h2>Frequently Asked Questions</h2>
-<p><strong>Q1: How much money do I need to start?</strong><br/>A: You can start an online boutique with as little as $500 - $1,000 if you focus on a small, curated 'Starter Collection' from a wholesale partner like Gemora Global.</p>
+<p><strong>Q1: How much money do I need to start?</strong><br/>A: You can start an online boutique with as little as $500 - $1,000 if you focus on a small, curated 'Starter Collection' from a wholesale partner like <a href="/">Gemora Global</a>.</p>
 <p><strong>Q2: Do I need to hold inventory?</strong><br/>A: In 2026, holding a small amount of 'Core' inventory is recommended for fast shipping. However, you can also use a 'Pre-Order' model for larger or custom pieces to manage your cash flow.</p>
 <p><strong>Q3: How do I find a good manufacturer?</strong><br/>A: Look for manufacturers with a physical presence, clear communication, and international quality certifications. Gemora Global, based in Jaipur, is a trusted partner for global brands.</p>
 <p><strong>Q4: Is Shopify better than Etsy?</strong><br/>A: Etsy is great for getting started and finding an audience. Shopify is better for building a long-term, scalable brand that you own and control completely.</p>
@@ -62,7 +62,7 @@ export const BLOG_BATCH_32 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry photography", "Instagram tips", "social media marketing", "e-commerce tips", "2026 trends"],
     content: `<h2>The Visual Language of Luxury</h2>
 <p>In the digital-first world of 2026, your jewelry photography isn't just about showing a product; it's about selling a 'feeling.' On Instagram and TikTok, you have less than a second to capture a customer's attention. If your photo is blurry, dark, or lacks 'sparkle,' they will scroll right past. The good news? You don't need a $5,000 camera to take professional-grade jewelry photos anymore.</p>
@@ -115,7 +115,7 @@ export const BLOG_BATCH_32 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["social media marketing", "jewelry marketing", "Instagram strategy", "TikTok for business", "2026 trends"],
     content: `<h2>The Community-First Approach</h2>
 <p>In 2026, social media marketing for jewelry has shifted from 'Advertising' to 'Community Building.' Customers don't want to be 'Sold' to; they want to be part of a brand's story. They want to see the face behind the brand, the process in the workshop, and the community of people wearing the jewelry. A successful social media strategy in 2026 is about being 'Human,' 'Helpful,' and 'Visually-Captivating.'</p>
@@ -171,7 +171,7 @@ This builds authority and trust, making the 'Sell' post much more effective when
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["influencer marketing", "jewelry business", "B2B", "social media strategy", "2026 trends"],
     content: `<h2>The Modern 'Word-of-Mouth'</h2>
 <p>In 2026, consumers trust influencers more than they trust brands. When someone they follow and admire 'styles' a pair of earrings or shares their 'daily jewelry stack,' it carries the weight of a personal recommendation from a friend. Influencer marketing isn't just about 'Reach'; it's about 'Trust' and 'Aspiration.' For jewelry brands, it is the most powerful way to show how your pieces look and feel in real life.</p>
@@ -221,7 +221,7 @@ This builds authority and trust, making the 'Sell' post much more effective when
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["email marketing", "jewelry business", "customer loyalty", "B2B marketing", "retention strategy"],
     content: `<h2>The Gold Mine in Your Inbox</h2>
 <p>In 2026, with social media algorithms becoming more unpredictable and ad costs rising, your email list is your most valuable business asset. It is a direct, 'unfiltered' line to your most interested customers. For jewelry brands, where 'Trust' and 'Repeat-Purchases' are key to long-term success, email marketing is the engine of profitability. A customer who has bought from you once is 5x more likely to buy from you again if you stay in their inbox.</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_25 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry care", "cleaning jewelry", "gold care", "silver care", "jewelry maintenance", "longevity"],
     content: `<h2>Jewelry is a Living Memory</h2>
 <p>Whether it's a family heirloom, a gift from a loved one, or a piece you bought to celebrate a personal milestone, jewelry carries emotional weight. But unlike clothing, which we wash and care for regularly, jewelry is often neglected. In 2026, as we move toward a more sustainable 'Buy Less, Buy Better' fashion philosophy, knowing how to care for your jewelry is essential.</p>
@@ -63,7 +63,7 @@ export const BLOG_BATCH_25 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=800&q=80",
     tags: ["gold plated care", "cleaning gold", "vermeil care", "jewelry maintenance", "home cleaning tips"],
     content: `<h2>The Delicate Nature of Gold Plating</h2>
 <p>Gold plated jewelry (including Gold Vermeil) is a favorite for its beautiful look and accessible price. However, because the gold layer is a thin coating over a base metal, it requires more careful handling than solid gold. The goal of cleaning plated jewelry is to remove dirt and oils without rubbing away the gold layer itself.</p>
@@ -114,7 +114,7 @@ export const BLOG_BATCH_25 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry storage", "organizing jewelry", "preventing tarnish", "necklace tangles", "jewelry box tips"],
     content: `<h2>The Silent Enemy of Jewelry</h2>
 <p>Most damage to jewelry doesn't happen while you're wearing it; it happens while it's sitting in your drawer. Moisture in the air causes tarnish, different metals in a pile scratch each other, and chains inevitably find a way to tangle themselves into impossible knots. In 2026, proper storage is the secret to a 'Low-Maintenance' jewelry collection.</p>
@@ -164,7 +164,7 @@ export const BLOG_BATCH_25 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?auto=format&fit=crop&w=800&q=80",
     tags: ["travel jewelry", "packing tips", "jewelry organizer", "vacation fashion", "jewelry protection"],
     content: `<h2>The Travel Dilemma</h2>
 <p>Vacations are for making memories, not for untangling five necklaces in your hotel room. Packing jewelry for travel is a specific skill—you want enough options to look great in your photos, but you also want to keep everything safe, organized, and untangled. In 2026, travel-friendly jewelry and smart packing solutions are a top priority for the fashion-conscious traveler.</p>
@@ -214,7 +214,7 @@ export const BLOG_BATCH_25 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry cleaning", "professional cleaning", "home cleaning", "jewelry maintenance", "pro vs home"],
     content: `<h2>The Great Cleaning Debate</h2>
 <p>We all want our jewelry to sparkle like the day we bought it. But when it comes to cleaning, there's a lot of conflicting advice. Should you use a professional ultrasonic cleaner, or is a bowl of dish soap just as good? In 2026, the answer depends on two things: the material of your jewelry and the 'level' of cleaning required.</p>

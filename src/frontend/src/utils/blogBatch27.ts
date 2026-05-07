@@ -9,7 +9,7 @@ export const BLOG_BATCH_27 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80",
     tags: ["amethyst jewelry", "purple gemstones", "spiritual jewelry", "february birthstone", "gemstone trends"],
     content: `<h2>The Royal Purple Gem</h2>
 <p>For millennia, Amethyst was considered a 'Precious' stone, held in the same regard as diamonds and rubies. While larger deposits discovered in the 19th century made it more accessible, it has never lost its association with royalty, spirituality, and calm. In 2026, as we seek balance and mindfulness, the deep, soothing purple of Amethyst has become a major trend in both fine and fashion jewelry.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_27 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?auto=format&fit=crop&w=800&q=80",
     tags: ["citrine jewelry", "yellow gemstones", "november birthstone", "abundance jewelry", "gemstone meanings"],
     content: `<h2>The Gem of Pure Positivity</h2>
 <p>Citrine—a variety of quartz that ranges from pale yellow to deep 'Madeira' orange—is like a drop of liquid sunshine. In the world of 2026 fashion, where we are all looking for energy and optimism, Citrine has emerged as the 'it' gem. Its warm, glowing tones complement the current trend for yellow gold and provide a beautiful 'Pop' of color to neutral outfits.</p>
@@ -103,7 +103,7 @@ export const BLOG_BATCH_27 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?auto=format&fit=crop&w=800&q=80",
     tags: ["rose quartz jewelry", "pink gemstones", "spiritual jewelry", "self love jewelry", "jewelry trends 2026"],
     content: `<h2>The Heart Stone</h2>
 <p>Rose Quartz, with its soft, milky pink hue, has been a symbol of love and beauty for thousands of years. But in 2026, the meaning of Rose Quartz has evolved. While it still represents romantic love, it has become the primary symbol of the 'Self-Love' and 'Wellness' movements. Wearing Rose Quartz isn't just a fashion choice; it's a reminder to be kind to yourself.</p>
@@ -153,7 +153,7 @@ export const BLOG_BATCH_27 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?auto=format&fit=crop&w=800&q=80",
     tags: ["black onyx jewelry", "black gemstones", "modern jewelry", "gothic fashion", "onyx meaning"],
     content: `<h2>The Power of the Dark Gem</h2>
 <p>In the world of gemstones, Black Onyx is the ultimate chameleon. It can look like an ancient 'Gothic' treasure, a sleek 'Mid-Century Modern' masterpiece, or a bold 'Street-Style' accessory. Its deep, opaque black color provides a high-contrast backdrop that makes gold and silver pop. In 2026, Black Onyx has reclaimed its place as the definitive 'Statement' gem for those who want to look powerful, mysterious, and sophisticated.</p>
@@ -203,7 +203,7 @@ export const BLOG_BATCH_27 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?auto=format&fit=crop&w=800&q=80",
     tags: ["moonstone jewelry", "rainbow moonstone", "ethereal jewelry", "spiritual style", "gemstone trends 2026"],
     content: `<h2>The Glow of the Moon</h2>
 <p>Moonstone is a gem unlike any other. It possesses a unique optical effect known as 'Adularescence'—a milky, ethereal glow that seems to move across the surface of the stone like moonlight on water. In 2026, as we embrace more 'Magic' and 'Ethereal' elements in fashion, Moonstone has become the definitive choice for the 'Modern-Mystic' and 'Boho-Chic' aesthetics.</p>

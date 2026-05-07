@@ -9,7 +9,7 @@ export const BLOG_BATCH_14 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?auto=format&fit=crop&w=800&q=80",
     tags: ["tiktok jewelry trends", "viral jewelry 2026", "social media jewelry", "trending jewelry"],
     content: `<h2>TikTok and the New Era of Jewelry Trend Acceleration</h2>
 <p>Before TikTok, a jewelry trend might take 18–24 months to travel from runway to mainstream retail. Today, a single TikTok video can make a specific jewelry style sell out globally within 72 hours. The platform's algorithm-driven "For You Page" exposes users to content that matches their interests with uncanny precision, creating flash-points of jewelry demand that bypass traditional fashion gatekeepers entirely.</p>
@@ -78,7 +78,7 @@ export const BLOG_BATCH_14 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=800&q=80",
     tags: ["gen z jewelry", "gen z style guide", "youth jewelry trends 2026", "aesthetic jewelry"],
     content: `<h2>Who Is Gen Z and Why Does Their Jewelry Matter?</h2>
 <p>Generation Z — broadly defined as those born between 1997 and 2012 — is now the dominant consumer force in fashion jewelry. The oldest Gen Z consumers are 29 in 2026, earning independent incomes and making their own purchasing decisions. The youngest are 14, already influencing their parents' shopping behavior through social media trends and peer pressure. Collectively, Gen Z controls or influences over $143 billion in annual consumer spending in the USA alone.</p>

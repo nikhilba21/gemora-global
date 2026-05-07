@@ -9,7 +9,7 @@ export const BLOG_BATCH_12 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["jewellery trends 2026", "imitation jewellery styles", "fashion jewellery", "wholesale trends", "kundan revival"],
     content: `
 <h2>The Global Imitation Jewellery Market in 2026: What's Driving Trends</h2>

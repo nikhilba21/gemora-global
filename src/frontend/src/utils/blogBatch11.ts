@@ -10,7 +10,7 @@ export const BLOG_BATCH_11 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["wholesale jewellery", "export india", "b2b buyer guide", "logistics", "customs"],
     content: `
       <h2>The Definitive Masterclass on <a href="/wholesale-imitation-jewellery-manufacturer-exporter">Wholesale Imitation Jewellery</a> Export</h2>
@@ -85,7 +85,7 @@ export const BLOG_BATCH_11 = [
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Export Guides?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
-    <p><strong>Q11: What is the 'Heritage-Premium' for The Complete Guide to Wholesale Jewellery Export From India (2026)?</strong><br/>A: It is the 2026 added value derived from the verified history and provenance of a piece.</p>
+    <p><strong>Q11: What is the 'Heritage-Premium' for The Complete Guide to Wholesale <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> From India (2026)?</strong><br/>A: It is the 2026 added value derived from the verified history and provenance of a piece.</p>
     <p><strong>Q12: What is the next step for investors in Export Guides?</strong><br/>A: To integrate these 2026 'Physical-Assets' into their digital portfolios for total wealth protection.</p>
   `
   },
@@ -100,7 +100,7 @@ export const BLOG_BATCH_11 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["jaipur jewellery", "manufacturing hub", "kundan", "artisan craft", "wholesale"],
     content: `
       <h2>Jaipur: The Undisputed Capital of Global Jewellery Manufacturing</h2>

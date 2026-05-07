@@ -10,7 +10,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: ["manufacturing", "jaipur", "imitation jewellery", "process"],
     content: `
       <h2>The Step-by-Step <a href="/imitation-jewellery-manufacturer-jaipur">Jaipur Jewellery</a> Manufacturing Process</h2>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?auto=format&fit=crop&w=800&q=80",
     tags: ["quality control", "fashion jewellery", "export", "qc"],
     content: `
       <h2>Why Quality Control is Critical for Export Jewellery</h2>
@@ -80,7 +80,7 @@ export const BLOG_BATCH_4 = [
     <p><strong>Q4: How can B2B buyers benefit from Quality?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Quality in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Quality?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Quality Control in Fashion Jewellery Export?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Quality Control in Fashion <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Quality?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -99,7 +99,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80",
     tags: ["nickel free", "imitation jewellery", "supplier", "india"],
     content: `
       <h2>Why Nickel-Free Jewellery Matters</h2>
@@ -141,7 +141,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["anti tarnish", "jewellery", "manufacturer", "india"],
     content: `
       <h2>What Causes Jewellery to Tarnish?</h2>
@@ -183,7 +183,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: [
       "hypoallergenic",
       "fashion jewellery",
@@ -205,13 +205,13 @@ export const BLOG_BATCH_4 = [
       <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     
     <h2>Frequently Asked Questions</h2>
-    <p><strong>Q1: How does Hypoallergenic Fashion Jewellery Wholesale impact the 2026 market?</strong><br/>A: In 2026, it serves as a critical 'Value-Driver' for both retail and institutional portfolios, ensuring long-term growth.</p>
+    <p><strong>Q1: How does Hypoallergenic <a href="/wholesale">Fashion Jewellery Wholesale</a> impact the 2026 market?</strong><br/>A: In 2026, it serves as a critical 'Value-Driver' for both retail and institutional portfolios, ensuring long-term growth.</p>
     <p><strong>Q2: What is the 'Gemora-Standard' for Quality?</strong><br/>A: It requires 100% digital traceability and a verified ethical origin certificate for every piece.</p>
     <p><strong>Q3: Why is 2026 a turning point for Quality?</strong><br/>A: Because of the 2026 'Global-Shift' toward 'Hard-Asset-Luxe' and 'Physical-Permanence.'</p>
     <p><strong>Q4: How can B2B buyers benefit from Quality?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Quality in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Quality?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Hypoallergenic Fashion Jewellery Wholesale?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Hypoallergenic Fashion <a href="/wholesale">Jewellery Wholesale</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Quality?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -230,7 +230,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80",
     tags: ["handmade", "machine made", "imitation jewellery", "manufacturing"],
     content: `
       <h2>Key Differences Between Handmade and Machine-Made Jewellery</h2>
@@ -271,7 +271,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?auto=format&fit=crop&w=800&q=80",
     tags: ["brass jewellery", "manufacturer", "india", "materials"],
     content: `
       <h2>Why Brass is the Preferred Base Metal for Indian Fashion Jewellery</h2>
@@ -312,7 +312,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?auto=format&fit=crop&w=800&q=80",
     tags: ["zinc alloy", "jewellery", "exporter", "guide"],
     content: `
       <h2>What is Zinc Alloy Jewellery?</h2>
@@ -334,7 +334,7 @@ export const BLOG_BATCH_4 = [
     <p><strong>Q4: How can B2B buyers benefit from Materials?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Materials in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Materials?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Zinc Alloy Jewellery Exporter Guide?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Zinc Alloy <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> Guide?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Materials?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -353,7 +353,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?auto=format&fit=crop&w=800&q=80",
     tags: ["finishing", "fashion jewellery", "manufacturing", "premium"],
     content: `
       <h2>What Separates Premium from Ordinary Imitation Jewellery</h2>
@@ -396,7 +396,7 @@ export const BLOG_BATCH_4 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?auto=format&fit=crop&w=800&q=80",
     tags: ["reliable manufacturer", "jewellery", "guide", "b2b"],
     content: `
       <h2>10-Step Guide to Choosing a Reliable Jewellery Manufacturer</h2>

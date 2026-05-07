@@ -9,7 +9,7 @@ export const BLOG_BATCH_26 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: ["diamond guide", "4cs of diamonds", "buying diamonds", "diamond quality", "jewelry education"],
     content: `<h2>The Universal Language of Diamonds</h2>
 <p>Whether you're buying an engagement ring or a pair of classic studs, understanding diamonds is essential. Since the 1940s, the jewelry world has used a universal language to describe diamond quality: The 4Cs. In 2026, while technology has changed how we buy diamonds, the 4Cs remain the fundamental pillars of value and beauty.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_26 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?auto=format&fit=crop&w=800&q=80",
     tags: ["lab grown diamonds", "natural diamonds", "diamond guide 2026", "ethical jewelry", "sustainable diamonds"],
     content: `<h2>The Diamond Revolution</h2>
 <p>In 2026, the question is no longer 'Are lab-grown diamonds real?' (they are). The question is 'Which is right for me?' Lab-grown diamonds have reached a point of quality and price that has completely transformed the jewelry industry. While natural diamonds remain a symbol of rarity and heritage, lab-grown diamonds offer a modern, ethical, and highly accessible alternative.</p>
@@ -106,7 +106,7 @@ export const BLOG_BATCH_26 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80",
     tags: ["moissanite jewelry", "diamond alternative", "moissanite vs diamond", "affordable luxury", "2026 trends"],
     content: `<h2>The Gem from the Stars</h2>
 <p>Originally discovered in a meteor crater, natural moissanite is incredibly rare. Today, the moissanite we wear is grown in labs to produce gems that are almost as hard as diamonds but actually have **more** fire and brilliance. In 2026, Moissanite has become the definitive choice for the 'Maximalist-on-a-Budget'—offering a huge, shimmering look at a fraction of the cost of a diamond.</p>
@@ -150,7 +150,7 @@ export const BLOG_BATCH_26 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["sapphire guide", "blue sapphire", "fancy sapphires", "gemstone education", "sapphire meaning"],
     content: `<h2>The Gem of Royalty and Wisdom</h2>
 <p>When people think of Sapphires, they think of the deep, velvety blue of Princess Diana's (and Kate Middleton's) engagement ring. But in the world of 2026 jewelry, the sapphire is a 'Rainbow Gem.' Sapphires come in every color of the rainbow—except red (which is a Ruby). From the 'Sunset-Pink' of the Padparadscha to the electric 'Neon' yellows and greens, sapphires are the ultimate gem for the color-loving fashionista.</p>
@@ -194,7 +194,7 @@ export const BLOG_BATCH_26 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: ["emerald guide", "emerald care", "green gemstones", "gemstone education", "buying emeralds"],
     content: `<h2>The 'Jardin' of the Emerald</h2>
 <p>Emeralds are unique among gemstones. While diamonds and sapphires are valued for their clarity, emeralds are prized for their 'Jardin' (French for garden)—the complex internal world of fractures and inclusions that give the stone its character and deep, mossy green glow. In 2026, as we embrace more organic and 'imperfect' beauty, the emerald has reclaimed its throne as the ultimate statement gem.</p>

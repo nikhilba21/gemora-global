@@ -10,7 +10,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?auto=format&fit=crop&w=800&q=80",
     tags: ["jaipur", "imitation jewellery", "hub", "india"],
     content: `<h2>Jaipur's Royal Jewellery Legacy</h2>
 <p>Jaipur's jewellery tradition stretches back over 400 years, shaped by the patronage of Rajasthan's Maharajas and the artistic influence of the Mughal Empire. These royal courts demanded the finest jewellery, training generations of master craftsmen — or <em>karigars</em> — whose skills have been passed down to this day. This deep cultural and artistic foundation is why Jaipur emerged as India's jewellery capital.</p>
@@ -57,14 +57,14 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?auto=format&fit=crop&w=800&q=80",
     tags: ["jewellery manufacturing", "india", "jaipur", "cities"],
     content: `<h2>India's Jewellery Manufacturing Cities — A Comparison</h2>
 <p>India is home to several world-class jewellery manufacturing clusters, each specialising in different segments. Understanding which city leads in your product category is essential for smart sourcing decisions.</p>
 
 <h2>City-by-City Breakdown</h2>
 <ul>
-  <li><strong>Jaipur</strong> — Kundan, meenakari, imitation, coloured stone jewellery. Best for fashion and imitation jewellery wholesale.</li>
+  <li><strong>Jaipur</strong> — Kundan, meenakari, imitation, coloured stone jewellery. Best for fashion and imitation <a href="/wholesale">jewellery wholesale</a>.</li>
   <li><strong>Mumbai (SEEPZ)</strong> — Diamonds, high-end gold, international trading hub with special economic zone benefits.</li>
   <li><strong>Surat</strong> — Diamond cutting and polishing, synthetic diamond jewellery at scale.</li>
   <li><strong>Moradabad</strong> — Brassware and metal craft; India's largest export cluster for decorative metal goods.</li>
@@ -106,7 +106,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=800&q=80",
     tags: ["global buyers", "trust", "indian suppliers", "jewellery"],
     content: `<h2>India's 50+ Year Export Track Record</h2>
 <p>Indian jewellery suppliers have been exporting to global markets for over five decades. This long track record has built institutional trust — buyers from the USA, UK, UAE, and Europe know that Indian suppliers understand international standards, documentation requirements, and delivery timelines. Trust is earned through consistent performance, and India's jewellery industry has consistently delivered.</p>
@@ -153,7 +153,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?auto=format&fit=crop&w=800&q=80",
     tags: ["verify supplier", "india", "jewellery", "b2b"],
     content: `<h2>Why Supplier Verification is Non-Negotiable</h2>
 <p>Placing a bulk jewellery order with an unverified supplier is one of the most common — and costly — mistakes international buyers make. A thorough verification process takes a few hours but can save you thousands of dollars and protect your business reputation. Here is a step-by-step guide.</p>
@@ -202,7 +202,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?auto=format&fit=crop&w=800&q=80",
     tags: ["certified export partner", "india", "jewellery", "certifications"],
     content: `<h2>Why Certifications Matter in <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
 <p>Not all Indian jewellery exporters are equal. Legitimate, professional exporters hold specific registrations and certifications that demonstrate compliance, legal standing, and commitment to quality. Before selecting a supplier, verify these credentials — they are the minimum standard for any serious B2B partnership.</p>
@@ -249,7 +249,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?auto=format&fit=crop&w=800&q=80",
     tags: [
       "mistakes importing jewellery",
       "buyer guide",
@@ -303,7 +303,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?auto=format&fit=crop&w=800&q=80",
     tags: [
       "questions jewellery manufacturer",
       "buyer guide",
@@ -375,9 +375,9 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?auto=format&fit=crop&w=800&q=80",
     tags: ["avoid scam", "wholesale suppliers", "jewellery", "b2b safety"],
-    content: `<h2>Jewellery Wholesale Scams Are More Common Than You Think</h2>
+    content: `<h2><a href="/wholesale">Jewellery Wholesale</a> Scams Are More Common Than You Think</h2>
 <p>The Indian jewellery wholesale market is largely legitimate and professional — but like any large industry, it attracts bad actors targeting international buyers who cannot easily visit in person. Knowing the warning signs before you engage will protect your business and money.</p>
 
 <h2>Red Flags That Signal a Scam Supplier</h2>
@@ -424,7 +424,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1638805981949-666874284587?auto=format&fit=crop&w=800&q=80",
     tags: [
       "long term sourcing",
       "benefits",
@@ -487,7 +487,7 @@ export const BLOG_BATCH_9 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1569397270338-303b55227d6d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?auto=format&fit=crop&w=800&q=80",
     tags: ["gemora global", "manufacturers", "jaipur", "quality"],
     content: `<h2>What Separates the Best Jaipur Manufacturers from the Rest</h2>
 <p>Jaipur has thousands of jewellery manufacturers. The difference between an average supplier and an exceptional one is not just price — it is consistency, communication, and the ability to genuinely serve international B2B buyers. Here is what the top tier of Jaipur manufacturers does differently.</p>
@@ -526,7 +526,7 @@ export const BLOG_BATCH_9 = [
     <p><strong>Q4: How can B2B buyers benefit from Brand Story?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Brand Story in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Brand Story?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Why Gemora Global Style Manufacturers Stand Out?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Why <a href="/">Gemora Global</a> Style Manufacturers Stand Out?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Brand Story?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, Gemora Global offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>

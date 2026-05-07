@@ -9,7 +9,7 @@ export const BLOG_BATCH_15 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?auto=format&fit=crop&w=800&q=80",
     tags: ["minimalist jewelry 2026", "dainty jewelry trends", "simple jewelry", "minimalism fashion"],
     content: `<h2>Why Minimalist Jewelry Is Having Its Most Sophisticated Moment Yet</h2>
 <p>Minimalist jewelry in 2026 has evolved far beyond the bare-essentials approach of earlier years. Today's minimalism is deliberate, curated, and deeply personal. It is not about wearing nothing — it is about wearing exactly the right thing. The "clean girl" aesthetic that dominated social media through 2024 and 2025 has matured into something more refined: quiet luxury, intentional simplicity, and the confidence to let a single perfect piece carry an entire look.</p>
@@ -74,7 +74,7 @@ export const BLOG_BATCH_15 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?auto=format&fit=crop&w=800&q=80",
     tags: ["statement jewelry 2026", "bold jewelry trends", "chunky jewelry", "statement earrings"],
     content: `<h2>The Return of Statement Jewelry: Bigger, Bolder, More Intentional</h2>
 <p>Statement jewelry — pieces designed to be noticed, to anchor a look, to project confidence and personality — has reclaimed its position at the center of global fashion in 2026. After a period where quiet luxury and minimalism dominated fashion conversations, the pendulum has swung dramatically. Today's statement jewelry is not the loud, indiscriminate excess of previous maximalist eras. It is deliberate, powerful, and curated — a single extraordinary piece worn with the confidence to let it speak for itself.</p>

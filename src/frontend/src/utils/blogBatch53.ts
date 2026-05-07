@@ -9,7 +9,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["gemstone cleaning", "jewelry care", "maintenance guide", "jewelry cleaning secrets", "B2B guide"],
     content: `<h2>The Science of the Shine</h2>
 <p>Jewelry is designed to catch light, but it can't do that if it's covered in a film of hand lotion, dust, and skin oils. In the world of 2026, 'Maintenance' is the secret to 'Luxury-Longevity.' But not all stones are created equal. What cleans a diamond could destroy an opal. What polishes gold could strip the lustre from a pearl. In this master class, we pull back the curtain on the **Professional-Cleaning-Secrets** used in our Jaipur workshops. We'll teach you how to maintain that 'Just-Bought' sparkle without ever risking the structural integrity of your precious heirlooms.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["antique restoration", "jewelry repair", "heirloom jewelry", "vintage jewelry care", "B2B guide"],
     content: `<h2>The Custodians of Time</h2>
 <p>Antique jewelry isn't just 'Old-Stuff'; it is a 'Physical-Link' to the past. A Victorian locket, an Art Deco platinum band, an Edwardian tiara—these pieces have survived wars, social shifts, and generations of wear. In the world of 2026, **Antique Restoration** is a high-tech art form. We don't just 'Fix' the jewelry; we 'Conserve' it. Our goal is to ensure the piece is structurally sound for another 100 years while preserving the 'Patina' and 'Soul' that makes it unique. In 2026, restoration is about 'Respecting-the-Original-Artisan.'</p>
@@ -89,7 +89,7 @@ export const BLOG_BATCH_53 = [
 <p><strong>Q9: How do I know if an antique is 'Restorable'?</strong><br/>A: Almost anything can be restored if the 'Artistic-Value' is high enough. We provide digital 'Restoration-Plans' for every piece before we begin work.</p>
 <p><strong>Q10: What is 'Authentic-Replacement'?</strong><br/>A: Using 100-year-old 'Recycled-Gold' to repair an antique piece, ensuring the 'Color' and 'Alloy-Signature' match the original piece perfectly.</p>
 <p><strong>Q11: What's the 'Next Big' restoration trend?</strong><br/>A: '3D-Scanning-Reconstruction'—scanning a damaged piece and '3D-Printing' a perfect missing part that fits into the original structure like a puzzle—is a growing 2026 innovation.</p>
-<p><strong>Q12: Can Gemora Global provide 'Restoration-Certificates'?</strong><br/>A: Yes! We provide a 'Heritage-Restoration-Report' documenting exactly what was done, the materials used, and the 'Before/After' micro-photos. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Restoration-Certificates'?</strong><br/>A: Yes! We provide a 'Heritage-Restoration-Report' documenting exactly what was done, the materials used, and the 'Before/After' micro-photos. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your restoration partnership. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -103,7 +103,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["prong check", "jewelry safety", "loose stones", "maintenance master class", "B2B guide"],
     content: `<h2>The Silent Danger</h2>
 <p>The #1 cause of lost gemstones isn't a 'Snag' or a 'Hit'; it's 'Gradual-Wear.' Over months of wearing, the gold prongs holding your diamond slowly thin out or pull back. Most people don't notice until the stone is gone. In the world of 2026, every jewelry collector needs to be a 'Junior-Inspector.' By learning the **'Prong-Check' Master Class**, you can identify a loose stone in 30 seconds at home, saving yourself the heartbreak and the 'Insurance-Claim' of a lost gem. In 2026, 'Proactive-Maintenance' is the hallmark of the sophisticated owner.</p>
@@ -147,7 +147,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["tarnish prevention", "silver care", "gold care", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Chemistry of Dullness</h2>
 <p>Nothing ruins the 'Luxe-Vibe' of fine jewelry like a layer of black tarnish. Tarnish isn't 'Dirt'; it is a 'Chemical-Reaction' (Oxidation) between the metal and the sulfur in the air, your sweat, and even your perfume. In the world of 2026, we don't 'Polish' tarnish away; we 'Prevent' it from happening. By understanding the **Tarnish-Prevention-101** protocols, you can keep your sterling silver and 9k/14k gold looking 'Mirror-Bright' for months without a single buff. In 2026, 'Anti-Oxidant' care is the secret to a 'High-Value' collection.</p>
@@ -191,7 +191,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["ultrasonic cleaner", "jewelry cleaning", "maintenance guide", "stone safety", "B2B guide"],
     content: `<h2>The Power of Sound</h2>
 <p>In the world of 2026, many jewelry collectors have 'Professional-Grade' **Ultrasonic Cleaners** on their dresser. These machines use high-frequency sound waves to create 'Micro-Bubbles' in a water bath, which 'Implode' against the jewelry to blast away dirt. It's the most effective cleaning method ever invented. But in the wrong hands, an ultrasonic is a 'Weapon of Destruction.' It can shake stones loose, strip treatments from emeralds, and shatter opals. In this guide, we break down the **Ultrasonic-Protocol**—knowing when to 'Dive-In' and when to 'Stay-Away.' In 2026, 'Informed-Cleaning' is the only way to protect your luxe.</p>
@@ -245,7 +245,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry storage", "investment protection", "jewelry box guide", "safe storage", "B2B guide"],
     content: `<h2>The Sanctuary of Style</h2>
 <p>In the world of 2026, we don't 'Throw' jewelry into a drawer. We 'Archive' it. Proper storage is the most overlooked part of jewelry care. A diamond can scratch a sapphire; a pearl can be crushed by a heavy gold chain; a silver necklace can tarnish into blackness in a week if left in a damp bathroom. In this guide, we break down the **2026 Storage-Master-Class**—from the chemistry of 'Lining-Fabrics' to the security of 'Hidden-Vaults.' Your jewelry box should be a 'Safe-Haven' that ensures every piece is ready to wear the moment you need it.</p>
@@ -289,7 +289,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry polishing", "metal finishing", "jewelry maintenance", "artisan techniques", "B2B guide"],
     content: `<h2>The Quest for the Perfect Reflection</h2>
 <p>In the jewelry world of 2026, 'Finish' is the difference between a 'Fashion-Piece' and a 'Masterpiece.' But for the owner, there is a lot of confusion. Is 'Buffing' the same as 'Polishing'? Can I do it at home? In this guide, we break down the **Artisan's Master Class** on metal finishing. We'll explain why a professional polish involves five different 'Grit-Stages' and three different 'Buffing-Wheels,' and why 'Over-Polishing' is the #1 way to destroy the value of a 'Vintage-Heirloom.' In 2026, the 'Perfect-Finish' is about 'Balance'—restoring the light without removing the soul.</p>
@@ -333,7 +333,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?auto=format&fit=crop&w=800&q=80",
     tags: ["ring resizing", "jewelry repair", "metal properties", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Quest for the Perfect Fit</h2>
 <p>Our fingers change. Seasonality, life stages, and weight shifts mean that a ring that fit 'Perfectly' yesterday might be 'Too-Tight' or 'Spinning' today. But in the world of 2026, resizing a ring isn't just about 'Cutting-and-Soldering.' It's a high-stakes engineering challenge. If done poorly, you can 'Cleave' a diamond, 'Shatter' a tension setting, or leave a 'Visible-Seam' that ruins the look of the band. In this guide, we break down the **2026 Resizing-Master-Class**—from the 'Laser-Stitching' of gold to the 'Non-Resize' reality of industrial metals. In 2026, the 'Perfect-Fit' is a science.</p>
@@ -383,7 +383,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?auto=format&fit=crop&w=800&q=80",
     tags: ["pearl stringing", "pearl care", "jewelry maintenance", "artisan techniques", "B2B guide"],
     content: `<h2>The Delicate Connection</h2>
 <p>A pearl necklace is only as strong as the thread it's built on. In the world of 2026, 'Fast-Fashion' uses 'Monofilament' (fishing line) which is stiff, brittle, and can 'Saw' through the soft nacre of a pearl from the inside. But for 'Fine-Jewelry,' there is only one choice: **Natural Silk**. Silk is strong, 'Ductile' (it drapes beautifully), and 'Soft'—it 'Cradles' the pearl rather than cutting it. In this guide, we break down the **Pearl-Stringing Master Class**—from the 'Individual-Knots' that prevent loss to the 'French-Wire' that protects the clasp. In 2026, 'Silk-Stringing' is the hallmark of the true pearl collector.</p>
@@ -431,7 +431,7 @@ export const BLOG_BATCH_53 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry tools", "maintenance kit", "home care", "jewelry collector guide", "B2B guide"],
     content: `<h2>The Prepared Collector</h2>
 <p>In the world of 2026, a 'High-Value' jewelry collection comes with a 'High-Value' responsibility. You wouldn't own a supercar without a basic toolkit; you shouldn't own a diamond collection without a **'Jewelry-First-Aid-Kit.'** This isn't about 'Fixing' things (that's for the pros); it's about **'Diagnostics,'** **'Cleaning,'** and **'Prevention.'** Having the right tools at home allows you to inspect your prongs, maintain your shine, and verify your stones in seconds. In 2026, the 'Professional-Dresser' is the hallmark of the serious investor.</p>

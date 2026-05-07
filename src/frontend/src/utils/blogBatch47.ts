@@ -9,7 +9,7 @@ export const BLOG_BATCH_47 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?auto=format&fit=crop&w=800&q=80",
     tags: ["men's jewelry", "jewelry trends 2026", "masculine style", "fine jewelry for men", "B2B guide"],
     content: `<h2>The Masculine Revolution</h2>
 <p>In the world of 2026 fashion, the boundaries are dissolving. For decades, men's jewelry was limited to a wedding band, a watch, and perhaps a pair of cufflinks. But today, the 'Modern-Man' has embraced jewelry as a primary tool for self-expression. From bold gold chains on the runway to diamond-set signet rings in the boardroom, 'Men's Fine Jewelry' is the fastest-growing category in the luxury market. It's a shift from 'Jewelry-as-Status' to 'Jewelry-as-Identity.' The modern man doesn't just wear jewelry; he *styles* it.</p>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_47 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?auto=format&fit=crop&w=800&q=80",
     tags: ["signet rings", "men's rings", "jewelry history", "2026 trends", "personalized jewelry"],
     content: `<h2>The Power of the Stamp</h2>
 <p>For thousands of years, the 'Signet Ring' was the 'Digital-Signature' of the ancient world. Worn by kings, popes, and noblemen, it featured a unique engraving (a family crest, a coat of arms, or a personal symbol) that was pressed into hot wax to 'Seal' and 'Authenticate' documents. In the world of 2026, the signet ring has been reborn. It is no longer about proving your 'Bloodline'; it's about proving your 'Style.' It is the definitive 'Foundational' ring for any man building a jewelry collection—a piece that combines 'Heirloom-Weight' with 'Personal-Identity.'</p>
@@ -109,7 +109,7 @@ export const BLOG_BATCH_47 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?auto=format&fit=crop&w=800&q=80",
     tags: ["men's necklaces", "layering jewelry", "men's style 2026", "gold chains for men", "B2B guide"],
     content: `<h2>The Layered Look</h2>
 <p>In the men's fashion world of 2026, the 'Lone-Chain' has been replaced by the 'Layered-Stack.' Inspired by a blend of street style, high-fashion, and 'Luxe-Boho' aesthetics, men are now wearing multiple necklaces of different lengths, weights, and textures all at once. It's a look that says 'I've collected these over time' and 'I'm comfortable with my style.' Layering allows you to combine your 'Everyday-Chain' with a 'Meaningful-Pendant' and a 'Statement-Piece' to create a look that is uniquely yours.</p>
@@ -156,7 +156,7 @@ export const BLOG_BATCH_47 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80",
     tags: ["men's bracelets", "leather bracelets", "steel jewelry", "gold bracelets for men", "2026 trends"],
     content: `<h2>The Power on the Wrist</h2>
 <p>In the world of 2026 men's fashion, the wrist is the 'Primary-Property' for style. While the watch remains the anchor, the 'Bracelet' has become the essential companion. From the 'Rugged' feel of braided leather to the 'Industrial' edge of stainless steel and the 'Timeless-Prestige' of solid gold, bracelets offer a way to add texture, color, and personality to your look. In 2026, the trend is for 'The-Watch-Stack'—wearing 1-2 bracelets on the same wrist as your watch to create a 'Luxe-Industrial' aesthetic.</p>
@@ -209,7 +209,7 @@ export const BLOG_BATCH_47 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?auto=format&fit=crop&w=800&q=80",
     tags: ["groom's jewelry", "wedding jewelry for men", "cufflinks", "lapel pins", "2026 wedding trends"],
     content: `<h2>The Modern Groom</h2>
 <p>In the wedding world of 2026, the spotlight is no longer just on the bride. The 'Modern-Groom' has stepped up his fashion game, and jewelry is the definitive way to elevate a standard tuxedo into a 'Gala-Ready' look. It's about moving beyond the 'Basic-Band' to a curated selection of 'Event-Specific' pieces that signal 'Sophistication,' 'History,' and 'Personal-Pride.' Your wedding day is the one day you should feel like the absolute best version of yourself, and the right jewelry is the final touch of that transformation.</p>

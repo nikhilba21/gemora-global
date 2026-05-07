@@ -9,7 +9,7 @@ export const BLOG_BATCH_13 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry trends 2026", "fashion jewelry", "latest trends", "women jewelry"],
     content: `<h2>Introduction: Why 2026 Is a Landmark Year for Jewelry Trends</h2>
 <p>The global fashion jewelry market is experiencing its most dynamic period in decades. Post-pandemic consumer behavior has fundamentally shifted — people are celebrating life more boldly, dressing with more intention, and investing in jewelry that tells their unique story. In 2026, jewelry trends are not just about aesthetics; they are cultural statements, mood amplifiers, and identity markers.</p>
@@ -91,7 +91,7 @@ export const BLOG_BATCH_13 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["fashion jewelry women", "women jewelry trends", "jewelry style 2026"],
     content: `<h2>Introduction: Fashion Jewelry as a Form of Self-Expression</h2>
 <p>Fashion jewelry for women in 2026 is about far more than simply accessorizing an outfit. It has become a primary vehicle for self-expression, cultural identity, and personal branding. The woman who wears a stack of oxidized silver bangles is making a different statement than the one who chooses a single CZ diamond tennis bracelet — and both are equally valid, equally fashionable choices in today's diverse jewelry landscape.</p>

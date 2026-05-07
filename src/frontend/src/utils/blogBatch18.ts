@@ -9,7 +9,7 @@ export const BLOG_BATCH_18 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["sustainable jewelry", "ethical jewelry 2026", "eco friendly jewelry", "conscious fashion jewelry"],
     content: `<h2>The Sustainability Imperative in Fashion Jewelry</h2>
 <p>Fashion jewelry has historically been one of the least transparent sectors of the fashion industry — production methods, material sourcing, and labor practices have been largely opaque to consumers. In 2026, this opacity is no longer acceptable. A critical mass of consumers — driven by Gen Z's environmental activism, millennial sustainability consciousness, and the growing influence of ethical fashion media — are demanding transparency, traceability, and genuine environmental responsibility from their jewelry brands and retailers.</p>
@@ -68,7 +68,7 @@ export const BLOG_BATCH_18 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: ["bridal jewelry trends 2026", "wedding jewelry 2026", "bridal set trends", "Indian bridal jewelry"],
     content: `<h2>The Evolving Language of Bridal Jewelry in 2026</h2>
 <p>Bridal jewelry has always carried the heaviest symbolic weight of any jewelry category — these are the pieces worn at the most documented, most photographed, most emotionally significant moment of many women's lives. In 2026, this symbolic weight is being renegotiated. Brides globally are pushing back against prescribed "bridal looks" and demanding jewelry that reflects their individual personality, cultural identity, and aesthetic preferences rather than conforming to traditional expectations.</p>

@@ -9,7 +9,7 @@ export const BLOG_BATCH_48 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["pearl care", "jewelry maintenance", "organic gemstones", "jewelry storage", "B2B guide"],
     content: `<h2>The Living Gem</h2>
 <p>Unlike diamonds or sapphires which are minerals formed deep in the earth, pearls are 'Organic'—created by living mollusks in the ocean. This makes them one of the most beautiful gems, but also the most delicate. A pearl is composed of thousands of microscopic layers of 'Nacre' (mother-of-pearl). These layers are sensitive to chemicals, heat, and even the natural acids in your skin. In 2026, as we embrace 'Slow-Fashion' and heirlooms, knowing how to care for your pearls is the key to ensuring they stay lustrous for a lifetime.</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_48 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["opal care", "moonstone care", "adularescence", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Phenomenal Challenge</h2>
 <p>Opals and Moonstones are some of the most magical gems in the world, prized for their 'Play-of-Color' and 'Adularescence' (the moony glow). However, this magic comes with a price: they are among the most delicate and 'Temperamental' stones in the fine jewelry market. In 2026, as 'Mystic' and 'Boho-Luxe' styles dominate, understanding the specific maintenance needs of these stones is essential for any jewelry owner or retailer. They are not 'Set-and-Forget' gems; they are 'Living-Art' that requires constant awareness.</p>
@@ -110,7 +110,7 @@ export const BLOG_BATCH_48 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["emerald care", "jewelry maintenance", "emerald inclusions", "precious gemstones", "B2B guide"],
     content: `<h2>The Delicate Green</h2>
 <p>Emeralds are one of the 'Big Three' precious gemstones, but they are fundamentally different from Diamonds and Sapphires. Almost every natural emerald contains internal fractures and inclusions, which gemologists affectionately call the **'Jardin'** (The Garden). While these inclusions prove the stone's natural origin, they also make the emerald more 'Brittle.' In 2026, as high-end emerald jewelry sees a massive resurgence, knowing how to handle this delicate garden is the difference between a lifelong treasure and a broken stone.</p>
@@ -159,7 +159,7 @@ export const BLOG_BATCH_48 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["turquoise care", "lapis lazuli care", "porous gemstones", "jewelry maintenance", "B2B guide"],
     content: `<h2>The Absorbent Ancients</h2>
 <p>Turquoise and Lapis Lazuli have been used in jewelry for over 5,000 years, but in the modern world of 2026, they face a new set of challenges. These stones are 'Porous,' meaning they act like a sponge, absorbing oils, perfumes, and chemicals from the air and your skin. This can lead to permanent color changes—turning a bright sky-blue turquoise into a dull green, or a vibrant blue lapis into a 'Cloudy' grey. Understanding their 'Absorbent' nature is the key to maintaining their ancient beauty.</p>
@@ -190,7 +190,7 @@ export const BLOG_BATCH_48 = [
 <p><strong>Q5: Can I use a 'Polishing-Cloth' on Lapis?</strong><br/>A: Yes, but only on the metal parts. Avoid rubbing the stone with the treated part of the cloth, as the chemicals can seep into the pores.</p>
 <p><strong>Q6: How hard are these stones?</strong><br/>A: They rank 5 to 6 on the Mohs scale. They are relatively soft and can be scratched by steel or even hard house dust. Store them in separate pouches.</p>
 <p><strong>Q7: What is 'Sleeping Beauty' Turquoise?</strong><br/>A: A rare, vibrant sky-blue variety from the now-closed Arizona mine. It is the most sought-after and valuable turquoise in the 2026 market.</p>
-<p><strong>Q8: Can Lapis Lazuli be dyed?</strong><br/>A: Yes, low-quality lapis is often dyed to look deeper blue. At Gemora Global, we only use **Natural-Color** lapis to ensure the color never 'Bleeds' onto your skin.</p>
+<p><strong>Q8: Can Lapis Lazuli be dyed?</strong><br/>A: Yes, low-quality lapis is often dyed to look deeper blue. At <a href="/">Gemora Global</a>, we only use **Natural-Color** lapis to ensure the color never 'Bleeds' onto your skin.</p>
 <p><strong>Q9: What is 'Reconstituted' Turquoise?</strong><br/>A: It's made from turquoise dust mixed with resin. It is an affordable 'Fashion' material but is not considered a genuine gemstone in 2026 fine jewelry.</p>
 <p><strong>Q10: Can men wear Turquoise and Lapis?</strong><br/>A: Absolutely! 'Southwestern' and 'Luxe-Boho' styles for men are massive in 2026. Lapis signet rings and turquoise beaded bracelets are top masculine trends.</p>
 <p><strong>Q11: What's the 'Next Big' porous gem trend?</strong><br/>A: 'Chrysocolla'—a vibrant blue-green copper-based gem that looks like a mini-planet—is a growing 2026 'Artisan' favorite.</p>
@@ -208,7 +208,7 @@ export const BLOG_BATCH_48 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["diamond care", "sapphire care", "jewelry maintenance", "gemstone sparkle", "B2B guide"],
     content: `<h2>The Durability Kings</h2>
 <p>Diamonds and Sapphires are the 'Workhorses' of the fine jewelry world. With hardness ratings of 10 and 9 respectively, they are tough enough for daily wear, gym sessions, and showers. But being 'Indestructible' doesn't mean they are 'Maintenance-Free.' In fact, because they are so durable, we often forget to clean them, leading to a buildup of 'Bio-Film' (skin oils, soaps, and lotions) that acts like a blanket over the stone, killing its sparkle. In 2026, a dirty diamond is the #1 'Fashion-Crime.' A clean diamond is a 'Power-Statement.'</p>

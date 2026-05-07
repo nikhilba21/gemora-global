@@ -10,7 +10,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: [
       "jewellery export",
       "business india",
@@ -43,10 +43,10 @@ export const BLOG_BATCH_8 = [
     <p><strong>Q4: How can B2B buyers benefit from Business Growth?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Business Growth in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Business Growth?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of How to Start Jewellery Export Business in India?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of How to Start <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Business in India?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Business Growth?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
-    <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, Gemora Global offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
+    <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
     <p><strong>Q11: What is the 'Heritage-Premium' for How to Start Jewellery Export Business in India?</strong><br/>A: It is the 2026 added value derived from the verified history and provenance of a piece.</p>
     <p><strong>Q12: What is the next step for investors in Business Growth?</strong><br/>A: To integrate these 2026 'Physical-Assets' into their digital portfolios for total wealth protection.</p>
   `,
@@ -62,7 +62,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?auto=format&fit=crop&w=800&q=80",
     tags: ["wholesale jewellery", "global business", "growth", "export"],
     content: `<h2>Building a Global <a href="/wholesale">Wholesale Jewellery</a> Business</h2>
 <p>Scaling a <a href="/wholesale">Wholesale Jewellery</a> business beyond your home market requires a structured approach. The most successful Indian jewellery exporters follow a proven playbook: master 2-3 markets before expanding, invest in digital presence, and attend the right trade shows consistently.</p>
@@ -107,7 +107,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80",
     tags: ["foreign buyers", "jewellery", "export", "b2b marketing"],
     content: `<h2>10 Proven Ways to Attract International Jewellery Buyers</h2>
 <p>Finding foreign buyers for Indian jewellery used to mean relying entirely on trade shows. Today, digital channels have opened up far more efficient routes to international buyers — if you know where to look and how to approach them.</p>
@@ -155,7 +155,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["instagram", "leads", "jewellery exporters", "social media"],
     content: `<h2>Why Instagram Works for B2B Jewellery Leads</h2>
 <p>Jewellery is a visual product, and boutique owners and importers around the world scroll Instagram to discover new suppliers. Unlike LinkedIn, Instagram lets your products do the talking — a well-lit product reel can reach thousands of potential wholesale buyers organically, without paid advertising.</p>
@@ -200,7 +200,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: [
       "b2b marketing",
       "jewellery manufacturers",
@@ -221,7 +221,7 @@ export const BLOG_BATCH_8 = [
 </ul>
 
 <h2>Content Marketing That Attracts Buyers</h2>
-<p>Publish blog posts targeting what buyers search: "MOQ for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> India", "how to import jewellery from Jaipur", "anti-tarnish jewellery wholesale". Monthly email newsletters with new collection previews and festival offers keep your buyer database engaged. GJEPC and CII memberships add credibility and provide buyer introduction services.</p>
+<p>Publish blog posts targeting what buyers search: "MOQ for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> India", "how to import jewellery from Jaipur", "anti-tarnish <a href="/wholesale">jewellery wholesale</a>". Monthly email newsletters with new collection previews and festival offers keep your buyer database engaged. GJEPC and CII memberships add credibility and provide buyer introduction services.</p>
 
 <h2>Build Your B2B Marketing Engine</h2>
 <p><a href="/">Gemora Global</a> has built a global buyer network using these exact strategies. Reach out to learn more about our wholesale programme.</p>
@@ -252,7 +252,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80",
     tags: [
       "seo",
       "imitation jewellery website",
@@ -302,7 +302,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1635200845348-18e539958a5e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?auto=format&fit=crop&w=800&q=80",
     tags: [
       "google ranking",
       "jewellery exporter",
@@ -336,7 +336,7 @@ export const BLOG_BATCH_8 = [
     <p><strong>Q4: How can B2B buyers benefit from Digital Marketing?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Digital Marketing in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Digital Marketing?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Google Ranking Tips for Jewellery Exporter?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Google Ranking Tips for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Digital Marketing?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -355,7 +355,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?auto=format&fit=crop&w=800&q=80",
     tags: ["linkedin", "wholesale jewellery", "b2b", "business strategy"],
     content: `<h2>LinkedIn for <a href="/wholesale">Wholesale Jewellery</a> B2B Marketing</h2>
 <p>Most Indian jewellery exporters ignore LinkedIn entirely. This is a significant missed opportunity — LinkedIn is where importers, boutique owners, and wholesale buyers from UAE, UK, and USA are actively looking for suppliers. A professional LinkedIn presence can generate serious B2B enquiries at zero cost.</p>
@@ -399,7 +399,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1638805981949-666874284587?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?auto=format&fit=crop&w=800&q=80",
     tags: ["email marketing", "jewellery buyers", "b2b", "wholesale"],
     content: `<h2>Email Marketing for B2B Jewellery Businesses</h2>
 <p>Email marketing remains one of the highest ROI channels for B2B jewellery businesses. Unlike social media, email reaches your buyers directly in their inbox — and for wholesale buyers who place large repeat orders, staying consistently in front of them is directly tied to revenue.</p>
@@ -443,7 +443,7 @@ export const BLOG_BATCH_8 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1642104704074-93d264f724cd?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?auto=format&fit=crop&w=800&q=80",
     tags: ["scale exports", "jewellery", "business growth", "india"],
     content: `<h2>Scaling Jewellery Exports to ₹1 Crore+ Monthly</h2>
 <p>Most jewellery exporters plateau after their first few buyers. Breaking through that ceiling to ₹1 Crore+ monthly revenue requires a deliberate phase-by-phase approach — not just working harder but building the right systems at the right time.</p>

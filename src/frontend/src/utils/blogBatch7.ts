@@ -10,7 +10,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
     tags: ["custom jewellery boxes", "export", "packaging", "branding"],
     content: `
       <h2>Why Custom Packaging Matters for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
@@ -59,7 +59,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88b7ce33e7?auto=format&fit=crop&w=800&q=80",
     tags: ["packaging", "shipping", "imitation jewellery", "export"],
     content: `
       <h2>Inner Packaging: Protecting Each Piece</h2>
@@ -108,7 +108,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     tags: ["shipping jewellery", "international", "export", "logistics"],
     content: `
       <h2>Choosing the Right Courier for Jewellery</h2>
@@ -156,7 +156,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584305116359-1985989d4ac0?auto=format&fit=crop&w=800&q=80",
     tags: ["export documentation", "jewellery", "business", "india"],
     content: `
       <h2>Essential Export Documents for Indian Jewellery Exporters</h2>
@@ -206,7 +206,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
     tags: ["courier", "jewellery export", "shipping", "logistics"],
     content: `
       <h2>Best Courier Services for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> from India</h2>
@@ -237,7 +237,7 @@ export const BLOG_BATCH_7 = [
     <p><strong>Q4: How can B2B buyers benefit from Logistics?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Logistics in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Logistics?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Safe Courier Options for Jewellery Export?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Safe Courier Options for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Logistics?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -256,7 +256,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617038220319-276d3acb4cb8?auto=format&fit=crop&w=800&q=80",
     tags: ["shipping costs", "jewellery export", "reduce costs", "logistics"],
     content: `
       <h2>Why Shipping Costs Hurt <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Margins</h2>
@@ -288,7 +288,7 @@ export const BLOG_BATCH_7 = [
     <p><strong>Q4: How can B2B buyers benefit from Logistics?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Logistics in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Logistics?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of How to Reduce Shipping Costs Jewellery Export?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of How to Reduce Shipping Costs <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Logistics?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -307,7 +307,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&w=800&q=80",
     tags: ["eco friendly", "packaging", "jewellery", "sustainable"],
     content: `
       <h2>Why Eco-Friendly Packaging Is Now a B2B Requirement</h2>
@@ -358,7 +358,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611085583191-a3b1a2967073?auto=format&fit=crop&w=800&q=80",
     tags: ["dust bags", "jewellery boxes", "packaging", "branding"],
     content: `
       <h2>Why Dust Bags and Boxes Define Brand Perception</h2>
@@ -407,7 +407,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1630019017575-f03fd7724393?auto=format&fit=crop&w=800&q=80",
     tags: ["customs guide", "jewellery", "export", "import duties"],
     content: `
       <h2>HS Codes for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a></h2>
@@ -457,7 +457,7 @@ export const BLOG_BATCH_7 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80",
     tags: ["global delivery", "wholesale", "logistics", "distribution"],
     content: `
       <h2>Building a Global Delivery Infrastructure</h2>

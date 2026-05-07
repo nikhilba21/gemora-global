@@ -9,7 +9,7 @@ export const BLOG_BATCH_16 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80",
     tags: ["layered jewelry guide", "necklace stacking", "ring stacking", "bracelet layering", "jewelry styling"],
     content: `<h2>The Art and Science of Jewelry Layering in 2026</h2>
 <p>Layering jewelry is simultaneously one of the most expressive and most technically challenging styling skills in contemporary fashion. Done well, it creates a look of effortless abundance — as though pieces have accumulated naturally over years of travel, relationships, and personal history. Done poorly, it reads as cluttered, disorganized, or simply like too much.</p>
@@ -74,7 +74,7 @@ export const BLOG_BATCH_16 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: ["y2k jewelry comeback", "2000s jewelry trends", "retro jewelry 2026", "y2k fashion"],
     content: `<h2>Why Y2K Jewelry Is Ruling 2026 Fashion</h2>
 <p>The early 2000s were a distinctive moment in jewelry history — a chaotic, maximally expressive era when rules were made to be broken, excess was celebrated, and plastic was as valid as platinum. Twenty-five years later, Gen Z consumers who never lived through the original Y2K era are discovering its visual language through archival images, early 2000s film and television reboots on streaming platforms, and the nostalgic content of Millennial creators who grew up wearing butterfly clips and nameplate necklaces.</p>

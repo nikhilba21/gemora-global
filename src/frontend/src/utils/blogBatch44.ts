@@ -9,7 +9,7 @@ export const BLOG_BATCH_44 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1624448660411-e67d43292419?auto=format&fit=crop&w=800&q=80",
     tags: ["gemstone sparkle", "brilliance and fire", "scintillation", "jewelry education", "B2B guide"],
     content: `<h2>The Symphony of Light</h2>
 <p>When you look at a high-quality diamond or gemstone, it doesn't just sit there—it 'Performs.' It catches the light, breaks it apart, and sends it back to your eye in a dazzling display of white light, rainbows, and movement. But why do some stones look like 'Fire-Crackers' while others look 'Flat' and 'Dead'? In the world of 2026 gemology, 'Sparkle' is broken down into three distinct scientific components: **Brilliance**, **Fire**, and **Scintillation**. Understanding these is the key to choosing a gem that truly 'Pops.'</p>
@@ -56,7 +56,7 @@ export const BLOG_BATCH_44 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1626497746470-20ed6792330a?auto=format&fit=crop&w=800&q=80",
     tags: ["gemstone color", "chromophores", "trace elements", "gemstone education", "B2B guide"],
     content: `<h2>The Magic of the Elements</h2>
 <p>Have you ever wondered why an Emerald is green while a Ruby is red? In their 'Pure' state, most gemstone minerals (like Corundum or Beryl) are actually colorless. The vibrant colors we love are caused by tiny 'Impurities'—trace elements that were present during the stone's formation millions of years ago. These elements, known as **Chromophores**, absorb certain wavelengths of light and reflect others back to our eyes. In the 2026 market, understanding this 'Nature-Paintbox' is the key to appreciating the rarity and beauty of fine gems.</p>
@@ -107,7 +107,7 @@ export const BLOG_BATCH_44 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=800&q=80",
     tags: ["fancy sapphires", "padparadscha", "pink sapphire", "yellow sapphire", "gemstone education"],
     content: `<h2>The Spectrum of Corundum</h2>
 <p>When most people hear 'Sapphire,' they think of the deep, velvety blue of a royal engagement ring. But in the global market of 2026, 'Blue' is just the beginning. Sapphire is a variety of the mineral **Corundum**, and it comes in every color of the rainbow except red (which we call Ruby). These 'Fancy Sapphires'—in pink, yellow, orange, green, and even purple—are the definitive choice for the 'Modern-Luxe' consumer who wants the durability of a sapphire with a unique, personal color.</p>
@@ -156,7 +156,7 @@ export const BLOG_BATCH_44 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?auto=format&fit=crop&w=800&q=80",
     tags: ["mystic topaz", "coated gemstones", "jewelry education", "2026 trends", "affordable luxury"],
     content: `<h2>The High-Tech Rainbow</h2>
 <p>Have you ever seen a gemstone that looks like it has a 'Rainbow-Oil-Slick' or a 'Galaxy' inside it? In the 2026 market, these are known as **Mystic** or **Coated** gemstones. While they look like magic, they are actually the result of high-tech 'Vacuum-Deposition' technology (the same tech used by NASA). By applying a microscopic layer of metal onto a natural, colorless gemstone (usually Topaz or Quartz), we can create an iridescent glow that is impossible to find in nature. It's the ultimate 'Statement-on-a-Budget.'</p>
@@ -200,7 +200,7 @@ export const BLOG_BATCH_44 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631557920190-706797f1f964?auto=format&fit=crop&w=800&q=80",
     tags: ["color change gemstones", "alexandrite", "zultanite", "jewelry education", "2026 trends"],
     content: `<h2>The Shape-Shifters of Nature</h2>
 <p>Imagine a gemstone that is a vibrant green in the morning sun but turns into a deep, moody purple when you sit down for dinner under a lamp. This isn't a magic trick—it's a rare scientific phenomenon known as the 'Alexandrite-Effect.' In the world of 2026 gemstones, **Color-Change** gems are the definitive choice for the 'Connoisseur.' They are the ultimate 'Conversation-Piece,' offering two (or even three) stones for the price of one. They are symbols of transformation, flexibility, and 'Hidden-Complexity.'</p>

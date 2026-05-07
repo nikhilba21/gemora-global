@@ -10,7 +10,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1589128777073-ec6a698a75a5?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1645062854492-0618051ad361?auto=format&fit=crop&w=800&q=80",
     tags: [
       "wholesale catalogue",
       "jewellery india",
@@ -60,7 +60,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560911732-624653443fc2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509319113908-11126ef7d907?auto=format&fit=crop&w=800&q=80",
     tags: ["bulk order", "fashion jewellery supplier", "wholesale", "b2b"],
     content: `<h2>What Qualifies as a Bulk Order</h2>
 <p>In Indian fashion jewellery manufacturing, "bulk" typically means 500+ total units across an order. However, tier pricing begins at 100 units per design. For businesses just starting, an order of 5-10 designs at 100 pieces each is a practical entry point — enough to access competitive pricing without overcommitting to inventory.</p>
@@ -105,7 +105,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1600050216573-097655760884?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1590548784738-f79116c96ae2?auto=format&fit=crop&w=800&q=80",
     tags: ["custom quote", "jewellery india", "custom jewellery", "wholesale"],
     content: `<h2>What Information You Need to Provide</h2>
 <p>An accurate custom jewellery quote from India starts with a detailed brief. Provide a design sketch or reference image, dimensions and measurements, material preferences (brass, zinc alloy, or stainless steel), plating type and color (gold, rose gold, rhodium, oxidised), stone types and colors if applicable, your preferred finishing style, target quantity, and required timeline. The more precise your brief, the more accurate — and faster — your quote will be.</p>
@@ -150,7 +150,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602752250419-2a93178c7724?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
     tags: ["latest collection", "wholesale", "jewellery", "new arrivals"],
     content: `<h2>Why Buying Latest Collections Matters</h2>
 <p>Customers in fashion jewellery demand freshness. Boutiques that refresh their jewellery inventory with the latest collections see 30-40% higher repeat customer rates than those running stale stock. Indian manufacturers typically release major new collections for Spring-Summer and Autumn-Winter, with additional festival and seasonal drops throughout the year — giving you 4-6 opportunities annually to bring in fresh inventory.</p>
@@ -195,7 +195,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1605100815114-878f970a9ec2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1512167839785-7bb29870e6d4?auto=format&fit=crop&w=800&q=80",
     tags: [
       "moq custom jewellery",
       "manufacturer",
@@ -245,7 +245,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1608043108461-45d6068b13c3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535632063271-ceb995bc217e?auto=format&fit=crop&w=800&q=80",
     tags: [
       "fast delivery",
       "wholesale jewellery india",
@@ -276,7 +276,7 @@ export const BLOG_BATCH_10 = [
     <p><strong>Q4: How can B2B buyers benefit from Commercial?</strong><br/>A: By sourcing from 2026 'Certified-Manufacturers,' buyers can ensure inventory resilience and high-luxe aesthetic at scale.</p>
     <p><strong>Q5: What is the expected 'YOY-Growth' for Commercial in 2026?</strong><br/>A: We are seeing an average 2026 'Growth' of 12-18% for high-quality assets in this segment.</p>
     <p><strong>Q6: Is tokenization available for Commercial?</strong><br/>A: Yes, in 2026, fractional ownership via 'Luxe-Tokens' is standard for all high-value pieces.</p>
-    <p><strong>Q7: How do I verify the authenticity of Fast Delivery Wholesale Jewellery India?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
+    <p><strong>Q7: How do I verify the authenticity of Fast Delivery <a href="/wholesale">Wholesale Jewellery India</a>?</strong><br/>A: Via 2026 'Quantum-Scanning' and the 'Digital-Twin-Passport' provided with every order.</p>
     <p><strong>Q8: What is the role of Jaipur in this trend?</strong><br/>A: As the 2026 'Global-Manufacturing-Hub,' Jaipur provides the artisanal expertise and scale needed for the 2026 market.</p>
     <p><strong>Q9: How does inflation affect Commercial?</strong><br/>A: Rarity acts as a natural ceiling against inflation, making these pieces a definitive 'Value-Anchor.'</p>
     <p><strong>Q10: Can I customize my 2026 collection?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers 2026 'Custom-Curation' services for elite family offices and retail chains.</p>
@@ -295,7 +295,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611085584348-7f60965c7174?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1508216159334-3100029c7842?auto=format&fit=crop&w=800&q=80",
     tags: [
       "premium imitation jewellery",
       "bulk supplier",
@@ -345,7 +345,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1490203923055-6b45941656b2?auto=format&fit=crop&w=800&q=80",
     tags: [
       "private label jewellery",
       "start brand",
@@ -395,7 +395,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80",
     tags: ["trusted exporter", "jewellery", "contact", "wholesale inquiry"],
     content: `<h2>How to Reach Out Effectively</h2>
 <p>Your first message to an Indian <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> should establish you as a serious buyer immediately. Include your business type (retailer, online store, boutique), your target market and country, the jewellery categories you're interested in, your approximate annual purchase volume, and your MOQ requirements per design. Buyers who provide this context upfront receive priority responses and more accurate initial pricing.</p>
@@ -440,7 +440,7 @@ export const BLOG_BATCH_10 = [
     date: "2025-07-15",
     readTime: "6 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1588444837495-c6cfaf504670?auto=format&fit=crop&w=800&q=80",
     tags: ["wholesale inquiry", "jewellery guide", "b2b buyer", "wholesale"],
     content: `<h2>What Suppliers Need to Know From You</h2>
 <p>A winning <a href="/wholesale">Wholesale Jewellery</a> inquiry answers six key questions: your business type (retailer, boutique, online store, reseller), your target market and country, the jewellery categories you need, your approximate annual purchase budget, the MOQ you can commit to per design, and any special requirements such as nickel-free materials, eco-friendly packaging, or private label branding. Suppliers who receive complete inquiries respond faster and with more competitive initial pricing.</p>

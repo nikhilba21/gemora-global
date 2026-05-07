@@ -9,7 +9,7 @@ export const BLOG_BATCH_19 = [
     date: "2026-05-07",
     readTime: "12 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80",
     tags: ["korean jewelry", "k-style", "k-pop jewelry", "asian jewelry trends", "korean fashion"],
     content: `<h2>The Global Rise of K-Jewelry</h2>
 <p>In the last few years, South Korea has moved from being a regional fashion player to a global trendsetter. Driven by the explosive success of K-Pop groups like BTS and Blackpink, and the worldwide reach of K-Dramas, Korean aesthetics have redefined 'cool' for a new generation. Central to this aesthetic is Korean jewelry—a unique blend of minimalist delicacy, playful experimentation, and high-impact statement pieces.</p>
@@ -61,7 +61,7 @@ export const BLOG_BATCH_19 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?auto=format&fit=crop&w=800&q=80",
     tags: ["pinterest jewelry", "jewelry mood board", "trending jewelry 2026", "visual fashion trends"],
     content: `<h2>Pinterest: The Engine of Visual Discovery</h2>
 <p>While TikTok is where trends go viral, Pinterest is where they are born and curated. For jewelry retailers and enthusiasts, Pinterest is an essential tool for identifying 'aesthetic' movements before they hit the mass market. In 2026, we are seeing a shift toward more 'curated' and 'intentional' jewelry choices, as users move away from fast fashion and toward pieces that tell a story.</p>
@@ -111,7 +111,7 @@ export const BLOG_BATCH_19 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?auto=format&fit=crop&w=800&q=80",
     tags: ["celebrity jewelry", "red carpet jewelry", "star style", "hollywood jewelry trends", "celebrity fashion"],
     content: `<h2>The Power of the Red Carpet</h2>
 <p>Even in the age of social media, the red carpet remains the ultimate stage for jewelry. When a global superstar steps out in a specific necklace or earring style, it sets off a chain reaction that influences every level of the industry—from high-end boutiques to mass-market retailers. In 2026, celebrity jewelry style is moving away from just 'expensive' and toward 'expressive.'</p>
@@ -161,7 +161,7 @@ export const BLOG_BATCH_19 = [
     date: "2026-05-07",
     readTime: "9 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?auto=format&fit=crop&w=800&q=80",
     tags: ["instagram jewelry", "jewelry marketing", "social media fashion", "brand building", "jewelry branding"],
     content: `<h2>The Instagram 'Aesthetic' is the New Storefront</h2>
 <p>In 2026, most jewelry discovery happens on Instagram. For a jewelry brand or retailer, your Instagram feed is more than just a marketing tool; it's your primary storefront. Customers don't just want to see the jewelry; they want to see the 'vibe' it creates. An 'Instagram-worthy' brand is one that understands the visual language of the platform—lighting, composition, and most importantly, the shareability of the products themselves.</p>
@@ -211,7 +211,7 @@ export const BLOG_BATCH_19 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?auto=format&fit=crop&w=800&q=80",
     tags: ["cottagecore jewelry", "nature jewelry", "whimsical fashion", "vintage aesthetic", "cottagecore 2026"],
     content: `<h2>What is Cottagecore?</h2>
 <p>Cottagecore is more than just a fashion trend; it's a romanticized interpretation of rural life. Born out of a collective desire to escape the stresses of modern technology and urban living, the aesthetic celebrates simplicity, nature, and traditional crafts. Think wildflowers, baking bread, vintage florals, and a slower pace of life. In 2026, Cottagecore has matured into a sophisticated design movement that heavily influences jewelry design.</p>

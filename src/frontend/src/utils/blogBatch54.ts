@@ -9,7 +9,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596944214946-17e07bfcf002?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry investment", "market analysis", "fine jewelry 2026", "wealth management", "B2B guide"],
     content: `<h2>The Portable Portfolio</h2>
 <p>In the volatile economy of 2026, investors are looking for 'Tangible-Security.' And for the sophisticated elite, that security is found in the jewelry box. **Fine Jewelry** has officially transitioned from a 'Luxury-Purchase' to a 'Recognized-Asset-Class.' Unlike currency, high-end gems have 'Intrinsic-Value' that is recognized globally, and unlike real estate, they are 100% 'Portable.' In this report, we analyze the 2026 market data to identify the 'Blue-Chip' categories that are outperforming traditional stocks and bonds. In 2026, 'Smart-Wealth' is wealth you can wear.</p>
@@ -44,7 +44,7 @@ export const BLOG_BATCH_54 = [
 <p><strong>Q9: Should I buy the stone or the finished piece?</strong><br/>A: For pure investment, **Loose-Stones** are easier to grade and trade. For 'Wearable-Wealth,' finished pieces from 'Top-Tier' artisans are preferred.</p>
 <p><strong>Q10: Can men invest in jewelry?</strong><br/>A: Absolutely! High-end **Complication-Watches** and **Rare-Gem-Signet-Rings** are the top investment choices for the 2026 male collector.</p>
 <p><strong>Q11: What's the 'Next Big' investment trend?</strong><br/>A: 'Tokenized-Gemstone-Shares'—where a $10M diamond is 'Fractionalized' into 10,000 digital tokens—is a growing 2026 'DeFi-Luxe' innovation.</p>
-<p><strong>Q12: Can Gemora Global provide 'Market-Appraisal' services?</strong><br/>A: Yes! We provide 'Annual-Value-Updates' for all our wholesale partners' investment collections based on current auction data. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Market-Appraisal' services?</strong><br/>A: Yes! We provide 'Annual-Value-Updates' for all our wholesale partners' investment collections based on current auction data. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your investment collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -58,7 +58,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1598560912005-59a0d5c1a419?auto=format&fit=crop&w=800&q=80",
     tags: ["rare gemstones", "Alexandrite", "Paraiba Tourmaline", "jewelry investment", "B2B guide"],
     content: `<h2>Beyond the Diamond</h2>
 <p>In the world of 2026, everyone has a diamond. But only a few have an **Alexandrite** or a **Paraiba Tourmaline**. As the luxury market becomes more 'Sophisticated,' investors are moving away from 'Common-Luxe' to **'Exotic-Alpha'**—stones so rare that most people have never seen one in person. These stones are currently 'Outperforming' gold and diamonds because their supply is measured in 'Grams-per-Year,' while global demand is exploding. In this index, we analyze the 2026 'Rising-Stars' of the gemstone world. In 2026, 'Rarity' is the ultimate currency.</p>
@@ -102,7 +102,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80",
     tags: ["estate jewelry", "antique jewelry", "jewelry appraisal", "secondary market", "B2B guide"],
     content: `<h2>The Hunt for Value</h2>
 <p>In the world of 2026, some of the best jewelry investments aren't in the 'New' category; they are in the **'Estate'** (Pre-Owned) market. Because many sellers don't understand the 'Historical-Rarity' or the 'Material-Value' of what they own, the estate market is a 'Gold-Mine' for the educated buyer. From spotting 'Old-Mine-Cut' diamonds disguised as 'Broken-Glass' to identifying 'Signed-Pieces' that have been over-polished, the **'Estate-Luxe'** market requires a 'Detective's-Eye.' In 2026, 'Smart-Money' buys what others overlook. In 2026, 'Old' is the new 'Untapped-Alpha.'</p>
@@ -146,7 +146,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
     tags: ["crypto jewelry", "NFTs", "blockchain jewelry", "digital assets", "B2B guide"],
     content: `<h2>The Hybrid Asset</h2>
 <p>In the world of 2026, the line between 'Physical' and 'Digital' wealth has blurred. We have entered the era of **'Crypto-Jewelry'**—physical gemstones and gold that are 'Linked' to a **Non-Fungible Token (NFT)** on the blockchain. This isn't about 'Art-JPEGs'; it's about **'Digital-Property-Rights'**. By holding the NFT, you own the 'Legal-Title' to a physical diamond stored in a secure vault. You can trade that diamond globally in seconds on a crypto-exchange without ever moving the physical stone. In 2026, crypto-jewelry is the definitive 'Hedge'—combining the 'Intrinsic-Value' of gold with the 'Liquidity' of the digital world.</p>
@@ -196,7 +196,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry resale", "secondary market", "circular fashion", "pre-loved luxury", "B2B guide"],
     content: `<h2>The Circular Economy of Luxe</h2>
 <p>In the world of 2026, 'New' is no longer the only standard of luxury. We have entered the **'Resale-Revolution.'** Driven by 'Sustainability-Goals' and a desire for 'Unique-Value,' the secondary market for fine jewelry is growing 3x faster than the primary market. Today's consumer sees their jewelry box as a 'Rotating-Asset'—buying a piece, wearing it for two years, and then 'Re-Selling' it to fund their next purchase. In 2026, understanding the **'Residual-Value'** of your jewelry is as important as the purchase itself. It's not just a 'Buy'; it's a 'Borrow' from the global circular market.</p>
@@ -245,7 +245,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80",
     tags: ["bespoke jewelry", "custom design", "jewelry investment", "one-of-a-kind", "B2B guide"],
     content: `<h2>The Premium of the Unique</h2>
 <p>In the world of 2026, 'Mass-Luxury' is everywhere. But **'Bespoke'** is rare. We have entered the era of **'Bespoke-as-an-Asset'**—the realization that a piece of jewelry custom-designed for a specific individual actually holds *more* value in the long run than a stock piece from a luxury brand. Why? Because bespoke pieces carry the **'Scarcity-Alpha'**. They are 'Non-Commoditized.' In an auction room of 2026, a 'One-of-a-Kind' custom piece from a master-artisan creates a 'Bidding-War' that a standard brand piece never could. In 2026, 'Custom' isn't just a choice; it's a 'Financial-Strategy.'</p>
@@ -289,7 +289,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1613947489240-6902d999059e?auto=format&fit=crop&w=800&q=80",
     tags: ["pink diamonds", "Argyle mine", "Morganite", "Pink Sapphire", "jewelry investment", "B2B guide"],
     content: `<h2>The Rarity of the Rose</h2>
 <p>In the jewelry world of 2026, we are living through the **'Pink-Diamond-Crisis.'** Since the closure of the **Argyle Mine** in Australia, which produced 90% of the world's pink diamonds, the supply has slowed to a 'Drip.' This has caused prices to skyrocket by 500% in the last five years, making natural pink diamonds inaccessible to everyone but the 'Hyper-Wealthy.' But the demand for 'Pink-Luxury' is higher than ever. In this report, we analyze the 2026 market for **'Pink-Alternatives'**—stones that offer the same romantic 'Rose-Glow' but at a price point that makes sense for the modern collector. In 2026, 'Pink' is the color of 'Exclusivity.'</p>
@@ -333,7 +333,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1618403088350-f1741596c341?auto=format&fit=crop&w=800&q=80",
     tags: ["gold vs platinum", "jewelry investment", "precious metals 2026", "wealth management", "B2B guide"],
     content: `<h2>The Choice of the Elite</h2>
 <p>In the world of 2026, the question "Gold or Platinum?" is no longer just about 'Aesthetics.' It is a **'Financial-Decision.'** As the global economy shifts, these two 'Noble-Metals' are behaving in very different ways. Gold remains the 'Universal-Hedge'—the stone-cold security of the ages. Platinum, meanwhile, has become the 'Industrial-Alpha'—its price driven by the 'Green-Tech' revolution and its 'Extreme-Rarity.' In this report, we analyze the 2026 **Gold-vs-Platinum** landscape. We'll show you why 'High-Grade' collectors are now splitting their portfolios 60/40 between the two. In 2026, 'Diversification' is the only way to protect your luxe.</p>
@@ -377,7 +377,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "10 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620656763407-e23a47b01f42?auto=format&fit=crop&w=800&q=80",
     tags: ["jewelry insurance", "jewelry appraisal", "wealth protection", "risk management", "B2B guide"],
     content: `<h2>The Security of Knowledge</h2>
 <p>Owning a $50,000 diamond without an up-to-date appraisal is like driving a car without a seatbelt. In the high-inflation world of 2026, jewelry prices are moving faster than ever. If your appraisal is more than two years old, you are likely **'Under-Insured'**. If you lose your ring, your insurance company will only pay the 'Old-Price,' leaving you unable to replace the piece with one of equal quality. In this guide, we break down the **2026 Insurance-and-Appraisal-Master-Class**—from the difference between 'Replacement-Value' and 'Market-Value' to the 'Digital-Vault' systems of the modern age. In 2026, 'Security' isn't a vault; it's 'Documentation.'</p>
@@ -431,7 +431,7 @@ export const BLOG_BATCH_54 = [
     date: "2026-05-07",
     readTime: "11 min read",
     status: "published" as const,
-    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1622398422974-c20ec14443af?auto=format&fit=crop&w=800&q=80",
     tags: ["wholesale jewelry", "B2B strategy", "inventory optimization", "market data", "B2B guide"],
     content: `<h2>The Intelligence-Driven Store</h2>
 <p>In the high-speed jewelry market of 2026, 'Gut-Feeling' is dead. The most successful B2B partners—from boutique jewelry stores to global online retailers—are running their businesses on **Market-Data**. They know exactly which 'Color-Vibrations' are trending in London, which 'Ring-Sizes' are selling out in New York, and which 'Price-Points' are generating the highest ROI in Mumbai. In this guide, we reveal the **2026 Wholesale-Mastery** strategies. We'll show you how to use Gemora's global data to 'Predict' your stock needs, eliminate 'Dead-Inventory,' and build a 'High-Velocity' jewelry brand. In 2026, 'Data' is the most valuable gemstone you own.</p>
