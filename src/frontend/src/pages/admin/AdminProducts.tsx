@@ -43,7 +43,6 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
-import { useActor } from "../../hooks/useActor";
 import type { Category, Product } from "../../types";
 
 type WebPBadgeInfo = {
@@ -103,7 +102,6 @@ function WebPBadge({ info }: { info?: WebPBadgeInfo }) {
 }
 
 export default function AdminProducts() {
-  const { actor } = useActor();
   const qc = useQueryClient();
   const [open, setOpen] = useState(false);
   const [csvOpen, setCsvOpen] = useState(false);
@@ -141,7 +139,7 @@ export default function AdminProducts() {
   const invalidate = () => qc.invalidateQueries({ queryKey: ["products"] });
 
   // ── Bulk selection helpers ─────────────────────────────────────
-  const productList = products ?? [];
+  const productList = products;
   const allIds = productList.map((p) => String(p.id));
   const allSelected =
     allIds.length > 0 && allIds.every((id) => selectedIds.has(id));
@@ -165,26 +163,13 @@ export default function AdminProducts() {
   };
 
   const handleBulkActivate = async () => {
-    if (!actor || selectedIds.size === 0) return;
+    if (selectedIds.size === 0) return;
     setBulkActioning(true);
     const selected = productList.filter((p) => selectedIds.has(String(p.id)));
     let ok = 0;
     for (const p of selected) {
       try {
-        await actor.updateProduct(
-          p.id,
-          p.categoryId,
-          p.name,
-          p.description,
-          p.moq,
-          p.imageUrls,
-          true,
-          p.isNewArrival,
-          p.sku ?? null,
-          p.subcategory ?? null,
-          p.color ?? null,
-          p.keyFeatures ?? null,
-        );
+        await api.updateProduct(Number(p.id), { ...p, featured: true });
         ok++;
       } catch {
         // continue on error
@@ -197,26 +182,13 @@ export default function AdminProducts() {
   };
 
   const handleBulkDeactivate = async () => {
-    if (!actor || selectedIds.size === 0) return;
+    if (selectedIds.size === 0) return;
     setBulkActioning(true);
     const selected = productList.filter((p) => selectedIds.has(String(p.id)));
     let ok = 0;
     for (const p of selected) {
       try {
-        await actor.updateProduct(
-          p.id,
-          p.categoryId,
-          p.name,
-          p.description,
-          p.moq,
-          p.imageUrls,
-          false,
-          p.isNewArrival,
-          p.sku ?? null,
-          p.subcategory ?? null,
-          p.color ?? null,
-          p.keyFeatures ?? null,
-        );
+        await api.updateProduct(Number(p.id), { ...p, featured: false });
         ok++;
       } catch {
         // continue on error
@@ -229,13 +201,13 @@ export default function AdminProducts() {
   };
 
   const handleBulkDelete = async () => {
-    if (!actor || selectedIds.size === 0) return;
+    if (selectedIds.size === 0) return;
     setBulkActioning(true);
     const idsToDelete = [...selectedIds];
     let ok = 0;
     for (const id of idsToDelete) {
       try {
-        await actor.deleteProduct(BigInt(id));
+        await api.deleteProduct(Number(id));
         ok++;
       } catch {
         // continue on error
@@ -424,30 +396,29 @@ export default function AdminProducts() {
   // Helper: get or create category by name, returns its ID
   const getOrCreateCategoryId = async (
     catName: string,
-    catLookup: Record<string, bigint>,
-  ): Promise<bigint> => {
-    if (!catName) return BigInt(0);
+    catLookup: Record<string, number>,
+  ): Promise<number> => {
+    if (!catName) return 0;
     const key = catName.toLowerCase().trim();
     if (catLookup[key] !== undefined) return catLookup[key];
     // Create it
     try {
-      const newId = await api.createCategory(
-        catName.trim(),
-        "",
-        "",
-        BigInt(Object.keys(catLookup).length + 1),
-      );
-      catLookup[key] = newId;
+      const newCat = await api.createCategory({
+        name: catName.trim(),
+        description: "",
+        imageUrl: "",
+        sortOrder: Object.keys(catLookup).length + 1,
+      });
+      catLookup[key] = newCat.id;
       // Invalidate categories cache so the new ones show up
       qc.invalidateQueries({ queryKey: ["categories"] });
-      return newId;
+      return newCat.id;
     } catch {
-      return BigInt(0);
+      return 0;
     }
   };
 
   const handleCsvImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!actor) return;
     const file = e.target.files?.[0];
     if (!file) return;
     const text = await file.text();
@@ -487,7 +458,7 @@ export default function AdminProducts() {
     let failCount = 0;
 
     // Build category name→id lookup
-    const catLookup: Record<string, bigint> = {};
+    const catLookup: Record<string, number> = {};
     if (categories) {
       for (const cat of categories) {
         catLookup[cat.name.toLowerCase().trim()] = cat.id;
@@ -524,19 +495,19 @@ export default function AdminProducts() {
         colIdx.keyFeatures >= 0 ? (cols[colIdx.keyFeatures] ?? "") : "";
 
       try {
-        await actor.createProduct(
+        await api.createProduct({
           categoryId,
           name,
           description,
           moq,
-          imageUrl ? [imageUrl] : [],
-          featuredStr.toLowerCase() === "true",
-          false,
-          sku || null,
-          subcategory || null,
-          color || null,
-          keyFeatures || null,
-        );
+          imageUrls: imageUrl ? [imageUrl] : [],
+          featured: featuredStr.toLowerCase() === "true",
+          isNewArrival: false,
+          sku: sku || undefined,
+          subcategory: subcategory || undefined,
+          color: color || undefined,
+          keyFeatures: keyFeatures || undefined,
+        });
         successCount++;
       } catch {
         failCount++;
@@ -574,7 +545,6 @@ export default function AdminProducts() {
   };
 
   const handleJsonImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!actor) return;
     const file = e.target.files?.[0];
     if (!file) return;
     let products: KanhaiProduct[] = [];
@@ -592,7 +562,7 @@ export default function AdminProducts() {
     }
 
     // Build category name→id lookup
-    const catLookup: Record<string, bigint> = {};
+    const catLookup: Record<string, number> = {};
     if (categories) {
       for (const cat of categories) {
         catLookup[cat.name.toLowerCase().trim()] = cat.id;
@@ -643,19 +613,19 @@ export default function AdminProducts() {
       const moq = p.min_order ?? p.moq ?? p.price ?? "";
 
       try {
-        await actor.createProduct(
+        await api.createProduct({
           categoryId,
           name,
           description,
           moq,
           imageUrls,
-          false,
-          false,
-          p.sku || null,
-          p.subcategory || null,
-          p.color || null,
-          keyFeatures || null,
-        );
+          featured: false,
+          isNewArrival: false,
+          sku: p.sku || undefined,
+          subcategory: p.subcategory || undefined,
+          color: p.color || undefined,
+          keyFeatures: keyFeatures || undefined,
+        });
         successCount++;
       } catch {
         failCount++;
