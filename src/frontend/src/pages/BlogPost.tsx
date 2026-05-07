@@ -60,11 +60,12 @@ export default function BlogPostPage() {
     },
   });
 
-  const { data: allBackendPosts = [] } = useQuery({
+  const { data: _allPostsData } = useQuery({
     queryKey: ["blogPosts"],
     queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
     enabled: true,
   });
+  const allBackendPosts: BlogPost[] = ((_allPostsData as { items?: BlogPost[] } | undefined)?.items) ?? [];
 
   const post: BlogPost | null = (backendPost as BlogPost | null) ?? defaultPost;
   const isLoading = backendLoading && !defaultPost;
