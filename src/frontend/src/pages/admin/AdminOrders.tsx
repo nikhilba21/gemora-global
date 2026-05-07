@@ -309,7 +309,7 @@ export default function AdminOrders() {
         <body>
           <div class="header">
             <div class="brand-box">
-              <img src="/logo.png" class="logo" alt="Gemora Global" />
+              <img src="/assets/uploads/logo-removebg-preview-1-1.png" class="logo" alt="Gemora Global" />
               <div class="company-name">Gemora Global Private Limited</div>
             </div>
             <div class="invoice-meta">
