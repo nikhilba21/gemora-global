@@ -44,7 +44,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q4: How do I prevent my necklaces from tangling?</strong><br/>A: Store them hanging up, or lay them flat in a dedicated jewelry tray. When traveling, thread the chain through a drinking straw and clasp it—this is a foolproof way to prevent tangles!</p>
 <p><strong>Q5: Can I wear my jewelry while exercising?</strong><br/>A: We recommend against it. Sweat is acidic and can accelerate tarnishing. Also, the physical activity increases the risk of breaking a chain or losing a stone.</p>
 <p><strong>Q6: How do I store pearls?</strong><br/>A: Pearls are organic and need to 'breathe.' Store them in a soft cloth pouch, never in an airtight plastic bag. Also, keep them away from other jewelry as they are easily scratched.</p>
-<p><strong>Q7: What is 'E-Coating'?</strong><br/>A: It's a clear, protective lacquer applied over jewelry plating to act as a barrier against moisture and skin oils. It's a key feature of our quality standard at Gemora Global.</p>
+<p><strong>Q7: What is 'E-Coating'?</strong><br/>A: It's a clear, protective lacquer applied over jewelry plating to act as a barrier against moisture and skin oils. It's a key feature of our quality standard at <a href="/">Gemora Global</a>.</p>
 <p><strong>Q8: How often should I clean my jewelry?</strong><br/>A: A quick wipe with a cloth after every wear, and a gentle soap-and-water deep clean once a month, is perfect for most collections.</p>
 <p><strong>Q9: Can I use lemon juice or vinegar to clean gold?</strong><br/>A: These are acidic and can be too harsh for plated jewelry. While they might work for solid gold in a pinch, mild soap is always the safer choice.</p>
 <p><strong>Q10: Why does my gold plating look 'faded'?</strong><br/>A: This is usually 'wear and tear' where the gold layer has physically rubbed off over time. It can be restored by a professional re-plating service.</p>
@@ -85,7 +85,7 @@ export const BLOG_BATCH_25 = [
 <h2>How to Deal with Tarnish</h2>
 <p>If your plated jewelry has started to look 'dull' or 'dark,' it's likely a light layer of tarnish. You can buy specialized 'Jewelry Polishing Cloths' that are specifically designed for plated items. These are less abrasive than standard silver cloths. Gently rub the piece in one direction (avoid circular motions) to restore the shine.</p>
 
-<h2>Gemora Global's Quality Standard</h2>
+<h2><a href="/">Gemora Global</a>'s Quality Standard</h2>
 <p>We want our jewelry to be a permanent part of your collection. That's why we use professional-grade plating and a protective 'e-coat' finish. This added layer of protection makes our jewelry much more resilient to daily wear and cleaning. When you source from us, you're getting jewelry that is built for longevity.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -150,7 +150,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q9: Do pearls need different storage?</strong><br/>A: Yes! Pearls are organic and need 'breathing' space. Store them in a soft cloth pouch, never in an airtight plastic bag. Also, keep them away from other jewelry as they are very soft and easily scratched.</p>
 <p><strong>Q10: Should I clean my jewelry before storing it?</strong><br/>A: Ideally, yes. A quick wipe with a dry cloth to remove skin oils will prevent those oils from sitting on the metal and causing dullness over time.</p>
 <p><strong>Q11: What's the best way to store 'Clip-On' earrings?</strong><br/>A: Keep them 'open' or clipped onto a soft fabric ribbon. Leaving them 'closed' for long periods can sometimes weaken the spring mechanism.</p>
-<p><strong>Q12: Can Gemora Global provide custom storage solutions?</strong><br/>A: Yes, we offer branded pouches, rolls, and boxes for our wholesale partners. We can even help you design a 'Starter Storage Kit' for your customers. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide custom storage solutions?</strong><br/>A: Yes, we offer branded pouches, rolls, and boxes for our wholesale partners. We can even help you design a 'Starter Storage Kit' for your customers. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our storage-ready collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -200,7 +200,7 @@ export const BLOG_BATCH_25 = [
 <p><strong>Q9: What is 'Versatile' jewelry for travel?</strong><br/>A: Pieces that can be 'dressed up' or 'dressed down.' A pair of medium gold hoops works with a bikini during the day and a cocktail dress at night.</p>
 <p><strong>Q10: Are 'Jewelry Cases' too bulky for a backpack?</strong><br/>A: Many modern travel cases are 'Slim-Line' and designed to fit into the side pocket of a bag. A 'Jewelry Roll' is the most space-efficient option.</p>
 <p><strong>Q11: What's the 'Next Big' travel jewelry trend?</strong><br/>A: 'Permanent Jewelry'—chains that are welded onto the wrist—is becoming popular for travelers who don't want to worry about clasps or losing their pieces on the go.</p>
-<p><strong>Q12: Does Gemora Global sell travel jewelry sets?</strong><br/>A: Yes! We can curate 'Travel-Ready' collections for our wholesale partners, including versatile pieces and branded travel packaging. Contact us to learn more.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> sell travel jewelry sets?</strong><br/>A: Yes! We can curate 'Travel-Ready' collections for our wholesale partners, including versatile pieces and branded travel packaging. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your ultimate travel collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -238,7 +238,7 @@ export const BLOG_BATCH_25 = [
 <h2>The 'Pro-at-Home' Compromise</h2>
 <p>In 2026, you can buy 'Consumer Ultrasonic Cleaners' for home use. While these are less powerful than professional machines, they still carry risks. If you use one, only put in solid gold and hard stones (CZ, Sapphire, Topaz). And never use the 'Heat' setting if your jewelry has stones, as the thermal shock can cause them to crack.</p>
 
-<h2>Gemora Global's Care Philosophy</h2>
+<h2><a href="/">Gemora Global</a>'s Care Philosophy</h2>
 <p>We design our jewelry to be low-maintenance. By using high-micron plating and protective e-coats, we've made our pieces resilient enough to stay bright with simple home care. We recommend our wholesale partners educate their customers on the power of the 'Soap-and-Water' method—it's the best way to ensure the jewelry they buy today looks great for years to come.</p>
 
 <h2>Frequently Asked Questions</h2>

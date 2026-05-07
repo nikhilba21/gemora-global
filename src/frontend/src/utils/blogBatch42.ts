@@ -145,7 +145,7 @@ export const BLOG_BATCH_42 = [
 <p><strong>Q9: What is 'Micro-Pave'?</strong><br/>A: A technique where hundreds of tiny diamonds are set so close together that they look like a solid 'Carpet' of light. It's the standard for gala-level luxury.</p>
 <p><strong>Q10: Can men wear jewelry to a gala?</strong><br/>A: Absolutely! Diamond cufflinks, a high-end dress watch, and even a subtle 'Lapel-Pin' or a bold 'Pinky-Ring' are the definitive 2026 men's gala look.</p>
 <p><strong>Q11: What's the 'Next Big' gala trend?</strong><br/>A: 'Body-Jewelry-for-Galas'—like diamond-encrusted 'Epaulettes' or 'Back-Necklaces' for open-back dresses—is a growing 2026 'Couture' trend.</p>
-<p><strong>Q12: Can Gemora Global create 'One-of-a-Kind' gala pieces?</strong><br/>A: Yes! We can work with you to source a specific rare gemstone and design a unique masterpiece that will never be replicated. Contact us to start your high-jewelry journey.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create 'One-of-a-Kind' gala pieces?</strong><br/>A: Yes! We can work with you to source a specific rare gemstone and design a unique masterpiece that will never be replicated. Contact us to start your high-jewelry journey.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your high-society collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -195,7 +195,7 @@ export const BLOG_BATCH_42 = [
 <p><strong>Q9: What is 'E-Coating'?</strong><br/>A: A transparent, protective ceramic layer applied to jewelry to prevent tarnishing. It's the #1 2026 technology for vacation-ready silver jewelry.</p>
 <p><strong>Q10: Can men wear vacation jewelry?</strong><br/>A: Yes! Simple 'Shark-Tooth' or 'Shell' pendants in silver, and braided leather bracelets are the definitive men's resort look for 2026.</p>
 <p><strong>Q11: What's the 'Next Big' vacation trend?</strong><br/>A: 'Body-Chains-for-Bikinis'—thin gold chains that wrap around the waist or chest—is a growing 2026 'Resort-Glamour' trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Vacation-Proof' packaging?</strong><br/>A: Yes! We can provide small, waterproof 'Travel-Pouches' that your customers will love for their beach trips. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Vacation-Proof' packaging?</strong><br/>A: Yes! We can provide small, waterproof 'Travel-Pouches' that your customers will love for their beach trips. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your resort-ready collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -245,7 +245,7 @@ export const BLOG_BATCH_42 = [
 <p><strong>Q9: Is 'Body-Jewelry' uncomfortable?</strong><br/>A: Only if it's poorly made. In 2026, we use 'Ergonomic-Link' designs that move with the body's natural curves. Always choose lightweight metals for large body pieces.</p>
 <p><strong>Q10: Can men wear festival jewelry?</strong><br/>A: Festivals are the primary arena for men's jewelry experimentation! From bold 'Talisman' necklaces to 'Multi-Ring' stacks and even face-chains, men are leading the festival fashion charge in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' festival trend?</strong><br/>A: 'Bio-Luminescent' stones—stones that naturally glow in the dark after being charged by the sun—is a growing 2026 'Nature-Tech' trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Neon' items?</strong><br/>A: Yes! We can manufacture our best-selling designs in a range of 'High-Viz' festival colors. Contact us for our summer festival catalogue.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Neon' items?</strong><br/>A: Yes! We can manufacture our best-selling designs in a range of 'High-Viz' festival colors. Contact us for our summer festival catalogue.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your high-impact festival collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

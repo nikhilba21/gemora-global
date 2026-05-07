@@ -23,7 +23,7 @@ export const BLOG_BATCH_11 = [
       <p>Furthermore, India's democratic business environment, widespread English proficiency, and government-backed export incentives (like the Duty Drawback scheme and RoDTEP) have made it significantly easier and more cost-effective for international buyers to source directly from Indian factories.</p>
 
       <h2>2. Understanding Pricing Structures: Ex-Factory, FOB, and Landed Costs</h2>
-      <p>When negotiating with an Indian wholesale jewellery supplier, understanding pricing terminology is critical to protecting your profit margins.</p>
+      <p>When negotiating with an Indian <a href="/wholesale">Wholesale Jewellery</a> supplier, understanding pricing terminology is critical to protecting your profit margins.</p>
       <ul>
         <li><strong>Ex-Factory Price:</strong> This is the bare cost of the jewellery piece as it sits on the factory floor. It includes raw materials, labor, plating, and the manufacturer's profit margin, but zero logistics or packaging costs.</li>
         <li><strong>FOB (Free On Board) Price:</strong> This is the most common and recommended pricing structure for international buyers. The FOB price includes the Ex-Factory cost PLUS the cost of packaging, domestic transport to the Indian port/airport, and export customs clearance fees. <em>FOB Jaipur</em> or <em>FOB Delhi</em> means the supplier is responsible for all costs and risks until the goods are handed over to your chosen international carrier (like DHL or FedEx).</li>
@@ -65,7 +65,7 @@ export const BLOG_BATCH_11 = [
 
       <h2>7. Finding the Right Manufacturing Partner</h2>
       <p>B2B portals like Alibaba and IndiaMART are filled with thousands of Indian suppliers, but 80% of them are trading companies (middlemen), not actual manufacturers. Buying from a middleman instantly reduces your profit margin by 20-30% and severely limits your ability to customize products or control quality.</p>
-      <p>To identify a true manufacturer like Gemora Global:</p>
+      <p>To identify a true manufacturer like <a href="/">Gemora Global</a>:</p>
       <ul>
         <li>Ask for a live WhatsApp video tour of their factory floor.</li>
         <li>Check if they offer custom CAD design and mold-making services. Traders cannot do this efficiently.</li>
@@ -125,7 +125,7 @@ export const BLOG_BATCH_11 = [
 
       <h2>Conclusion: Why Your Supply Chain Belongs in Jaipur</h2>
       <p>Choosing where to manufacture your jewellery is the most consequential decision you will make as a jewellery brand or wholesaler. By sourcing from Jaipur, you are not just buying metal and stones; you are buying into a 300-year-old legacy of craftsmanship. You gain access to an unparalleled, concentrated supply chain that offers factory-direct pricing, stunning handcrafted aesthetics, modern international compliance, and the agility to scale your custom designs.</p>
-      <p>Whether you are looking for heavy bridal Kundan sets for a boutique in Dubai, or minimalist oxidized silver rings for a retail chain in London, Jaipur is the only city in the world that can deliver it all with authenticity, scale, and profit-maximizing wholesale pricing. Partner with a trusted Jaipur-based manufacturer like Gemora Global today to elevate your inventory and delight your customers.</p>
+      <p>Whether you are looking for heavy bridal Kundan sets for a boutique in Dubai, or minimalist oxidized silver rings for a retail chain in London, Jaipur is the only city in the world that can deliver it all with authenticity, scale, and profit-maximizing wholesale pricing. Partner with a trusted Jaipur-based manufacturer like <a href="/">Gemora Global</a> today to elevate your inventory and delight your customers.</p>
     `
   }
 ];

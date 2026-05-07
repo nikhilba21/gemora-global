@@ -45,7 +45,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q9: Are Art Deco engagement rings trending?</strong><br/>A: Yes! The geometric settings and high-contrast stone combinations of the 1920s are a top choice for non-traditional engagement rings in 2026.</p>
 <p><strong>Q10: How do I clean my Art Deco jewelry?</strong><br/>A: Because of the intricate settings and geometric crevices, use a very soft toothbrush and mild soapy water to gently remove dust. Dry thoroughly to maintain the metal's shine.</p>
 <p><strong>Q11: What's a 'Sunburst' motif?</strong><br/>A: It's a design featuring rays radiating out from a central point. It was a huge symbol of optimism in the 1920s and remains a favorite for Art Deco earrings and pendants.</p>
-<p><strong>Q12: Can Gemora Global create custom Art Deco designs?</strong><br/>A: Yes! We can take your geometric inspirations and turn them into a custom wholesale collection. Our designers are experts in 1920s aesthetics. Contact us to get started.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom Art Deco designs?</strong><br/>A: Yes! We can take your geometric inspirations and turn them into a custom wholesale collection. Our designers are experts in 1920s aesthetics. Contact us to get started.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our Art Deco revival collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q9: How do I tell a real baroque pearl from an imitation?</strong><br/>A: The 'Tooth Test' still works—gently rub the pearl against your tooth; a real pearl will feel slightly gritty, while an imitation will feel perfectly smooth. Also, look at the luster; real pearls have a depth of shine that imitation pearls can't quite match.</p>
 <p><strong>Q10: Are baroque pearls sustainable?</strong><br/>A: Most are cultured pearls, which is a relatively sustainable form of gem production. By choosing baroque pearls, you're also reducing waste by using gems that might otherwise have been discarded in the search for 'perfection.'</p>
 <p><strong>Q11: What is 'Irregularity' in jewelry design?</strong><br/>A: It's a design philosophy that embraces the 'wabi-sabi' concept—finding beauty in things that are natural, imperfect, and unique. Baroque pearls are the ultimate symbol of this.</p>
-<p><strong>Q12: Can I request specific 'shapes' for my baroque pearl wholesale order?</strong><br/>A: Yes! We can curate orders based on your preference—e.g., 'all teardrops' or 'all abstract shapes.' Contact Gemora Global to discuss your specific needs.</p>
+<p><strong>Q12: Can I request specific 'shapes' for my baroque pearl wholesale order?</strong><br/>A: Yes! We can curate orders based on your preference—e.g., 'all teardrops' or 'all abstract shapes.' Contact <a href="/">Gemora Global</a> to discuss your specific needs.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our organic baroque pearl collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -145,7 +145,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q9: Why is Jaipur famous for enamel?</strong><br/>A: The craft was brought to Jaipur in the 1700s by Maharaja Man Singh I. Since then, the city has refined the technique to become the global leader in high-end Meenakari.</p>
 <p><strong>Q10: Are enamel rings comfortable?</strong><br/>A: Yes, quality enamel is polished to a very smooth, glass-like finish that feels comfortable against the skin.</p>
 <p><strong>Q11: What are 'Neon' enamels made of?</strong><br/>A: They use special fluorescent pigments within the glass or resin to achieve that 'electric' look under light.</p>
-<p><strong>Q12: Can Gemora Global create a custom enamel collection for me?</strong><br/>A: Absolutely! We can help you choose the right technique, colors, and designs for your market. Contact us to start your colorful journey.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom enamel collection for me?</strong><br/>A: Absolutely! We can help you choose the right technique, colors, and designs for your market. Contact us to start your colorful journey.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our vibrant enamel collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -195,7 +195,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q9: What is 'Hammered' metal?</strong><br/>A: It's a texture created by literally hammering the metal, resulting in a series of small, reflective 'pits' that catch the light beautifully.</p>
 <p><strong>Q10: Are 'Mismatched' hoops a trend?</strong><br/>A: Yes! Wearing a large hoop in one ear and a smaller one (or a stud) in the other is a very trendy 'editorial' look for 2026.</p>
 <p><strong>Q11: Why are hoops a symbol of 'Empowerment'?</strong><br/>A: In many cultures, especially in Latin American and Black communities, large hoops are a badge of identity, strength, and resilience. This cultural significance is part of why they remain so influential.</p>
-<p><strong>Q12: Can I get custom 'Branded' hoops?</strong><br/>A: Yes! Gemora Global can laser-engrave your logo onto the inner or outer edge of the hoop, or create custom shapes that reflect your brand identity. Contact us to learn more.</p>
+<p><strong>Q12: Can I get custom 'Branded' hoops?</strong><br/>A: Yes! <a href="/">Gemora Global</a> can laser-engrave your logo onto the inner or outer edge of the hoop, or create custom shapes that reflect your brand identity. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our ultimate hoop collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -244,7 +244,7 @@ export const BLOG_BATCH_21 = [
 <p><strong>Q8: How do I clean pavé snake jewelry?</strong><br/>A: Because pavé involves many tiny stones, use a very soft brush to gently clean around the settings. Avoid harsh chemicals that could loosen the stones.</p>
 <p><strong>Q9: What is the 'Ouroboros'?</strong><br/>A: It's an ancient symbol of a snake eating its own tail, representing infinity and the cyclical nature of life. It's a very popular motif for rings and circular pendants.</p>
 <p><strong>Q10: Why is snake jewelry often associated with Cleopatra?</strong><br/>A: Queen Cleopatra of Egypt was famously associated with snakes, often wearing them as symbols of her divine power. This association has kept the serpent trend 'Regal' and 'Powerful' for millennia.</p>
-<p><strong>Q11: Are there 'Sustainable' snake designs?</strong><br/>A: At Gemora Global, we use recycled metals for our casting, allowing you to offer these ancient symbols with a modern, eco-conscious conscience.</p>
+<p><strong>Q11: Are there 'Sustainable' snake designs?</strong><br/>A: At <a href="/">Gemora Global</a>, we use recycled metals for our casting, allowing you to offer these ancient symbols with a modern, eco-conscious conscience.</p>
 <p><strong>Q12: Can I get custom snake designs made?</strong><br/>A: Yes! We can help you design a unique serpent collection, from 'Cutesy' snakes to 'Gothic' vipers. Contact Gemora Global to discuss your ideas.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our modern serpent collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,

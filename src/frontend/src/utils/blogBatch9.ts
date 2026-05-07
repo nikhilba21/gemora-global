@@ -137,7 +137,7 @@ export const BLOG_BATCH_9 = [
 <h2>Start Safe, Scale Smart</h2>
 <p><a href="/">Gemora Global</a> welcomes verification from all new buyers. We provide GSTIN, IEC, and buyer references on request. Start with a sample order — we are confident you will return for bulk.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 185,
@@ -160,7 +160,7 @@ export const BLOG_BATCH_9 = [
 <ul>
   <li><strong>IEC (Import Export Code)</strong> — Mandatory for all exporters. Verify instantly on the DGFT website using the company name or IEC number.</li>
   <li><strong>GSTIN</strong> — Tax registration confirming the business is legally registered in India.</li>
-  <li><strong>GJEPC Membership</strong> — The Gem &amp; Jewellery Export Promotion Council is the apex body for India's jewellery exporters. Serious exporters join this government-backed organisation.</li>
+  <li><strong>GJEPC Membership</strong> — The Gem &amp; <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> Promotion Council is the apex body for India's jewellery exporters. Serious exporters join this government-backed organisation.</li>
   <li><strong>ISO 9001</strong> — Quality management certification; indicates systematic QC processes are in place.</li>
   <li><strong>REACH / RoHS Compliance</strong> — Critical for EU exports. Confirms nickel, lead, and cadmium levels meet European safety standards.</li>
   <li><strong>BIS Hallmarking Knowledge</strong> — Understanding of Bureau of Indian Standards hallmarking for gold and silver.</li>
@@ -212,7 +212,7 @@ export const BLOG_BATCH_9 = [
 <h2>Import Smart, Profit More</h2>
 <p>Working with an established exporter like <a href="/">Gemora Global</a> eliminates most of these risks — we provide documented quality standards, clear PO processes, proper packaging, and full export documentation.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 187,
@@ -307,7 +307,7 @@ export const BLOG_BATCH_9 = [
 <h2>How to Protect Your Business</h2>
 <p>Verify GSTIN on the GST portal, use escrow or LC payment for first orders, start with small sample orders, and get all terms in a written purchase order. Working with established, referenced suppliers like <a href="/">Gemora Global</a> removes these risks entirely.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 189,
@@ -357,7 +357,7 @@ export const BLOG_BATCH_9 = [
 <h2>Building the Relationship Right</h2>
 <p>Communicate regularly, pay on time, provide clear and constructive quality feedback, and visit the factory when possible. These simple practices build the trust that unlocks all the benefits above. If you're ready to build a long-term jewellery sourcing partnership, <a href="/">Gemora Global</a> is here for it.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 190,

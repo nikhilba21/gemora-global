@@ -42,7 +42,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q9: What are 'Raindrop' cuts?</strong><br/>A: It's a specific pear-shaped cut that is very popular for Aquamarine, emphasizing the 'liquid' look of the gem.</p>
 <p><strong>Q10: Can men wear Aquamarine?</strong><br/>A: Absolutely. Small aquamarine accents in silver signet rings or as a single stud earring are a growing trend in men's 'Modern-Masculine' fashion.</p>
 <p><strong>Q11: What's the 'Next Big' aquamarine trend?</strong><br/>A: 'Bicolor' Beryl—stones that naturally show both blue (aquamarine) and yellow (heliodor) in one crystal—is a massive collector trend for 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Santa Maria' quality Aquamarine?</strong><br/>A: Yes, we have a curated collection of deep-blue stones for our high-end wholesale partners. Contact us for bulk availability and pricing.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Santa Maria' quality Aquamarine?</strong><br/>A: Yes, we have a curated collection of deep-blue stones for our high-end wholesale partners. Contact us for bulk availability and pricing.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our ocean-inspired aquamarine collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -89,7 +89,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q9: Is it okay to wear Peridot in the sun?</strong><br/>A: Yes, Peridot is very stable and its color will not fade even with intense sunlight.</p>
 <p><strong>Q10: What are 'Pallasitic' Peridots?</strong><br/>A: These are incredibly rare peridots that actually came to Earth in meteorites! They are highly prized by collectors but are rarely found in standard jewelry.</p>
 <p><strong>Q11: What's the 'Next Big' peridot trend?</strong><br/>A: 'Bead-Stacking'—bracelets made of small, faceted peridot beads—is a growing trend for the 'Boho-Chic' market in late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Calibrated' Peridot for my brand?</strong><br/>A: Yes! We can provide stones in specific sizes and shapes (round, oval, square) to fit your mass-market jewelry designs. Contact us for bulk pricing.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Calibrated' Peridot for my brand?</strong><br/>A: Yes! We can provide stones in specific sizes and shapes (round, oval, square) to fit your mass-market jewelry designs. Contact us for bulk pricing.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our zesty peridot collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -141,7 +141,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q9: Can I wear Topaz in the sun?</strong><br/>A: Yes, blue topaz is very stable. However, natural 'pink' and 'wine' topaz from certain mines can sometimes fade with intense sunlight, so store them in a box.</p>
 <p><strong>Q10: What is 'White' Topaz?</strong><br/>A: It's colorless topaz. In 2026, it's a popular 'Natural' alternative to diamonds and CZ because of its high sparkle and hardness.</p>
 <p><strong>Q11: What's the 'Next Big' topaz trend?</strong><br/>A: 'Emerald-Cut' London Blue—a specific rectangular cut that emphasizes the deep, moody color—is a massive trend for the 'Modern-Vintage' aesthetic.</p>
-<p><strong>Q12: Can Gemora Global provide 'Calibrated' Topaz in bulk?</strong><br/>A: Yes! We can provide stones in any specific size and cut for your mass-market jewelry production. Contact us to discuss your requirements.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Calibrated' Topaz in bulk?</strong><br/>A: Yes! We can provide stones in any specific size and cut for your mass-market jewelry production. Contact us to discuss your requirements.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our brilliant topaz collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -188,7 +188,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q9: Is Garnet expensive?</strong><br/>A: Red garnets are very affordable. However, green Tsavorite and orange Spessartite can be quite valuable due to their rarity.</p>
 <p><strong>Q10: Can men wear Garnet?</strong><br/>A: Yes! The deep, moody red of garnet is a classic choice for men's signet rings and heavy cuff bracelets.</p>
 <p><strong>Q11: What's the 'Next Big' garnet trend?</strong><br/>A: 'Color-Change' Garnet—stones that naturally change color from blue-green in daylight to purple in incandescent light—is a massive trend for the 'Tech-Luxury' market in late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Antique-Style' Garnet collections?</strong><br/>A: Absolutely! We are experts in 'Cluster' and 'Victorian-Revival' designs. Contact us to see our specialized garnet catalogue.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Antique-Style' Garnet collections?</strong><br/>A: Absolutely! We are experts in 'Cluster' and 'Victorian-Revival' designs. Contact us to see our specialized garnet catalogue.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our deep-red garnet collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -233,7 +233,7 @@ export const BLOG_BATCH_28 = [
 <p><strong>Q7: What is 'Sleeping Beauty' Turquoise?</strong><br/>A: It's a specific variety from the Sleeping Beauty mine in Arizona, famous for its pure, solid light-blue color with no matrix. The mine is now closed, making these stones highly valuable.</p>
 <p><strong>Q8: Is Turquoise expensive?</strong><br/>A: It varies wildly. High-quality natural 'Sleeping Beauty' or 'Persian' turquoise can be very expensive. Stabilized turquoise for fashion jewelry is much more affordable.</p>
 <p><strong>Q9: Can I wear my turquoise ring every day?</strong><br/>A: Yes, but be careful. It can be scratched by harder objects. We recommend 'Bezel' settings for turquoise rings to protect the edges of the stone.</p>
-<p><strong>Q10: What is 'Reconstituted' Turquoise?</strong><br/>A: It's made from turquoise dust and resin. At Gemora Global, we prioritize 'Natural' and 'Stabilized' stones over reconstituted ones to ensure a higher quality for our partners.</p>
+<p><strong>Q10: What is 'Reconstituted' Turquoise?</strong><br/>A: It's made from turquoise dust and resin. At <a href="/">Gemora Global</a>, we prioritize 'Natural' and 'Stabilized' stones over reconstituted ones to ensure a higher quality for our partners.</p>
 <p><strong>Q11: What's the 'Next Big' turquoise trend?</strong><br/>A: 'Purple' and 'White' Turquoise—actually different minerals like Magnesite—are currently a growing 'boho-alternative' trend for late 2026.</p>
 <p><strong>Q12: Can Gemora Global provide 'Persian' style Turquoise?</strong><br/>A: Yes, we have a curated stock of the finest pure-blue stones. Contact us for wholesale availability and pricing for your high-end collection.</p>
 

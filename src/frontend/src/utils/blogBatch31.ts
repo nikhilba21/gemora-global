@@ -33,7 +33,7 @@ export const BLOG_BATCH_31 = [
 <h2>Department 6: Quality Control (The Gatekeeper)</h2>
 <p>No piece leaves the factory without passing QC. Every stone is checked for tightness, every clasp for strength, and every surface for scratches. QC isn't just a final step; it's integrated into every stage of the factory's anatomy.</p>
 
-<h2>Gemora Global's Manufacturing Philosophy</h2>
+<h2><a href="/">Gemora Global</a>'s Manufacturing Philosophy</h2>
 <p>We don't just 'make' jewelry; we engineer it. By owning every stage of the process in our Jaipur facilities, we maintain total control over quality and cost. This allows us to provide our wholesale partners with premium, boutique-quality jewelry at a scale and price that supports their business growth. We are more than a factory; we are your production partner.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -83,7 +83,7 @@ export const BLOG_BATCH_31 = [
 <h2>Standard 5: Plating and E-Coat Validation</h2>
 <p>For our plated collections, we perform 'Cross-Cut' and 'Tape-Tests' to ensure the plating is properly bonded to the base metal. We also verify the presence and evenness of our protective 'e-coat' finish, which is our secret to long-lasting shine in the fashion jewelry world.</p>
 
-<h2>Gemora Global's QC Commitment</h2>
+<h2><a href="/">Gemora Global</a>'s QC Commitment</h2>
 <p>We provide a 'Quality Guarantee' with every wholesale shipment. Because we own our factory, we are accountable for every piece. Our QC team is independent of the production team, ensuring their only loyalty is to the quality standard. When you source from us, you're not just buying jewelry; you're buying peace of mind.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -133,7 +133,7 @@ export const BLOG_BATCH_31 = [
 <h2>Checklist Item 5: Supply Chain Transparency</h2>
 <p>A sustainable partner should be an 'Open Book.' Can they tell you the exact origin of their materials? In 2026, 'Traceability' is the ultimate goal—where every piece of jewelry has a digital record of its journey from the mine (or lab) to the wearer.</p>
 
-<h2>Gemora Global's ESG Commitment</h2>
+<h2><a href="/">Gemora Global</a>'s ESG Commitment</h2>
 <p>Environmental, Social, and Governance (ESG) standards are at the heart of our operations. We use recycled metals, source gems from ethical partners in Jaipur and beyond, and maintain a state-of-the-art facility that prioritizes worker well-being. We help our wholesale partners build 'Ethical Collections' that they can be proud to sell. Sustainability isn't a destination for us; it's how we do business every day.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -183,7 +183,7 @@ export const BLOG_BATCH_31 = [
 <h2>Step 5: Bulk Production and Shipping</h2>
 <p>With the sample approved, we move into bulk production. Our team ensures that every piece in the order matches the quality and look of your approved sample. We handle the QC, packaging, and international logistics, delivering your unique collection directly to your door.</p>
 
-<h2>Gemora Global's Custom Design Advantage</h2>
+<h2><a href="/">Gemora Global</a>'s Custom Design Advantage</h2>
 <p>We offer a 'Secure Design' policy—your custom designs are 100% your property and will never be shared with other clients or added to our public catalogue. We combine our technical expertise in Jaipur with your creative vision to build collections that win in the marketplace. Whether you're a startup or an established global brand, we are your development partner.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -238,7 +238,7 @@ export const BLOG_BATCH_31 = [
 <h2>Strategy 5: Dynamic and Bundle Pricing</h2>
 <p>Increase your Average Order Value (AOV) by offering 'Bundles.' For example, a 'Necklace and Earring Set' for 15% less than if bought separately. This moves more inventory and makes the customer feel like they are getting a 'Deal' while you maintain a healthy total profit.</p>
 
-<h2>Gemora Global's Pricing Support</h2>
+<h2><a href="/">Gemora Global</a>'s Pricing Support</h2>
 <p>We design our wholesale prices to ensure our partners can achieve at least a 3x-5x markup. By manufacturing directly in Jaipur and eliminating middlemen, we pass the savings on to you. We also provide 'MSRP' (Manufacturer's Suggested Retail Price) guidelines to help you position your new Gemora Global collection for success. Your profit is our success.</p>
 
 <h2>Frequently Asked Questions</h2>

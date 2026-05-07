@@ -29,7 +29,7 @@ export const BLOG_BATCH_4 = [
         <li><strong>Export Packaging:</strong> Pieces are individually packed in poly bags or boxes for shipment.</li>
       </ul>
       <p>Jaipur's manufacturing ecosystem means you can source complete collections — from raw materials to finished, retail-ready jewellery — all within a 20 km radius. This is why <a href="/">Gemora Global</a> is able to offer short lead times and competitive pricing for international wholesale buyers.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -88,7 +88,7 @@ export const BLOG_BATCH_4 = [
       </ul>
       <h2>How to Verify Nickel-Free Claims</h2>
       <p>Ask your supplier for lab test reports from accredited labs. Look for REACH compliance certificates and RoHS declarations. Reputable Indian exporters test products at NABL-accredited labs and can provide batch-wise test reports. At <a href="/">Gemora Global</a>, nickel-free certification is available for all our stainless steel and premium brass collections — critical documentation for our EU and UK buyers.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -117,7 +117,7 @@ export const BLOG_BATCH_4 = [
       </ul>
       <h2>Maintaining Anti-Tarnish Jewellery</h2>
       <p>Even with anti-tarnish treatment, proper care extends jewellery life significantly. Store in zip-lock poly bags or anti-tarnish pouches. Avoid contact with perfumes, lotions, and water. Wipe with a soft dry cloth after wearing. At <a href="/">Gemora Global</a>, all export collections include e-coat anti-tarnish treatment as standard, with nano-coating available for premium orders.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -151,7 +151,7 @@ export const BLOG_BATCH_4 = [
       </ul>
       <h2>Pricing and Market Positioning</h2>
       <p>Hypoallergenic jewellery commands 20-30% higher retail prices than standard fashion jewellery. Retailers who clearly label and market their pieces as hypoallergenic see higher repeat purchase rates — customers with sensitive skin become loyal once they find a trusted source. <a href="/">Gemora Global</a> supplies wholesale hypoallergenic fashion jewellery with full material certifications, ready for European, Australian, and US markets.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -265,7 +265,7 @@ export const BLOG_BATCH_4 = [
       </ul>
       <h2>Electroplating Quality Tiers</h2>
       <p>Basic jewellery uses 0.5-micron gold plating that may wear off within months. Premium export jewellery uses 2-3 micron plating applied in multiple thin layers for even coverage and longevity. The plating solution quality, bath temperature, and time all affect final quality. At <a href="/">Gemora Global</a>, export-grade collections use minimum 1.5-micron plating with e-coat top treatment — meeting the durability expectations of European and North American retail buyers.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -298,7 +298,7 @@ export const BLOG_BATCH_4 = [
         <li><strong>10. Start with a trial order:</strong> Order 1-3 designs before committing to a full season</li>
       </ul>
       <p><a href="/">Gemora Global</a> welcomes buyer due diligence — we offer factory video tours, sample orders, and reference calls with existing buyers across UAE, UK, USA, and Europe. We have exported to 20+ countries since 2011.</p>
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
 ];

@@ -45,7 +45,7 @@ export const BLOG_BATCH_39 = [
 <p><strong>Q9: What is 'Pink' Amethyst?</strong><br/>A: It's a natural variety of quartz with a soft, blush-pink to lilac color. It's a major trend for 2026 'Romantic-Luxe' jewelry collections.</p>
 <p><strong>Q10: Can men wear Amethyst?</strong><br/>A: Absolutely! Deep purple amethyst set in heavy silver signet rings is a classic 'Masculine-Luxury' look that is very popular in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Amethyst trend?</strong><br/>A: 'Faceted-Amethyst-Beads'—strands of small, high-sparkle amethyst beads—is a growing 2026 trend for layering with gold chains.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Faceted' Amethyst?</strong><br/>A: Yes! We can provide thousands of perfectly matched, calibrated Amethysts for your high-volume production lines. Contact us for our wholesale price list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Faceted' Amethyst?</strong><br/>A: Yes! We can provide thousands of perfectly matched, calibrated Amethysts for your high-volume production lines. Contact us for our wholesale price list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your royal amethyst collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_39 = [
 <p><strong>Q9: What is a 'Rose Quartz Facial Roller'?</strong><br/>A: While not jewelry, it's a massive wellness trend in 2026. Using the stone to massage the face is believed to reduce inflammation and promote 'Self-Care' energy.</p>
 <p><strong>Q10: Can men wear Rose Quartz?</strong><br/>A: Absolutely! In the 'Modern-Masculine' world of 2026, men are wearing Rose Quartz as a symbol of emotional intelligence and compassion, often in simple silver pendants or beads.</p>
 <p><strong>Q11: What's the 'Next Big' Rose Quartz trend?</strong><br/>A: 'Faceted-Rose-Quartz'—using traditional diamond facets on a rose quartz instead of a smooth cabochan—is a growing 2026 trend for 'Maximum-Sparkle' wellness jewelry.</p>
-<p><strong>Q12: Can Gemora Global provide 'Carved' Rose Quartz?</strong><br/>A: Yes! We have master-carvers who can create 'Goddess' faces, hearts, or floral motifs on Rose Quartz for your unique collections. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Carved' Rose Quartz?</strong><br/>A: Yes! We have master-carvers who can create 'Goddess' faces, hearts, or floral motifs on Rose Quartz for your unique collections. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your romantic rose quartz collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -144,7 +144,7 @@ export const BLOG_BATCH_39 = [
 <p><strong>Q8: What is 'Green' or 'Red' Onyx?</strong><br/>A: Like black onyx, these are usually dyed Chalcedony. They are very popular for 'Color-Blocking' jewelry trends in 2026.</p>
 <p><strong>Q9: Can men wear Black Onyx?</strong><br/>A: Absolutely! Black Onyx is the #1 choice for men's rings and cufflinks. It is the definitive 'Modern-Masculine' gemstone.</p>
 <p><strong>Q10: What's the 'Next Big' Onyx trend?</strong><br/>A: 'Matte-Onyx'—using a soft, non-reflective 'Satin' finish instead of high-polish—is a growing 2026 trend for 'Edgy-Urban' jewelry collections.</p>
-<p><strong>Q11: Can Gemora Global provide 'Custom-Shapes' in Onyx?</strong><br/>A: Yes! Because we cut our own stones in Jaipur, we can create any geometric slab or custom carving your brand requires. Contact us to discuss your vision.</p>
+<p><strong>Q11: Can <a href="/">Gemora Global</a> provide 'Custom-Shapes' in Onyx?</strong><br/>A: Yes! Because we cut our own stones in Jaipur, we can create any geometric slab or custom carving your brand requires. Contact us to discuss your vision.</p>
 <p><strong>Q12: Why should my brand offer Black Onyx?</strong><br/>A: Because it is the most versatile 'Gender-Neutral' stone, appealing to a massive audience of modern, style-conscious consumers.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your sophisticated onyx collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
@@ -195,7 +195,7 @@ export const BLOG_BATCH_39 = [
 <p><strong>Q9: What is 'White' Labradorite?</strong><br/>A: It's commonly known in the trade as 'Rainbow Moonstone.' While chemically a labradorite, its white body color makes it look like moonstone.</p>
 <p><strong>Q10: Can men wear Labradorite?</strong><br/>A: Absolutely! 'Dark-Flash' labradorite in heavy silver signet rings is a major trend for men's 'Modern-Masculine' fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Labradorite trend?</strong><br/>A: 'Faceted-Labradorite'—using traditional diamond facets on a labradorite instead of a smooth cabochan—is a growing 2026 trend for 'Maximum-Flash' spiritual jewelry.</p>
-<p><strong>Q12: Can Gemora Global provide 'Matched-Pairs' of Labradorite?</strong><br/>A: Matching the 'Flash' on two pieces of Labradorite for earrings is a true art. We can hand-select the best 'Color-Match' for your premium earring collections. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Matched-Pairs' of Labradorite?</strong><br/>A: Matching the 'Flash' on two pieces of Labradorite for earrings is a true art. We can hand-select the best 'Color-Match' for your premium earring collections. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your magical labradorite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -245,7 +245,7 @@ export const BLOG_BATCH_39 = [
 <p><strong>Q9: What is 'Blue' Tiger's Eye?</strong><br/>A: It's a natural variety (also called 'Hawk's Eye') with a deep, dark blue/grey color. It's a major trend for the 'Modern-Mystic' market in 2026.</p>
 <p><strong>Q10: Can women wear Tiger's Eye?</strong><br/>A: Absolutely! In 2026, Tiger's Eye is a favorite for the 'Professional-Chic' woman, providing a 'Sophisticated-Neutral' look that works with any outfit.</p>
 <p><strong>Q11: What's the 'Next Big' Tiger's Eye trend?</strong><br/>A: 'Faceted-Tiger's-Eye'—using traditional diamond facets on the stone instead of a smooth cabochan—is a growing 2026 trend for 'Maximum-Sparkle' grounded jewelry.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Beads' of Tiger's Eye?</strong><br/>A: Yes! We can provide thousands of perfectly polished Tiger's Eye beads in all sizes (4mm to 12mm) for your 'Talisman' collections. Contact us for our wholesale price list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Beads' of Tiger's Eye?</strong><br/>A: Yes! We can provide thousands of perfectly polished Tiger's Eye beads in all sizes (4mm to 12mm) for your 'Talisman' collections. Contact us for our wholesale price list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your courageous tigers eye collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

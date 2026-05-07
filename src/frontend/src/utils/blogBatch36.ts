@@ -43,7 +43,7 @@ export const BLOG_BATCH_36 = [
 <p><strong>Q7: What is a 'Celestial' medallion?</strong><br/>A: It's a pendant featuring astronomical motifs like the sun, moon, or constellations. It's a major trend in the 'Zodiac-Luxe' category for 2026.</p>
 <p><strong>Q8: Can I wear multiple initials at once?</strong><br/>A: Absolutely! Layering the initials of your children or your partner is a very popular and sentimental trend for 2026.</p>
 <p><strong>Q9: How do I choose the right font for a nameplate?</strong><br/>A: Consider your brand's 'Aesthetic.' 'Cursive' is romantic and classic. 'Block' is modern and bold. 'Gothic' is edgy and on-trend for 2026.</p>
-<p><strong>Q10: Can Gemora Global provide 'Blank' items for me to personalize locally?</strong><br/>A: Yes! We can provide high-quality 'Blanks' in silver and gold-vermeil for retailers who have their own local engraving machines. Contact us for details.</p>
+<p><strong>Q10: Can <a href="/">Gemora Global</a> provide 'Blank' items for me to personalize locally?</strong><br/>A: Yes! We can provide high-quality 'Blanks' in silver and gold-vermeil for retailers who have their own local engraving machines. Contact us for details.</p>
 <p><strong>Q11: What's the 'Next Big' personalization trend?</strong><br/>A: 'Voice-Wave' engravings—where a recording of a loved one's voice is converted into a visual wave and engraved on a ring—is a growing 2026 trend.</p>
 <p><strong>Q12: Why should my brand offer personalized jewelry?</strong><br/>A: Because it significantly increases customer engagement and reduces the likelihood of price-comparison with other brands. A personalized piece is 'Unique' and 'Priceless.'</p>
 
@@ -95,7 +95,7 @@ export const BLOG_BATCH_36 = [
 <p><strong>Q9: What is 'Teething' jewelry?</strong><br/>A: In 2026, we see a trend for 'Safety-Jewelry'—pieces made of non-toxic materials (like medical-grade silicone or high-purity gold) that are safe if a baby grabs or chews on them.</p>
 <p><strong>Q10: What is the 'Second-Time Mom' trend?</strong><br/>A: For a second child, many partners give a piece that 'Complements' the first push present—like a second stacking ring or a second initial charm to add to an existing necklace.</p>
 <p><strong>Q11: What's the 'Next Big' push present trend?</strong><br/>A: 'Sound-Wave' jewelry—where the baby's first heartbeat or laugh is engraved on a pendant—is a growing 'High-Tech-Sentiment' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global help me curate a 'Push Present' display?</strong><br/>A: Yes! We can help you select a range of birthstone and personalized items that are perfect for this market. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> help me curate a 'Push Present' display?</strong><br/>A: Yes! We can help you select a range of birthstone and personalized items that are perfect for this market. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your meaningful motherhood collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -141,7 +141,7 @@ export const BLOG_BATCH_36 = [
 <p><strong>Q5: What is a 'Compass' pendant?</strong><br/>A: It's a pendant featuring the four cardinal directions. It's a symbolic gift for graduates, representing guidance and new horizons.</p>
 <p><strong>Q6: Is it okay to give 'Alternative' gems for graduation?</strong><br/>A: Absolutely! A birthstone or a gem that represents their school colors is a very personalized and thoughtful graduation gift.</p>
 <p><strong>Q7: What is 'Signet' ring engraving?</strong><br/>A: It's the practice of engraving initials, a crest, or a symbol on the flat top of a signet ring. It's a classic and 'Established' graduation tradition.</p>
-<p><strong>Q8: Can Gemora Global provide 'Gift-Ready' packaging?</strong><br/>A: Yes! We can provide high-end, branded boxes that make the 'Unboxing' experience feel like a true celebration. Contact us to discuss your needs.</p>
+<p><strong>Q8: Can <a href="/">Gemora Global</a> provide 'Gift-Ready' packaging?</strong><br/>A: Yes! We can provide high-end, branded boxes that make the 'Unboxing' experience feel like a true celebration. Contact us to discuss your needs.</p>
 <p><strong>Q9: What is the 'First-Day-at-Work' jewelry trend?</strong><br/>A: It's the move toward 'Self-Purchase' jewelry by graduates after they receive their first paycheck. They often buy a 'Power-Piece' (like a watch or a ring) to celebrate their new independence.</p>
 <p><strong>Q10: Are men's 'Tie-Clips' still a good gift?</strong><br/>A: In the 2026 professional world, tie-clips are less common. We recommend a high-quality watch or a modern silver chain instead.</p>
 <p><strong>Q11: What's the 'Next Big' graduation trend?</strong><br/>A: 'Smart-Jewelry'—rings or pendants that track wellness and focus—is a growing 'High-Performance' graduation gift trend for late 2026.</p>
@@ -193,7 +193,7 @@ export const BLOG_BATCH_36 = [
 <p><strong>Q7: Can men have friendship jewelry?</strong><br/>A: Yes! Simple matching leather cord bracelets or heavy silver chain bracelets are a growing trend for 'Brotherhood' bonds in 2026.</p>
 <p><strong>Q8: What is 'Aura' jewelry?</strong><br/>A: A 2026 trend where the gemstone color is chosen based on your friend's 'Aura' or personality (e.g., Yellow Topaz for the 'Cheerful' friend, Amethyst for the 'Calm' friend).</p>
 <p><strong>Q9: How do I clean my friendship bracelet?</strong><br/>A: If it's a thin chain, use warm soapy water and a soft cloth. If it's something you wear 'forever' (like permanent jewelry), make sure to rinse it well after the gym or swimming.</p>
-<p><strong>Q10: Can Gemora Global provide 'Best-Friend' carding?</strong><br/>A: Yes! For our wholesale partners, we can provide custom backing cards that say 'Best Friends' or 'To my Soul-Sister,' making the product 'Gift-Ready' for your shop.</p>
+<p><strong>Q10: Can <a href="/">Gemora Global</a> provide 'Best-Friend' carding?</strong><br/>A: Yes! For our wholesale partners, we can provide custom backing cards that say 'Best Friends' or 'To my Soul-Sister,' making the product 'Gift-Ready' for your shop.</p>
 <p><strong>Q11: What's the 'Next Big' friendship trend?</strong><br/>A: 'Shared-Charms'—where you each wear half of a design that only looks complete when the two charms are placed together—is making a 'Retro-High-Fashion' comeback for late 2026.</p>
 <p><strong>Q12: Why is 'Friendship' a good niche for my brand?</strong><br/>A: Because it has a built-in 'Viral' element. When one friend wears a piece, the other friend wants it too. It's natural word-of-mouth marketing.</p>
 
@@ -231,7 +231,7 @@ export const BLOG_BATCH_36 = [
 <p>Using high-resolution laser technology, we can now engrave a 'Photo-Realistic' portrait of a pet onto a metal pendant. In 2026, this 'Fine-Detail' engraving is a favorite for those who want to see their pet's face every day. It's a stunning piece of 'Wearable-Art' that honors the pet's unique personality.</p>
 
 <h2>Sourcing Memorial Jewelry from <a href="/">Gemora Global</a></h2>
-<p>Memorial jewelry is a highly sensitive and emotional category. At Gemora Global, we handle every piece with the care it deserves. We focus on high-precision engraving and high-quality metals to ensure that these 'Forever-Pieces' never tarnish or fade. We help our wholesale partners build a 'Compassionate-Collection' that provides comfort and beauty to their customers during a difficult time.</p>
+<p>Memorial jewelry is a highly sensitive and emotional category. At <a href="/">Gemora Global</a>, we handle every piece with the care it deserves. We focus on high-precision engraving and high-quality metals to ensure that these 'Forever-Pieces' never tarnish or fade. We help our wholesale partners build a 'Compassionate-Collection' that provides comfort and beauty to their customers during a difficult time.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Pet Memorial Jewelry'?</strong><br/>A: It's jewelry (pendants, rings, bracelets) designed to honor and remember a pet that has passed away. It often features engravings, prints, or spaces for mementos.</p>

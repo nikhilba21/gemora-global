@@ -45,7 +45,7 @@ export const BLOG_BATCH_24 = [
 <p><strong>Q9: Should I include the 'Care Card' with the gift?</strong><br/>A: Yes! It shows that you care about the piece lasting and provides the recipient with the information they need to maintain its shine.</p>
 <p><strong>Q10: Is 'Sustainable' jewelry a good gift choice?</strong><br/>A: Very much so. Many people in 2026 prioritize ethical fashion, so a gift with a 'Sustainable-Artisan' story adds an extra layer of value.</p>
 <p><strong>Q11: What's the best gift for a 'New Mother'?</strong><br/>A: A 'Birthstone' piece representing the new baby, or a 'Initial' pendant with the baby's first letter, is the most popular choice.</p>
-<p><strong>Q12: Can Gemora Global help me create a 'Custom Gift' collection?</strong><br/>A: Yes! We work with retailers to develop custom gifting lines, including specific packaging and personalization options. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> help me create a 'Custom Gift' collection?</strong><br/>A: Yes! We work with retailers to develop custom gifting lines, including specific packaging and personalization options. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our ultimate gifting collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -80,7 +80,7 @@ export const BLOG_BATCH_24 = [
 <h2>Step 5: Navigate 'Shipping and Customs'</h2>
 <p>Modern logistics have made importing from India easier than ever. Most manufacturers use express couriers like DHL or FedEx, which handle the 'Door-to-Door' delivery and can assist with customs clearance. Ensure you understand the import duties and taxes in your specific country (e.g., VAT in the UK, Customs Duty in the US) to calculate your true landed cost.</p>
 
-<h2>Why Partner with Gemora Global?</h2>
+<h2>Why Partner with <a href="/">Gemora Global</a>?</h2>
 <p>We are a Jaipur-based, export-focused manufacturer with years of experience serving international brands. We combine traditional Indian craftsmanship with Western design aesthetics and high-tech manufacturing standards. We offer low MOQs, custom design services, and a transparent, professional approach to B2B jewelry sourcing. Our goal is to make sourcing from India as easy and reliable as buying from a local supplier.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -130,7 +130,7 @@ export const BLOG_BATCH_24 = [
 <h2>Check 5: Surface Finish and Polishing</h2>
 <p>Finally, we check the aesthetic finish. This means ensuring there are no visible 'tool marks,' 'pits' in the metal, or uneven plating color. The jewelry must be hand-polished to a mirror-shine or the required matte texture before it passes the final inspection.</p>
 
-<h2>Gemora Global's 'Triple-Check' System</h2>
+<h2><a href="/">Gemora Global</a>'s 'Triple-Check' System</h2>
 <p>We use a 'Triple-Check' QC system: first at the casting/assembly stage, second after the plating stage, and third before final packaging. This rigorous approach ensures that our wholesale partners receive consistent, high-quality jewelry that they can be proud to sell. We also provide QC reports and material certifications upon request.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -188,7 +188,7 @@ export const BLOG_BATCH_24 = [
 <p><strong>Q2: What is 'Sustainable' packaging exactly?</strong><br/>A: It's packaging made from recycled, renewable, or biodegradable materials, produced with minimal environmental impact, and designed to be easily recycled or reused by the customer.</p>
 <p><strong>Q3: How much should I spend on packaging?</strong><br/>A: A general rule is 5-10% of the product's retail price. However, in 2026, investing a bit more in 'Shareable' packaging can often pay for itself in free social media marketing.</p>
 <p><strong>Q4: What is a 'Care Card' and do I need one?</strong><br/>A: A care card provides instructions on how to clean and store the jewelry. It's essential for reducing returns and ensuring your customers get the longest life out of their pieces.</p>
-<p><strong>Q5: Can Gemora Global put my logo on the packaging?</strong><br/>A: Yes! We offer custom 'Logo Printing' (foil, debossing, or screen print) on all our boxes and pouches.</p>
+<p><strong>Q5: Can <a href="/">Gemora Global</a> put my logo on the packaging?</strong><br/>A: Yes! We offer custom 'Logo Printing' (foil, debossing, or screen print) on all our boxes and pouches.</p>
 <p><strong>Q6: Are 'Velvet' pouches out of style?</strong><br/>A: Traditional synthetic velvet is being replaced by 'Organic Cotton Velvet' or 'Vegan Suede' which are more sustainable but still offer that luxury feel.</p>
 <p><strong>Q7: What's the 'Best' color for jewelry packaging in 2026?</strong><br/>A: Neutral, 'Earthy' tones like Sage Green, Dusty Rose, and Warm Sand are the top-pinned colors for the season.</p>
 <p><strong>Q8: How do I prevent jewelry from tangling during shipping?</strong><br/>A: Use boxes with 'Elastic Inserts' or 'Slit-Cards' that hold the chain securely in place. For bracelets, a 'Pillow-Insert' is best.</p>
@@ -230,7 +230,7 @@ export const BLOG_BATCH_24 = [
 <h2>Tip 5: Use 'Social Media' as a Verification Tool</h2>
 <p>Check the brand's Instagram and TikTok. Do they have a community of followers? Do real people tag them in their photos? Social media is the best place to see 'Real-World' photos of the jewelry and get a sense of the brand's reputation.</p>
 
-<h2>Why Gemora Global is a Trusted Online Source</h2>
+<h2>Why <a href="/">Gemora Global</a> is a Trusted Online Source</h2>
 <p>We pride ourselves on our transparency and professional approach to online retail and wholesale. We provide detailed technical specifications, multiple high-res photos and videos for every product, and a clear, fair return policy. We are always available via WhatsApp to answer any questions you have before you buy. Our goal is to make online jewelry shopping as reliable as visiting your local jeweler.</p>
 
 <h2>Frequently Asked Questions</h2>

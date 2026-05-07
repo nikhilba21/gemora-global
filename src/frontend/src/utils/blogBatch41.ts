@@ -45,7 +45,7 @@ export const BLOG_BATCH_41 = [
 <p><strong>Q9: What is a 'Capsule' jewelry collection?</strong><br/>A: A small, curated selection of pieces (e.g., 1 pair of studs, 1 chain, 1 ring, 1 bracelet) that work with every outfit and every occasion.</p>
 <p><strong>Q10: Can men wear minimalist jewelry?</strong><br/>A: Minimalist jewelry is perfectly suited for men. Simple silver cuffs, thin gold bands, and unadorned pendants are the staple of 'Modern-Masculine' style.</p>
 <p><strong>Q11: What's the 'Next Big' minimalist trend?</strong><br/>A: 'Textured-Minimalism'—where the shape is simple but the metal surface has a subtle 'Sandblasted' or 'Hammered' finish—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Blank' minimalist items?</strong><br/>A: Yes! We can provide high-quality 'Blanks' for brands that want to add their own minimal engravings or details. Contact us for our catalogue.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Blank' minimalist items?</strong><br/>A: Yes! We can provide high-quality 'Blanks' for brands that want to add their own minimal engravings or details. Contact us for our catalogue.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your minimalist collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_41 = [
 <p><strong>Q9: Can I mix 'Real' and 'Fashion' jewelry in a stack?</strong><br/>A: This is the #1 rule of 2026 maximalism! Mixing your high-end heirlooms with fun, affordable fashion pieces is the definitive way to create a 'Personal-Brand.'</p>
 <p><strong>Q10: Can men wear maximalist jewelry?</strong><br/>A: Absolutely! Multi-ring stacks, heavy silver chains, and bold beaded bracelets are a major part of 'Modern-Masculine' maximalism in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' maximalist trend?</strong><br/>A: 'Fluorescent-Maximalism'—using neon-colored enamels and stones in oversized, '80s-Revival' designs—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global create custom 'Statement' pieces?</strong><br/>A: Yes! We specialize in 'Runway' and 'Red-Carpet' statement jewelry. Contact us to bring your most ambitious designs to life.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom 'Statement' pieces?</strong><br/>A: Yes! We specialize in 'Runway' and 'Red-Carpet' statement jewelry. Contact us to bring your most ambitious designs to life.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your bold maximalist collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -145,7 +145,7 @@ export const BLOG_BATCH_41 = [
 <p><strong>Q9: What is 'Lost-Wax' casting?</strong><br/>A: An ancient jewelry-making technique where a design is carved in wax, then cast in metal. It allows for the organic, 'Flowing' shapes that define the Boho-Luxe look.</p>
 <p><strong>Q10: Can men wear Boho-Luxe jewelry?</strong><br/>A: Yes! Beaded bracelets with silver 'Talisman' charms and 'Rugged-Textured' rings are the heart of 'Modern-Masculine' Boho in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Boho trend?</strong><br/>A: 'Celestial-Boho'—focusing specifically on sun, moon, and star motifs in heavy, textured gold—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global develop a custom 'Spirit' line?</strong><br/>A: Yes! We can help you research and incorporate meaningful symbols and stones for a truly unique Boho-Luxe collection. Contact us to start your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> develop a custom 'Spirit' line?</strong><br/>A: Yes! We can help you research and incorporate meaningful symbols and stones for a truly unique Boho-Luxe collection. Contact us to start your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your soulful Boho-Luxe collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -195,7 +195,7 @@ export const BLOG_BATCH_41 = [
 <p><strong>Q9: What is 'Filigree'?</strong><br/>A: Intricate, lace-like metalwork. While more common in Art Nouveau, Art Deco often uses geometric filigree to add lightness to bold designs.</p>
 <p><strong>Q10: Can men wear Art Deco jewelry?</strong><br/>A: Yes! Art Deco 'Geometric' signet rings and heavy 'Step-Cut' pendants are the definitive choice for the 'Dapper-Modern' man in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Art Deco trend?</strong><br/>A: 'Colored-Enamel' Art Deco—using vibrant greens, blues, and reds instead of just black—is a growing 2026 trend for the 'Playful-Luxury' market.</p>
-<p><strong>Q12: Can Gemora Global recreate a 'Museum' Art Deco design?</strong><br/>A: Yes! If you have a vintage inspiration, our CAD designers can modernize the structure while keeping the 'Soul' of the original design. Contact us to start your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> recreate a 'Museum' Art Deco design?</strong><br/>A: Yes! If you have a vintage inspiration, our CAD designers can modernize the structure while keeping the 'Soul' of the original design. Contact us to start your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your glamorous Art Deco collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -245,7 +245,7 @@ export const BLOG_BATCH_41 = [
 <p><strong>Q9: What is 'Memento Mori'?</strong><br/>A: A Latin phrase meaning 'Remember you must die.' In jewelry, it's represented by skulls and other motifs designed to remind the wearer of the 'Preciousness of Life.' It's a core theme of Gothic-Modern style.</p>
 <p><strong>Q10: Can men wear Gothic jewelry?</strong><br/>A: Gothic-Modern is a 'Gender-Neutral' powerhouse. Heavy silver chains, blackened-metal signets, and 'Dagger' pendants are the heart of 'Modern-Masculine' style in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Gothic trend?</strong><br/>A: 'Pastel-Goth'—using blackened metal with soft lavender or mint stones—is a growing 2026 trend for the 'Subversive-Sweet' market.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Dark' collection?</strong><br/>A: Yes! We love working on 'Subversive' and 'Edgy' designs. Contact us to start your Gothic-Modern project today.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Dark' collection?</strong><br/>A: Yes! We love working on 'Subversive' and 'Edgy' designs. Contact us to start your Gothic-Modern project today.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your edgy Gothic collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

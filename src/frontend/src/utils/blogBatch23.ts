@@ -45,7 +45,7 @@ export const BLOG_BATCH_23 = [
 <p><strong>Q9: What are 'Door-Knocker' earrings?</strong><br/>A: These are oversized, heavy-looking gold earrings (usually hoops or geometric shapes) that were popular in the 80s and are currently a massive 2026 trend.</p>
 <p><strong>Q10: Can men wear chunky gold jewelry?</strong><br/>A: Absolutely! Heavy Cuban-link chains and thick gold signet rings are a staple of modern men's fashion.</p>
 <p><strong>Q11: What's the 'Next Big' chunky trend?</strong><br/>A: 'Gold-Dipped' natural objects—like thick shells or large stones encased in gold—are a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Bold Gold' collection for my brand?</strong><br/>A: Yes! We can help you develop unique link styles, textures, and finishes that are exclusive to your brand identity. Contact us to get started.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Bold Gold' collection for my brand?</strong><br/>A: Yes! We can help you develop unique link styles, textures, and finishes that are exclusive to your brand identity. Contact us to get started.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our bold gold collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -84,7 +84,7 @@ export const BLOG_BATCH_23 = [
 <p>Jaipur has a centuries-old tradition of silver craftsmanship. We are one of the world's leading hubs for 925 Sterling Silver production. At <a href="/">Gemora Global</a>, we use high-quality rhodium plating on our silver pieces to prevent tarnishing and ensure a lasting, bright finish. Our silver collections are a top choice for brands in the UK, Scandinavia, and the US West Coast.</p>
 
 <h2>Frequently Asked Questions</h2>
-<p><strong>Q1: Does silver jewelry tarnish?</strong><br/>A: Natural silver does tarnish when exposed to air. However, at Gemora Global, we apply a professional 'Rhodium Plating' to our silver jewelry, which acts as a protective barrier and keeps it bright for much longer.</p>
+<p><strong>Q1: Does silver jewelry tarnish?</strong><br/>A: Natural silver does tarnish when exposed to air. However, at <a href="/">Gemora Global</a>, we apply a professional 'Rhodium Plating' to our silver jewelry, which acts as a protective barrier and keeps it bright for much longer.</p>
 <p><strong>Q2: Why is silver making a comeback now?</strong><br/>A: Fashion is cyclical. After a decade of gold, silver feels 'new' and 'refreshing' to a younger generation. It also aligns with the current 'Industrial' and 'Futuristic' fashion trends.</p>
 <p><strong>Q3: Is silver 'cheaper' than gold?</strong><br/>A: In terms of raw material, yes. This allows designers to create larger, more experimental statement pieces in silver that would be prohibitively expensive in gold.</p>
 <p><strong>Q4: What is 'Sterling Silver'?</strong><br/>A: It's an alloy of 92.5% pure silver and 7.5% other metals (usually copper). Pure silver is too soft for jewelry, so the alloy is needed for strength and durability.</p>
@@ -145,7 +145,7 @@ export const BLOG_BATCH_23 = [
 <p><strong>Q9: Can men wear mixed-metal jewelry?</strong><br/>A: Yes! Two-tone watches have always been a men's staple, and we're now seeing mixed-metal chains and rings becoming huge in men's fashion.</p>
 <p><strong>Q10: Is mixed-metal jewelry a 'fad'?</strong><br/>A: No, it's a fundamental shift in how we think about accessorizing. It's a 'Versatility' trend that allows people to get more use out of their entire jewelry collection.</p>
 <p><strong>Q11: What's the 'Next Big' mixed-metal trend?</strong><br/>A: 'Gradient' plating—where a piece slowly transitions from gold to silver across its surface—is a high-tech trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Two-Tone' collection for me?</strong><br/>A: Absolutely! We specialize in complex plating and assembly and can help you develop a unique mixed-metal line for your brand. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Two-Tone' collection for me?</strong><br/>A: Absolutely! We specialize in complex plating and assembly and can help you develop a unique mixed-metal line for your brand. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our modern mixed-metal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -195,7 +195,7 @@ export const BLOG_BATCH_23 = [
 <p><strong>Q9: Are matte finishes popular for men?</strong><br/>A: Yes, matte and brushed finishes are the #1 choice for men's jewelry in 2026, as they feel more 'rugged' and less 'flashy' than high-shine gold.</p>
 <p><strong>Q10: What is 'Stardust' finish?</strong><br/>A: It's a highly textured finish that looks like tiny diamonds have been sprinkled over the metal. It's achieved using a specialized diamond-tipped tool.</p>
 <p><strong>Q11: What's the 'Next Big' finish trend?</strong><br/>A: 'Hammered-Satin'—combining a deep hammered texture with a soft satin glow—is currently a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global apply custom finishes to my designs?</strong><br/>A: Absolutely! We can develop a unique 'Signature Finish' for your brand that differentiates your products in the market. Contact us to discuss the possibilities.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> apply custom finishes to my designs?</strong><br/>A: Absolutely! We can develop a unique 'Signature Finish' for your brand that differentiates your products in the market. Contact us to discuss the possibilities.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our textured metal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -231,7 +231,7 @@ export const BLOG_BATCH_23 = [
 <p>This is the 'Ultimate' luxury. The jewelry is made entirely of gold alloy (usually 14k, 18k, or 22k) with no base metal inside. It will never tarnish, never rub off, and is a genuine investment that holds its value over time.</p>
 <p><strong>Best for:</strong> Engagement rings, 'Heirloom' pieces, and investment-grade fine jewelry.</p>
 
-<h2>Quality Standards at Gemora Global</h2>
+<h2>Quality Standards at <a href="/">Gemora Global</a></h2>
 <p>We specialize in 'High-Micron' plating and Gold Vermeil. We use professional-grade electroplating tanks and 'Anti-Tarnish' lacquer (e-coat) to ensure our fashion jewelry has the longest possible lifespan. We provide detailed specifications for every wholesale order, ensuring our partners can sell to their customers with absolute confidence.</p>
 
 <h2>Frequently Asked Questions</h2>

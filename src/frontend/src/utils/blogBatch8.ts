@@ -35,7 +35,7 @@ export const BLOG_BATCH_8 = [
 <p>List on B2B platforms like IndiaMART, TradeIndia, and Alibaba. Attend trade shows like IIJS (India International Jewellery Show) to meet international buyers face-to-face. Send samples to 10-15 serious prospects, follow up consistently, and convert your first export order. Once you have 5-10 regular buyers, scale production and expand to new markets.</p>
 
 <h2>Scale with <a href="/">Gemora Global</a></h2>
-<p>Gemora Global has been exporting imitation jewellery from Jaipur for over a decade. We can guide you or supply wholesale stock for your export business.</p>
+<p><a href="/">Gemora Global</a> has been exporting imitation jewellery from Jaipur for over a decade. We can guide you or supply wholesale stock for your export business.</p>
 <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -53,7 +53,7 @@ export const BLOG_BATCH_8 = [
       "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=500&fit=crop",
     tags: ["wholesale jewellery", "global business", "growth", "export"],
     content: `<h2>Building a Global <a href="/wholesale">Wholesale Jewellery</a> Business</h2>
-<p>Scaling a wholesale jewellery business beyond your home market requires a structured approach. The most successful Indian jewellery exporters follow a proven playbook: master 2-3 markets before expanding, invest in digital presence, and attend the right trade shows consistently.</p>
+<p>Scaling a <a href="/wholesale">Wholesale Jewellery</a> business beyond your home market requires a structured approach. The most successful Indian jewellery exporters follow a proven playbook: master 2-3 markets before expanding, invest in digital presence, and attend the right trade shows consistently.</p>
 
 <h2>Market Expansion Strategy</h2>
 <ul>
@@ -68,7 +68,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Ready to Scale?</h2>
 <p><a href="/">Gemora Global</a> partners with wholesale buyers from 20+ countries, providing premium imitation jewellery at competitive prices with reliable delivery.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 173,
@@ -135,7 +135,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Start Getting Instagram Leads Today</h2>
 <p>Follow <a href="/">Gemora Global</a> on Instagram for inspiration on how we showcase our imitation jewellery collections to international wholesale buyers.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 175,
@@ -174,7 +174,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Build Your B2B Marketing Engine</h2>
 <p><a href="/">Gemora Global</a> has built a global buyer network using these exact strategies. Reach out to learn more about our wholesale programme.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 176,
@@ -200,7 +200,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Keyword Strategy for Exporters</h2>
 <ul>
-  <li>Target: "imitation jewellery exporter india", "wholesale earrings supplier Jaipur", "bulk fashion jewellery manufacturer"</li>
+  <li>Target: "imitation <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Exporter</a> india", "wholesale earrings supplier Jaipur", "bulk fashion jewellery manufacturer"</li>
   <li>Avoid: "gold jewellery", "diamond rings" — these are dominated by luxury brands with massive authority</li>
   <li>Country pages: "jewellery supplier UAE", "<a href="/wholesale">Wholesale Jewellery</a> UK retailers", "imitation jewellery USA market"</li>
   <li>Product pages: "wholesale kundan necklace sets India", "bulk oxidised earrings supplier"</li>
@@ -210,7 +210,7 @@ export const BLOG_BATCH_8 = [
 <p>Every page needs a unique H1, meta description (140-160 characters), and descriptive alt text on all jewellery images. Build internal links between product pages, category pages, and blog posts. Compress your jewellery images to WebP format for fast loading — most B2B buyers are on mobile. Add sitemap.xml, robots.txt, and canonical tags to prevent duplicate content issues.</p>
 
 <h2>Content That Ranks</h2>
-<p>Publish blog posts targeting buyer questions: "MOQ for jewellery from India", "how to import jewellery from Jaipur", "best wholesale jewellery supplier". Regular, helpful content builds authority and brings long-tail traffic that converts.</p>
+<p>Publish blog posts targeting buyer questions: "MOQ for jewellery from India", "how to import jewellery from Jaipur", "best <a href="/wholesale">Wholesale Jewellery</a> supplier". Regular, helpful content builds authority and brings long-tail traffic that converts.</p>
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
@@ -282,7 +282,7 @@ export const BLOG_BATCH_8 = [
 
 <h2>Start Your LinkedIn Outreach</h2>
 <p><a href="/">Gemora Global</a>'s LinkedIn page features our latest collections and export capabilities. Connect with us for partnership opportunities.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 179,
@@ -344,6 +344,6 @@ export const BLOG_BATCH_8 = [
 
 <h2>Scale with an Established Partner</h2>
 <p><a href="/">Gemora Global</a> is already at scale — partner with us to source premium imitation jewellery for your growing export business, or white-label our products under your brand.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

@@ -45,7 +45,7 @@ export const BLOG_BATCH_37 = [
 <p><strong>Q9: What is 'Sea-Foam' Aquamarine?</strong><br/>A: It refers to stones with a strong green-blue tint. While blue was traditionally more popular, Sea-Foam is a major 'Nature-Inspired' trend for 2026.</p>
 <p><strong>Q10: Are 'Lab-Grown' Aquamarines common?</strong><br/>A: No. While they exist, natural aquamarine is abundant enough that most people prefer the genuine, earth-mined stone.</p>
 <p><strong>Q11: What's the 'Next Big' Aquamarine trend?</strong><br/>A: 'Faceted-Crystal-Points'—using the natural hexagonal shape of the aquamarine crystal but with faceted faces—is a growing 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global provide matching sets of Aquamarine?</strong><br/>A: Yes! Because we cut our own stones in Jaipur, we can ensure a perfect color and size match for your necklace, earring, and ring sets. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide matching sets of Aquamarine?</strong><br/>A: Yes! Because we cut our own stones in Jaipur, we can ensure a perfect color and size match for your necklace, earring, and ring sets. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your serene aquamarine collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_37 = [
 <p><strong>Q9: Are 'Lab-Grown' Morganites common?</strong><br/>A: No. Natural Morganite is abundant enough that there is little demand for lab-grown versions.</p>
 <p><strong>Q10: What is the 'Morganite-and-Diamond' halo look?</strong><br/>A: It's a 2026 trend where a large Morganite is surrounded by a halo of tiny white diamonds. The contrast makes the pink look even more vibrant and 'Luxury.'</p>
 <p><strong>Q11: What's the 'Next Big' Morganite trend?</strong><br/>A: 'Opaque-Morganite'—stones with a milky, 'Strawberry-Milk' look—is a growing 2026 trend for the 'Artisan-Minimalist' market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Calibrated' Morganites for my collection?</strong><br/>A: Yes! We can provide stones cut to exact millimeter sizes (e.g., 6x4mm, 8x6mm) to fit your standard settings perfectly. Contact us for our calibrated list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Calibrated' Morganites for my collection?</strong><br/>A: Yes! We can provide stones cut to exact millimeter sizes (e.g., 6x4mm, 8x6mm) to fit your standard settings perfectly. Contact us for our calibrated list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your romantic morganite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -145,7 +145,7 @@ export const BLOG_BATCH_37 = [
 <p><strong>Q9: What is 'Lilac' Tanzanite?</strong><br/>A: It's a trade term for lighter, more violet-toned stones. These are very trendy in 2026 for 'Millennial-Luxe' and fashion jewelry collections.</p>
 <p><strong>Q10: Are there 'Lab-Grown' Tanzanites?</strong><br/>A: There are 'Imitation' stones (like blue CZ or synthetic sapphire), but there is no widely available 'Lab-Grown' Tanzanite that matches the chemical structure of the natural stone.</p>
 <p><strong>Q11: What's the 'Next Big' Tanzanite trend?</strong><br/>A: 'Bi-Color' Tanzanite—stones that haven't been fully heated and show a mix of blue, violet, and green—is a growing 2026 trend for the 'Artisan-Aesthetic' market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Investment-Pairs'?</strong><br/>A: Yes! Matching two high-quality Tanzanites for earrings is a specialized skill. We can source and cut perfectly matched pairs for your high-end collections. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Investment-Pairs'?</strong><br/>A: Yes! Matching two high-quality Tanzanites for earrings is a specialized skill. We can source and cut perfectly matched pairs for your high-end collections. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your rare tanzanite collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -195,7 +195,7 @@ export const BLOG_BATCH_37 = [
 <p><strong>Q9: What is 'Doublet' and 'Triplet' Opal?</strong><br/>A: These are 'Layered' stones—a thin slice of opal glued to a dark backing to make the color pop. In 2026, we always recommend 'Solid' opals for long-term value and durability.</p>
 <p><strong>Q10: Are 'Pink' and 'Blue' Opals real?</strong><br/>A: Yes, these are 'Common' opals from Peru and Africa. They don't have 'Play-of-Color' but have a beautiful, solid pastel color that is very trendy for 2026 fashion.</p>
 <p><strong>Q11: What's the 'Next Big' Opal trend?</strong><br/>A: 'Opal-Beads'—strands of small, faceted opal beads that create a 'Moving-Rainbow' around the neck—is a massive 2026 trend.</p>
-<p><strong>Q12: Can Gemora Global provide matching Opal pairs?</strong><br/>A: Because every opal is unique, matching a pair for earrings is a true art. We can hand-select the best 'Color-Match' for your premium earring collections. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide matching Opal pairs?</strong><br/>A: Because every opal is unique, matching a pair for earrings is a true art. We can hand-select the best 'Color-Match' for your premium earring collections. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your magical opal collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -245,7 +245,7 @@ export const BLOG_BATCH_37 = [
 <p><strong>Q9: What is 'Peach' Moonstone?</strong><br/>A: It's a natural variety with a warm, peachy-beige color. It's a major trend for 2026 'Earth-Toned' jewelry collections.</p>
 <p><strong>Q10: Can men wear Moonstone?</strong><br/>A: Yes! 'Grey' and 'Black' Moonstones—with their subtle, metallic sheen—are a major trend for men's signet rings and pendants in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Moonstone trend?</strong><br/>A: 'Faceted-Moonstone'—using traditional diamond facets on a moonstone instead of a smooth cabochan—is a growing 2026 trend for 'Maximum-Sparkle' spiritual jewelry.</p>
-<p><strong>Q12: Can Gemora Global provide 'Carved' Moonstones?</strong><br/>A: Yes! We have master-carvers who can create 'Man-in-the-Moon' faces or floral motifs on moonstone cabochans for your unique collections. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Carved' Moonstones?</strong><br/>A: Yes! We have master-carvers who can create 'Man-in-the-Moon' faces or floral motifs on moonstone cabochans for your unique collections. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your mystical moonstone collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

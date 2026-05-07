@@ -65,7 +65,7 @@ export const BLOG_BATCH_12 = [
 
 <p><strong>Q3: Which trend is best for the UAE market specifically?</strong><br/>A: American Diamond (CZ) glamour sets and heavy Kundan bridal sets dominate UAE sales. Chunky gold-tone pieces also perform strongly for the everyday fashion segment.</p>
 
-<p><strong>Q4: What is the minimum order to test a new trend?</strong><br/>A: Most Jaipur manufacturers allow 30–50 pieces per design for new trend testing. At Gemora Global, our minimum trend-test order is 50 pieces per design.</p>
+<p><strong>Q4: What is the minimum order to test a new trend?</strong><br/>A: Most Jaipur manufacturers allow 30–50 pieces per design for new trend testing. At <a href="/">Gemora Global</a>, our minimum trend-test order is 50 pieces per design.</p>
 
 <p><strong>Q5: Are oxidized silver pieces suitable for humid markets like UAE and Southeast Asia?</strong><br/>A: Yes, if they have an e-coating or lacquer sealant applied. Without sealant, further oxidation can occur in high-humidity environments. Always confirm anti-tarnish treatment with your supplier.</p>
 

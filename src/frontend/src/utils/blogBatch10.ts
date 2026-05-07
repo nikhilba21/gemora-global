@@ -204,7 +204,7 @@ export const BLOG_BATCH_10 = [
   <li>Correct HS codes prevent customs delays</li>
 </ul>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 197,

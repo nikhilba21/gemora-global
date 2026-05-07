@@ -45,7 +45,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q9: What is 'Bauhaus' inspiration in jewelry?</strong><br/>A: The Bauhaus was a German design school that prioritized 'Form follows Function' and the use of basic geometric shapes. Many modern geometric jewelry designs are direct descendants of this movement.</p>
 <p><strong>Q10: Are geometric rings suitable for stacking?</strong><br/>A: Yes, especially 'Square' and 'V-Shape' rings, which are designed to interlock or sit flush against each other for a perfectly aligned stack.</p>
 <p><strong>Q11: What's the 'Next Big' shape in geometry?</strong><br/>A: The 'Trapezoid' is currently seeing a massive spike in high-end design interest for 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom geometric designs for my brand?</strong><br/>A: Absolutely. We can help you develop a unique geometric 'DNA' for your brand, using specific shapes and proportions across your entire collection. Contact us to start.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom geometric designs for my brand?</strong><br/>A: Absolutely. We can help you develop a unique geometric 'DNA' for your brand, using specific shapes and proportions across your entire collection. Contact us to start.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our modern geometric collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q9: What is 'Monogramming'?</strong><br/>A: It's the art of combining two or more initials into a single design. It's a more 'decorative' and 'luxury' take on personalized jewelry.</p>
 <p><strong>Q10: Are initial pendants good for bridesmaids?</strong><br/>A: They are one of the most popular bridesmaid gifts because they are personalized, beautiful, and something the bridal party can wear again and again.</p>
 <p><strong>Q11: What's the 'Next Big' font trend?</strong><br/>A: 'Script' fonts inspired by 1950s neon signs are currently a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Alphabet' for my brand?</strong><br/>A: Yes! We can help you design a unique font and style that is exclusive to your brand. Contact us to start your collection.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Alphabet' for my brand?</strong><br/>A: Yes! We can help you design a unique font and style that is exclusive to your brand. Contact us to start your collection.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our complete alphabet collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -145,7 +145,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q9: Is the Evil Eye trend only for women?</strong><br/>A: No, men's Evil Eye jewelry—especially simple cord bracelets or heavy silver rings with an eye motif—is a growing market.</p>
 <p><strong>Q10: What happens if my Evil Eye jewelry breaks?</strong><br/>A: According to tradition, if the eye breaks or falls out, it means it has done its job and protected you from a powerful burst of negative energy. You should then replace it with a new one.</p>
 <p><strong>Q11: What's the 'Next Big' spiritual symbol?</strong><br/>A: 'Angel Numbers' (e.g., 111, 444) are currently trending alongside the Evil Eye for 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom 'Spiritual' designs?</strong><br/>A: Yes! We can help you design a unique Evil Eye or talisman collection that reflects your brand's specific spiritual aesthetic. Contact us to learn more.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom 'Spiritual' designs?</strong><br/>A: Yes! We can help you design a unique Evil Eye or talisman collection that reflects your brand's specific spiritual aesthetic. Contact us to learn more.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our protective Evil Eye collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -208,7 +208,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q9: Are birthstone rings suitable for everyday wear?</strong><br/>A: Yes, as long as the setting is secure. 'Bezel' settings (where metal surrounds the stone) are the best choice for everyday protection.</p>
 <p><strong>Q10: What's the best birthstone for a 'Minimalist' look?</strong><br/>A: Small stud earrings or a tiny 'Solitaire' pendant on a fine chain are the perfect minimalist take on the birthstone trend.</p>
 <p><strong>Q11: What's the 'Next Big' birthstone trend?</strong><br/>A: 'Birth-Hour' stones—choosing a gem based on the specific time you were born—is a growing 'early-adopter' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Birthstone' collection for my brand?</strong><br/>A: Yes! We can help you develop a unique line of rings, necklaces, and earrings featuring the 12 birthstones in your brand's signature style. Contact us to get started.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Birthstone' collection for my brand?</strong><br/>A: Yes! We can help you develop a unique line of rings, necklaces, and earrings featuring the 12 birthstones in your brand's signature style. Contact us to get started.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our complete birthstone collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -256,7 +256,7 @@ export const BLOG_BATCH_22 = [
 <p><strong>Q7: What is 'Hand-Engraving' on a locket?</strong><br/>A: It's when an artisan uses a sharp tool to manually carve a design into the metal. It adds a level of detail and 'soul' that machine-engraving can't match.</p>
 <p><strong>Q8: Are 'Multi-Photo' lockets available?</strong><br/>A: Yes, 'Accordion' or 'Book' lockets can hold 3-4 photos. These are complex, high-value pieces that are incredibly popular for family gifts.</p>
 <p><strong>Q9: Is the locket trend only for 'Cottagecore'?</strong><br/>A: No, while Cottagecore loves them, lockets are also a key part of the 'Grandmillennial' and 'Dark Academia' aesthetics in 2026.</p>
-<p><strong>Q10: Can I get my locket 'Photo-Engraved'?</strong><br/>A: Yes, Gemora Global offers professional laser photo-engraving for our wholesale partners, providing a permanent and high-end personalization option.</p>
+<p><strong>Q10: Can I get my locket 'Photo-Engraved'?</strong><br/>A: Yes, <a href="/">Gemora Global</a> offers professional laser photo-engraving for our wholesale partners, providing a permanent and high-end personalization option.</p>
 <p><strong>Q11: What's the 'Next Big' locket trend?</strong><br/>A: 'Locket Rings'—rings that feature a tiny opening compartment on the top—are currently a huge 'early-adopter' trend for late 2026.</p>
 <p><strong>Q12: Can Gemora Global create a custom locket shape for me?</strong><br/>A: Absolutely! We can help you design a unique locket—from a custom star to a branded geometric shape. Contact us to discuss your project.</p>
 

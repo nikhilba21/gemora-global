@@ -52,7 +52,7 @@ export const BLOG_BATCH_14 = [
 
 <p><strong>Q5: How should I price TikTok trend jewelry pieces at retail?</strong><br/>A: Trend pieces command premium pricing precisely because of their trend status. Don't underprice — a piece that is visibly "of the moment" on TikTok can support 5x–8x markup on wholesale cost. Consumers buying trend pieces have demonstrated high willingness to pay for the specific aesthetic they've seen on their For You Page.</p>
 
-<p><strong>Q6: What is the minimum order to test a TikTok trend piece?</strong><br/>A: At Gemora Global, minimum trend-test orders start at 50 pieces per design. At this quantity, your risk is manageable (if the trend fades, 50 pieces can typically be cleared through a modest sale) while giving you enough stock to validate the trend's appeal to your specific customers before committing to larger quantities.</p>
+<p><strong>Q6: What is the minimum order to test a TikTok trend piece?</strong><br/>A: At <a href="/">Gemora Global</a>, minimum trend-test orders start at 50 pieces per design. At this quantity, your risk is manageable (if the trend fades, 50 pieces can typically be cleared through a modest sale) while giving you enough stock to validate the trend's appeal to your specific customers before committing to larger quantities.</p>
 
 <p><strong>Q7: Can I create my own TikTok content to sell jewelry trend pieces?</strong><br/>A: Definitely — and this is one of the most effective retail strategies of 2026. "Get ready with me" (GRWM) videos, jewelry styling videos, and "unboxing my new wholesale order" content all perform well organically. Authentic creator-style content from a retail brand resonates far better than traditional advertising-style video content on TikTok.</p>
 

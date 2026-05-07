@@ -45,7 +45,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q9: How do I store my heavy bridal sets?</strong><br/>A: Store each piece separately in a padded box. Never stack them, as the delicate gold foil and enamel can be scratched by other pieces.</p>
 <p><strong>Q10: What is 'Syndicate' Polki?</strong><br/>A: It's a trade term for the highest quality Polki diamonds—those with the best clarity and 'glow' from within.</p>
 <p><strong>Q11: What's the 'Next Big' trend in Indian jewelry?</strong><br/>A: 'Pastel-Meenakari'—using soft mint, peach, and lavender enamel instead of the traditional deep red and green—is a major trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create custom Polki designs?</strong><br/>A: Yes! We specialize in custom bridal orders. We can help you design a one-of-a-kind heritage set that perfectly matches your vision. Contact us for a consultation.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create custom Polki designs?</strong><br/>A: Yes! We specialize in custom bridal orders. We can help you design a one-of-a-kind heritage set that perfectly matches your vision. Contact us for a consultation.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your royal heritage collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q9: Can I give a Hamsa as a gift?</strong><br/>A: It is one of the best gifts! It says 'I wish you protection and blessings.' It's perfect for housewarmings, graduations, or new beginnings.</p>
 <p><strong>Q10: What is a 'Miriam's Hand'?</strong><br/>A: It's the Jewish name for the Hamsa, named after the sister of Moses.</p>
 <p><strong>Q11: What's the 'Next Big' protection trend?</strong><br/>A: 'Abstract-Eyes'—where the evil eye is represented by a single, high-quality gemstone in a minimalist setting—is a major trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global create a custom 'Protection' line for my brand?</strong><br/>A: Absolutely! We can help you develop a unique version of these symbols that is exclusive to your brand. Contact us to start your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> create a custom 'Protection' line for my brand?</strong><br/>A: Absolutely! We can help you develop a unique version of these symbols that is exclusive to your brand. Contact us to start your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your protection and luck collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -143,7 +143,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q7: What is 'Connemara Marble' jewelry?</strong><br/>A: It's a unique green marble found only in the west of Ireland. It's often set into Celtic silver jewelry and is a major trend for 'Authentic-Heritage' collections in 2026.</p>
 <p><strong>Q8: Can men wear Celtic jewelry?</strong><br/>A: Yes! Heavy silver knotwork 'Band' rings and Tree of Life pendants are classic and popular choices for men's fashion.</p>
 <p><strong>Q9: What is the 'Celtic Cross'?</strong><br/>A: It's a traditional cross featuring a circle around the intersection. It's a symbol of faith and the sun, and remains a top-selling religious and heritage piece in 2026.</p>
-<p><strong>Q10: Are these designs trademarked?</strong><br/>A: Most traditional Celtic symbols are in the public domain. However, specific modern 'Interpretations' by designers (like those we create at Gemora Global) are protected.</p>
+<p><strong>Q10: Are these designs trademarked?</strong><br/>A: Most traditional Celtic symbols are in the public domain. However, specific modern 'Interpretations' by designers (like those we create at <a href="/">Gemora Global</a>) are protected.</p>
 <p><strong>Q11: What's the 'Next Big' Celtic trend?</strong><br/>A: 'Black-Rhodium-Knotwork'—darkening the silver to make the knotwork look 'Gothic' and more defined—is a growing trend for late 2026.</p>
 <p><strong>Q12: Can Gemora Global create custom 'Family' knots?</strong><br/>A: Yes! We can help you design a unique knot that incorporates specific symbols or initials for a truly personalized heritage collection. Contact us to learn more.</p>
 
@@ -195,7 +195,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q9: What is 'Liquid-Silver' jewelry?</strong><br/>A: It's a style featuring thousands of tiny, hand-strung silver tubes that look and move like liquid metal. It's a classic Southwestern look that is very trendy for layering in 2026.</p>
 <p><strong>Q10: Is it okay to wear 'Real' and 'Fashion' turquoise together?</strong><br/>A: Absolutely! Mixing your high-end heritage pieces with more affordable fashion-turquoise items is a great way to build a 'Personal' and 'Eclectic' stack.</p>
 <p><strong>Q11: What's the 'Next Big' Southwestern trend?</strong><br/>A: 'Gold-and-Turquoise'—using 14k gold instead of silver for traditional Southwestern designs—is a major 'High-Luxury' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Hand-Stamped' silver in bulk?</strong><br/>A: Yes! We have a dedicated workshop of artisans trained in traditional stamping techniques. Contact us to discuss your Southwestern-style project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Hand-Stamped' silver in bulk?</strong><br/>A: Yes! We have a dedicated workshop of artisans trained in traditional stamping techniques. Contact us to discuss your Southwestern-style project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your soulful Southwestern collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -249,7 +249,7 @@ export const BLOG_BATCH_35 = [
 <p><strong>Q9: What is 'Lavender' Jade?</strong><br/>A: It's a natural variety of Jadeite. Its beautiful purple color is a symbol of luck and elegance and is very trendy in 2026.</p>
 <p><strong>Q10: Can men wear Jade?</strong><br/>A: Absolutely! Jade signet rings and simple Bi-Disc pendants on leather cords are a classic and powerful choice for men's fashion.</p>
 <p><strong>Q11: What's the 'Next Big' jade trend?</strong><br/>A: 'Ice-Jade'—transparent, colorless jadeite that looks like solid ice—is a massive 'Minimalist-Luxury' trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Carved' Jade bangles?</strong><br/>A: Yes! We have master-carvers who can create intricate floral and dragon motifs on solid jade bangles. Contact us for our specialized heritage catalogue.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Carved' Jade bangles?</strong><br/>A: Yes! We have master-carvers who can create intricate floral and dragon motifs on solid jade bangles. Contact us for our specialized heritage catalogue.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your soulful jade collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

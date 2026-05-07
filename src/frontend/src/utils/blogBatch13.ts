@@ -71,7 +71,7 @@ export const BLOG_BATCH_13 = [
 
 <p><strong>Q8: Which color stones are most on-trend for 2026?</strong><br/>A: Emerald green (strongest), cobalt blue, turquoise, hot pink, and burnt orange are the leading stone colors for 2026. Pastel stones (lavender, mint, soft peach) are emerging as a secondary trend for Spring collections.</p>
 
-<p><strong>Q9: Can Indian manufactured jewelry meet the quality demands of high-end trend-focused boutiques?</strong><br/>A: Absolutely. Top-tier Indian manufacturers like Gemora Global produce export-quality pieces with precise stone setting, quality plating, and anti-tarnish coatings that meet or exceed the standards of boutiques in London, New York, and Sydney. The key is vetting suppliers carefully and ordering samples before committing to bulk.</p>
+<p><strong>Q9: Can Indian manufactured jewelry meet the quality demands of high-end trend-focused boutiques?</strong><br/>A: Absolutely. Top-tier Indian manufacturers like <a href="/">Gemora Global</a> produce export-quality pieces with precise stone setting, quality plating, and anti-tarnish coatings that meet or exceed the standards of boutiques in London, New York, and Sydney. The key is vetting suppliers carefully and ordering samples before committing to bulk.</p>
 
 <p><strong>Q10: What is the best way to stay updated on emerging jewelry trends?</strong><br/>A: Follow these sources weekly: Pinterest Trends tool (leading indicator), Vogue Jewelry section, Instagram's jewelry explore page, WGSN trend forecasting (subscription), and IIJS trade show previews from India. Combine these with conversations with your top customers about what they're seeing and wanting.</p>
 

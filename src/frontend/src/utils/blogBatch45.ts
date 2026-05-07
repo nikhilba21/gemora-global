@@ -30,7 +30,7 @@ export const BLOG_BATCH_45 = [
 <h2>Step 5: Casting and Hand-Finishing</h2>
 <p>Once the design is perfect, the wax is used to create a mold for the final metal. After casting, our master-artisans in Jaipur hand-polish the metal, set the stones with microscopic precision, and add those final 'Artisan-Details' like milgrain or engraving. Your dream is now a reality.</p>
 
-<h2>Sourcing Custom Designs from Gemora Global</h2>
+<h2>Sourcing Custom Designs from <a href="/">Gemora Global</a></h2>
 <p>We help our wholesale partners build a 'Custom-Service' for their customers without the need for their own workshop. You provide the inspiration, and our design team in Jaipur provides the CAD models, the renders, and the finished masterpiece. We specialize in 'Fast-Turnaround' custom work, ensuring your customers don't have to wait months for their dream ring. Let us be your secret design studio.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -80,7 +80,7 @@ export const BLOG_BATCH_45 = [
 <h2>The 'Recycled-Gold' Advantage</h2>
 <p>Upcycling is the purest form of 'Circular-Fashion.' By reusing the gold from your old jewelry, you are avoiding the need for new mining. In 2026, we can refine your old gold back to its pure state and then re-alloy it into any color (Yellow, White, or Rose) you desire for your new design.</p>
 
-<h2>Sourcing Upcycling Services from Gemora Global</h2>
+<h2>Sourcing Upcycling Services from <a href="/">Gemora Global</a></h2>
 <p>We help our wholesale partners offer an 'Upcycling-Concierge' to their customers. You send us the old jewelry, and our team in Jaipur performs a 'Gemstone-Audit,' refines the metal, and works with you to design a modern masterpiece. We provide the 'Heritage-Craft' required to handle delicate antique stones with the care they deserve. Let us help your customers tell a new story with their old treasures.</p>
 
 <h2>Frequently Asked Questions</h2>
@@ -142,7 +142,7 @@ export const BLOG_BATCH_45 = [
 <p><strong>Q9: What is 'White-Space' in a jewelry design?</strong><br/>A: It's the 'Empty' areas of a design (like the gaps in a filigree pattern). A good sketch balances the 'Solid' and the 'Air' for a light, elegant feel.</p>
 <p><strong>Q10: Can men's jewelry be 'Artistically' sketched?</strong><br/>A: Absolutely! 'Modern-Industrial' sketches for men's bands focus on texture, light-shadow, and geometric precision.</p>
 <p><strong>Q11: What's the 'Next Big' sketching trend?</strong><br/>A: 'AI-Enhanced-Sketching'—using AI tools to quickly generate dozens of design variations based on an artist's initial line work—is a growing 2026 efficiency trend.</p>
-<p><strong>Q12: Can Gemora Global provide 'Branded' sketchbooks?</strong><br/>A: Yes! We can provide custom-bound sketchbooks with your brand's logo and 'Design-Templates' (ring outlines, etc.) for your in-house design teams. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Branded' sketchbooks?</strong><br/>A: Yes! We can provide custom-bound sketchbooks with your brand's logo and 'Design-Templates' (ring outlines, etc.) for your in-house design teams. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your design-led partnership. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -176,7 +176,7 @@ export const BLOG_BATCH_45 = [
 <p>The #1 trend for 2026 is the 'Hybrid' approach. We use **CAD** to create the structural 'Chassis' of the piece (ensuring the stones fit perfectly and the band is strong) and then use **Hand-Carving** or **Hand-Finishing** to add the 'Texture' and the 'Soul.' This creates a piece that is both 'Perfectly Engineered' and 'Artistically Finished.'</p>
 
 <h2>Sourcing Advanced Manufacturing from Jaipur</h2>
-<p>Jaipur is unique in that it houses both world-class CAD engineers and ancestral families of master wax-carvers. At Gemora Global, we offer both paths. For 'Modern-Minimalist' and 'Geometric' lines, we recommend CAD. For 'Boho-Luxe' and 'Nature-Inspired' collections, we recommend our hand-carving department. We help you choose the 'Right-Tool' for your specific design vision. Let us help you build a collection with both 'Brain' and 'Heart.'</p>
+<p>Jaipur is unique in that it houses both world-class CAD engineers and ancestral families of master wax-carvers. At <a href="/">Gemora Global</a>, we offer both paths. For 'Modern-Minimalist' and 'Geometric' lines, we recommend CAD. For 'Boho-Luxe' and 'Nature-Inspired' collections, we recommend our hand-carving department. We help you choose the 'Right-Tool' for your specific design vision. Let us help you build a collection with both 'Brain' and 'Heart.'</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: What is 'Jewelry-CAD'?</strong><br/>A: It stands for Computer-Aided Design. We use specialized software (like MatrixGold or Rhino) to build a high-precision 3D model of a piece of jewelry.</p>
@@ -229,7 +229,7 @@ export const BLOG_BATCH_45 = [
 <p>The #1 trend for 2026 is the 'Hybrid-Setting.' Think a **Prong-Set** center stone paired with a **Bezel-Set** halo or **Channel-Set** side stones. This mixing of textures and structures creates a piece that is visually complex and 'Custom' in feel. It's the definitive 'Modern-Luxury' approach.</p>
 
 <h2>Sourcing Master-Setting from Jaipur</h2>
-<p>Setting is the hardest skill in jewelry making. At Gemora Global, our Jaipur facility employs 'Master-Setters' who have spent 20+ years perfecting their craft. We use high-powered microscopes for all our 'Micro-Pave' and 'Flush-Setting' to ensure every stone is level and 100% secure. Whether you need the 'Dainty-Prongs' of a minimalist line or the 'Heavy-Bezel' of an industrial collection, we provide the 'Precision-Frame' your brand needs. Let us help you secure your success.</p>
+<p>Setting is the hardest skill in jewelry making. At <a href="/">Gemora Global</a>, our Jaipur facility employs 'Master-Setters' who have spent 20+ years perfecting their craft. We use high-powered microscopes for all our 'Micro-Pave' and 'Flush-Setting' to ensure every stone is level and 100% secure. Whether you need the 'Dainty-Prongs' of a minimalist line or the 'Heavy-Bezel' of an industrial collection, we provide the 'Precision-Frame' your brand needs. Let us help you secure your success.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: 4 Prongs or 6 Prongs?</strong><br/>A: **4 Prongs** show more of the stone and make square/rectangular cuts look sharper. **6 Prongs** are more secure (if one breaks, the stone stays in) and are the classic choice for round diamonds.</p>

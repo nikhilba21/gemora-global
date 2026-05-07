@@ -28,7 +28,7 @@ export const BLOG_BATCH_3 = [
 </ul>
 <p>Indian manufacturers supplying the USA must provide material safety certifications. <a href="/">Gemora Global</a> ensures all export-ready pieces meet US compliance standards. For USA wholesale sourcing, visit our <a href="/export-markets/usa">USA export page</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 122,
@@ -151,7 +151,7 @@ export const BLOG_BATCH_3 = [
 <h2>Shipping and Import Duties</h2>
 <p>Air freight from India to Toronto, Vancouver, or Calgary takes 6-12 business days. MFN import duties on HS 7117 (imitation jewellery) are typically 8-15% — CEPA provides reductions for qualifying Indian exporters. GST/HST applies at the point of import. For Canada wholesale pricing and catalogue access, visit our <a href="/export-markets/canada">Canada export page</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 126,
@@ -182,7 +182,7 @@ export const BLOG_BATCH_3 = [
 <h2>EU Import Duties and Logistics</h2>
 <p>Import duties on HS 7117 imitation jewellery entering the EU are typically 2-4% under the EU's Common External Tariff. Air freight from Jaipur to Frankfurt, Amsterdam, or Paris takes 5-8 business days. For European wholesale buyers, <a href="/">Gemora Global</a> provides full REACH compliance documentation. Visit our <a href="/export-markets/france">Europe export page</a> for details.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 127,
@@ -213,7 +213,7 @@ export const BLOG_BATCH_3 = [
 <h2>Import Process and Shipping</h2>
 <p>The Bureau of Customs Philippines handles all import clearance. ASEAN trade agreements provide some tariff reductions for qualifying goods. Air freight from India to Manila takes 5-10 business days. <a href="/">Gemora Global</a> ships regularly to Philippine wholesale buyers with complete commercial invoices and packing lists. For wholesale inquiry and catalogue, <a href="/contact">contact us here</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 128,
@@ -244,7 +244,7 @@ export const BLOG_BATCH_3 = [
 <h2>Key Trade Shows and Logistics</h2>
 <p>The Dubai Jewellery Week (DJWE) and Index exhibitions are important events for Indian exporters to connect with Dubai buyers. Air freight from Jaipur to Dubai International Airport takes just 2-4 business days — making it one of the fastest India export routes. <a href="/">Gemora Global</a> ships directly to Dubai wholesalers and Dragon Mart sellers on a regular basis.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 129,
@@ -275,7 +275,7 @@ export const BLOG_BATCH_3 = [
 <h2>Saudi Import Regulations and Shipping</h2>
 <p>Saudi Arabia requires SABER product certification for many imported goods, including some jewellery categories. Import duties range from 5-15% depending on material and product type. Air freight from India to Riyadh or Jeddah takes 3-7 business days. <a href="/">Gemora Global</a> has experience exporting to Saudi Arabia with complete documentation. Contact us for wholesale pricing and SABER compliance support.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 130,
@@ -306,6 +306,6 @@ export const BLOG_BATCH_3 = [
 <h2>Import Duties and Shipping</h2>
 <p>Singapore has one of the world's most open import regimes — import duties on jewellery are generally zero. GST of 9% applies at import. Air freight from Jaipur to Singapore Changi Airport takes just 3-5 business days, making it one of the fastest corridors in Asia. For Singapore wholesale sourcing and pricing, visit our <a href="/export-markets/singapore">Singapore export page</a>.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

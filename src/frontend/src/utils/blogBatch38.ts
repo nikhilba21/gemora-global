@@ -45,7 +45,7 @@ export const BLOG_BATCH_38 = [
 <p><strong>Q9: What is 'Palmeira' Citrine?</strong><br/>A: It's a trade term for a medium, golden-orange variety of Citrine, slightly lighter than Madeira.</p>
 <p><strong>Q10: Can men wear Citrine?</strong><br/>A: Absolutely! Deep Madeira Citrine set in heavy silver or gold signet rings is a major trend for men's 'Modern-Masculine' fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Citrine trend?</strong><br/>A: 'Raw-Citrine-Druzy'—using the natural, sparkly crystal clusters in jewelry rather than a faceted stone—is a growing 2026 trend for the 'Artisan-Boho' market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Faceted' Citrine?</strong><br/>A: Yes! We can provide thousands of perfectly matched, calibrated Citrines for your high-volume production lines. Contact us for our wholesale price list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Faceted' Citrine?</strong><br/>A: Yes! We can provide thousands of perfectly matched, calibrated Citrines for your high-volume production lines. Contact us for our wholesale price list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your vibrant citrine collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -95,7 +95,7 @@ export const BLOG_BATCH_38 = [
 <p><strong>Q9: What is the 'Lily-Pad' inclusion?</strong><br/>A: It's a tiny, circular internal fracture that looks like a lily pad. In 2026, these are seen as a 'Mark-of-Nature' and proof of the stone's genuine origin.</p>
 <p><strong>Q10: Can men wear Peridot?</strong><br/>A: Yes! 'Olive-Green' peridots set in heavy silver or blackened-metal rings are a major trend for men's 'Modern-Masculine' fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Peridot trend?</strong><br/>A: 'Faceted-Peridot-Beads'—strands of small, high-sparkle peridot beads—is a growing 2026 trend for layering with gold chains.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Matched' Peridots?</strong><br/>A: Yes! We can provide thousands of perfectly matched, vibrant lime peridots for your high-volume collections. Contact us for our calibrated list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Matched' Peridots?</strong><br/>A: Yes! We can provide thousands of perfectly matched, vibrant lime peridots for your high-volume collections. Contact us for our calibrated list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your radiant peridot collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -150,7 +150,7 @@ export const BLOG_BATCH_38 = [
 <p><strong>Q9: What is 'White' Topaz?</strong><br/>A: It is natural, colorless topaz. In 2026, it's a top choice for 'Accessible-Fine-Jewelry' that wants a diamond-like sparkle without the diamond price.</p>
 <p><strong>Q10: Can men wear Topaz?</strong><br/>A: Yes! London-Blue Topaz in heavy silver signet rings is a massive trend for the 'Modern-Professional' man in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Topaz trend?</strong><br/>A: 'Faceted-Topaz-Slices'—using the large flat surface of a topaz crystal and faceting the edges—is a growing 2026 trend for 'Geometric-Luxe' pendants.</p>
-<p><strong>Q12: Can Gemora Global provide 'Custom-Coatings' for Topaz?</strong><br/>A: Yes! We can create specific 'Mystic' or 'Bi-Color' coatings to match your brand's unique color palette. Contact us to discuss your custom project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Custom-Coatings' for Topaz?</strong><br/>A: Yes! We can create specific 'Mystic' or 'Bi-Color' coatings to match your brand's unique color palette. Contact us to discuss your custom project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your powerful topaz collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -206,7 +206,7 @@ export const BLOG_BATCH_38 = [
 <p><strong>Q9: What is 'Star' Garnet?</strong><br/>A: A rare variety that shows a 4-ray or 6-ray 'Star' effect when viewed under a single light source. It's a favorite for the 'Modern-Mystic' market.</p>
 <p><strong>Q10: Can men wear Garnet?</strong><br/>A: Absolutely! Deep red garnet in heavy silver signet rings is a classic 'Masculine-Luxury' look that is very popular in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Garnet trend?</strong><br/>A: 'Color-Change' Garnet—stones that change from green in daylight to red in artificial light (like Alexandrite)—is a growing 2026 trend for high-end collectors.</p>
-<p><strong>Q12: Can Gemora Global provide 'Bulk-Beads' of Garnet?</strong><br/>A: Yes! We can provide high-quality, faceted garnet beads for your 'Layered-Necklace' collections. Contact us for our wholesale price list.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Bulk-Beads' of Garnet?</strong><br/>A: Yes! We can provide high-quality, faceted garnet beads for your 'Layered-Necklace' collections. Contact us for our wholesale price list.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your fiery garnet collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -260,7 +260,7 @@ export const BLOG_BATCH_38 = [
 <p><strong>Q9: What is 'White' Turquoise?</strong><br/>A: It's usually 'Howlite'—a different mineral that looks like white turquoise. True turquoise is always blue or green.</p>
 <p><strong>Q10: Can men wear Turquoise?</strong><br/>A: Absolutely! Bold turquoise signet rings and heavy silver cuffs are the 'Modern-Western' staple for men's fashion in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' Turquoise trend?</strong><br/>A: 'Turquoise-and-Diamond' pairings—using white diamonds to add a 'Fine-Jewelry' sparkle to the organic turquoise—is a growing 2026 luxury trend.</p>
-<p><strong>Q12: Can Gemora Global provide custom 'Inlay' patterns?</strong><br/>A: Yes! We have a specialized team of inlay artists who can create any geometric or floral pattern using high-quality turquoise. Contact us to start your project.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide custom 'Inlay' patterns?</strong><br/>A: Yes! We have a specialized team of inlay artists who can create any geometric or floral pattern using high-quality turquoise. Contact us to start your project.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for your soulful turquoise collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

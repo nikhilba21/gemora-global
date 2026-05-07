@@ -42,7 +42,7 @@ export const BLOG_BATCH_27 = [
 <p><strong>Q9: How do I clean my amethyst jewelry?</strong><br/>A: Warm water, mild soap, and a soft brush. Rinse thoroughly and pat dry with a soft cloth.</p>
 <p><strong>Q10: What is 'Ametrine'?</strong><br/>A: It's a rare and natural combination of Amethyst and Citrine in the same crystal, showing both purple and yellow/orange colors. It's a stunning 'Bi-Color' gem.</p>
 <p><strong>Q11: What's the 'Next Big' amethyst trend?</strong><br/>A: 'Velvet-Cut' Amethyst—a specific way of facetting that creates a soft, non-reflective, velvety appearance—is a growing trend for late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide custom-cut Amethysts?</strong><br/>A: Absolutely! We can cut Amethyst to your exact specifications for your unique jewelry line. Contact us to learn more about our gemstone services.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide custom-cut Amethysts?</strong><br/>A: Absolutely! We can cut Amethyst to your exact specifications for your unique jewelry line. Contact us to learn more about our gemstone services.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our royal amethyst collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -89,7 +89,7 @@ export const BLOG_BATCH_27 = [
 <p><strong>Q9: How do I clean my citrine jewelry?</strong><br/>A: Warm water, mild dish soap, and a soft brush. Citrine loves to be clean—it really enhances that internal 'glow.'</p>
 <p><strong>Q10: What's the 'Next Big' citrine trend?</strong><br/>A: 'Honey' Citrine—a specific shade between yellow and orange that looks like liquid honey—is currently a growing trend for late 2026.</p>
 <p><strong>Q11: Can men wear Citrine?</strong><br/>A: Absolutely. Heavy gold signet rings with a central Madeira Citrine are a powerful and popular choice for men's fashion.</p>
-<p><strong>Q12: Can Gemora Global provide 'Madeira' Citrine wholesale?</strong><br/>A: Yes, we maintain a large stock of high-quality Madeira and Lemon Citrine. Contact us for bulk pricing and design options.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Madeira' Citrine wholesale?</strong><br/>A: Yes, we maintain a large stock of high-quality Madeira and Lemon Citrine. Contact us for bulk pricing and design options.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our glowing citrine collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -139,7 +139,7 @@ export const BLOG_BATCH_27 = [
 <p><strong>Q9: What is 'Strawberry Quartz'?</strong><br/>A: It's a different variety of quartz that features red needle-like inclusions (usually hematite or goethite). It has a darker, more 'flecked' pink look than Rose Quartz.</p>
 <p><strong>Q10: Can men wear Rose Quartz?</strong><br/>A: Yes! In 2026, men's 'Wellness' jewelry is a huge trend, and many men wear Rose Quartz beads or simple pendants for their grounding and calming energy.</p>
 <p><strong>Q11: What's the 'Next Big' rose quartz trend?</strong><br/>A: 'Matte' Rose Quartz—where the stone has been sandblasted to a soft, non-reflective finish—is a growing trend for the 'Modern-Minimalist' market.</p>
-<p><strong>Q12: Can Gemora Global provide 'Heart-Carved' Rose Quartz?</strong><br/>A: Absolutely! We are experts in gemstone carving and can provide hearts, flowers, and custom shapes in bulk for your brand. Contact us for details.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Heart-Carved' Rose Quartz?</strong><br/>A: Absolutely! We are experts in gemstone carving and can provide hearts, flowers, and custom shapes in bulk for your brand. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our heart-centered rose quartz collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -188,7 +188,7 @@ export const BLOG_BATCH_27 = [
 <p><strong>Q8: What is 'Cameo' jewelry and is it related?</strong><br/>A: Cameos are often carved from 'Sardonyx' (layered onyx). The artist carves the top white layer to create a figure, leaving the bottom dark layer as the background. It's a beautiful, traditional use of the stone.</p>
 <p><strong>Q9: Is Black Onyx associated with any birth month?</strong><br/>A: While not a traditional birthstone, it is often associated with the sign of Leo and is a popular choice for those born in December who want an alternative to turquoise.</p>
 <p><strong>Q10: What's the 'Next Big' onyx trend?</strong><br/>A: 'Faceted' Onyx—where the opaque black stone is cut with many tiny facets to catch the light—is a growing trend for the 'Gothic-Glam' aesthetic in late 2026.</p>
-<p><strong>Q11: Can Gemora Global provide custom 'Inlay' services?</strong><br/>A: Yes! We are specialists in precision stone inlay. We can cut onyx to fit your specific metal designs perfectly. Contact us to learn more.</p>
+<p><strong>Q11: Can <a href="/">Gemora Global</a> provide custom 'Inlay' services?</strong><br/>A: Yes! We are specialists in precision stone inlay. We can cut onyx to fit your specific metal designs perfectly. Contact us to learn more.</p>
 <p><strong>Q12: Does Onyx fade?</strong><br/>A: No, Black Onyx is extremely stable and will not fade even with intense sunlight or exposure to the elements.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our bold black onyx collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
@@ -239,7 +239,7 @@ export const BLOG_BATCH_27 = [
 <p><strong>Q9: Is Moonstone expensive?</strong><br/>A: It varies. Small 'Commercial-Grade' moonstones are very affordable. Large stones with a strong blue sheen or vibrant rainbow flashes are significantly more valuable.</p>
 <p><strong>Q10: Can men wear Moonstone?</strong><br/>A: Yes! Moonstone is becoming a popular 'grounding' stone in men's fashion jewelry, often set in oxidized silver for a more 'rugged' look.</p>
 <p><strong>Q11: What's the 'Next Big' moonstone trend?</strong><br/>A: 'Black Moonstone'—a dark, moody version of the stone with a silvery-white glow—is a growing trend for the 'Modern-Goth' aesthetic in late 2026.</p>
-<p><strong>Q12: Can Gemora Global provide 'Rainbow Moonstone' in bulk?</strong><br/>A: Yes! We have one of the largest stocks of Rainbow and White Moonstone in Jaipur. Contact us for wholesale pricing and custom cut options.</p>
+<p><strong>Q12: Can <a href="/">Gemora Global</a> provide 'Rainbow Moonstone' in bulk?</strong><br/>A: Yes! We have one of the largest stocks of Rainbow and White Moonstone in Jaipur. Contact us for wholesale pricing and custom cut options.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our magical moonstone collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },

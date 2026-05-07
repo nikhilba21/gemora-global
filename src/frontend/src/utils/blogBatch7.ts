@@ -32,7 +32,7 @@ export const BLOG_BATCH_7 = [
       <h2>MOQ and Ordering</h2>
       <p>Custom box orders typically have an MOQ of 500–1000 units per design. <a href="/">Gemora Global</a> can help source and coordinate custom branded packaging for wholesale clients placing large orders, ensuring your products arrive retail-ready in every destination market.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -103,7 +103,7 @@ export const BLOG_BATCH_7 = [
       <h2>Insurance and Common Shipping Issues</h2>
       <p>Standard carrier insurance covers limited amounts — purchase additional marine cargo insurance for high-value shipments. Common issues include customs holds (caused by incomplete documentation), unexpected duty bills (caused by wrong HS code), and damage claims (prevented by correct packaging). <a href="/">Gemora Global</a> guides all export clients through the full shipping process.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -159,7 +159,7 @@ export const BLOG_BATCH_7 = [
     tags: ["courier", "jewellery export", "shipping", "logistics"],
     content: `
       <h2>Best Courier Services for <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> from India</h2>
-      <p>Selecting the right courier is critical for international jewellery export — it affects delivery speed, shipment safety, insurance coverage, and your buyer's overall experience. The best option depends on your destination market, shipment weight, and order value.</p>
+      <p>Selecting the right courier is critical for international <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a> — it affects delivery speed, shipment safety, insurance coverage, and your buyer's overall experience. The best option depends on your destination market, shipment weight, and order value.</p>
 
       <h2>Courier Comparison by Market</h2>
       <ul>
@@ -289,7 +289,7 @@ export const BLOG_BATCH_7 = [
       <h2>MOQ and Ordering for Custom Packaging</h2>
       <p>Custom dust bags and boxes typically have a minimum order of 500–1000 units per design. For wholesale buyers, <a href="/">Gemora Global</a> coordinates retail-ready packaging as part of bulk orders, making it easy to receive branded, shelf-ready jewellery without a separate packaging supplier relationship.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {
@@ -326,7 +326,7 @@ export const BLOG_BATCH_7 = [
       <h2>Duty-Saving Strategies</h2>
       <p>Indian exporters can reduce buyer duty costs through GSP (Generalised System of Preferences) preference certificates, which provide duty-free or reduced-rate access for eligible products to USA, UK, and EU. The India-UAE CEPA (Comprehensive Economic Partnership Agreement) also provides preferential duty rates for UAE buyers importing Indian jewellery.</p>
 
-      <p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
+      <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     `,
   },
   {

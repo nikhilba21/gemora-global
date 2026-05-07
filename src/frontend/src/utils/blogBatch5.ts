@@ -30,7 +30,7 @@ export const BLOG_BATCH_5 = [
 <h2>MOQ and Pricing</h2>
 <p>The relationship between MOQ and price is direct: the higher the quantity, the lower the per-unit cost. A 50-piece order may cost $4.50 per piece; a 500-piece order of the same item often drops to $3.00–$3.50. Planning orders at volume tiers is the fastest way to improve your retail margin.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 142,
@@ -47,7 +47,7 @@ export const BLOG_BATCH_5 = [
       "https://images.unsplash.com/photo-1573408301185-9519f94815b8?w=800&h=500&fit=crop",
     tags: ["wholesale jewellery", "bulk buying", "guide", "b2b"],
     content: `<h2>Step-by-Step Guide to Buying <a href="/wholesale">Wholesale Jewellery</a></h2>
-<p>Buying wholesale jewellery from India involves a clear process. First, define your target market: who is your end customer, what styles do they prefer, and what price point are you targeting at retail? This narrows your supplier search and prevents costly mis-buys. Next, set your total budget — factoring in product cost, international shipping, import duties, and your desired margin target.</p>
+<p>Buying <a href="/wholesale">Wholesale Jewellery</a> from India involves a clear process. First, define your target market: who is your end customer, what styles do they prefer, and what price point are you targeting at retail? This narrows your supplier search and prevents costly mis-buys. Next, set your total budget — factoring in product cost, international shipping, import duties, and your desired margin target.</p>
 
 <h2>Finding the Right Supplier</h2>
 <ul>
@@ -332,6 +332,6 @@ export const BLOG_BATCH_5 = [
 <h2>Building a Sustainable Reselling Business</h2>
 <p>The resellers who build lasting businesses are those who treat their supplier relationship as a partnership. Communicate regularly about what's selling and what isn't. Provide photos of your display — good suppliers use this feedback to improve their catalogues. <a href="/">Gemora Global</a> offers WhatsApp support and digital catalogue access for all reseller accounts, making reorder decisions fast and efficient.</p>
 
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

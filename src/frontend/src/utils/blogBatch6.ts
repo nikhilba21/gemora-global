@@ -33,7 +33,7 @@ export const BLOG_BATCH_6 = [
   <li><strong>Ethnic-Western fusion</strong> — Kundan and meenakari designs with contemporary silhouettes for the diaspora market.</li>
 </ul>
 <p>At <a href="/">Gemora Global</a>, we manufacture all of the above categories with wholesale MOQ from 50 units. Explore our <a href="/collections/trendy-jewelry">trendy jewellery collections</a> and request your 2026 wholesale catalogue today.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 152,
@@ -61,7 +61,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Other fast-growing styles include ear cuffs (no-pierce option driving impulse buys), tassel drop earrings for festival season, and asymmetric statement pieces for fashion-forward markets. Threading and pulling earrings are popular with younger buyers aged 18–30 in Western markets.</p>
 <p>Browse <a href="/">Gemora Global</a>'s full <a href="/collections/earrings">wholesale earrings range</a> with MOQ from 50 units per style.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 153,
@@ -150,7 +150,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Indian manufacturers like <a href="/">Gemora Global</a> produce Korean-inspired jewellery using thin wire craftsmanship, minimal finishing, and the specific delicate proportions that define this aesthetic. The category is particularly strong in Southeast Asia, where Korean cultural influence is highest, but demand is growing rapidly in Western markets too.</p>
 <p>Explore our <a href="/collections/korean-jewelry">Korean-inspired jewellery wholesale collection</a> with MOQ from 50 units.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 156,
@@ -238,7 +238,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Boho jewellery has strong seasonal peaks — summer, festival season, and beach holidays generate the highest volumes. Key markets include Australia (beach culture), USA West Coast, UK festival circuit (Glastonbury season), Brazil, South Africa, and Bali/Thailand tourism retail.</p>
 <p>India is the world's leading manufacturer of boho jewellery, particularly oxidised silver-look pieces, tribal motif designs, and natural material combinations. <a href="/">Gemora Global</a> supplies boho-inspired wholesale collections with full customisation available from 100 units.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 159,
@@ -266,7 +266,7 @@ export const BLOG_BATCH_6 = [
 </ul>
 <p>Styling considerations matter for statement necklace retail — showcasing pieces against specific necklines (V-neck vs crew neck vs off-shoulder) helps customers visualise and purchase. Occasion merchandising (party, wedding guest, office) also drives higher conversion in boutique settings.</p>
 <p>Browse <a href="/">Gemora Global</a>'s wholesale <a href="/collections/necklaces">necklace collection</a> with MOQ from 50 units per design.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
   {
     id: 160,
@@ -294,6 +294,6 @@ export const BLOG_BATCH_6 = [
   <li><strong>Fusion bridal</strong> — Ethnic earrings paired with simple Western gown, or minimal meenakari with contemporary silhouettes</li>
 </ul>
 <p>Export markets for Indian bridal jewellery are clear: UK South Asian diaspora (largest market outside India), UAE (both resident South Asians and Arab brides drawn to Indian craftsmanship), USA (second-largest diaspora), and Canada. Wholesale bridal sets from <a href="/">Gemora Global</a> include necklace, earring, maang tikka, and bangles, with custom packaging available.</p>
-<p>Contact Gemora Global on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
+<p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>`,
   },
 ];

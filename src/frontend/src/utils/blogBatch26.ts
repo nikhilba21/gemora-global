@@ -28,7 +28,7 @@ export const BLOG_BATCH_26 = [
 <p>Carat refers to the diamond's weight, not its physical dimensions. One carat equals 0.2 grams. Because large diamonds are rarer than small ones, the price-per-carat increases exponentially as the weight goes up. In 2026, many buyers are choosing 'Under-Sized' carats (like 0.9ct instead of 1.0ct) to save significantly on price while getting a diamond that looks the same size.</p>
 
 <h2>Beyond the 4Cs: The 5th C (Certification)</h2>
-<p>In 2026, the 5th C is just as important: Certification. Never buy a significant diamond without a grading report from a reputable lab like the GIA or IGI. This report is your 'Insurance Policy,' proving that the diamond has been independently verified against the 4Cs. At Gemora Global, we only source diamonds with globally recognized certifications for our fine jewelry collections.</p>
+<p>In 2026, the 5th C is just as important: Certification. Never buy a significant diamond without a grading report from a reputable lab like the GIA or IGI. This report is your 'Insurance Policy,' proving that the diamond has been independently verified against the 4Cs. At <a href="/">Gemora Global</a>, we only source diamonds with globally recognized certifications for our fine jewelry collections.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Which of the 4Cs is the most important?</strong><br/>A: Most experts agree that **Cut** is the most important. A high-quality cut can hide inclusions and make a slightly yellowish diamond look whiter, whereas a poor cut can make even a perfect diamond look dull.</p>
@@ -92,7 +92,7 @@ export const BLOG_BATCH_26 = [
 <p><strong>Q9: Why are some lab diamonds 'blue' or 'brown'?</strong><br/>A: This is a result of trace elements (like Boron) or 'strain' during the growth process. Higher-quality labs produce perfectly colorless D-F stones.</p>
 <p><strong>Q10: Can I get my lab diamond insured?</strong><br/>A: Yes. All major insurance companies treat lab-grown diamond jewelry the same as natural jewelry, based on its appraised value.</p>
 <p><strong>Q11: What is 'Seed-to-Ring' traceability?</strong><br/>A: It's a 2026 trend where every lab diamond has a digital record of the exact machine it was grown in and the artist who cut it.</p>
-<p><strong>Q12: Does Gemora Global sell lab-grown diamonds?</strong><br/>A: Yes! We offer a full range of lab-grown diamond jewelry for our wholesale partners, including engagement rings, studs, and tennis bracelets. Contact us for a quote.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> sell lab-grown diamonds?</strong><br/>A: Yes! We offer a full range of lab-grown diamond jewelry for our wholesale partners, including engagement rings, studs, and tennis bracelets. Contact us for a quote.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our lab-grown and natural diamond collections. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
@@ -122,7 +122,7 @@ export const BLOG_BATCH_26 = [
 <p>A huge trend for 2026 is 'Antique-Cut' Moissanite—Old European Cuts, Cushion Cuts, and Asscher Cuts. Because Moissanite is lab-grown, it can be cut with incredible precision into these romantic, vintage shapes that are often hard to find in affordable diamonds.</p>
 
 <h2>Sourcing Moissanite Wholesale from Jaipur</h2>
-<p>Jaipur is a major global hub for Moissanite cutting and setting. We use high-quality 'DEF-Colorless' Moissanite stones that are virtually indistinguishable from diamonds to the naked eye. At Gemora Global, we specialize in setting Moissanite in Sterling Silver and Gold Vermeil, providing our wholesale partners with a high-end 'Diamond-Look' collection that sells out fast.</p>
+<p>Jaipur is a major global hub for Moissanite cutting and setting. We use high-quality 'DEF-Colorless' Moissanite stones that are virtually indistinguishable from diamonds to the naked eye. At <a href="/">Gemora Global</a>, we specialize in setting Moissanite in Sterling Silver and Gold Vermeil, providing our wholesale partners with a high-end 'Diamond-Look' collection that sells out fast.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Does Moissanite look 'fake'?</strong><br/>A: Not at all. To the naked eye, it looks like a very high-quality, very sparkly diamond. Only in direct sunlight does its 'rainbow' sparkle become more obvious than a diamond's.</p>
@@ -166,7 +166,7 @@ export const BLOG_BATCH_26 = [
 <p>One of the best things about sapphires is their hardness. They are a 9 on the Mohs scale, meaning only diamonds are harder. This makes them the perfect choice for 'Everyday' rings (like engagement or signet rings) because they won't scratch or chip easily under normal wear. They are a much more durable choice than stones like Amethyst or Citrine.</p>
 
 <h2>Sourcing Sapphires from Jaipur</h2>
-<p>Jaipur is one of the world's primary cutting and trading centers for sapphires. We have direct access to the 'Royal Blue' stones from Kashmir and Sri Lanka (Ceylon), as well as the 'Fancy' colors from Africa and Southeast Asia. At Gemora Global, we specialize in 'Multi-Sapphire' designs—jewelry that features a rainbow of different colored sapphires in a single piece. This 'Rainbow-Chic' look is a top-seller for our international wholesale partners.</p>
+<p>Jaipur is one of the world's primary cutting and trading centers for sapphires. We have direct access to the 'Royal Blue' stones from Kashmir and Sri Lanka (Ceylon), as well as the 'Fancy' colors from Africa and Southeast Asia. At <a href="/">Gemora Global</a>, we specialize in 'Multi-Sapphire' designs—jewelry that features a rainbow of different colored sapphires in a single piece. This 'Rainbow-Chic' look is a top-seller for our international wholesale partners.</p>
 
 <h2>Frequently Asked Questions</h2>
 <p><strong>Q1: Are all sapphires blue?</strong><br/>A: No! Only blue corundum is called Sapphire. All other colors (except red) are 'Fancy Sapphires.' Red corundum is called a Ruby.</p>
@@ -232,7 +232,7 @@ export const BLOG_BATCH_26 = [
 <p><strong>Q9: Can I clean my emerald with alcohol?</strong><br/>A: No! Alcohol will dissolve the natural oils in the stone, making the inclusions much more visible and the stone look dull.</p>
 <p><strong>Q10: What are 'Trapiche' emeralds?</strong><br/>A: They are a rare and beautiful type of emerald that naturally grows with a six-pointed star-shaped pattern of black carbon. They are a huge trend for 'Artisan' collectors in 2026.</p>
 <p><strong>Q11: What's the 'Next Big' emerald trend?</strong><br/>A: 'Tumbled' emeralds—smooth, organic-shaped stones that aren't faceted—are a massive trend for the 'Raw-Luxury' aesthetic.</p>
-<p><strong>Q12: Does Gemora Global offer emerald wholesale?</strong><br/>A: Yes! We have a vast stock of emeralds in all sizes and grades. We can help you source anything from small 'Melee' stones to significant individual gems. Contact us for details.</p>
+<p><strong>Q12: Does <a href="/">Gemora Global</a> offer emerald wholesale?</strong><br/>A: Yes! We have a vast stock of emeralds in all sizes and grades. We can help you source anything from small 'Melee' stones to significant individual gems. Contact us for details.</p>
 
 <p><a href="/contact">Contact Gemora Global</a> for our exquisite emerald collection. <a href="/products">Browse products</a> or explore <a href="/wholesale">wholesale terms</a>.</p>`,
   },
