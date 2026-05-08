@@ -15,22 +15,31 @@ app.use(compression());
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
 const FRONTEND_URL = process.env.FRONTEND_URL || '';
+const ALLOWED_ORIGINS = [
+  'gemoraglobal.co',
+  'globalgemora.co',
+  'vercel.app',
+  'localhost',
+  '127.0.0.1'
+];
+
 app.use(cors({
   origin: function (origin, cb) {
     if (!origin) return cb(null, true);
-    if (
-      origin.includes('localhost') ||
-      origin.includes('127.0.0.1') ||
-      origin.includes('vercel.app') ||
-      origin.includes('gemoraglobal.co') ||
-      origin.includes('globalgemora.co') ||
-      (FRONTEND_URL && origin.startsWith(FRONTEND_URL))
-    ) return cb(null, true);
-    cb(new Error('CORS blocked: ' + origin));
+    const isAllowed = ALLOWED_ORIGINS.some(domain => origin.includes(domain)) || 
+                     (FRONTEND_URL && origin.startsWith(FRONTEND_URL));
+    
+    if (isAllowed) {
+      cb(null, true);
+    } else {
+      console.warn('CORS blocked for origin:', origin);
+      cb(new Error('CORS blocked'));
+    }
   },
   credentials: true,
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization'],
+  allowedHeaders: ['Content-Type','Authorization','X-Requested-With','Accept','Origin'],
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
 // ── Body parser ───────────────────────────────────────────────────────────────
