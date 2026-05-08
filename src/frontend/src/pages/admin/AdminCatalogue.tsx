@@ -1,10 +1,9 @@
 import api from '../../lib/api';
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { FileText, Loader2 } from "lucide-react";
+import { FileText, Loader2, Trash2, X, UploadCloud, CheckCircle2, AlertCircle } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import { useStorageUpload } from "../../hooks/useStorageUpload";
 
 const fieldStyle = {
   width: "100%",
@@ -24,22 +23,25 @@ const labelStyle = {
   marginBottom: 6,
 } as React.CSSProperties;
 
+interface UploadFileItem {
+  id: string;
+  title: string;
+  description: string;
+  fileUrl: string;
+  fileName: string;
+  status: 'pending' | 'uploading' | 'done' | 'error';
+  progress: number;
+}
+
 export default function AdminCatalogue() {
   const qc = useQueryClient();
   const [showForm, setShowForm] = useState(false);
-  const [form, setForm] = useState({
-    title: "",
-    description: "",
-    fileUrl: "",
-    fileName: "",
-  });
-  const {
-    uploadFile,
-    uploading: storageUploading,
-    progress,
-    uploadError,
-  } = useStorageUpload();
+  const [uploadList, setUploadList] = useState<UploadFileItem[]>([]);
+  const [savingBatch, setSavingBatch] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
+
+  const CLOUDINARY_CLOUD = (import.meta as any).env?.VITE_CLOUDINARY_CLOUD || 'dnusbgxgm';
+  const UPLOAD_PRESET = (import.meta as any).env?.VITE_CLOUDINARY_PRESET || 'gemora_unsigned';
 
   const { data: catalogues = [] } = useQuery({
     queryKey: ["catalogues"],
@@ -48,29 +50,6 @@ export default function AdminCatalogue() {
   });
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["catalogues"] });
-
-  const createMutation = useMutation({
-    mutationFn: () => {
-      const uploadedAt = new Date().toLocaleDateString("en-IN", {
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-      });
-      return api.createCatalogue(
-        form.title.trim(),
-        form.description.trim(),
-        form.fileUrl,
-        form.fileName,
-        uploadedAt,
-      );
-    },
-    onSuccess: () => {
-      toast.success("Catalogue saved");
-      resetForm();
-      invalidate();
-    },
-    onError: () => toast.error("Failed to save catalogue"),
-  });
 
   const deleteMutation = useMutation({
     mutationFn: (id: bigint) => api.deleteCatalogue(Number(id)),
@@ -82,38 +61,129 @@ export default function AdminCatalogue() {
   });
 
   const resetForm = () => {
-    setForm({ title: "", description: "", fileUrl: "", fileName: "" });
+    setUploadList([]);
     setShowForm(false);
   };
 
+  async function uploadSingleFile(file: File, itemId: string) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', UPLOAD_PRESET);
+    formData.append('folder', 'gemora');
+
+    // Use /image/upload as standard in original codebase, works for PDFs too
+    const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`;
+
+    return new Promise<string>((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url, true);
+
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          const pct = Math.round((e.loaded / e.total) * 100);
+          setUploadList(prev => prev.map(item => item.id === itemId ? { ...item, progress: pct } : item));
+        }
+      };
+
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          const res = JSON.parse(xhr.responseText);
+          resolve(res.secure_url);
+        } else {
+          reject(new Error(`Failed: ${xhr.status}`));
+        }
+      };
+
+      xhr.onerror = () => reject(new Error('Network error'));
+      xhr.send(formData);
+    });
+  }
+
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    try {
-      const url = await uploadFile(file);
-      setForm((f) => ({ ...f, fileUrl: url, fileName: file.name }));
-      toast.success("PDF uploaded successfully");
-    } catch {
-      toast.error(
-        "Upload failed — please check your internet connection and try again",
-      );
+    const files = e.target.files;
+    if (!files || !files.length) return;
+
+    const newItems: UploadFileItem[] = [];
+    const filesArray = Array.from(files);
+
+    for (const file of filesArray) {
+      const id = Math.random().toString(36).substring(2, 9);
+      const dotIdx = file.name.lastIndexOf('.');
+      const title = dotIdx !== -1 ? file.name.substring(0, dotIdx) : file.name;
+      
+      newItems.push({
+        id,
+        title: title,
+        description: "",
+        fileUrl: "",
+        fileName: file.name,
+        status: 'pending',
+        progress: 0,
+      });
     }
+
+    setUploadList(prev => [...prev, ...newItems]);
+
+    // Upload them concurrently
+    for (const item of newItems) {
+      const file = filesArray.find(f => f.name === item.fileName);
+      if (!file) continue;
+
+      setUploadList(prev => prev.map(u => u.id === item.id ? { ...u, status: 'uploading' } : u));
+      try {
+        const url = await uploadSingleFile(file, item.id);
+        setUploadList(prev => prev.map(u => u.id === item.id ? { ...u, status: 'done', fileUrl: url, progress: 100 } : u));
+      } catch {
+        setUploadList(prev => prev.map(u => u.id === item.id ? { ...u, status: 'error', progress: 0 } : u));
+      }
+    }
+
     if (fileRef.current) fileRef.current.value = "";
   };
 
-  const handleSave = () => {
-    if (!form.title.trim()) {
-      toast.error("Please enter a title");
+  const handleSave = async () => {
+    const activeItems = uploadList.filter(item => item.status === 'done' && item.fileUrl);
+    if (activeItems.length === 0) {
+      toast.error("Please upload at least one PDF file successfully");
       return;
     }
-    if (!form.fileUrl) {
-      toast.error("Please upload a PDF file");
+
+    const emptyTitle = activeItems.some(item => !item.title.trim());
+    if (emptyTitle) {
+      toast.error("Please provide a title for all catalogues");
       return;
     }
-    createMutation.mutate();
+
+    setSavingBatch(true);
+    const uploadedAt = new Date().toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+
+    let successCount = 0;
+    try {
+      for (const item of activeItems) {
+        await api.createCatalogue({
+          title: item.title.trim(),
+          description: item.description.trim(),
+          fileUrl: item.fileUrl,
+          fileName: item.fileName,
+          uploadedAt,
+        });
+        successCount++;
+      }
+      toast.success(`${successCount} catalogues saved successfully`);
+      resetForm();
+      invalidate();
+    } catch (e) {
+      toast.error("Some catalogues failed to save");
+    } finally {
+      setSavingBatch(false);
+    }
   };
 
-  const isSaving = createMutation.isPending || storageUploading;
+  const isSaving = savingBatch;
 
   return (
     <AdminLayout>
@@ -131,8 +201,7 @@ export default function AdminCatalogue() {
               Catalogue Manager
             </h2>
             <p style={{ color: "#666", fontSize: 13, marginTop: 4 }}>
-              Upload multiple catalogues. Buyers can download them from the
-              website.
+              Upload and manage catalogues. Buyers can download them directly.
             </p>
           </div>
           {!showForm && (
@@ -150,9 +219,8 @@ export default function AdminCatalogue() {
                 cursor: "pointer",
                 fontSize: 14,
               }}
-              data-ocid="admin.catalogue.add_button"
             >
-              + Add Catalogue
+              + Add Catalogues
             </button>
           )}
         </div>
@@ -167,164 +235,173 @@ export default function AdminCatalogue() {
               marginBottom: 28,
             }}
           >
-            <h3 style={{ color: "#1A237E", marginBottom: 20, fontSize: 16 }}>
-              Upload New Catalogue
-            </h3>
-            <div style={{ display: "grid", gap: 16 }}>
-              <div>
-                <label htmlFor="cat-title" style={labelStyle}>
-                  Catalogue Title *
-                </label>
-                <input
-                  id="cat-title"
-                  style={fieldStyle}
-                  placeholder="e.g. Summer Collection 2026"
-                  value={form.title}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, title: e.target.value }))
-                  }
-                  data-ocid="admin.catalogue.title_input"
-                />
-              </div>
-              <div>
-                <label htmlFor="cat-desc" style={labelStyle}>
-                  Description (optional)
-                </label>
-                <textarea
-                  id="cat-desc"
-                  style={{ ...fieldStyle, minHeight: 72, resize: "vertical" }}
-                  placeholder="Brief description of this catalogue..."
-                  value={form.description}
-                  onChange={(e) =>
-                    setForm((f) => ({ ...f, description: e.target.value }))
-                  }
-                  data-ocid="admin.catalogue.desc_textarea"
-                />
-              </div>
-              <div>
-                <label htmlFor="cat-file" style={labelStyle}>
-                  Upload PDF File *
-                  <span
-                    style={{
-                      color: "#888",
-                      fontSize: 11,
-                      marginLeft: 8,
-                      fontWeight: 400,
-                    }}
-                  >
-                    (PDFs are uploaded as-is — no conversion)
-                  </span>
-                </label>
-                <button
-                  type="button"
-                  style={{
-                    border: `2px dashed ${storageUploading ? "#42A5F5" : "#c5cae9"}`,
-                    borderRadius: 8,
-                    padding: "20px 16px",
-                    textAlign: "center",
-                    cursor: storageUploading ? "not-allowed" : "pointer",
-                    background: storageUploading ? "#e8f4fe" : "#f5f7ff",
-                    width: "100%",
-                    transition: "all 0.2s",
-                  }}
-                  onClick={() => !storageUploading && fileRef.current?.click()}
-                  aria-label="Upload PDF file"
-                  data-ocid="admin.catalogue.upload_dropzone"
-                >
-                  <input
-                    ref={fileRef}
-                    id="cat-file"
-                    type="file"
-                    accept="application/pdf,.pdf"
-                    style={{ display: "none" }}
-                    onChange={handleFileChange}
-                  />
-                  {form.fileUrl ? (
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 10,
-                        color: "#2e7d32",
-                      }}
-                    >
-                      <FileText size={20} />
-                      <span style={{ fontSize: 14, fontWeight: 600 }}>
-                        ✓ {form.fileName}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setForm((f) => ({ ...f, fileUrl: "", fileName: "" }));
-                        }}
-                        style={{
-                          background: "crimson",
-                          color: "#fff",
-                          border: "none",
-                          borderRadius: 4,
-                          padding: "2px 8px",
-                          fontSize: 12,
-                          cursor: "pointer",
-                          marginLeft: 8,
-                        }}
-                      >
-                        Change
-                      </button>
-                    </div>
-                  ) : storageUploading ? (
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 10,
-                        color: "#42A5F5",
-                      }}
-                    >
-                      <Loader2 size={18} className="animate-spin" />
-                      <span style={{ fontSize: 14, fontWeight: 600 }}>
-                        Uploading PDF... {progress > 0 ? `${progress}%` : ""}
-                      </span>
-                    </div>
-                  ) : (
-                    <div style={{ color: "#888", fontSize: 14 }}>
-                      <div style={{ fontSize: 28, marginBottom: 6 }}>📄</div>
-                      Click to upload PDF file
-                    </div>
-                  )}
-                </button>
-                {uploadError && (
-                  <p
-                    style={{ color: "crimson", fontSize: 12, marginTop: 6 }}
-                    data-ocid="admin.catalogue.upload_error"
-                  >
-                    {uploadError}
-                  </p>
-                )}
-              </div>
+            <div className="flex justify-between items-center mb-6">
+              <h3 style={{ color: "#1A237E", fontSize: 16, fontWeight: 600, margin: 0 }}>
+                Upload New Catalogues
+              </h3>
+              <button
+                onClick={resetForm}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <X size={20} />
+              </button>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-5">
+            {/* Drag & drop / upload zone */}
+            <div
+              style={{
+                border: "2px dashed #c5cae9",
+                borderRadius: 8,
+                padding: "30px 20px",
+                textAlign: "center",
+                cursor: "pointer",
+                background: "#f5f7ff",
+                transition: "all 0.2s",
+                marginBottom: 24,
+              }}
+              onClick={() => fileRef.current?.click()}
+            >
+              <input
+                ref={fileRef}
+                type="file"
+                accept="application/pdf,.pdf"
+                multiple
+                style={{ display: "none" }}
+                onChange={handleFileChange}
+              />
+              <UploadCloud size={32} className="mx-auto text-indigo-400 mb-2" />
+              <p className="text-sm font-semibold text-indigo-900">
+                Click to choose PDF files or drag them here
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                You can select multiple PDFs at once
+              </p>
+            </div>
+
+            {/* List of uploaded files to edit title/description */}
+            {uploadList.length > 0 && (
+              <div className="space-y-4 mb-6">
+                <h4 style={{ color: "#1A237E", fontSize: 14, fontWeight: 600, borderBottom: "1px solid #eef2f6", paddingBottom: 8 }}>
+                  Catalogues List ({uploadList.length} files)
+                </h4>
+                {uploadList.map((item) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      border: "1px solid #eef2f6",
+                      borderRadius: 8,
+                      padding: 16,
+                      background: "#fafbfe"
+                    }}
+                    className="relative"
+                  >
+                    {/* Delete item button */}
+                    <button
+                      type="button"
+                      onClick={() => setUploadList(prev => prev.filter(u => u.id !== item.id))}
+                      style={{
+                        position: "absolute",
+                        top: 12,
+                        right: 12,
+                        color: "crimson",
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer"
+                      }}
+                    >
+                      <Trash2 size={16} />
+                    </button>
+
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="p-2 bg-indigo-50 text-indigo-600 rounded">
+                        {item.status === 'uploading' ? (
+                          <Loader2 size={18} className="animate-spin" />
+                        ) : item.status === 'done' ? (
+                          <CheckCircle2 size={18} className="text-green-600" />
+                        ) : item.status === 'error' ? (
+                          <AlertCircle size={18} className="text-red-500" />
+                        ) : (
+                          <FileText size={18} />
+                        )}
+                      </div>
+                      <div style={{ flex: 1, minWidth: 0, paddingRight: 24 }}>
+                        <p className="font-semibold text-sm truncate text-indigo-950 mb-0.5">
+                          {item.fileName}
+                        </p>
+                        {item.status === 'uploading' && (
+                          <p className="text-xs text-indigo-500 font-medium">
+                            Uploading... {item.progress}%
+                          </p>
+                        )}
+                        {item.status === 'done' && (
+                          <p className="text-xs text-green-600 font-medium">
+                            Uploaded successfully
+                          </p>
+                        )}
+                        {item.status === 'error' && (
+                          <p className="text-xs text-red-500 font-medium">
+                            Upload failed
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Form fields for this specific catalogue */}
+                    {item.status === 'done' && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label style={labelStyle}>Catalogue Title *</label>
+                          <input
+                            style={fieldStyle}
+                            value={item.title}
+                            placeholder="Enter title..."
+                            onChange={(e) => setUploadList(prev => prev.map(u => u.id === item.id ? { ...u, title: e.target.value } : u))}
+                          />
+                        </div>
+                        <div>
+                          <label style={labelStyle}>Description (optional)</label>
+                          <input
+                            style={fieldStyle}
+                            value={item.description}
+                            placeholder="Enter short description..."
+                            onChange={(e) => setUploadList(prev => prev.map(u => u.id === item.id ? { ...u, description: e.target.value } : u))}
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Progress bar */}
+                    {item.status === 'uploading' && (
+                      <div className="w-full bg-gray-200 h-1 rounded overflow-hidden mt-2">
+                        <div
+                          className="bg-indigo-600 h-1 transition-all duration-150"
+                          style={{ width: `${item.progress}%` }}
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
               <button
                 type="button"
                 onClick={handleSave}
-                disabled={isSaving}
+                disabled={isSaving || uploadList.filter(u => u.status === 'done').length === 0}
                 className="w-full sm:w-auto"
                 style={{
-                  background: isSaving ? "#c5cae9" : "#1A237E",
+                  background: isSaving || uploadList.filter(u => u.status === 'done').length === 0 ? "#c5cae9" : "#1A237E",
                   color: "#fff",
                   border: "none",
                   borderRadius: 8,
                   padding: "10px 24px",
                   fontWeight: 600,
-                  cursor: isSaving ? "not-allowed" : "pointer",
+                  cursor: isSaving || uploadList.filter(u => u.status === 'done').length === 0 ? "not-allowed" : "pointer",
                   fontSize: 14,
                 }}
-                data-ocid="admin.catalogue.save_button"
               >
-                {isSaving ? "Saving..." : "Save Catalogue"}
+                {isSaving ? "Saving Catalogues..." : `Save ${uploadList.filter(u => u.status === 'done').length} Catalogues`}
               </button>
               <button
                 type="button"
@@ -339,7 +416,6 @@ export default function AdminCatalogue() {
                   cursor: "pointer",
                   fontSize: 14,
                 }}
-                data-ocid="admin.catalogue.cancel_button"
               >
                 Cancel
               </button>
@@ -357,17 +433,16 @@ export default function AdminCatalogue() {
               textAlign: "center",
               color: "#aaa",
             }}
-            data-ocid="admin.catalogue.empty_state"
           >
             <div style={{ fontSize: 40, marginBottom: 12 }}>📁</div>
             <p>No catalogues uploaded yet.</p>
             <p style={{ fontSize: 13, marginTop: 4 }}>
-              Click "Add Catalogue" to upload your first PDF.
+              Click "Add Catalogues" to upload your first PDF.
             </p>
           </div>
         ) : (
           <div style={{ display: "grid", gap: 12 }}>
-            {catalogues.map((cat, i) => (
+            {catalogues.map((cat) => (
               <div
                 key={String(cat.id)}
                 style={{
@@ -377,7 +452,6 @@ export default function AdminCatalogue() {
                   padding: "16px 20px",
                 }}
                 className="flex flex-col sm:flex-row sm:items-center gap-3"
-                data-ocid={`admin.catalogue.item.${i + 1}`}
               >
                 <div
                   style={{
@@ -424,7 +498,6 @@ export default function AdminCatalogue() {
                       textDecoration: "none",
                       cursor: "pointer",
                     }}
-                    data-ocid={`admin.catalogue.preview_button.${i + 1}`}
                   >
                     Preview
                   </a>
@@ -443,7 +516,6 @@ export default function AdminCatalogue() {
                       fontSize: 13,
                       cursor: "pointer",
                     }}
-                    data-ocid={`admin.catalogue.delete_button.${i + 1}`}
                   >
                     Delete
                   </button>

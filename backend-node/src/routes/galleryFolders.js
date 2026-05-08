@@ -99,6 +99,21 @@ router.put('/:id', requireAdmin, async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// PUT /api/gallery-folders/:id/images/:imgId — update single image caption/sortOrder (Admin)
+router.put('/:id/images/:imgId', requireAdmin, async (req, res) => {
+  try {
+    const { caption, sortOrder } = req.body;
+    const ex = await query('SELECT * FROM gallery_folder_images WHERE id=$1 AND "folderId"=$2', [req.params.imgId, req.params.id]);
+    if (!ex.rows[0]) return res.status(404).json({ error: 'Image not found in this folder' });
+    const e = ex.rows[0];
+    const r = await query(
+      'UPDATE gallery_folder_images SET caption=$1, "sortOrder"=$2 WHERE id=$3 AND "folderId"=$4 RETURNING *',
+      [caption !== undefined ? caption : e.caption, sortOrder !== undefined ? sortOrder : e.sortOrder, req.params.imgId, req.params.id]
+    );
+    res.json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // DELETE /api/gallery-folders/:id/images/:imgId — delete single image (Admin)
 router.delete('/:id/images/:imgId', requireAdmin, async (req, res) => {
   try {
