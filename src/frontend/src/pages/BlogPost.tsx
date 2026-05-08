@@ -251,6 +251,76 @@ export default function BlogPostPage() {
           </motion.div>
         </article>
 
+        {/* ── Contextual SEO Interlinking Section ──────────────── */}
+        <section className="container max-w-3xl px-4 py-8 md:py-10">
+          <div className="border border-border rounded-2xl p-5 md:p-8 bg-card/50">
+            <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-4">
+              Explore Wholesale Jewellery Categories
+            </h3>
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+              Gemora Global offers factory-direct pricing on a wide range of{" "}
+              <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
+                wholesale imitation jewellery
+              </Link>{" "}
+              from Jaipur, India. Browse our top categories:
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {[
+                { label: "Kundan Jewellery", to: "/kundan-jewellery-wholesale" },
+                { label: "Bridal Jewellery Sets", to: "/bridal-jewellery-wholesale" },
+                { label: "Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
+                { label: "Fashion Jewellery", to: "/fashion-jewellery-exporter" },
+                { label: "Temple Jewellery", to: "/temple-jewellery-manufacturer" },
+                { label: "American Diamond", to: "/american-diamond-jewellery-wholesale" },
+                { label: "Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
+                { label: "Meenakari Jewellery", to: "/meenakari-jewellery-wholesale" },
+              ].map((cat) => (
+                <Link
+                  key={cat.to}
+                  to={cat.to}
+                  className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-colors"
+                >
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
+
+            <h4 className="font-semibold text-sm text-foreground mb-3">
+              We Export To
+            </h4>
+            <div className="flex flex-wrap gap-2 mb-5">
+              {[
+                { label: "🇺🇸 USA", to: "/imitation-jewellery-supplier-usa" },
+                { label: "🇬🇧 UK", to: "/jewellery-supplier-uk" },
+                { label: "🇦🇪 UAE", to: "/jewellery-exporter-uae" },
+                { label: "🇦🇺 Australia", to: "/jewellery-exporter-australia" },
+                { label: "🇨🇦 Canada", to: "/jewellery-exporter-canada" },
+                { label: "🇸🇬 Singapore", to: "/jewellery-exporter-singapore" },
+                { label: "🇪🇺 Europe", to: "/jewellery-exporter-europe" },
+              ].map((country) => (
+                <Link
+                  key={country.to}
+                  to={country.to}
+                  className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-border bg-muted/50 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+                >
+                  {country.label}
+                </Link>
+              ))}
+            </div>
+
+            <p className="text-xs text-muted-foreground">
+              Looking for bulk pricing?{" "}
+              <Link to="/wholesale" className="text-primary hover:underline font-medium">
+                View our wholesale guide
+              </Link>{" "}
+              or{" "}
+              <Link to="/contact" className="text-primary hover:underline font-medium">
+                request a quote today
+              </Link>.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="bg-primary/10 border-y border-primary/20 py-10 md:py-12 px-4">
           <div className="container text-center">

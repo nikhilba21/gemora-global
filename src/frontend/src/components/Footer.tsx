@@ -27,76 +27,68 @@ function InstagramIcon() {
   );
 }
 
-const CATEGORIES = [
-  { label: "Kundan Jewellery", to: "/kundan-jewellery-wholesale" },
-  { label: "Temple Jewellery", to: "/temple-jewellery-manufacturer" },
-  { label: "Antique Jewellery", to: "/products?category=antique" },
-  { label: "Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
-  { label: "Bridal Jewellery", to: "/bridal-jewellery-wholesale" },
-  { label: "Fashion Jewellery", to: "/fashion-jewellery-exporter" },
-  { label: "Meenakari Jewellery", to: "/products?category=meenakari" },
-  { label: "Bulk Jewellery", to: "/bulk-jewellery-supplier" },
+/* ── SEO-Optimized Footer Link Data ─────────────────────────────────────────── */
+
+const WHOLESALE_CATEGORIES = [
+  { label: "Wholesale Kundan Jewellery", to: "/kundan-jewellery-wholesale" },
+  { label: "Wholesale Bridal Jewellery Sets", to: "/bridal-jewellery-wholesale" },
+  { label: "Wholesale Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
+  { label: "Wholesale Meenakari Jewellery", to: "/meenakari-jewellery-wholesale" },
+  { label: "Wholesale American Diamond Jewellery", to: "/american-diamond-jewellery-wholesale" },
+  { label: "Wholesale Gold Plated Jewellery", to: "/gold-plated-jewellery-wholesale-india" },
+  { label: "Wholesale Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
+  { label: "Wholesale Temple Jewellery", to: "/temple-jewellery-manufacturer" },
+  { label: "Bulk Jewellery Supplier India", to: "/bulk-jewellery-supplier" },
+];
+
+const MANUFACTURER_EXPORTER = [
+  { label: "Imitation Jewellery Manufacturer Jaipur", to: "/imitation-jewellery-manufacturer-jaipur" },
+  { label: "Fashion Jewellery Exporter India", to: "/fashion-jewellery-exporter-india" },
+  { label: "Artificial Jewellery Exporter India", to: "/artificial-jewellery-exporter" },
+  { label: "Wholesale Imitation Jewellery Manufacturer", to: "/wholesale-imitation-jewellery-manufacturer-exporter-india" },
+  { label: "Custom Jewellery Manufacturer India", to: "/custom-jewellery-manufacturer" },
+  { label: "Private Label Jewellery India", to: "/private-label-jewellery-india" },
+  { label: "Fashion Jewellery Manufacturer India", to: "/fashion-jewellery-manufacturer-india" },
+  { label: "Wholesale Jewellery Rajasthan", to: "/wholesale-jewellery-rajasthan" },
+];
+
+const EXPORT_COUNTRIES = [
+  { label: "Imitation Jewellery Supplier USA", to: "/imitation-jewellery-supplier-usa" },
+  { label: "Jewellery Exporter to USA", to: "/jewellery-exporter-to-usa" },
+  { label: "Jewellery Supplier UK", to: "/jewellery-supplier-uk" },
+  { label: "Wholesale Jewellery UK", to: "/wholesale-jewellery-uk" },
+  { label: "Costume Jewellery Wholesale UK", to: "/costume-jewellery-wholesale-uk" },
+  { label: "Jewellery Exporter UAE", to: "/jewellery-exporter-uae" },
+  { label: "Jewellery Exporter Australia", to: "/jewellery-exporter-australia" },
+  { label: "Jewellery Exporter Canada", to: "/jewellery-exporter-canada" },
+  { label: "Jewellery Exporter Singapore", to: "/jewellery-exporter-singapore" },
+  { label: "Jewellery Exporter Europe", to: "/jewellery-exporter-europe" },
 ];
 
 const COMPANY_LINKS = [
   { label: "About Gemora Global", to: "/about" },
   { label: "Why Choose Us", to: "/why-choose-us" },
   { label: "Our Products", to: "/products" },
-  { label: "Gallery", to: "/gallery" },
+  { label: "Design Gallery", to: "/gallery" },
   { label: "Wholesale & Export", to: "/wholesale" },
-  { label: "Global Markets", to: "/export" },
-  { label: "Blog", to: "/blog" },
+  { label: "Global Export Markets", to: "/export" },
+  { label: "Jewellery Blog", to: "/blog" },
   { label: "Contact Us", to: "/contact" },
 ];
 
-const RESOURCES = [
-  {
-    label: "Imitation Jewellery Supplier USA",
-    to: "/imitation-jewellery-supplier-usa",
-  },
-  { label: "Jewellery Exporter UAE", to: "/jewellery-exporter-uae" },
-  { label: "Jewellery Supplier UK", to: "/jewellery-supplier-uk" },
-  {
-    label: "Custom Jewellery Manufacturer",
-    to: "/custom-jewellery-manufacturer",
-  },
-  {
-    label: "Private Label Jewellery India",
-    to: "/private-label-jewellery-india",
-  },
-  {
-    label: "Jewellery Exporter India",
-    to: "/imitation-jewellery-exporter-india",
-  },
-  {
-    label: "Wholesale Imitation Jewellery",
-    to: "/wholesale-imitation-jewellery",
-  },
-  {
-    label: "Artificial Jewellery Exporter",
-    to: "/artificial-jewellery-exporter",
-  },
-];
-
-const INTERNATIONAL_LINKS = [
-  { label: "USA", to: "/export-markets/usa" },
-  { label: "UK", to: "/export-markets/uk" },
-  { label: "Australia", to: "/export-markets/australia" },
-  { label: "Canada", to: "/export-markets/canada" },
-  { label: "UAE", to: "/export-markets/uae" },
-  { label: "Kuwait", to: "/export-markets/kuwait" },
-  { label: "Malaysia", to: "/export-markets/malaysia" },
-  { label: "Singapore", to: "/export-markets/singapore" },
-  { label: "Saudi Arabia", to: "/export-markets/saudi-arabia" },
-  { label: "Nigeria", to: "/export-markets/nigeria" },
-  { label: "Sri Lanka", to: "/export-markets/sri-lanka" },
+const BLOG_LINKS = [
+  { label: "Top Imitation Jewellery Trends 2026", to: "/blog/top-imitation-jewellery-trends-2026" },
+  { label: "How to Start Jewellery Import Business", to: "/blog/how-to-start-jewellery-wholesale-import-business" },
+  { label: "Why Indian Jewellery Dominates Global Markets", to: "/blog/why-indian-imitation-jewellery-dominates-global-markets" },
+  { label: "Bridal Jewellery for International Buyers", to: "/blog/bridal-jewellery-collections-international-buyers" },
+  { label: "Export Jewellery India to USA Guide", to: "/blog/export-jewellery-india-usa-guide" },
 ];
 
 const HELP_SUPPORT_LINKS = [
   { label: "FAQ", to: "/faq" },
   { label: "Privacy Policy", to: "/privacy-policy" },
   {
-    label: "Return, Refund, Replacement & Cancellation Policy",
+    label: "Return, Refund & Cancellation Policy",
     to: "/return-refund-cancellation-policy",
   },
   { label: "Terms & Conditions", to: "/terms-and-conditions" },
@@ -128,14 +120,43 @@ function FooterColTitle({ children }: { children: React.ReactNode }) {
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const hostname =
-    typeof window !== "undefined" ? window.location.hostname : "";
 
   return (
     <footer style={{ background: "#0d1b6e", color: "#fff" }}>
+      {/* Contextual SEO paragraph — passes link equity to money pages */}
+      <div className="container px-4 sm:px-6 pt-10 pb-4">
+        <p className="text-sm leading-relaxed text-center max-w-4xl mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
+          <strong style={{ color: "#D4AF37" }}>Gemora Global</strong> is a Jaipur-based{" "}
+          <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-white/80 hover:text-[#D4AF37] underline">
+            imitation jewellery manufacturer
+          </Link>{" "}
+          &amp; exporter since 2011. We supply{" "}
+          <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-white/80 hover:text-[#D4AF37] underline">
+            wholesale imitation jewellery
+          </Link>
+          ,{" "}
+          <Link to="/bridal-jewellery-wholesale" className="text-white/80 hover:text-[#D4AF37] underline">
+            bridal jewellery sets
+          </Link>
+          ,{" "}
+          <Link to="/kundan-jewellery-wholesale" className="text-white/80 hover:text-[#D4AF37] underline">
+            Kundan jewellery
+          </Link>
+          , and{" "}
+          <Link to="/oxidised-jewellery-wholesale" className="text-white/80 hover:text-[#D4AF37] underline">
+            oxidised jewellery
+          </Link>{" "}
+          to buyers in{" "}
+          <Link to="/imitation-jewellery-supplier-usa" className="text-white/80 hover:text-[#D4AF37] underline">USA</Link>,{" "}
+          <Link to="/jewellery-supplier-uk" className="text-white/80 hover:text-[#D4AF37] underline">UK</Link>,{" "}
+          <Link to="/jewellery-exporter-uae" className="text-white/80 hover:text-[#D4AF37] underline">UAE</Link>,{" "}
+          <Link to="/jewellery-exporter-australia" className="text-white/80 hover:text-[#D4AF37] underline">Australia</Link>, and 30+ countries. MOQ from 50 units.
+        </p>
+      </div>
+
       {/* Main footer grid */}
-      <div className="container px-4 sm:px-6 py-10 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 lg:gap-6">
+      <div className="container px-4 sm:px-6 py-8 sm:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-8 lg:gap-5">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-3 xl:col-span-1 text-center sm:text-left">
             <div className="mb-4 flex justify-center sm:justify-start">
@@ -234,12 +255,32 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Categories */}
+          {/* Wholesale Categories */}
           <div>
-            <FooterColTitle>Categories</FooterColTitle>
+            <FooterColTitle>Wholesale Categories</FooterColTitle>
             <ul className="space-y-0">
-              {CATEGORIES.map((c) => (
+              {WHOLESALE_CATEGORIES.map((c) => (
                 <FooterLink key={c.to} label={c.label} to={c.to} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Manufacturer & Exporter */}
+          <div>
+            <FooterColTitle>Manufacturer & Exporter</FooterColTitle>
+            <ul className="space-y-0">
+              {MANUFACTURER_EXPORTER.map((c) => (
+                <FooterLink key={c.to} label={c.label} to={c.to} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Export Countries */}
+          <div>
+            <FooterColTitle>Export Countries</FooterColTitle>
+            <ul className="space-y-0">
+              {EXPORT_COUNTRIES.map((r) => (
+                <FooterLink key={r.to} label={r.label} to={r.to} />
               ))}
             </ul>
           </div>
@@ -254,21 +295,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Export Services */}
+          {/* Important Blog Articles */}
           <div>
-            <FooterColTitle>Export Services</FooterColTitle>
+            <FooterColTitle>Popular Articles</FooterColTitle>
             <ul className="space-y-0">
-              {RESOURCES.map((r) => (
-                <FooterLink key={r.to} label={r.label} to={r.to} />
-              ))}
-            </ul>
-          </div>
-
-          {/* International */}
-          <div data-ocid="footer.international.section">
-            <FooterColTitle>International</FooterColTitle>
-            <ul className="space-y-0">
-              {INTERNATIONAL_LINKS.map((item) => (
+              {BLOG_LINKS.map((item) => (
                 <FooterLink key={item.to} label={item.label} to={item.to} />
               ))}
             </ul>

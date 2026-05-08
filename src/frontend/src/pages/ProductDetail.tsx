@@ -353,6 +353,59 @@ export default function ProductDetail() {
             compact={false}
           />
         </section>
+        {/* ── Contextual SEO Interlinking ──────────────────────── */}
+        <section className="mt-12 md:mt-16 border-t border-border pt-10">
+          <h2 className="font-serif text-xl font-bold text-foreground mb-4">
+            Explore More Wholesale Jewellery
+          </h2>
+          <p className="text-sm text-muted-foreground mb-5 leading-relaxed max-w-2xl">
+            Gemora Global is a trusted{" "}
+            <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline">
+              imitation jewellery manufacturer in Jaipur
+            </Link>{" "}
+            supplying premium{" "}
+            <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
+              wholesale fashion jewellery
+            </Link>{" "}
+            to boutiques and distributors worldwide. Browse our popular categories:
+          </p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[
+              { label: "Kundan Jewellery Wholesale", to: "/kundan-jewellery-wholesale" },
+              { label: "Bridal Jewellery Sets", to: "/bridal-jewellery-wholesale" },
+              { label: "Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
+              { label: "Fashion Jewellery Exporter", to: "/fashion-jewellery-exporter" },
+              { label: "Temple Jewellery", to: "/temple-jewellery-manufacturer" },
+              { label: "American Diamond Jewellery", to: "/american-diamond-jewellery-wholesale" },
+              { label: "Bulk Jewellery Supplier", to: "/bulk-jewellery-supplier" },
+            ].map((cat) => (
+              <Link
+                key={cat.to}
+                to={cat.to}
+                className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-colors"
+              >
+                {cat.label}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { label: "🇺🇸 Supplier USA", to: "/imitation-jewellery-supplier-usa" },
+              { label: "🇬🇧 Supplier UK", to: "/jewellery-supplier-uk" },
+              { label: "🇦🇪 Exporter UAE", to: "/jewellery-exporter-uae" },
+              { label: "🇦🇺 Exporter Australia", to: "/jewellery-exporter-australia" },
+              { label: "🇨🇦 Exporter Canada", to: "/jewellery-exporter-canada" },
+            ].map((c) => (
+              <Link
+                key={c.to}
+                to={c.to}
+                className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-border bg-muted/50 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+              >
+                {c.label}
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
 
       <Footer />
