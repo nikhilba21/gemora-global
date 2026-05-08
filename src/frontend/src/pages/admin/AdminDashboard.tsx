@@ -27,18 +27,19 @@ export default function AdminDashboard() {
     enabled: true,
   });
 
-  const { data: inquiries } = useQuery<Inquiry[]>({
+  const { data: rawInquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => api.getInquiries(),
     enabled: true,
   });
+  const inquiries = Array.isArray(rawInquiries) ? rawInquiries : ((rawInquiries as any)?.items || []);
 
   const { data: productsRes } = useQuery({
     queryKey: ["products", null],
     queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
-  const products = productsRes?.items || [];
+  const products = Array.isArray(productsRes?.items) ? productsRes.items : (Array.isArray(productsRes) ? productsRes : []);
 
   const orders = (() => {
     try {

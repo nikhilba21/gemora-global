@@ -49,11 +49,12 @@ export default function AdminCategories() {
   const [editing, setEditing] = useState<Category | null>(null);
   const [form, setForm] = useState<CatForm>(EMPTY);
 
-  const { data: categories } = useQuery<Category[]>({
+  const { data: rawCategories } = useQuery<Category[]>({
     queryKey: ["categories"],
     queryFn: () => api.getCategories(),
     enabled: true,
   });
+  const categories = Array.isArray(rawCategories) ? rawCategories : ((rawCategories as any)?.items || []);
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["categories"] });
 

@@ -30,11 +30,12 @@ const STATUS_COLORS: Record<string, string> = {
 export default function AdminInquiries() {
   const qc = useQueryClient();
 
-  const { data: inquiries } = useQuery<Inquiry[]>({
+  const { data: rawInquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => api.getInquiries(),
     enabled: true,
   });
+  const inquiries = Array.isArray(rawInquiries) ? rawInquiries : ((rawInquiries as any)?.items || []);
 
   const updateMut = useMutation({
     mutationFn: ({ id, status }: { id: bigint; status: string }) =>

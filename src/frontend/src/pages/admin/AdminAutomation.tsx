@@ -38,11 +38,12 @@ export default function AdminAutomation() {
   });
   const [alertModalOpen, setAlertModalOpen] = useState(false);
 
-  const { data: inquiries } = useQuery<Inquiry[]>({
+  const { data: rawInquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => api.getInquiries(),
     enabled: true,
   });
+  const inquiries = Array.isArray(rawInquiries) ? rawInquiries : ((rawInquiries as any)?.items || []);
 
   const saveEmailAuto = (v: boolean) => {
     localStorage.setItem("gemora_auto_email", JSON.stringify(v));

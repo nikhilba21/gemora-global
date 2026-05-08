@@ -1,6 +1,7 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { type ReactNode, useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+import ErrorBoundary from "./ErrorBoundary";
 
 const API_BASE = (import.meta as { env: Record<string, string> }).env?.VITE_API_URL
   || 'https://gemora-global-2.onrender.com';
@@ -58,5 +59,9 @@ export default function AdminGuard({ children }: { children: ReactNode }) {
   }
 
   if (!isAdmin) return <Navigate to="/admin/login" replace />;
-  return <>{children}</>;
+  return (
+    <ErrorBoundary>
+      {children}
+    </ErrorBoundary>
+  );
 }

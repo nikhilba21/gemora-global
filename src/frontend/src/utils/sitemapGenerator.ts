@@ -7,10 +7,11 @@ export async function generateImageSitemap() {
   try {
     // 1. Fetch all products
     const productsRes = await api.getProducts({ page: '0', pageSize: '5000' });
-    const products = productsRes?.items || [];
+    const products = Array.isArray(productsRes?.items) ? productsRes.items : (Array.isArray(productsRes) ? productsRes : []);
 
     // 2. Fetch all gallery folders
-    const folders = await api.getGalleryFolders() as any[];
+    const rawFolders = await api.getGalleryFolders();
+    const folders = Array.isArray(rawFolders) ? rawFolders : ((rawFolders as any)?.items || []);
     
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

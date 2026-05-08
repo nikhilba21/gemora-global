@@ -59,19 +59,19 @@ export default function AdminGalleryFolders() {
   const [bulkResults, setBulkResults] = useState<{ name: string; count: number; status: 'ok' | 'err' }[]>([]);
 
   // ── Folders list ─────────────────────────────────────────────────────────────
-  const { data: folders = [], isLoading } = useQuery<FolderItem[]>({
+  const { data: rawFolders, isLoading } = useQuery<FolderItem[]>({
     queryKey: ["gallery-folders"],
     queryFn: () => api.getGalleryFolders() as Promise<FolderItem[]>,
     enabled: true,
   });
+  const folders = Array.isArray(rawFolders) ? rawFolders.filter(Boolean) : ((rawFolders as any)?.items?.filter(Boolean) || []);
 
-  // ── Folder images ─────────────────────────────────────────────────────────────
-  const { data: folderData, isLoading: imgsLoading } = useQuery({
+  const { data: folderData, isLoading: imgsLoading } = useQuery<{ folder: FolderItem; images: FolderImage[] }>({
     queryKey: ["gallery-folder-images", selectedFolder?.id],
-    queryFn: () => api.getGalleryFolderImages(Number(selectedFolder!.id)),
+    queryFn: () => selectedFolder ? api.getGalleryFolderImages(Number(selectedFolder.id)) as Promise<{ folder: FolderItem; images: FolderImage[] }> : Promise.resolve({ folder: null as any, images: [] }),
     enabled: !!selectedFolder,
   });
-  const folderImages: FolderImage[] = (folderData?.images as FolderImage[]) || [];
+  const folderImages: FolderImage[] = Array.isArray(folderData?.images) ? (folderData?.images as FolderImage[]).filter(Boolean) : [];
 
   // ── Delete folder ─────────────────────────────────────────────────────────────
   const deleteFolderMut = useMutation({
@@ -111,8 +111,9 @@ export default function AdminGalleryFolders() {
       for (let i = 0; i < uploadFiles.length; i++) {
         setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "uploading" } : f));
         try {
-          const result = await uploadFileDetailed(uploadFiles[i].file, newFolderName.trim());
-          uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: i });
+          const result = await uploadFileDetailed(uploadFiles[i].file);
+          const seo = getSEOImageData(uploadFiles[i].file.name, newFolderName.trim());
+          uploaded.push({ imageUrl: result.url, caption: seo.altText, sortOrder: i });
           setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "done", url: result.url } : f));
         } catch {
           setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "error" } : f));
@@ -148,8 +149,9 @@ export default function AdminGalleryFolders() {
     const uploaded: { imageUrl: string; caption: string; sortOrder: number }[] = [];
     for (const file of imgs) {
       try {
-        const result = await uploadFileDetailed(file, selectedFolder.name);
-        uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: 999 });
+        const result = await uploadFileDetailed(file);
+        const seo = getSEOImageData(file.name, selectedFolder.name);
+        uploaded.push({ imageUrl: result.url, caption: seo.altText, sortOrder: 999 });
       } catch { toast.error(`Failed: ${file.name}`); }
     }
     if (uploaded.length) {
@@ -235,8 +237,9 @@ export default function AdminGalleryFolders() {
         for (let ii = 0; ii < files.length; ii++) {
           setBulkProgress(p => ({ ...p, imgIdx: ii + 1, pct: Math.round(((fi + (ii + 1) / files.length) / folderNames.length) * 100) }));
           try {
-            const result = await uploadFileDetailed(files[ii], name);
-            uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: ii });
+            const result = await uploadFileDetailed(files[ii]);
+            const seo = getSEOImageData(files[ii].name, name);
+            uploaded.push({ imageUrl: result.url, caption: seo.altText, sortOrder: ii });
           } catch { /* skip failed image */ }
         }
 

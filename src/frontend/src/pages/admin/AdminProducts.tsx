@@ -1,4 +1,4 @@
-import api from '../../lib/api';
+import api, { type Category, type Product } from '../../lib/api';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -45,7 +45,7 @@ import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
 import { generateImageSitemap } from "../../utils/sitemapGenerator";
 import { getSEOImageData } from "../../utils/seoImage";
-import type { Category, Product } from "../../types";
+// import type { Category, Product } from "../../types";
 
 type WebPBadgeInfo = {
   originalKB: number;
@@ -126,17 +126,19 @@ export default function AdminProducts() {
   const [bulkDeleteConfirm, setBulkDeleteConfirm] = useState(false);
   const [bulkActioning, setBulkActioning] = useState(false);
 
-  const { data: productsRes } = useQuery({
+  const { data: productsRes, isLoading } = useQuery({
     queryKey: ["products", null],
     queryFn: () => api.getProducts({page:'0',pageSize:'2000'}),
     enabled: true,
   });
-  const products = productsRes?.items || [];
-  const { data: categories } = useQuery<Category[]>({
+  const products = Array.isArray(productsRes?.items) ? productsRes.items.filter(Boolean) : (Array.isArray(productsRes) ? productsRes.filter(Boolean) : []);
+  
+  const { data: rawCategories, isLoading: catsLoading } = useQuery<Category[]>({
     queryKey: ["categories"],
     queryFn: () => api.getCategories(),
     enabled: true,
   });
+  const categories = Array.isArray(rawCategories) ? rawCategories.filter(Boolean) : ((rawCategories as any)?.items?.filter(Boolean) || []);
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["products"] });
 
@@ -145,9 +147,6 @@ export default function AdminProducts() {
       toast.loading("Generating Image Sitemap...");
       const xml = await generateImageSitemap();
       
-      // Since we are in the browser, we'll download it for the user to upload to public/ 
-      // or we could potentially send it to the backend if there was a save endpoint.
-      // For now, we'll download it.
       const blob = new Blob([xml], { type: "text/xml" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -166,7 +165,7 @@ export default function AdminProducts() {
 
   // ── Bulk selection helpers ─────────────────────────────────────
   const productList = products;
-  const allIds = productList.map((p) => String(p.id));
+  const allIds = productList.filter(Boolean).map((p) => String(p.id));
   const allSelected =
     allIds.length > 0 && allIds.every((id) => selectedIds.has(id));
   const someSelected = selectedIds.size > 0;
@@ -189,14 +188,14 @@ export default function AdminProducts() {
   };
 
   const handleOptimizeProductSEO = async () => {
-    if (!products.length) return;
-    if (!confirm(`Optimize SEO for all ${products.length} products? This will update all image descriptions and metadata.`)) return;
+    if (!productList.length) return;
+    if (!confirm(`Optimize SEO for all ${productList.length} products? This will update all image descriptions and metadata.`)) return;
     
     setBulkActioning(true);
     let ok = 0;
     try {
       await handleGenerateSitemap();
-      ok = products.length;
+      ok = productList.length;
       toast.success(`SEO optimized for ${ok} products! Sitemap updated.`);
     } catch {
       toast.error("SEO optimization failed");
@@ -310,7 +309,7 @@ export default function AdminProducts() {
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: bigint) => api.deleteProduct(Number(id)),
+    mutationFn: (id: number) => api.deleteProduct(id),
     onSuccess: () => {
       toast.success("Product deleted");
       invalidate();
@@ -335,7 +334,7 @@ export default function AdminProducts() {
       keyFeatures: p.keyFeatures ?? "",
       description: p.description,
       moq: p.moq,
-      imageUrls: p.imageUrls,
+      imageUrls: Array.isArray(p.imageUrls) ? p.imageUrls : (typeof p.imageUrls === 'string' ? (JSON.parse(p.imageUrls) || []) : []),
       imageWebPInfo: {},
       featured: p.featured,
       isNewArrival: p.isNewArrival,
@@ -348,8 +347,10 @@ export default function AdminProducts() {
     if (!files.length) return;
     for (const file of files) {
       try {
-        const cat = categories?.find(c => String(c.id) === form.categoryId)?.name || "";
-        const result = await uploadFileDetailed(file, cat);
+        const catName = Array.isArray(categories) 
+          ? categories.find((c: any) => String(c.id) === form.categoryId)?.name || ""
+          : "";
+        const result = await uploadFileDetailed(file);
         setForm((f) => ({
           ...f,
           imageUrls: [...f.imageUrls, result.url],
@@ -374,7 +375,9 @@ export default function AdminProducts() {
   const handleDropUpload = async (droppedFiles: File[]) => {
     for (const file of droppedFiles) {
       try {
-        const cat = categories?.find(c => String(c.id) === form.categoryId)?.name || "";
+        const cat = Array.isArray(categories)
+          ? categories.find(c => String(c.id) === form.categoryId)?.name || ""
+          : "";
         const result = await uploadFileDetailed(file, cat);
         setForm((f) => ({
           ...f,
@@ -504,9 +507,9 @@ export default function AdminProducts() {
 
     // Build category name→id lookup
     const catLookup: Record<string, number> = {};
-    if (categories) {
+    if (Array.isArray(categories)) {
       for (const cat of categories) {
-        catLookup[cat.name.toLowerCase().trim()] = cat.id;
+        catLookup[cat.name.toLowerCase().trim()] = Number(cat.id);
       }
     }
 
@@ -608,9 +611,9 @@ export default function AdminProducts() {
 
     // Build category name→id lookup
     const catLookup: Record<string, number> = {};
-    if (categories) {
+    if (Array.isArray(categories)) {
       for (const cat of categories) {
-        catLookup[cat.name.toLowerCase().trim()] = cat.id;
+        catLookup[cat.name.toLowerCase().trim()] = Number(cat.id);
       }
     }
 
@@ -983,7 +986,7 @@ export default function AdminProducts() {
                       <SelectValue placeholder="Select category" />
                     </SelectTrigger>
                     <SelectContent>
-                      {categories?.map((c) => (
+                      {Array.isArray(categories) && categories.map((c) => (
                         <SelectItem key={String(c.id)} value={String(c.id)}>
                           {c.name}
                         </SelectItem>
