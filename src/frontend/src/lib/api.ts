@@ -69,6 +69,7 @@ export const api = {
   addImagesToFolder: (id: number, images: { imageUrl: string; caption: string; sortOrder: number }[]) => apiFetch(`/api/gallery-folders/${id}/images`, { method: 'POST', body: JSON.stringify({ images }) }),
   updateGalleryFolder: (id: number, data: Partial<GalleryFolder>) => apiFetch(`/api/gallery-folders/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
   deleteFolderImage: (folderId: number, imgId: number) => apiFetch(`/api/gallery-folders/${folderId}/images/${imgId}`, { method: 'DELETE' }),
+  updateFolderImage: (folderId: number, imgId: number, data: { caption?: string; sortOrder?: number }) => apiFetch(`/api/gallery-folders/${folderId}/images/${imgId}`, { method: 'PUT', body: JSON.stringify(data) }),
   deleteGalleryFolder: (id: number) => apiFetch(`/api/gallery-folders/${id}`, { method: 'DELETE' }),
 
   // Blog

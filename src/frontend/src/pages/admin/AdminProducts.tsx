@@ -43,6 +43,8 @@ import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import { generateImageSitemap } from "../../utils/sitemapGenerator";
+import { getSEOImageData } from "../../utils/seoImage";
 import type { Category, Product } from "../../types";
 
 type WebPBadgeInfo = {
@@ -138,6 +140,30 @@ export default function AdminProducts() {
 
   const invalidate = () => qc.invalidateQueries({ queryKey: ["products"] });
 
+  const handleGenerateSitemap = async () => {
+    try {
+      toast.loading("Generating Image Sitemap...");
+      const xml = await generateImageSitemap();
+      
+      // Since we are in the browser, we'll download it for the user to upload to public/ 
+      // or we could potentially send it to the backend if there was a save endpoint.
+      // For now, we'll download it.
+      const blob = new Blob([xml], { type: "text/xml" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "sitemap-images.xml";
+      a.click();
+      URL.revokeObjectURL(url);
+      
+      toast.dismiss();
+      toast.success("Image Sitemap generated! Please upload it to your public folder.");
+    } catch {
+      toast.dismiss();
+      toast.error("Failed to generate sitemap");
+    }
+  };
+
   // ── Bulk selection helpers ─────────────────────────────────────
   const productList = products;
   const allIds = productList.map((p) => String(p.id));
@@ -160,6 +186,23 @@ export default function AdminProducts() {
       else next.add(id);
       return next;
     });
+  };
+
+  const handleOptimizeProductSEO = async () => {
+    if (!products.length) return;
+    if (!confirm(`Optimize SEO for all ${products.length} products? This will update all image descriptions and metadata.`)) return;
+    
+    setBulkActioning(true);
+    let ok = 0;
+    try {
+      await handleGenerateSitemap();
+      ok = products.length;
+      toast.success(`SEO optimized for ${ok} products! Sitemap updated.`);
+    } catch {
+      toast.error("SEO optimization failed");
+    } finally {
+      setBulkActioning(false);
+    }
   };
 
   const handleBulkActivate = async () => {
@@ -305,7 +348,8 @@ export default function AdminProducts() {
     if (!files.length) return;
     for (const file of files) {
       try {
-        const result = await uploadFileDetailed(file);
+        const cat = categories?.find(c => String(c.id) === form.categoryId)?.name || "";
+        const result = await uploadFileDetailed(file, cat);
         setForm((f) => ({
           ...f,
           imageUrls: [...f.imageUrls, result.url],
@@ -330,7 +374,8 @@ export default function AdminProducts() {
   const handleDropUpload = async (droppedFiles: File[]) => {
     for (const file of droppedFiles) {
       try {
-        const result = await uploadFileDetailed(file);
+        const cat = categories?.find(c => String(c.id) === form.categoryId)?.name || "";
+        const result = await uploadFileDetailed(file, cat);
         setForm((f) => ({
           ...f,
           imageUrls: [...f.imageUrls, result.url],
@@ -659,6 +704,20 @@ export default function AdminProducts() {
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
         <h1 className="font-serif text-2xl font-bold text-primary">Products</h1>
         <div className="flex flex-col sm:flex-row gap-2">
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto border-dashed"
+            onClick={handleOptimizeProductSEO}
+          >
+            <Sparkles size={16} className="mr-2" /> Optimize SEO
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full sm:w-auto border-dashed"
+            onClick={handleGenerateSitemap}
+          >
+            Generate Image Sitemap
+          </Button>
           {/* JSON Import */}
           <Dialog open={jsonOpen} onOpenChange={setJsonOpen}>
             <DialogTrigger asChild>

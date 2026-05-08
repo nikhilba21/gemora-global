@@ -4,11 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { FolderOpen, FolderPlus, ImagePlus, Loader2, Trash2, X, ChevronLeft, Eye, Upload } from "lucide-react";
+import { FolderOpen, FolderPlus, ImagePlus, Loader2, Trash2, X, ChevronLeft, Eye, Upload, Sparkles } from "lucide-react";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import { useStorageUpload } from "../../hooks/useStorageUpload";
+import { getSEOImageData } from "../../utils/seoImage";
 
 type FolderItem = {
   id: number;
@@ -110,8 +111,8 @@ export default function AdminGalleryFolders() {
       for (let i = 0; i < uploadFiles.length; i++) {
         setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "uploading" } : f));
         try {
-          const result = await uploadFileDetailed(uploadFiles[i].file);
-          uploaded.push({ imageUrl: result.url, caption: uploadFiles[i].name.replace(/\.[^/.]+$/, ""), sortOrder: i });
+          const result = await uploadFileDetailed(uploadFiles[i].file, newFolderName.trim());
+          uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: i });
           setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "done", url: result.url } : f));
         } catch {
           setUploadFiles(prev => prev.map((f, idx) => idx === i ? { ...f, status: "error" } : f));
@@ -147,8 +148,8 @@ export default function AdminGalleryFolders() {
     const uploaded: { imageUrl: string; caption: string; sortOrder: number }[] = [];
     for (const file of imgs) {
       try {
-        const result = await uploadFileDetailed(file);
-        uploaded.push({ imageUrl: result.url, caption: file.name.replace(/\.[^/.]+$/, ""), sortOrder: 999 });
+        const result = await uploadFileDetailed(file, selectedFolder.name);
+        uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: 999 });
       } catch { toast.error(`Failed: ${file.name}`); }
     }
     if (uploaded.length) {
@@ -158,6 +159,29 @@ export default function AdminGalleryFolders() {
       toast.success(`${uploaded.length} images added!`);
     }
     setUploading(false);
+  }
+
+  async function handleOptimizeSEO() {
+    if (!selectedFolder || !folderImages.length) return;
+    if (!confirm(`Optimize SEO for ${folderImages.length} images in this folder? This will update all ALT text.`)) return;
+    
+    setUploading(true);
+    let ok = 0;
+    try {
+      // Update one by one
+      for (const img of folderImages) {
+        const { altText } = getSEOImageData(img.imageUrl.split('/').pop() || "", selectedFolder.name);
+        await api.updateFolderImage(Number(selectedFolder.id), Number(img.id), { caption: altText });
+        ok++;
+      }
+      
+      toast.success(`SEO optimized for ${ok} images!`);
+      qc.invalidateQueries({ queryKey: ["gallery-folder-images", selectedFolder.id] });
+    } catch (e) {
+      toast.error("SEO optimization failed: " + (e instanceof Error ? e.message : "Unknown error"));
+    } finally {
+      setUploading(false);
+    }
   }
 
   // ── Open folder view ──────────────────────────────────────────────────────────
@@ -211,8 +235,8 @@ export default function AdminGalleryFolders() {
         for (let ii = 0; ii < files.length; ii++) {
           setBulkProgress(p => ({ ...p, imgIdx: ii + 1, pct: Math.round(((fi + (ii + 1) / files.length) / folderNames.length) * 100) }));
           try {
-            const result = await uploadFileDetailed(files[ii]);
-            uploaded.push({ imageUrl: result.url, caption: files[ii].name.replace(/\.[^/.]+$/, ''), sortOrder: ii });
+            const result = await uploadFileDetailed(files[ii], name);
+            uploaded.push({ imageUrl: result.url, caption: result.altText, sortOrder: ii });
           } catch { /* skip failed image */ }
         }
 
@@ -254,6 +278,9 @@ export default function AdminGalleryFolders() {
               <p className="text-sm text-muted-foreground">{folderImages.length} images</p>
             </div>
             <div className="ml-auto flex gap-2">
+              <Button variant="outline" size="sm" onClick={handleOptimizeSEO} disabled={uploading}>
+                <Sparkles className="w-4 h-4 mr-2" /> Optimize SEO
+              </Button>
               <input ref={addMoreRef} type="file" multiple accept="image/*" className="hidden" onChange={e => handleAddMoreImages(e.target.files)} />
               <Button onClick={() => addMoreRef.current?.click()} disabled={uploading} size="sm">
                 {uploading ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : <ImagePlus className="w-4 h-4 mr-2" />}

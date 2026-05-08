@@ -1,6 +1,6 @@
 // useStorageUpload.ts — Cloudinary free-tier upload (replaces ICP blob storage)
 // Images upload to Cloudinary unsigned upload preset
-import { useState } from 'react';
+import { getSEOImageData } from '../utils/seoImage';
 
 const CLOUDINARY_CLOUD = (import.meta as { env: Record<string, string> }).env?.VITE_CLOUDINARY_CLOUD || 'dnusbgxgm';
 const UPLOAD_PRESET = (import.meta as { env: Record<string, string> }).env?.VITE_CLOUDINARY_PRESET || 'gemora_unsigned';
@@ -11,13 +11,22 @@ export type UploadResult = {
   webpKB: number;
   savedPercent: number;
   wasConverted: boolean;
+  seoName: string;
+  altText: string;
 };
 
-async function uploadToCloudinary(file: File, onProgress?: (pct: number) => void): Promise<string> {
+async function uploadToCloudinary(
+  file: File, 
+  onProgress?: (pct: number) => void,
+  customPublicId?: string
+): Promise<string> {
   const formData = new FormData();
   formData.append('file', file);
   formData.append('upload_preset', UPLOAD_PRESET);
   formData.append('folder', 'gemora');
+  if (customPublicId) {
+    formData.append('public_id', customPublicId);
+  }
 
   const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`;
 
@@ -51,12 +60,15 @@ export function useStorageUpload() {
   const [progress, setProgress] = useState(0);
   const [uploadError, setUploadError] = useState<string | null>(null);
 
-  const uploadFile = async (file: File): Promise<string> => {
+  const uploadFile = async (file: File, contextName: string = ""): Promise<string> => {
     setUploading(true);
     setProgress(0);
     setUploadError(null);
     try {
-      const url = await uploadToCloudinary(file, setProgress);
+      const { seoName } = getSEOImageData(file.name, contextName);
+      // Append a short random string to prevent collisions while keeping it SEO friendly
+      const uniqueSeoName = `${seoName}-${Math.random().toString(36).substring(2, 6)}`;
+      const url = await uploadToCloudinary(file, setProgress, uniqueSeoName);
       setProgress(100);
       return url;
     } catch (err) {
@@ -68,15 +80,26 @@ export function useStorageUpload() {
     }
   };
 
-  const uploadFileDetailed = async (file: File): Promise<UploadResult> => {
+  const uploadFileDetailed = async (file: File, contextName: string = ""): Promise<UploadResult> => {
     setUploading(true);
     setProgress(0);
     setUploadError(null);
     try {
+      const { seoName, altText } = getSEOImageData(file.name, contextName);
+      const uniqueSeoName = `${seoName}-${Math.random().toString(36).substring(2, 6)}`;
+      
       const originalKB = file.size / 1024;
-      const url = await uploadToCloudinary(file, setProgress);
+      const url = await uploadToCloudinary(file, setProgress, uniqueSeoName);
       setProgress(100);
-      return { url, originalKB, webpKB: originalKB, savedPercent: 0, wasConverted: false };
+      return { 
+        url, 
+        originalKB, 
+        webpKB: originalKB, 
+        savedPercent: 0, 
+        wasConverted: false,
+        seoName,
+        altText
+      };
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Upload failed';
       setUploadError(msg);
