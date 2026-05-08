@@ -26,6 +26,7 @@ import Products from "./pages/Products";
 import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Wholesale from "./pages/Wholesale";
+import Catalogues from "./pages/Catalogues";
 import WhyChooseUs from "./pages/WhyChooseUs";
 // Admin
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
@@ -143,6 +144,7 @@ export default function App() {
         <Route path="/export" element={<ExportMarkets />} />
         <Route path="/global-markets" element={<ExportMarkets />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/catalogues" element={<Catalogues />} />
         <Route path="/blog" element={<Blog />} />
         {/* 301 Redirects for deleted/merged blogs */}
         <Route path="/blog/global-delivery-solutions-for-wholesalers" element={<Navigate replace to="/wholesale-imitation-jewellery-manufacturer-exporter-india" />} />

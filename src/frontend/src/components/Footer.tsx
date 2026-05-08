@@ -70,6 +70,7 @@ const COMPANY_LINKS = [
   { label: "Why Choose Us", to: "/why-choose-us" },
   { label: "Our Products", to: "/products" },
   { label: "Design Gallery", to: "/gallery" },
+  { label: "Product Catalogues", to: "/catalogues" },
   { label: "Wholesale & Export", to: "/wholesale" },
   { label: "Global Export Markets", to: "/export" },
   { label: "Jewellery Blog", to: "/blog" },

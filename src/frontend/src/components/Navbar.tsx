@@ -12,6 +12,7 @@ const MAIN_LINKS = [
   { label: "Wholesale", to: "/wholesale" },
   { label: "Markets", to: "/export" },
   { label: "Gallery", to: "/gallery" },
+  { label: "Catalogue", to: "/catalogues" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ];

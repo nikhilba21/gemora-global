@@ -1,5 +1,29 @@
+# robots.txt — www.gemoraglobal.co
 User-agent: *
 Allow: /
-Disallow: /admin/
 
-Sitemap: https://gemoraglobal-tje.caffeine.xyz/sitemap.xml
+# Block admin panel from indexing
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important assets
+Allow: /assets/
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://www.gemoraglobal.co/sitemap.xml
+
+# Crawl delay (be gentle)
+Crawl-delay: 1
+
+# Allow major search engines explicitly
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
