@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import BulkOrderCalculator from "../components/BulkOrderCalculator";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import CatalogueDownloadSection from "../components/CatalogueDownloadSection";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product } from "../types";
@@ -381,6 +382,22 @@ export default function Wholesale() {
             </a>
           </p>
         </section>
+        
+        {/* Digital Catalogues Section */}
+        <section className="container py-10 md:py-16 px-4 border-t border-border">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold mb-3">
+              Download Digital Catalogues
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              Get instant access to our latest collections in PDF format. Browse through 500+ designs with high-resolution photography, specifications, and wholesale pricing guidance.
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <CatalogueDownloadSection limit={3} />
+          </div>
+        </section>
+
 
         {/* Bulk Order Calculator */}
         <section className="bg-muted/30 border-y border-border py-10 md:py-16 px-4">

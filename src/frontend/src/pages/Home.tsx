@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import CatalogueDownloadSection from "../components/CatalogueDownloadSection";
 import WhatsAppInquiryPopup from "../components/WhatsAppInquiryPopup";
 import { useActor } from "../hooks/useActor";
 import { usePageContent } from "../hooks/usePageContent";
@@ -636,7 +637,7 @@ export default function Home() {
               className="border-white text-white hover:bg-white hover:text-primary px-6 md:px-8 w-full sm:w-auto min-w-[200px] transition-all duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg font-bold"
               data-ocid="hero.cta_catalog"
             >
-              <Link to="/wholesale">Get Catalog</Link>
+              <Link to="/catalogues">Download Catalogues</Link>
             </Button>
           </div>
         </div>
@@ -801,6 +802,21 @@ export default function Home() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* New Catalogues Section */}
+          <div className="mt-16 md:mt-24 border-t border-border pt-12 md:pt-16">
+            <div className="text-center mb-10">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+                Download Latest Product Catalogues
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
+                Access our complete collection PDFs. Perfect for wholesale buyers and international importers looking for detailed design specifications.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto">
+              <CatalogueDownloadSection limit={3} />
+            </div>
           </div>
         </div>
       </section>
