@@ -11,8 +11,8 @@ Disallow: /api/
 Allow: /assets/
 Allow: /sitemap.xml
 
-# Sitemap location
 Sitemap: https://www.gemoraglobal.co/sitemap.xml
+Sitemap: https://www.gemoraglobal.co/sitemap-images.xml
 
 # Crawl delay (be gentle)
 Crawl-delay: 1
