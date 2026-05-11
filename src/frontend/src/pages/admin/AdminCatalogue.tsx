@@ -72,6 +72,7 @@ export default function AdminCatalogue() {
     formData.append('folder', 'gemora');
 
     // Use /image/upload as standard in original codebase, works for PDFs too
+    // TRACKING: VERCEL_FIX_v2
     const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`;
 
     return new Promise<string>((resolve, reject) => {
