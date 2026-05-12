@@ -418,10 +418,10 @@ export default function Products() {
 
                 {/* Subcategory Tabs */}
                 {activeCategory && allSubcats[activeCategory.slug]?.length > 0 && (
-                  <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-4 mb-2 no-scrollbar -mx-1 px-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-6">
                     <button
                       onClick={() => setSubcat("")}
-                      className={`whitespace-nowrap px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${!subcategoryParam ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
+                      className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${!subcategoryParam ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
                     >
                       All {activeCategory.name}
                     </button>
@@ -429,7 +429,7 @@ export default function Products() {
                       <button
                         key={sub.subcategory}
                         onClick={() => setSubcat(sub.subcategory)}
-                        className={`whitespace-nowrap px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${subcategoryParam === sub.subcategory ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
+                        className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${subcategoryParam === sub.subcategory ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
                       >
                         {sub.subcategory}
                         <span className={`ml-2 text-[10px] ${subcategoryParam === sub.subcategory ? "text-white/70" : "text-muted-foreground/60"}`}>
