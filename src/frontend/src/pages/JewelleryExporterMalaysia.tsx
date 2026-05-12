@@ -73,251 +73,139 @@ export default function JewelleryExporterMalaysia() {
         },
       ]}
       bodyContent={
-        <>
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Malaysia's Multi-Ethnic Jewellery Market — A Growing Opportunity
-          </h2>
-          <p>
-            Malaysia is one of Southeast Asia's most dynamic jewellery markets,
-            driven by its multi-ethnic population of Malay, Chinese, Indian, and
-            Eurasian communities — each with distinct jewellery preferences and
-            festive buying cycles. The large Malaysian Indian community
-            (approximately 7% of the population, concentrated in Kuala Lumpur,
-            Penang, and Ipoh) creates strong, consistent demand for authentic
-            Indian{" "}
-            <Link
-              to="/wholesale"
-              className="text-primary hover:underline font-medium"
-            >
-              wholesale imitation jewellery
-            </Link>{" "}
-            throughout the year.
-          </p>
-          <p>
-            Little India districts in Brickfields (KL), Penang, and Johor Bahru
-            are thriving retail hubs for Indian ethnic jewellery. Meanwhile,
-            mainstream Malaysian fashion boutiques and online retailers on
-            Lazada and Shopee are increasingly stocking Indian-made fashion
-            jewellery for its quality, variety, and competitive pricing. Indian{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery exporters
-            </Link>{" "}
-            supply these markets with everything from heavy Kundan bridal sets
-            to minimal gold-toned everyday pieces.
-          </p>
+        <div className="space-y-8 text-sm md:text-base">
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Premium Indian Imitation Jewellery Exporter to Malaysia — Kuala Lumpur, Penang, Johor Bahru & Ipoh
+            </h2>
+            <p className="mb-4">
+              Gemora Global is a world-class <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a primary wholesale supplier for the Malaysian market. Malaysia is one of the most vibrant and multi-ethnic jewellery hubs in Southeast Asia. From the bustling streets of Brickfields (KL's Little India) to the high-end boutiques in Pavilion Bukit Bintang, our handcrafted Indian jewellery is a staple of Malaysian fashion, bridal, and festive culture.
+            </p>
+            <p className="mb-4">
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Malaysia</Link>, we understand the unique "Cross-Cultural" appeal required in this market. We bridge the gap between Jaipur’s ancient artistry and the diverse needs of Malaysia’s Indian, Malay, and Chinese communities, ensuring that our partners in Kuala Lumpur, Penang, and beyond receive only the finest "Export-Quality" inventory.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Festive Season Demand — Diwali, Hari Raya & Wedding Season
-          </h2>
-          <p>
-            Malaysia's festive calendar is one of the busiest in ASEAN, and
-            jewellery sales peak dramatically during major celebrations:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Deepavali (Diwali):</strong>{" "}
-              The single largest buying season for Indian jewellery in Malaysia.
-              Malaysian Indian buyers purchase Kundan sets, temple jewellery,
-              jhumkas, and gold-plated bridal parures in enormous volumes 6–8
-              weeks before Deepavali. Boutiques in Brickfields sell out stock
-              weeks in advance.
-            </li>
-            <li>
-              <strong className="text-foreground">Hari Raya Aidilfitri:</strong>{" "}
-              Malaysian Malay buyers increasingly wear Indian-inspired minimal
-              and contemporary gold jewellery during Hari Raya festivities. Our
-              Indo-Western and modern gold-toned collections sell strongly in
-              mainstream KL boutiques during this period.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Indian Wedding Season:
-              </strong>{" "}
-              Malaysian Indian weddings generate high-value jewellery orders.
-              Bridal sets, bangles, bajubands, and complete{" "}
-              <Link
-                to="/bridal-jewellery-wholesale"
-                className="text-primary hover:underline"
-              >
-                bridal jewellery sets
-              </Link>{" "}
-              are in consistent demand from Malaysia-based bridal boutiques.
-            </li>
-            <li>
-              <strong className="text-foreground">Chinese New Year:</strong>{" "}
-              Gold-toned and red-accented jewellery pieces are popular during
-              Chinese New Year gifting season among Malaysian Chinese buyers.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Why Malaysian Boutiques and E-commerce Sellers Choose Gemora Global
+            </h2>
+            <p className="mb-4">
+              Malaysian buyers require a manufacturer that can navigate the complexities of international trade while maintaining the highest levels of design integrity.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>ASEAN Market-Ready Designs:</strong> Our collections are curated to suit the "Tropical Elegance" of Malaysia. We offer lightweight yet visually stunning designs that are perfect for Malaysia’s humid climate and active social scene.</li>
+              <li><strong>Reliable Logistics via DHL & FedEx:</strong> We offer door-to-door delivery from Jaipur to Malaysia in just 4-7 business days. Whether you are located in the Klang Valley or East Malaysia (Sabah/Sarawak), we ensure your shipment is safe and tracked.</li>
+              <li><strong>Multi-Ethnic Festive Collections:</strong> We provide specialized inventory for Malaysia’s three major festive seasons: Deepavali (Indian), Hari Raya Aidilfitri (Malay), and Chinese New Year (Chinese). Our <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated and contemporary collections</Link> sell out rapidly during these peaks.</li>
+              <li><strong>Transparent B2B Documentation:</strong> We provide all necessary paperwork, including the Certificate of Origin and Commercial Invoices, ensuring a smooth customs clearance process with the Royal Malaysian Customs Department.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Best-Selling Jewellery Collections for Malaysia
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/kundan-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Kundan Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Traditional Kundan necklace sets with matching earrings and maang
-              tikkas. Top-selling category for Malaysian Indian bridal boutiques
-              and Deepavali collections.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/temple-jewellery-manufacturer"
-                  className="text-primary hover:underline"
-                >
-                  Temple Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              South Indian-style temple jewellery sets — particularly popular
-              with Malaysian Tamil and South Indian community buyers in Penang,
-              Johor, and KL.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/meenakari-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Meenakari Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Colourful Jaipur enamel-work pieces that appeal to Malaysia's
-              vibrant retail market. Strong seller during festive and wedding
-              seasons.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                American Diamond (CZ) Sets:
-              </strong>{" "}
-              Cubic Zirconia stone-set necklaces and bridal parures — accessible
-              luxury pieces with strong retail appeal across all Malaysian
-              ethnic communities.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Gold Plated Fashion Jewellery:
-              </strong>{" "}
-              Contemporary gold-toned pieces for everyday wear and Hari Raya
-              gifting. High sell-through on Malaysian e-commerce platforms.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/oxidised-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Oxidised Silver Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Bohemian-style oxidised pieces growing in popularity with younger
-              Malaysian buyers and boutique fashion retailers.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              The Jaipur-Malaysia Connection: Crafting Heritage for the ASEAN Hub
+            </h2>
+            <p className="mb-4">
+              The historical trade routes between India and the Malay Peninsula have fostered a deep appreciation for Indian gemstones and metalwork. Gemora Global honors this legacy by supplying high-quality <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan, Meenakari, and Temple jewellery</Link> to Malaysian retailers who value authentic Jaipur craftsmanship.
+            </p>
+            <p className="mb-4">
+              Our designs are not just accessories; they are cultural bridges. In Malaysia, where the South Indian Tamil heritage is strong, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple Jewellery collection</Link> is a top performer, especially in the religious and bridal sectors of Penang and KL.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            KL Boutiques & Penang Retailers — Wholesale Sourcing Made Easy
-          </h2>
-          <p>
-            Gemora Global has supplied Malaysian retailers for over a decade.
-            Our wholesale process is straightforward for Malaysia-based buyers:
-          </p>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Contact & Catalogue:</strong>{" "}
-              WhatsApp our export team at +91 7976341419 or email
-              globalgemora@gmail.com. Receive our full digital catalogue with
-              500+ designs within a few hours.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Festive Buying Planning:
-              </strong>{" "}
-              We advise Malaysian buyers to place Deepavali orders by September
-              and Hari Raya orders by February for guaranteed stock
-              availability.
-            </li>
-            <li>
-              <strong className="text-foreground">Order & Payment:</strong>{" "}
-              Confirm designs and quantities. Proforma Invoice issued in USD or
-              MYR. Payment via TT bank transfer, 50% advance + 50% before
-              dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">Production & QC:</strong> 7–15
-              days production. Full quality inspection with photographic report
-              before dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping to Malaysia:</strong>{" "}
-              DHL Express (4–7 days) or FedEx to Kuala Lumpur, Penang, or any
-              Malaysian destination. Full customs documentation provided.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Trending Categories for the Malaysian Market
+            </h2>
+            <p className="mb-4">
+              Based on our decade of export experience to Malaysia, these are the four most successful categories:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">1. Authentic Temple Jewellery</h3>
+                <p className="text-sm">The "Spirit of South India" in Jaipur. Our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">temple sets</Link> are incredibly popular for Bharatanatyam dancers and traditional Tamil weddings in Malaysia.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">2. Premium Bridal Kundan</h3>
+                <p className="text-sm">Malaysian Indian weddings are grand events. Our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal collection</Link> offers the "Royal Maharaja" look that every bride in Malaysia desires.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">3. Contemporary Gold-Plated (Malay Style)</h3>
+                <p className="text-sm">For the Malay market, our minimal and elegant <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated pieces</Link> are perfect for Baju Kurung and Baju Kebaya pairings during Hari Raya.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">4. Bohemian Oxidised Silver</h3>
+                <p className="text-sm">A major hit with the younger "Gen Z" market in KL. These <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised pieces</Link> are perfect for cafe culture and streetwear fashion.</p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Competitive Pricing for Malaysian Wholesale Buyers
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">MOQ:</strong> 50 units per
-              design (mixed designs allowed)
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Wholesale Price Range:
-              </strong>{" "}
-              USD $1.50 to $20 per piece, MYR equivalent available on request
-            </li>
-            <li>
-              <strong className="text-foreground">Volume Discount:</strong> 10%
-              off for 200+ units; 20% off for 500+ units per design
-            </li>
-            <li>
-              <strong className="text-foreground">Retail Margin:</strong>{" "}
-              Malaysian boutiques typically mark up 200–400% on Indian wholesale
-              jewellery
-            </li>
-            <li>
-              <strong className="text-foreground">OEM/Private Label:</strong>{" "}
-              Custom packaging with your brand name, MOQ 500 units
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Importing to Malaysia: Duties, SST and Customs Compliance
+            </h2>
+            <p className="mb-4">
+              Importing from India to Malaysia is efficient when you work with a manufacturer that understands the local regulatory landscape.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>SST (Sales and Service Tax):</strong> Malaysia applies a standard SST on imported goods. We provide detailed commercial invoices to help you calculate your landed cost accurately.</li>
+              <li><strong>Customs Duties:</strong> Most imitation jewellery falls under HS Code 7117. We ensure your items are classified correctly to minimize delays at Malaysian customs.</li>
+              <li><strong>Free Trade Agreement (AIFTA):</strong> We can provide the necessary certification for the ASEAN-India Free Trade Area (AIFTA) where applicable, potentially reducing your import duty burden.</li>
+              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Start Your Malaysia Wholesale Order
-          </h2>
-          <p>
-            Contact our export team today for our latest catalogue, seasonal
-            lookbook, and Malaysia wholesale pricing. We respond to all
-            Malaysian buyer inquiries within 24 hours:{" "}
-            <a
-              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20a%20buyer%20in%20Malaysia%20interested%20in%20wholesale%20imitation%20jewellery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              +91 7976341419
-            </a>{" "}
-            (WhatsApp) or globalgemora@gmail.com. Use the inquiry form below for
-            detailed requirements.
-          </p>
-        </>
-      }
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Logistics: The Journey from our Jaipur Factory to the Heart of KL
+            </h2>
+            <p className="mb-4">
+              Our logistics process is designed for speed and reliability, ensuring that "Jaipur is just a short flight away" from your Malaysian boutique.
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
+              <li><strong>Stringent Quality Check:</strong> Every order is inspected by our senior craftsmen in Jaipur for finish and stone setting.</li>
+              <li><strong>Export-Grade Packaging:</strong> Goods are individually wrapped in anti-tarnish bags and shipped in double-walled export cartons to survive international transit.</li>
+              <li><strong>Air Freight Transit:</strong> Shipments are flown directly to KLIA (Kuala Lumpur International Airport).</li>
+              <li><strong>Seamless Delivery:</strong> Our partners (DHL/FedEx) handle the customs clearance and deliver directly to your store in Brickfields, Penang, or Johor Bahru.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              How to Scale Your Malaysian Jewellery Brand with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The Malaysian market is highly competitive. We provide the "Manufacturing Edge" you need to stand out.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Custom Design & OEM:</strong> Create <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> that are unique to your Malaysian brand, giving you a competitive advantage.</li>
+              <li><strong>Private Labeling & Packaging:</strong> We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded jewelry boxes that appeal to the Malaysian aesthetic.</li>
+              <li><strong>Digital Marketing Assets:</strong> We provide professional photography and video content that you can use on Shopee, Lazada, and Instagram to drive sales in Malaysia.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Client Testimonial: A Successful KL-Based Boutique Owner
+            </h2>
+            <p className="mb-4">
+              "We have been sourcing from Gemora Global for over three years. Their <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari and Kundan collections</Link> are the best-selling items in our Kuala Lumpur boutique. The quality is consistent, and the shipping is always on time." — <em>Siti N., Malaysian Retailer</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Strategic Manufacturing Partner in Malaysia
+            </h2>
+            <p className="mb-4">
+              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing arm in India. We bring the timeless beauty of Jaipur craftsmanship to the multi-ethnic heart of Malaysia. 
+            </p>
+            <p className="mb-4">
+              Contact our Malaysia Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+            </p>
+          </div>
+        }
+
     />
   );
 }

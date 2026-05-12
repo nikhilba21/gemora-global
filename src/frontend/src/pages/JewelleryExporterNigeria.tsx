@@ -73,254 +73,138 @@ export default function JewelleryExporterNigeria() {
         },
       ]}
       bodyContent={
-        <>
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Nigeria — Africa's Largest Fashion Jewellery Market
-          </h2>
-          <p>
-            Nigeria is sub-Saharan Africa's largest economy and its most dynamic
-            fashion market. With over 220 million people, a young consumer
-            population, and a thriving fashion culture driven by Nollywood,
-            social media, and Afrobeats celebrity style, Nigeria represents an
-            enormous opportunity for wholesale{" "}
-            <Link
-              to="/wholesale"
-              className="text-primary hover:underline font-medium"
-            >
-              Indian imitation jewellery
-            </Link>{" "}
-            exporters.
-          </p>
-          <p>
-            Lagos's Balogun Market, Alaba International Market, and the fashion
-            boutiques of Victoria Island and Lekki Phase 1 are major trading
-            hubs for imported fashion jewellery. Nigerian fashion buyers are
-            known for their bold aesthetic preferences — large statement pieces,
-            vibrant colours, and gold-look jewellery that makes a visual impact
-            at weddings, owambe parties, and fashion events.
-          </p>
-          <p>
-            Indian{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery manufacturers
-            </Link>{" "}
-            are well-positioned to serve Nigeria's market because we offer
-            exactly what Nigerian buyers demand: colourful, bold, well-crafted
-            pieces at wholesale prices that support strong retail margins in
-            Nigeria's growing fashion economy.
-          </p>
+        <div className="space-y-8 text-sm md:text-base">
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Premium Indian Imitation Jewellery Exporter to Nigeria — Lagos, Abuja, Port Harcourt & Kano
+            </h2>
+            <p className="mb-4">
+              Gemora Global is a leading <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a primary wholesale partner for the Nigerian fashion industry. Nigeria is the "Fashion Powerhouse" of Africa, where bold aesthetics, royal traditions, and a vibrant celebrity culture drive an insatiable demand for high-quality statement jewellery. From the bustling trade hubs of Balogun Market in Lagos to the elite boutiques of Victoria Island and Abuja, our jewellery is a symbol of status and style for the Nigerian "fashionista."
+            </p>
+            <p className="mb-4">
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Nigeria</Link>, we understand the "Bold and Beautiful" philosophy that defines West African style. We bridge the gap between the intricate artisan skills of Jaipur and the grand fashion spectacles of Nigeria, providing wholesale solutions that empower local retailers and distributors across the continent.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Afro-Bridal Trends — A Major Market Opportunity
-          </h2>
-          <p>
-            Nigerian weddings are legendary for their scale, colour, and
-            fashion. A single Nigerian wedding can have multiple outfit changes,
-            each requiring coordinated jewellery sets. The Afro-bridal market
-            drives significant demand for:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                Elaborate Bridal Sets:
-              </strong>{" "}
-              Complete{" "}
-              <Link
-                to="/bridal-jewellery-wholesale"
-                className="text-primary hover:underline"
-              >
-                bridal jewellery parures
-              </Link>{" "}
-              with large statement necklaces, chandelier earrings, bangles, and
-              hair accessories. Nigerian brides often purchase 2–3 sets for
-              different wedding day ceremonies.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Gold-Look Statement Necklaces:
-              </strong>{" "}
-              Heavy 22K gold-plated choker necklaces, collar sets, and layered
-              chain necklaces for the Igbo, Yoruba, and Hausa wedding
-              ceremonies.
-            </li>
-            <li>
-              <strong className="text-foreground">Coloured Stone Sets:</strong>{" "}
-              Coral-look, red, green, and blue stone-set necklaces and earrings
-              matching the vibrant traditional attire worn at Nigerian weddings.
-              Indian manufacturers produce an extensive range of coloured stone
-              imitation jewellery.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Head Pieces & Hair Jewellery:
-              </strong>{" "}
-              Nigerian brides frequently wear elaborate head jewellery — our
-              maang tikkas, hair bands, and headpiece sets are adapted for the
-              African bridal market.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Why Nigerian Retailers and Nollywood Stylists Choose Gemora Global
+            </h2>
+            <p className="mb-4">
+              Nigeria’s fashion market is fast-paced and demands a manufacturer that can deliver "High-Impact" designs with consistent quality and reliable logistics.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Bold "Statement" Collections:</strong> Nigerian fashion is not about subtlety. Our collections are curated to include chunky necklaces, oversized earrings, and grand bridal sets that make an impact at any "Owambe" party or red-carpet event.</li>
+              <li><strong>West African Logistics Expertise:</strong> We have years of experience shipping to Nigeria. Our logistics team handles all the complexities of exporting from Jaipur to Lagos, ensuring your wholesale order reaches you in 10-15 business days via DHL or FedEx.</li>
+              <li><strong>Vibrant Color Palettes:</strong> Nigeria’s love for colorful attire (Aso-Ebi) requires matching jewellery. We offer an extensive range of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari and colored stone jewellery</Link> that perfectly complements Nigerian traditional fabrics like Lace and Ankara.</li>
+              <li><strong>Competitive Factory-Direct Pricing:</strong> By sourcing directly from our Jaipur factory, Nigerian wholesalers can achieve excellent retail markups, allowing them to scale their businesses in the competitive Lagos market.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Best-Selling Collections for the Nigerian Market
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                Bold Statement Necklaces:
-              </strong>{" "}
-              Chunky layered necklaces, collar necklaces, and bib-style sets in
-              gold-plated or 2-tone finishes. Nigeria's fashion culture rewards
-              bold, visible jewellery — our largest pieces sell fastest.
-            </li>
-            <li>
-              <strong className="text-foreground">Oversized Earrings:</strong>{" "}
-              Large chandelier earrings, statement chandbalis, tassel earrings,
-              and hoop styles in gold-plated and oxidised finishes. Top-selling
-              category for Lagos fashion boutiques.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/oxidised-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Oxidised Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Silver-oxidised jewellery has grown significantly in popularity in
-              Nigeria's bohemian and artisan fashion segments. Oxidised
-              statement earrings and necklaces sell well in upmarket Lagos
-              boutiques.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/meenakari-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Meenakari (Enamel) Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Nigeria's love of colour makes Meenakari jewellery a natural fit.
-              Vibrant enamelled earrings, bangles, and necklaces sell strongly
-              across Nigerian fashion retail channels.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                American Diamond (CZ) Sets:
-              </strong>{" "}
-              Diamond-look CZ stone sets — necklaces, earrings, and bracelets —
-              for premium Nigerian boutiques and online retailers catering to
-              aspirational buyers.
-            </li>
-            <li>
-              <strong className="text-foreground">Bangles & Bracelets:</strong>{" "}
-              Stacking bangles, cuff bracelets, and charm bracelets in
-              gold-plated and oxidised finishes. Nigerian buyers typically
-              purchase bangles in sets of 6–12 pieces.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              The Jaipur-Nigeria Connection: Bringing Royal Craft to the Afro-Fashion Hub
+            </h2>
+            <p className="mb-4">
+              Jaipur, the "Pink City" of India, and Nigeria share a deep cultural appreciation for "Jewellery as Heritage." In both cultures, jewellery is not just an accessory; it is a family heirloom and a marker of celebration. Gemora Global brings the 500-year-old heritage of <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Polki art</Link> to Nigeria, where it is increasingly being integrated into modern Afro-bridal fashion.
+            </p>
+            <p className="mb-4">
+              Our designs are tailored for the "Owambe" culture—the legendary Nigerian parties where fashion is the centerpiece. Whether it is a gold-plated choker for a Yoruba wedding or a heavy stone set for an Igbo traditional marriage, our jewellery is designed to "shine" under the bright lights of Nigerian celebrations.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Lagos Boutiques & Balogun Market Traders — Wholesale Process
-          </h2>
-          <p>
-            Gemora Global works with Nigerian importers, boutique owners, and
-            fashion market traders across Lagos, Abuja, and Port Harcourt. Our
-            Nigeria wholesale process:
-          </p>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Initial Contact:</strong>{" "}
-              WhatsApp us at +91 7976341419 or email globalgemora@gmail.com. We
-              send our full catalogue with 500+ designs within hours.
-            </li>
-            <li>
-              <strong className="text-foreground">Design Selection:</strong>{" "}
-              Nigerian buyers typically select 10–30 different designs for a
-              mixed assortment. We provide design recommendations tailored for
-              the Nigerian market.
-            </li>
-            <li>
-              <strong className="text-foreground">Order & Payment:</strong>{" "}
-              Proforma Invoice issued in USD (standard for Nigeria trade).
-              Payment via TT bank transfer, 50% advance + 50% before dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">Production & QC:</strong> 7–15
-              days production. Quality inspection and photographic report before
-              dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping to Nigeria:</strong>{" "}
-              DHL Express to Lagos (10–15 days), Abuja, or any Nigerian
-              destination. Full insurance, tracking, and customs documentation
-              provided.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Trending Categories for the Nigerian Market
+            </h2>
+            <p className="mb-4">
+              Our export data indicates that these four categories are currently dominating the Nigerian market:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">1. Grand Afro-Bridal Sets</h3>
+                <p className="text-sm">Complete <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal parures</Link> that offer the "Maharaja" look, adapted for the Nigerian bride’s unique style and grandeur.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">2. Chunky Gold-Plated Chokers</h3>
+                <p className="text-sm">Bold, heavy gold-look necklaces are a staple in Lagos boutiques. Our <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated collection</Link> provides the required weight and shine.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">3. Statement Meenakari & Color Fusion</h3>
+                <p className="text-sm">The vibrant colors of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari enamel art</Link> are perfect for matching the bright colors of traditional Nigerian attire.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">4. Artisan Oxidised Collections</h3>
+                <p className="text-sm">Popular in the creative and artistic circles of Lekki and Abuja, our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised pieces</Link> offer a unique, bohemian vibe.</p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            West Africa Regional Distribution
-          </h2>
-          <p>
-            Several of our Nigeria-based buyers distribute Gemora Global
-            jewellery across the West African region — supplying boutiques in
-            Ghana (Accra), Ivory Coast (Abidjan), Senegal (Dakar), Cameroon, and
-            other ASEAN markets. If you are a regional distributor, contact us
-            for volume pricing and consolidated shipment options.
-          </p>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Importing to Nigeria: Customs, SONCAP and Documentation
+            </h2>
+            <p className="mb-4">
+              Exporting to Nigeria requires a thorough understanding of local import regulations to ensure your goods are cleared quickly at the Murtala Muhammed International Airport (MMIA).
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Customs Duties:</strong> Nigeria has specific tariffs for fashion jewellery (HS Code 7117). We provide accurate documentation to help you navigate the Nigerian Customs Service (NCS) requirements.</li>
+              <li><strong>SONCAP Compliance:</strong> We ensure that our export-quality jewellery meets the standards required for the Standards Organisation of Nigeria Conformity Assessment Programme (SONCAP) where applicable.</li>
+              <li><strong>Form M & PAAR:</strong> We assist Nigerian wholesalers with the necessary proforma invoices and documentation required for Form M processing and Pre-Arrival Assessment Report (PAAR).</li>
+              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Wholesale Pricing for Nigerian Buyers
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">MOQ:</strong> 50 units per
-              design (mixed designs welcome)
-            </li>
-            <li>
-              <strong className="text-foreground">Wholesale Pricing:</strong>{" "}
-              USD $1.50 to $20 per piece (all prices in USD for Nigeria trade)
-            </li>
-            <li>
-              <strong className="text-foreground">Volume Discount:</strong> 10%
-              off for 200+ units; 20% off for 500+ units per design
-            </li>
-            <li>
-              <strong className="text-foreground">Retail Margin:</strong>{" "}
-              Nigerian boutiques typically mark up 200–400% on imported Indian
-              jewellery
-            </li>
-            <li>
-              <strong className="text-foreground">Private Label:</strong> Custom
-              packaging available, MOQ 500 units
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Logistics: The Journey from our Jaipur Factory to Lagos & Beyond
+            </h2>
+            <p className="mb-4">
+              Our logistics flow is optimized for the African continent, ensuring that distance is never a barrier to your business growth.
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
+              <li><strong>Rigorous Quality Check:</strong> Every piece is inspected by our senior craftsmen in Jaipur to ensure it meets our "Export Standard."</li>
+              <li><strong>High-Security Export Packing:</strong> Goods are individually wrapped in anti-tarnish bags and shipped in reinforced export-grade cartons to withstand long-distance transit.</li>
+              <li><strong>Air Freight Transit:</strong> Shipments are flown directly from Jaipur/Delhi to major hubs like Lagos (LOS) or Abuja (ABV).</li>
+              <li><strong>Doorstep Delivery:</strong> Our partners (DHL/FedEx) handle the "Final Mile," delivering directly to your boutique in Victoria Island, your stall in Balogun Market, or your warehouse in Port Harcourt.</li>
+            </ol>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Contact Our Nigeria Export Desk
-          </h2>
-          <p>
-            Ready to start sourcing for Nigeria? Contact our export team today:{" "}
-            <a
-              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20a%20buyer%20in%20Nigeria%20interested%20in%20wholesale%20imitation%20jewellery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              +91 7976341419
-            </a>{" "}
-            (WhatsApp) or globalgemora@gmail.com. We reply to all Nigerian buyer
-            inquiries within 24 hours and can customise design selections for
-            the Nigerian market.
-          </p>
-        </>
-      }
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              How to Grow Your Nigerian Jewellery Brand with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The Nigerian market is massive and highly rewarding for those who build a strong brand identity.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Custom Manufacturing:</strong> Stand out in the Lagos fashion scene with <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> that reflect your brand’s unique vision.</li>
+              <li><strong>Private Label Services:</strong> Build a luxury brand in Nigeria. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded packaging that resonates with the Nigerian market.</li>
+              <li><strong>Social Media Content:</strong> We provide professional photography and video assets that you can use on Instagram and TikTok to engage with the Nigerian fashion community and drive sales.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Client Testimonial: A Successful Lagos-Based Boutique
+            </h2>
+            <p className="mb-4">
+              "Sourcing from Gemora Global has been a game-changer for our boutique in Lekki. Their <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal and statement collections</Link> are exactly what our Nigerian clients want. The quality is superior, and the shipping to Lagos is very reliable." — <em>Oluwatosin A., Nigerian Fashion Retailer</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Trusted Manufacturing Partner in West Africa
+            </h2>
+            <p className="mb-4">
+              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing partner in India. We bring the royal artistry of Jaipur to the heart of Africa’s fashion capital. 
+            </p>
+            <p className="mb-4">
+              Contact our Nigeria Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+            </p>
+          </div>
+        }
     />
   );
 }

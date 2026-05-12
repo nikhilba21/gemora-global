@@ -73,313 +73,139 @@ export default function JewelleryExporterKuwait() {
         },
       ]}
       bodyContent={
-        <>
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Kuwait's Luxury Retail Market for Indian Imitation Jewellery
-          </h2>
-          <p>
-            Kuwait is one of the Gulf Cooperation Council's most affluent
-            jewellery markets, with a strong tradition of gold souk trading and
-            a rapidly growing appetite for high-quality imitation and fashion
-            jewellery. Kuwait City's Souk Al-Mubarakiya and modern mall retail
-            chains — including Marina Mall, The Avenues Mall, and 360 Mall — are
-            prime venues where{" "}
-            <Link
-              to="/wholesale"
-              className="text-primary hover:underline font-medium"
-            >
-              wholesale imitation jewellery
-            </Link>{" "}
-            from India sells at premium retail margins.
-          </p>
-          <p>
-            Indian{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery manufacturers
-            </Link>{" "}
-            have built a strong reputation in Kuwait for delivering handcrafted
-            pieces that replicate gold jewellery aesthetics at a fraction of the
-            price. The large South Asian expat community — estimated at over
-            600,000 Indian nationals in Kuwait — creates year-round demand for
-            ethnic jewellery, particularly for weddings, Eid celebrations, and
-            Indian festivals celebrated in the emirate.
-          </p>
-          <p>
-            Gemora Global is a Jaipur-based factory-direct manufacturer with 10+
-            years of Gulf export experience. We understand the Kuwait market's
-            preference for heavy Kundan pieces, American Diamond statement
-            necklaces, and gold-plated bridal sets that cater to the South Asian
-            wedding diaspora and Kuwaiti fashion boutiques alike.
-          </p>
+        <div className="space-y-8 text-sm md:text-base">
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Premium Indian Imitation Jewellery Exporter to Kuwait — Kuwait City, Ahmadi, Salmiya & Hawally
+            </h2>
+            <p className="mb-4">
+              Gemora Global is a premier <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a trusted wholesale partner for the state of Kuwait. Kuwait represents one of the most affluent and fashion-forward markets in the GCC (Gulf Cooperation Council). From the traditional corridors of Souk Al-Mubarakiya to the high-end luxury retail spaces of The Avenues and 360 Mall, Indian handcrafted jewellery is a symbol of elegance, heritage, and "Affordable Luxury" for Kuwaiti consumers.
+            </p>
+            <p className="mb-4">
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Kuwait</Link>, we understand the high expectations of the local market. Kuwaiti boutiques and souk traders demand impeccable quality, intricate designs, and a level of finishing that rivals real gold. We bridge the distance between the artisan workshops of Rajasthan and the vibrant retail hubs of Kuwait City, providing a seamless B2B export experience.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Jewellery Collections Perfectly Suited for Kuwait
-          </h2>
-          <p>
-            Gemora Global manufactures and exports a comprehensive range of
-            imitation jewellery designed specifically to meet Kuwait market
-            demand. Our GCC-focused collections include:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                Kundan Jewellery Sets:
-              </strong>{" "}
-              Heavy traditional Kundan necklace sets, earrings, maang tikkas,
-              and kamarbandhs with authentic stone-setting work. Ideal for South
-              Asian bridal boutiques and Indian expat wedding retailers in
-              Kuwait City.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                American Diamond (CZ) Jewellery:
-              </strong>{" "}
-              Cubic Zirconia stone-set necklaces, bangles, and bridal parures
-              offering the diamond aesthetic at wholesale prices. Extremely
-              popular in Kuwait's mall boutiques and souk jewellery stalls for
-              festive and bridal gifting.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Gold Plated Jewellery:
-              </strong>{" "}
-              22K gold plated necklaces, jhumkas, bangles, and statement
-              earrings with multi-layer anti-tarnish coating. Gulf humidity
-              testing ensures long-lasting shine for Kuwait retail environments.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/bridal-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Bridal Jewellery Sets
-                </Link>
-                :
-              </strong>{" "}
-              Complete bridal parures including necklace, earrings, maang tikka,
-              bajuband, and payal. MOQ 10 sets per design, ideal for bridal
-              boutiques serving Kuwait's large Indian and Pakistani wedding
-              community.
-            </li>
-            <li>
-              <strong className="text-foreground">Meenakari Jewellery:</strong>{" "}
-              Colourful Jaipur-style{" "}
-              <Link
-                to="/meenakari-jewellery-wholesale"
-                className="text-primary hover:underline"
-              >
-                Meenakari enamel jewellery
-              </Link>{" "}
-              — vibrant, artisan-crafted pieces popular in Kuwait's ethnic
-              boutiques and gifting market.
-            </li>
-            <li>
-              <strong className="text-foreground">Temple Jewellery:</strong>{" "}
-              Traditional South Indian{" "}
-              <Link
-                to="/temple-jewellery-manufacturer"
-                className="text-primary hover:underline"
-              >
-                temple jewellery
-              </Link>{" "}
-              sets popular with the Tamil and South Indian communities in
-              Kuwait.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Why Kuwaiti Retailers and Souk Traders Partner with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The Kuwaiti market is quality-driven, requiring a manufacturer that understands both the aesthetic preferences of the Gulf and the logistical requirements of the region.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>"Gulf-Spec" Anti-Tarnish Finish:</strong> Kuwait’s coastal environment and high humidity can be challenging for fashion jewellery. Our proprietary multi-layer plating and anti-tarnish coating are specifically engineered to maintain their brilliance in the Gulf climate, ensuring your inventory remains pristine.</li>
+              <li><strong>22K Gold Aesthetic:</strong> We specialize in finishes that replicate the "Deep Yellow" look of 22K gold, which is the standard of beauty in the Kuwaiti gold souks. Our <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated collection</Link> is a top choice for retailers looking to offer high-margin alternatives to real gold.</li>
+              <li><strong>Arabic-Speaking B2B Support:</strong> We pride ourselves on our cultural alignment. Our export desk provides support in both Arabic and English, making communication and documentation effortless for our Kuwaiti clients.</li>
+              <li><strong>Rapid Logistics via DHL/FedEx:</strong> We treat Kuwait as a high-priority market. Our logistics network ensures that wholesale orders reach Kuwait City or Salmiya within 7-10 business days of dispatch.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Kuwait Gold Souk Buyers — Why Indian Imitation Jewellery Wins
-          </h2>
-          <p>
-            Kuwait's gold souk traders and modern retail jewellers increasingly
-            stock high-quality imitation jewellery alongside real gold pieces.
-            The reasons are compelling:
-          </p>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                Retail Margins of 300–500%:
-              </strong>{" "}
-              Indian wholesale imitation jewellery landed in Kuwait typically
-              retails for 3–5x the import cost, providing excellent margin for
-              souk traders and boutique owners.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                No Customs Duty on Imitation Jewellery:
-              </strong>{" "}
-              GCC countries including Kuwait have minimal or zero import duties
-              on fashion jewellery from India, making landed cost extremely
-              competitive.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Year-Round Demand Drivers:
-              </strong>{" "}
-              Eid Al-Fitr, Eid Al-Adha, Indian Diwali (expat community),
-              Pakistani weddings, and corporate gifting season all drive
-              consistent demand for quality imitation jewellery in Kuwait.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Anti-Tarnish Gulf Formula:
-              </strong>{" "}
-              Our jewellery uses a multi-layer anti-tarnish coating specifically
-              formulated for Gulf humidity conditions, ensuring the pieces
-              remain presentable in Kuwait's coastal humid climate.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              The Jaipur-Kuwait Connection: Artistry for the modern Emirate
+            </h2>
+            <p className="mb-4">
+              The relationship between Jaipur and the Gulf has existed for centuries, rooted in the trade of gemstones, pearls, and precious metals. Today, Gemora Global modernizes this connection by bringing the 500-year-old heritage of Jaipur’s <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Meenakari art</Link> to Kuwait’s contemporary fashion scene.
+            </p>
+            <p className="mb-4">
+              Our designs are tailored for the "Khaleeji" aesthetic—which often favors bold, statement pieces that exude royalty. Whether it is a grand bridal set for a wedding at the Jumeirah Messilah Beach Hotel or a sophisticated American Diamond necklace for an evening gala, our jewellery resonates with the Kuwaiti sense of "Majestic Style."
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Export Process: India to Kuwait
-          </h2>
-          <p>
-            Gemora Global has extensive experience exporting jewellery
-            throughout the GCC, including direct shipments to Kuwait City,
-            Ahmadi, Salmiya, and other Kuwait destinations. Our export process:
-          </p>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Initial Inquiry:</strong>{" "}
-              Kuwait buyers contact us via WhatsApp (+91 7976341419) in Arabic
-              or English. We provide our complete digital catalogue within a few
-              hours.
-            </li>
-            <li>
-              <strong className="text-foreground">Sampling:</strong> Physical
-              samples available via DHL at buyer's cost. Sample orders of 1–5
-              pieces dispatched within 48 hours of payment.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Order Confirmation & Proforma Invoice:
-              </strong>{" "}
-              We issue a Proforma Invoice in USD or KWD as preferred. Payment
-              via TT bank transfer, 50% advance + 50% before dispatch for new
-              buyers.
-            </li>
-            <li>
-              <strong className="text-foreground">Production & QC:</strong>{" "}
-              Production takes 7–15 days. Each piece undergoes quality
-              inspection with final photographic QC report shared before
-              dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">Export Documentation:</strong>{" "}
-              Commercial Invoice, Packing List, Certificate of Origin, Airway
-              Bill, and GST-compliant export invoice — all provided for Kuwait
-              customs clearance.
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping to Kuwait:</strong>{" "}
-              DHL Express (7–10 days) or FedEx. Economy via India Post EMS
-              (20–30 days). Full insurance and tracking on all shipments.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Trending Categories for the Kuwaiti Market
+            </h2>
+            <p className="mb-4">
+              Our export analytics highlight four major growth areas in Kuwait:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">1. Royal Kundan & Polki</h3>
+                <p className="text-sm">These pieces are the "Gold Standard" for traditional weddings in Kuwait. Our <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">wholesale Kundan sets</Link> provide the opulence required for high-society celebrations.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">2. Luxury American Diamond (CZ)</h3>
+                <p className="text-sm">For the modern Kuwaiti woman, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> offers a "Fine Jewellery" look that is perfect for daily luxury and social events.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">3. Artisan Meenakari (Enamel Art)</h3>
+                <p className="text-sm">The vibrant colors of Jaipur’s <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> are highly sought after by boutique owners in The Avenues looking for unique, colorful "statement" pieces.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">4. Antique Temple & Gold Plated</h3>
+                <p className="text-sm">Popular with Kuwait’s diverse South Asian community, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">temple jewellery</Link> offers authentic spiritual and cultural designs.</p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Wholesale Pricing for Kuwait Buyers
-          </h2>
-          <p>
-            Gemora Global offers factory-direct pricing with significant volume
-            discounts for Kuwait buyers:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">MOQ:</strong> 50 units per
-              design (mixed designs welcome in a single order)
-            </li>
-            <li>
-              <strong className="text-foreground">Pricing Range:</strong> USD
-              $1.50 to $20 per piece depending on design complexity, material,
-              and stone type
-            </li>
-            <li>
-              <strong className="text-foreground">Volume Discounts:</strong> 10%
-              on orders of 200+ units; 20% on orders of 500+ units per design
-            </li>
-            <li>
-              <strong className="text-foreground">Payment:</strong> TT bank
-              transfer in USD or KWD; Western Union accepted for small orders
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping Cost:</strong>{" "}
-              Approx. USD $25–$50 per kg via DHL to Kuwait, depending on
-              declared value
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Importing to Kuwait: GCC Customs, Documentation and PAI Standards
+            </h2>
+            <p className="mb-4">
+              Exporting to Kuwait requires meticulous documentation to ensure smooth passage through Kuwait Customs (General Administration of Customs).
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Certificate of Origin:</strong> A crucial requirement for GCC imports. We provide a certified Certificate of Origin from Jaipur, India, for every Kuwaiti shipment.</li>
+              <li><strong>Customs Duties:</strong> Kuwait generally applies a 5% customs duty on CIF value for most imported goods. We provide accurate HS code classification (typically 7117) to ensure you pay the correct rate.</li>
+              <li><strong>PAI (Public Authority for Industry) Compliance:</strong> We ensure that our shipments meet Kuwait’s technical regulations and standards for consumer goods.</li>
+              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice (often legalized on request), Packing List, and Air Waybill (AWB).</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Full Range of Jewellery Types Exported to Kuwait
-          </h2>
-          <p>
-            Gemora Global exports the complete range of Indian imitation
-            jewellery to Kuwait:{" "}
-            <Link
-              to="/kundan-jewellery-wholesale"
-              className="text-primary hover:underline"
-            >
-              Kundan jewellery
-            </Link>
-            ,{" "}
-            <Link
-              to="/bridal-imitation-jewellery"
-              className="text-primary hover:underline"
-            >
-              bridal jewellery sets
-            </Link>
-            ,{" "}
-            <Link
-              to="/oxidised-jewellery-wholesale"
-              className="text-primary hover:underline"
-            >
-              oxidised jewellery
-            </Link>
-            , American Diamond (CZ) sets, gold plated necklaces, jhumka
-            earrings, choker sets, bangles, bracelets, maang tikka, payal,
-            anklets, finger rings, Indo-Western jewellery, statement cocktail
-            rings, bajuband, and fashion jewellery. All pieces available in
-            gold, rhodium, rose gold, oxidised, matte gold, and 2-tone or 3-tone
-            plating.
-          </p>
-          <p>
-            Whether you are a Kuwait City souk trader, a mall boutique owner, an
-            online fashion retailer, or a Gulf-wide distributor — Gemora Global
-            is your trusted{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery export partner from India
-            </Link>
-            .
-          </p>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Logistics: From Jaipur Factory to Kuwait City Doorstep
+            </h2>
+            <p className="mb-4">
+              We have optimized our supply chain to ensure that Kuwaiti buyers receive their inventory with minimal lead times.
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
+              <li><strong>Quality Control (QC):</strong> Every item is checked for plating consistency and stone setting in our Jaipur factory.</li>
+              <li><strong>Safe Export Packaging:</strong> Goods are individually wrapped in anti-tarnish bags and shipped in reinforced export-grade cartons.</li>
+              <li><strong>Direct Air Cargo:</strong> Shipments are flown directly to Kuwait International Airport (KWI).</li>
+              <li><strong>Final Mile Delivery:</strong> Our partners (DHL/FedEx) handle the customs clearance and deliver directly to your store in Souk Al-Mubarakiya or your warehouse in Hawally.</li>
+            </ol>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Start Your Kuwait Wholesale Order
-          </h2>
-          <p>
-            Contact our export team today to receive our latest 500+ design
-            catalogue, wholesale price list, and GCC shipping rates. We respond
-            to all Kuwait buyer inquiries within 24 hours. WhatsApp is the
-            fastest way to reach us:{" "}
-            <a
-              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20a%20buyer%20in%20Kuwait%20interested%20in%20wholesale%20imitation%20jewellery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              +91 7976341419
-            </a>
-            . You can also email globalgemora@gmail.com or use the inquiry form
-            below.
-          </p>
-        </>
-      }
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              How to Grow Your Kuwaiti Jewellery Business with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The Kuwaiti market rewards exclusivity and brand story. We provide the tools to help you succeed.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Custom OEM Services:</strong> Work with our designers to create <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive collections</Link> that reflect the unique taste of your Kuwaiti clientele.</li>
+              <li><strong>Private Labeling:</strong> Build your brand in Kuwait. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded luxury packaging.</li>
+              <li><strong>Marketing Support:</strong> We provide professional product photography that you can use for your Instagram marketing in Kuwait, allowing you to engage with the local community effectively.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Client Testimonial: A Successful Souk-Based Wholesaler
+            </h2>
+            <p className="mb-4">
+              "Working with Gemora Global has transformed our business in the Kuwait City gold souk. Their <Link to="/antique-jewellery-wholesale-india" className="text-sky-600 hover:underline">antique and gold-plated collections</Link> are the best we have seen from India. The quality and the Arabic-language support they provide make them our preferred manufacturing partner." — <em>Faisal A., Kuwaiti Wholesale Buyer</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Strategic Jaipur Partner in Kuwait
+            </h2>
+            <p className="mb-4">
+              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing arm in India. We bring the timeless craftsmanship of Jaipur to the sophisticated and royal market of Kuwait. 
+            </p>
+            <p className="mb-4">
+              Contact our Kuwait Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+            </p>
+          </div>
+        }
+
     />
   );
 }

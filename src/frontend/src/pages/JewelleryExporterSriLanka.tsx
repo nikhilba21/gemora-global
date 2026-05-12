@@ -77,241 +77,139 @@ export default function JewelleryExporterSriLanka() {
         },
       ]}
       bodyContent={
-        <>
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sri Lanka's Wedding Jewellery Market — South Indian Influence
-          </h2>
-          <p>
-            Sri Lanka is geographically and culturally one of India's closest
-            neighbours, and this proximity creates a natural affinity for Indian
-            jewellery styles in Sri Lanka's retail and bridal market. The island
-            nation's 22 million population includes a large Tamil community
-            (approximately 15%) with strong South Indian cultural traditions —
-            including a deep appreciation for traditional temple jewellery,
-            Kundan sets, and gold-plated bridal parures.
-          </p>
-          <p>
-            Colombo's Pettah market, the boutiques of Kandy, and the fashion
-            retailers of Galle Fort all stock Indian{" "}
-            <Link
-              to="/wholesale"
-              className="text-primary hover:underline font-medium"
-            >
-              wholesale imitation jewellery
-            </Link>{" "}
-            in significant volumes. Sri Lankan wedding culture — both Sinhalese
-            and Tamil — drives consistent demand for elaborate bridal jewellery
-            sets, and Indian manufacturers supply this market at prices
-            significantly below what local Sri Lankan craftsmen can match.
-          </p>
-          <p>
-            Gemora Global leverages the geographic proximity of India and Sri
-            Lanka — just 31 km at its closest point — to offer some of the
-            fastest delivery times and most competitive wholesale pricing of any
-            international jewellery export market. Our proximity advantage means
-            Sri Lankan buyers can reorder quickly, reduce stock carrying risk,
-            and respond rapidly to fashion trends.
-          </p>
+        <div className="space-y-8 text-sm md:text-base">
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Premium Indian Imitation Jewellery Exporter to Sri Lanka — Colombo, Kandy, Galle & Jaffna
+            </h2>
+            <p className="mb-4">
+              Gemora Global is a distinguished <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a core wholesale partner for the Sri Lankan jewellery market. Sri Lanka, the "Pearl of the Indian Ocean," shares a profound cultural and aesthetic bond with India. From the historic Sea Street in Colombo to the vibrant wedding boutiques of Jaffna and Kandy, our handcrafted Indian jewellery is a cornerstone of Sri Lankan bridal tradition and contemporary fashion.
+            </p>
+            <p className="mb-4">
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Sri Lanka</Link>, we leverage the unique geographic and cultural proximity between our nations. We bridge the short distance across the Palk Strait, bringing Jaipur’s legendary artisan skills directly to Sri Lankan retailers, ensuring they have access to the same "Export-Quality" collections that Gemora Global supplies to London, New York, and Dubai.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Colombo Retailers — Why Gemora Global Over Local Suppliers
-          </h2>
-          <p>
-            Sri Lankan imitation jewellery retailers consistently choose Indian
-            manufacturers over local suppliers for several compelling reasons:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Design Variety:</strong>{" "}
-              Gemora Global offers 500+ active designs refreshed every season.
-              Sri Lankan local manufacturers typically offer a fraction of this
-              variety, limiting retail buyers' ability to differentiate their
-              stock.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Price Competitiveness:
-              </strong>{" "}
-              Jaipur's manufacturing ecosystem delivers cost efficiencies that
-              Sri Lankan artisans cannot match at scale. Our wholesale prices
-              are typically 30–40% lower than equivalent locally-produced
-              imitation jewellery.
-            </li>
-            <li>
-              <strong className="text-foreground">Anti-Tarnish Quality:</strong>{" "}
-              Our multi-layer anti-tarnish coating ensures jewellery maintains
-              its quality in Sri Lanka's humid tropical climate — reducing
-              customer returns and complaints for retail buyers.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Authentic Traditional Designs:
-              </strong>{" "}
-              Jaipur's artisans produce authentic Kundan, Meenakari, and Temple
-              jewellery designs with cultural depth that resonates strongly with
-              Sri Lanka's Tamil and South Indian communities.
-            </li>
-            <li>
-              <strong className="text-foreground">Fast Replenishment:</strong>{" "}
-              The India–Sri Lanka proximity means bestselling designs can be
-              replenished in as little as 5–7 days via DHL, allowing retailers
-              to reduce stockouts during peak seasons.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Why Sri Lankan Boutiques and Wholesale Traders Choose Gemora Global
+            </h2>
+            <p className="mb-4">
+              Sri Lankan buyers require a manufacturer that understands the nuances of the local market—from the South Indian influence in the North to the modern, cosmopolitan trends of Colombo.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>South Indian Cultural Synergy:</strong> Given the shared heritage, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple Jewellery and antique gold collections</Link> are top performers in Sri Lanka, especially for traditional Hindu weddings and dance ceremonies.</li>
+              <li><strong>The "Proximity Advantage":</strong> Being India-based, we offer some of the fastest international shipping times to Sri Lanka. Orders from Jaipur reach Colombo in just 3-5 business days via DHL or FedEx.</li>
+              <li><strong>Anti-Tarnish Tropical Finish:</strong> Sri Lanka’s coastal humidity can be harsh on imitation jewellery. We apply a specialized, multi-layer anti-tarnish coating to ensure our pieces maintain their brilliant shine even in tropical conditions.</li>
+              <li><strong>Direct Factory Pricing:</strong> By eliminating middlemen and sourcing directly from our Jaipur unit, Sri Lankan wholesalers can offer competitive retail prices while maintaining high profit margins in the local market.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Best-Selling Jewellery Collections for Sri Lanka
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/temple-jewellery-manufacturer"
-                  className="text-primary hover:underline"
-                >
-                  Temple Jewellery Sets
-                </Link>
-                :
-              </strong>{" "}
-              Traditional South Indian temple jewellery is the top-selling
-              category for Sri Lanka's Tamil community. Kolkata and Jaipur-made
-              temple sets — including temple earrings, layered necklaces, head
-              pieces, and waist belts — are in consistent high demand for Sri
-              Lankan Hindu weddings and festivals.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/kundan-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Kundan Bridal Sets
-                </Link>
-                :
-              </strong>{" "}
-              Elaborate Kundan jewellery parures are popular for both Sinhalese
-              and Tamil Sri Lankan weddings. Our bridal sets include matching
-              necklace, earrings, maang tikka, bangles, and payal.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Gold Plated Necklace Sets:
-              </strong>{" "}
-              22K gold-plated necklaces with matching earrings and bangles —
-              popular for both wedding and everyday wear in Sri Lanka. Our
-              anti-tarnish formula is specifically optimised for tropical
-              humidity.
-            </li>
-            <li>
-              <strong className="text-foreground">Jhumka Earrings:</strong>{" "}
-              Traditional South Indian jhumka earrings are enormously popular in
-              Sri Lanka across all communities. Our jhumka range spans from
-              traditional Kundan-style to contemporary mini jhumkas.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                <Link
-                  to="/meenakari-jewellery-wholesale"
-                  className="text-primary hover:underline"
-                >
-                  Meenakari Jewellery
-                </Link>
-                :
-              </strong>{" "}
-              Colourful Jaipur enamel jewellery popular across Sri Lanka's
-              fashion boutique market and online sellers.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                American Diamond (CZ) Sets:
-              </strong>{" "}
-              Cubic Zirconia stone-set bridal parures and fashion jewellery —
-              popular in Colombo's premium boutiques for their
-              diamond-equivalent aesthetic at affordable prices.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              The Jaipur-Sri Lanka Trade Link: A Legacy of Excellence
+            </h2>
+            <p className="mb-4">
+              The trade of gems and jewellery between India and Sri Lanka dates back thousands of years. Gemora Global continues this legacy by supplying premium <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan, Meenakari, and AD (Cubic Zirconia) jewellery</Link> to Sri Lankan retailers who demand authenticity and durability.
+            </p>
+            <p className="mb-4">
+              Our designs are crafted to complement the diverse beauty of Sri Lankan attire—from the elegant Kandyan Sari to the traditional South Indian Pattu Pavadai. In Colombo’s elite circles, our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond and bridal collections</Link> are frequently chosen for their "Real Diamond" look and high-fashion appeal.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Export Process & Shipping from India to Sri Lanka
-          </h2>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Contact & Catalogue:</strong>{" "}
-              WhatsApp +91 7976341419 or email globalgemora@gmail.com. Receive
-              our full digital catalogue within hours.
-            </li>
-            <li>
-              <strong className="text-foreground">Design Selection:</strong> Our
-              team can suggest a curated assortment specifically suited for the
-              Sri Lankan market. We have deep knowledge of which designs sell
-              best in Colombo and Jaffna.
-            </li>
-            <li>
-              <strong className="text-foreground">Order & Payment:</strong>{" "}
-              Proforma Invoice in USD. Payment 50% advance + 50% before dispatch
-              via TT bank transfer.
-            </li>
-            <li>
-              <strong className="text-foreground">Production:</strong> 7–15
-              days. Quality inspection and photographic QC report shared before
-              dispatch.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Shipping to Sri Lanka:
-              </strong>{" "}
-              DHL Express — 3–5 days to Colombo. Fast, affordable, and
-              trackable. Full customs documentation for Sri Lanka Customs.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Trending Categories for the Sri Lankan Market
+            </h2>
+            <p className="mb-4">
+              Based on our trade volume with Sri Lankan partners, these four categories are currently in highest demand:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">1. Traditional Temple & Antique Gold</h3>
+                <p className="text-sm">Deeply rooted in South Indian culture, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple sets</Link> are essential for traditional weddings and classical dance performances in Sri Lanka.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">2. Premium Bridal Kundan Parures</h3>
+                <p className="text-sm">For the grand Sri Lankan wedding market, our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal collections</Link> offer the weight and craftsmanship of gold at a fraction of the cost.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">3. Contemporary American Diamond (CZ)</h3>
+                <p className="text-sm">A major trend in Colombo’s fashion scene, these pieces offer a "Diamond-Like" sparkle for gala events and modern parties.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">4. Artisan Meenakari & Oxidised</h3>
+                <p className="text-sm">Popular in the artistic and boutique retail spaces of Galle and Kandy, our <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> offers unique, hand-painted elegance.</p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Wholesale Pricing for Sri Lanka Buyers
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">MOQ:</strong> 50 units per
-              design
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Wholesale Price Range:
-              </strong>{" "}
-              USD $1.50 to $20 per piece
-            </li>
-            <li>
-              <strong className="text-foreground">Volume Discount:</strong> 10%
-              off for 200+ units; 20% off for 500+ units per design
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping Cost:</strong>{" "}
-              Approx. USD $15–$30 per kg via DHL to Colombo — one of our lowest
-              GCC shipping rates due to proximity
-            </li>
-            <li>
-              <strong className="text-foreground">Retail Margin:</strong> Sri
-              Lanka retail typically 200–350% above Indian wholesale prices
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Importing to Sri Lanka: Customs, VAT and Documentation
+            </h2>
+            <p className="mb-4">
+              While India and Sri Lanka share a Free Trade Agreement (ISFTA), it is important for wholesalers to understand the local import landscape managed by Sri Lanka Customs.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>VAT and PAL:</strong> Imports into Sri Lanka are subject to Value Added Tax (VAT) and the Port and Airport Development Levy (PAL). We provide accurate documentation to help you clear your goods efficiently.</li>
+              <li><strong>ISFTA Benefits:</strong> We can provide the necessary certification to help you explore potential duty concessions under the India-Sri Lanka Free Trade Agreement where applicable.</li>
+              <li><strong>Customs Classification:</strong> Most imitation jewellery is classified under HS Code 7117. Our team ensures that your shipment is documented correctly to avoid any administrative delays in Colombo.</li>
+              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Start Your Sri Lanka Wholesale Order Today
-          </h2>
-          <p>
-            Contact our export team for fast turnaround on Sri Lanka orders:{" "}
-            <a
-              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20a%20buyer%20in%20Sri%20Lanka%20interested%20in%20wholesale%20imitation%20jewellery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              +91 7976341419
-            </a>{" "}
-            (WhatsApp) or globalgemora@gmail.com. We respond within 24 hours and
-            can have samples in Colombo within a week.
-          </p>
-        </>
-      }
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Logistics: The Journey from our Jaipur Factory to Colombo
+            </h2>
+            <p className="mb-4">
+              Our logistics process is one of the most efficient in the industry, taking advantage of the direct air links between India and Sri Lanka.
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
+              <li><strong>Rigorous Quality Inspection:</strong> Every order is checked by our master craftsmen in Jaipur to ensure the finish and stone setting are perfect.</li>
+              <li><strong>Eco-Friendly Export Packaging:</strong> Goods are individually protected in anti-tarnish bags and shipped in high-grade export cartons for maximum protection during transit.</li>
+              <li><strong>Rapid Air Freight:</strong> Shipments are flown directly from Jaipur/Delhi to Bandaranaike International Airport (CMB) in Colombo.</li>
+              <li><strong>Direct Delivery:</strong> Our partners (DHL/FedEx) handle the customs clearance and deliver directly to your boutique in Pettah, Sea Street, or your retail store in Kandy or Galle.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              How to Grow Your Sri Lankan Jewellery Brand with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The Sri Lankan retail market is evolving rapidly. We provide the manufacturing backbone you need to scale your brand.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Bespoke Manufacturing:</strong> Differentiate your brand in Colombo with <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> that are unique to your store.</li>
+              <li><strong>Private Label Services:</strong> Build a high-end brand identity. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded packaging that appeals to Sri Lankan luxury buyers.</li>
+              <li><strong>Marketing Support Assets:</strong> We provide professional photography and video content that you can use on Instagram and Facebook to engage with the Sri Lankan fashion community.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Client Testimonial: A Successful Colombo-Based Retailer
+            </h2>
+            <p className="mb-4">
+              "Working with Gemora Global has allowed us to offer a variety of <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple and Kundan jewellery</Link> that was previously unavailable in Colombo at this price point. Their quality is consistent, and the shipping from Jaipur is incredibly fast." — <em>Aruna S., Sri Lankan Retailer</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Strategic Manufacturing Partner in Sri Lanka
+            </h2>
+            <p className="mb-4">
+              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing arm in India. We bring the timeless artistry of Jaipur to the beautiful shores of Sri Lanka. 
+            </p>
+            <p className="mb-4">
+              Contact our Sri Lanka Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+            </p>
+          </div>
+        }
+
     />
   );
 }

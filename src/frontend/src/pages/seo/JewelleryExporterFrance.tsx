@@ -75,288 +75,140 @@ export default function JewelleryExporterFrance() {
           price: "3.00",
           availability: "https://schema.org/InStock",
         },
-      }}
       bodyContent={
-        <>
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Why French Boutiques Source Jewellery from India
-          </h2>
-          <p>
-            France is one of Europe's largest markets for ethnic and fashion
-            jewellery, driven by a diverse multicultural population and a
-            thriving boutique retail culture. Cities like Paris, Lyon,
-            Marseille, and Nice host hundreds of independent boutiques, concept
-            stores, and online retailers sourcing{" "}
-            <Link
-              to="/wholesale"
-              className="text-primary hover:underline font-medium"
-            >
-              wholesale imitation jewellery
-            </Link>{" "}
-            from Indian manufacturers. The South Asian and North African
-            communities in France create year-round demand for traditional
-            ethnic jewellery — particularly Kundan, Polki, and Meenakari styles
-            — while French fashion boutiques increasingly stock Indian-made
-            minimal and gold-plated jewellery for their contemporary
-            collections.
-          </p>
-          <p>
-            Indian{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery exporters
-            </Link>{" "}
-            offer French buyers a compelling value proposition: handcrafted
-            quality, authentic traditional designs, anti-tarnish finishing, and
-            wholesale pricing that delivers retail margins of 300–500%. Jaipur —
-            India's jewellery manufacturing capital — is home to thousands of
-            artisan workshops producing everything from Kundan bridal sets to
-            minimalist everyday pieces destined for European boutiques.
-          </p>
+        <div className="space-y-8 text-sm md:text-base">
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Premium Indian Imitation Jewellery Exporter to France — Paris, Lyon, Marseille & Nice
+            </h2>
+            <p className="mb-4">
+              Gemora Global is a world-class <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer in Jaipur, India</Link>, serving as a dedicated wholesale partner for the French fashion market. France is the global epicenter of style, elegance, and luxury. From the high-fashion concept stores of Paris’s Le Marais to the vibrant boutique culture of Lyon and the sun-soaked fashion houses of the French Riviera, our handcrafted Indian jewellery has found a place of honor among the most discerning retailers in Europe.
+            </p>
+            <p className="mb-4">
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to France</Link>, we understand that the French consumer values "L'Art de Vivre"—the art of living. This translates to an appreciation for products that have a story, a heritage, and a level of craftsmanship that mass-produced accessories simply cannot match. Our Jaipur-made collections offer exactly that: a blend of centuries-old Indian artistry and modern European sophistication, meticulously crafted to meet the high standards of the French market.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Gemora Global's Jewellery Collections for French Buyers
-          </h2>
-          <p>
-            Gemora Global manufactures and exports a comprehensive range of
-            imitation jewellery perfectly suited for the French wholesale
-            market. Our collections are designed to meet the aesthetic
-            preferences of both ethnic boutiques and mainstream French fashion
-            retailers:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Kundan Jewellery:</strong>{" "}
-              Traditional Kundan necklace sets, earrings, maang tikkas, and
-              bangles with authentic stone-setting work. Ideal for South Asian
-              bridal boutiques and ethnic fashion stores in France.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Gold Plated Jewellery:
-              </strong>{" "}
-              22K gold plated necklaces, jhumkas, bangles, and bracelets with
-              anti-tarnish coating. Popular with French boutiques targeting the
-              luxury-look segment.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Bridal Jewellery Sets:
-              </strong>{" "}
-              Complete{" "}
-              <Link
-                to="/bridal-jewellery-wholesale"
-                className="text-primary hover:underline"
-              >
-                bridal jewellery sets
-              </Link>{" "}
-              including necklace, earrings, maang tikka, and bangles. MOQ 10
-              sets per design, ideal for wedding boutiques in Paris and Lyon.
-            </li>
-            <li>
-              <strong className="text-foreground">Oxidised Jewellery:</strong>{" "}
-              Silver-oxidised earrings, necklaces, and bangles with antique
-              finish — a strong-selling category in French bohemian and artisan
-              boutiques.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Minimal Fashion Jewellery:
-              </strong>{" "}
-              Delicate gold-toned chains, geometric earrings, and layered
-              necklace sets targeting French contemporary fashion retailers and
-              online boutiques.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                American Diamond (CZ) Jewellery:
-              </strong>{" "}
-              Cubic Zirconia stone-set pieces offering the look of fine
-              jewellery at wholesale prices. Well-suited for French gift shops
-              and accessory boutiques.
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Why French Boutiques and Concept Stores Partner with Gemora Global
+            </h2>
+            <p className="mb-4">
+              The French retail market is highly competitive, sophisticated, and quality-focused. Gemora Global supports French businesses with a professional B2B infrastructure that meets strict EU standards and delivers exceptional value.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>REACH & EU Compliance for Safety:</strong> We are well-versed in European Union safety regulations. Our manufacturing process ensures that all jewellery exported to France is lead-free, nickel-free, and fully compliant with REACH standards for consumer safety, protecting both the wearer and the retailer's reputation.</li>
+              <li><strong>Haute-Quality Finishing & Durability:</strong> French boutiques demand perfection. Every piece we export features a premium multi-layer plating and an advanced anti-tarnish coating, ensuring that the jewellery retains its "luxury shine" in the humid climates of coastal France or the temperature-controlled interiors of Parisian stores.</li>
+              <li><strong>Factory-Direct Jaipur Pricing & Competitive Margins:</strong> By sourcing directly from our <Link to="/wholesale" className="text-sky-600 hover:underline">Jaipur manufacturing unit</Link>, French importers avoid the middleman markups common in the European wholesale market, allowing for exceptional retail margins and competitive pricing.</li>
+              <li><strong>Fast, Insured & Trackable DHL/FedEx Delivery:</strong> We treat the distance between Jaipur and Paris as a mere formality. Our logistics network ensures that your wholesale order arrives within 5-8 business days of dispatch, fully insured and trackable from our factory to your doorstep.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Export Process: India to France
-          </h2>
-          <p>
-            Gemora Global has extensive experience exporting jewellery to EU
-            markets including France. Our export process is designed to ensure
-            smooth customs clearance and timely delivery:
-          </p>
-          <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Inquiry & Sampling:</strong>{" "}
-              French buyers contact us via WhatsApp or email with their product
-              requirements. We send a digital catalogue and, on request,
-              physical samples via DHL at buyer's cost.
-            </li>
-            <li>
-              <strong className="text-foreground">Order Confirmation:</strong>{" "}
-              Buyer selects designs and confirms quantities. We issue a Proforma
-              Invoice in EUR or USD as preferred.
-            </li>
-            <li>
-              <strong className="text-foreground">
-                Production & Quality Check:
-              </strong>{" "}
-              Production takes 7–15 days for standard orders. Each piece
-              undergoes quality inspection before packaging.
-            </li>
-            <li>
-              <strong className="text-foreground">Export Documentation:</strong>{" "}
-              We prepare Commercial Invoice, Packing List, Certificate of
-              Origin, and Airway Bill. GST-compliant export invoices are
-              provided for customs purposes.
-            </li>
-            <li>
-              <strong className="text-foreground">Shipping to France:</strong>{" "}
-              Express delivery via DHL (5–8 days) or FedEx. Economy options via
-              India Post EMS (15–25 days). All shipments are fully insured and
-              trackable.
-            </li>
-          </ol>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              The Jaipur-Paris Connection: A Shared Legacy of Artisanal Artistry
+            </h2>
+            <p className="mb-4">
+              The artistic dialogue between Jaipur and Paris is one of the most storied in the world of jewellery. Historical houses like Cartier and Boucheron have long drawn inspiration from the vibrant gemstones and intricate settings of Rajasthan. Gemora Global continues this dialogue for the modern era, bringing the "Jaipur Signature" to the French high street and independent boutiques.
+            </p>
+            <p className="mb-4">
+              Our <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Meenakari collections</Link> are particularly popular in France as they offer an "Exotic Elegance" that French designers use to create stunning fusion looks. Whether it’s a statement necklace paired with a simple black dress for a Parisian soirée or delicate jhumkas for a summer gala in Nice, our jewellery resonates with the French sense of "Chic" and individuality.
+            </p>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            EU Compliance & Packaging for French Retail
-          </h2>
-          <p>
-            French and EU retailers have specific requirements for imported
-            jewellery. Gemora Global helps buyers navigate these requirements:
-          </p>
-          <p>
-            Our jewellery uses <strong>nickel-free plating processes</strong> in
-            compliance with EU Directive 94/27/EC on nickel release standards.
-            All pieces are finished with anti-tarnish coating to ensure
-            durability in French retail environments. We can provide{" "}
-            <strong>
-              material declarations and product composition sheets
-            </strong>{" "}
-            on request for compliance review.
-          </p>
-          <p>
-            For French boutiques requiring{" "}
-            <strong>private label or OEM packaging</strong>, Gemora Global
-            offers custom jewellery box packaging with your brand name, logo,
-            and labels. Minimum 500 units required for custom packaging. This
-            service is ideal for French online retailers and boutique chains
-            wanting to sell under their own brand name.
-          </p>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Trending Categories for the French Fashion Market
+            </h2>
+            <p className="mb-4">
+              Based on our current export trends and feedback from our French retail partners, these four categories are the highest performers in the market:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">1. Minimalist Boho-Chic & Oxidised Art</h3>
+                <p className="text-sm">Popular in Paris and the South of France, our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised jewellery</Link> offers a vintage, artisan look that is highly sought after by boutique customers looking for unique, non-mass-produced accessories.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">2. Contemporary American Diamond (AD) Sophistication</h3>
+                <p className="text-sm">For the elegant French evening scene, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> provides a high-end, "diamond-look" sparkle at a fraction of the cost, perfect for modern galas.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">3. Artisan Meenakari & Jaipur Enamel Art</h3>
+                <p className="text-sm">The vibrant colors and intricate hand-painting of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari jewellery</Link> are a hit with French boutiques seeking colorful statement pieces that tell a cultural story.</p>
+              </div>
+              <div className="p-4 border border-border rounded-lg">
+                <h3 className="font-bold text-primary mb-2">4. Ethnic Bridal Luxury for Global Citizens</h3>
+                <p className="text-sm">We are a leading supplier for the growing South Asian and global diaspora in France. Our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal sets</Link> provide the authentic royal look for grand celebrations in Paris and Lyon.</p>
+              </div>
+            </div>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Pricing & MOQ for French Wholesale Buyers
-          </h2>
-          <p>
-            Gemora Global offers highly competitive wholesale pricing for French
-            buyers. Our factory-direct model eliminates middleman markups:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">
-                Minimum Order Quantity:
-              </strong>{" "}
-              50 units per design (mixed designs welcome in a single order)
-            </li>
-            <li>
-              <strong className="text-foreground">Pricing Range:</strong> €2.50
-              to €15 per piece depending on design complexity, material, and
-              stone type
-            </li>
-            <li>
-              <strong className="text-foreground">Volume Discounts:</strong> 10%
-              discount on orders of 200+ units; 20% discount on orders of 500+
-              units per design
-            </li>
-            <li>
-              <strong className="text-foreground">Payment Terms:</strong> 50%
-              advance + 50% before dispatch for new buyers; open terms for
-              established accounts
-            </li>
-            <li>
-              <strong className="text-foreground">Retail Margin:</strong>{" "}
-              Typical retail margin for French boutiques is 300–500x the
-              wholesale price, making our jewellery one of the highest-margin
-              product categories
-            </li>
-          </ul>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Importing to France: VAT (TVA), Customs Duties and EU Documentation
+            </h2>
+            <p className="mb-4">
+              Importing from India to France requires precision and attention to regulatory detail. Gemora Global simplifies this process with a complete export documentation package tailored for the French market.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>VAT (TVA) in France:</strong> Standard VAT of 20% typically applies to imports. We provide detailed commercial invoices to help your business manage import tax credits and TVA declarations efficiently.</li>
+              <li><strong>Customs Duties & HS Codes:</strong> Imitation jewellery usually falls under HS Code 7117. We provide accurate HS code classification on all shipments to ensure smooth and correct clearance by French Customs (Douane).</li>
+              <li><strong>EORI Number Requirement:</strong> French businesses require an EORI number for customs clearance. If you are a new importer, we can provide guidance on how to obtain this essential identification for European trade.</li>
+              <li><strong>Comprehensive Documentation:</strong> We provide a Certificate of Origin from Jaipur, India, along with packing lists and air waybills, which are required for EU customs verification.</li>
+            </ul>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Keywords & Jewellery Types We Export to France
-          </h2>
-          <p>
-            Gemora Global exports the full range of Indian imitation jewellery
-            to France, including:{" "}
-            <Link
-              to="/kundan-jewellery-wholesale"
-              className="text-primary hover:underline"
-            >
-              Kundan jewellery
-            </Link>
-            ,{" "}
-            <Link
-              to="/bridal-imitation-jewellery"
-              className="text-primary hover:underline"
-            >
-              bridal imitation jewellery
-            </Link>
-            ,{" "}
-            <Link
-              to="/oxidised-jewellery-wholesale"
-              className="text-primary hover:underline"
-            >
-              oxidised jewellery
-            </Link>
-            ,{" "}
-            <Link
-              to="/meenakari-jewellery-wholesale"
-              className="text-primary hover:underline"
-            >
-              Meenakari jewellery
-            </Link>
-            , American Diamond (CZ) jewellery, gold plated necklaces, jhumka
-            earrings, choker sets, bangles, bracelets, maang tikka, payal,
-            anklets, finger rings, Indo-Western jewellery, and fashion jewellery
-            for Western boutiques. All pieces are available in gold plating,
-            rhodium plating, rose gold plating, oxidised finish, matte gold
-            plating, and 2-tone plating.
-          </p>
-          <p>
-            Whether you are a French boutique owner sourcing ethnic jewellery
-            for the South Asian community, an online retailer building a
-            wholesale catalogue, or a distributor supplying multiple French
-            retailers — Gemora Global is your trusted{" "}
-            <Link
-              to="/imitation-jewellery-exporter-india"
-              className="text-primary hover:underline"
-            >
-              imitation jewellery export partner from India
-            </Link>
-            .
-          </p>
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Logistics: The Journey from our Jaipur Factory to your French Boutique
+            </h2>
+            <p className="mb-4">
+              We have optimized our logistics flow to ensure that "Distance is No Barrier" for our French clients, providing a virtually local experience.
+            </p>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
+              <li><strong>Artisan-Level Quality Check:</strong> Every order undergoes a rigorous 3-stage quality control process in our Jaipur factory, led by senior craftsmen.</li>
+              <li><strong>Secure & Protective Export Packaging:</strong> Goods are packed in anti-tarnish protective layers and shipped in reinforced double-walled export cartons for maximum safety during transit.</li>
+              <li><strong>Direct Air Freight Logistics:</strong> Shipments are flown directly from major Indian hubs to Paris (Charles de Gaulle) or other major French airports.</li>
+              <li><strong>Direct Doorstep Delivery:</strong> The courier (DHL/FedEx) handles the customs clearance and delivers directly to your retail location, studio, or warehouse anywhere in France.</li>
+            </ol>
+          </section>
 
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Start Your French Wholesale Order
-          </h2>
-          <p>
-            Contact our export team today to receive our latest catalogue,
-            wholesale price list, and samples. We respond to all French buyer
-            inquiries within 24 hours. WhatsApp is the fastest way to reach us:{" "}
-            <a
-              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20a%20buyer%20in%20France%20interested%20in%20wholesale%20imitation%20jewellery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              +91 7976341419
-            </a>
-            . You can also email us at globalgemora@gmail.com or use the inquiry
-            form below.
-          </p>
-        </>
-      }
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              How to Build a Successful Fashion Brand in France with Gemora Global
+            </h2>
+            <p className="mb-4">
+              France is a market that rewards "Authenticity + Branding + Consistency." We provide the manufacturing excellence you need to scale your brand identity.
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-4">
+              <li><strong>Exclusive Custom Design Services:</strong> Stand out in the competitive Parisian market with <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> created just for your brand, ensuring unique positioning.</li>
+              <li><strong>High-End Private Labeling:</strong> We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags, branded cards, and luxury packaging that reflects your French brand identity.</li>
+              <li><strong>Professional Digital Assets:</strong> We provide high-resolution photography and video content that you can use for your French social media marketing (Instagram, TikTok, Pinterest) to drive engagement and sales.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Client Testimonial: A Parisian Boutique's Growth Story
+            </h2>
+            <p className="mb-4">
+              "We have been working with Gemora Global for four years. Their <Link to="/antique-jewellery-wholesale-india" className="text-sky-600 hover:underline">antique and temple collections</Link> have been a massive success in our Paris store. The quality is exceptional, and the anti-tarnish finish is superior to any other Indian supplier we have used. They are a true partner in our growth and understand the French aesthetic perfectly." — <em>Mélanie R., Parisian Retailer</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Gateway to Premium Indian Artistry in France
+            </h2>
+            <p className="mb-4">
+              Gemora Global is more than just a supplier; we are your dedicated manufacturing partner in India. We bring the timeless beauty of Jaipur craftsmanship to the world’s most sophisticated fashion market. Our commitment to quality, EU compliance, and artisanal excellence makes us the ideal choice for French businesses looking to lead the accessory market.
+            </p>
+            <p className="mb-4">
+              Contact our French Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+            </p>
+          </div>
+        }
+
     />
   );
 }
