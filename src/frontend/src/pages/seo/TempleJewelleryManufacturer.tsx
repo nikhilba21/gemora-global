@@ -1,99 +1,7 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is temple jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Temple jewellery is a traditional Indian jewellery style featuring divine motifs like Lakshmi, Ganesha, and peacocks in gold or gold-plated finish. It originated in South Indian temples and is widely used for bridal wear and classical dance.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the MOQ for temple jewellery wholesale?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our minimum order quantity for temple jewellery wholesale is 50 units per design. Smaller trial orders can be arranged for first-time buyers.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you make kemp stone temple jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we manufacture kemp stone temple jewellery in traditional red and green kemp stones, as well as other semi-precious stone variants popular in South Indian jewellery traditions.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I get custom temple jewellery designs made?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we offer custom temple jewellery manufacturing for unique motifs, specific sizes, or exclusive designs. Custom orders typically require 15–20 business days and a minimum of 100 units.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you export temple jewellery internationally?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we export temple jewellery to the USA, UK, UAE, Canada, Australia, and many other countries. We handle all export documentation and ship via DHL, FedEx, and air freight.",
-        },
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.gemoraglobal.co/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Our Services",
-        item: "https://www.gemoraglobal.co/wholesale",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Temple Jewellery Manufacturer",
-        item: "https://www.gemoraglobal.co/temple-jewellery-manufacturer",
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Gemora Global",
-    description:
-      "Temple jewellery manufacturer and wholesale exporter from Jaipur, Rajasthan, India.",
-    url: "https://www.gemoraglobal.co/temple-jewellery-manufacturer",
-    telephone: "+91-7976341419",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "B 66 MAA Hinglaj Nagar",
-      addressLocality: "Jaipur",
-      addressRegion: "Rajasthan",
-      postalCode: "302021",
-      addressCountry: "IN",
-    },
-    sameAs: [
-      "https://www.indiamart.com/gemora-global",
-      "https://www.tradeindia.com/gemora-global",
-    ],
-  },
-];
+
 
 export default function TempleJewelleryManufacturer() {
   return (
@@ -104,7 +12,6 @@ export default function TempleJewelleryManufacturer() {
       h1="Temple Jewellery Manufacturer India | Wholesale"
       targetKeyword="temple jewellery manufacturer"
       heroSubtitle="Gemora Global manufactures and exports authentic temple jewellery in bulk to wholesalers, boutiques, and distributors worldwide. Gold-finish temple sets with intricate deity motifs — factory-direct pricing from Jaipur, India."
-      schema={schema}
       bodyContent={
         <>
           <h2 className="text-xl font-serif font-bold text-primary mt-0">

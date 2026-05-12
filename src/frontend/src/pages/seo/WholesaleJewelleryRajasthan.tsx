@@ -1,102 +1,6 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is Rajasthan famous for in jewellery manufacturing?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Rajasthan is famous for kundan, meenakari, lac jewellery, and jadau jewellery. Jaipur, the state capital, is India's number one hub for imitation and fine jewellery manufacturing, with thousands of skilled artisans and a centuries-old tradition.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What types of wholesale jewellery are available from Rajasthan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "From Rajasthan you can source kundan jewellery, meenakari jewellery, oxidised jewellery, temple jewellery, bridal jewellery sets, antique jewellery, lac bangles, and fashion imitation jewellery at wholesale prices.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the minimum order for wholesale jewellery from Rajasthan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Gemora Global's minimum order quantity is 50 units per design. Mixed design wholesale orders require a minimum of 200 units total. International buyers are welcome.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I get wholesale jewellery shipped from Rajasthan to my country?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Gemora Global ships wholesale jewellery from Jaipur, Rajasthan to 15+ countries including USA, UK, UAE, Canada, Australia, France, and Germany via DHL and FedEx.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is Rajasthan jewellery anti-tarnish?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Quality manufacturers like Gemora Global apply multi-layer anti-tarnish coating on all pieces. This significantly extends the wearable life of plated imitation jewellery.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What are typical wholesale prices for Rajasthan jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Wholesale earrings from Rajasthan start from ₹60–₹250 per piece. Necklace sets range from ₹300–₹1,200. Complete bridal sets start from ₹800. Contact Gemora Global for detailed pricing.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How do I place a bulk jewellery order from Rajasthan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Contact Gemora Global via WhatsApp (+91 7976341419) or the inquiry form. Share your requirements, review the catalogue, confirm the order with 30% advance payment, and we handle production and shipping.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do Rajasthan jewellery wholesalers provide export documentation?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Gemora Global provides complete export documentation — commercial invoice, packing list, certificate of origin, and HS code classification — for all international wholesale orders from Rajasthan.",
-        },
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.gemoraglobal.co/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Our Services",
-        item: "https://www.gemoraglobal.co/wholesale",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Wholesale Jewellery Rajasthan",
-        item: "https://www.gemoraglobal.co/wholesale-jewellery-rajasthan",
-      },
-    ],
-  },
-];
 
 export default function WholesaleJewelleryRajasthan() {
   return (
@@ -107,7 +11,7 @@ export default function WholesaleJewelleryRajasthan() {
       h1="Wholesale Jewellery Rajasthan — Bulk Imitation Jewellery Supplier"
       targetKeyword="wholesale jewellery Rajasthan"
       heroSubtitle="Gemora Global is Rajasthan's trusted wholesale jewellery supplier, based in Jaipur — India's jewellery capital. Factory-direct wholesale pricing on kundan, meenakari, bridal, temple, and fashion imitation jewellery with MOQ from 50 units and worldwide export."
-      schema={schema}
+
       bodyContent={
         <>
           <h2 className="text-xl font-serif font-bold text-primary mt-0">

@@ -1,131 +1,7 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Meenakari Jewellery Wholesale",
-    description:
-      "Wholesale meenakari jewellery manufactured in Jaipur, India. Authentic enamel work necklaces, earrings, and bridal sets. B2B export to 15+ countries.",
-    brand: {
-      "@type": "Brand",
-      name: "Gemora Global",
-    },
-    manufacturer: {
-      "@type": "Organization",
-      name: "Gemora Global",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Jaipur",
-        addressRegion: "Rajasthan",
-        addressCountry: "IN",
-      },
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "INR",
-      lowPrice: "60",
-      highPrice: "3000",
-      offerCount: "500",
-    },
-    category: "Imitation Jewellery",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is meenakari jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Meenakari is a traditional Indian jewellery-making art form originating from Jaipur, Rajasthan. It involves applying vibrant enamel (meen) colours to metal surfaces using heat, creating intricate patterns in red, green, blue, and other hues. Jaipur meenakari is unique because it uses gold as the base metal.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why is Jaipur famous for meenakari jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Jaipur's meenakari tradition dates back over 400 years to the reign of Raja Man Singh I. The city's artisans developed a unique double-sided meenakari technique and a distinctive palette of Jaipur colours. Today Jaipur is India's leading meenakari jewellery hub.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the MOQ for meenakari jewellery wholesale?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our meenakari jewellery wholesale MOQ is 50 units per design. Mixed design orders require a minimum of 200 units total.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What colours are available in meenakari jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Traditional Jaipur meenakari uses red, green, blue, white, and yellow enamel. We offer the full traditional palette plus contemporary colour combinations. Custom colour combinations available for orders of 100+ units.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you export meenakari jewellery internationally?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Gemora Global exports meenakari jewellery wholesale to the USA, UK, UAE, Canada, Australia, France, and other countries via DHL and FedEx with complete export documentation.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is meenakari jewellery suitable for international retail?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Meenakari's vibrant colours and intricate designs are popular in global fashion markets. Our anti-tarnish finish and export-grade packaging ensure the jewellery arrives in perfect retail condition.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I get custom meenakari designs?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Custom meenakari jewellery manufacturing is available for exclusive designs or private label collections. Custom orders require a minimum of 100 units and 15–20 business days production time.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the difference between meenakari and kundan jewellery?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Kundan jewellery involves setting precious or semi-precious stones in gold foil frames. Meenakari involves applying vibrant enamel colours to metal surfaces. Both originate in Jaipur and are often combined in the same piece — kundan on the front, meenakari on the reverse.",
-        },
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.gemoraglobal.co/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Our Services",
-        item: "https://www.gemoraglobal.co/wholesale",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Meenakari Jewellery Wholesale",
-        item: "https://www.gemoraglobal.co/meenakari-jewellery-wholesale",
-      },
-    ],
-  },
-];
+
 
 export default function MeenakariJewelleryWholesale() {
   return (
@@ -136,7 +12,6 @@ export default function MeenakariJewelleryWholesale() {
       h1="Meenakari Jewellery Wholesale — Jaipur Manufacturer & Exporter"
       targetKeyword="meenakari jewellery wholesale"
       heroSubtitle="Gemora Global is Jaipur's leading meenakari jewellery wholesale manufacturer and exporter. Authentic enamel-work meenakari necklaces, earrings, bangles, and bridal sets — factory-direct pricing with MOQ from 50 units and worldwide export."
-      schema={schema}
       bodyContent={
         <>
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
