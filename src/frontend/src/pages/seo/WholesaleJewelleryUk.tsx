@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
 
 export default function WholesaleJewelleryUk() {

@@ -38,7 +38,8 @@ export default function JewelleryExporterCanada() {
           name: "Jewellery Exporter Canada",
           url: "https://www.gemoraglobal.co/jewellery-exporter-canada",
         },
-            bodyContent={
+      ]}
+      bodyContent={
         <div className="space-y-8 text-sm md:text-base">
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
