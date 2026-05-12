@@ -75,6 +75,7 @@ export default function JewelleryExporterFrance() {
           price: "3.00",
           availability: "https://schema.org/InStock",
         },
+      }}
       bodyContent={
         <div className="space-y-8 text-sm md:text-base">
           <section>
