@@ -656,13 +656,16 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed text-center text-sm md:text-base">
           <p>
             Gemora Global is a Jaipur-based{" "}
-            <Link to="/about" className="text-primary hover:underline">
+            <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
               imitation jewellery manufacturer and exporter
             </Link>
             , established in 2011 with 10+ years of global export experience. We
             supply premium handcrafted designs to wholesalers, boutiques, and
             distributors across more than 30 countries. Based in{" "}
-            <strong>Jaipur, Rajasthan</strong> — India's jewellery manufacturing
+            <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline">
+              <strong>Jaipur, Rajasthan</strong>
+            </Link>{" "}
+            — India's jewellery manufacturing
             capital — we combine traditional Indian craftsmanship with modern
             anti-tarnish finishing techniques.
           </p>
@@ -750,7 +753,13 @@ export default function Home() {
                   {cat.desc}
                 </p>
                 <Link
-                  to={`/products?category=${cat.slug}`}
+                  to={cat.slug === "necklaces" ? "/american-diamond-jewellery-wholesale" : 
+                      cat.slug === "earrings" ? "/artificial-jewellery-wholesale" :
+                      cat.slug === "bridal" ? "/bridal-jewellery-wholesale" :
+                      cat.slug === "bangles" ? "/gold-plated-jewellery-wholesale-india" :
+                      cat.slug === "rings" ? "/antique-jewellery-wholesale-india" :
+                      cat.slug === "ethnic" ? "/wholesale-jewellery-rajasthan" :
+                      `/products?category=${cat.slug}`}
                   className="text-primary text-xs md:text-sm font-medium hover:underline"
                   data-ocid="category.view_link"
                 >

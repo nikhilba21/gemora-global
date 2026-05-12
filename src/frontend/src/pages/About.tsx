@@ -343,18 +343,24 @@ export default function About() {
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
                   The decision to base our operations in Jaipur was strategic.
                   Jaipur is not merely our home — it is the{" "}
-                  <strong>
+                  <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline font-bold">
                     imitation jewellery manufacturing capital of India
-                  </strong>
+                  </Link>
                   . The city&apos;s artisan ecosystem spans generations of
                   expertise in Kundan setting, Meenakari enamel work, and
                   gold-plating techniques that no other city in India can match.
                   Our craftspeople trained under master artisans and bring that
                   depth of expertise to every piece — whether an intricately
-                  detailed <strong>Kundan bridal necklace set</strong>, a
-                  lightweight American Diamond (CZ) daily-wear earring, or a
-                  vibrant <strong>Meenakari pendant set</strong> destined for a
-                  UK boutique.
+                  detailed{" "}
+                  <Link to="/kundan-jewellery-wholesale" className="text-primary hover:underline font-semibold">
+                    Kundan bridal necklace set
+                  </Link>
+                  , a lightweight American Diamond (CZ) daily-wear earring, or a
+                  vibrant{" "}
+                  <Link to="/meenakari-jewellery-wholesale" className="text-primary hover:underline font-semibold">
+                    Meenakari pendant set
+                  </Link>{" "}
+                  destined for a UK boutique.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   Our name — Gemora — reflects our commitment to gem-like
@@ -382,12 +388,16 @@ export default function About() {
               Our Jewellery Manufacturing Excellence
             </h2>
             <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto mb-6 text-sm md:text-base">
-              Our manufacturing facility in Jaipur, Rajasthan operates at the
-              heart of India&apos;s most celebrated jewellery-making region. We
-              maintain end-to-end production control — from raw brass and alloy
-              metal sourcing to stone cutting, setting, plating, polishing, and
-              packaging. This factory-direct model eliminates middlemen and
-              allows us to offer the most competitive{" "}
+              Our manufacturing facility in{" "}
+              <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline">
+                Jaipur, Rajasthan
+              </Link>{" "}
+              operates at the heart of India&apos;s most celebrated
+              jewellery-making region. We maintain end-to-end production control
+              — from raw brass and alloy metal sourcing to stone cutting,
+              setting, plating, polishing, and packaging. This factory-direct
+              model eliminates middlemen and allows us to offer the most
+              competitive{" "}
               <Link to="/wholesale" className="text-primary hover:underline">
                 wholesale jewellery pricing
               </Link>{" "}

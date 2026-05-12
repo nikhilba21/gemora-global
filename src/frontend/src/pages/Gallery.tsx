@@ -218,6 +218,41 @@ export default function Gallery() {
         </Link>
       </div>
 
+      {/* ── Contextual SEO Interlinking ──────────────────────── */}
+      <section className="container py-10 border-t border-border">
+        <h2 className="font-serif text-xl font-bold text-foreground mb-4">
+          Wholesale Jewellery Collections
+        </h2>
+        <p className="text-sm text-muted-foreground mb-6 leading-relaxed max-w-2xl">
+          Browse our extensive collection of factory-direct jewellery from Jaipur. 
+          Gemora Global is a premier{" "}
+          <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
+            wholesale imitation jewellery exporter
+          </Link>{" "}
+          serving boutiques and distributors globally. Explore our specialized categories:
+        </p>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {[
+            { label: "Kundan Wholesale", to: "/kundan-jewellery-wholesale" },
+            { label: "Bridal Sets", to: "/bridal-jewellery-wholesale" },
+            { label: "Oxidised Collection", to: "/oxidised-jewellery-wholesale" },
+            { label: "Meenakari Designs", to: "/meenakari-jewellery-wholesale" },
+            { label: "Temple Jewellery", to: "/temple-jewellery-manufacturer" },
+            { label: "American Diamond", to: "/american-diamond-jewellery-wholesale" },
+            { label: "Fashion Jewellery", to: "/fashion-jewellery-exporter-india" },
+            { label: "Jaipur Manufacturer", to: "/imitation-jewellery-manufacturer-jaipur" },
+          ].map((cat) => (
+            <Link
+              key={cat.to}
+              to={cat.to}
+              className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-colors"
+            >
+              {cat.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

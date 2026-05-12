@@ -274,6 +274,8 @@ export default function BlogPostPage() {
                 { label: "American Diamond", to: "/american-diamond-jewellery-wholesale" },
                 { label: "Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
                 { label: "Meenakari Jewellery", to: "/meenakari-jewellery-wholesale" },
+                { label: "Gold Plated Jewellery", to: "/gold-plated-jewellery-wholesale-india" },
+                { label: "Artificial Jewellery", to: "/artificial-jewellery-wholesale" },
               ].map((cat) => (
                 <Link
                   key={cat.to}

@@ -262,7 +262,13 @@ export default function ProductDetail() {
                     {specs.map((s, i) => (
                       <tr key={s.key} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
                         <td className="px-4 py-2.5 font-medium text-muted-foreground w-2/5" style={{ color: "#888" }}>{s.key}</td>
-                        <td className="px-4 py-2.5 font-semibold text-foreground">{s.value}</td>
+                        <td className="px-4 py-2.5 font-semibold text-foreground">
+                          {s.key === "Origin" && s.value.includes("Jaipur") ? (
+                            <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline">
+                              {s.value}
+                            </Link>
+                          ) : s.value}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
