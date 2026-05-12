@@ -107,6 +107,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     featured: true,
     active: true,
     stock: 100n,
+    moq: 50n,
     createdAt: BigInt(Date.now()),
   },
   {
@@ -119,6 +120,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     featured: true,
     active: true,
     stock: 200n,
+    moq: 50n,
     createdAt: BigInt(Date.now()),
   },
   {
@@ -131,6 +133,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     featured: true,
     active: true,
     stock: 150n,
+    moq: 50n,
     createdAt: BigInt(Date.now()),
   },
   {
@@ -143,6 +146,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     featured: true,
     active: true,
     stock: 300n,
+    moq: 50n,
     createdAt: BigInt(Date.now()),
   },
 ];
