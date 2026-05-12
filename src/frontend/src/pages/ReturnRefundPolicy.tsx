@@ -5,9 +5,9 @@ import { usePageSEO } from "../hooks/usePageSEO";
 
 export default function ReturnRefundPolicy() {
   usePageSEO({
-    title: "No-Return & No-Refund Policy | Gemora Global",
+    title: "Returns & Refunds Policy | Gemora Global",
     description:
-      "Gemora Global has a strict no-return and no-refund policy for wholesale orders. All sales are final. Manufacturing damage claims require a 360° unboxing video proof.",
+      "Gemora Global strictly follows a no-return and no-refund policy for wholesale orders. All sales are final. Unboxing video required for damage claims.",
     canonical:
       "https://www.gemoraglobal.co/return-refund-cancellation-policy",
     ogTitle: "Returns & Refunds Policy — Gemora Global",
@@ -33,60 +33,57 @@ export default function ReturnRefundPolicy() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-24 sm:pt-28 pb-8 px-4 bg-gradient-to-b from-red-50 to-background border-b border-red-700/10">
-        <div className="container max-w-3xl mx-auto">
+      <section className="pt-24 sm:pt-28 pb-8 px-4 bg-gradient-to-b from-blue-50 to-background border-b border-blue-700/20">
+        <div className="container max-w-3xl mx-auto text-center md:text-left">
           <nav
             aria-label="Breadcrumb"
-            className="mb-4 flex items-center gap-1 text-xs text-muted-foreground"
+            className="mb-4 flex items-center justify-center md:justify-start gap-1 text-xs text-muted-foreground"
           >
             <Link to="/" className="hover:text-primary transition-colors">
               Home
             </Link>
-            <span aria-hidden="true" className="mx-1">
-              /
-            </span>
-            <span className="text-foreground font-medium">
-              No-Return &amp; No-Refund Policy
-            </span>
+            <span aria-hidden="true" className="mx-1">/</span>
+            <span className="text-foreground font-medium">Policy</span>
           </nav>
-          <h1 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 mb-3">
+          <h1 className="text-2xl sm:text-4xl font-serif font-bold text-primary mb-3">
             Returns &amp; Refunds Policy
           </h1>
-          <p className="text-sm text-red-600 font-semibold uppercase tracking-wider">
-            Important: Strict No-Return and No-Refund Policy
+          <p className="text-sm text-muted-foreground">
+            Last updated: {lastUpdated} · This policy applies to all B2B
+            wholesale orders.
           </p>
         </div>
       </section>
 
-      {/* Quick Summary Cards */}
+      {/* Quick Summary Cards (Original Design Restored) */}
       <section className="py-8 px-4 bg-card border-b border-border">
         <div className="container max-w-3xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             {[
               {
-                icon: "📅",
-                title: "7-Day Window",
-                desc: "Return eligibility period",
+                icon: "📹",
+                title: "360° Video",
+                desc: "Compulsory for all claims",
               },
               {
-                icon: "✅",
-                title: "Damaged/Wrong",
-                desc: "Only returnable conditions",
+                icon: "⚠️",
+                title: "No Returns",
+                desc: "Strict Final Sale policy",
               },
               {
-                icon: "💰",
-                title: "5–7 Business Days",
-                desc: "Refund processing time",
+                icon: "🚚",
+                title: "3-4 Days",
+                desc: "Dispatch timeline",
               },
               {
                 icon: "❌",
-                title: "Before Dispatch",
-                desc: "Cancellation deadline",
+                title: "No Exchange",
+                desc: "Except in damage cases",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="p-3 rounded-xl border border-blue-700/20 bg-background"
+                className="p-3 rounded-xl border border-blue-700/20 bg-background shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="text-2xl mb-1">{item.icon}</div>
                 <div className="text-xs font-semibold text-foreground leading-tight">
@@ -104,7 +101,7 @@ export default function ReturnRefundPolicy() {
       {/* Content */}
       <section className="py-12 px-4">
         <div className="container max-w-3xl mx-auto">
-          <div className="space-y-8">
+          <div className="space-y-8 text-sm sm:text-base leading-relaxed">
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl shadow-sm">
               <p className="font-bold text-slate-900 text-lg mb-2">Dear Customer,</p>
               <p className="text-slate-700 font-medium">
@@ -112,126 +109,73 @@ export default function ReturnRefundPolicy() {
               </p>
             </div>
 
-            <div className="space-y-6 mt-8">
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+            <div className="space-y-6">
+              <div className="flex gap-4 p-5 rounded-xl border border-border bg-card">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Warranty & Returns</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    <span className="font-bold">No Warranty, No Return, No Exchange, No Colour Fade warranty.</span> 
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Warranty & Return Policy</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    <span className="font-bold text-slate-900">No Warranty, No Return, No Exchange, No Colour Fade warranty.</span> 
                     All products are Indian Manufactured. Please do not compare with imported quality as we manufacture competitive price range imitation jewellery specifically for E-commerce platforms.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+              <div className="flex gap-4 p-5 rounded-xl border border-border bg-card">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Missing & Damage Claims</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    For any missing or damage complaints, a <span className="font-bold underline">360° Degree Opening Video/Images are COMPULSORY</span>. 
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Missing & Damage Claims</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    For any missing or damage complaints, a <span className="font-bold text-slate-900 underline">360° Degree Opening Video/Images are COMPULSORY</span>. 
                     Damage exchange items must be reported within a specific window (often 2-3 days) and must be unused, in original packaging, with all tags attached.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+              <div className="flex gap-4 p-5 rounded-xl border border-border bg-card">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Quality Expectations</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    Before ordering and payment, please verify the design and quality scale correctly. 
-                    After delivery, no excuses regarding personal expectations or "look and feel" will be accepted.
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Order Specifications</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Before order and payment, please verify the design and quality scale correctly. After delivery, no excuses regarding your expectations or "look and feel" will be accepted.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+              <div className="flex gap-4 p-5 rounded-xl border border-border bg-card">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Payment Policy</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    No product bookings or shipment dispatches will be accepted or processed without full payment.
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Payment & Dispatch</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    No product bookings or shipment dispatches will be accepted or processed without full payment. 
+                    Once payment is received, your parcel will be dispatched within <span className="font-bold text-slate-900">3 to 4 days</span>.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+              <div className="flex gap-4 p-5 rounded-xl border border-border bg-card">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Shipping & Tracking</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    Once payment is received, your parcel will be dispatched within <span className="font-bold">3 to 4 days</span>. 
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Tracking & Location</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     If you do not receive your order within 7 days after dispatch, please notify us immediately so we can track and share the real-time location.
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors border-2 border-primary/10">
+              <div className="flex gap-4 p-5 rounded-xl border-2 border-primary/10 bg-primary/5">
                 <div className="text-2xl shrink-0">✅</div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1 uppercase text-sm tracking-wide">Parcel Inspection at Delivery</h3>
-                  <p className="text-slate-700 leading-relaxed">
-                    Before accepting the parcel, please ensure and inspect your parcel in front of the delivery executive. 
-                    If the parcel is incorrect, torn, or doesn't contain your order information, <span className="font-bold">DO NOT ACCEPT IT</span>. 
-                    We are not responsible if you receive a wrong parcel from them without inspection. 
-                    Always make a 360 Opening unboxing video. Exchange policy applies in damage cases only, and only with full opening video proof.
+                  <h3 className="font-bold text-slate-900 mb-2 uppercase text-sm tracking-wide">Important: Parcel Inspection</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We do not offer a return/exchange policy. Before accepting the parcel, please ensure and inspect your parcel in front of the delivery executive. 
+                    If the parcel is incorrect, torn, or doesn't contain your specified order information, <span className="font-bold text-slate-900">DO NOT ACCEPT IT</span>. 
+                    We are not responsible if you receive a wrong parcel from them. Always make a 360 Opening unboxing video. 
+                    <span className="font-bold text-slate-900"> Exchange policy applies in damage cases only, and only with full opening video proof.</span>
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="mt-12 p-8 bg-slate-900 text-white rounded-2xl text-center">
-              <h2 className="font-serif text-2xl font-bold mb-4">Need Help?</h2>
-              <p className="text-slate-300 mb-6">Our support team is available via WhatsApp for any queries regarding your order or our policies.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/917976341419" className="bg-white text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition-colors">
-                  Contact via WhatsApp
-                </a>
-                <a href="mailto:globalgemora@gmail.com" className="border border-white/30 px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors">
-                  Email Support
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Links */}
-      <section className="py-8 px-4 border-t border-border">
-        <div className="container max-w-3xl mx-auto">
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted-foreground justify-center">
-            <Link
-              to="/faq"
-              className="text-sky-500 hover:underline"
-              data-ocid="returns.link"
-            >
-              FAQ
-            </Link>
-            <span>·</span>
-            <Link
-              to="/privacy-policy"
-              className="text-sky-500 hover:underline"
-              data-ocid="returns.link"
-            >
-              Privacy Policy
-            </Link>
-            <span>·</span>
-            <Link
-              to="/terms-and-conditions"
-              className="text-sky-500 hover:underline"
-              data-ocid="returns.link"
-            >
-              Terms &amp; Conditions
-            </Link>
-            <span>·</span>
-            <Link
-              to="/contact"
-              className="text-sky-500 hover:underline"
-              data-ocid="returns.link"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
       </section>
