@@ -96,6 +96,57 @@ const SAMPLE_TESTIMONIALS: Testimonial[] = [
   },
 ];
 
+const SAMPLE_PRODUCTS: Product[] = [
+  {
+    id: 1001n,
+    name: "Royal Jaipur Kundan Necklace Set",
+    description: "Exquisite handcrafted Kundan necklace with matching earrings. Featuring premium stones and 22k gold plating finish.",
+    price: 4500,
+    category: "Necklaces",
+    imageUrls: ["/assets/generated/jewellery-necklace-hd.dim_800x800.jpg"],
+    featured: true,
+    active: true,
+    stock: 100n,
+    createdAt: BigInt(Date.now()),
+  },
+  {
+    id: 1002n,
+    name: "Traditional Meenakari Jhumka",
+    description: "Stunning Meenakari earrings with intricate peacock motifs and pearl drops. Perfect for bridal and festive wear.",
+    price: 1200,
+    category: "Earrings",
+    imageUrls: ["/assets/generated/jewellery-earrings-hd.dim_800x800.jpg"],
+    featured: true,
+    active: true,
+    stock: 200n,
+    createdAt: BigInt(Date.now()),
+  },
+  {
+    id: 1003n,
+    name: "Antique Gold Plated Bangle Set",
+    description: "Set of 4 traditional bangles with ruby-red stones and antique finish. A timeless piece of Indian heritage.",
+    price: 2800,
+    category: "Bracelets",
+    imageUrls: ["/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg"],
+    featured: true,
+    active: true,
+    stock: 150n,
+    createdAt: BigInt(Date.now()),
+  },
+  {
+    id: 1004n,
+    name: "Minimalist American Diamond Ring",
+    description: "Elegant AD ring with high-sparkle stones and rhodium plating. Ideal for daily wear and modern outfits.",
+    price: 850,
+    category: "Rings",
+    imageUrls: ["/assets/generated/jewellery-rings-hd.dim_800x800.jpg"],
+    featured: true,
+    active: true,
+    stock: 300n,
+    createdAt: BigInt(Date.now()),
+  },
+];
+
 const TRUST_BADGES = [
   { icon: ShieldCheck, label: "ISO Certified Quality" },
   { icon: Users, label: "500+ Global Buyers" },
@@ -429,9 +480,14 @@ export default function Home() {
       ? testimonials.filter((t) => t.active)
       : SAMPLE_TESTIMONIALS;
 
-  // Always use backend products — show empty if none yet
-  const newArrivals = (newArrivalProducts ?? []).slice(0, 8);
-  const trendingProducts = (featuredProducts ?? []).slice(0, 8);
+  // Always use backend products — show sample fallback if API fails or is empty
+  const newArrivals = newArrivalProducts.length > 0 
+    ? newArrivalProducts.slice(0, 8) 
+    : SAMPLE_PRODUCTS;
+    
+  const trendingProducts = featuredProducts.length > 0 
+    ? featuredProducts.slice(0, 8) 
+    : SAMPLE_PRODUCTS;
 
   const getCategoryImage = (cat: Category) => {
     if (cat.imageUrl && !cat.imageUrl.includes("placehold.co"))
