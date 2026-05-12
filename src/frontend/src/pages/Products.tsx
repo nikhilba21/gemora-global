@@ -190,10 +190,12 @@ export default function Products() {
         {/* All Products link */}
         <Link
           to="/products"
-          className={`block px-3 py-2 rounded-lg text-sm font-medium mb-1 transition-colors ${!categorySlug ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+          className="block px-3 py-2 rounded-lg text-sm font-medium mb-1 transition-colors hover:bg-muted"
         >
-          All Products
-          <span className="ml-auto text-xs opacity-70 float-right">{!categorySlug && totalCount > 0 ? totalCount : ""}</span>
+          <span className="flex items-center gap-2">
+            <Filter className="w-4 h-4" />
+            Back to Categories
+          </span>
         </Link>
 
         {/* Category list with subcategories */}
@@ -258,6 +260,53 @@ export default function Products() {
     </aside>
   );
 
+  // Category Grid (Shown when no category is selected)
+  const CategoryGrid = () => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6 md:py-10">
+      {categories.map(cat => {
+        const accentColor = CAT_COLORS[cat.slug] || "#6366F1";
+        return (
+          <Link
+            key={cat.id}
+            to={`/products/${cat.slug}`}
+            className="group relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1 active:scale-95 bg-muted"
+          >
+            <img
+              src={cat.imageUrl || "/placeholder.jpg"}
+              alt={cat.name}
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              loading="lazy"
+            />
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+            
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div 
+                className="w-10 h-1 rounded-full mb-4 transition-all group-hover:w-16"
+                style={{ backgroundColor: accentColor }}
+              />
+              <h3 className="text-white text-2xl font-bold font-serif mb-2 tracking-tight group-hover:translate-x-1 transition-transform">{cat.name}</h3>
+              <p className="text-white/70 text-xs line-clamp-2 mb-6 group-hover:text-white/90 transition-colors">
+                {cat.description || `Explore our premium collection of ${cat.name} — Jaipur quality.`}
+              </p>
+              <div className="flex items-center gap-2 text-white text-sm font-semibold group-hover:gap-3 transition-all">
+                <span>View Products</span>
+                <ChevronRight className="w-4 h-4 bg-white/20 rounded-full p-0.5" />
+              </div>
+            </div>
+            
+            {/* Badge indicating category */}
+            <div className="absolute top-4 left-4">
+              <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                Collection
+              </span>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -285,153 +334,159 @@ export default function Products() {
             </nav>
 
             <h1 className="font-serif text-2xl md:text-3xl font-bold">
-              {subcategoryParam
-                ? `${subcategoryParam} — ${activeCategory?.name || "All"}`
-                : activeCategory
-                  ? activeCategory.name
-                  : "All Products — Imitation Jewellery Wholesale"
+              {!categorySlug 
+                ? "Our Jewellery Collections" 
+                : (subcategoryParam ? `${subcategoryParam} — ${activeCategory?.name || "All"}` : activeCategory?.name)
               }
             </h1>
-            {activeCategory?.description && !subcategoryParam && (
+            {!categorySlug ? (
+              <p className="text-muted-foreground text-sm mt-1 max-w-2xl">
+                Browse our curated collections of wholesale imitation jewellery, handcrafted in Jaipur.
+              </p>
+            ) : activeCategory?.description && !subcategoryParam && (
               <p className="text-muted-foreground text-sm mt-1 max-w-2xl">{activeCategory.description}</p>
             )}
           </div>
         </div>
 
-        <div className="container px-4 py-6">
-          <div className="flex gap-6">
-            {/* Desktop sidebar */}
-            <div className="hidden md:block">
-              <Sidebar />
-            </div>
-
-            {/* Main content */}
-            <div className="flex-1 min-w-0">
-              {/* Toolbar */}
-              <div className="flex items-center justify-between mb-4 gap-3">
-                <div className="flex items-center gap-2">
-                  {/* Mobile filter toggle */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="md:hidden"
-                    onClick={() => setSidebarOpen(true)}
-                  >
-                    <Filter className="w-4 h-4 mr-2" /> Filter
-                  </Button>
-                  <span className="text-sm text-muted-foreground">
-                    {isLoading ? "Loading..." : `${totalCount.toLocaleString()} products`}
-                  </span>
-                  {subcategoryParam && (
-                    <button
-                      onClick={() => setSubcat("")}
-                      className="flex items-center gap-1 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
-                    >
-                      {subcategoryParam} <X className="w-3 h-3" />
-                    </button>
-                  )}
-                </div>
-
-                {/* Actions */}
-                <div className="flex items-center gap-3">
-                  <select
-                    className="text-xs md:text-sm border rounded-lg bg-background px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                  >
-                    <option value="newest">Newest First</option>
-                    <option value="name-asc">Name A-Z</option>
-                    <option value="name-desc">Name Z-A</option>
-                  </select>
-
-                  {/* Grid toggle */}
-                  <div className="flex items-center gap-1 border rounded-lg p-1">
-                    <button
-                      onClick={() => setGridCols(3)}
-                      className={`p-1 rounded ${gridCols === 3 ? "bg-muted" : ""}`}
-                    >
-                      <Grid3X3 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => setGridCols(4)}
-                      className={`p-1 rounded ${gridCols === 4 ? "bg-muted" : ""}`}
-                    >
-                      <Grid2X2 className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
+        <div className="container px-4">
+          {!categorySlug ? (
+            <CategoryGrid />
+          ) : (
+            <div className="flex gap-6 py-6">
+              {/* Desktop sidebar */}
+              <div className="hidden md:block">
+                <Sidebar />
               </div>
 
-              {/* Product Grid */}
-              {isLoading ? (
-                <div className={`grid grid-cols-2 sm:grid-cols-${gridCols === 3 ? 3 : 2} lg:grid-cols-${gridCols} gap-3`}>
-                  {Array.from({ length: 12 }).map((_, i) => (
-                    <div key={i} className="rounded-xl overflow-hidden border">
-                      <Skeleton className="aspect-square" />
-                      <div className="p-3 space-y-2">
-                        <Skeleton className="h-4 w-full" />
-                        <Skeleton className="h-3 w-2/3" />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : displayProducts.length === 0 ? (
-                <div className="text-center py-20 text-muted-foreground">
-                  <p className="text-4xl mb-4">💍</p>
-                  <p className="font-medium">No products found</p>
-                  <p className="text-sm mt-1">Try a different category or filter</p>
-                  <Button asChild className="mt-4">
-                    <Link to="/products">View All Products</Link>
-                  </Button>
-                </div>
-              ) : (
-                <>
-                  <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-${gridCols} gap-3`}>
-                    {displayProducts.map((product) => (
-                      <ProductCard key={String(product.id)} product={product} />
-                    ))}
+              {/* Main content */}
+              <div className="flex-1 min-w-0">
+                {/* Toolbar */}
+                <div className="flex items-center justify-between mb-4 gap-3">
+                  <div className="flex items-center gap-2">
+                    {/* Mobile filter toggle */}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="md:hidden"
+                      onClick={() => setSidebarOpen(true)}
+                    >
+                      <Filter className="w-4 h-4 mr-2" /> Filter
+                    </Button>
+                    <span className="text-sm text-muted-foreground">
+                      {isLoading ? "Loading..." : `${totalCount.toLocaleString()} products`}
+                    </span>
+                    {subcategoryParam && (
+                      <button
+                        onClick={() => setSubcat("")}
+                        className="flex items-center gap-1 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
+                      >
+                        {subcategoryParam} <X className="w-3 h-3" />
+                      </button>
+                    )}
                   </div>
 
-                  {/* Pagination */}
-                  {totalPages > 1 && (
-                    <div className="flex items-center justify-center gap-2 mt-8">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        disabled={pageParam === 0}
-                        onClick={() => setPage(pageParam - 1)}
+                  {/* Actions */}
+                  <div className="flex items-center gap-3">
+                    <select
+                      className="text-xs md:text-sm border rounded-lg bg-background px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                    >
+                      <option value="newest">Newest First</option>
+                      <option value="name-asc">Name A-Z</option>
+                      <option value="name-desc">Name Z-A</option>
+                    </select>
+
+                    {/* Grid toggle */}
+                    <div className="flex items-center gap-1 border rounded-lg p-1">
+                      <button
+                        onClick={() => setGridCols(3)}
+                        className={`p-1 rounded ${gridCols === 3 ? "bg-muted" : ""}`}
                       >
-                        Previous
-                      </Button>
-                      {Array.from({ length: Math.min(totalPages, 7) }).map((_, i) => {
-                        const p = i;
-                        return (
-                          <Button
-                            key={p}
-                            variant={pageParam === p ? "default" : "outline"}
-                            size="sm"
-                            onClick={() => setPage(p)}
-                            className="w-9"
-                          >
-                            {p + 1}
-                          </Button>
-                        );
-                      })}
-                      {totalPages > 7 && <span className="text-muted-foreground">...</span>}
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        disabled={pageParam >= totalPages - 1}
-                        onClick={() => setPage(pageParam + 1)}
+                        <Grid3X3 className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => setGridCols(4)}
+                        className={`p-1 rounded ${gridCols === 4 ? "bg-muted" : ""}`}
                       >
-                        Next
-                      </Button>
+                        <Grid2X2 className="w-4 h-4" />
+                      </button>
                     </div>
-                  )}
-                </>
-              )}
+                  </div>
+                </div>
+
+                {/* Product Grid */}
+                {isLoading ? (
+                  <div className={`grid grid-cols-2 sm:grid-cols-${gridCols === 3 ? 3 : 2} lg:grid-cols-${gridCols} gap-3`}>
+                    {Array.from({ length: 12 }).map((_, i) => (
+                      <div key={i} className="rounded-xl overflow-hidden border">
+                        <Skeleton className="aspect-square" />
+                        <div className="p-3 space-y-2">
+                          <Skeleton className="h-4 w-full" />
+                          <Skeleton className="h-3 w-2/3" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : displayProducts.length === 0 ? (
+                  <div className="text-center py-20 text-muted-foreground">
+                    <p className="text-4xl mb-4">💍</p>
+                    <p className="font-medium">No products found</p>
+                    <p className="text-sm mt-1">Try a different category or filter</p>
+                    <Button asChild className="mt-4">
+                      <Link to="/products">View All Categories</Link>
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-${gridCols} gap-3`}>
+                      {displayProducts.map((product) => (
+                        <ProductCard key={String(product.id)} product={product} />
+                      ))}
+                    </div>
+
+                    {/* Pagination */}
+                    {totalPages > 1 && (
+                      <div className="flex items-center justify-center gap-2 mt-8">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={pageParam === 0}
+                          onClick={() => setPage(pageParam - 1)}
+                        >
+                          Previous
+                        </Button>
+                        {Array.from({ length: Math.min(totalPages, 7) }).map((_, i) => {
+                          const p = i;
+                          return (
+                            <Button
+                              key={p}
+                              variant={pageParam === p ? "default" : "outline"}
+                              size="sm"
+                              onClick={() => setPage(p)}
+                              className="w-9"
+                            >
+                              {p + 1}
+                            </Button>
+                          );
+                        })}
+                        {totalPages > 7 && <span className="text-muted-foreground">...</span>}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={pageParam >= totalPages - 1}
+                          onClick={() => setPage(pageParam + 1)}
+                        >
+                          Next
+                        </Button>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
