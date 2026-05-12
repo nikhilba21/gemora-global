@@ -1235,7 +1235,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Testimonials ──────────────────────────────────────── */}
+      {/* ── Global Export Markets (SEO Boost) ─────────────────── */}
+      <section 
+        className="bg-primary/5 py-12 md:py-20 border-y border-primary/10"
+        data-ocid="global-markets.section"
+      >
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-16">
+            <Badge className="mb-3 bg-primary/10 text-primary border-primary/20 text-xs tracking-widest uppercase">
+              International Reach
+            </Badge>
+            <h2 className="font-serif text-2xl md:text-4xl font-bold mb-4">
+              Global Export Markets
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              Gemora Global is a trusted manufacturing partner for luxury boutiques and wholesale distributors across 30+ countries. Explore our regional hubs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { name: "USA", link: "/imitation-jewellery-supplier-usa", icon: "🇺🇸" },
+              { name: "UK", link: "/wholesale-jewellery-uk", icon: "🇬🇧" },
+              { name: "UAE", link: "/jewellery-exporter-uae", icon: "🇦🇪" },
+              { name: "Australia", link: "/jewellery-exporter-australia", icon: "🇦🇺" },
+              { name: "Canada", link: "/jewellery-exporter-canada", icon: "🇨🇦" },
+              { name: "Europe", link: "/jewellery-exporter-europe", icon: "🇪🇺" },
+              { name: "France", link: "/jewellery-exporter-france", icon: "🇫🇷" },
+              { name: "Singapore", link: "/jewellery-exporter-singapore", icon: "🇸🇬" },
+              { name: "Malaysia", link: "/jewellery-exporter-malaysia", icon: "🇲🇾" },
+              { name: "Saudi Arabia", link: "/jewellery-exporter-saudi-arabia", icon: "🇸🇦" },
+              { name: "Kuwait", link: "/jewellery-exporter-kuwait", icon: "🇰🇼" },
+              { name: "Nigeria", link: "/jewellery-exporter-nigeria", icon: "🇳🇬" },
+              { name: "Sri Lanka", link: "/jewellery-exporter-sri-lanka", icon: "🇱🇰" },
+              { name: "Rajasthan", link: "/wholesale-jewellery-rajasthan", icon: "🇮🇳" },
+            ].map((market) => (
+              <Link 
+                key={market.name}
+                to={market.link}
+                className="group relative bg-background border border-border/50 p-4 md:p-6 rounded-xl hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col items-center text-center overflow-hidden"
+              >
+                <div className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {market.icon}
+                </div>
+                <h3 className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
+                  {market.name}
+                </h3>
+                <span className="text-[10px] md:text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  View Catalog →
+                </span>
+                <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-primary/5 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
+              </Link>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-xs md:text-sm text-muted-foreground">
+              Don't see your country? We ship worldwide via DHL & FedEx. 
+              <Link to="/contact" className="text-primary font-medium ml-1 hover:underline">Contact our export desk</Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Testimonials ───────────────────────────────────────── */}
       <section
         ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
         className="bg-muted/30 py-8 md:py-16"
