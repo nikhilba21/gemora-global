@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
 import AdminGuard from "./components/AdminGuard";
 import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
@@ -118,9 +118,31 @@ import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesa
 
 function VisitTracker() {
   const { actor } = useActor();
+  const location = useLocation();
+
   useEffect(() => {
     if (actor) actor.recordVisit().catch(() => {});
-  }, [actor]);
+  }, [actor, location]);
+
+  // Tawk.to Page Tracking for SPAs
+  useEffect(() => {
+    const updateTawk = () => {
+      const Tawk_API = (window as any).Tawk_API;
+      if (Tawk_API && typeof Tawk_API.setAttributes === 'function') {
+        Tawk_API.setAttributes({
+          'page_path': window.location.pathname,
+          'page_title': document.title
+        }, (err: any) => {
+          if (err) console.error("Tawk error:", err);
+        });
+      }
+    };
+
+    // Small delay to ensure document.title is updated by usePageSEO
+    const timer = setTimeout(updateTawk, 500);
+    return () => clearTimeout(timer);
+  }, [location]);
+
   return null;
 }
 
