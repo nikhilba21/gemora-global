@@ -16,10 +16,19 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useState } from 'react';
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import type { Inquiry } from "../../types";
+import { ExternalLink, MessageCircle, User, Globe, Phone, FileText } from "lucide-react";
 
 const STATUS_COLORS: Record<string, string> = {
   new: "bg-blue-500/20 text-blue-600 border-blue-500/30",
@@ -29,6 +38,7 @@ const STATUS_COLORS: Record<string, string> = {
 
 export default function AdminInquiries() {
   const qc = useQueryClient();
+  const [selectedInquiry, setSelectedInquiry] = useState<Inquiry | null>(null);
 
   const { data: rawInquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
@@ -39,57 +49,69 @@ export default function AdminInquiries() {
 
   const updateMut = useMutation({
     mutationFn: ({ id, status }: { id: bigint; status: string }) =>
-      api.updateInquiryStatus(Number(id),status),
+      api.updateInquiryStatus(Number(id), status),
     onSuccess: () => {
       toast.success("Status updated");
       qc.invalidateQueries({ queryKey: ["inquiries"] });
+      // Update selected inquiry status if it's open
+      if (selectedInquiry) {
+        setSelectedInquiry(prev => prev ? { ...prev, status: prev.status } : null);
+      }
     },
     onError: () => toast.error("Failed to update"),
   });
 
   return (
     <AdminLayout>
-      <h1 className="font-serif text-2xl font-bold mb-6 text-primary">
-        Inquiries
-      </h1>
-      <div className="overflow-x-auto rounded-lg border border-border">
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="font-serif text-2xl font-bold text-primary">Inquiries</h1>
+        <Badge variant="outline" className="text-muted-foreground">
+          {inquiries.length} Total
+        </Badge>
+      </div>
+
+      <div className="overflow-x-auto rounded-lg border border-border bg-card">
         <Table className="min-w-[560px]" data-ocid="admin.inquiries_table">
           <TableHeader>
-            <TableRow>
-              <TableHead>Name</TableHead>
-              <TableHead>Country</TableHead>
-              <TableHead>WhatsApp</TableHead>
-              <TableHead>Requirement</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Actions</TableHead>
+            <TableRow className="bg-slate-50 border-b">
+              <TableHead className="w-[180px] text-slate-900 font-bold">Name</TableHead>
+              <TableHead className="w-[120px] text-slate-900 font-bold">Country</TableHead>
+              <TableHead className="text-slate-900 font-bold">WhatsApp</TableHead>
+              <TableHead className="text-slate-900 font-bold">Requirement</TableHead>
+              <TableHead className="w-[100px] text-slate-900 font-bold">Status</TableHead>
+              <TableHead className="text-right text-slate-900 font-bold">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {inquiries?.map((inq, i) => (
-              <TableRow key={String(inq.id)}>
-                <TableCell className="font-medium">{inq.name}</TableCell>
-                <TableCell>{inq.country}</TableCell>
-                <TableCell className="text-sm">{inq.whatsapp}</TableCell>
-                <TableCell className="text-sm text-muted-foreground max-w-36 truncate">
+              <TableRow 
+                key={String(inq.id)} 
+                className="hover:bg-slate-50 cursor-pointer transition-colors border-b"
+                onClick={() => setSelectedInquiry(inq)}
+              >
+                <TableCell className="font-bold text-slate-900">{inq.name}</TableCell>
+                <TableCell className="text-sm text-slate-700">
+                  <span className="flex items-center gap-1.5">
+                    <Globe className="w-3.5 h-3.5 text-slate-400" />
+                    {inq.country}
+                  </span>
+                </TableCell>
+                <TableCell className="text-sm font-mono text-slate-700">{inq.whatsapp}</TableCell>
+                <TableCell className="text-sm text-slate-600 max-w-[200px] truncate">
                   {inq.requirement}
                 </TableCell>
                 <TableCell>
-                  <Badge className={STATUS_COLORS[inq.status] || ""}>
+                  <Badge className={`${STATUS_COLORS[inq.status] || ""} capitalize text-[10px] font-bold`}>
                     {inq.status}
                   </Badge>
                 </TableCell>
-                <TableCell>
-                  <div className="flex flex-wrap gap-2 items-center">
+                <TableCell className="text-right" onClick={(e) => e.stopPropagation()}>
+                  <div className="flex items-center justify-end gap-2">
                     <Select
                       value={inq.status}
-                      onValueChange={(v) =>
-                        updateMut.mutate({ id: inq.id, status: v })
-                      }
+                      onValueChange={(v) => updateMut.mutate({ id: inq.id, status: v })}
                     >
-                      <SelectTrigger
-                        className="w-24 h-7 text-xs"
-                        data-ocid={`admin.status_select.${i + 1}`}
-                      >
+                      <SelectTrigger className="w-24 h-8 text-xs bg-background">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -100,18 +122,11 @@ export default function AdminInquiries() {
                     </Select>
                     <Button
                       size="sm"
-                      variant="outline"
-                      className="text-green-600 border-green-500/30 hover:bg-green-500/10 h-7 text-xs"
-                      asChild
-                      data-ocid={`admin.whatsapp_button.${i + 1}`}
+                      variant="ghost"
+                      className="h-8 w-8 p-0"
+                      onClick={() => setSelectedInquiry(inq)}
                     >
-                      <a
-                        href={`https://wa.me/${inq.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(`Hi ${inq.name}, thanks for your inquiry at Gemora Global!`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        WhatsApp
-                      </a>
+                      <ExternalLink className="w-4 h-4 text-primary" />
                     </Button>
                   </div>
                 </TableCell>
@@ -121,16 +136,122 @@ export default function AdminInquiries() {
               <TableRow>
                 <TableCell
                   colSpan={6}
-                  className="text-center text-muted-foreground py-8"
+                  className="text-center text-muted-foreground py-16"
                   data-ocid="admin.inquiries_table.empty_state"
                 >
-                  No inquiries yet.
+                  <div className="flex flex-col items-center gap-2">
+                    <MessageCircle className="w-8 h-8 opacity-20" />
+                    <p>No inquiries yet.</p>
+                  </div>
                 </TableCell>
               </TableRow>
             )}
           </TableBody>
         </Table>
       </div>
+
+      {/* Detail Popup */}
+      <Dialog open={!!selectedInquiry} onOpenChange={(open) => !open && setSelectedInquiry(null)}>
+        <DialogContent className="max-w-2xl sm:p-8">
+          <DialogHeader className="mb-4">
+            <div className="flex items-center justify-between border-b pb-4">
+              <div>
+                <DialogTitle className="text-2xl font-serif font-bold text-primary flex items-center gap-2">
+                  <User className="w-5 h-5 opacity-50" />
+                  Inquiry from {selectedInquiry?.name}
+                </DialogTitle>
+                <DialogDescription className="text-sm mt-1">
+                  Received on {selectedInquiry?.createdAt ? new Date(Number(selectedInquiry.createdAt)).toLocaleDateString() : 'Recent'}
+                </DialogDescription>
+              </div>
+              <Badge className={`${STATUS_COLORS[selectedInquiry?.status || 'new']} capitalize px-3 py-1`}>
+                {selectedInquiry?.status}
+              </Badge>
+            </div>
+          </DialogHeader>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-2">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Globe className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Country</p>
+                  <p className="font-medium">{selectedInquiry?.country}</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">WhatsApp Number</p>
+                  <p className="font-mono font-medium">{selectedInquiry?.whatsapp}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <FileText className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Status Management</p>
+                  <Select
+                    value={selectedInquiry?.status}
+                    onValueChange={(v) => selectedInquiry && updateMut.mutate({ id: selectedInquiry.id, status: v })}
+                  >
+                    <SelectTrigger className="w-32 h-8 mt-1">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="new">New</SelectItem>
+                      <SelectItem value="read">Read</SelectItem>
+                      <SelectItem value="replied">Replied</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t">
+            <div className="flex items-center gap-2 mb-3">
+              <MessageCircle className="w-4 h-4 text-primary" />
+              <h3 className="font-semibold">Full Requirement</h3>
+            </div>
+            <div className="bg-muted/50 rounded-xl p-5 border border-border shadow-inner max-h-[300px] overflow-y-auto">
+              <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground italic">
+                "{selectedInquiry?.requirement}"
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <Button
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold h-12"
+              onClick={() => {
+                if (!selectedInquiry) return;
+                const url = `https://wa.me/${selectedInquiry.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(`Hi ${selectedInquiry.name}, thanks for your inquiry at Gemora Global regarding your requirement: "${selectedInquiry.requirement.slice(0, 50)}..."`)}`;
+                window.open(url, '_blank');
+              }}
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Reply on WhatsApp
+            </Button>
+            <Button
+              variant="outline"
+              className="h-12 border-primary text-primary"
+              onClick={() => setSelectedInquiry(null)}
+            >
+              Close Details
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </AdminLayout>
   );
 }
