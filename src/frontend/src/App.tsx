@@ -124,25 +124,47 @@ function VisitTracker() {
     if (actor) actor.recordVisit().catch(() => {});
   }, [actor, location]);
 
-  // Tawk.to Page Tracking for SPAs
+  // Tawk.to Page Tracking & Smart Referral Tracking for SPAs
   useEffect(() => {
     const updateTawk = () => {
       const Tawk_API = (window as any).Tawk_API;
       if (Tawk_API) {
-        // 1. Update Visitor Attributes (shows in sidebar)
+        // 1. Get Referrer & UTM params
+        const referrer = document.referrer || "Direct / None";
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 2. Try to extract organic keyword from referrer (works for some search engines)
+        let organicKeyword = "Not Provided (Encrypted)";
+        if (referrer) {
+          try {
+            const refUrl = new URL(referrer);
+            organicKeyword = refUrl.searchParams.get('q') || refUrl.searchParams.get('query') || refUrl.searchParams.get('p') || organicKeyword;
+          } catch(e) {}
+        }
+
+        // 3. Fallback: Use landing page intent (Smart Keyword)
+        // If they landed on a specific SEO page, that's likely their keyword
+        const landingPageIntent = document.title.split('|')[0].trim();
+        const estimatedKeyword = (organicKeyword === "Not Provided (Encrypted)") ? landingPageIntent : organicKeyword;
+
+        // 4. Update Visitor Attributes
         if (typeof Tawk_API.setAttributes === 'function') {
           Tawk_API.setAttributes({
             'page_url': window.location.href,
-            'page_path': window.location.pathname,
-            'page_title': document.title
+            'page_title': document.title,
+            'referrer': referrer,
+            'estimated_keyword': estimatedKeyword,
+            'source': urlParams.get('utm_source') || (referrer.includes('google') ? 'Google Organic' : 'Direct'),
+            'term': urlParams.get('utm_term') || estimatedKeyword
           }, () => {});
         }
         
-        // 2. Add an Event (shows in Chat Timeline)
+        // 5. Add an Event
         if (typeof Tawk_API.addEvent === 'function') {
           Tawk_API.addEvent('Navigation', {
             'link': window.location.href,
-            'title': document.title
+            'from': referrer,
+            'intent': estimatedKeyword
           }, () => {});
         }
       }
