@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { Product, Category } from "../types";
 
 export interface HreflangEntry {
   lang: string;
@@ -41,6 +42,8 @@ interface PageSEOOptions {
   howToSteps?: { name: string; description: string; steps: HowToStep[] };
   speakable?: boolean;
   isHomepage?: boolean;
+  product?: Product;
+  category?: Category;
 }
 
 function upsertMetaProperty(property: string, value: string) {
@@ -95,6 +98,8 @@ export function usePageSEO(options: PageSEOOptions) {
     howToSteps,
     speakable = false,
     isHomepage = false,
+    product,
+    category,
   } = options;
 
   // Ensure description is never empty or duplicates title
@@ -314,6 +319,86 @@ export function usePageSEO(options: PageSEOOptions) {
       });
     }
 
+    // Product schema — Full Merchant Listing compliance
+    if (product) {
+      const prodImg = product.imageUrls && product.imageUrls.length > 0 
+        ? product.imageUrls.map(url => url.startsWith('http') ? url : `${BASE_URL}${url}`)
+        : [DEFAULT_OG_IMAGE];
+      
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `${BASE_URL}/products/item/${product.id}#product`,
+        name: product.name,
+        image: prodImg,
+        description: product.description ? product.description.substring(0, 500) : description,
+        sku: product.sku || `GG-${product.id}`,
+        mpn: product.sku || `GG-${product.id}`,
+        brand: {
+          "@type": "Brand",
+          name: "Gemora Global",
+        },
+        offers: {
+          "@type": "Offer",
+          url: canonical,
+          priceCurrency: "USD",
+          price: "1.00", // Factory-direct base price
+          priceValidUntil: "2026-12-31",
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+          seller: {
+            "@type": "Organization",
+            name: "Gemora Global",
+          },
+          shippingDetails: {
+            "@type": "OfferShippingDetails",
+            shippingRate: {
+              "@type": "MonetaryAmount",
+              value: "0.00",
+              currency: "USD"
+            },
+            shippingDestination: {
+              "@type": "DefinedRegion",
+              addressCountry: "US"
+            },
+            deliveryTime: {
+              "@type": "ShippingDeliveryTime",
+              handlingTime: {
+                "@type": "QuantitativeValue",
+                minValue: 1,
+                maxValue: 3,
+                unitCode: "d"
+              },
+              transitTime: {
+                "@type": "QuantitativeValue",
+                minValue: 5,
+                maxValue: 10,
+                unitCode: "d"
+              }
+            }
+          }
+        },
+      });
+    }
+
+    // Category / ItemList schema
+    if (category) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${BASE_URL}/products/${category.slug}#collection`,
+        name: category.name,
+        description: category.description || description,
+        url: `${BASE_URL}/products/${category.slug}`,
+        mainEntity: {
+          "@type": "ItemList",
+          name: category.name,
+          description: `Browse our collection of wholesale ${category.name} from Jaipur.`,
+          numberOfItems: 100, // Approximate
+        }
+      });
+    }
+
     // Speakable schema
     if (speakable) {
       schemas.push({
@@ -328,15 +413,40 @@ export function usePageSEO(options: PageSEOOptions) {
       });
     }
 
-    // Inject all schemas
+    // Custom schema passed via props
+    if (schema) {
+      if (Array.isArray(schema)) {
+        schemas.push(...schema);
+      } else {
+        schemas.push(schema);
+      }
+    }
+
+    // Inject all schemas with deduplication for FAQPage and BreadcrumbList
     const existing = document.getElementById("page-schema");
     if (existing) existing.remove();
+
     if (schemas.length > 0) {
+      // Deduplicate by @type for FAQPage and BreadcrumbList to be safe
+      const uniqueSchemas: object[] = [];
+      const typesSeen = new Set<string>();
+
+      // We process in reverse to keep the "most recent" (often generated from props)
+      // or we can just filter explicitly. Let's filter explicitly for FAQ and Breadcrumb.
+      const finalSchemas = schemas.filter((s: any) => {
+        const type = s["@type"];
+        if (type === "FAQPage" || type === "BreadcrumbList") {
+          if (typesSeen.has(type)) return false;
+          typesSeen.add(type);
+        }
+        return true;
+      });
+
       const script = document.createElement("script");
       script.type = "application/ld+json";
       script.id = "page-schema";
       script.textContent = JSON.stringify(
-        schemas.length === 1 ? schemas[0] : schemas,
+        finalSchemas.length === 1 ? finalSchemas[0] : finalSchemas,
       );
       document.head.appendChild(script);
     }
@@ -384,5 +494,7 @@ export function usePageSEO(options: PageSEOOptions) {
     howToSteps,
     speakable,
     isHomepage,
+    product,
+    category,
   ]);
 }

@@ -177,7 +177,9 @@ export default function Wholesale() {
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "USD",
-        eligibleMinOrderQuantity: "50 units per design",
+        lowPrice: "1.50",
+        highPrice: "25.00",
+        offerCount: "500",
       },
     },
   });

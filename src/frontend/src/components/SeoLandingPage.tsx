@@ -148,6 +148,14 @@ export default function SeoLandingPage({
     { name: h1, url: canonical },
   ];
 
+  // Filter out any FAQPage or BreadcrumbList from the passed schema to prevent duplication
+  // since they are handled specifically by faqItems and breadcrumbs props.
+  const filteredSchema = Array.isArray(schema) 
+    ? schema.filter((item: any) => item['@type'] !== 'FAQPage' && item['@type'] !== 'BreadcrumbList')
+    : (schema as any)?.['@type'] === 'FAQPage' || (schema as any)?.['@type'] === 'BreadcrumbList' 
+      ? undefined 
+      : schema;
+
   usePageSEO({
     title,
     description: metaDescription,
@@ -157,7 +165,7 @@ export default function SeoLandingPage({
     ogImage:
       "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
     hreflangs,
-    schema: schema ?? {
+    schema: filteredSchema ?? {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: title,

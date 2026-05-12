@@ -63,19 +63,17 @@ export default function JewelleryExporterFrance() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to France",
         description:
           "Premium wholesale imitation jewellery from India for French boutiques and retailers. Kundan, Bridal, Gold Plated, Oxidised styles. MOQ 50 units. DHL delivery.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "FR",
         offers: {
           "@type": "Offer",
           priceCurrency: "EUR",
           price: "3.00",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "FR",
         },
       }}
       bodyContent={

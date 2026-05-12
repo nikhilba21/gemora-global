@@ -37,19 +37,17 @@ export default function JewelleryExporterNigeria() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to Nigeria",
         description:
           "Premium wholesale imitation jewellery from India for Nigerian boutiques, Lagos fashion retailers, and West African distributors. Colourful statement pieces, gold-plated and oxidised styles. MOQ 50 units.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "NG",
         offers: {
           "@type": "Offer",
           priceCurrency: "USD",
           price: "2.00",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "NG",
         },
       }}
       faqs={[

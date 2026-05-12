@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useCanonical } from "../hooks/useCanonical";
+import { usePageSEO } from "../hooks/usePageSEO";
 
 const PAGE_SIZE = 24;
 
@@ -25,7 +25,6 @@ interface Category { id: number; name: string; slug: string; description: string
 interface Product { id: number | bigint; name: string; categoryId: number | bigint; imageUrls: string[]; moq: string; subcategory?: string; sku?: string; featured: boolean; }
 
 export default function Products() {
-  useCanonical();
   const { categorySlug } = useParams<{ categorySlug?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const subcategoryParam = searchParams.get("sub") || "";
@@ -51,6 +50,24 @@ export default function Products() {
     categories.find(c => c.slug === categorySlug) || null,
     [categories, categorySlug]
   );
+
+  usePageSEO({
+    title: subcategoryParam
+      ? `${subcategoryParam} — ${activeCategory?.name || "All"} Wholesale`
+      : activeCategory
+        ? `${activeCategory.name} Wholesale Jaipur | Gemora Global`
+        : "Wholesale Imitation Jewellery Collections | Gemora Global",
+    description: activeCategory
+      ? activeCategory.description || `Browse our latest collection of wholesale ${activeCategory.name} from Jaipur. MOQ 50 units, anti-tarnish finish, global export.`
+      : "Browse over 500+ wholesale imitation jewellery designs in Kundan, Bridal, Antique, and Fashion styles from Gemora Global Jaipur.",
+    category: activeCategory ? (activeCategory as any) : undefined,
+    breadcrumbs: [
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
+      { name: "Products", url: "https://www.gemoraglobal.co/products" },
+      ...(activeCategory ? [{ name: activeCategory.name, url: `https://www.gemoraglobal.co/products/${activeCategory.slug}` }] : []),
+      ...(subcategoryParam ? [{ name: subcategoryParam, url: window.location.href }] : []),
+    ],
+  });
 
   // Fetch categories once
   useEffect(() => {

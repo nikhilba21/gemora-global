@@ -41,19 +41,17 @@ export default function JewelleryExporterSriLanka() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to Sri Lanka",
         description:
           "Premium wholesale imitation jewellery from India for Sri Lankan retailers, Colombo boutiques, and bridal shops. Bridal sets, Temple jewellery, Indian fashion jewellery. MOQ 50 units. Fast delivery from Jaipur.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "LK",
         offers: {
           "@type": "Offer",
           priceCurrency: "LKR",
           price: "500",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "LK",
         },
       }}
       faqs={[

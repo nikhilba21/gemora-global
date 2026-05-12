@@ -91,15 +91,15 @@ import FashionJewelleryExporterIndia from "./pages/seo/FashionJewelleryExporterI
 import FashionJewelleryManufacturerIndia from "./pages/seo/FashionJewelleryManufacturerIndia";
 import ImitationJewelleryExporterIndia from "./pages/seo/ImitationJewelleryExporterIndia";
 import ImitationJewelleryManufacturerJaipur from "./pages/seo/ImitationJewelleryManufacturerJaipur";
-import ImitationJewellerySupplierUSA from "./pages/seo/ImitationJewellerySupplierUSA";
+import ImitationJewellerySupplierUsa from "./pages/seo/ImitationJewellerySupplierUsa";
 import JewelleryExporterAustralia from "./pages/seo/JewelleryExporterAustralia";
 import JewelleryExporterCanada from "./pages/seo/JewelleryExporterCanada";
 import JewelleryExporterEurope from "./pages/seo/JewelleryExporterEurope";
 import JewelleryExporterFrance from "./pages/seo/JewelleryExporterFrance";
 import JewelleryExporterSingapore from "./pages/seo/JewelleryExporterSingapore";
-import JewelleryExporterToUSA from "./pages/seo/JewelleryExporterToUSA";
-import JewelleryExporterUAE from "./pages/seo/JewelleryExporterUAE";
-import JewellerySupplierUK from "./pages/seo/JewellerySupplierUK";
+import JewelleryExporterToUsa from "./pages/seo/JewelleryExporterToUsa";
+import JewelleryExporterUae from "./pages/seo/JewelleryExporterUae";
+import JewellerySupplierUk from "./pages/seo/JewellerySupplierUk";
 import KundanJewelleryWholesale from "./pages/seo/KundanJewelleryWholesale";
 import MeenakariJewelleryWholesale from "./pages/seo/MeenakariJewelleryWholesale";
 import OxidisedJewellerySupplier from "./pages/seo/OxidisedJewellerySupplier";
@@ -107,18 +107,14 @@ import OxidisedJewelleryWholesale from "./pages/seo/OxidisedJewelleryWholesale";
 import PrivateLabelJewelleryIndia from "./pages/seo/PrivateLabelJewelleryIndia";
 import TempleJewelleryManufacturer from "./pages/seo/TempleJewelleryManufacturer";
 import WholesaleJewelleryRajasthan from "./pages/seo/WholesaleJewelleryRajasthan";
-import WholesaleJewelleryUK from "./pages/seo/WholesaleJewelleryUK";
+import WholesaleJewelleryUk from "./pages/seo/WholesaleJewelleryUk";
 import AmericanDiamondJewelleryWholesale from "./pages/seo/AmericanDiamondJewelleryWholesale";
 import WholesaleImitationJewelleryManufacturerExporter from "./pages/seo/WholesaleImitationJewelleryManufacturerExporter";
 import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesale";
 import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
 import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
 import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesale";
-import ImitationJewellerySupplierUsa from "./pages/seo/ImitationJewellerySupplierUsa";
-import JewelleryExporterToUsa from "./pages/seo/JewelleryExporterToUsa";
-import JewellerySupplierUk from "./pages/seo/JewellerySupplierUk";
-import JewelleryExporterUae from "./pages/seo/JewelleryExporterUae";
-import WholesaleJewelleryUk from "./pages/seo/WholesaleJewelleryUk";
+
 
 function VisitTracker() {
   const { actor } = useActor();
@@ -519,19 +515,19 @@ export default function App() {
         />
         <Route
           path="/jewellery-exporter-to-usa"
-          element={<JewelleryExporterToUSA />}
+          element={<JewelleryExporterToUsa />}
         />
         <Route
           path="/jewellery-supplier-uk"
-          element={<JewellerySupplierUK />}
+          element={<JewellerySupplierUk />}
         />
         <Route
           path="/jewellery-exporter-uae"
-          element={<JewelleryExporterUAE />}
+          element={<JewelleryExporterUae />}
         />
         <Route
           path="/imitation-jewellery-supplier-uae"
-          element={<JewelleryExporterUAE />}
+          element={<JewelleryExporterUae />}
         />
         <Route
           path="/private-label-jewellery-india"
@@ -567,7 +563,7 @@ export default function App() {
         />
         <Route
           path="/imitation-jewellery-supplier-usa"
-          element={<ImitationJewellerySupplierUSA />}
+          element={<ImitationJewellerySupplierUsa />}
         />
         <Route
           path="/imitation-jewellery-manufacturer-jaipur"
@@ -581,7 +577,7 @@ export default function App() {
           path="/meenakari-jewellery-wholesale"
           element={<MeenakariJewelleryWholesale />}
         />
-        <Route path="/wholesale-jewellery-uk" element={<WholesaleJewelleryUK />} />
+        <Route path="/wholesale-jewellery-uk" element={<WholesaleJewelleryUk />} />
         <Route path="/american-diamond-jewellery-wholesale" element={<AmericanDiamondJewelleryWholesale />} />
         <Route path="/gold-plated-jewellery-wholesale-india" element={<GoldPlatedJewelleryWholesale />} />
         <Route path="/antique-jewellery-wholesale-india" element={<AntiqueJewelleryWholesale />} />

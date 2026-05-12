@@ -41,19 +41,17 @@ export default function JewelleryExporterSaudiArabia() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to Saudi Arabia",
         description:
           "Premium wholesale imitation jewellery from India for Saudi Arabia boutiques, Riyadh retailers, and Jeddah traders. Gold-plated, Kundan, Bridal styles. MOQ 50 units. DHL delivery 7–10 days.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "SA",
         offers: {
           "@type": "Offer",
           priceCurrency: "SAR",
           price: "7.50",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "SA",
         },
       }}
       faqs={[

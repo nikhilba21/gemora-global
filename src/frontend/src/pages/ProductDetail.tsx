@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BulkOrderCalculator from "../components/BulkOrderCalculator";
+import { usePageSEO } from "../hooks/usePageSEO";
 import { useState } from "react";
 import {
   Share2,
@@ -144,6 +145,19 @@ export default function ProductDetail() {
     { icon: <Globe className="w-6 h-6" style={{ color: "#1A237E" }} />, title: "Global Export Ready", desc: "Export packaging, documentation and shipping to 50+ countries." },
     { icon: <ShieldCheck className="w-6 h-6" style={{ color: "#1A237E" }} />, title: "Quality Assured", desc: "Anti-tarnish finish, quality-checked before dispatch. Bulk samples available." },
   ];
+
+  usePageSEO({
+    title: `${product.name} | Wholesale Imitation Jewellery | Gemora Global`,
+    description: `${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`,
+    canonical: `https://www.gemoraglobal.co/products/item/${product.id}`,
+    ogImage: images[0],
+    product,
+    breadcrumbs: [
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
+      { name: "Products", url: "https://www.gemoraglobal.co/products" },
+      { name: product.name, url: `https://www.gemoraglobal.co/products/item/${product.id}` },
+    ],
+  });
 
   return (
     <div className="min-h-screen bg-background text-foreground">

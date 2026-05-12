@@ -37,19 +37,17 @@ export default function JewelleryExporterKuwait() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to Kuwait",
         description:
           "Premium wholesale imitation jewellery from Jaipur, India for Kuwait boutiques, souk traders, and fashion retailers. Kundan, American Diamond, Gold Plated styles. MOQ 50 units. DHL delivery 7–10 days.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "KW",
         offers: {
           "@type": "Offer",
           priceCurrency: "KWD",
           price: "1.50",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "KW",
         },
       }}
       faqs={[

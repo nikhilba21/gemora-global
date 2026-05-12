@@ -37,19 +37,17 @@ export default function JewelleryExporterMalaysia() {
       ]}
       schema={{
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "Service",
         name: "Wholesale Imitation Jewellery Export to Malaysia",
         description:
           "Premium wholesale imitation jewellery from India for Malaysian boutiques and retailers. Kundan, Temple, Bridal, Meenakari styles for Diwali, Hari Raya, and festive seasons. MOQ 50 units.",
-        brand: { "@type": "Brand", name: "Gemora Global" },
+        provider: { "@type": "Organization", name: "Gemora Global" },
+        areaServed: "MY",
         offers: {
           "@type": "Offer",
           priceCurrency: "MYR",
           price: "8.00",
-          priceValidUntil: "2026-12-31",
           availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: "Gemora Global" },
-          areaServed: "MY",
         },
       }}
       faqs={[
