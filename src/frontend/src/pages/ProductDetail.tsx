@@ -92,6 +92,19 @@ export default function ProductDetail() {
     } catch { /* ignore */ }
   };
 
+  usePageSEO({
+    title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Wholesale Imitation Jewellery | Gemora Global",
+    description: product ? `${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.` : "Gemora Global wholesale imitation jewellery.",
+    canonical: product ? `https://www.gemoraglobal.co/products/item/${product.id}` : undefined,
+    ogImage: product?.imageUrls?.[0],
+    product: product as any,
+    breadcrumbs: [
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
+      { name: "Products", url: "https://www.gemoraglobal.co/products" },
+      ...(product ? [{ name: product.name, url: `https://www.gemoraglobal.co/products/item/${product.id}` }] : []),
+    ],
+  });
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
@@ -145,19 +158,6 @@ export default function ProductDetail() {
     { icon: <Globe className="w-6 h-6" style={{ color: "#1A237E" }} />, title: "Global Export Ready", desc: "Export packaging, documentation and shipping to 50+ countries." },
     { icon: <ShieldCheck className="w-6 h-6" style={{ color: "#1A237E" }} />, title: "Quality Assured", desc: "Anti-tarnish finish, quality-checked before dispatch. Bulk samples available." },
   ];
-
-  usePageSEO({
-    title: `${product.name} | Wholesale Imitation Jewellery | Gemora Global`,
-    description: `${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`,
-    canonical: `https://www.gemoraglobal.co/products/item/${product.id}`,
-    ogImage: images[0],
-    product,
-    breadcrumbs: [
-      { name: "Home", url: "https://www.gemoraglobal.co/" },
-      { name: "Products", url: "https://www.gemoraglobal.co/products" },
-      { name: product.name, url: `https://www.gemoraglobal.co/products/item/${product.id}` },
-    ],
-  });
 
   return (
     <div className="min-h-screen bg-background text-foreground">
