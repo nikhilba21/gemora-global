@@ -128,13 +128,23 @@ function VisitTracker() {
   useEffect(() => {
     const updateTawk = () => {
       const Tawk_API = (window as any).Tawk_API;
-      if (Tawk_API && typeof Tawk_API.setAttributes === 'function') {
-        Tawk_API.setAttributes({
-          'page_path': window.location.pathname,
-          'page_title': document.title
-        }, (err: any) => {
-          if (err) console.error("Tawk error:", err);
-        });
+      if (Tawk_API) {
+        // 1. Update Visitor Attributes (shows in sidebar)
+        if (typeof Tawk_API.setAttributes === 'function') {
+          Tawk_API.setAttributes({
+            'page_url': window.location.href,
+            'page_path': window.location.pathname,
+            'page_title': document.title
+          }, () => {});
+        }
+        
+        // 2. Add an Event (shows in Chat Timeline)
+        if (typeof Tawk_API.addEvent === 'function') {
+          Tawk_API.addEvent('Navigation', {
+            'link': window.location.href,
+            'title': document.title
+          }, () => {});
+        }
       }
     };
 
