@@ -418,7 +418,7 @@ export default function Products() {
 
                 {/* Subcategory Tabs */}
                 {activeCategory && allSubcats[activeCategory.slug]?.length > 0 && (
-                  <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-2 no-scrollbar -mx-1 px-1">
+                  <div className="flex items-center gap-2 overflow-x-auto flex-nowrap pb-4 mb-2 no-scrollbar -mx-1 px-1">
                     <button
                       onClick={() => setSubcat("")}
                       className={`whitespace-nowrap px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${!subcategoryParam ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
