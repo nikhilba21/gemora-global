@@ -188,4 +188,12 @@
   .trust-badge {
     @apply inline-flex items-center gap-2 bg-muted/30 text-foreground px-3 py-2 rounded-full text-xs font-medium border border-border;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
