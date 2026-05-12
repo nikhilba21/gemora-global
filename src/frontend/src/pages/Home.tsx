@@ -314,12 +314,12 @@ export default function Home() {
 
   usePageSEO({
     title:
-      "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
+      "Gemora Global | Jaipur Imitation Jewellery Exporter | Wholesale Manufacturer",
     description:
       "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units, anti-tarnish finish. Shipping to 30+ countries worldwide.",
     canonical: "https://www.gemoraglobal.co/",
     ogTitle:
-      "Jaipur Imitation Jewellery Exporter | MOQ 50 Units | Wholesale Manufacturer – Gemora Global",
+      "Gemora Global | Jaipur Imitation Jewellery Exporter | Wholesale Manufacturer",
     ogDescription:
       "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units. Shipping to 30+ countries worldwide.",
     ogImage: "https://www.gemoraglobal.co/images/og-banner.jpg",

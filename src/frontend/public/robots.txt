@@ -12,7 +12,11 @@ Allow: /assets/
 Allow: /sitemap.xml
 
 Sitemap: https://www.gemoraglobal.co/sitemap.xml
-Sitemap: https://www.gemoraglobal.co/sitemap-images.xml
+Sitemap: https://www.gemoraglobal.co/pages-sitemap.xml
+Sitemap: https://www.gemoraglobal.co/products-sitemap.xml
+Sitemap: https://www.gemoraglobal.co/collections-sitemap.xml
+Sitemap: https://www.gemoraglobal.co/blogs-sitemap.xml
+Sitemap: https://www.gemoraglobal.co/image-sitemap.xml
 
 # Crawl delay (be gentle)
 Crawl-delay: 1
