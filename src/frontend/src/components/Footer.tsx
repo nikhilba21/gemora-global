@@ -63,6 +63,10 @@ const EXPORT_COUNTRIES = [
   { label: "Jewellery Exporter Canada", to: "/jewellery-exporter-canada" },
   { label: "Jewellery Exporter Singapore", to: "/jewellery-exporter-singapore" },
   { label: "Jewellery Exporter Europe", to: "/jewellery-exporter-europe" },
+  { label: "Jewellery Exporter Malaysia", to: "/jewellery-exporter-malaysia" },
+  { label: "Jewellery Exporter Saudi Arabia", to: "/jewellery-exporter-saudi-arabia" },
+  { label: "Jewellery Exporter Nigeria", to: "/jewellery-exporter-nigeria" },
+  { label: "Jewellery Exporter Sri Lanka", to: "/jewellery-exporter-sri-lanka" },
 ];
 
 const COMPANY_LINKS = [
@@ -151,7 +155,10 @@ export default function Footer() {
           <Link to="/imitation-jewellery-supplier-usa" className="text-white/80 hover:text-[#D4AF37] underline">USA</Link>,{" "}
           <Link to="/jewellery-supplier-uk" className="text-white/80 hover:text-[#D4AF37] underline">UK</Link>,{" "}
           <Link to="/jewellery-exporter-uae" className="text-white/80 hover:text-[#D4AF37] underline">UAE</Link>,{" "}
-          <Link to="/jewellery-exporter-australia" className="text-white/80 hover:text-[#D4AF37] underline">Australia</Link>, and 30+ countries. MOQ from 50 units.
+          <Link to="/jewellery-exporter-australia" className="text-white/80 hover:text-[#D4AF37] underline">Australia</Link>,{" "}
+          <Link to="/jewellery-exporter-canada" className="text-white/80 hover:text-[#D4AF37] underline">Canada</Link>,{" "}
+          <Link to="/jewellery-exporter-malaysia" className="text-white/80 hover:text-[#D4AF37] underline">Malaysia</Link>,{" "}
+          <Link to="/jewellery-exporter-saudi-arabia" className="text-white/80 hover:text-[#D4AF37] underline">Saudi Arabia</Link>, and 30+ countries. MOQ from 50 units.
         </p>
       </div>
 

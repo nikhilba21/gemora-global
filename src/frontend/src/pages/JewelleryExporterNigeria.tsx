@@ -203,8 +203,9 @@ export default function JewelleryExporterNigeria() {
             <p className="mb-4">
               Contact our Nigeria Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
             </p>
-          </div>
-        }
+          </section>
+        </div>
+      }
     />
   );
 }

@@ -311,22 +311,35 @@ export default function App() {
           element={<ProgrammaticCollection />}
         />
 
-        {/* Export market pages */}
-        <Route path="/export-markets/usa" element={<ExportUSA />} />
-        <Route path="/export-markets/uk" element={<ExportUK />} />
-        <Route path="/export-markets/australia" element={<ExportAustralia />} />
-        <Route path="/export-markets/canada" element={<ExportCanada />} />
-        <Route path="/export-markets/uae" element={<ExportUAE />} />
-        <Route path="/export-markets/kuwait" element={<ExportKuwait />} />
-        <Route path="/export-markets/malaysia" element={<ExportMalaysia />} />
-        <Route path="/export-markets/singapore" element={<ExportSingapore />} />
-        <Route
-          path="/export-markets/saudi-arabia"
-          element={<ExportSaudiArabia />}
-        />
-        <Route path="/export-markets/nigeria" element={<ExportNigeria />} />
-        <Route path="/export-markets/sri-lanka" element={<ExportSriLanka />} />
-        <Route path="/export-markets/france" element={<ExportFrance />} />
+        {/* Export market redirects to primary SEO hubs */}
+        <Route path="/export-markets/usa" element={<Navigate replace to="/imitation-jewellery-supplier-usa" />} />
+        <Route path="/jewellery-exporter-to-usa" element={<Navigate replace to="/imitation-jewellery-supplier-usa" />} />
+        
+        <Route path="/export-markets/uk" element={<Navigate replace to="/wholesale-jewellery-uk" />} />
+        <Route path="/jewellery-supplier-uk" element={<Navigate replace to="/wholesale-jewellery-uk" />} />
+        <Route path="/costume-jewellery-wholesale-uk" element={<Navigate replace to="/wholesale-jewellery-uk" />} />
+        
+        <Route path="/export-markets/uae" element={<Navigate replace to="/jewellery-exporter-uae" />} />
+        <Route path="/imitation-jewellery-supplier-uae" element={<Navigate replace to="/jewellery-exporter-uae" />} />
+        
+        <Route path="/export-markets/australia" element={<Navigate replace to="/jewellery-exporter-australia" />} />
+        <Route path="/export-indian-fashion-jewellery-australia" element={<Navigate replace to="/jewellery-exporter-australia" />} />
+        
+        <Route path="/export-markets/canada" element={<Navigate replace to="/jewellery-exporter-canada" />} />
+        <Route path="/export-imitation-jewellery-canada" element={<Navigate replace to="/jewellery-exporter-canada" />} />
+        
+        <Route path="/export-markets/singapore" element={<Navigate replace to="/jewellery-exporter-singapore" />} />
+        <Route path="/export-imitation-jewellery-singapore" element={<Navigate replace to="/jewellery-exporter-singapore" />} />
+        
+        <Route path="/export-markets/france" element={<Navigate replace to="/jewellery-exporter-france" />} />
+        <Route path="/export-imitation-jewellery-france" element={<Navigate replace to="/jewellery-exporter-france" />} />
+        
+        <Route path="/export-markets/kuwait" element={<Navigate replace to="/jewellery-exporter-kuwait" />} />
+        <Route path="/export-markets/malaysia" element={<Navigate replace to="/jewellery-exporter-malaysia" />} />
+        <Route path="/export-markets/nigeria" element={<Navigate replace to="/jewellery-exporter-nigeria" />} />
+        <Route path="/export-markets/saudi-arabia" element={<Navigate replace to="/jewellery-exporter-saudi-arabia" />} />
+        <Route path="/export-markets/sri-lanka" element={<Navigate replace to="/jewellery-exporter-sri-lanka" />} />
+        <Route path="/export-imitation-jewellery-germany-eu" element={<Navigate replace to="/jewellery-exporter-europe" />} />
 
         {/* Legacy Kuwait/Malaysia/Nigeria/SaudiArabia/SriLanka pages */}
         <Route
@@ -654,24 +667,8 @@ export default function App() {
           element={<JewelleryExporterEurope />}
         />
         <Route
-          path="/export-imitation-jewellery-france"
+          path="/jewellery-exporter-france"
           element={<JewelleryExporterFrance />}
-        />
-        <Route
-          path="/export-indian-fashion-jewellery-australia"
-          element={<JewelleryExporterAustralia />}
-        />
-        <Route
-          path="/export-imitation-jewellery-germany-eu"
-          element={<JewelleryExporterEurope />}
-        />
-        <Route
-          path="/export-imitation-jewellery-canada"
-          element={<JewelleryExporterCanada />}
-        />
-        <Route
-          path="/export-imitation-jewellery-singapore"
-          element={<JewelleryExporterSingapore />}
         />
 
         <Route path="*" element={<NotFound />} />

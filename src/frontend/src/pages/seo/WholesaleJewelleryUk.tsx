@@ -151,8 +151,9 @@ export default function WholesaleJewelleryUk() {
             <p className="mb-4">
               Contact our UK Export Desk now for a personalized consultation and a copy of our latest wholesale catalogue featuring over 1700+ unique designs.
             </p>
-          </div>
-        }
+          </section>
+        </div>
+      }
 
 
     />

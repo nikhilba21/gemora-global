@@ -154,8 +154,9 @@ export default function ImitationJewellerySupplierUsa() {
             <p className="mb-4">
               Contact our USA Export Desk today to request our latest catalogue and start your partnership with India's most trusted <Link to="/imitation-jewellery-exporter-india" className="text-sky-600 hover:underline">imitation jewellery supplier</Link>.
             </p>
-          </div>
-        }
+          </section>
+        </div>
+      }
 
 
     />
