@@ -34,6 +34,7 @@ export default function Products() {
   const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set([categorySlug || ""]));
   const [gridCols, setGridCols] = useState<3 | 4>(4);
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState("newest");
 
   const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
     || 'https://gemora-global-2.onrender.com';
@@ -122,10 +123,27 @@ export default function Products() {
       .finally(() => setIsLoading(false));
   }, [activeCategory, pageParam, subcategoryParam, API_BASE]);
 
-  // Filter by search on client side
-  const displayProducts = searchQuery
-    ? products.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    : products;
+  // Filter and Sort products
+  const displayProducts = useMemo(() => {
+    let filtered = products;
+    
+    // Search filter
+    if (searchQuery) {
+      const lowerQuery = searchQuery.toLowerCase();
+      filtered = products.filter(p => 
+        p.name.toLowerCase().includes(lowerQuery) || 
+        (p.sku && p.sku.toLowerCase().includes(lowerQuery))
+      );
+    }
+    
+    // Sort logic
+    return [...filtered].sort((a, b) => {
+      if (sortBy === "name-asc") return a.name.localeCompare(b.name);
+      if (sortBy === "name-desc") return b.name.localeCompare(a.name);
+      if (sortBy === "newest") return Number(b.id) - Number(a.id);
+      return 0;
+    });
+  }, [products, searchQuery, sortBy]);
 
   function toggleCat(slug: string) {
     setExpandedCats(prev => {
@@ -314,20 +332,33 @@ export default function Products() {
                   )}
                 </div>
 
-                {/* Grid toggle */}
-                <div className="flex items-center gap-1 border rounded-lg p-1">
-                  <button
-                    onClick={() => setGridCols(3)}
-                    className={`p-1 rounded ${gridCols === 3 ? "bg-muted" : ""}`}
+                {/* Actions */}
+                <div className="flex items-center gap-3">
+                  <select
+                    className="text-xs md:text-sm border rounded-lg bg-background px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
                   >
-                    <Grid3X3 className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setGridCols(4)}
-                    className={`p-1 rounded ${gridCols === 4 ? "bg-muted" : ""}`}
-                  >
-                    <Grid2X2 className="w-4 h-4" />
-                  </button>
+                    <option value="newest">Newest First</option>
+                    <option value="name-asc">Name A-Z</option>
+                    <option value="name-desc">Name Z-A</option>
+                  </select>
+
+                  {/* Grid toggle */}
+                  <div className="flex items-center gap-1 border rounded-lg p-1">
+                    <button
+                      onClick={() => setGridCols(3)}
+                      className={`p-1 rounded ${gridCols === 3 ? "bg-muted" : ""}`}
+                    >
+                      <Grid3X3 className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => setGridCols(4)}
+                      className={`p-1 rounded ${gridCols === 4 ? "bg-muted" : ""}`}
+                    >
+                      <Grid2X2 className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -454,9 +485,16 @@ function ProductCard({ product }: { product: Product }) {
         <p className="text-sm font-medium leading-tight line-clamp-2 group-hover:text-primary transition-colors">
           {name}
         </p>
-        {product.subcategory && (
-          <p className="text-xs text-muted-foreground mt-1">{product.subcategory}</p>
-        )}
+        <div className="flex items-center justify-between mt-1">
+          <p className="text-[10px] text-muted-foreground truncate mr-2">
+            {product.subcategory || "Jewellery"}
+          </p>
+          {product.sku && (
+            <p className="text-[10px] text-primary/70 font-mono font-medium">
+              {product.sku}
+            </p>
+          )}
+        </div>
         <div className="flex items-center justify-between mt-2">
           <span className="text-xs text-muted-foreground">MOQ: {product.moq || "50 units"}</span>
           <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Wholesale</span>
