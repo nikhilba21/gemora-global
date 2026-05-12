@@ -149,15 +149,7 @@ export default function FAQ() {
     ogTitle: "FAQ — Gemora Global Wholesale Imitation Jewellery",
     ogDescription:
       "Answers to 20+ frequently asked questions about wholesale imitation jewellery from Gemora Global — MOQ, shipping, returns, pricing, and more.",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: ALL_FAQS.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faq.a },
-      })),
-    },
+    faqItems: ALL_FAQS,
   });
 
   return (
@@ -234,39 +226,24 @@ export default function FAQ() {
               </div>
               <div
                 className="space-y-3"
-                itemScope
-                itemType="https://schema.org/FAQPage"
                 data-ocid="faq.category.list"
               >
                 {cat.questions.map((faq, i) => (
                   <details
                     key={faq.q}
                     className="group border border-blue-700/20 rounded-xl bg-card overflow-hidden"
-                    itemScope
-                    itemProp="mainEntity"
-                    itemType="https://schema.org/Question"
                     data-ocid={`faq.${cat.id}.item.${i + 1}`}
                   >
                     <summary className="flex items-start justify-between px-5 py-4 cursor-pointer font-semibold text-foreground hover:text-primary transition-colors min-h-[52px] gap-3">
-                      <span
-                        itemProp="name"
-                        className="text-sm sm:text-base leading-snug"
-                      >
+                      <span className="text-sm sm:text-base leading-snug">
                         {faq.q}
                       </span>
                       <span className="text-sky-500 ml-2 shrink-0 mt-0.5 group-open:rotate-45 transition-transform text-lg leading-none">
                         +
                       </span>
                     </summary>
-                    <div
-                      itemScope
-                      itemProp="acceptedAnswer"
-                      itemType="https://schema.org/Answer"
-                    >
-                      <p
-                        className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed"
-                        itemProp="text"
-                      >
+                    <div>
+                      <p className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed">
                         {faq.a}
                       </p>
                     </div>

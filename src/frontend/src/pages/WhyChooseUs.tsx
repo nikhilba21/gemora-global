@@ -61,76 +61,8 @@ export default function WhyChooseUs() {
       "Why Choose Gemora Global — India's Trusted Imitation Jewellery Exporter",
     ogImage:
       "https://www.gemoraglobal.co/images/og-why-choose-us.jpg",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is the MOQ for Gemora Global?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Minimum order quantity starts from 50 units per design for most categories.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer custom jewellery designs?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, custom designs are available for orders of 500+ units with 3-4 weeks lead time.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Which countries do you export to?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "UAE, France, USA, UK, Germany, Canada, Australia, Singapore and 10+ more countries.",
-          },
-        },
-      ],
-    },
+    faqItems: FAQ,
   });
-  useEffect(() => {
-    document.title =
-      "Why Choose Gemora Global — India's Trusted Imitation Jewellery Exporter";
-    let metaDesc = document.querySelector(
-      'meta[name="description"]',
-    ) as HTMLMetaElement | null;
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "10+ years of export experience, anti-tarnish finishing, 500+ designs, factory-direct pricing, and reliable global shipping. Discover why boutiques and wholesalers in 15+ countries choose Gemora Global.",
-    );
-
-    const existingScript = document.getElementById("page-schema");
-    if (existingScript) existingScript.remove();
-    const script = document.createElement("script");
-    script.id = "page-schema";
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQ.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    });
-    document.head.appendChild(script);
-
-    return () => {
-      document.title =
-        "Imitation Jewellery Exporter & Manufacturer in India | Gemora Global";
-      const s = document.getElementById("page-schema");
-      if (s) s.remove();
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-background">

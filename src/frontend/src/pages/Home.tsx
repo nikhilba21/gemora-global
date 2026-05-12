@@ -354,50 +354,6 @@ export default function Home() {
         a: "Browse our catalogue, select designs, WhatsApp us at +91 7976341419 with quantity requirements. We accept T/T, LC, Western Union and PayPal.",
       },
     ],
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Gemora Global",
-      image: "https://www.gemoraglobal.co/images/og-banner.jpg",
-      "@id": "https://www.gemoraglobal.co",
-      url: "https://www.gemoraglobal.co",
-      telephone: "+91-7976341419",
-      email: "globalgemora@gmail.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "B 66 MAA Hinglaj Nagar",
-        addressLocality: "Jaipur",
-        addressRegion: "Rajasthan",
-        postalCode: "302021",
-        addressCountry: "IN",
-      },
-      geo: { "@type": "GeoCoordinates", latitude: 26.9124, longitude: 75.7873 },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
-          opens: "09:00",
-          closes: "19:00",
-        },
-      ],
-      priceRange: "₹₹",
-      description:
-        "Gemora Global is a Jaipur-based imitation jewellery exporter and manufacturer, established 2011. We supply wholesale fashion jewellery, bridal jewellery sets, Kundan jewellery, and 500+ designs to buyers in UAE, USA, UK, and 30+ countries.",
-      sameAs: [
-        "https://www.indiamart.com/gemora-global",
-        "https://www.tradeindia.com/gemora-global",
-        "https://www.exportersindia.com/gemora-global",
-        "https://www.instagram.com/gemoraglobal",
-        "https://www.linkedin.com/company/gemoraglobal",
-      ],
-    },
   });
 
   // ── Page CMS content from backend ────────────────────────────
@@ -1410,8 +1366,6 @@ export default function Home() {
           </div>
           <div
             className="space-y-4"
-            itemScope
-            itemType="https://schema.org/FAQPage"
           >
             {[
               {
@@ -1442,27 +1396,18 @@ export default function Home() {
               <div
                 key={faq.q}
                 className="bg-background border border-border rounded-xl p-4 md:p-5"
-                itemScope
-                itemType="https://schema.org/Question"
-                itemProp="mainEntity"
               >
                 <h3
                   className="font-semibold text-sm md:text-base mb-2 flex items-start gap-2"
-                  itemProp="name"
                 >
                   <span className="text-primary font-bold flex-shrink-0">
                     Q.
                   </span>
                   {faq.q}
                 </h3>
-                <div
-                  itemScope
-                  itemType="https://schema.org/Answer"
-                  itemProp="acceptedAnswer"
-                >
+                <div>
                   <p
                     className="text-xs md:text-sm text-muted-foreground leading-relaxed pl-5"
-                    itemProp="text"
                   >
                     {faq.a}
                   </p>

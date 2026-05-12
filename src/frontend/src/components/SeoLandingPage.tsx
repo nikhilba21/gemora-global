@@ -642,8 +642,6 @@ export default function SeoLandingPage({
       {/* FAQ — with Schema.org markup */}
       <section
         className="py-10 sm:py-14 px-4 bg-card border-t border-border faq-section"
-        itemScope
-        itemType="https://schema.org/FAQPage"
       >
         <div className="container max-w-3xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-8 sm:mb-10">
@@ -654,30 +652,17 @@ export default function SeoLandingPage({
               <details
                 key={faq.q}
                 className="group border border-blue-700/20 rounded-xl bg-background overflow-hidden"
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
               >
                 <summary className="flex items-start justify-between px-4 sm:px-6 py-4 cursor-pointer font-semibold text-foreground hover:text-primary transition-colors min-h-[48px] gap-3">
-                  <span
-                    itemProp="name"
-                    className="text-sm sm:text-base leading-snug"
-                  >
+                  <span className="text-sm sm:text-base leading-snug">
                     {faq.q}
                   </span>
                   <span className="text-sky-500 ml-2 shrink-0 mt-0.5 group-open:rotate-45 transition-transform text-lg leading-none">
                     +
                   </span>
                 </summary>
-                <div
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
-                >
-                  <p
-                    className="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-sm text-muted-foreground leading-relaxed"
-                    itemProp="text"
-                  >
+                <div>
+                  <p className="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     {faq.a}
                   </p>
                 </div>
