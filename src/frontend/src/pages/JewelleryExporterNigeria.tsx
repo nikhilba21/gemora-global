@@ -1,29 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function JewelleryExporterNigeria() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter to Nigeria | Wholesale Fashion Jewellery Africa | Gemora Global"
-      metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Nigeria. Wholesale colourful fashion jewellery, gold-plated & oxidised sets for Lagos boutiques & West African distribution. MOQ 50 units, competitive pricing."
+      title="Jewellery Exporter to Nigeria | Indian Wholesale Fashion for Lagos"
+      metaDescription="Premium Indian imitation jewellery exporter for Lagos and Abuja markets. Source handcrafted statement jewellery and gold-plated sets for Nigerian boutiques with 50 unit MOQ."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-nigeria"
-      h1="Imitation Jewellery Exporter to Nigeria | Wholesale Fashion Jewellery Africa"
+      h1="Indian Fashion Jewellery Wholesale for Nigeria & West Africa"
       targetKeyword="imitation jewellery exporter Nigeria wholesale Africa"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur to Nigerian boutiques, Lagos fashion retailers, and West African distributors. Colourful statement pieces, gold-plated sets, and bridal collections suited for Nigeria's vibrant fashion market. MOQ from 50 units, factory-direct pricing."
-      hreflangs={[
-        {
-          lang: "en-NG",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
-        },
-        {
-          lang: "en-GB",
-          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

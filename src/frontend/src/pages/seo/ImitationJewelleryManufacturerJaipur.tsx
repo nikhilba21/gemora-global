@@ -7,7 +7,7 @@ export default function ImitationJewelleryManufacturerJaipur() {
   return (
     <SeoLandingPage
       title="Imitation Jewellery Manufacturer Jaipur | Gemora Global"
-      metaDescription="Leading imitation jewellery manufacturer in Jaipur. Wholesale kundan, meenakari, bridal & fashion jewellery. MOQ 50 units, global export. Factory-direct pricing."
+      metaDescription="Jaipur's leading imitation jewellery manufacturer. Direct wholesale kundan, meenakari, and bridal sets. Expert craftsmanship, anti-tarnish finish, MOQ 50, worldwide export from Jaipur."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur"
       h1="Imitation Jewellery Manufacturer in Jaipur — GEMORA GLOBAL"
       targetKeyword="imitation jewellery manufacturer Jaipur"

@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function JewelleryExporterUae() {
   return (
     <SeoLandingPage
-      title="Jewellery Exporter UAE | Wholesale from India — Gemora Global"
-      metaDescription="Best jewellery exporter to UAE from India. Gemora Global supplies wholesale bridal and fashion jewellery to UAE boutiques. MOQ 50 units, fast delivery."
+      title="Jewellery Exporter to UAE | Indian Wholesale Bridal & Fashion"
+      metaDescription="Trusted Indian jewellery exporter to Dubai, Abu Dhabi, and Sharjah. We supply wholesale Kundan and Bridal sets to UAE boutiques with express 5-day delivery."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-uae"
-      h1="Jewellery Exporter UAE — Premium Indian Wholesale Jewellery"
+      h1="Premium Indian Jewellery Export to UAE & GCC Markets"
       targetKeyword="jewellery-exporter-uae"
       heroSubtitle="Gemora Global exports wholesale jewellery to UAE boutiques, gold souks, and fashion retailers. Bridal sets, American diamond, and kundan collections popular in UAE."
-      hreflangs={[
-        { lang: "en-ae", url: "https://www.gemoraglobal.co/jewellery-exporter-uae" },
-        { lang: "en", url: "https://www.gemoraglobal.co/jewellery-exporter-uae" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/jewellery-exporter-uae" },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },

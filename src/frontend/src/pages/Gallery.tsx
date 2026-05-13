@@ -126,7 +126,7 @@ export default function Gallery() {
                     >
                       <img
                         src={item.imageUrl}
-                        alt={item.caption || "gallery"}
+                        alt={item.caption || `${folderData.folder.name} Jewellery Collection — Gemora Global`}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       {item.caption && (

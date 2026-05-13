@@ -1,29 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function JewelleryExporterMalaysia() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter to Malaysia | Wholesale Indian Fashion Jewellery | Gemora Global"
-      metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Malaysia. Wholesale Kundan, Temple, Bridal jewellery for KL boutiques & Indian diaspora buyers. MOQ 50 units, fast shipping to Malaysia, competitive wholesale pricing."
+      title="Jewellery Exporter to Malaysia | Indian Wholesale Fashion Supplier"
+      metaDescription="Premium Indian imitation jewellery exporter for Kuala Lumpur and Little India markets. Source handcrafted Temple and Bridal jewellery for Malaysian boutiques with fast shipping."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-malaysia"
-      h1="Imitation Jewellery Exporter to Malaysia | Wholesale Indian Fashion Jewellery"
+      h1="Indian Ethnic Jewellery Wholesale for Malaysia & SE Asia"
       targetKeyword="imitation jewellery exporter Malaysia wholesale"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur to Malaysian boutiques, Little India retailers, and online fashion sellers. Factory-direct pricing, MOQ from 50 units, multi-ethnic market-ready collections for Diwali, Hari Raya, and year-round festive demand."
-      hreflangs={[
-        {
-          lang: "ms-MY",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-malaysia",
-        },
-        {
-          lang: "en-SG",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-malaysia",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

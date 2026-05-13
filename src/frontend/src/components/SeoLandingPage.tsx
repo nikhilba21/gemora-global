@@ -427,8 +427,8 @@ export default function SeoLandingPage({
       {/* Export Countries */}
       <section className="py-10 sm:py-14 px-4">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4">
-            Export Countries We Serve
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4 capitalize">
+            {targetKeyword.replace(/-/g, " ")} Export Hub
           </h2>
           <p className="text-center text-muted-foreground mb-8 sm:mb-10 text-xs sm:text-sm">
             Reliable global shipping with full export documentation.{" "}
@@ -455,8 +455,8 @@ export default function SeoLandingPage({
       {/* Get Catalog CTA */}
       <section className="py-10 sm:py-14 px-4 bg-gradient-to-r from-blue-900/20 to-blue-700/10 border-y border-blue-700/20">
         <div className="container max-w-3xl mx-auto text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary mb-3 sm:mb-4">
-            Get Our Wholesale Catalogue
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary mb-3 sm:mb-4 capitalize">
+            {targetKeyword.replace(/-/g, " ")} Wholesale Collections
           </h2>
           <p className="text-muted-foreground mb-6 sm:mb-8 text-sm px-2">
             Request our latest 500+ design catalogue with wholesale pricing, MOQ
@@ -494,8 +494,8 @@ export default function SeoLandingPage({
       {/* Testimonials */}
       <section className="py-10 sm:py-14 px-4 bg-muted/30 border-y border-border">
         <div className="container max-w-5xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4">
-            What Our Buyers Say
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4 capitalize">
+            {targetKeyword.replace(/-/g, " ")} Client Success Stories
           </h2>
           <p className="text-center text-muted-foreground mb-8 sm:mb-10 text-xs sm:text-sm">
             Trusted by boutiques, distributors, and wholesale buyers worldwide.
@@ -546,7 +546,7 @@ export default function SeoLandingPage({
       <section className="py-10 sm:py-14 px-4">
         <div className="container max-w-2xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary text-center mb-3 sm:mb-4">
-            Send a Wholesale Inquiry
+            Start Your Wholesale Partnership
           </h2>
           <p className="text-center text-muted-foreground mb-8 sm:mb-10 text-xs sm:text-sm">
             We respond to all wholesale enquiries within one business day.

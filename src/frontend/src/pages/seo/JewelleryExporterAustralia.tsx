@@ -1,33 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function JewelleryExporterAustralia() {
   return (
     <SeoLandingPage
-      title="Indian Jewellery Exporter Australia | Wholesale Imitation Jewellery"
-      metaDescription="Trusted Indian jewellery exporter to Australia. Wholesale imitation jewellery for Australian boutiques. MOQ 50 units, DHL/FedEx, full export documentation."
+      title="Indian Jewellery Wholesale Australia | Supplier for Sydney & Melbourne"
+      metaDescription="Premier Indian imitation jewellery exporter to Sydney, Melbourne, and Brisbane. Gemora Global supplies handcrafted ethnic and bridal jewellery with 50 unit MOQ."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-australia"
-      h1="Indian Jewellery Exporter to Australia | Wholesale"
+      h1="Handcrafted Indian Jewellery Wholesale for Australia"
       targetKeyword="imitation jewellery exporter australia"
       heroSubtitle="Gemora Global is India's trusted imitation jewellery wholesale supplier for Australian boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — DHL delivery in 5–8 days, MOQ from 50 units, full export documentation."
-      hreflangs={[
-        {
-          lang: "en-AU",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-australia",
-        },
-        {
-          lang: "en-US",
-          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
-        },
-        {
-          lang: "en-GB",
-          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-australia",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
@@ -46,157 +30,113 @@ export default function JewelleryExporterAustralia() {
               Premium Indian Imitation Jewellery Exporter to Australia — Sydney, Melbourne, Brisbane & Perth
             </h2>
             <p className="mb-4">
-              Gemora Global is a leading <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving the diverse and growing Australian fashion market. Australia’s retail landscape, from the high-end boutiques of Sydney’s Paddington to the bohemian markets of Melbourne’s Fitzroy, has shown a remarkable affinity for the handcrafted elegance of Indian jewellery. The Australian "Aesthetic" is a unique blend of relaxed coastal vibes and sophisticated urban chic, and our jewellery is designed to complement both.
+              Gemora Global is a premier <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a dedicated wholesale partner for the Australian fashion market. Australia is home to a diverse and growing South Asian community, particularly in major hubs like Sydney, Melbourne, and Brisbane. This diaspora, combined with the mainstream Australian interest in "Boho-Chic" and artisan-crafted accessories, has created a robust year-round demand for high-quality Indian jewellery.
             </p>
             <p className="mb-4">
-              As a dedicated <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Australia</Link>, we understand that the Australian consumer values a unique blend of "Ethical Craftsmanship" and "Modern Aesthetic." We bridge the gap between traditional Indian heritage and the relaxed, sun-kissed fashion sense of the Australian public. Our mission is to provide Australian retailers with high-margin, high-quality products that resonate with their customers' desire for unique, artisan-made accessories.
+              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Australia</Link>, we understand the logistical and quality requirements of the Oceanian market. We bridge the gap between the traditional workshops of Rajasthan and the contemporary boutiques of Australia, providing a seamless B2B experience for retailers and wholesalers down under.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why Australian Boutique Owners and Online Retailers Trust Gemora Global
+              Why Australian Boutiques and Wholesalers Choose Gemora Global
             </h2>
             <p className="mb-4">
-              Sourcing from an international manufacturer requires trust, especially when your business reputation depends on the quality of the products you sell. Gemora Global has built that trust with Australian buyers through consistent quality and professional export services.
+              The Australian market is quality-conscious and requires a supplier that can deliver consistency across large orders while managing the logistics of long-haul shipping.
             </p>
             <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Anti-Tarnish Technology for the Aussie Climate:</strong> Australia’s coastal climate and high humidity levels can be tough on imitation jewellery. Every piece we export features our proprietary anti-tarnish finish, ensuring it stays brilliant even in humid conditions like Brisbane, the Gold Coast, or coastal Sydney.</li>
-              <li><strong>Ethical & Sustainable Manufacturing:</strong> Australian consumers are pioneers in the "Slow Fashion" movement. We pride ourselves on being an <Link to="/fashion-jewellery-manufacturer-india" className="text-sky-600 hover:underline">ethical jewellery manufacturer</Link>, providing fair wages to our Jaipur artisans and using eco-friendly materials wherever possible.</li>
-              <li><strong>Low MOQ (Minimum Order Quantity):</strong> We support small Australian businesses, startups, and Etsy sellers. With an MOQ of just 50 units, you can test new styles in your boutique without the risk of overstocking or heavy capital investment.</li>
-              <li><strong>Fast & Reliable DHL/FedEx Shipping:</strong> We understand that Australia is geographically distant. Our logistics team ensures that your wholesale order reaches your doorstep in Sydney, Melbourne, or Perth within 5-8 business days of dispatch.</li>
+              <li><strong>DHL & FedEx Express Shipping:</strong> We treat Australia as a core export market. Our partnerships with DHL and FedEx ensure that wholesale orders reach Sydney, Melbourne, or Perth within 5-8 business days of dispatch from our Jaipur factory.</li>
+              <li><strong>Customs-Ready Documentation:</strong> We provide all necessary documentation required by the Australian Border Force. Every shipment includes a Commercial Invoice, Packing List, and Certificate of Origin, ensuring efficient customs clearance and delivery.</li>
+              <li><strong>Anti-Tarnish Plating:</strong> Australia’s diverse climate, from the humid North to the dry interior, requires jewellery that lasts. Our multi-layer anti-tarnish coating ensures that your inventory maintains its brilliance for your customers.</li>
+              <li><strong>Jaipur Factory-Direct Pricing:</strong> By sourcing directly from our manufacturing unit, Australian businesses avoid agent fees and enjoy competitive pricing that allows for healthy retail margins.</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-Australia Connection: A Fusion of Heritage and Coastal Style
+              Connecting Jaipur to Australia: Heritage for the Modern Boutique
             </h2>
             <p className="mb-4">
-              The bond between Jaipur’s gem heritage and Australia’s fashion industry has strengthened over the decades. While Australia is famous for its opals and pearls, the demand for intricate gold-plated and <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan jewellery</Link> has grown alongside the expanding South Asian diaspora in major cities like Sydney (Harris Park, Parramatta) and Melbourne (Dandenong, Tarneit). 
+              Jaipur is the global heart of imitation jewellery artistry. At Gemora Global, we translate this ancient craftsmanship into designs that resonate with the Australian aesthetic. Our artisans specialize in <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan setting</Link>, <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari enameling</Link>, and high-end <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond (CZ)</Link> work.
             </p>
             <p className="mb-4">
-              Beyond the diaspora, the "Boho-Chic" trend in Australia—popularized by festivals like Splendour in the Grass and markets in Byron Bay and Eumundi—has created a massive market for our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised jewellery collection</Link>. These pieces, with their vintage silver finish and artisanal feel, resonate perfectly with the Australian "Wanderlust" spirit and the love for natural, earthy aesthetics.
+              Whether you cater to the grand South Asian wedding circuit in Melbourne or a lifestyle boutique in Sydney’s Eastern Suburbs, our collections provide the perfect blend of ethnic authenticity and contemporary fashion appeal.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the Australian Market
+              Top Trending Categories for the Australian Market
             </h2>
             <p className="mb-4">
-              Based on our current export data and trend analysis from the Australian fashion scene, these four categories are the highest performers:
+              Based on our export data, these categories are currently in high demand across Australia:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Artisan Oxidised Silver & Boho Styles</h3>
-                <p className="text-sm">Perfect for Australia’s coastal boutiques and weekend markets. These pieces offer a rugged, handcrafted look that pairs beautifully with natural linens, cottons, and the "Salt-Water" lifestyle.</p>
+                <h3 className="font-bold text-primary mb-2">1. Contemporary CZ (American Diamond) Jewellery</h3>
+                <p className="text-sm">Highly popular for daily wear and formal events. These designs offer the "Fine Jewellery" look that Australian consumers love, with the durability of professional-grade plating.</p>
               </div>
               <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Minimalist AD (American Diamond) for the CBD</h3>
-                <p className="text-sm">For the modern Australian professional in Sydney’s CBD or Melbourne’s Collins Street, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> provides subtle elegance for everyday corporate wear.</p>
+                <h3 className="font-bold text-primary mb-2">2. Traditional Bridal Sets</h3>
+                <p className="text-sm">The Australian-Indian wedding market is thriving. Our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal collection</Link> provides the opulent, royal look required for grand celebrations.</p>
               </div>
               <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Statement Bridal Parures for the Aussie Bride</h3>
-                <p className="text-sm">We are a primary supplier for grand South Asian weddings in Melbourne and Sydney. Our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">wholesale bridal jewellery sets</Link> are high-demand items for specialist wedding boutiques and event planners.</p>
+                <h3 className="font-bold text-primary mb-2">3. Oxidised & Tribal Fusion Designs</h3>
+                <p className="text-sm">A favourite for the Australian "Boho" fashion scene. Our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised collection</Link> is a top choice for boutique retailers.</p>
               </div>
               <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Vibrant Meenakari Enamel Art</h3>
-                <p className="text-sm">The bright, hand-painted colors of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari jewellery</Link> appeal to the colorful, creative side of the Australian fashion community, especially during the festive spring racing season.</p>
+                <h3 className="font-bold text-primary mb-2">4. Gold-Plated Statement Pieces</h3>
+                <p className="text-sm">Timeless designs that replicate the 22K gold look, perfect for ethnic festivals and milestone celebrations across Australia.</p>
               </div>
             </div>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Importing to Australia: GST, Customs Duties and the $1000 Threshold
+              Our B2B Export Process for Australia
             </h2>
             <p className="mb-4">
-              Importing from India to Australia is highly efficient if you understand the local regulations managed by the Australian Border Force (ABF).
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Low Value Import Threshold:</strong> Generally, for goods with a customs value of AUD $1,000 or less, there is no duty or GST payable at the border (though GST may be collected by the marketplace if you sell on a platform like Etsy, eBay, or Amazon). This is a huge advantage for small boutiques and online sellers starting their wholesale journey.</li>
-              <li><strong>ABN and GST:</strong> If your order is above $1,000, you will likely need to pay GST and a processing fee. We provide detailed commercial invoices with accurate HS codes to help your customs broker clear the goods quickly.</li>
-              <li><strong>Certificate of Origin:</strong> We provide a Certificate of Origin from Jaipur, India, which can sometimes help in reducing tariffs under certain bilateral trade frameworks and the AI-ECTA (India-Australia Economic Cooperation and Trade Agreement).</li>
-              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Logistics: The Journey from Jaipur to the Land Down Under
-            </h2>
-            <p className="mb-4">
-              Despite the distance, our logistics network makes sourcing from India as easy as ordering from a local Australian distributor. 
+              We make international sourcing as easy as local procurement.
             </p>
             <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Rigorous Quality Check in Jaipur:</strong> Once your order passes our 3-stage quality check, it is securely packed in export-grade cartons by our specialized team.</li>
-              <li><strong>Air Freight Transit:</strong> Your order is flown via major hubs (Singapore or Dubai) and usually reaches Australia’s primary ports (SYD, MEL, BNE, PER) within 3-4 days of leaving Jaipur.</li>
-              <li><strong>Customs Clearance:</strong> Because we use premium couriers like DHL/FedEx, the customs clearance process is handled automatically, often while the plane is still in the air.</li>
-              <li><strong>Final Doorstep Delivery:</strong> The courier delivers directly to your business address in any Australian city, regional town, or even remote outback locations.</li>
+              <li><strong>Direct Sourcing:</strong> Choose from over <Link to="/products" className="text-sky-600 hover:underline">1700+ factory-direct designs</Link>.</li>
+              <li><strong>Rigorous QC:</strong> Every piece is audited for quality, plating, and stone setting in our Jaipur unit.</li>
+              <li><strong>Secure Packaging:</strong> We use industry-leading anti-tarnish and reinforced packaging to ensure safe transit to Australia.</li>
+              <li><strong>Tracked Delivery:</strong> Full tracking provided for every shipment from Jaipur to your Australian address.</li>
             </ol>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              How to Scale Your Australian Jewellery Brand with Gemora Global
+              Custom OEM and Branding for Australian Retailers
             </h2>
             <p className="mb-4">
-              The Australian e-commerce and retail market is highly competitive. To stand out, you need a manufacturing partner that offers exclusivity, speed, and marketing support. 
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Exclusivity through Custom Design:</strong> Use our <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">custom manufacturing services</Link> to create designs that are unique to your Australian brand, giving you a competitive edge in Sydney and Melbourne.</li>
-              <li><strong>Brand Identity & Private Label:</strong> We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link>, allowing you to attach your own branded tags and luxury packaging to our Jaipur-made pieces.</li>
-              <li><strong>Professional Visual Content:</strong> We provide high-resolution professional photography and video assets that you can use on your Australian social media channels (Instagram, TikTok) and website to drive conversions and build brand trust.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: A Successful Gold Coast Boutique
-            </h2>
-            <p className="mb-4">
-              "We’ve been sourcing from Gemora Global for three years now. Their <Link to="/antique-jewellery-wholesale-india" className="text-sky-600 hover:underline">antique and temple styles</Link> are incredibly popular with our customers on the Gold Coast. The shipping is fast, and the anti-tarnish finish is the best we've seen from any Indian supplier. They have helped us grow from a weekend market stall in Burleigh to a full-time online business with national reach." — <em>Sarah T., Australian Retailer</em>
+              Build your own brand in Australia. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link>, including custom tagging and luxury packaging. For larger retailers, we provide exclusive OEM manufacturing for custom designs (MOQ 500+ units).
             </p>
           </section>
 
           <section>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Gateway to Premium Indian Artistry in Australia
+              Client Success Story: Australia
             </h2>
             <p className="mb-4">
-              Gemora Global is more than just a supplier; we are your dedicated manufacturing partner in India. We bring the 500-year-old heritage of Jaipur craftsmanship to the modern Australian fashionista. Our commitment to quality, ethics, and speed makes us the preferred choice for Australian retailers looking to elevate their accessory collections.
+              "Gemora Global has been an exceptional partner for our Sydney boutique. Their attention to detail and the quality of their gold plating is unmatched. Shipping to Australia is always fast and hassle-free." — <em>Anjali R., Sydney Boutique Owner</em>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
+              Conclusion: Your Jaipur Manufacturing Partner for Australia
+            </h2>
+            <p className="mb-4">
+              If you are looking for a professional, reliable <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">imitation jewellery exporter for Australia</Link>, Gemora Global is your trusted choice. We bring the craftsmanship of India to the heart of Australian fashion.
             </p>
             <p className="mb-4">
-              Contact our Australian Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
+              Contact our Australia Export Desk today to request our latest catalogue and wholesale pricing.
             </p>
           </section>
         </div>
       }
-
-
-      faqs={[
-        {
-          q: "How long does shipping from India to Australia take?",
-          a: "DHL Express and FedEx deliver to Sydney, Melbourne, Brisbane, and Perth in 5–8 business days from our Jaipur dispatch. Air freight for bulk orders takes 8–12 days.",
-        },
-        {
-          q: "What is the minimum order quantity for Australian buyers?",
-          a: "Our MOQ is 50 units per design. For mixed assortments, the minimum total shipment is 200 units. This keeps per-unit shipping costs economical for Australian buyers.",
-        },
-        {
-          q: "Do you provide customs documentation for Australian imports?",
-          a: "Yes. All shipments include commercial invoice, packing list, certificate of origin, and HS code classification for smooth Australian Border Force clearance.",
-        },
-        {
-          q: "What jewellery styles sell best in Australia?",
-          a: "Oxidised boho jewellery is very popular in Australian boutiques and markets. Kundan and bridal sets sell well in cities with large South Asian communities — Sydney, Melbourne, Brisbane.",
-        },
-        {
-          q: "Can I get samples before placing a bulk order?",
-          a: "Yes. We can send a sample set for evaluation. Sample costs are charged at wholesale price plus courier cost. Most Australian buyers order a sample set first before placing a bulk order.",
-        },
-      ]}
     />
   );
 }

@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function ImitationJewellerySupplierUsa() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Supplier USA | Wholesale from India — Gemora Global"
-      metaDescription="Best imitation jewellery supplier for USA boutiques. Gemora Global exports wholesale fashion jewellery to USA. MOQ 50 units, anti-tarnish, DHL delivery."
+      title="Wholesale Imitation Jewellery USA | Indian Manufacturer Gemora Global"
+      metaDescription="Premium wholesale imitation jewellery supplier for USA boutiques in NYC, LA, and Houston. Source handcrafted Indian fashion jewellery with DHL shipping and 50 unit MOQ."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-supplier-usa"
-      h1="Imitation Jewellery Supplier USA — Factory Direct from Jaipur, India"
+      h1="Indian Imitation Jewellery Supplier for USA: Wholesale Excellence"
       targetKeyword="imitation-jewellery-supplier-usa"
       heroSubtitle="Gemora Global is the most trusted imitation jewellery supplier for USA boutiques, Amazon sellers, and fashion retailers. Factory-direct from Jaipur with 1700+ designs."
-      hreflangs={[
-        { lang: "en-us", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" },
-        { lang: "en", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },

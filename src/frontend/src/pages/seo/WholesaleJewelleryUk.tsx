@@ -1,20 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function WholesaleJewelleryUk() {
   return (
     <SeoLandingPage
-      title="Wholesale Jewellery UK | Indian Imitation Jewellery Supplier — Gemora Global"
-      metaDescription="Buy wholesale jewellery for UK market from Gemora Global, Jaipur India. 1700+ designs, MOQ 50 units. Gold plated, oxidised, statement jewellery."
+      title="Indian Wholesale Jewellery Supplier UK | Handcrafted in Jaipur"
+      metaDescription="Direct source for wholesale imitation jewellery in London, Birmingham, and Manchester. Gemora Global offers 1700+ designs with DHL delivery to UK boutiques."
       canonical="https://www.gemoraglobal.co/wholesale-jewellery-uk"
-      h1="Wholesale Jewellery UK — Direct from India's Top Manufacturer"
+      h1="Bespoke Indian Wholesale Jewellery for the UK Market"
       targetKeyword="wholesale-jewellery-uk"
       heroSubtitle="Gemora Global supplies wholesale jewellery to UK boutiques and fashion stores. Premium Indian fashion jewellery at factory-direct prices with full export documentation."
-      hreflangs={[
-        { lang: "en-gb", url: "https://www.gemoraglobal.co/wholesale-jewellery-uk" },
-        { lang: "en", url: "https://www.gemoraglobal.co/wholesale-jewellery-uk" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/wholesale-jewellery-uk" },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },

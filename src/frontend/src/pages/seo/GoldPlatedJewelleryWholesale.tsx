@@ -9,13 +9,7 @@ export default function GoldPlatedJewelleryWholesale() {
       h1="Gold Plated Jewellery Wholesale — Direct from Jaipur, India"
       targetKeyword="gold plated jewellery wholesale india"
       heroSubtitle="Gemora Global manufactures premium anti-tarnish gold plated jewellery for wholesale buyers worldwide. 500+ designs in 1-micron and 2-micron gold plating, factory-direct pricing, MOQ 50 units. Trusted by 500+ boutiques across USA, UK, UAE, and Australia."
-      hreflangs={[
-        { lang: "en", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
-        { lang: "en-us", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
-        { lang: "en-gb", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
-        { lang: "en-ae", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/gold-plated-jewellery-wholesale-india" },
-      ]}
+
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },

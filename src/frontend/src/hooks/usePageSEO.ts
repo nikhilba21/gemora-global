@@ -453,21 +453,56 @@ export function usePageSEO(options: PageSEOOptions) {
 
     // Hreflang alternate links
     const injectedHreflangs: HTMLLinkElement[] = [];
-    if (hreflangs && hreflangs.length > 0) {
-      for (const el of document.querySelectorAll(
-        "link[rel='alternate'][hreflang]",
-      )) {
-        el.remove();
-      }
-      for (const { lang, url } of hreflangs) {
-        const link = document.createElement("link");
-        link.rel = "alternate";
-        link.setAttribute("hreflang", lang);
-        link.href = url;
-        document.head.appendChild(link);
-        injectedHreflangs.push(link);
+
+    // 1. Start with provided hreflangs or empty array
+    const cluster = [...(hreflangs || [])];
+
+    // 2. Automatically add self-reference if not already present
+    // We use 'en' as default or look for an existing lang for the current canonical
+    const hasSelf = cluster.some(h => h.url === canonical);
+    if (!hasSelf) {
+      // If the page is a specific regional one, we might already have its lang.
+      // But adding a general 'en' or 'x-default' for every page is safe.
+      // If cluster is empty, this page is standalone.
+      if (cluster.length === 0) {
+        cluster.push({ lang: "en", url: canonical });
+        cluster.push({ lang: "x-default", url: canonical });
+      } else {
+        // Part of a cluster but missing self-reference
+        cluster.push({ lang: "en", url: canonical });
       }
     }
+
+    // 3. Clear existing alternates
+    for (const el of document.querySelectorAll(
+      "link[rel='alternate'][hreflang]",
+    )) {
+      el.remove();
+    }
+
+    // 4. Inject unique hreflangs and sync HTML lang
+    const seenLangs = new Set<string>();
+    let pageLang = "en"; // Default
+
+    for (const { lang, url } of cluster) {
+      if (seenLangs.has(lang)) continue;
+      seenLangs.add(lang);
+
+      // If this entry is for the current page, use its lang for the HTML tag
+      if (url === canonical) {
+        pageLang = lang.split("-")[0];
+      }
+
+      const link = document.createElement("link");
+      link.rel = "alternate";
+      link.setAttribute("hreflang", lang);
+      link.href = url;
+      document.head.appendChild(link);
+      injectedHreflangs.push(link);
+    }
+
+    // Sync <html> lang attribute
+    document.documentElement.lang = pageLang;
 
     return () => {
       document.title = prevTitle;

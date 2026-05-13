@@ -54,10 +54,7 @@ const MANUFACTURER_EXPORTER = [
 
 const EXPORT_COUNTRIES = [
   { label: "Imitation Jewellery Supplier USA", to: "/imitation-jewellery-supplier-usa" },
-  { label: "Jewellery Exporter to USA", to: "/jewellery-exporter-to-usa" },
-  { label: "Jewellery Supplier UK", to: "/jewellery-supplier-uk" },
   { label: "Wholesale Jewellery UK", to: "/wholesale-jewellery-uk" },
-  { label: "Costume Jewellery Wholesale UK", to: "/costume-jewellery-wholesale-uk" },
   { label: "Jewellery Exporter UAE", to: "/jewellery-exporter-uae" },
   { label: "Jewellery Exporter Australia", to: "/jewellery-exporter-australia" },
   { label: "Jewellery Exporter Canada", to: "/jewellery-exporter-canada" },
@@ -76,7 +73,7 @@ const COMPANY_LINKS = [
   { label: "Design Gallery", to: "/gallery" },
   { label: "Product Catalogues", to: "/catalogues" },
   { label: "Wholesale & Export", to: "/wholesale" },
-  { label: "Global Export Markets", to: "/export" },
+  { label: "Global Export Markets", to: "/global-markets" },
   { label: "Jewellery Blog", to: "/blog" },
   { label: "Contact Us", to: "/contact" },
 ];

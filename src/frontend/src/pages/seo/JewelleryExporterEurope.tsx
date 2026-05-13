@@ -1,37 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function JewelleryExporterEurope() {
   return (
     <SeoLandingPage
-      title="Indian Jewellery Exporter Europe | Wholesale Imitation Jewellery"
-      metaDescription="Trusted Indian jewellery exporter to Europe (Germany, France, Netherlands). Wholesale imitation jewellery for European boutiques. REACH compliant, full export documentation."
+      title="Indian Jewellery Wholesale Europe | REACH Compliant Exporter"
+      metaDescription="Premier Indian imitation jewellery exporter to Germany, Spain, and the Netherlands. We supply REACH-compliant wholesale jewellery to EU boutiques with 5-day delivery."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-europe"
-      h1="Indian Jewellery Exporter to Europe | Wholesale"
+      h1="B2B Indian Jewellery Wholesale for the European Union"
       targetKeyword="imitation jewellery exporter europe"
       heroSubtitle="Gemora Global exports REACH-compliant Indian imitation jewellery wholesale to European boutiques in Germany, France, Netherlands, and beyond. Factory-direct pricing from Jaipur — DHL delivery in 5–8 days, MOQ from 50 units."
-      hreflangs={[
-        {
-          lang: "en",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
-        },
-        {
-          lang: "de",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
-        },
-        {
-          lang: "en-US",
-          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
-        },
-        {
-          lang: "en-GB",
-          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-europe",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

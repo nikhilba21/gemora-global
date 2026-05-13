@@ -1,33 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function JewelleryExporterSingapore() {
   return (
     <SeoLandingPage
-      title="Indian Jewellery Exporter Singapore | Wholesale Imitation Jewellery"
-      metaDescription="Trusted Indian jewellery exporter to Singapore. Wholesale imitation jewellery for Singapore boutiques. MOQ 50 units, fast air freight, full export documentation."
+      title="Indian Jewellery Wholesale Singapore | Supplier for Serangoon & Orchard"
+      metaDescription="Premium Indian imitation jewellery exporter to Singapore boutiques in Serangoon Road and Orchard. Handcrafted ethnic collections with fast air freight and 50 unit MOQ."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-singapore"
-      h1="Indian Jewellery Exporter to Singapore | Wholesale"
+      h1="Indian Fashion Jewellery Wholesale for Singapore Markets"
       targetKeyword="imitation jewellery exporter singapore"
       heroSubtitle="Gemora Global exports premium Indian imitation jewellery wholesale to Singapore boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — fast air freight in 4–6 days, MOQ from 50 units, complete export documentation."
-      hreflangs={[
-        {
-          lang: "en-SG",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
-        },
-        {
-          lang: "en-US",
-          url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa",
-        },
-        {
-          lang: "en-GB",
-          url: "https://www.gemoraglobal.co/jewellery-supplier-uk",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

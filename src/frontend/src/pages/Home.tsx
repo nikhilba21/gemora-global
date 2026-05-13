@@ -711,7 +711,7 @@ export default function Home() {
       {/* ── SEO Body Copy ─────────────────────────────────────── */}
       <section className="container py-10 md:py-14 px-4 md:px-6">
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-center">
-          Handcrafted Jewellery, Global Reach
+          Handcrafted Indian Jewellery, Global Wholesale Reach
         </h2>
         <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed text-center text-sm md:text-base">
           <p>
@@ -751,7 +751,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-              Our Jewellery Categories
+              Premium Wholesale Categories
             </h2>
             <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
               Factory-direct wholesale imitation jewellery across 6 core
@@ -850,7 +850,7 @@ export default function Home() {
       <section className="container py-10 md:py-14 px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-5">
-            Why Choose Gemora Global?
+            Jaipur's Trusted Manufacturing Excellence
           </h2>
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
             Gemora Global is Jaipur's trusted factory-direct{" "}
@@ -926,7 +926,7 @@ export default function Home() {
       <section className="bg-card border-y border-border py-8 md:py-10">
         <div className="container px-4 md:px-6">
           <h2 className="font-serif text-xl md:text-2xl font-bold text-center mb-6 md:mb-8">
-            At a Glance
+            Fast Facts & Service Standards
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 max-w-4xl mx-auto">
             {[
@@ -1110,7 +1110,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="text-center mb-6 md:mb-8">
             <h2 className="font-serif text-xl md:text-3xl font-bold mb-2 md:mb-3">
-              Countries We Serve
+              International Delivery Network
             </h2>
             <p className="text-muted-foreground text-sm md:text-base">
               Supplying premium{" "}
@@ -1202,7 +1202,7 @@ export default function Home() {
           <h2
             className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${whyReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            Why Choose Gemora Global
+            Why Boutique Owners Choose Us
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
             The preferred{" "}
@@ -1275,7 +1275,10 @@ export default function Home() {
                 to={market.link}
                 className="group relative bg-background border border-border/50 p-4 md:p-6 rounded-xl hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col items-center text-center overflow-hidden"
               >
-                <div className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div 
+                  className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300"
+                  aria-hidden="true"
+                >
                   {market.icon}
                 </div>
                 <h3 className="font-semibold text-sm md:text-base group-hover:text-primary transition-colors">
@@ -1308,7 +1311,7 @@ export default function Home() {
             <h2
               className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${testimonialsReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
             >
-              What Buyers Say
+              Wholesale Buyer Experiences
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

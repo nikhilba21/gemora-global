@@ -1,33 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function JewelleryExporterSaudiArabia() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter to Saudi Arabia | Wholesale Jewellery Supplier KSA | Gemora Global"
-      metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Saudi Arabia. Wholesale gold-plated, Kundan, Bridal jewellery for Riyadh & Jeddah boutiques. MOQ 50 units, GCC export docs, DHL to KSA in 7–10 days."
+      title="Jewellery Exporter to Saudi Arabia | Indian Wholesale Supplier KSA"
+      metaDescription="Premium Indian imitation jewellery exporter for Riyadh, Jeddah, and Dammam. Source handcrafted gold-plated and Bridal jewellery for KSA boutiques with GCC export documentation."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia"
-      h1="Imitation Jewellery Exporter to Saudi Arabia | Wholesale Jewellery Supplier KSA"
+      h1="Indian Fashion Jewellery Wholesale for Saudi Arabian Markets"
       targetKeyword="imitation jewellery exporter Saudi Arabia wholesale KSA"
       heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to Saudi Arabia boutiques, Riyadh mall retailers, and Jeddah wholesale traders. Factory-direct pricing, MOQ from 50 units, full GCC export documentation, and DHL delivery to KSA in 7–10 days."
-      hreflangs={[
-        {
-          lang: "ar-SA",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
-        },
-        {
-          lang: "ar-AE",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
-        },
-        {
-          lang: "ar-KW",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

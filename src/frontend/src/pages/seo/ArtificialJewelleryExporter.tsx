@@ -5,7 +5,7 @@ export default function ArtificialJewelleryExporter() {
   return (
     <SeoLandingPage
       title="Artificial Jewellery Exporter India | Gemora Global"
-      metaDescription="Trusted artificial jewellery exporter from India. Wholesale imitation necklaces, earrings & bridal sets. Factory-direct pricing, MOQ 50 units, global shipping."
+      metaDescription="Global artificial jewellery exporter from India. Bulk imitation necklaces, earrings, and bridal sets for boutiques worldwide. Factory pricing, MOQ 50, DHL shipping."
       canonical="https://www.gemoraglobal.co/artificial-jewellery-exporter"
       h1="Artificial Jewellery Exporter India | Factory Direct"
       targetKeyword="artificial jewellery exporter"

@@ -9,11 +9,7 @@ export default function CostumeJewelleryWholesaleUK() {
       h1="Costume Jewellery Wholesale UK — Indian Supplier, Direct Prices"
       targetKeyword="costume jewellery wholesale uk"
       heroSubtitle="Gemora Global supplies premium Indian costume jewellery to UK boutiques, fashion retailers, and online stores. 500+ designs, anti-tarnish gold plated and oxidised collections, MOQ 50 units. DHL delivery to UK in 5–8 business days."
-      hreflangs={[
-        { lang: "en-gb", url: "https://www.gemoraglobal.co/costume-jewellery-wholesale-uk" },
-        { lang: "en", url: "https://www.gemoraglobal.co/costume-jewellery-wholesale-uk" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/costume-jewellery-wholesale-uk" },
-      ]}
+
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },

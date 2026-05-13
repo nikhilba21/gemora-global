@@ -1,29 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function JewelleryExporterKuwait() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter to Kuwait | Wholesale Fashion Jewellery Supplier | Gemora Global"
-      metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Kuwait. Wholesale Kundan, American Diamond, Gold Plated jewellery for Kuwait boutiques and souk traders. MOQ 50 units, DHL delivery 7–10 days, Arabic/English support."
+      title="Jewellery Exporter to Kuwait | Indian Wholesale Fashion Supplier"
+      metaDescription="Premium Indian imitation jewellery exporter for Kuwait City and GCC markets. Source handcrafted Kundan and AD jewellery for Kuwaiti boutiques with DHL delivery."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-kuwait"
-      h1="Imitation Jewellery Exporter to Kuwait | Wholesale Fashion Jewellery Supplier"
+      h1="Indian Fashion Jewellery Wholesale for Kuwaiti Markets"
       targetKeyword="imitation jewellery exporter Kuwait wholesale"
       heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to Kuwait City boutiques, souk traders, and Gulf fashion retailers. Factory-direct pricing, MOQ from 50 units, full GCC export documentation, and DHL delivery to Kuwait in 7–10 days."
-      hreflangs={[
-        {
-          lang: "ar-KW",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
-        },
-        {
-          lang: "en-AE",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-uae",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-kuwait",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
@@ -130,7 +118,7 @@ export default function JewelleryExporterKuwait() {
                 <p className="text-sm">For the modern Kuwaiti woman, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> offers a "Fine Jewellery" look that is perfect for daily luxury and social events.</p>
               </div>
               <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Artisan Meenakari (Enamel Art)</h3>
+                <h3 className="font-bold text-primary mb-2">3. Artisan Enamel (Meenakari)</h3>
                 <p className="text-sm">The vibrant colors of Jaipur’s <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> are highly sought after by boutique owners in The Avenues looking for unique, colorful "statement" pieces.</p>
               </div>
               <div className="p-4 border border-border rounded-lg">
@@ -206,7 +194,6 @@ export default function JewelleryExporterKuwait() {
           </section>
         </div>
       }
-
     />
   );
 }

@@ -1,33 +1,17 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function JewelleryExporterSriLanka() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter to Sri Lanka | Wholesale Indian Jewellery Supplier | Gemora Global"
-      metaDescription="Gemora Global — India's trusted imitation jewellery exporter to Sri Lanka. Wholesale bridal sets, Temple jewellery & Indian fashion jewellery for Colombo retailers. MOQ 50 units, proximity advantage, competitive pricing vs local suppliers."
+      title="Jewellery Exporter to Sri Lanka | Indian Wholesale Supplier Colombo"
+      metaDescription="Premium Indian imitation jewellery exporter for Colombo and Kandy markets. Source handcrafted bridal and Temple jewellery for Sri Lankan boutiques with fast delivery."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-sri-lanka"
-      h1="Imitation Jewellery Exporter to Sri Lanka | Wholesale Indian Jewellery Supplier"
+      h1="Indian Traditional Jewellery Wholesale for Sri Lankan Markets"
       targetKeyword="imitation jewellery exporter Sri Lanka wholesale"
       heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur directly to Sri Lankan retailers, Colombo boutiques, and South Indian-influenced wedding market suppliers. Proximity advantage for fast delivery, MOQ from 50 units, comprehensive bridal and Temple jewellery collections."
-      hreflangs={[
-        {
-          lang: "si-LK",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
-        },
-        {
-          lang: "ta-LK",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
-        },
-        {
-          lang: "en-SG",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
-        },
-        {
-          lang: "x-default",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-sri-lanka",
-        },
-      ]}
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {

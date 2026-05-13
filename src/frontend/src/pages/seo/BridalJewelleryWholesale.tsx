@@ -6,7 +6,7 @@ export default function BridalJewelleryWholesale() {
   return (
     <SeoLandingPage
       title="Bridal Jewellery Wholesale Supplier India | Gemora"
-      metaDescription="Wholesale bridal jewellery sets from India. Kundan, polki, zircon bridal sets for boutiques, wedding markets. MOQ-friendly pricing, global export."
+      metaDescription="Complete wholesale bridal jewellery sets from India. Source premium Kundan, Polki, and Zircon bridal sets for wedding boutiques. Factory-direct pricing, custom colours, global shipping."
       canonical="https://www.gemoraglobal.co/bridal-jewellery-wholesale"
       h1="Bridal Jewellery Wholesale — Complete Sets from India"
       targetKeyword="bridal imitation jewellery wholesale"

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 const markets = [
   {
@@ -73,6 +74,7 @@ export default function ExportMarkets() {
     description:
       "Gemora Global exports imitation jewellery to UAE, France, USA, UK, Germany, Canada, Australia & Singapore. Market-specific wholesale designs, export docs & reliable shipping.",
     canonical: "https://www.gemoraglobal.co/global-markets",
+    hreflangs: EXPORT_HREFLANG_CLUSTER,
     ogTitle:
       "Imitation Jewellery Export UAE France USA UK | Gemora Global India",
     ogDescription:

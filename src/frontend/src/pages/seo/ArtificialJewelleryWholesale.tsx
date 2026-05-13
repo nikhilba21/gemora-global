@@ -9,14 +9,7 @@ export default function ArtificialJewelleryWholesale() {
       h1="Artificial Jewellery Wholesale — India's Top Manufacturer & Exporter"
       targetKeyword="artificial jewellery wholesale"
       heroSubtitle="Gemora Global is India's top artificial jewellery wholesale manufacturer. 1700+ designs, factory-direct pricing, anti-tarnish gold & rhodium plating. MOQ 50 units. Trusted by 500+ retailers in USA, UK, UAE, and 30 other countries. Est. 2011."
-      hreflangs={[
-        { lang: "en", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-        { lang: "en-us", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-        { lang: "en-gb", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-        { lang: "en-ae", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-        { lang: "en-au", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
-      ]}
+
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },

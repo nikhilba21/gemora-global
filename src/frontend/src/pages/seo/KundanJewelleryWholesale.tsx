@@ -7,7 +7,7 @@ export default function KundanJewelleryWholesale() {
   return (
     <SeoLandingPage
       title="Kundan Jewellery Wholesale India | Gemora Global"
-      metaDescription="Buy kundan jewellery wholesale from Jaipur, India. Bulk kundan necklace sets, earrings & bridal sets. Low MOQ, worldwide export."
+      metaDescription="Premium Kundan jewellery wholesale from Jaipur. Source bulk kundan necklace sets, jhumkas, and bridal sets directly from Gemora Global factory. Low MOQ & global export."
       canonical="https://www.gemoraglobal.co/kundan-jewellery-wholesale"
       h1="Kundan Jewellery Wholesale Supplier India"
       targetKeyword="kundan jewellery wholesale"

@@ -211,7 +211,7 @@ export default function ProductDetail() {
                     className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${i === activeImg ? "border-primary shadow-md" : "border-border hover:border-primary/50"}`}
                     aria-label={`View image ${i + 1}`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
+                    <img src={img} alt={`Thumbnail ${i + 1} for ${product.name}`} className="w-full h-full object-cover" loading="lazy" />
                   </button>
                 ))}
               </div>

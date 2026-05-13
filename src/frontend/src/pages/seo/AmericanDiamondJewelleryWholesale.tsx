@@ -9,13 +9,7 @@ export default function AmericanDiamondJewelleryWholesale() {
       h1="American Diamond Jewellery Wholesale — Factory Direct from Jaipur, India"
       targetKeyword="american diamond jewellery wholesale"
       heroSubtitle="Gemora Global is India's leading wholesale supplier of American diamond (CZ stone) jewellery. Factory-direct pricing, 200+ American diamond designs, anti-tarnish gold & rhodium plating, MOQ 50 units. Trusted by 500+ boutiques and distributors across USA, UK, UAE."
-      hreflangs={[
-        { lang: "en", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
-        { lang: "en-us", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
-        { lang: "en-gb", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
-        { lang: "en-ae", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/american-diamond-jewellery-wholesale" },
-      ]}
+
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },

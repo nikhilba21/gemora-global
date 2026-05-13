@@ -9,10 +9,7 @@ export default function AntiqueJewelleryWholesale() {
       h1="Antique Jewellery Wholesale India — Oxidised & Traditional Designs"
       targetKeyword="antique jewellery wholesale india"
       heroSubtitle="Premium antique and oxidised jewellery wholesale from Jaipur, India. Traditional Indian designs with modern appeal — temple jewellery, tribal designs, German silver, and oxidised collections. MOQ 50 units. Exported to 30+ countries."
-      hreflangs={[
-        { lang: "en", url: "https://www.gemoraglobal.co/antique-jewellery-wholesale-india" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/antique-jewellery-wholesale-india" },
-      ]}
+
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },
