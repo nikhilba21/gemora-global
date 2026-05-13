@@ -94,7 +94,7 @@ export default function ProductDetail() {
 
   usePageSEO({
     title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Wholesale Imitation Jewellery | Gemora Global",
-    description: product ? `${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.` : "Gemora Global wholesale imitation jewellery.",
+    description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "Gemora Global wholesale imitation jewellery.",
     canonical: product ? `https://www.gemoraglobal.co/products/item/${product.id}` : undefined,
     ogImage: product?.imageUrls?.[0],
     product: product as any,
