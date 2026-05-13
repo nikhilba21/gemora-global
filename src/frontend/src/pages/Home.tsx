@@ -708,43 +708,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SEO Body Copy ─────────────────────────────────────── */}
-      <section className="container py-10 md:py-14 px-4 md:px-6">
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-center">
-          Handcrafted Indian Jewellery, Global Wholesale Reach
-        </h2>
-        <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed text-center text-sm md:text-base">
-          <p>
-            Gemora Global is a Jaipur-based{" "}
-            <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
-              imitation jewellery manufacturer and exporter
-            </Link>
-            , established in 2011 with 10+ years of global export experience. We
-            supply premium handcrafted designs to wholesalers, boutiques, and
-            distributors across more than 30 countries. Based in{" "}
-            <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-primary hover:underline">
-              <strong>Jaipur, Rajasthan</strong>
-            </Link>{" "}
-            — India's jewellery manufacturing
-            capital — we combine traditional Indian craftsmanship with modern
-            anti-tarnish finishing techniques.
-          </p>
-          <p>
-            Our{" "}
-            <Link to="/products" className="text-primary hover:underline">
-              collections
-            </Link>{" "}
-            span necklaces, earrings, bangles, bracelets, rings, maang tikkas,
-            and complete bridal jewellery sets. With over 10 years of export
-            experience and a catalogue of 500+ seasonal designs, Gemora Global
-            makes it easy for overseas buyers to source at competitive{" "}
-            <Link to="/wholesale" className="text-primary hover:underline">
-              wholesale prices
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
 
       {/* ── Product Categories SEO Section ───────────────────── */}
       <section className="bg-muted/20 border-y border-border py-10 md:py-16 px-4 md:px-6">
