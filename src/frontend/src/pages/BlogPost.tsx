@@ -49,16 +49,20 @@ export default function BlogPostPage() {
   const { data: post, isLoading: isPostLoading } = useQuery({
     queryKey: ["blogPost", slug],
     queryFn: async () => {
-      // 1. Try backend API first (if enabled/needed)
+      // 1. Try backend API first
       try {
         const backendResult = await api.getBlogPost(slug);
-        if (backendResult) return backendResult as BlogPost;
+        // Only return if it has content (indicates a successful fetch)
+        if (backendResult && (backendResult as BlogPost).content) {
+          return backendResult as BlogPost;
+        }
       } catch (e) {
         console.warn("Backend blog fetch failed, falling back to service", e);
       }
 
-      // 2. Fallback to BlogService (handles static and JSON)
-      return await blogService.getPostBySlugAsync(slug);
+      // 2. Fallback to BlogService (handles static batches)
+      const serviceResult = await blogService.getPostBySlugAsync(slug);
+      return serviceResult;
     },
     enabled: !!slug,
   });

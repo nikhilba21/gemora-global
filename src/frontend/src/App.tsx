@@ -175,6 +175,17 @@ function VisitTracker() {
     return () => clearTimeout(timer);
   }, [location]);
 
+  // Title Protector: Prevent Tawk.to from overriding SEO title with "1 new message"
+  useEffect(() => {
+    const originalTitle = document.title;
+    const interval = setInterval(() => {
+      if (document.title.includes("new message") || document.title.includes("Tawk.to")) {
+        document.title = originalTitle;
+      }
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [location]);
+
   return null;
 }
 
