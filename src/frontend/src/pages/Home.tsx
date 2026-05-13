@@ -710,7 +710,7 @@ export default function Home() {
 
 
       {/* ── Product Categories SEO Section ───────────────────── */}
-      <section className="bg-muted/20 border-y border-border py-10 md:py-16 px-4 md:px-6">
+      <section className="bg-muted/20 border-y border-border py-10 md:py-16 px-4 md:px-6" style={{ contentVisibility: "auto", containIntrinsicSize: "auto 800px" }}>
         <div className="container">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3">

@@ -36,9 +36,14 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
 
+    <!-- Preload LCP Image for Performance -->
+    <link rel="preload" href="/assets/generated/hero-jewellery-banner.dim_1600x700.jpg" as="image" fetchpriority="high" />
+
     <!-- Google Fonts — replacing corrupt local WOFF2 files -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Google Analytics -->
@@ -255,17 +260,18 @@
         }
       })();
     </script>
-    <!--Start of Tawk.to Script-->
+    <!--Start of Tawk.to Script (Deferred for Performance)-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/69df85ee3937ef1c2e296a9b/1jm8i6b6f';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    // Delay Tawk.to loading by 4 seconds to improve PageSpeed and TTI
+    setTimeout(function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/69df85ee3937ef1c2e296a9b/1jm8i6b6f';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    }, 4000);
     </script>
     <!--End of Tawk.to Script-->
   </body>

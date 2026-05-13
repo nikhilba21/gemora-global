@@ -8,6 +8,15 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: false,
     minify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          query: ['@tanstack/react-query'],
+          ui: ['lucide-react', 'clsx', 'tailwind-merge']
+        }
+      }
+    }
   },
   css: {
     postcss: "./postcss.config.js",
