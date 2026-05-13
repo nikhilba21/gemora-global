@@ -74,6 +74,7 @@ app.use('/api/catalogues',      require('./routes/catalogues'));
 app.use('/api/content',         require('./routes/content'));
 app.use('/api/dashboard',       require('./routes/dashboard'));
 app.use('/api/contacts',        require('./routes/contacts'));
+app.use('/api/email',           require('./routes/email'));
 app.post('/api/visit', (req, res) => res.json({ success: true }));
 
 // ── 404 / Error ───────────────────────────────────────────────────────────────

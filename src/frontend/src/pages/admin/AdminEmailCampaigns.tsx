@@ -133,6 +133,8 @@ export default function AdminEmailCampaigns() {
   const [subject, setSubject] = useState(EMAIL_TEMPLATES[0].subject);
   const [body, setBody] = useState(EMAIL_TEMPLATES[0].body);
   const [copied, setCopied] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
 
   // Load stats once
   useEffect(() => {
@@ -187,6 +189,39 @@ export default function AdminEmailCampaigns() {
     return `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(personalizedBody)}`;
   }
 
+  async function sendResendEmail(recipients: Contact[]) {
+    if (!confirm(`Are you sure you want to send ${recipients.length} personalized email(s) via Resend?`)) return;
+    
+    setSending(true);
+    setStatus(`Sending ${recipients.length} emails...`);
+    
+    try {
+      const res = await fetch(`${API_BASE}/api/email/send`, {
+        method: 'POST',
+        headers: { 
+          'Authorization': `Bearer ${getToken()}`, 
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify({
+          recipients,
+          subject,
+          body
+        })
+      });
+      
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to send emails');
+      
+      setStatus(`Success! ${data.results.success} sent, ${data.results.failed} failed.`);
+      setTimeout(() => setStatus(null), 5000);
+    } catch (err: any) {
+      alert(err.message);
+      setStatus(`Error: ${err.message}`);
+    } finally {
+      setSending(false);
+    }
+  }
+
   function copyTemplate() {
     navigator.clipboard.writeText(`Subject: ${subject}\n\n${body}`);
     setCopied(true);
@@ -211,9 +246,14 @@ export default function AdminEmailCampaigns() {
               <Mail className="w-6 h-6 text-primary" /> Email Campaigns
             </h1>
             <p className="text-sm text-muted-foreground mt-0.5">Manage contacts & send email campaigns</p>
+            {status && (
+              <div className={`text-xs mt-2 p-2 rounded border ${status.includes('Error') ? 'bg-red-50 border-red-200 text-red-600' : 'bg-green-50 border-green-200 text-green-600'}`}>
+                {status}
+              </div>
+            )}
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" onClick={() => exportCSV(countryFilter || undefined)} className="gap-2">
+            <Button variant="outline" onClick={() => exportCSV(countryFilter || undefined)} className="gap-2" disabled={sending}>
               <Download className="w-4 h-4" />
               {countryFilter ? `Export ${countryFilter}` : 'Export All CSV'}
             </Button>
@@ -366,13 +406,21 @@ export default function AdminEmailCampaigns() {
                           <td className="px-3 py-2.5">
                             <span className="text-xs bg-muted px-1.5 py-0.5 rounded whitespace-nowrap">{c.country}</span>
                           </td>
-                          <td className="px-3 py-2.5">
+                          <td className="px-3 py-2.5 flex gap-1">
                             <a
                               href={getMailtoLink(c)}
-                              className="inline-flex items-center gap-1 text-xs bg-primary/10 text-primary px-2 py-1 rounded hover:bg-primary/20 transition-colors whitespace-nowrap"
+                              className="inline-flex items-center gap-1 text-[10px] bg-muted text-muted-foreground px-2 py-1 rounded hover:bg-muted/80 transition-colors whitespace-nowrap"
+                              title="Open in Mail App"
                             >
-                              <Mail className="w-3 h-3" /> Send Email
+                              <Mail className="w-3 h-3" /> Mailto
                             </a>
+                            <button
+                              onClick={() => sendResendEmail([c])}
+                              disabled={sending || !c.email}
+                              className="inline-flex items-center gap-1 text-[10px] bg-primary text-primary-foreground px-2 py-1 rounded hover:opacity-90 disabled:opacity-50 transition-colors whitespace-nowrap"
+                            >
+                              {sending ? '...' : <><Mail className="w-3 h-3" /> Resend</>}
+                            </button>
                           </td>
                         </tr>
                       ))}
@@ -410,7 +458,7 @@ export default function AdminEmailCampaigns() {
                       className={`w-full text-left px-3 py-3 rounded-lg border text-sm transition-colors ${
                         selectedTemplate.id === t.id
                           ? 'border-primary bg-primary/5 text-primary font-medium'
-                          : 'border-border hover:border-primary/50 hover:bg-muted'
+                          : 'border-border hover:border-primary/50 hover:bg-muted text-slate-700'
                       }`}
                     >
                       {t.name}
@@ -450,7 +498,7 @@ export default function AdminEmailCampaigns() {
                 <Input
                   value={subject}
                   onChange={e => setSubject(e.target.value)}
-                  className="text-sm"
+                  className="text-sm text-slate-900 bg-white"
                   placeholder="Email subject..."
                 />
               </div>
@@ -465,16 +513,23 @@ export default function AdminEmailCampaigns() {
                   value={body}
                   onChange={e => setBody(e.target.value)}
                   rows={24}
-                  className="w-full px-3 py-2 text-sm border rounded-lg bg-background focus:outline-none focus:ring-1 focus:ring-primary font-mono resize-y"
+                  className="w-full px-3 py-2 text-sm border rounded-lg bg-white text-slate-900 focus:outline-none focus:ring-1 focus:ring-primary font-mono resize-y shadow-sm"
                   placeholder="Email body..."
                 />
               </div>
-              <div className="flex gap-2">
-                <Button onClick={copyTemplate} variant="outline" className="gap-2 flex-1">
-                  {copied ? <><CheckCircle className="w-4 h-4 text-green-500" />Copied!</> : <><Copy className="w-4 h-4" />Copy Full Template</>}
+              <div className="flex flex-wrap gap-2">
+                <Button onClick={copyTemplate} variant="outline" className="gap-2 px-4">
+                  {copied ? <><CheckCircle className="w-4 h-4 text-green-500" />Copied!</> : <><Copy className="w-4 h-4" />Copy Template</>}
                 </Button>
-                <Button onClick={openBulkMailto} className="gap-2 flex-1">
-                  <Mail className="w-4 h-4" /> Open in Email Client (50 contacts)
+                <Button onClick={openBulkMailto} variant="outline" className="gap-2 px-4" disabled={sending}>
+                  <Mail className="w-4 h-4" /> Open in Mail App (50)
+                </Button>
+                <Button 
+                  onClick={() => sendResendEmail(contacts.filter(c => c.email).slice(0, 50))} 
+                  className="gap-2 flex-1" 
+                  disabled={sending || contacts.length === 0}
+                >
+                  {sending ? 'Sending...' : <><Mail className="w-4 h-4" /> Send via Resend (50 Batch)</>}
                 </Button>
               </div>
             </div>

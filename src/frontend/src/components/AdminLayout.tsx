@@ -253,8 +253,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
 
       {/* Main content */}
       <main
-        className="flex-1 overflow-auto min-w-0"
-        style={{ background: "#f4f6ff" }}
+        className="flex-1 overflow-auto min-w-0 text-slate-900"
+        style={{ background: "#f4f6ff", color: "#0f172a" }}
       >
         {/* Top bar */}
         <div
