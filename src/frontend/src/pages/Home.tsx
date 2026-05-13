@@ -53,18 +53,18 @@ function useScrollReveal() {
 
 // ── Static data ────────────────────────────────────────────────
 const CATEGORY_IMAGES: Record<string, string> = {
-  Necklaces: "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg",
-  Earrings: "/assets/generated/jewellery-earrings-hd.dim_800x800.jpg",
-  Bracelets: "/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg",
-  Rings: "/assets/generated/jewellery-rings-hd.dim_800x800.jpg",
-  "Bridal Jewellery": "/assets/generated/jewellery-bridal-hd.dim_800x800.jpg",
-  "Minimal Fashion": "/assets/generated/jewellery-minimal-hd.dim_800x800.jpg",
+  Necklaces: "/assets/generated/jewellery-necklace-hd.dim_800x800.webp",
+  Earrings: "/assets/generated/jewellery-earrings-hd.dim_800x800.webp",
+  Bracelets: "/assets/generated/jewellery-bracelets-hd.dim_800x800.webp",
+  Rings: "/assets/generated/jewellery-rings-hd.dim_800x800.webp",
+  "Bridal Jewellery": "/assets/generated/jewellery-bridal-hd.dim_800x800.webp",
+  "Minimal Fashion": "/assets/generated/jewellery-minimal-hd.dim_800x800.webp",
   "Minimal Fashion Jewellery":
-    "/assets/generated/jewellery-minimal-hd.dim_800x800.jpg",
+    "/assets/generated/jewellery-minimal-hd.dim_800x800.webp",
 };
 
 const FALLBACK_IMAGE =
-  "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg";
+  "/assets/generated/jewellery-necklace-hd.dim_800x800.webp";
 
 const SAMPLE_TESTIMONIALS: Testimonial[] = [
   {
@@ -103,7 +103,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description: "Exquisite handcrafted Kundan necklace with matching earrings. Featuring premium stones and 22k gold plating finish.",
     price: 4500,
     category: "Necklaces",
-    imageUrls: ["/assets/generated/jewellery-necklace-hd.dim_800x800.jpg"],
+    imageUrls: ["/assets/generated/jewellery-necklace-hd.dim_800x800.webp"],
     featured: true,
     active: true,
     stock: 100n,
@@ -116,7 +116,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description: "Stunning Meenakari earrings with intricate peacock motifs and pearl drops. Perfect for bridal and festive wear.",
     price: 1200,
     category: "Earrings",
-    imageUrls: ["/assets/generated/jewellery-earrings-hd.dim_800x800.jpg"],
+    imageUrls: ["/assets/generated/jewellery-earrings-hd.dim_800x800.webp"],
     featured: true,
     active: true,
     stock: 200n,
@@ -129,7 +129,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description: "Set of 4 traditional bangles with ruby-red stones and antique finish. A timeless piece of Indian heritage.",
     price: 2800,
     category: "Bracelets",
-    imageUrls: ["/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg"],
+    imageUrls: ["/assets/generated/jewellery-bracelets-hd.dim_800x800.webp"],
     featured: true,
     active: true,
     stock: 150n,
@@ -142,7 +142,7 @@ const SAMPLE_PRODUCTS: Product[] = [
     description: "Elegant AD ring with high-sparkle stones and rhodium plating. Ideal for daily wear and modern outfits.",
     price: 850,
     category: "Rings",
-    imageUrls: ["/assets/generated/jewellery-rings-hd.dim_800x800.jpg"],
+    imageUrls: ["/assets/generated/jewellery-rings-hd.dim_800x800.webp"],
     featured: true,
     active: true,
     stock: 300n,
@@ -451,7 +451,7 @@ export default function Home() {
     return null;
   };
   const heroImageFallback =
-    "/assets/generated/hero-jewellery-banner.dim_1600x700.jpg";
+    "/assets/generated/hero-jewellery-banner.dim_1600x700.webp";
   const heroImage1 = toStr(heroImage1Raw) ?? heroImageFallback;
   const heroImage2 = toStr(heroImage2Raw);
   const heroImage3 = toStr(heroImage3Raw);
@@ -1329,27 +1329,27 @@ export default function Home() {
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5 md:gap-2">
           {[
             {
-              src: "/assets/generated/jewellery-necklace-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-necklace-hd.dim_800x800.webp",
               label: "Gold necklace set by Gemora Global",
             },
             {
-              src: "/assets/generated/jewellery-earrings-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-earrings-hd.dim_800x800.webp",
               label: "Handcrafted earrings collection",
             },
             {
-              src: "/assets/generated/jewellery-bracelets-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-bracelets-hd.dim_800x800.webp",
               label: "Imitation bracelets for export",
             },
             {
-              src: "/assets/generated/jewellery-rings-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-rings-hd.dim_800x800.webp",
               label: "Fashion rings wholesale",
             },
             {
-              src: "/assets/generated/jewellery-bridal-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-bridal-hd.dim_800x800.webp",
               label: "Bridal jewellery set",
             },
             {
-              src: "/assets/generated/jewellery-minimal-hd.dim_800x800.jpg",
+              src: "/assets/generated/jewellery-minimal-hd.dim_800x800.webp",
               label: "Minimal fashion jewellery",
             },
           ].map((item) => (
@@ -1600,14 +1600,14 @@ export default function Home() {
                 excerpt: "Discover the hottest styles dominating international markets, from bold necklaces to ear cuffs.",
                 slug: "top-imitation-jewellery-trends-2026",
                 category: "Trends",
-                image: "/assets/generated/blog-trends-2026.dim_800x500.jpg"
+                image: "/assets/generated/blog-trends-2026.dim_800x500.webp"
               },
               {
                 title: "MOQ Explained for Wholesale Jewellery Buyers",
                 excerpt: "Everything you need to know about Minimum Order Quantities before sourcing from India.",
                 slug: "moq-explained-wholesale-jewellery-buyers",
                 category: "Sourcing",
-                image: "/assets/generated/blog-moq-guide.dim_800x500.jpg"
+                image: "/assets/generated/blog-moq-guide.dim_800x500.webp"
               },
               {
                 title: "Choose the Right Wholesale Supplier from India",
