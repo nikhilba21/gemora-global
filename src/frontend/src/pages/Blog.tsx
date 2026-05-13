@@ -232,6 +232,71 @@ export default function Blog() {
                 Minimum Order Quantity for Jewellery Export
               </a>
             </li>
+            <li>
+              <a href="/blog/how-to-start-imitation-jewellery-export-business">
+                How to Start an Imitation Jewellery Export Business
+              </a>
+            </li>
+            <li>
+              <a href="/blog/export-artificial-jewellery-jaipur-usa">
+                Exporting Artificial Jewellery from Jaipur to the USA
+              </a>
+            </li>
+            <li>
+              <a href="/blog/imitation-jewellery-export-documentation-checklist">
+                Export Documentation Checklist for Suppliers
+              </a>
+            </li>
+            <li>
+              <a href="/blog/find-international-buyers-imitation-jewellery">
+                How to Find International Buyers for Jewellery
+              </a>
+            </li>
+            <li>
+              <a href="/blog/hs-code-customs-duties-imitation-jewellery">
+                HS Codes and Customs Duties Explained
+              </a>
+            </li>
+            <li>
+              <a href="/blog/imitation-jewellery-trends-2025">
+                Top 10 Imitation Jewellery Trends 2025
+              </a>
+            </li>
+            <li>
+              <a href="/blog/artificial-jewellery-demand-usa-europe">
+                Demand for Artificial Jewellery in USA & Europe
+              </a>
+            </li>
+            <li>
+              <a href="/blog/fashion-jewellery-middle-east-rise">
+                The Rise of Fashion Jewellery in the Middle East
+              </a>
+            </li>
+            <li>
+              <a href="/blog/choose-imitation-jewellery-wholesale-supplier-india">
+                Choose the Right Wholesale Supplier from India
+              </a>
+            </li>
+            <li>
+              <a href="/blog/wholesale-kundan-jewellery-jaipur-guide">
+                Wholesale Kundan Jewellery: Ultimate Guide
+              </a>
+            </li>
+            <li>
+              <a href="/blog/oxidized-jewellery-bestseller-boutiques">
+                Why Oxidized Jewellery is a Global Bestseller
+              </a>
+            </li>
+            <li>
+              <a href="/blog/bridal-imitation-jewellery-sets-export">
+                Bridal Imitation Jewellery Sets: Hottest Export
+              </a>
+            </li>
+            <li>
+              <a href="/blog/american-diamond-jewellery-wholesale">
+                American Diamond Jewellery Wholesale Guide
+              </a>
+            </li>
           </ul>
         </div>
       </noscript>

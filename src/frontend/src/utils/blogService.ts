@@ -33,7 +33,7 @@ class BlogService {
    */
   public async loadBatchFromJson(batchId: number): Promise<void> {
     try {
-      const response = await fetch(`/src/data/blogData${batchId}.json`);
+      const response = await fetch(`/data/blogData${batchId}.json`);
       if (!response.ok) throw new Error(`Failed to load batch ${batchId}`);
       const data: BlogPost[] = await response.json();
       

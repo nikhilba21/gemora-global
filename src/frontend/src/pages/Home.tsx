@@ -1600,6 +1600,90 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Industry Insights & Guides (SEO Boost) ────────────── */}
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background overflow-hidden">
+        <div className="container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 md:mb-16">
+            <div className="max-w-2xl">
+              <Badge className="mb-3 bg-primary/10 text-primary border-primary/20 text-xs tracking-widest uppercase">
+                Expert Knowledge
+              </Badge>
+              <h2 className="font-serif text-2xl md:text-4xl font-bold mb-4">
+                Jewellery Export Insights
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Master the art of sourcing and exporting imitation jewellery with our expert guides, market reports, and trend analysis.
+              </p>
+            </div>
+            <Link 
+              to="/blog" 
+              className="text-primary hover:underline font-semibold flex items-center gap-1 text-sm md:text-base"
+            >
+              Browse All Articles <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Wholesale Jewellery Export from India: The Ultimate Guide",
+                excerpt: "A complete roadmap for starting your export business, covering registration, compliance, and buyer outreach.",
+                slug: "wholesale-jewellery-export-india-guide",
+                category: "Master Guide",
+                image: "https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?w=400&q=80"
+              },
+              {
+                title: "Top Imitation Jewellery Trends to Watch in 2026",
+                excerpt: "Discover the hottest styles dominating international markets, from bold necklaces to ear cuffs.",
+                slug: "top-imitation-jewellery-trends-2026",
+                category: "Trends",
+                image: "/assets/generated/blog-trends-2026.dim_800x500.jpg"
+              },
+              {
+                title: "MOQ Explained for Wholesale Jewellery Buyers",
+                excerpt: "Everything you need to know about Minimum Order Quantities before sourcing from India.",
+                slug: "moq-explained-wholesale-jewellery-buyers",
+                category: "Sourcing",
+                image: "/assets/generated/blog-moq-guide.dim_800x500.jpg"
+              },
+              {
+                title: "Choose the Right Wholesale Supplier from India",
+                excerpt: "A buyer's checklist for evaluating manufacturers based on quality, reliability, and export history.",
+                slug: "choose-imitation-jewellery-wholesale-supplier-india",
+                category: "Buyer Guide",
+                image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80"
+              }
+            ].map((post) => (
+              <article key={post.slug} className="group flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300">
+                <Link to={`/blog/${post.slug}`} className="aspect-[16/10] overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </Link>
+                <div className="p-5 flex-grow flex flex-col">
+                  <span className="text-[10px] uppercase tracking-wider text-primary font-bold mb-2">{post.category}</span>
+                  <h3 className="font-bold text-base mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                  </h3>
+                  <p className="text-xs text-muted-foreground line-clamp-3 mb-4 flex-grow">
+                    {post.excerpt}
+                  </p>
+                  <Link 
+                    to={`/blog/${post.slug}`} 
+                    className="text-primary text-xs font-bold flex items-center gap-1 group-hover:underline"
+                  >
+                    Read Guide <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Services Internal Link Hub ────────────────────────── */}
       <section className="py-8 md:py-16 px-4 md:px-6 bg-muted/20 border-t border-border">
         <div className="container mx-auto max-w-5xl">
