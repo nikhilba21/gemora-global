@@ -19,115 +19,115 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "How do I place an order with Gemora Global?",
-        a: \"The easiest way is via WhatsApp (+91 7976341419). Browse our digital catalogue, select designs, and send us your design codes and quantities. We will issue a Proforma Invoice within 24 hours. You can also email us at globalgemora@gmail.com or use the Contact form on our website.\",
+        a: "The easiest way is via WhatsApp (+91 7976341419). Browse our digital catalogue, select designs, and send us your design codes and quantities. We will issue a Proforma Invoice within 24 hours. You can also email us at globalgemora@gmail.com or use the Contact form on our website.",
       },
       {
-        q: \"Can I order a mix of different jewellery categories in one order?\",
-        a: \"Absolutely. You can mix necklace sets, earrings, bangles, bridal sets, and any other category within a single order. Each design requires a minimum of 50 units, but you can combine as many designs as you wish in one shipment.\",
+        q: "Can I order a mix of different jewellery categories in one order?",
+        a: "Absolutely. You can mix necklace sets, earrings, bangles, bridal sets, and any other category within a single order. Each design requires a minimum of 50 units, but you can combine as many designs as you wish in one shipment.",
       },
       {
-        q: \"Do you offer custom or OEM jewellery manufacturing?\",
-        a: \"Yes. Gemora Global offers custom jewellery manufacturing, OEM production, and private label services. Minimum order for custom designs is 500 units per design with a 3–4 week production lead time. You can provide your own design sketches or select from our design library as a starting point.\",
-      },
-    ],
-  },
-  {
-    id: \"products\",
-    title: \"Products \u0026 Quality\",
-    icon: \"💎\",
-    questions: [
-      {
-        q: \"What types of imitation jewellery does Gemora Global manufacture?\",
-        a: \"We manufacture a complete range of Indian imitation and fashion jewellery: necklace sets, earrings (jhumkas, chandbalis, studs, hoops), bangles, bracelets, bridal sets, Kundan jewellery, Meenakari jewellery, Temple jewellery, oxidised jewellery, American Diamond (CZ) jewellery, gold-plated jewellery, Indo-Western jewellery, and more. We stock 500+ active designs refreshed every season.\",
-      },
-      {
-        q: \"What plating finishes do you offer?\",
-        a: \"We offer Gold Plating (22K), Matte Gold Plating, Rhodium Plating, Rose Gold Plating, Oxidised/Antique Plating, Black Plating, Mehndi Plating, 2-Tone Plating, and 3-Tone Plating. All plating uses a multi-layer anti-tarnish coating to ensure durability.\",
-      },
-      {
-        q: \"How long does the anti-tarnish coating last?\",
-        a: \"Our multi-layer anti-tarnish coating typically maintains quality for 12–24 months under normal wear conditions. The coating is designed to be resistant to sweat, humidity, and perfume contact. Pieces should be stored in the pouches provided and kept away from water.\",
-      },
-      {
-        q: \"Are your jewellery pieces nickel-free?\",
-        a: \"We use nickel-free plating processes. For buyers requiring compliance with EU/UK Nickel Directive standards, we can provide material declarations and composition sheets on request. We recommend EU/UK buyers review these materials with their compliance team.\",
-      },
-      {
-        q: \"How is quality controlled at Gemora Global?\",
-        a: \"Each piece undergoes a 3-stage quality control process: post-production inspection, plating quality check, and pre-packaging final inspection. We share photographic QC reports for all bulk orders before dispatch. Any pieces that do not meet our quality standards are rejected and remanufactured.\",
+        q: "Do you offer custom or OEM jewellery manufacturing?",
+        a: "Yes. Gemora Global offers custom jewellery manufacturing, OEM production, and private label services. Minimum order for custom designs is 500 units per design with a 3–4 week production lead time. You can provide your own design sketches or select from our design library as a starting point.",
       },
     ],
   },
   {
-    id: \"shipping\",
-    title: \"Shipping \u0026 Delivery\",
-    icon: \"✈️\",
+    id: "products",
+    title: "Products & Quality",
+    icon: "💎",
     questions: [
       {
-        q: \"Which countries does Gemora Global ship to?\",
-        a: \"We ship wholesale jewellery to 30+ countries including USA, UK, UAE, Saudi Arabia, Kuwait, Australia, Canada, Singapore, Malaysia, Sri Lanka, Nigeria, France, Germany, and across Europe, Southeast Asia, and Africa. Contact us if your country is not listed — we likely ship there too.\",
+        q: "What types of imitation jewellery does Gemora Global manufacture?",
+        a: "We manufacture a complete range of Indian imitation and fashion jewellery: necklace sets, earrings (jhumkas, chandbalis, studs, hoops), bangles, bracelets, bridal sets, Kundan jewellery, Meenakari jewellery, Temple jewellery, oxidised jewellery, American Diamond (CZ) jewellery, gold-plated jewellery, Indo-Western jewellery, and more. We stock 500+ active designs refreshed every season.",
       },
       {
-        q: \"How long does international shipping take?\",
-        a: \"Delivery times vary by destination: USA (7–12 days via DHL), UK (5–8 days), UAE/Kuwait/Saudi Arabia (7–10 days), Australia (8–12 days), Canada (8–12 days), Singapore (3–5 days), Malaysia (4–7 days), Sri Lanka (3–5 days). Economy shipping options are available at lower cost.\",
+        q: "What plating finishes do you offer?",
+        a: "We offer Gold Plating (22K), Matte Gold Plating, Rhodium Plating, Rose Gold Plating, Oxidised/Antique Plating, Black Plating, Mehndi Plating, 2-Tone Plating, and 3-Tone Plating. All plating uses a multi-layer anti-tarnish coating to ensure durability.",
       },
       {
-        q: \"What shipping carriers do you use?\",
-        a: \"We primarily use DHL Express and FedEx International Priority for reliable, trackable global delivery. For economy shipping, we use India Post EMS. All express shipments are fully insured and come with door-to-door tracking.\",
+        q: "How long does the anti-tarnish coating last?",
+        a: "Our multi-layer anti-tarnish coating typically maintains quality for 12–24 months under normal wear conditions. The coating is designed to be resistant to sweat, humidity, and perfume contact. Pieces should be stored in the pouches provided and kept away from water.",
       },
       {
-        q: \"Do you provide export documentation?\",
-        a: \"Yes. All international wholesale shipments include: Commercial Invoice, Packing List, Certificate of Origin, Airway Bill, and GST-compliant export invoice. We can also provide material declarations, HS code documentation, and any country-specific documentation required for customs clearance.\",
+        q: "Are your jewellery pieces nickel-free?",
+        a: "We use nickel-free plating processes. For buyers requiring compliance with EU/UK Nickel Directive standards, we can provide material declarations and composition sheets on request. We recommend EU/UK buyers review these materials with their compliance team.",
       },
       {
-        q: \"Do I need to pay customs duties on jewellery imports from India?\",
-        a: \"Customs duties vary by destination country. Some countries (like GCC states) have minimal duties on jewellery imports from India. Others (like the UK and EU) may levy import duty and VAT/GST. We recommend buyers check applicable customs duties with their local customs agent before ordering. We provide all documentation needed for customs clearance.\",
+        q: "How is quality controlled at Gemora Global?",
+        a: "Each piece undergoes a 3-stage quality control process: post-production inspection, plating quality check, and pre-packaging final inspection. We share photographic QC reports for all bulk orders before dispatch. Any pieces that do not meet our quality standards are rejected and remanufactured.",
       },
     ],
   },
   {
-    id: \"payment\",
-    title: \"Payment \u0026 Pricing\",
-    icon: \"💳\",
+    id: "shipping",
+    title: "Shipping & Delivery",
+    icon: "✈️",
     questions: [
       {
-        q: \"What payment methods does Gemora Global accept?\",
-        a: \"We accept international wire transfer (T/T / SWIFT bank transfer) in USD, GBP, EUR, and AED. For smaller orders, we also accept Western Union and payment apps. Cryptocurrency payments are not accepted. We do not accept credit card payments.\",
+        q: "Which countries does Gemora Global ship to?",
+        a: "We ship wholesale jewellery to 30+ countries including USA, UK, UAE, Saudi Arabia, Kuwait, Australia, Canada, Singapore, Malaysia, Sri Lanka, Nigeria, France, Germany, and across Europe, Southeast Asia, and Africa. Contact us if your country is not listed — we likely ship there too.",
       },
       {
-        q: \"What are your payment terms for new buyers?\",
-        a: \"For new buyers, payment terms are 50% advance at order confirmation and 50% balance before dispatch. Once you have completed 3+ orders without payment issues, you may qualify for 30-day credit terms. For sample orders, 100% advance payment is required.\",
+        q: "How long does international shipping take?",
+        a: "Delivery times vary by destination: USA (7–12 days via DHL), UK (5–8 days), UAE/Kuwait/Saudi Arabia (7–10 days), Australia (8–12 days), Canada (8–12 days), Singapore (3–5 days), Malaysia (4–7 days), Sri Lanka (3–5 days). Economy shipping options are available at lower cost.",
       },
       {
-        q: \"Can I get a price list?\",
-        a: \"Yes. Contact us via WhatsApp (+91 7976341419) or email (globalgemora@gmail.com) to receive our wholesale price list with current pricing. Prices vary by design, material, plating type, and order quantity. We quote in USD for international orders.\",
+        q: "What shipping carriers do you use?",
+        a: "We primarily use DHL Express and FedEx International Priority for reliable, trackable global delivery. For economy shipping, we use India Post EMS. All express shipments are fully insured and come with door-to-door tracking.",
       },
       {
-        q: \"Do you offer volume discounts?\",
-        a: \"Yes. Orders of 200+ units per design receive a 10% discount. Orders of 500+ units per design receive a 20% discount. Orders above 1,000 units per design: contact us for special pricing. Discounts apply to the per-unit wholesale price.\",
+        q: "Do you provide export documentation?",
+        a: "Yes. All international wholesale shipments include: Commercial Invoice, Packing List, Certificate of Origin, Airway Bill, and GST-compliant export invoice. We can also provide material declarations, HS code documentation, and any country-specific documentation required for customs clearance.",
       },
       {
-        q: \"What is your pricing range?\",
-        a: \"Wholesale prices range from USD $1.50 per piece (for basic earrings) to USD $25 per piece (for elaborate bridal sets). Average wholesale price per piece is USD $3–$8. Our factory-direct model gives you 15–30% cost advantage over agent-sourced alternatives.\",
+        q: "Do I need to pay customs duties on jewellery imports from India?",
+        a: "Customs duties vary by destination country. Some countries (like GCC states) have minimal duties on jewellery imports from India. Others (like the UK and EU) may levy import duty and VAT/GST. We recommend buyers check applicable customs duties with their local customs agent before ordering. We provide all documentation needed for customs clearance.",
       },
     ],
   },
   {
-    id: \"returns\",
-    title: \"Returns \u0026 Replacements\",
-    icon: \"🔄\",
+    id: "payment",
+    title: "Payment & Pricing",
+    icon: "💳",
     questions: [
       {
-        q: \"What is your return policy for wholesale orders?\",
-        a: \"We accept returns within 7 days of delivery for items that are: (1) damaged in transit, (2) received with a manufacturing defect, or (3) incorrect items shipped vs. what was ordered. All returns must be reported via email or WhatsApp with photographic evidence within 7 days of receipt.\",
+        q: "What payment methods does Gemora Global accept?",
+        a: "We accept international wire transfer (T/T / SWIFT bank transfer) in USD, GBP, EUR, and AED. For smaller orders, we also accept Western Union and payment apps. Cryptocurrency payments are not accepted. We do not accept credit card payments.",
       },
       {
-        q: \"Can I return jewellery if I change my mind or if it doesn't sell?\",
-        a: \"No. Returns are not accepted for reasons of change of mind, market conditions, or items not matching personal aesthetic preference. Our wholesale policy is designed for B2B buyers — we strongly recommend ordering samples before placing bulk orders.\",
+        q: "What are your payment terms for new buyers?",
+        a: "For new buyers, payment terms are 50% advance at order confirmation and 50% balance before dispatch. Once you have completed 3+ orders without payment issues, you may qualify for 30-day credit terms. For sample orders, 100% advance payment is required.",
       },
       {
-        q: \"What happens if items arrive damaged?\",
-        a: \"If items arrive damaged, email photographic evidence to globalgemora@gmail.com within 7 days of receipt. We will offer a replacement, credit note, or refund at our discretion. All express shipments are insured, and we will process insurance claims on your behalf for transit damage.\",
+        q: "Can I get a price list?",
+        a: "Yes. Contact us via WhatsApp (+91 7976341419) or email (globalgemora@gmail.com) to receive our wholesale price list with current pricing. Prices vary by design, material, plating type, and order quantity. We quote in USD for international orders.",
+      },
+      {
+        q: "Do you offer volume discounts?",
+        a: "Yes. Orders of 200+ units per design receive a 10% discount. Orders of 500+ units per design receive a 20% discount. Orders above 1,000 units per design: contact us for special pricing. Discounts apply to the per-unit wholesale price.",
+      },
+      {
+        q: "What is your pricing range?",
+        a: "Wholesale prices range from USD $1.50 per piece (for basic earrings) to USD $25 per piece (for elaborate bridal sets). Average wholesale price per piece is USD $3–$8. Our factory-direct model gives you 15–30% cost advantage over agent-sourced alternatives.",
+      },
+    ],
+  },
+  {
+    id: "returns",
+    title: "Returns & Replacements",
+    icon: "🔄",
+    questions: [
+      {
+        q: "What is your return policy for wholesale orders?",
+        a: "We accept returns within 7 days of delivery for items that are: (1) damaged in transit, (2) received with a manufacturing defect, or (3) incorrect items shipped vs. what was ordered. All returns must be reported via email or WhatsApp with photographic evidence within 7 days of receipt.",
+      },
+      {
+        q: "Can I return jewellery if I change my mind or if it doesn't sell?",
+        a: "No. Returns are not accepted for reasons of change of mind, market conditions, or items not matching personal aesthetic preference. Our wholesale policy is designed for B2B buyers — we strongly recommend ordering samples before placing bulk orders.",
+      },
+      {
+        q: "What happens if items arrive damaged?",
+        a: "If items arrive damaged, email photographic evidence to globalgemora@gmail.com within 7 days of receipt. We will offer a replacement, credit note, or refund at our discretion. All express shipments are insured, and we will process insurance claims on your behalf for transit damage.",
       },
       {
         q: "How long does a refund take?",
