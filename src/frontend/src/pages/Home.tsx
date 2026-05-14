@@ -29,57 +29,6 @@ function cleanText(text: string): string {
     .trim();
 }
 
-// ── Scroll-reveal hook ─────────────────────────────────────────
-function useScrollReveal() {
-  const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    // Safety fallback: reveal after 1.5s if observer fails
-    const timer = setTimeout(() => setVisible(true), 1500);
-
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          clearTimeout(timer);
-          obs.disconnect();
-        }
-      },
-      { threshold: 0.01, rootMargin: "50px" },
-    );
-    obs.observe(el);
-    return () => {
-      clearTimeout(timer);
-      obs.disconnect();
-    };
-  }, []);
-  return { ref, visible };
-}
-
-// ── Lazy Render Component (Improves TBT) ──────────────────────
-function LazyRender({ children, height = "800px" }: { children: React.ReactNode, height?: string }) {
-  const [shouldRender, setShouldRender] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldRender(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "800px" }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return <div ref={ref}>{shouldRender ? children : <div style={{ minHeight: height }} />}</div>;
-}
 
 // ── Static data ────────────────────────────────────────────────
 const CATEGORY_IMAGES: Record<string, string> = {
@@ -526,20 +475,74 @@ export default function Home() {
     return CATEGORY_IMAGES[cat.name] || FALLBACK_IMAGE;
   };
 
-  // Scroll reveal refs
-  const statsReveal = useScrollReveal();
-  const categoriesReveal = useScrollReveal();
-  const newArrivalsReveal = useScrollReveal();
-  const trendingReveal = useScrollReveal();
-  const trustReveal = useScrollReveal();
-  const whyReveal = useScrollReveal();
-  const testimonialsReveal = useScrollReveal();
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <main id="main-content">
-
+      {/* ── Hero Slider — CLEAN, no text overlay ──────────────── */}
+      <section
+        className="relative overflow-hidden w-full bg-[#0d1130]"
+        style={{
+          height: "clamp(280px, 55vw, 680px)",
+          minHeight: "280px",
+          maxHeight: "680px",
+        }}
+        aria-label="Hero image slider"
+      >
+        {heroImages.map((src, idx) => (
+          <img
+            key={src}
+            src={src}
+            alt={`Gemora Global — slide ${idx + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
+            loading={idx === 0 ? "eager" : "lazy"}
+            fetchPriority={idx === 0 ? "high" : undefined}
+            width={1600}
+            height={900}
+            style={{ display: "block" }}
+          />
+        ))}
+        {/* Very subtle darkening overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{ background: "rgba(0,0,0,0.08)" }}
+          aria-hidden="true"
+        />
+        {heroSlideCount > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={() => setCurrentSlide((p) => (p - 1 + heroSlideCount) % heroSlideCount)}
+              aria-label="Previous slide"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => setCurrentSlide((p) => (p + 1) % heroSlideCount)}
+              aria-label="Next slide"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2.5">
+              {heroImages.map((src, idx) => (
+                <button
+                  key={src}
+                  type="button"
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`rounded-full transition-all duration-300 ${idx === currentSlide ? "w-3.5 h-3.5 bg-white" : "w-3 h-3 bg-white/50 hover:bg-white/75"}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       {/* ── Business Positioning — below hero ────── */}
