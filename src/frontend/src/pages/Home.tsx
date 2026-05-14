@@ -533,6 +533,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
+      <main id="main-content">
 
       {/* ── Hero Slider — CLEAN, no text overlay ──────────────── */}
       <section
@@ -1309,6 +1310,7 @@ export default function Home() {
                 <CardContent className="p-4 md:p-6">
                   <div
                     className="flex gap-1 mb-3"
+                    role="img"
                     aria-label={`${Number(t.rating)} out of 5 stars`}
                   >
                     {Array.from({ length: Number(t.rating) }, (_, n) => n).map(
@@ -1737,9 +1739,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </LazyRender>
+      </main>
 
       <Footer />
+      </LazyRender>
 
       {/* ── Modals ─────────────────────────────────────────────── */}
       <QuickViewModal

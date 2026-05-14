@@ -224,6 +224,7 @@ export default function SeoLandingPage({
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
+      <main id="main-content">
 
       {/* Hero */}
       <section className="pt-24 sm:pt-28 pb-10 sm:pb-16 px-4 bg-gradient-to-b from-blue-50 to-background border-b border-blue-700/20">
@@ -510,6 +511,7 @@ export default function SeoLandingPage({
                 <CardContent className="p-5 sm:p-6">
                   <div
                     className="flex gap-1 mb-3"
+                    role="img"
                     aria-label={`${Number(t.rating)} out of 5 stars`}
                   >
                     {Array.from({ length: Number(t.rating) }, (_, n) => n).map(
@@ -717,6 +719,7 @@ export default function SeoLandingPage({
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

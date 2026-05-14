@@ -489,7 +489,7 @@ export function usePageSEO(options: PageSEOOptions) {
       seenLangs.add(lang);
 
       // If this entry is for the current page, use its lang for the HTML tag
-      if (url === canonical) {
+      if (url === canonical && lang !== "x-default") {
         pageLang = lang.split("-")[0];
       }
 

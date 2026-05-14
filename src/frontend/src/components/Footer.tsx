@@ -111,12 +111,14 @@ function FooterLink({ label, to }: { label: string; to: string }) {
 
 function FooterColTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h4
+    <div
+      role="heading"
+      aria-level={2}
       className="font-semibold text-sm uppercase tracking-wider mb-3 sm:mb-4"
       style={{ color: "#D4AF37" }}
     >
       {children}
-    </h4>
+    </div>
   );
 }
 
@@ -234,10 +236,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"
-                className="flex items-center gap-2 text-sm font-medium px-3 py-2 min-h-[44px] rounded-lg transition-colors"
+                className="flex items-center gap-2 text-sm font-medium px-3 py-2 min-h-[44px] rounded-lg transition-colors text-white"
                 style={{
-                  background: "rgba(37,211,102,0.15)",
-                  color: "#25d366",
+                  background: "rgba(37,211,102,0.8)",
                 }}
               >
                 <WhatsAppIcon />
@@ -248,10 +249,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow on Instagram"
-                className="flex items-center gap-2 text-sm font-medium px-3 py-2 min-h-[44px] rounded-lg transition-colors"
+                className="flex items-center gap-2 text-sm font-medium px-3 py-2 min-h-[44px] rounded-lg transition-colors text-white"
                 style={{
-                  background: "rgba(225,48,108,0.15)",
-                  color: "#e1306c",
+                  background: "rgba(225,48,108,0.8)",
                 }}
               >
                 <InstagramIcon />

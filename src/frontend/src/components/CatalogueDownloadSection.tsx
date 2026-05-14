@@ -56,9 +56,9 @@ export default function CatalogueDownloadSection({ limit }: { limit?: number }) 
                 <FileText className="w-6 h-6 text-primary" />
               </div>
               <div className="min-w-0">
-                <h4 className="font-bold text-base text-foreground mb-1 truncate">
+                <h3 className="font-bold text-base text-foreground mb-1 truncate">
                   {cat.title}
-                </h4>
+                </h3>
                 <p className="text-xs text-muted-foreground line-clamp-1">
                   {cat.fileName || "Catalogue PDF"}
                 </p>
