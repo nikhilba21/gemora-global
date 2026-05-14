@@ -1739,10 +1739,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </main>
-
       <Footer />
       </LazyRender>
+      </main>
 
       {/* ── Modals ─────────────────────────────────────────────── */}
       <QuickViewModal
