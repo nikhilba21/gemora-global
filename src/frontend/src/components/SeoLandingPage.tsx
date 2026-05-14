@@ -28,7 +28,7 @@ export interface SeoLandingPageProps {
   targetKeyword: string;
   heroSubtitle: string;
   bodyContent: React.ReactNode;
-  faqs: FAQItem[];
+  faqs?: FAQItem[];
   schema?: object;
   hreflangs?: HreflangEntry[];
   breadcrumbs?: BreadcrumbItem[];
@@ -133,7 +133,7 @@ export default function SeoLandingPage({
   targetKeyword,
   heroSubtitle,
   bodyContent,
-  faqs,
+  faqs = [],
   schema,
   hreflangs,
   breadcrumbs = [
@@ -648,6 +648,7 @@ export default function SeoLandingPage({
       </section>
 
       {/* FAQ — with Schema.org markup */}
+      {faqs.length > 0 && (
       <section
         className="py-10 sm:py-14 px-4 bg-card border-t border-border faq-section"
       >
@@ -679,6 +680,7 @@ export default function SeoLandingPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* Internal Links */}
       <section className="py-8 sm:py-10 px-4 border-t border-border">
