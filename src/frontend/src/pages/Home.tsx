@@ -485,13 +485,10 @@ export default function Home() {
   const heroImage1 = toStr(heroImage1Raw) ?? heroImageFallback;
   const heroImage2 = toStr(heroImage2Raw);
   const heroImage3 = toStr(heroImage3Raw);
-  const heroImages: string[] = [];
-  for (const url of [heroImage1, heroImage2, heroImage3]) {
-    if (url?.startsWith("http") && !heroImages.includes(url)) {
-      heroImages.push(url);
-    }
-  }
-  // Always show at least the fallback hero
+  // Filter valid hero images and ensure fallback is included if needed
+  const heroImages = [heroImage1, heroImage2, heroImage3]
+    .filter((url): url is string => typeof url === 'string' && url.length > 0);
+  
   if (heroImages.length === 0) heroImages.push(heroImageFallback);
   const heroSlideCount = heroImages.length;
 
@@ -543,101 +540,6 @@ export default function Home() {
       <Navbar />
       <main id="main-content">
 
-      {/* ── Hero Slider — CLEAN, no text overlay ──────────────── */}
-      <section
-        className="relative overflow-hidden w-full bg-[#0d1130]"
-        style={{
-          height: "clamp(280px, 55vw, 680px)",
-          minHeight: "280px",
-          maxHeight: "680px",
-        }}
-        aria-label="Hero image slider"
-      >
-        {heroImages.map((src, idx) => (
-          <img
-            key={src}
-            src={src}
-            alt={`Gemora Global — Jaipur Imitation Jewellery Manufacturer & Exporter, slide ${idx + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${idx === currentSlide ? "opacity-100" : "opacity-0"}`}
-            loading={idx === 0 ? "eager" : "lazy"}
-            fetchPriority={idx === 0 ? "high" : undefined}
-            width={1600}
-            height={900}
-            style={{ display: "block" }}
-          />
-        ))}
-        {/* Very subtle darkening overlay — doesn't obscure banner */}
-        <div
-          className="absolute inset-0 pointer-events-none z-10"
-          style={{ background: "rgba(0,0,0,0.08)" }}
-          aria-hidden="true"
-        />
-        {heroSlideCount > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={() =>
-                setCurrentSlide(
-                  (p) => (p - 1 + heroSlideCount) % heroSlideCount,
-                )
-              }
-              aria-label="Previous slide"
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
-              data-ocid="hero.pagination_prev"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 md:w-5 md:h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => setCurrentSlide((p) => (p + 1) % heroSlideCount)}
-              aria-label="Next slide"
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 text-white transition-colors border border-white/20 touch-manipulation"
-              data-ocid="hero.pagination_next"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 md:w-5 md:h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2.5">
-              {heroImages.map((src, idx) => (
-                <button
-                  key={src}
-                  type="button"
-                  onClick={() => setCurrentSlide(idx)}
-                  aria-label={`Go to slide ${idx + 1}`}
-                  className={`rounded-full transition-all duration-300 touch-manipulation ${idx === currentSlide ? "w-3.5 h-3.5 bg-white opacity-100" : "w-3 h-3 bg-white opacity-50 hover:opacity-75"}`}
-                  data-ocid="hero.toggle"
-                />
-              ))}
-            </div>
-          </>
-        )}
       </section>
 
       {/* ── Business Positioning — below hero ────── */}
@@ -690,24 +592,12 @@ export default function Home() {
         </div>
       </section>
 
-      <LazyRender height="2000px">
-      {/* ── Stats Bar ─────────────────────────────────────────── */}
-      <section
-        ref={statsReveal.ref as React.RefObject<HTMLElement>}
-        className="bg-primary/10 border-y border-primary/20 py-6 md:py-8"
-      >
+      <section className="bg-primary/10 border-y border-primary/20 py-6 md:py-8">
         <div className="container px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
-          {STATS.map((s, i) => (
-            <div
-              key={s.label}
-              className={`${statsReveal.visible ? `animate-fade-in-up animate-delay-${(i + 1) * 100}` : "opacity-0"}`}
-            >
-              <div className="font-serif text-2xl md:text-3xl font-bold text-primary">
-                {s.value}
-              </div>
-              <div className="text-xs md:text-sm text-muted-foreground mt-1">
-                {s.label}
-              </div>
+          {STATS.map((s) => (
+            <div key={s.label}>
+              <div className="font-serif text-2xl md:text-3xl font-bold text-primary">{s.value}</div>
+              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
             </div>
           ))}
         </div>
@@ -1008,19 +898,13 @@ export default function Home() {
       </section>
 
       {/* ── New Arrivals ──────────────────────────────────────── */}
-      <section
-        ref={newArrivalsReveal.ref as React.RefObject<HTMLElement>}
-        className="bg-muted/30 py-8 md:py-16"
-        data-ocid="new-arrivals.section"
-      >
+      <section className="bg-muted/30 py-8 md:py-16" data-ocid="new-arrivals.section">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-6 md:mb-10">
             <Badge className="mb-3 bg-[#42A5F5]/20 text-[#1A237E] border-[#42A5F5]/30 text-xs tracking-widest">
               JUST IN
             </Badge>
-            <h2
-              className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${newArrivalsReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
-            >
+            <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
               New Arrivals
             </h2>
             <p className="text-muted-foreground text-sm md:text-base">
@@ -1028,16 +912,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {newArrivals.map((product, i) => (
-              <div
-                key={String(product.id)}
-                className={`${newArrivalsReveal.visible ? `animate-fade-in-up animate-delay-${Math.min((i + 1) * 100, 400)}` : "opacity-0"}`}
-              >
-                <ProductCard
-                  product={product}
-                  onQuickView={setQuickViewProduct}
-                  showNewBadge
-                />
+            {newArrivals.map((product) => (
+              <div key={String(product.id)}>
+                <ProductCard product={product} onQuickView={setQuickViewProduct} showNewBadge />
               </div>
             ))}
           </div>
@@ -1054,37 +931,22 @@ export default function Home() {
       </section>
 
       {/* ── Trending Now ──────────────────────────────────────── */}
-      <section
-        ref={trendingReveal.ref as React.RefObject<HTMLElement>}
-        className="container py-8 md:py-16 px-4 md:px-6"
-        data-ocid="trending.section"
-      >
+      <section className="container py-8 md:py-16 px-4 md:px-6" data-ocid="trending.section">
         <div className="text-center mb-6 md:mb-10">
           <Badge className="mb-3 bg-accent/20 text-accent-foreground border-accent/30 text-xs tracking-widest">
             BESTSELLERS
           </Badge>
-          <h2
-            className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${trendingReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
-          >
+          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
             Trending Now
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
-            Most-loved designs by{" "}
-            <Link to="/global-markets" className="text-primary hover:underline">
-              buyers worldwide
-            </Link>
+            Most-loved designs by <Link to="/global-markets" className="text-primary hover:underline">buyers worldwide</Link>
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {trendingProducts.map((product, i) => (
-            <div
-              key={String(product.id)}
-              className={`${trendingReveal.visible ? `animate-fade-in-up animate-delay-${Math.min((i + 1) * 100, 400)}` : "opacity-0"}`}
-            >
-              <ProductCard
-                product={product}
-                onQuickView={setQuickViewProduct}
-              />
+          {trendingProducts.map((product) => (
+            <div key={String(product.id)}>
+              <ProductCard product={product} onQuickView={setQuickViewProduct} />
             </div>
           ))}
         </div>
@@ -1748,7 +1610,6 @@ export default function Home() {
         </div>
       </section>
       <Footer />
-      </LazyRender>
       </main>
 
       {/* ── Modals ─────────────────────────────────────────────── */}
