@@ -36,17 +36,25 @@ function useScrollReveal() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Safety fallback: reveal after 1.5s if observer fails
+    const timer = setTimeout(() => setVisible(true), 1500);
+
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
+          clearTimeout(timer);
           obs.disconnect();
         }
       },
-      { threshold: 0.08 },
+      { threshold: 0.01, rootMargin: "50px" },
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => {
+      clearTimeout(timer);
+      obs.disconnect();
+    };
   }, []);
   return { ref, visible };
 }
