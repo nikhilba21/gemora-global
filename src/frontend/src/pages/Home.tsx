@@ -51,6 +51,28 @@ function useScrollReveal() {
   return { ref, visible };
 }
 
+// ── Lazy Render Component (Improves TBT) ──────────────────────
+function LazyRender({ children, height = "800px" }: { children: React.ReactNode, height?: string }) {
+  const [shouldRender, setShouldRender] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "800px" }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return <div ref={ref}>{shouldRender ? children : <div style={{ minHeight: height }} />}</div>;
+}
+
 // ── Static data ────────────────────────────────────────────────
 const CATEGORY_IMAGES: Record<string, string> = {
   Necklaces: "/assets/generated/jewellery-necklace-hd.dim_800x800.webp",
@@ -659,6 +681,7 @@ export default function Home() {
         </div>
       </section>
 
+      <LazyRender height="2000px">
       {/* ── Stats Bar ─────────────────────────────────────────── */}
       <section
         ref={statsReveal.ref as React.RefObject<HTMLElement>}
@@ -1714,6 +1737,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </LazyRender>
 
       <Footer />
 
