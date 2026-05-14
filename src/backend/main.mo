@@ -51,7 +51,52 @@ actor {
     requirement : Text;
     productId : ?Nat;
     createdAt : Int;
+    status : Text; // new, read, replied
+    source : ?Text; // Website, WhatsApp, LinkedIn, etc.
+    qualified : ?Bool;
+    pipelineStage : ?Text; // New, Contacted, Negotiation, etc.
+  };
+
+  type Customer = {
+    id : Nat;
+    name : Text;
+    company : Text;
+    country : Text;
+    email : Text;
+    whatsapp : Text;
+    businessType : Text;
+    creditLimit : Text;
+    accountManager : Text;
+    notes : Text;
+    tags : [Text];
+    createdAt : Int;
+  };
+
+  type OrderItem = {
+    name : Text;
+    qty : Text;
+    price : Text;
+  };
+
+  type Order = {
+    id : Nat;
+    orderId : Text; // e.g. ORD-001
+    buyer : Text;
+    company : Text;
+    email : Text;
+    phone : Text;
+    country : Text;
+    address : Text;
+    amount : Text;
+    currency : Text;
+    paymentMethod : Text;
+    orderType : Text; // B2B or B2C
     status : Text;
+    trackingNumber : Text;
+    courier : Text;
+    items : [OrderItem];
+    notes : Text;
+    createdAt : Int;
   };
 
   type GalleryItem = {
@@ -162,6 +207,8 @@ actor {
   let userProfiles = Map.empty<Principal, UserProfile>();
   let blogPostsMap = Map.empty<Nat, BlogPost>();
   let cataloguesMap = Map.empty<Nat, Catalogue>();
+  let customersMap = Map.empty<Nat, Customer>();
+  let ordersMap = Map.empty<Nat, Order>();
 
   var nextCategoryId = 1;
   var nextProductId = 1;
@@ -170,6 +217,8 @@ actor {
   var nextTestimonialId = 1;
   var nextBlogPostId = 1;
   var nextCatalogueId = 1;
+  var nextCustomerId = 1;
+  var nextOrderId = 1;
   var categoryMigrationV2Done = false;
   var blogSeedV2Done = false;
 
@@ -553,10 +602,127 @@ actor {
       productId;
       createdAt = Int.abs(Time.now());
       status = "new";
+      source = ?"Website";
+      qualified = ?false;
+      pipelineStage = ?"New";
     };
     inquiriesMap.add(nextInquiryId, inquiry);
     nextInquiryId += 1;
     inquiry.id;
+  };
+
+  public shared func addCustomer(cust : { name : Text; company : Text; country : Text; email : Text; whatsapp : Text; businessType : Text; creditLimit : Text; accountManager : Text; notes : Text; tags : [Text] }) : async Nat {
+    let id = nextCustomerId;
+    nextCustomerId += 1;
+    let customer : Customer = {
+      id;
+      name = cust.name;
+      company = cust.company;
+      country = cust.country;
+      email = cust.email;
+      whatsapp = cust.whatsapp;
+      businessType = cust.businessType;
+      creditLimit = cust.creditLimit;
+      accountManager = cust.accountManager;
+      notes = cust.notes;
+      tags = cust.tags;
+      createdAt = Int.abs(Time.now());
+    };
+    customersMap.add(id, customer);
+    id;
+  };
+
+  public query func getCustomers() : async [Customer] {
+    customersMap.values().toArray();
+  };
+
+  public shared func updateCustomer(id : Nat, cust : { name : Text; company : Text; country : Text; email : Text; whatsapp : Text; businessType : Text; creditLimit : Text; accountManager : Text; notes : Text; tags : [Text] }) : async () {
+    switch (customersMap.get(id)) {
+      case (null) { Runtime.trap("Customer not found") };
+      case (?existing) {
+        customersMap.add(id, {
+          id;
+          name = cust.name;
+          company = cust.company;
+          country = cust.country;
+          email = cust.email;
+          whatsapp = cust.whatsapp;
+          businessType = cust.businessType;
+          creditLimit = cust.creditLimit;
+          accountManager = cust.accountManager;
+          notes = cust.notes;
+          tags = cust.tags;
+          createdAt = existing.createdAt;
+        });
+      };
+    };
+  };
+
+  public shared func deleteCustomer(id : Nat) : async () {
+    customersMap.remove(id);
+  };
+
+  public shared func addOrder(ord : { orderId : Text; buyer : Text; company : Text; email : Text; phone : Text; country : Text; address : Text; amount : Text; currency : Text; paymentMethod : Text; orderType : Text; status : Text; trackingNumber : Text; courier : Text; items : [OrderItem]; notes : Text }) : async Nat {
+    let id = nextOrderId;
+    nextOrderId += 1;
+    let order : Order = {
+      id;
+      orderId = ord.orderId;
+      buyer = ord.buyer;
+      company = ord.company;
+      email = ord.email;
+      phone = ord.phone;
+      country = ord.country;
+      address = ord.address;
+      amount = ord.amount;
+      currency = ord.currency;
+      paymentMethod = ord.paymentMethod;
+      orderType = ord.orderType;
+      status = ord.status;
+      trackingNumber = ord.trackingNumber;
+      courier = ord.courier;
+      items = ord.items;
+      notes = ord.notes;
+      createdAt = Int.abs(Time.now());
+    };
+    ordersMap.add(id, order);
+    id;
+  };
+
+  public query func getOrders() : async [Order] {
+    ordersMap.values().toArray();
+  };
+
+  public shared func updateOrder(id : Nat, ord : { orderId : Text; buyer : Text; company : Text; email : Text; phone : Text; country : Text; address : Text; amount : Text; currency : Text; paymentMethod : Text; orderType : Text; status : Text; trackingNumber : Text; courier : Text; items : [OrderItem]; notes : Text }) : async () {
+    switch (ordersMap.get(id)) {
+      case (null) { Runtime.trap("Order not found") };
+      case (?existing) {
+        ordersMap.add(id, {
+          id;
+          orderId = ord.orderId;
+          buyer = ord.buyer;
+          company = ord.company;
+          email = ord.email;
+          phone = ord.phone;
+          country = ord.country;
+          address = ord.address;
+          amount = ord.amount;
+          currency = ord.currency;
+          paymentMethod = ord.paymentMethod;
+          orderType = ord.orderType;
+          status = ord.status;
+          trackingNumber = ord.trackingNumber;
+          courier = ord.courier;
+          items = ord.items;
+          notes = ord.notes;
+          createdAt = existing.createdAt;
+        });
+      };
+    };
+  };
+
+  public shared func deleteOrder(id : Nat) : async () {
+    ordersMap.remove(id);
   };
 
   public shared func recordVisit() : async () { () };
@@ -784,6 +950,19 @@ actor {
         inquiriesMap.add(id, { inquiry with status });
       };
     };
+  };
+
+  public shared func updateInquiryCRM(id : Nat, source : ?Text, qualified : ?Bool, pipelineStage : ?Text) : async () {
+    switch (inquiriesMap.get(id)) {
+      case (null) { Runtime.trap("Inquiry not found") };
+      case (?inquiry) {
+        inquiriesMap.add(id, { inquiry with source; qualified; pipelineStage });
+      };
+    };
+  };
+
+  public shared func deleteInquiry(id : Nat) : async () {
+    inquiriesMap.remove(id);
   };
 
   public query func getDashboardStats() : async {

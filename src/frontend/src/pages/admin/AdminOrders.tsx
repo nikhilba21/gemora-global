@@ -1,3 +1,4 @@
+import api, { type Order, type OrderStatus } from "../../lib/api";
 import {
   Dialog,
   DialogContent,
@@ -13,43 +14,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 
-type OrderStatus =
-  | "Pending"
-  | "Processing"
-  | "Shipped"
-  | "Delivered"
-  | "Cancelled";
-
-interface OrderItem {
-  name: string;
-  qty: string;
-  price: string;
-}
-
-interface Order {
-  id: string;
-  buyer: string;
-  company: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  amount: string;
-  currency: string;
-  paymentMethod: string;
-  type: "B2B" | "B2C";
-  status: OrderStatus;
-  trackingNumber: string;
-  courier: string;
-  items: OrderItem[];
-  notes: string;
-  createdAt: string;
-}
-
-const STATUS_COLORS: Record<OrderStatus, { bg: string; color: string }> = {
+const STATUS_COLORS: Record<string, { bg: string; color: string }> = {
   Pending: { bg: "rgba(66,165,245,0.15)", color: "#1A237E" },
   Processing: { bg: "rgba(100,150,255,0.15)", color: "#6b9fff" },
   Shipped: { bg: "rgba(180,100,255,0.15)", color: "#c084fc" },
@@ -57,91 +27,7 @@ const STATUS_COLORS: Record<OrderStatus, { bg: string; color: string }> = {
   Cancelled: { bg: "rgba(220,80,80,0.15)", color: "#c62828" },
 };
 
-const SAMPLE_ORDERS: Order[] = [
-  {
-    id: "ORD-001",
-    buyer: "Jean Dupont",
-    company: "Bijoux Paris",
-    email: "jean@bijoux.fr",
-    phone: "+33 6 12 34 56 78",
-    country: "France",
-    address: "15 Rue de la Paix, Paris",
-    amount: "$2,400",
-    currency: "USD",
-    paymentMethod: "T/T Bank Transfer",
-    type: "B2B",
-    status: "Delivered",
-    trackingNumber: "DHL123456789",
-    courier: "DHL",
-    items: [
-      { name: "Kundan Necklace Set", qty: "50", price: "$28.00" },
-      { name: "Pearl Drop Earrings", qty: "100", price: "$8.00" },
-    ],
-    notes: "VIP client — handle with care.",
-    createdAt: "March 1, 2026",
-  },
-  {
-    id: "ORD-002",
-    buyer: "Fatima Al-Rashid",
-    company: "Al Rashid Jewels",
-    email: "fatima@alrashid.ae",
-    phone: "+971 50 123 4567",
-    country: "UAE",
-    address: "Shop 12, Dubai Gold Souk",
-    amount: "$1,800",
-    currency: "USD",
-    paymentMethod: "PayPal",
-    type: "B2B",
-    status: "Shipped",
-    trackingNumber: "FDX987654321",
-    courier: "FedEx",
-    items: [
-      { name: "Oxidised Silver Bangles", qty: "60", price: "$15.00" },
-      { name: "Minimal Necklace", qty: "60", price: "$15.00" },
-    ],
-    notes: "Eco-friendly packaging preferred.",
-    createdAt: "March 5, 2026",
-  },
-  {
-    id: "ORD-003",
-    buyer: "Sarah Johnson",
-    company: "Trendy Boutique NYC",
-    email: "sarah@boutique.us",
-    phone: "+1 212 555 0198",
-    country: "USA",
-    address: "220 5th Avenue, New York",
-    amount: "$3,200",
-    currency: "USD",
-    paymentMethod: "Stripe",
-    type: "B2B",
-    status: "Processing",
-    trackingNumber: "",
-    courier: "",
-    items: [
-      { name: "Bridal Choker Set", qty: "20", price: "$80.00" },
-      { name: "Kundan Maang Tikka", qty: "40", price: "$20.00" },
-    ],
-    notes: "Bridal season order — urgent.",
-    createdAt: "March 10, 2026",
-  },
-];
-
-const EMPTY_ORDER: {
-  buyer: string;
-  company: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  amount: string;
-  currency: string;
-  paymentMethod: string;
-  type: "B2B" | "B2C";
-  status: OrderStatus;
-  trackingNumber: string;
-  courier: string;
-  notes: string;
-} = {
+const EMPTY_ORDER: Partial<Order> = {
   buyer: "",
   company: "",
   email: "",
@@ -152,12 +38,14 @@ const EMPTY_ORDER: {
   currency: "USD",
   paymentMethod: "T/T Bank Transfer",
   type: "B2B",
-  status: "Pending" as OrderStatus,
+  status: "Pending",
   trackingNumber: "",
   courier: "",
   notes: "",
+  items: []
 };
-const EMPTY_ITEM: OrderItem = { name: "", qty: "", price: "" };
+
+const EMPTY_ITEM = { name: "", qty: "", price: "" };
 
 const inputStyle = {
   width: "100%",
@@ -171,105 +59,72 @@ const inputStyle = {
 } as React.CSSProperties;
 
 export default function AdminOrders() {
-  const [orders, setOrders] = useState<Order[]>(() => {
-    try {
-      const saved = localStorage.getItem("gemora_orders");
-      if (!saved) return SAMPLE_ORDERS;
-      const parsed = JSON.parse(saved);
-      return Array.isArray(parsed) ? (parsed as Order[]) : SAMPLE_ORDERS;
-    } catch {
-      return SAMPLE_ORDERS;
-    }
-  });
+  const qc = useQueryClient();
   const [addOpen, setAddOpen] = useState(false);
-  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editingId, setEditingId] = useState<number | null>(null);
   const [detailOrder, setDetailOrder] = useState<Order | null>(null);
   const [filterStatus, setFilterStatus] = useState<string>("All");
   const [filterCountry, setFilterCountry] = useState<string>("All");
   const [filterType, setFilterType] = useState<string>("All");
-  const [form, setForm] = useState(EMPTY_ORDER);
-  const [items, setItems] = useState<OrderItem[]>([{ ...EMPTY_ITEM }]);
-  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [form, setForm] = useState<Partial<Order>>(EMPTY_ORDER);
+  const [items, setItems] = useState<any[]>([{ ...EMPTY_ITEM }]);
+  const [selected, setSelected] = useState<Set<number>>(new Set());
 
-  const saveOrders = (updated: Order[]) => {
-    localStorage.setItem("gemora_orders", JSON.stringify(updated));
-    setOrders(updated);
+  const { data: orders = [] } = useQuery({
+    queryKey: ["orders"],
+    queryFn: () => api.getOrders(),
+  });
+
+  const addMut = useMutation({
+    mutationFn: (data: Partial<Order>) => api.createOrder(data),
+    onSuccess: () => {
+      toast.success("Order added");
+      qc.invalidateQueries({ queryKey: ["orders"] });
+      setAddOpen(false);
+    },
+  });
+
+  const updateMut = useMutation({
+    mutationFn: ({ id, data }: { id: number; data: Partial<Order> }) =>
+      api.updateOrder(id, data),
+    onSuccess: () => {
+      toast.success("Order updated");
+      qc.invalidateQueries({ queryKey: ["orders"] });
+      setAddOpen(false);
+    },
+  });
+
+  const deleteMut = useMutation({
+    mutationFn: (id: number) => api.deleteOrder(id),
+    onSuccess: () => {
+      toast.success("Order deleted");
+      qc.invalidateQueries({ queryKey: ["orders"] });
+    },
+  });
+
+  const updateOrderStatus = (id: number, newStatus: string) => {
+    updateMut.mutate({ id, data: { status: newStatus } });
   };
 
-  const updateOrderStatus = (id: string, newStatus: OrderStatus) => {
-    const updated = orders.map((o) =>
-      o.id === id ? { ...o, status: newStatus } : o,
-    );
-    saveOrders(updated);
-    if (detailOrder?.id === id)
-      setDetailOrder((p) => (p ? { ...p, status: newStatus } : p));
-  };
-
-  const deleteOrder = (id: string) => {
-    if (confirm("Are you sure you want to delete this order?")) {
-      const updated = orders.filter((o) => o.id !== id);
-      saveOrders(updated);
-      setSelected((prev) => {
-        const next = new Set(prev);
-        next.delete(id);
-        return next;
-      });
-      if (detailOrder?.id === id) setDetailOrder(null);
-    }
+  const deleteOrder = (id: number) => {
+    if (confirm("Are you sure?")) deleteMut.mutate(id);
   };
 
   const startEdit = (order: Order) => {
     setEditingId(order.id);
-    setForm({
-      buyer: order.buyer,
-      company: order.company,
-      email: order.email,
-      phone: order.phone,
-      country: order.country,
-      address: order.address,
-      amount: order.amount,
-      currency: order.currency,
-      paymentMethod: order.paymentMethod,
-      type: order.type,
-      status: order.status,
-      trackingNumber: order.trackingNumber,
-      courier: order.courier,
-      notes: order.notes,
-    });
+    setForm(order);
     setItems(order.items.length > 0 ? [...order.items] : [{ ...EMPTY_ITEM }]);
     setAddOpen(true);
   };
 
   const addOrder = (e: React.FormEvent) => {
     e.preventDefault();
+    const data = { ...form, items: items.filter(it => it.name.trim()) };
     if (editingId) {
-      const updated = orders.map((o) =>
-        o.id === editingId
-          ? {
-              ...o,
-              ...form,
-              items: items.filter((it) => it.name.trim()),
-            }
-          : o,
-      );
-      saveOrders(updated);
-      setEditingId(null);
+      updateMut.mutate({ id: editingId, data });
     } else {
-      const newOrder: Order = {
-        id: `ORD-${String(orders.length + 1).padStart(3, "0")}`,
-        ...form,
-        items: items.filter((it) => it.name.trim()),
-        createdAt: new Date().toLocaleDateString("en-GB", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        }),
-      };
-      saveOrders([newOrder, ...orders]);
+      addMut.mutate({ ...data, orderId: `ORD-${Date.now().toString().slice(-6)}` });
     }
-    setForm(EMPTY_ORDER);
-    setItems([{ ...EMPTY_ITEM }]);
-    setAddOpen(false);
   };
 
   const generateInvoice = (order: Order) => {
@@ -425,7 +280,7 @@ export default function AdminOrders() {
     return true;
   });
 
-  const toggleSelect = (id: string) => {
+  const toggleSelect = (id: number) => {
     setSelected((prev) => {
       const next = new Set(prev);
       next.has(id) ? next.delete(id) : next.add(id);
@@ -433,11 +288,10 @@ export default function AdminOrders() {
     });
   };
 
-  const bulkUpdateStatus = (status: OrderStatus) => {
-    const updated = orders.map((o) =>
-      selected.has(o.id) ? { ...o, status } : o,
-    );
-    saveOrders(updated);
+  const bulkUpdateStatus = (status: string) => {
+    selected.forEach(id => {
+      updateMut.mutate({ id, data: { status } });
+    });
     setSelected(new Set());
   };
 

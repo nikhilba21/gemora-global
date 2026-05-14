@@ -1,148 +1,71 @@
-import api from '../../lib/api';
+import api, { type Contact, type Inquiry } from '../../lib/api';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
-import type { Inquiry } from "../../types";
 
-interface Customer {
-  id: string;
-  name: string;
-  company: string;
-  country: string;
-  email: string;
-  whatsapp: string;
-  businessType: string;
-  creditLimit: string;
-  accountManager: string;
-  notes: string;
-  tags: string[];
-  orders: number;
-  totalValue: string;
-  lastActivity: string;
-}
-
-const SAMPLE_CUSTOMERS: Customer[] = [
-  {
-    id: "c1",
-    name: "Jean-Pierre Martin",
-    company: "Bijoux Paris",
-    country: "France",
-    email: "jp@bijoux.fr",
-    whatsapp: "+33612345678",
-    businessType: "Boutique Retailer",
-    creditLimit: "$5,000",
-    accountManager: "Admin",
-    notes: "Top VIP buyer — prefers Kundan sets.",
-    tags: ["VIP", "B2B"],
-    orders: 8,
-    totalValue: "$18,400",
-    lastActivity: "April 10, 2026",
-  },
-  {
-    id: "c2",
-    name: "Fatima Al-Mansoori",
-    company: "Golden Souq LLC",
-    country: "UAE",
-    email: "fatima@goldensouq.ae",
-    whatsapp: "+971501234567",
-    businessType: "Wholesale Distributor",
-    creditLimit: "$10,000",
-    accountManager: "Sales Agent",
-    notes: "Prefers oxidised and gold plated collections.",
-    tags: ["B2B", "Wholesale"],
-    orders: 12,
-    totalValue: "$32,000",
-    lastActivity: "April 15, 2026",
-  },
-  {
-    id: "c3",
-    name: "Emma Thompson",
-    company: "Lux Jewels UK",
-    country: "UK",
-    email: "emma@luxjewels.co.uk",
-    whatsapp: "+447700900123",
-    businessType: "Online Retailer",
-    creditLimit: "$3,000",
-    accountManager: "Manager",
-    notes: "Interested in minimal and Korean styles.",
-    tags: ["B2B"],
-    orders: 4,
-    totalValue: "$7,200",
-    lastActivity: "March 28, 2026",
-  },
-  {
-    id: "c4",
-    name: "Sarah Johnson",
-    company: "Trendy Boutique NYC",
-    country: "USA",
-    email: "sarah@boutique.us",
-    whatsapp: "+12125550198",
-    businessType: "Boutique",
-    creditLimit: "$8,000",
-    accountManager: "Admin",
-    notes: "Bridal season buyer.",
-    tags: ["B2B", "Bridal"],
-    orders: 6,
-    totalValue: "$14,500",
-    lastActivity: "April 18, 2026",
-  },
-];
-
-const EMPTY_CUSTOMER: Customer = {
-  id: "",
-  name: "",
-  company: "",
-  country: "",
-  email: "",
-  whatsapp: "",
-  businessType: "",
-  creditLimit: "",
-  accountManager: "Admin",
-  notes: "",
-  tags: [],
-  orders: 0,
-  totalValue: "$0",
-  lastActivity: new Date().toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }),
+const STATUS_COLORS: Record<string, string> = {
+  new: "bg-blue-500/20 text-blue-600 border-blue-500/30",
+  read: "bg-sky-500/20 text-sky-500 border-sky-500/30",
+  replied: "bg-green-500/20 text-green-600 border-green-500/30",
 };
 
 export default function AdminCustomers() {
-  const [customers, setCustomers] = useState<Customer[]>(() => {
-    try {
-      const s = localStorage.getItem("gemora_customers");
-      return s ? (JSON.parse(s) as Customer[]) : SAMPLE_CUSTOMERS;
-    } catch {
-      return SAMPLE_CUSTOMERS;
-    }
-  });
+  const qc = useQueryClient();
   const [addOpen, setAddOpen] = useState(false);
-  const [profileCustomer, setProfileCustomer] = useState<Customer | null>(null);
-  const [form, setForm] = useState<Customer>(EMPTY_CUSTOMER);
+  const [profileCustomer, setProfileCustomer] = useState<Contact | null>(null);
+  const [form, setForm] = useState<Partial<Contact>>({});
   const [filterCountry, setFilterCountry] = useState("All");
+
+  const { data: rawCustomers } = useQuery({
+    queryKey: ["customers"],
+    queryFn: () => api.getContacts(),
+  });
+  const customers = rawCustomers?.items || [];
 
   const { data: inquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
     queryFn: () => api.getInquiries(),
-    enabled: true,
   });
 
-  const saveCustomers = (updated: Customer[]) => {
-    localStorage.setItem("gemora_customers", JSON.stringify(updated));
-    setCustomers(updated);
-  };
+  const addMut = useMutation({
+    mutationFn: (data: Partial<Contact>) => api.createContact(data),
+    onSuccess: () => {
+      toast.success("Customer added");
+      qc.invalidateQueries({ queryKey: ["customers"] });
+      setAddOpen(false);
+      setForm({});
+    },
+    onError: () => toast.error("Failed to add customer"),
+  });
+
+  const updateMut = useMutation({
+    mutationFn: ({ id, data }: { id: number; data: Partial<Contact> }) =>
+      api.updateContact(id, data),
+    onSuccess: () => {
+      toast.success("Customer updated");
+      qc.invalidateQueries({ queryKey: ["customers"] });
+      setProfileCustomer(null);
+    },
+    onError: () => toast.error("Failed to update"),
+  });
+
+  const deleteMut = useMutation({
+    mutationFn: (id: number) => api.deleteContact(id),
+    onSuccess: () => {
+      toast.success("Customer deleted");
+      qc.invalidateQueries({ queryKey: ["customers"] });
+      setProfileCustomer(null);
+    },
+    onError: () => toast.error("Failed to delete"),
+  });
 
   const addCustomer = (e: React.FormEvent) => {
     e.preventDefault();
-    const newCust: Customer = { ...form, id: `c${Date.now()}` };
-    saveCustomers([newCust, ...customers]);
-    setForm(EMPTY_CUSTOMER);
-    setAddOpen(false);
+    addMut.mutate(form);
   };
 
   const countries = Array.from(new Set(customers.map((c) => c.country)));
@@ -152,10 +75,10 @@ export default function AdminCustomers() {
       : customers.filter((c) => c.country === filterCountry);
 
   // Inquiries for a given customer (match by whatsapp or name)
-  const getCustomerInquiries = (cust: Customer) =>
+  const getCustomerInquiries = (cust: Contact) =>
     (inquiries ?? []).filter(
       (inq) =>
-        inq.whatsapp === cust.whatsapp ||
+        (inq.whatsapp && inq.whatsapp === cust.whatsapp) ||
         inq.name.toLowerCase() === cust.name.toLowerCase(),
     );
 
@@ -216,7 +139,7 @@ export default function AdminCustomers() {
           },
           {
             label: "Total Orders",
-            value: customers.reduce((a, c) => a + c.orders, 0),
+            value: 0, // We will link this later
             color: "#2e7d32",
           },
           {
@@ -360,7 +283,7 @@ export default function AdminCustomers() {
                       textAlign: "right",
                     }}
                   >
-                    {c.orders}
+                    —
                   </td>
                   <td
                     style={{
@@ -370,14 +293,14 @@ export default function AdminCustomers() {
                       fontWeight: 600,
                     }}
                   >
-                    {c.totalValue}
+                    —
                   </td>
                   <td style={{ padding: "10px", fontSize: 12, color: "#888" }}>
-                    {c.accountManager}
+                    {c.accountManager || 'Admin'}
                   </td>
                   <td style={{ padding: "10px" }}>
                     <div className="flex flex-wrap gap-1">
-                      {c.tags.map((tag) => (
+                      {(c.tags || "").split(',').filter(Boolean).map((tag) => (
                         <span
                           key={tag}
                           style={{
@@ -660,10 +583,33 @@ export default function AdminCustomers() {
                   <p
                     style={{ color: "#1A237E", fontSize: 13, fontWeight: 600 }}
                   >
-                    {value}
+                    {value || "—"}
                   </p>
                 </div>
               ))}
+            </div>
+
+            <div className="flex gap-2 mb-4">
+              <Button 
+                variant="outline" 
+                className="flex-1"
+                onClick={() => {
+                  setForm(profileCustomer);
+                  setAddOpen(true);
+                  setProfileCustomer(null);
+                }}
+              >
+                Edit Customer
+              </Button>
+              <Button 
+                variant="destructive" 
+                className="flex-1"
+                onClick={() => {
+                   if(confirm("Delete this customer?")) deleteMut.mutate(profileCustomer.id);
+                }}
+              >
+                Delete
+              </Button>
             </div>
 
             {profileCustomer.whatsapp && (

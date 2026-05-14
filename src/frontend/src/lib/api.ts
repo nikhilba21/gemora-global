@@ -53,6 +53,7 @@ export const api = {
   submitInquiry: (data: Record<string, unknown>) => apiFetch('/api/inquiries', { method: 'POST', body: JSON.stringify(data) }),
   getInquiries: () => apiFetch<Inquiry[]>('/api/inquiries'),
   updateInquiryStatus: (id: number, status: string) => apiFetch(`/api/inquiries/${id}/status`, { method: 'PATCH', body: JSON.stringify({ status }) }),
+  updateInquiryCRM: (id: number, data: Partial<Inquiry>) => apiFetch(`/api/inquiries/${id}/crm`, { method: 'PATCH', body: JSON.stringify(data) }),
   deleteInquiry: (id: number) => apiFetch(`/api/inquiries/${id}`, { method: 'DELETE' }),
 
   // Gallery
@@ -103,13 +104,25 @@ export const api = {
   // Dashboard
   getStats: () => apiFetch<DashboardStats>('/api/dashboard/stats'),
 
-  // Contacts
+  // Contacts / Customers
   getContacts: (params?: Record<string, string | number>) => {
     const q = params ? '?' + new URLSearchParams(params as Record<string, string>).toString() : '';
     return apiFetch<{ items: Contact[]; total: number; pages: number }>(`/api/contacts${q}`);
   },
   getContactStats: () => apiFetch('/api/contacts/stats'),
+  createContact: (data: Partial<Contact>) => apiFetch<Contact>('/api/contacts', { method: 'POST', body: JSON.stringify(data) }),
+  updateContact: (id: number, data: Partial<Contact>) => apiFetch<Contact>(`/api/contacts/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  deleteContact: (id: number) => apiFetch(`/api/contacts/${id}`, { method: 'DELETE' }),
   bulkContacts: (contacts: Partial<Contact>[]) => apiFetch('/api/contacts/bulk', { method: 'POST', body: JSON.stringify({ contacts }) }),
+
+  // Orders
+  getOrders: (params?: Record<string, string | number>) => {
+    const q = params ? '?' + new URLSearchParams(params as Record<string, string>).toString() : '';
+    return apiFetch<Order[]>(`/api/orders${q}`);
+  },
+  createOrder: (data: Partial<Order>) => apiFetch<{ id: number; success: boolean }>('/api/orders', { method: 'POST', body: JSON.stringify(data) }),
+  updateOrder: (id: number, data: Partial<Order>) => apiFetch<{ success: boolean }>(`/api/orders/${id}`, { method: 'PUT', body: JSON.stringify(data) }),
+  deleteOrder: (id: number) => apiFetch<{ success: boolean }>(`/api/orders/${id}`, { method: 'DELETE' }),
 };
 
 // Types
@@ -120,8 +133,10 @@ export interface GalleryFolder { id: number; name: string; description: string; 
 export interface BlogPost { id: number; slug: string; title: string; category: string; excerpt: string; author: string; date: string; readTime: string; status: string; image: string; content: string; createdAt?: number; }
 export interface Testimonial { id: number; name: string; company: string; country: string; text: string; rating: number; active: boolean; }
 export interface Catalogue { id: number; title: string; description: string; fileUrl: string; fileName: string; uploadedAt: string; }
-export interface Inquiry { id: number; name: string; country: string; whatsapp: string; requirement: string; productId?: number; status: string; createdAt?: number; }
-export interface Contact { id: number; name: string; company: string; email: string; phone: string; country: string; productInterest: string; source: string; tags: string; }
-export interface DashboardStats { totalProducts: number; totalCategories: number; totalInquiries: number; newInquiries: number; totalGalleryItems: number; totalBlogPosts: number; totalCatalogues: number; totalVisits: number; }
+export interface Inquiry { id: number; name: string; country: string; whatsapp: string; requirement: string; productId?: number; status: string; source?: string; qualified?: boolean; pipelineStage?: string; assignedTo?: string; createdAt?: number; }
+export interface Contact { id: number; name: string; company: string; email: string; phone: string; whatsapp?: string; country: string; productInterest: string; businessType?: string; creditLimit?: string; accountManager?: string; source: string; tags: string; notes?: string; createdAt?: number; }
+export interface OrderItem { name: string; qty: string; price: string; }
+export interface Order { id: number; orderId: string; buyer: string; company: string; email: string; phone: string; country: string; address: string; amount: string; currency: string; paymentMethod: string; type: "B2B" | "B2C"; status: string; trackingNumber: string; courier: string; items: OrderItem[]; notes: string; createdAt: string; }
+export interface DashboardStats { totalProducts: number; totalCategories: number; totalInquiries: number; newInquiries: number; totalGalleryItems: number; totalBlogPosts: number; totalCatalogues: number; totalVisits: number; totalOrders?: number; totalCustomers?: number; pipelineStats?: { stage: string; count: number }[]; sourceStats?: { source: string; count: number }[]; }
 
 export default api;

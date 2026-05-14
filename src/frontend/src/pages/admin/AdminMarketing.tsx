@@ -2,6 +2,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import api, { type Inquiry } from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import AdminLayout from "../../components/AdminLayout";
 
@@ -58,8 +60,17 @@ interface Coupon {
 }
 
 export default function AdminMarketing() {
-  const [activeTab, setActiveTab] = useState<"seo" | "coupons" | "campaigns">(
-    "seo",
+  const { data: inquiries = [] } = useQuery({
+    queryKey: ["inquiries"],
+    queryFn: () => api.getInquiries(),
+  });
+  const { data: orders = [] } = useQuery({
+    queryKey: ["orders"],
+    queryFn: () => api.getOrders(),
+  });
+
+  const [activeTab, setActiveTab] = useState<"seo" | "coupons" | "campaigns" | "crm">(
+    "crm",
   );
   const [seoFields, setSeoFields] = useState<Record<string, SeoField>>(() =>
     Object.fromEntries(
@@ -179,6 +190,7 @@ export default function AdminMarketing() {
         style={{ border: "1px solid #c5cae9", width: "fit-content" }}
       >
         {[
+          ["crm", "📈 CRM Insights"],
           ["seo", "🔍 SEO Manager"],
           ["coupons", "🏷️ Coupons"],
           ["campaigns", "📣 Campaigns"],
@@ -198,6 +210,130 @@ export default function AdminMarketing() {
           </button>
         ))}
       </div>
+
+      {activeTab === "crm" && (() => {
+        const totalLeads = inquiries.length;
+        const qualifiedLeads = inquiries.filter(i => i.qualified).length;
+        const orderWonCount = inquiries.filter(i => i.pipelineStage === "Order Won").length;
+        const pipelineValue = inquiries
+          .filter(i => i.pipelineStage !== "Order Lost")
+          .length * 500; // Average deal estimate $500
+        
+        const sourceCounts: Record<string, number> = {};
+        inquiries.forEach(i => {
+          const s = i.source || "Website";
+          sourceCounts[s] = (sourceCounts[s] || 0) + 1;
+        });
+
+        const stageCounts: Record<string, number> = {};
+        inquiries.forEach(i => {
+          const s = i.pipelineStage || "New";
+          stageCounts[s] = (stageCounts[s] || 0) + 1;
+        });
+
+        const sampleSentCount = inquiries.filter(i => i.pipelineStage === "Sample Sent").length;
+        const inquiryToSample = totalLeads ? Math.round((sampleSentCount / totalLeads) * 100) : 0;
+        const sampleToOrder = sampleSentCount ? Math.round((orderWonCount / sampleSentCount) * 100) : 0;
+        const leadToOrder = totalLeads ? Math.round((orderWonCount / totalLeads) * 100) : 0;
+
+        return (
+        <div className="space-y-6">
+           {/* KPI Cards */}
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="bg-white p-4 rounded-xl border shadow-sm">
+                <p className="text-[11px] text-slate-500 uppercase font-bold">Total Leads</p>
+                <p className="text-2xl font-bold text-primary">{totalLeads}</p>
+                <p className="text-[10px] text-green-600 mt-1">From all sources</p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border shadow-sm">
+                <p className="text-[11px] text-slate-500 uppercase font-bold">Qualified Leads</p>
+                <p className="text-2xl font-bold text-emerald-600">{qualifiedLeads}</p>
+                <p className="text-[10px] text-slate-400 mt-1">Conversion: {totalLeads ? Math.round((qualifiedLeads/totalLeads)*100) : 0}%</p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border shadow-sm">
+                <p className="text-[11px] text-slate-500 uppercase font-bold">Orders (Won)</p>
+                <p className="text-2xl font-bold text-indigo-600">{orderWonCount}</p>
+                <p className="text-[10px] text-indigo-400 mt-1">Pipeline Success</p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border shadow-sm">
+                <p className="text-[11px] text-slate-500 uppercase font-bold">Est. Pipeline Value</p>
+                <p className="text-2xl font-bold text-slate-900">${pipelineValue.toLocaleString()}</p>
+                <p className="text-[10px] text-slate-400 mt-1">Avg $500/lead</p>
+              </div>
+           </div>
+
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Pipeline Analysis */}
+              <div className="bg-white p-6 rounded-xl border shadow-sm">
+                <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                   <div className="w-2 h-5 bg-primary rounded-full"></div>
+                   Pipeline Funnel Analysis
+                </h3>
+                <div className="space-y-4">
+                   {[
+                     { stage: "New", count: stageCounts["New"] || 0, color: "bg-blue-50" },
+                     { stage: "Contacted", count: stageCounts["Contacted"] || 0, color: "bg-blue-100" },
+                     { stage: "Requirement Received", count: stageCounts["Requirement Received"] || 0, color: "bg-blue-200" },
+                     { stage: "Sample Sent", count: stageCounts["Sample Sent"] || 0, color: "bg-blue-300" },
+                     { stage: "Negotiation", count: stageCounts["Negotiation"] || 0, color: "bg-blue-400" },
+                     { stage: "Order Won", count: stageCounts["Order Won"] || 0, color: "bg-green-500 text-white" }
+                   ].map((s) => (
+                     <div key={s.stage} className={`flex items-center justify-between p-3 rounded-lg ${s.color}`}>
+                        <span className="text-sm font-semibold">{s.stage}</span>
+                        <span className="font-bold">{s.count}</span>
+                     </div>
+                   ))}
+                </div>
+              </div>
+
+              {/* Lead Sources */}
+              <div className="bg-white p-6 rounded-xl border shadow-sm">
+                <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                   <div className="w-2 h-5 bg-emerald-500 rounded-full"></div>
+                   Lead Sources (Top 10)
+                </h3>
+                <div className="space-y-3">
+                   {["Website", "WhatsApp", "LinkedIn", "TradeIndia", "Alibaba", "IndiaMART", "Pinterest", "Instagram", "Referral"].map(src => {
+                     const count = sourceCounts[src] || 0;
+                     const pct = totalLeads ? (count / totalLeads) * 100 : 0;
+                     return (
+                     <div key={src} className="flex items-center gap-3">
+                        <div className="flex-1">
+                           <div className="flex justify-between text-xs mb-1">
+                              <span>{src}</span>
+                              <span className="font-bold">{count}</span>
+                           </div>
+                           <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                              <div className="bg-emerald-500 h-full transition-all duration-500" style={{ width: `${pct}%` }}></div>
+                           </div>
+                        </div>
+                     </div>
+                     );
+                   })}
+                </div>
+              </div>
+           </div>
+
+           {/* Conversion Rates */}
+           <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                 <div>
+                    <p className="text-slate-400 text-xs uppercase tracking-widest mb-2 font-bold">Inquiry → Sample</p>
+                    <p className="text-4xl font-bold">{inquiryToSample}%</p>
+                 </div>
+                 <div className="border-x border-slate-800">
+                    <p className="text-slate-400 text-xs uppercase tracking-widest mb-2 font-bold">Sample → Order</p>
+                    <p className="text-4xl font-bold">{sampleToOrder}%</p>
+                 </div>
+                 <div>
+                    <p className="text-slate-400 text-xs uppercase tracking-widest mb-2 font-bold">Lead → Order (Overall)</p>
+                    <p className="text-4xl font-bold text-green-400">{leadToOrder}%</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+        );
+      })()}
 
       {activeTab === "seo" && (
         <div

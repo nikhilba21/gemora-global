@@ -85,6 +85,10 @@ async function initializeDatabase() {
       requirement TEXT DEFAULT '',
       "productId" INTEGER,
       status TEXT DEFAULT 'new',
+      source TEXT DEFAULT 'Website',
+      qualified BOOLEAN DEFAULT FALSE,
+      "pipelineStage" TEXT DEFAULT 'New',
+      "assignedTo" TEXT DEFAULT 'Admin',
       "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
     );
     CREATE TABLE IF NOT EXISTS gallery_items (
@@ -145,14 +149,45 @@ async function initializeDatabase() {
       "uploadedAt" TEXT DEFAULT '',
       "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
     );
+    CREATE TABLE IF NOT EXISTS orders (
+      id SERIAL PRIMARY KEY,
+      "orderId" TEXT UNIQUE NOT NULL,
+      buyer TEXT NOT NULL,
+      company TEXT DEFAULT '',
+      email TEXT DEFAULT '',
+      phone TEXT DEFAULT '',
+      country TEXT DEFAULT '',
+      address TEXT DEFAULT '',
+      amount TEXT DEFAULT '',
+      currency TEXT DEFAULT 'USD',
+      "paymentMethod" TEXT DEFAULT '',
+      type TEXT DEFAULT 'B2B',
+      status TEXT DEFAULT 'Pending',
+      "trackingNumber" TEXT DEFAULT '',
+      courier TEXT DEFAULT '',
+      notes TEXT DEFAULT '',
+      "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
+    );
+    CREATE TABLE IF NOT EXISTS order_items (
+      id SERIAL PRIMARY KEY,
+      "orderId" INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
+      name TEXT NOT NULL,
+      qty TEXT DEFAULT '',
+      price TEXT DEFAULT '',
+      "createdAt" BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())::BIGINT * 1000
+    );
     CREATE TABLE IF NOT EXISTS contacts (
       id SERIAL PRIMARY KEY,
       name TEXT DEFAULT '',
       company TEXT DEFAULT '',
       email TEXT DEFAULT '' UNIQUE,
       phone TEXT DEFAULT '',
+      whatsapp TEXT DEFAULT '',
       country TEXT DEFAULT '',
       "productInterest" TEXT DEFAULT '',
+      "businessType" TEXT DEFAULT '',
+      "creditLimit" TEXT DEFAULT '',
+      "accountManager" TEXT DEFAULT 'Admin',
       source TEXT DEFAULT '',
       tags TEXT DEFAULT '',
       "emailStatus" TEXT DEFAULT 'pending',
@@ -174,8 +209,16 @@ async function initializeDatabase() {
     );
   `);
 
-  // Add slug column if it doesn't exist (migration for existing DBs)
-  await query(`ALTER TABLE categories ADD COLUMN IF NOT EXISTS slug TEXT DEFAULT ''`).catch(() => {});
+  // Add CRM columns if they don't exist
+  await query(`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS source TEXT DEFAULT 'Website'`).catch(() => {});
+  await query(`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS qualified BOOLEAN DEFAULT FALSE`).catch(() => {});
+  await query(`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS "pipelineStage" TEXT DEFAULT 'New'`).catch(() => {});
+  await query(`ALTER TABLE inquiries ADD COLUMN IF NOT EXISTS "assignedTo" TEXT DEFAULT 'Admin'`).catch(() => {});
+  
+  await query(`ALTER TABLE contacts ADD COLUMN IF NOT EXISTS whatsapp TEXT DEFAULT ''`).catch(() => {});
+  await query(`ALTER TABLE contacts ADD COLUMN IF NOT EXISTS "businessType" TEXT DEFAULT ''`).catch(() => {});
+  await query(`ALTER TABLE contacts ADD COLUMN IF NOT EXISTS "creditLimit" TEXT DEFAULT ''`).catch(() => {});
+  await query(`ALTER TABLE contacts ADD COLUMN IF NOT EXISTS "accountManager" TEXT DEFAULT 'Admin'`).catch(() => {});
 
   // Add indexes for performance
   await query(`
@@ -186,6 +229,9 @@ async function initializeDatabase() {
     CREATE INDEX IF NOT EXISTS idx_blog_status ON blog_posts(status);
     CREATE INDEX IF NOT EXISTS idx_gallery_type ON gallery_items("itemType");
     CREATE INDEX IF NOT EXISTS idx_cats_slug ON categories(slug);
+    CREATE INDEX IF NOT EXISTS idx_inq_status ON inquiries(status);
+    CREATE INDEX IF NOT EXISTS idx_inq_pipeline ON inquiries("pipelineStage");
+    CREATE INDEX IF NOT EXISTS idx_orders_oid ON orders("orderId");
   `).catch(() => {});
 
   await runMigrations();

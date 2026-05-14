@@ -52,17 +52,18 @@ router.post('/bulk', requireAdmin, async (req, res) => {
     if (!Array.isArray(contacts)) return res.status(400).json({ error: 'contacts array required' });
     let created = 0, skipped = 0;
     for (const c of contacts) {
-      const { name='', company='', email='', phone='', country='', productInterest='', source='', tags='' } = c;
+      const { name='', company='', email='', phone='', whatsapp='', country='', productInterest='', businessType='', creditLimit='', accountManager='Admin', source='', tags='', notes='' } = c;
       if (!name && !email) { skipped++; continue; }
       await query(
-        `INSERT INTO contacts(name,company,email,phone,country,"productInterest",source,tags)
-         VALUES($1,$2,$3,$4,$5,$6,$7,$8)
+        `INSERT INTO contacts(name,company,email,phone,whatsapp,country,"productInterest","businessType","creditLimit","accountManager",source,tags,notes)
+         VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
          ON CONFLICT(email) DO UPDATE SET
            name=EXCLUDED.name, company=EXCLUDED.company,
-           phone=EXCLUDED.phone, country=EXCLUDED.country,
-           "productInterest"=EXCLUDED."productInterest",
-           source=EXCLUDED.source, tags=EXCLUDED.tags`,
-        [name,company,email,phone,country,productInterest,source,tags]
+           phone=EXCLUDED.phone, whatsapp=EXCLUDED.whatsapp, country=EXCLUDED.country,
+           "productInterest"=EXCLUDED."productInterest", "businessType"=EXCLUDED."businessType",
+           "creditLimit"=EXCLUDED."creditLimit", "accountManager"=EXCLUDED."accountManager",
+           source=EXCLUDED.source, tags=EXCLUDED.tags, notes=EXCLUDED.notes`,
+        [name,company,email,phone,whatsapp,country,productInterest,businessType,creditLimit,accountManager,source,tags,notes]
       );
       created++;
     }
@@ -73,13 +74,26 @@ router.post('/bulk', requireAdmin, async (req, res) => {
 // POST /api/contacts (Admin) — single
 router.post('/', requireAdmin, async (req, res) => {
   try {
-    const { name='',company='',email='',phone='',country='',productInterest='',source='',tags='' } = req.body;
+    const { name='',company='',email='',phone='',whatsapp='',country='',productInterest='',businessType='',creditLimit='',accountManager='Admin',source='',tags='',notes='' } = req.body;
     const r = await query(
-      `INSERT INTO contacts(name,company,email,phone,country,"productInterest",source,tags)
-       VALUES($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *`,
-      [name,company,email,phone,country,productInterest,source,tags]
+      `INSERT INTO contacts(name,company,email,phone,whatsapp,country,"productInterest","businessType","creditLimit","accountManager",source,tags,notes)
+       VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING *`,
+      [name,company,email,phone,whatsapp,country,productInterest,businessType,creditLimit,accountManager,source,tags,notes]
     );
     res.status(201).json(r.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// PUT /api/contacts/:id (Admin)
+router.put('/:id', requireAdmin, async (req, res) => {
+  try {
+    const { name, company, email, phone, whatsapp, country, productInterest, businessType, creditLimit, accountManager, source, tags, notes } = req.body;
+    const r = await query(
+      `UPDATE contacts SET name=$1, company=$2, email=$3, phone=$4, whatsapp=$5, country=$6, "productInterest"=$7, "businessType"=$8, "creditLimit"=$9, "accountManager"=$10, source=$11, tags=$12, notes=$13
+       WHERE id=$14 RETURNING *`,
+      [name, company, email, phone, whatsapp, country, productInterest, businessType, creditLimit, accountManager, source, tags, notes, req.params.id]
+    );
+    res.json(r.rows[0]);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

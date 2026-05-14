@@ -71,6 +71,7 @@ app.use('/api/gallery-folders', require('./routes/galleryFolders'));
 app.use('/api/testimonials',    require('./routes/testimonials'));
 app.use('/api/blog',            require('./routes/blog'));
 app.use('/api/catalogues',      require('./routes/catalogues'));
+app.use('/api/orders',          require('./routes/orders'));
 app.use('/api/content',         require('./routes/content'));
 app.use('/api/dashboard',       require('./routes/dashboard'));
 app.use('/api/contacts',        require('./routes/contacts'));

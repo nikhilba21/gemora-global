@@ -47,38 +47,39 @@ export default function AdminInquiries() {
   });
   const inquiries = Array.isArray(rawInquiries) ? rawInquiries : ((rawInquiries as any)?.items || []);
 
-  const updateMut = useMutation({
-    mutationFn: ({ id, status }: { id: bigint; status: string }) =>
-      api.updateInquiryStatus(Number(id), status),
+  const crmMut = useMutation({
+    mutationFn: ({ id, data }: { id: bigint; data: Partial<Inquiry> }) =>
+      api.updateInquiryCRM(Number(id), data),
     onSuccess: () => {
-      toast.success("Status updated");
+      toast.success("CRM details updated");
       qc.invalidateQueries({ queryKey: ["inquiries"] });
-      // Update selected inquiry status if it's open
-      if (selectedInquiry) {
-        setSelectedInquiry(prev => prev ? { ...prev, status: prev.status } : null);
-      }
     },
-    onError: () => toast.error("Failed to update"),
+    onError: () => toast.error("Failed to update CRM"),
   });
+
+  const PIPELINE_STAGES = [
+    "New", "Contacted", "Requirement Received", "Catalogue Shared", 
+    "Sample Sent", "Negotiation", "Order Won", "Order Lost"
+  ];
 
   return (
     <AdminLayout>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="font-serif text-2xl font-bold text-primary">Inquiries</h1>
+        <h1 className="font-serif text-2xl font-bold text-primary">CRM / Lead Pipeline</h1>
         <Badge variant="outline" className="text-muted-foreground">
-          {inquiries.length} Total
+          {inquiries.length} Inquiries
         </Badge>
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-border bg-card">
-        <Table className="min-w-[560px]" data-ocid="admin.inquiries_table">
+        <Table className="min-w-[700px]" data-ocid="admin.inquiries_table">
           <TableHeader>
             <TableRow className="bg-slate-50 border-b">
-              <TableHead className="w-[180px] text-slate-900 font-bold">Name</TableHead>
-              <TableHead className="w-[120px] text-slate-900 font-bold">Country</TableHead>
-              <TableHead className="text-slate-900 font-bold">WhatsApp</TableHead>
-              <TableHead className="text-slate-900 font-bold">Requirement</TableHead>
-              <TableHead className="w-[100px] text-slate-900 font-bold">Status</TableHead>
+              <TableHead className="w-[180px] text-slate-900 font-bold">Buyer</TableHead>
+              <TableHead className="w-[100px] text-slate-900 font-bold">Source</TableHead>
+              <TableHead className="w-[150px] text-slate-900 font-bold">Pipeline Stage</TableHead>
+              <TableHead className="w-[100px] text-slate-900 font-bold">Qualified</TableHead>
+              <TableHead className="text-slate-900 font-bold">Status</TableHead>
               <TableHead className="text-right text-slate-900 font-bold">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -89,16 +90,39 @@ export default function AdminInquiries() {
                 className="hover:bg-slate-50 cursor-pointer transition-colors border-b"
                 onClick={() => setSelectedInquiry(inq)}
               >
-                <TableCell className="font-bold text-slate-900">{inq.name}</TableCell>
-                <TableCell className="text-sm text-slate-700">
-                  <span className="flex items-center gap-1.5">
-                    <Globe className="w-3.5 h-3.5 text-slate-400" />
-                    {inq.country}
-                  </span>
+                <TableCell>
+                  <p className="font-bold text-slate-900">{inq.name}</p>
+                  <p className="text-[10px] text-slate-400 uppercase flex items-center gap-1">
+                    <Globe className="w-2.5 h-2.5" /> {inq.country}
+                  </p>
                 </TableCell>
-                <TableCell className="text-sm font-mono text-slate-700">{inq.whatsapp}</TableCell>
-                <TableCell className="text-sm text-slate-600 max-w-[200px] truncate">
-                  {inq.requirement}
+                <TableCell>
+                  <Badge variant="secondary" className="text-[10px] bg-slate-100 text-slate-600 border-none">
+                    {inq.source || 'Website'}
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <Select
+                    value={inq.pipelineStage || "New"}
+                    onValueChange={(v) => crmMut.mutate({ id: inq.id, data: { pipelineStage: v } })}
+                  >
+                    <SelectTrigger className="h-7 text-[11px] bg-transparent border-none p-0 focus:ring-0">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {PIPELINE_STAGES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </TableCell>
+                <TableCell>
+                   <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className={`h-6 px-2 text-[10px] ${inq.qualified ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-400'}`}
+                    onClick={(e) => { e.stopPropagation(); crmMut.mutate({ id: inq.id, data: { qualified: !inq.qualified } }); }}
+                  >
+                    {inq.qualified ? "QUALIFIED" : "UNQUALIFIED"}
+                  </Button>
                 </TableCell>
                 <TableCell>
                   <Badge className={`${STATUS_COLORS[inq.status] || ""} capitalize text-[10px] font-bold`}>
@@ -158,10 +182,10 @@ export default function AdminInquiries() {
               <div>
                 <DialogTitle className="text-2xl font-serif font-bold text-primary flex items-center gap-2">
                   <User className="w-5 h-5 opacity-50" />
-                  Inquiry from {selectedInquiry?.name}
+                  Lead: {selectedInquiry?.name}
                 </DialogTitle>
                 <DialogDescription className="text-sm mt-1">
-                  Received on {selectedInquiry?.createdAt ? new Date(Number(selectedInquiry.createdAt)).toLocaleDateString() : 'Recent'}
+                  Received on {selectedInquiry?.createdAt ? new Date(Number(selectedInquiry.createdAt)).toLocaleDateString() : 'Recent'} via {selectedInquiry?.source || 'Website'}
                 </DialogDescription>
               </div>
               <Badge className={`${STATUS_COLORS[selectedInquiry?.status || 'new']} capitalize px-3 py-1`}>
@@ -191,6 +215,26 @@ export default function AdminInquiries() {
                   <p className="font-mono font-medium">{selectedInquiry?.whatsapp}</p>
                 </div>
               </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <ExternalLink className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Lead Source</p>
+                  <Select
+                    value={selectedInquiry?.source || "Website"}
+                    onValueChange={(v) => selectedInquiry && crmMut.mutate({ id: selectedInquiry.id, data: { source: v } })}
+                  >
+                    <SelectTrigger className="w-32 h-8 mt-1">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {["Website", "WhatsApp", "LinkedIn", "TradeIndia", "Alibaba", "IndiaMART", "Pinterest", "Instagram", "Referral"].map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-4">
@@ -199,18 +243,36 @@ export default function AdminInquiries() {
                   <FileText className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Status Management</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Pipeline Stage</p>
                   <Select
-                    value={selectedInquiry?.status}
-                    onValueChange={(v) => selectedInquiry && updateMut.mutate({ id: selectedInquiry.id, status: v })}
+                    value={selectedInquiry?.pipelineStage || "New"}
+                    onValueChange={(v) => selectedInquiry && crmMut.mutate({ id: selectedInquiry.id, data: { pipelineStage: v } })}
+                  >
+                    <SelectTrigger className="w-48 h-8 mt-1">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {PIPELINE_STAGES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <User className="w-4 h-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">Assigned To</p>
+                  <Select
+                    value={selectedInquiry?.assignedTo || "Admin"}
+                    onValueChange={(v) => selectedInquiry && crmMut.mutate({ id: selectedInquiry.id, data: { assignedTo: v } })}
                   >
                     <SelectTrigger className="w-32 h-8 mt-1">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="new">New</SelectItem>
-                      <SelectItem value="read">Read</SelectItem>
-                      <SelectItem value="replied">Replied</SelectItem>
+                      {["Admin", "Manager", "Sales Team"].map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
                     </SelectContent>
                   </Select>
                 </div>
