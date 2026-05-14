@@ -1,4 +1,28 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gemoraglobal-tje.caffeine.xyz"
+        }
+      ],
+      "destination": "https://www.gemoraglobal.co/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gemoraglobal.co"
+        }
+      ],
+      "destination": "https://www.gemoraglobal.co/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
