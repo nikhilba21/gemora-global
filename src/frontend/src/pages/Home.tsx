@@ -606,9 +606,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Trust Badges ──────────────────────────────────────── */}
       <section
-        ref={trustReveal.ref as React.RefObject<HTMLElement>}
         className="bg-card border-b border-border py-4 md:py-6"
         data-ocid="trust.section"
       >
@@ -619,7 +617,7 @@ export default function Home() {
               return (
                 <div
                   key={badge.label}
-                  className={`trust-badge text-xs md:text-sm ${trustReveal.visible ? `animate-fade-in-up animate-delay-${Math.min((i + 1) * 100, 400)}` : "opacity-0"}`}
+                  className="trust-badge text-xs md:text-sm"
                 >
                   <Icon
                     className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary"
@@ -846,15 +844,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Categories ────────────────────────────────────────── */}
-      <section
-        ref={categoriesReveal.ref as React.RefObject<HTMLElement>}
-        className="container py-8 md:py-12 px-4 md:px-6"
-      >
+      <section className="container py-8 md:py-12 px-4 md:px-6">
         <div className="text-center mb-6 md:mb-10">
-          <h2
-            className={`font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3 ${categoriesReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
-          >
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
             Our Collections
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
@@ -869,7 +861,7 @@ export default function Home() {
             <Link
               key={String(cat.id)}
               to={`/products?category=${cat.id}`}
-              className={`group relative overflow-hidden rounded-lg aspect-square cursor-pointer transition-transform duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg ${categoriesReveal.visible ? `animate-fade-in-up animate-delay-${Math.min((i + 1) * 100, 400)}` : "opacity-0"}`}
+              className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer transition-transform duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg"
               data-ocid="category.card"
             >
               <img
@@ -1053,15 +1045,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Why Choose Us ─────────────────────────────────────── */}
-      <section
-        ref={whyReveal.ref as React.RefObject<HTMLElement>}
-        className="container py-8 md:py-16 px-4 md:px-6"
-      >
+      <section className="container py-8 md:py-16 px-4 md:px-6">
         <div className="text-center mb-6 md:mb-10">
-          <h2
-            className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${whyReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
-          >
+          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
             Why Boutique Owners Choose Us
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
@@ -1076,7 +1062,7 @@ export default function Home() {
           {WHY_CHOOSE.map((item, i) => (
             <div
               key={item.title}
-              className={`text-center p-5 md:p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg ${whyReveal.visible ? `animate-fade-in-up animate-delay-${(i + 1) * 100}` : "opacity-0"}`}
+              className="text-center p-5 md:p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-200 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-lg"
             >
               <div
                 className="text-3xl md:text-4xl mb-3 md:mb-4"
@@ -1161,16 +1147,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Testimonials ───────────────────────────────────────── */}
-      <section
-        ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
-        className="bg-muted/30 py-8 md:py-16"
-      >
+      <section className="bg-muted/30 py-8 md:py-16">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-6 md:mb-10">
-            <h2
-              className={`font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3 ${testimonialsReveal.visible ? "animate-fade-in-up" : "opacity-0"}`}
-            >
+            <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-3">
               Wholesale Buyer Experiences
             </h2>
           </div>
@@ -1178,7 +1158,7 @@ export default function Home() {
             {displayTestimonials.slice(0, 3).map((t, i) => (
               <Card
                 key={String(t.id)}
-                className={`bg-card border-border hover:border-primary/40 transition-all duration-200 hover:scale-[1.02] hover:shadow-md ${testimonialsReveal.visible ? `animate-fade-in-up animate-delay-${(i + 1) * 100}` : "opacity-0"}`}
+                className="bg-card border-border hover:border-primary/40 transition-all duration-200 hover:scale-[1.02] hover:shadow-md"
               >
                 <CardContent className="p-4 md:p-6">
                   <div
