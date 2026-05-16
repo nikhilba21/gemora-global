@@ -114,6 +114,13 @@ import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesa
 import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
 import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
 import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesale";
+import WholesaleJewelryMOQ50 from "./pages/seo/WholesaleJewelryMOQ50";
+import OxidizedSilverJewelryWholesale from "./pages/seo/OxidizedSilverJewelryWholesale";
+import CostumeJewelryWholesaleSupplier from "./pages/seo/CostumeJewelryWholesaleSupplier";
+import BridalJewelrySetsWholesale from "./pages/seo/BridalJewelrySetsWholesale";
+import NecklaceSetsWholesale from "./pages/seo/NecklaceSetsWholesale";
+import JhumkaEarringsWholesale from "./pages/seo/JhumkaEarringsWholesale";
+import NoMiddlemanJewelryWholesale from "./pages/seo/NoMiddlemanJewelryWholesale";
 
 
 function VisitTracker() {
@@ -661,6 +668,13 @@ export default function App() {
         <Route path="/antique-jewellery-wholesale-india" element={<AntiqueJewelleryWholesale />} />
         <Route path="/costume-jewellery-wholesale-uk" element={<CostumeJewelleryWholesaleUK />} />
         <Route path="/artificial-jewellery-wholesale" element={<ArtificialJewelleryWholesale />} />
+        <Route path="/wholesale-jewelry-moq-50" element={<WholesaleJewelryMOQ50 />} />
+        <Route path="/oxidized-silver-jewelry-wholesale-exporter" element={<OxidizedSilverJewelryWholesale />} />
+        <Route path="/costume-jewelry-wholesale-supplier-india" element={<CostumeJewelryWholesaleSupplier />} />
+        <Route path="/wholesale-bridal-jewelry-sets" element={<BridalJewelrySetsWholesale />} />
+        <Route path="/necklace-sets-wholesale-exporter" element={<NecklaceSetsWholesale />} />
+        <Route path="/jhumka-earrings-wholesale-bulk" element={<JhumkaEarringsWholesale />} />
+        <Route path="/wholesale-jewelry-no-middleman" element={<NoMiddlemanJewelryWholesale />} />
         <Route
           path="/jewellery-exporter-australia"
           element={<JewelleryExporterAustralia />}

@@ -29,26 +29,29 @@ function InstagramIcon() {
 
 /* ── SEO-Optimized Footer Link Data ─────────────────────────────────────────── */
 
-const WHOLESALE_CATEGORIES = [
-  { label: "Wholesale Kundan Jewellery", to: "/kundan-jewellery-wholesale" },
-  { label: "Wholesale Bridal Jewellery Sets", to: "/bridal-jewellery-wholesale" },
-  { label: "Wholesale Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
+  { label: "Wholesale Kundan Jewelry Exporter", to: "/kundan-jewellery-wholesale" },
+  { label: "Wholesale Bridal Jewelry Sets", to: "/wholesale-bridal-jewelry-sets" },
+  { label: "Wholesale Necklace Sets Exporter", to: "/necklace-sets-wholesale-exporter" },
+  { label: "Bulk Jhumka Earrings Wholesale", to: "/jhumka-earrings-wholesale-bulk" },
+  { label: "Wholesale Jewelry MOQ 50 Units", to: "/wholesale-jewelry-moq-50" },
+  { label: "Oxidized Silver Jewelry Wholesale", to: "/oxidized-silver-jewelry-wholesale-exporter" },
   { label: "Wholesale Meenakari Jewellery", to: "/meenakari-jewellery-wholesale" },
   { label: "Wholesale American Diamond Jewellery", to: "/american-diamond-jewellery-wholesale" },
   { label: "Wholesale Gold Plated Jewellery", to: "/gold-plated-jewellery-wholesale-india" },
   { label: "Wholesale Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
   { label: "Wholesale Temple Jewellery", to: "/temple-jewellery-manufacturer" },
-  { label: "Bulk Jewellery Supplier India", to: "/bulk-jewellery-supplier" },
+  { label: "Bulk Jewelry Supplier India", to: "/bulk-jewellery-supplier" },
 ];
 
 const MANUFACTURER_EXPORTER = [
-  { label: "Imitation Jewellery Manufacturer Jaipur", to: "/imitation-jewellery-manufacturer-jaipur" },
+  { label: "Artificial Jewelry Manufacturer Jaipur", to: "/imitation-jewellery-manufacturer-jaipur" },
+  { label: "Wholesale Jewelry Exporter India", to: "/imitation-jewellery-exporter-india" },
+  { label: "Jewelry Wholesale No Middleman", to: "/wholesale-jewelry-no-middleman" },
+  { label: "Costume Jewelry Wholesale Supplier", to: "/costume-jewelry-wholesale-supplier-india" },
   { label: "Fashion Jewellery Exporter India", to: "/fashion-jewellery-exporter-india" },
-  { label: "Artificial Jewellery Exporter India", to: "/artificial-jewellery-exporter" },
   { label: "Wholesale Imitation Jewellery Manufacturer", to: "/wholesale-imitation-jewellery-manufacturer-exporter-india" },
   { label: "Custom Jewellery Manufacturer India", to: "/custom-jewellery-manufacturer" },
   { label: "Private Label Jewellery India", to: "/private-label-jewellery-india" },
-  { label: "Fashion Jewellery Manufacturer India", to: "/fashion-jewellery-manufacturer-india" },
   { label: "Wholesale Jewellery Rajasthan", to: "/wholesale-jewellery-rajasthan" },
 ];
 

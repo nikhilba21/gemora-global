@@ -6,12 +6,12 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function KundanJewelleryWholesale() {
   return (
     <SeoLandingPage
-      title="Kundan Jewelry Wholesale MOQ 50 Units | Gemora Global"
-      metaDescription="Premium Kundan jewelry wholesale from Jaipur. Source bulk kundan necklace sets directly from Gemora Global factory. Low MOQ 50 units & global export."
+      title="Kundan Jewelry Exporter | Wholesale MOQ 50 Units | Gemora Global"
+      metaDescription="Leading Kundan jewelry exporter from Jaipur. Source bulk kundan necklace sets directly from Gemora Global factory. Low MOQ 50 units & global export to USA, UK, UAE."
       canonical="https://www.gemoraglobal.co/kundan-jewellery-wholesale"
-      h1="Kundan Jewelry Wholesale MOQ 50 Units"
-      targetKeyword="kundan jewelry wholesale moq 50 units"
-      heroSubtitle="Gemora Global is a leading kundan jewelry wholesale supplier from Jaipur, India. Factory-direct pricing on kundan necklaces, earrings, and bridal sets. MOQ strictly from 50 units with worldwide shipping."
+      h1="Kundan Jewelry Exporter — Wholesale MOQ 50 Units"
+      targetKeyword="kundan jewelry exporter"
+      heroSubtitle="Gemora Global is a premier kundan jewelry exporter and wholesale supplier from Jaipur, India. Factory-direct pricing on handcrafted kundan bridal sets with a strictly low MOQ of 50 units and worldwide shipping."
       bodyContent={
         <>
           <h2 className="text-xl font-serif font-bold text-primary mt-0">

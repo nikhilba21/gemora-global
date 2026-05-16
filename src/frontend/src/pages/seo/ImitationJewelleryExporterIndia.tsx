@@ -4,12 +4,12 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function ImitationJewelleryExporterIndia() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Exporter India | Export Docs & Trade Terms"
-      metaDescription="Gemora Global exports imitation jewellery from Jaipur to 30+ countries. Complete export documentation, HS codes, FIRC certificates, international shipping. Est. 2011."
+      title="Wholesale Jewelry Exporter India | MOQ 50 Units | Gemora Global"
+      metaDescription="Leading wholesale jewelry exporter in India. Source kundan, meenakari and bridal imitation jewelry directly from Jaipur factory. MOQ 50 units. Exporting to 30+ countries."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-exporter-india"
-      h1="Imitation Jewellery Exporter India — Complete Export Solutions from Jaipur"
-      targetKeyword="imitation jewellery exporter india"
-      heroSubtitle="Established 2011, exporting to 30+ countries. Gemora Global is a Jaipur-based imitation jewellery exporter with full export documentation — commercial invoice, certificate of origin, HS code 7117, FIRC compliance, and international freight via DHL, FedEx, and sea cargo."
+      h1="Wholesale Jewelry Exporter India — Factory Direct from Jaipur"
+      targetKeyword="wholesale jewelry exporter india"
+      heroSubtitle="Established 2011, Gemora Global is a premier wholesale jewelry exporter in India. Based in Jaipur, we provide factory-direct pricing on imitation jewelry with full export documentation and a low MOQ of just 50 units."
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
