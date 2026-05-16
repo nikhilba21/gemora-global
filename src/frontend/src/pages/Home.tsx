@@ -502,7 +502,7 @@ export default function Home() {
             fetchPriority={idx === 0 ? "high" : undefined}
             width={1600}
             height={900}
-            style={{ display: "block" }}
+            style={{ display: "block", aspectRatio: "1600/900" }}
           />
         ))}
         {/* Very subtle darkening overlay */}

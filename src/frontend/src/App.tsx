@@ -22,7 +22,7 @@ const Contact = React.lazy(() => import("./pages/Contact"));
 const ExportMarkets = React.lazy(() => import("./pages/ExportMarkets"));
 const FAQ = React.lazy(() => import("./pages/FAQ"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
-const Home = React.lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
 const JewelleryExporterKuwait = React.lazy(() => import("./pages/JewelleryExporterKuwait"));
 const JewelleryExporterMalaysia = React.lazy(() => import("./pages/JewelleryExporterMalaysia"));
 const JewelleryExporterNigeria = React.lazy(() => import("./pages/JewelleryExporterNigeria"));
