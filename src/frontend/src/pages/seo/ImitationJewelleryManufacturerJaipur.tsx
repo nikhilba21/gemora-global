@@ -6,12 +6,12 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function ImitationJewelleryManufacturerJaipur() {
   return (
     <SeoLandingPage
-      title="Imitation Jewellery Manufacturer Jaipur | Gemora Global"
-      metaDescription="Jaipur's leading imitation jewellery manufacturer. Direct wholesale kundan, meenakari, and bridal sets. Expert craftsmanship, anti-tarnish finish, MOQ 50, worldwide export from Jaipur."
+      title="Factory Direct Jewelry Exporter Jaipur | Gemora Global"
+      metaDescription="Factory direct jewelry exporter in Jaipur. Source wholesale kundan, meenakari, and bridal sets directly from the manufacturer. MOQ 50 units with worldwide shipping."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-manufacturer-jaipur"
-      h1="Imitation Jewellery Manufacturer in Jaipur — GEMORA GLOBAL"
-      targetKeyword="imitation jewellery manufacturer Jaipur"
-      heroSubtitle="Gemora Global is Jaipur's trusted imitation jewellery manufacturer and B2B wholesale exporter. Factory-direct pricing on 500+ designs — kundan, meenakari, temple, oxidised, and bridal sets. MOQ from 50 units with worldwide shipping."
+      h1="Factory Direct Jewelry Exporter in Jaipur"
+      targetKeyword="factory direct jewelry exporter jaipur"
+      heroSubtitle="Gemora Global is Jaipur's trusted factory direct jewelry exporter and manufacturer. Get factory-direct pricing on 500+ designs — kundan, meenakari, temple, oxidised, and bridal sets. MOQ from 50 units with worldwide shipping."
       bodyContent={
         <>
           <h2 className="text-xl font-serif font-bold text-primary mt-0">

@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function ImitationJewellerySupplierUsa() {
   return (
     <SeoLandingPage
-      title="Wholesale Imitation Jewellery USA | Indian Manufacturer Gemora Global"
-      metaDescription="Premium wholesale imitation jewellery supplier for USA boutiques in NYC, LA, and Houston. Source handcrafted Indian fashion jewellery with DHL shipping and 50 unit MOQ."
+      title="Artificial Jewelry Bulk Supplier USA Export | Gemora Global"
+      metaDescription="Premium artificial jewelry bulk supplier for USA export. Source handcrafted Indian fashion jewelry with DHL shipping and 50 unit MOQ."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-supplier-usa"
-      h1="Indian Imitation Jewellery Supplier for USA: Wholesale Excellence"
-      targetKeyword="imitation-jewellery-supplier-usa"
-      heroSubtitle="Gemora Global is the most trusted imitation jewellery supplier for USA boutiques, Amazon sellers, and fashion retailers. Factory-direct from Jaipur with 1700+ designs."
+      h1="Artificial Jewelry Bulk Supplier for USA Export"
+      targetKeyword="artificial jewelry bulk supplier usa export"
+      heroSubtitle="Gemora Global is the most trusted artificial jewelry bulk supplier for USA boutiques, Amazon sellers, and fashion retailers. Factory-direct USA export from Jaipur."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
