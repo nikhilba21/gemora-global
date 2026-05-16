@@ -29,6 +29,7 @@ function InstagramIcon() {
 
 /* ── SEO-Optimized Footer Link Data ─────────────────────────────────────────── */
 
+const WHOLESALE_CATEGORIES = [
   { label: "Wholesale Kundan Jewelry Exporter", to: "/kundan-jewellery-wholesale" },
   { label: "Wholesale Bridal Jewelry Sets", to: "/wholesale-bridal-jewelry-sets" },
   { label: "Wholesale Necklace Sets Exporter", to: "/necklace-sets-wholesale-exporter" },
