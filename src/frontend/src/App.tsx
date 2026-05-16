@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
 import AdminGuard from "./components/AdminGuard";
 import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
