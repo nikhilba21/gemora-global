@@ -174,12 +174,11 @@ export function usePageSEO(options: PageSEOOptions) {
       email: "globalgemora@gmail.com",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/assets/uploads/logo-removebg-preview-1.png`,
+        url: `${BASE_URL}/assets/uploads/logo-removebg-preview-1-1.png`,
         width: 300,
         height: 60,
       },
-      description:
-        "Jaipur-based imitation jewellery manufacturer and exporter, established 2011. 500+ wholesale designs. MOQ from 50 units. Anti-tarnish finishing. Shipping to 30+ countries worldwide.",
+      description: "Gemora Global — Jaipur-based imitation jewellery manufacturer & exporter since 2011. 500+ wholesale designs, MOQ 50 units, anti-tarnish finish. Shipping to 30+ countries worldwide.",
       foundingDate: "2011",
       address: {
         "@type": "PostalAddress",

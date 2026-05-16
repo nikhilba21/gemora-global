@@ -163,7 +163,7 @@ export default function SeoLandingPage({
     ogTitle: title,
     ogDescription: metaDescription,
     ogImage:
-      "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
+      "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1-1.png",
     hreflangs,
     schema: filteredSchema ?? {
       "@context": "https://schema.org",

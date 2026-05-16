@@ -42,6 +42,8 @@ const WHOLESALE_CATEGORIES = [
   { label: "Wholesale Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
   { label: "Wholesale Temple Jewellery", to: "/temple-jewellery-manufacturer" },
   { label: "Bulk Jewelry Supplier India", to: "/bulk-jewellery-supplier" },
+  { label: "American Diamond Jewelry Exporter", to: "/american-diamond-jewelry-exporter" },
+  { label: "Artificial Jewelry Exporter MOQ", to: "/artificial-jewelry-exporter-moq" },
 ];
 
 const MANUFACTURER_EXPORTER = [
@@ -54,6 +56,7 @@ const MANUFACTURER_EXPORTER = [
   { label: "Custom Jewellery Manufacturer India", to: "/custom-jewellery-manufacturer" },
   { label: "Private Label Jewellery India", to: "/private-label-jewellery-india" },
   { label: "Wholesale Jewellery Rajasthan", to: "/wholesale-jewellery-rajasthan" },
+  { label: "Factory Direct Jewelry Exporter", to: "/factory-direct-jewelry-exporter" },
 ];
 
 const EXPORT_COUNTRIES = [
@@ -88,6 +91,9 @@ const BLOG_LINKS = [
   { label: "Why Indian Jewellery Dominates Global Markets", to: "/blog/why-indian-imitation-jewellery-dominates-global-markets" },
   { label: "Bridal Jewellery for International Buyers", to: "/blog/bridal-jewellery-collections-international-buyers" },
   { label: "Export Jewellery India to USA Guide", to: "/blog/export-jewellery-india-usa-guide" },
+  { label: "Wholesale Jewelry MOQ 50 Units Guide", to: "/blog/wholesale-jewelry-moq-50-units-guide" },
+  { label: "Kundan Jewelry Wholesale Guide 2026", to: "/blog/kundan-jewelry-wholesale-guide-2026" },
+  { label: "How to Import Jewelry from India", to: "/blog/how-to-import-jewelry-from-india-guide" },
 ];
 
 const HELP_SUPPORT_LINKS = [

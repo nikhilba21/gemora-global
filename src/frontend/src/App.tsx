@@ -1,126 +1,154 @@
-import { Toaster } from "@/components/ui/sonner";
-import { useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
 import AdminGuard from "./components/AdminGuard";
 import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { useActor } from "./hooks/useActor";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Contact from "./pages/Contact";
-import ExportMarkets from "./pages/ExportMarkets";
-import FAQ from "./pages/FAQ";
-import Gallery from "./pages/Gallery";
-import Home from "./pages/Home";
-import JewelleryExporterKuwait from "./pages/JewelleryExporterKuwait";
-import JewelleryExporterMalaysia from "./pages/JewelleryExporterMalaysia";
-import JewelleryExporterNigeria from "./pages/JewelleryExporterNigeria";
-import JewelleryExporterSaudiArabia from "./pages/JewelleryExporterSaudiArabia";
-import JewelleryExporterSriLanka from "./pages/JewelleryExporterSriLanka";
-import NotFound from "./pages/NotFound";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ProductDetail from "./pages/ProductDetail";
-import Products from "./pages/Products";
-import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
-import TermsAndConditions from "./pages/TermsAndConditions";
-import Wholesale from "./pages/Wholesale";
-import Catalogues from "./pages/Catalogues";
-import WhyChooseUs from "./pages/WhyChooseUs";
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh]">
+    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
+// Lazy imports
+const About = React.lazy(() => import("./pages/About"));
+const Blog = React.lazy(() => import("./pages/Blog"));
+const BlogPost = React.lazy(() => import("./pages/BlogPost"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const ExportMarkets = React.lazy(() => import("./pages/ExportMarkets"));
+const FAQ = React.lazy(() => import("./pages/FAQ"));
+const Gallery = React.lazy(() => import("./pages/Gallery"));
+const Home = React.lazy(() => import("./pages/Home"));
+const JewelleryExporterKuwait = React.lazy(() => import("./pages/JewelleryExporterKuwait"));
+const JewelleryExporterMalaysia = React.lazy(() => import("./pages/JewelleryExporterMalaysia"));
+const JewelleryExporterNigeria = React.lazy(() => import("./pages/JewelleryExporterNigeria"));
+const JewelleryExporterSaudiArabia = React.lazy(() => import("./pages/JewelleryExporterSaudiArabia"));
+const JewelleryExporterSriLanka = React.lazy(() => import("./pages/JewelleryExporterSriLanka"));
+const NotFound = React.lazy(() => import("./pages/NotFound"));
+const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+const Products = React.lazy(() => import("./pages/Products"));
+const ReturnRefundPolicy = React.lazy(() => import("./pages/ReturnRefundPolicy"));
+const TermsAndConditions = React.lazy(() => import("./pages/TermsAndConditions"));
+const Wholesale = React.lazy(() => import("./pages/Wholesale"));
+const Catalogues = React.lazy(() => import("./pages/Catalogues"));
+const WhyChooseUs = React.lazy(() => import("./pages/WhyChooseUs"));
+
 // Admin
-import AdminAnalytics from "./pages/admin/AdminAnalytics";
-import AdminAutomation from "./pages/admin/AdminAutomation";
-import AdminBlog from "./pages/admin/AdminBlog";
-import AdminCMS from "./pages/admin/AdminCMS";
-import AdminCatalogue from "./pages/admin/AdminCatalogue";
-import AdminCategories from "./pages/admin/AdminCategories";
-import AdminContent from "./pages/admin/AdminContent";
-import AdminCountrySettings from "./pages/admin/AdminCountrySettings";
-import AdminCustomers from "./pages/admin/AdminCustomers";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import AdminGallery from "./pages/admin/AdminGallery";
-import AdminInquiries from "./pages/admin/AdminInquiries";
-import AdminLogin from "./pages/admin/AdminLogin";
-import AdminLogistics from "./pages/admin/AdminLogistics";
-import AdminMarketing from "./pages/admin/AdminMarketing";
-import AdminOrders from "./pages/admin/AdminOrders";
-import AdminPayments from "./pages/admin/AdminPayments";
-import AdminProducts from "./pages/admin/AdminProducts";
-import AdminSettings from "./pages/admin/AdminSettings";
-import AdminSystemSettings from "./pages/admin/AdminSystemSettings";
-import AdminTestimonials from "./pages/admin/AdminTestimonials";
-import AdminWebsiteSettings from "./pages/admin/AdminWebsiteSettings";
-import AdminWhatsAppLeads from "./pages/admin/AdminWhatsAppLeads";
-import AdminGalleryFolders from "./pages/admin/AdminGalleryFolders";
-import AdminEmailCampaigns from "./pages/admin/AdminEmailCampaigns";
+const AdminAnalytics = React.lazy(() => import("./pages/admin/AdminAnalytics"));
+const AdminAutomation = React.lazy(() => import("./pages/admin/AdminAutomation"));
+const AdminBlog = React.lazy(() => import("./pages/admin/AdminBlog"));
+const AdminCMS = React.lazy(() => import("./pages/admin/AdminCMS"));
+const AdminCatalogue = React.lazy(() => import("./pages/admin/AdminCatalogue"));
+const AdminCategories = React.lazy(() => import("./pages/admin/AdminCategories"));
+const AdminContent = React.lazy(() => import("./pages/admin/AdminContent"));
+const AdminCountrySettings = React.lazy(() => import("./pages/admin/AdminCountrySettings"));
+const AdminCustomers = React.lazy(() => import("./pages/admin/AdminCustomers"));
+const AdminDashboard = React.lazy(() => import("./pages/admin/AdminDashboard"));
+const AdminGallery = React.lazy(() => import("./pages/admin/AdminGallery"));
+const AdminInquiries = React.lazy(() => import("./pages/admin/AdminInquiries"));
+const AdminLogin = React.lazy(() => import("./pages/admin/AdminLogin"));
+const AdminLogistics = React.lazy(() => import("./pages/admin/AdminLogistics"));
+const AdminMarketing = React.lazy(() => import("./pages/admin/AdminMarketing"));
+const AdminOrders = React.lazy(() => import("./pages/admin/AdminOrders"));
+const AdminPayments = React.lazy(() => import("./pages/admin/AdminPayments"));
+const AdminProducts = React.lazy(() => import("./pages/admin/AdminProducts"));
+const AdminSettings = React.lazy(() => import("./pages/admin/AdminSettings"));
+const AdminSystemSettings = React.lazy(() => import("./pages/admin/AdminSystemSettings"));
+const AdminTestimonials = React.lazy(() => import("./pages/admin/AdminTestimonials"));
+const AdminWebsiteSettings = React.lazy(() => import("./pages/admin/AdminWebsiteSettings"));
+const AdminWhatsAppLeads = React.lazy(() => import("./pages/admin/AdminWhatsAppLeads"));
+const AdminGalleryFolders = React.lazy(() => import("./pages/admin/AdminGalleryFolders"));
+const AdminEmailCampaigns = React.lazy(() => import("./pages/admin/AdminEmailCampaigns"));
+
 // Collections
-import Bracelets from "./pages/collections/BraceletsCollection";
-import DailyWear from "./pages/collections/DailyWearJewelry";
-import Earrings from "./pages/collections/EarringsCollection";
-import Korean from "./pages/collections/KoreanJewelry";
-import Minimalist from "./pages/collections/MinimalistJewelry";
-import Necklaces from "./pages/collections/NecklacesCollection";
-import Oxidised from "./pages/collections/OxidisedJewelry";
-import PartyWear from "./pages/collections/PartyWearJewelry";
-import ProgrammaticCollection from "./pages/collections/ProgrammaticCollection";
-import Rings from "./pages/collections/RingsCollection";
-import TrendyJewelry from "./pages/collections/TrendyJewelry";
+const Bracelets = React.lazy(() => import("./pages/collections/BraceletsCollection"));
+const DailyWear = React.lazy(() => import("./pages/collections/DailyWearJewelry"));
+const Earrings = React.lazy(() => import("./pages/collections/EarringsCollection"));
+const Korean = React.lazy(() => import("./pages/collections/KoreanJewelry"));
+const Minimalist = React.lazy(() => import("./pages/collections/MinimalistJewelry"));
+const Necklaces = React.lazy(() => import("./pages/collections/NecklacesCollection"));
+const Oxidised = React.lazy(() => import("./pages/collections/OxidisedJewelry"));
+const PartyWear = React.lazy(() => import("./pages/collections/PartyWearJewelry"));
+const ProgrammaticCollection = React.lazy(() => import("./pages/collections/ProgrammaticCollection"));
+const Rings = React.lazy(() => import("./pages/collections/RingsCollection"));
+const TrendyJewelry = React.lazy(() => import("./pages/collections/TrendyJewelry"));
+
 // Export Markets
-import ExportAustralia from "./pages/export-markets/Australia";
-import ExportCanada from "./pages/export-markets/Canada";
-import ExportFrance from "./pages/export-markets/France";
-import ExportKuwait from "./pages/export-markets/Kuwait";
-import ExportMalaysia from "./pages/export-markets/Malaysia";
-import ExportNigeria from "./pages/export-markets/Nigeria";
-import ExportSaudiArabia from "./pages/export-markets/SaudiArabia";
-import ExportSingapore from "./pages/export-markets/Singapore";
-import ExportSriLanka from "./pages/export-markets/SriLanka";
-import ExportUAE from "./pages/export-markets/UAE";
-import ExportUK from "./pages/export-markets/UK";
-import ExportUSA from "./pages/export-markets/USA";
+const ExportAustralia = React.lazy(() => import("./pages/export-markets/Australia"));
+const ExportCanada = React.lazy(() => import("./pages/export-markets/Canada"));
+const ExportFrance = React.lazy(() => import("./pages/export-markets/France"));
+const ExportKuwait = React.lazy(() => import("./pages/export-markets/Kuwait"));
+const ExportMalaysia = React.lazy(() => import("./pages/export-markets/Malaysia"));
+const ExportNigeria = React.lazy(() => import("./pages/export-markets/Nigeria"));
+const ExportSaudiArabia = React.lazy(() => import("./pages/export-markets/SaudiArabia"));
+const ExportSingapore = React.lazy(() => import("./pages/export-markets/Singapore"));
+const ExportSriLanka = React.lazy(() => import("./pages/export-markets/SriLanka"));
+const ExportUAE = React.lazy(() => import("./pages/export-markets/UAE"));
+const ExportUK = React.lazy(() => import("./pages/export-markets/UK"));
+const ExportUSA = React.lazy(() => import("./pages/export-markets/USA"));
+
 // SEO pages
-import ArtificialJewelleryExporter from "./pages/seo/ArtificialJewelleryExporter";
-import BridalImitationJewellery from "./pages/seo/BridalImitationJewellery";
-import BridalImitationJewelleryWholesale from "./pages/seo/BridalImitationJewelleryWholesale";
-import BridalJewelleryWholesale from "./pages/seo/BridalJewelleryWholesale";
-import BulkJewellerySupplier from "./pages/seo/BulkJewellerySupplier";
-import CustomJewelleryManufacturer from "./pages/seo/CustomJewelleryManufacturer";
-import FashionJewelleryExporter from "./pages/seo/FashionJewelleryExporter";
-import FashionJewelleryExporterIndia from "./pages/seo/FashionJewelleryExporterIndia";
-import FashionJewelleryManufacturerIndia from "./pages/seo/FashionJewelleryManufacturerIndia";
-import ImitationJewelleryExporterIndia from "./pages/seo/ImitationJewelleryExporterIndia";
-import ImitationJewelleryManufacturerJaipur from "./pages/seo/ImitationJewelleryManufacturerJaipur";
-import ImitationJewellerySupplierUsa from "./pages/seo/ImitationJewellerySupplierUsa";
-import JewelleryExporterAustralia from "./pages/seo/JewelleryExporterAustralia";
-import JewelleryExporterCanada from "./pages/seo/JewelleryExporterCanada";
-import JewelleryExporterEurope from "./pages/seo/JewelleryExporterEurope";
-import JewelleryExporterFrance from "./pages/seo/JewelleryExporterFrance";
-import JewelleryExporterSingapore from "./pages/seo/JewelleryExporterSingapore";
-import JewelleryExporterToUsa from "./pages/seo/JewelleryExporterToUsa";
-import JewelleryExporterUae from "./pages/seo/JewelleryExporterUae";
-import JewellerySupplierUk from "./pages/seo/JewellerySupplierUk";
-import KundanJewelleryWholesale from "./pages/seo/KundanJewelleryWholesale";
-import MeenakariJewelleryWholesale from "./pages/seo/MeenakariJewelleryWholesale";
-import OxidisedJewellerySupplier from "./pages/seo/OxidisedJewellerySupplier";
-import OxidisedJewelleryWholesale from "./pages/seo/OxidisedJewelleryWholesale";
-import PrivateLabelJewelleryIndia from "./pages/seo/PrivateLabelJewelleryIndia";
-import TempleJewelleryManufacturer from "./pages/seo/TempleJewelleryManufacturer";
-import WholesaleJewelleryRajasthan from "./pages/seo/WholesaleJewelleryRajasthan";
-import WholesaleJewelleryUk from "./pages/seo/WholesaleJewelleryUk";
-import AmericanDiamondJewelleryWholesale from "./pages/seo/AmericanDiamondJewelleryWholesale";
-import WholesaleImitationJewelleryManufacturerExporter from "./pages/seo/WholesaleImitationJewelleryManufacturerExporter";
-import GoldPlatedJewelleryWholesale from "./pages/seo/GoldPlatedJewelleryWholesale";
-import AntiqueJewelleryWholesale from "./pages/seo/AntiqueJewelleryWholesale";
-import CostumeJewelleryWholesaleUK from "./pages/seo/CostumeJewelleryWholesaleUK";
-import ArtificialJewelleryWholesale from "./pages/seo/ArtificialJewelleryWholesale";
-import WholesaleJewelryMOQ50 from "./pages/seo/WholesaleJewelryMOQ50";
-import OxidizedSilverJewelryWholesale from "./pages/seo/OxidizedSilverJewelryWholesale";
-import CostumeJewelryWholesaleSupplier from "./pages/seo/CostumeJewelryWholesaleSupplier";
-import BridalJewelrySetsWholesale from "./pages/seo/BridalJewelrySetsWholesale";
-import NecklaceSetsWholesale from "./pages/seo/NecklaceSetsWholesale";
-import JhumkaEarringsWholesale from "./pages/seo/JhumkaEarringsWholesale";
-import NoMiddlemanJewelryWholesale from "./pages/seo/NoMiddlemanJewelryWholesale";
+const ArtificialJewelleryExporter = React.lazy(() => import("./pages/seo/ArtificialJewelleryExporter"));
+const BridalImitationJewellery = React.lazy(() => import("./pages/seo/BridalImitationJewellery"));
+const BridalImitationJewelleryWholesale = React.lazy(() => import("./pages/seo/BridalImitationJewelleryWholesale"));
+const BridalJewelleryWholesale = React.lazy(() => import("./pages/seo/BridalJewelleryWholesale"));
+const BulkJewellerySupplier = React.lazy(() => import("./pages/seo/BulkJewellerySupplier"));
+const CustomJewelleryManufacturer = React.lazy(() => import("./pages/seo/CustomJewelleryManufacturer"));
+const FashionJewelleryExporter = React.lazy(() => import("./pages/seo/FashionJewelleryExporter"));
+const FashionJewelleryExporterIndia = React.lazy(() => import("./pages/seo/FashionJewelleryExporterIndia"));
+const FashionJewelleryManufacturerIndia = React.lazy(() => import("./pages/seo/FashionJewelleryManufacturerIndia"));
+const ImitationJewelleryExporterIndia = React.lazy(() => import("./pages/seo/ImitationJewelleryExporterIndia"));
+const ImitationJewelleryManufacturerJaipur = React.lazy(() => import("./pages/seo/ImitationJewelleryManufacturerJaipur"));
+const ImitationJewellerySupplierUsa = React.lazy(() => import("./pages/seo/ImitationJewellerySupplierUsa"));
+const JewelleryExporterAustralia = React.lazy(() => import("./pages/seo/JewelleryExporterAustralia"));
+const JewelleryExporterCanada = React.lazy(() => import("./pages/seo/JewelleryExporterCanada"));
+const JewelleryExporterEurope = React.lazy(() => import("./pages/seo/JewelleryExporterEurope"));
+const JewelleryExporterFrance = React.lazy(() => import("./pages/seo/JewelleryExporterFrance"));
+const JewelleryExporterSingapore = React.lazy(() => import("./pages/seo/JewelleryExporterSingapore"));
+const JewelleryExporterToUsa = React.lazy(() => import("./pages/seo/JewelleryExporterToUsa"));
+const JewelleryExporterUae = React.lazy(() => import("./pages/seo/JewelleryExporterUae"));
+const JewellerySupplierUk = React.lazy(() => import("./pages/seo/JewellerySupplierUk"));
+const KundanJewelleryWholesale = React.lazy(() => import("./pages/seo/KundanJewelleryWholesale"));
+const MeenakariJewelleryWholesale = React.lazy(() => import("./pages/seo/MeenakariJewelleryWholesale"));
+const OxidisedJewellerySupplier = React.lazy(() => import("./pages/seo/OxidisedJewellerySupplier"));
+const OxidisedJewelleryWholesale = React.lazy(() => import("./pages/seo/OxidisedJewelleryWholesale"));
+const PrivateLabelJewelleryIndia = React.lazy(() => import("./pages/seo/PrivateLabelJewelleryIndia"));
+const TempleJewelleryManufacturer = React.lazy(() => import("./pages/seo/TempleJewelleryManufacturer"));
+const WholesaleJewelleryRajasthan = React.lazy(() => import("./pages/seo/WholesaleJewelleryRajasthan"));
+const WholesaleJewelleryUk = React.lazy(() => import("./pages/seo/WholesaleJewelleryUk"));
+const FactoryDirectJewelryExporter = React.lazy(() => import("./pages/seo/FactoryDirectJewelryExporter"));
+const ArtificialJewelryExporterMOQ = React.lazy(() => import("./pages/seo/ArtificialJewelryExporterMOQ"));
+const AmericanDiamondJewelryExporter = React.lazy(() => import("./pages/seo/AmericanDiamondJewelryExporter"));
+const AmericanDiamondJewelleryWholesale = React.lazy(() => import("./pages/seo/AmericanDiamondJewelleryWholesale"));
+const WholesaleImitationJewelleryManufacturerExporter = React.lazy(() => import("./pages/seo/WholesaleImitationJewelleryManufacturerExporter"));
+const GoldPlatedJewelleryWholesale = React.lazy(() => import("./pages/seo/GoldPlatedJewelleryWholesale"));
+const AntiqueJewelleryWholesale = React.lazy(() => import("./pages/seo/AntiqueJewelleryWholesale"));
+const CostumeJewelleryWholesaleUK = React.lazy(() => import("./pages/seo/CostumeJewelleryWholesaleUK"));
+const ArtificialJewelleryWholesale = React.lazy(() => import("./pages/seo/ArtificialJewelleryWholesale"));
+const WholesaleJewelryMOQ50 = React.lazy(() => import("./pages/seo/WholesaleJewelryMOQ50"));
+const OxidizedSilverJewelryWholesale = React.lazy(() => import("./pages/seo/OxidizedSilverJewelryWholesale"));
+const CostumeJewelryWholesaleSupplier = React.lazy(() => import("./pages/seo/CostumeJewelryWholesaleSupplier"));
+const BridalJewelrySetsWholesale = React.lazy(() => import("./pages/seo/BridalJewelrySetsWholesale"));
+const NecklaceSetsWholesale = React.lazy(() => import("./pages/seo/NecklaceSetsWholesale"));
+const JhumkaEarringsWholesale = React.lazy(() => import("./pages/seo/JhumkaEarringsWholesale"));
+const NoMiddlemanJewelryWholesale = React.lazy(() => import("./pages/seo/NoMiddlemanJewelryWholesale"));
+const JewelleryExporterKuwait_SEO = React.lazy(() => import("./pages/JewelleryExporterKuwait")); // Avoid conflict
+const JewelleryExporterMalaysia_SEO = React.lazy(() => import("./pages/JewelleryExporterMalaysia"));
+const JewelleryExporterNigeria_SEO = React.lazy(() => import("./pages/JewelleryExporterNigeria"));
+const JewelleryExporterSaudiArabia_SEO = React.lazy(() => import("./pages/JewelleryExporterSaudiArabia"));
+const JewelleryExporterSriLanka_SEO = React.lazy(() => import("./pages/JewelleryExporterSriLanka"));
+const JewelleryExporterAustralia_SEO = React.lazy(() => import("./pages/seo/JewelleryExporterAustralia"));
+const JewelleryExporterCanada_SEO = React.lazy(() => import("./pages/seo/JewelleryExporterCanada"));
+const JewelleryExporterSingapore_SEO = React.lazy(() => import("./pages/seo/JewelleryExporterSingapore"));
+const JewelleryExporterEurope_SEO = React.lazy(() => import("./pages/seo/JewelleryExporterEurope"));
+const JewelleryExporterFrance_SEO = React.lazy(() => import("./pages/seo/JewelleryExporterFrance"));
+const FactoryDirectJewelryExporter_SEO = React.lazy(() => import("./pages/seo/FactoryDirectJewelryExporter"));
+const ArtificialJewelryExporterMOQ_SEO = React.lazy(() => import("./pages/seo/ArtificialJewelryExporterMOQ"));
+const AmericanDiamondJewelryExporter_SEO = React.lazy(() => import("./pages/seo/AmericanDiamondJewelryExporter"));
 
 
 function VisitTracker() {
@@ -201,7 +229,8 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <VisitTracker />
-      <Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
         {/* Core pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -695,9 +724,13 @@ export default function App() {
           path="/jewellery-exporter-france"
           element={<JewelleryExporterFrance />}
         />
+        <Route path="/factory-direct-jewelry-exporter" element={<FactoryDirectJewelryExporter />} />
+        <Route path="/artificial-jewelry-exporter-moq" element={<ArtificialJewelryExporterMOQ />} />
+        <Route path="/american-diamond-jewelry-exporter" element={<AmericanDiamondJewelryExporter />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
       <WhatsAppButton />
       <BulkQuoteCart />
       <Toaster />
