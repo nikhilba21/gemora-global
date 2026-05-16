@@ -478,6 +478,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      {/* Preload critical LCP image for mobile performance */}
+      <link rel="preload" as="image" href="/assets/generated/hero-jewellery-banner.dim_1600x700.webp" fetchPriority="high" />
       <Navbar />
       <main id="main-content">
       {/* ── Hero Slider — CLEAN, no text overlay ──────────────── */}
@@ -553,7 +555,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 text-center">
           <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight">
             {pageContent.hero_title ||
-              "Imitation Jewellery Exporter India | Wholesale Manufacturer"}
+              "Wholesale Imitation Jewellery Exporter from India | Manufacturer in Jaipur"}
           </h1>
           <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-2xl mx-auto mb-6 md:mb-8 px-2">
             {pageContent.hero_subtitle ||
@@ -1471,7 +1473,7 @@ export default function Home() {
                 excerpt: "A complete roadmap for starting your export business, covering registration, compliance, and buyer outreach.",
                 slug: "wholesale-jewellery-export-india-guide",
                 category: "Master Guide",
-                image: "https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?w=400&q=80"
+                image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80"
               },
               {
                 title: "Top Imitation Jewellery Trends to Watch in 2026",
