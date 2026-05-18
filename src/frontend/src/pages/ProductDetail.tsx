@@ -93,9 +93,11 @@ export default function ProductDetail() {
   };
 
   usePageSEO({
-    title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Wholesale Imitation Jewellery | Gemora Global",
-    description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "Gemora Global wholesale imitation jewellery.",
+    title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Product Not Found | Gemora Global",
+    description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "The product you are looking for does not exist on Gemora Global.",
     canonical: product ? `https://www.gemoraglobal.co/products/item/${product.id}` : undefined,
+    robots: product ? "index, follow" : "noindex, follow",
+    googlebot: product ? undefined : "noindex, follow",
     ogImage: product?.imageUrls?.[0],
     product: product as any,
     breadcrumbs: [
@@ -125,14 +127,29 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
         <Navbar />
-        <div className="min-h-[60vh] flex flex-col items-center justify-center gap-4">
-          <h1 className="text-2xl font-bold">Product not found</h1>
-          <Link to="/products" className="text-primary hover:underline flex items-center gap-1">
-            <ChevronRight className="w-4 h-4 rotate-180" /> Back to Products
-          </Link>
-        </div>
+        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
+          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/30 backdrop-blur-md rounded-2xl border border-border/50 shadow-xl">
+            <div className="mx-auto w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center text-destructive mb-4">
+              <span className="text-2xl font-bold">404</span>
+            </div>
+            <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              Product Not Found
+            </h1>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-sm mx-auto leading-relaxed">
+              The wholesale jewellery piece you are looking for doesn't exist or is currently unavailable.
+            </p>
+            <div className="pt-4">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[44px]"
+              >
+                Browse All Products
+              </Link>
+            </div>
+          </div>
+        </main>
         <Footer />
       </div>
     );

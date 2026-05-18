@@ -86,14 +86,16 @@ export default function BlogPostPage() {
   })();
 
   usePageSEO({
-    title: post ? `${post.title} | Gemora Global` : "Blog | Gemora Global",
+    title: post ? `${post.title} | Gemora Global` : "Page Not Found | Gemora Global",
     description: post
       ? (post.excerpt || '').slice(0, 155)
-      : "Read the latest insights on imitation jewellery trends, wholesale sourcing, and export tips from Gemora Global.",
+      : "The blog page you are looking for does not exist on Gemora Global.",
     canonical: post
       ? `https://www.gemoraglobal.co/blog/${post.slug}`
       : "https://www.gemoraglobal.co/blog",
-    ogTitle: post ? post.title : "Blog | Gemora Global",
+    robots: post ? "index, follow" : "noindex, follow",
+    googlebot: post ? undefined : "noindex, follow",
+    ogTitle: post ? post.title : "Page Not Found | Gemora Global",
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage:
       post?.image ||
@@ -160,7 +162,35 @@ export default function BlogPostPage() {
     );
   }
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
+        <Navbar />
+        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
+          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/30 backdrop-blur-md rounded-2xl border border-border/50 shadow-xl">
+            <div className="mx-auto w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center text-destructive mb-4">
+              <span className="text-2xl font-bold">404</span>
+            </div>
+            <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              Blog Post Not Found
+            </h1>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-sm mx-auto leading-relaxed">
+              We couldn't find the blog post you are looking for. It might have been renamed, moved, or deleted.
+            </p>
+            <div className="pt-4">
+              <Link
+                to="/blog"
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[44px]"
+              >
+                Return to Blog
+              </Link>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   const isHtmlContent = post.content?.includes("<") ?? false;
 
