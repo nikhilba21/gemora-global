@@ -73,7 +73,7 @@ export default function TermsAndConditions() {
               (&quot;Terms&quot;). These Terms constitute a legally binding
               agreement between you and Gemora Global (&quot;we&quot;,
               &quot;us&quot;, &quot;Seller&quot;), a proprietorship firm
-              registered at B 66 MAA Hinglaj Nagar, Jaipur 302021, Rajasthan,
+              registered at P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur 302021, Rajasthan,
               India.
             </p>
             <p className="mt-3">
@@ -369,7 +369,7 @@ export default function TermsAndConditions() {
               <p>
                 <strong className="text-foreground">Gemora Global</strong>
               </p>
-              <p>B 66 MAA Hinglaj Nagar, Jaipur 302021, Rajasthan, India</p>
+              <p>P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India</p>
               <p>
                 Email:{" "}
                 <a

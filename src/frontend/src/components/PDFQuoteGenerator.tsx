@@ -392,7 +392,7 @@ export default function PDFQuoteGenerator({
                         Exporter
                       </p>
                       <p className="text-xs text-gray-500">
-                        B 66 MAA Hinglaj Nagar, Jaipur 302021, Rajasthan, India
+                        P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India
                       </p>
                       <p className="text-xs text-gray-500">
                         +91 7976341419 | globalgemora@gmail.com |
@@ -563,8 +563,7 @@ export default function PDFQuoteGenerator({
                   {/* Footer */}
                   <div className="pt-4 border-t-2 border-[#1A237E] text-xs text-gray-500 text-center">
                     <p>
-                      GEMORA GLOBAL | B 66 MAA Hinglaj Nagar, Jaipur 302021,
-                      India | +91 7976341419 | globalgemora@gmail.com
+                      GEMORA GLOBAL | P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India | +91 7976341419 | globalgemora@gmail.com
                     </p>
                     <p className="mt-0.5">
                       Thank you for your interest. We look forward to a

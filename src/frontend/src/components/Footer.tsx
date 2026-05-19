@@ -212,9 +212,11 @@ export default function Footer() {
                   style={{ color: "#D4AF37" }}
                 />
                 <address className="not-italic leading-snug">
-                  B 66 MAA Hinglaj Nagar,
+                  P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA,
                   <br />
-                  Jaipur - 302021, Rajasthan, India
+                  Gandhi Path Rd, WEST, Vaishali Nagar,
+                  <br />
+                  Jaipur, Rajasthan 302021
                 </address>
               </div>
               <a

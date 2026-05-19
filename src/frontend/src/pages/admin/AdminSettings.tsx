@@ -42,7 +42,7 @@ export default function AdminSettings() {
             email: "globalgemora@gmail.com",
             phone: "+91 7976341419",
             whatsapp: "+917976341419",
-            street: "B 66 MAA Hinglaj Nagar",
+            street: "P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar",
             city: "Jaipur",
             postal: "302021",
             country: "India",

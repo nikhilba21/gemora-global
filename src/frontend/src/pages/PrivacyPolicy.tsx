@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-sm text-muted-foreground">
-            Last updated: {lastUpdated} · Gemora Global, B 66 MAA Hinglaj Nagar,
+            Last updated: {lastUpdated} · Gemora Global, P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar,
             Jaipur 302021, Rajasthan, India
           </p>
         </div>
@@ -66,8 +66,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p>
               Gemora Global (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is
-              a B2B imitation jewellery manufacturer and exporter based at B 66
-              MAA Hinglaj Nagar, Jaipur 302021, Rajasthan, India. This Privacy
+              a B2B imitation jewellery manufacturer and exporter based at P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India. This Privacy
               Policy explains how we collect, use, disclose, and protect
               personal information provided by visitors to our website (
               <a
@@ -360,7 +359,7 @@ export default function PrivacyPolicy() {
               <p>
                 <strong className="text-foreground">Gemora Global</strong>
               </p>
-              <p>B 66 MAA Hinglaj Nagar, Jaipur 302021, Rajasthan, India</p>
+              <p>P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India</p>
               <p>
                 Email:{" "}
                 <a

@@ -547,7 +547,7 @@ export default function AdminWebsiteSettings() {
             <Textarea
               value={getValue("contact_address")}
               onChange={(e) => setValue("contact_address", e.target.value)}
-              placeholder="B 66 MAA Hinglaj Nagar..."
+              placeholder="P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021..."
               rows={2}
               style={{
                 background: "#f5f7ff",

@@ -182,7 +182,7 @@ export function usePageSEO(options: PageSEOOptions) {
       foundingDate: "2011",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "B 66 MAA Hinglaj Nagar",
+        streetAddress: "P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar",
         addressLocality: "Jaipur",
         addressRegion: "Rajasthan",
         addressCountry: "IN",
@@ -231,7 +231,7 @@ export function usePageSEO(options: PageSEOOptions) {
       url: BASE_URL,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "B 66 MAA Hinglaj Nagar",
+        streetAddress: "P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar",
         addressLocality: "Jaipur",
         addressRegion: "Rajasthan",
         postalCode: "302021",

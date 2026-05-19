@@ -221,8 +221,7 @@ export default function WholesaleJewelleryRajasthan() {
             wholesale buyers from the UK, USA, UAE, and beyond.
           </p>
           <p>
-            Our address is B 66 MAA Hinglaj Nagar, Jaipur 302021, Rajasthan,
-            India. For wholesale inquiries, contact us at{" "}
+            Our address is P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India. For wholesale inquiries, contact us at{" "}
             <a
               href="https://wa.me/917976341419"
               className="text-primary underline"

@@ -7,7 +7,7 @@ import { usePageSEO } from "../hooks/usePageSEO";
 const FAQ_ITEMS = [
   {
     q: "Where is Gemora Global's manufacturing facility located?",
-    a: "Gemora Global is based in Jaipur, Rajasthan, India — at B 66 MAA Hinglaj Nagar, Jaipur 302021. Jaipur is India's foremost jewellery manufacturing hub, with generations of master craftspeople specialising in Kundan, Meenakari, Temple, and Antique imitation jewellery. Our strategic location in Jaipur gives us direct access to the best artisan talent, raw material suppliers, stone cutters, and plating workshops in the country.",
+    a: "Gemora Global is based in Jaipur, Rajasthan, India — at P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur 302021. Jaipur is India's foremost jewellery manufacturing hub, with generations of master craftspeople specialising in Kundan, Meenakari, Temple, and Antique imitation jewellery. Our strategic location in Jaipur gives us direct access to the best artisan talent, raw material suppliers, stone cutters, and plating workshops in the country.",
   },
   {
     q: "What is the minimum order quantity (MOQ) for wholesale buyers?",

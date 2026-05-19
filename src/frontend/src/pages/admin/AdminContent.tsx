@@ -178,7 +178,7 @@ const CONTENT_SECTIONS: {
         label: "Business Address",
         multiline: true,
         placeholder:
-          "B 66 MAA Hinglaj Nagar, Gandhi Path West, Vaishali Nagar, Jaipur 302021",
+          "P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021",
         hint: "Physical address shown on Contact page and footer",
       },
       {

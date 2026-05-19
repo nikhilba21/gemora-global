@@ -228,7 +228,7 @@ export default function AdminOrders() {
           <div class="footer">
             <p><strong>Gemora Global Private Limited</strong></p>
             <p>Premium Imitation Jewellery Manufacturer & Exporter | Established 2011</p>
-            <p>B 66 MAA Hinglaj Nagar, Jaipur - 302021, Rajasthan, India</p>
+            <p>P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar, Jaipur, Rajasthan 302021, India</p>
             <p>www.gemoraglobal.co | globalgemora@gmail.com | +91 7976341419</p>
             <p style="margin-top:20px; font-style:italic;">Thank you for your business!</p>
           </div>
