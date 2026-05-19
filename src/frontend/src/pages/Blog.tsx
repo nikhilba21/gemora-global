@@ -403,337 +403,333 @@ export default function Blog() {
                 </motion.div>
               )}
 
-              {/* Grid Section */}
-              <div className="space-y-8">
-                <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">
-                  {activeCategory === "All" ? "Latest Sourcing Guides" : `${activeCategory} Articles`}
-                </h2>
+              {/* Sidebar + Sourcing Guides Grid Layout (B2B Sourcing layout next to articles) */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  {gridPosts.map((post, i) => (
-                    <motion.article
-                      key={post.slug}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.5,
-                        delay: Math.min(i * 0.05, 0.3),
-                      }}
-                      data-ocid={`blog.item.${currentPage * BLOG_PAGE_SIZE + i + 1}`}
-                      className="group bg-card/45 backdrop-blur-md border border-border/60 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 rounded-3xl overflow-hidden flex flex-col justify-between h-full"
-                    >
-                      <Link to={`/blog/${post.slug}`} className="flex flex-col h-full justify-between">
-                        <div>
-                          {getSafeBlogImage(post) && (
-                            <div className="aspect-[16/10] overflow-hidden relative">
-                              <img
-                                src={getSafeBlogImage(post)}
-                                alt={`${post.title} — Gemora Global B2B jewellery`}
-                                onError={handleImageError}
-                                className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                                loading="lazy"
-                                width={600}
-                                height={375}
-                              />
+                {/* Left Sidebar Column (Form + QR code stacked vertically) */}
+                <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+                  
+                  {/* 1. WhatsApp QR Card (Larger size & high visibility) */}
+                  <div className="bg-card/45 backdrop-blur-md border border-border/80 p-8 rounded-3xl flex flex-col items-center justify-center text-center space-y-6 shadow-lg">
+                    <div className="space-y-2">
+                      <span className="text-primary text-xs font-bold uppercase tracking-wider">Instant Chat Desk</span>
+                      <h3 className="font-display text-lg font-bold text-foreground">Scan QR Code</h3>
+                      <p className="text-xs font-semibold text-primary tracking-wider uppercase">For Immediate Contact</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Direct WhatsApp support. Get Jaipur factory wholesale pricing, live customization updates, and fast MOQ updates.
+                      </p>
+                    </div>
+
+                    {/* Mega Glowing QR Frame */}
+                    <div className="relative group p-4 bg-white rounded-3xl shadow-xl border border-primary/20 hover:border-primary/50 transition-all duration-500 w-full max-w-[240px] aspect-square flex items-center justify-center">
+                      <div className="absolute inset-0 -m-1 rounded-3xl bg-gradient-to-tr from-primary/15 to-primary/35 opacity-0 group-hover:opacity-100 blur-md transition-opacity -z-10" />
+                      <img
+                        src="/assets/images/contact-qr.png"
+                        alt="Scan Gemora Global QR Code for Immediate Contact on WhatsApp"
+                        className="w-full h-full object-contain rounded-2xl"
+                        width={220}
+                        height={220}
+                      />
+                    </div>
+
+                    <div className="space-y-3 w-full">
+                      <a
+                        href="https://wa.me/917976341419"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold shadow-md transition-all text-xs"
+                      >
+                        Chat on WhatsApp (+91 7976341419)
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* 2. Direct Sourcing Form Card */}
+                  <div className="bg-card/45 backdrop-blur-md border border-border/60 p-6 sm:p-8 rounded-3xl space-y-6 shadow-md">
+                    <div className="space-y-1">
+                      <span className="text-primary text-[10px] font-bold uppercase tracking-wider">Direct Wholesale Desk</span>
+                      <h4 className="font-display text-base font-bold text-foreground">Submit Sourcing Inquiry</h4>
+                      <p className="text-xs text-muted-foreground">
+                        Have custom designs, bulk export, or specific MOQ queries? Send details directly below.
+                      </p>
+                    </div>
+
+                    <form onSubmit={handleFormSubmit} className="space-y-3.5">
+                      <div className="space-y-1">
+                        <label htmlFor="name" className="text-[11px] font-semibold text-muted-foreground">Your Name *</label>
+                        <input
+                          type="text"
+                          id="name"
+                          required
+                          placeholder="e.g. John Doe"
+                          value={form.name}
+                          onChange={(e) => setForm({ ...form, name: e.target.value })}
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[38px]"
+                        />
+                      </div>
+
+                      <div className="space-y-1">
+                        <label htmlFor="email" className="text-[11px] font-semibold text-muted-foreground">Corporate Email *</label>
+                        <input
+                          type="email"
+                          id="email"
+                          required
+                          placeholder="e.g. buyer@boutique.com"
+                          value={form.email}
+                          onChange={(e) => setForm({ ...form, email: e.target.value })}
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[38px]"
+                        />
+                      </div>
+
+                      <div className="space-y-1">
+                        <label htmlFor="phone" className="text-[11px] font-semibold text-muted-foreground">Phone / WhatsApp *</label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          required
+                          placeholder="e.g. +1 555-0199"
+                          value={form.phone}
+                          onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[38px]"
+                        />
+                      </div>
+
+                      <div className="space-y-1">
+                        <label htmlFor="country" className="text-[11px] font-semibold text-muted-foreground">Country *</label>
+                        <input
+                          type="text"
+                          id="country"
+                          required
+                          placeholder="e.g. United States"
+                          value={form.country}
+                          onChange={(e) => setForm({ ...form, country: e.target.value })}
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[38px]"
+                        />
+                      </div>
+
+                      <div className="space-y-1">
+                        <label htmlFor="message" className="text-[11px] font-semibold text-muted-foreground">Sourcing Details *</label>
+                        <textarea
+                          id="message"
+                          required
+                          rows={3}
+                          placeholder="Provide target quantities, styles, budget limits, custom requirements..."
+                          value={form.message}
+                          onChange={(e) => setForm({ ...form, message: e.target.value })}
+                          className="w-full px-3.5 py-2.5 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all resize-none"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-md transition-all text-xs min-h-[40px] disabled:opacity-50"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                            Submitting Sourcing...
+                          </>
+                        ) : (
+                          "Submit Sourcing Inquiry"
+                        )}
+                      </button>
+                    </form>
+                  </div>
+                </aside>
+
+                {/* Right Sourcing Guides Grid Column */}
+                <div className="lg:col-span-8 space-y-12">
+                  <div className="space-y-6">
+                    <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">
+                      {activeCategory === "All" ? "Latest Sourcing Guides" : `${activeCategory} Articles`}
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                      {gridPosts.map((post, i) => (
+                        <motion.article
+                          key={post.slug}
+                          initial={{ opacity: 0, y: 30 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: Math.min(i * 0.05, 0.3),
+                          }}
+                          data-ocid={`blog.item.${currentPage * BLOG_PAGE_SIZE + i + 1}`}
+                          className="group bg-card/45 backdrop-blur-md border border-border/60 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 rounded-3xl overflow-hidden flex flex-col justify-between h-full"
+                        >
+                          <Link to={`/blog/${post.slug}`} className="flex flex-col h-full justify-between">
+                            <div>
+                              {getSafeBlogImage(post) && (
+                                <div className="aspect-[16/10] overflow-hidden relative">
+                                  <img
+                                    src={getSafeBlogImage(post)}
+                                    alt={`${post.title} — Gemora Global B2B jewellery`}
+                                    onError={handleImageError}
+                                    className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                                    loading="lazy"
+                                    width={600}
+                                    height={375}
+                                  />
+                                </div>
+                              )}
+                              <div className="p-5 space-y-3">
+                                {post.category && (
+                                  <span
+                                    className={`inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full border uppercase tracking-wider ${
+                                      categoryColors[post.category] ??
+                                      "bg-primary/20 text-primary border-primary/30"
+                                    }`}
+                                  >
+                                    {post.category}
+                                  </span>
+                                )}
+                                <h3 className="font-bold text-sm md:text-base text-foreground leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                                  {post.title}
+                                </h3>
+                                {post.excerpt && (
+                                  <p className="text-muted-foreground text-xs line-clamp-3 leading-relaxed">
+                                    {post.excerpt}
+                                  </p>
+                                )}
+                              </div>
                             </div>
-                          )}
-                          <div className="p-5 md:p-6 space-y-3">
-                            {post.category && (
-                              <span
-                                className={`inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full border uppercase tracking-wider ${
-                                  categoryColors[post.category] ??
-                                  "bg-primary/20 text-primary border-primary/30"
-                                }`}
-                              >
-                                {post.category}
+                            <div className="p-5 pt-0 mt-auto border-t border-border/30 flex items-center justify-between text-[10px] text-muted-foreground">
+                              <span className="flex items-center gap-1">
+                                <Calendar className="w-3 h-3" />
+                                {post.date}
                               </span>
-                            )}
-                            <h3 className="font-bold text-base md:text-lg text-foreground leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                              {post.title}
-                            </h3>
-                            {post.excerpt && (
-                              <p className="text-muted-foreground text-xs md:text-sm line-clamp-3 leading-relaxed">
-                                {post.excerpt}
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                        <div className="p-5 md:p-6 pt-0 mt-auto border-t border-border/30 flex items-center justify-between text-[11px] text-muted-foreground">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
-                            {post.date}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            {post.readTime}
-                          </span>
-                        </div>
-                      </Link>
-                    </motion.article>
-                  ))}
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-3 h-3" />
+                                {post.readTime}
+                              </span>
+                            </div>
+                          </Link>
+                        </motion.article>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Newsletter Banner inside Right Column */}
+                  {currentPage === 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-r from-primary/10 via-primary/5 to-card/50 p-6 md:p-8 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6"
+                    >
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.05),transparent)]" />
+                      <div className="relative z-10 max-w-lg space-y-2">
+                        <h3 className="font-display text-base md:text-lg font-bold text-foreground">
+                          B2B Jewellery Sourcing Insights &amp; MOQ Reports
+                        </h3>
+                        <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed">
+                          Join 12,000+ boutique buyers. Get weekly pricing updates, customs guidelines, and Jaipur wholesale catalogs.
+                        </p>
+                      </div>
+                      <div className="relative z-10 w-full md:w-auto flex flex-col sm:flex-row gap-2 min-w-[260px]">
+                        <input
+                          type="email"
+                          placeholder="Enter corporate email"
+                          className="flex-grow px-4 py-2.5 rounded-xl bg-card border border-border text-xs text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary min-h-[38px]"
+                        />
+                        <button
+                          type="button"
+                          className="px-4 py-2.5 rounded-xl bg-primary hover:bg-primary/95 text-primary-foreground font-semibold text-xs shadow-md transition-all whitespace-nowrap min-h-[38px]"
+                        >
+                          Subscribe
+                        </button>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Pagination inside Right Column */}
+                  {totalPages > 1 && (
+                    <div
+                      className="flex flex-col items-center gap-4 pt-4"
+                      data-ocid="blog.pagination"
+                    >
+                      <div className="flex items-center gap-2 flex-wrap justify-center">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setCurrentPage((p) => Math.max(0, p - 1));
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                          disabled={activePage === 0}
+                          className="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-border/80 text-xs font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[36px]"
+                          data-ocid="blog.pagination_prev"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" /> Previous
+                        </button>
+
+                        {/* Page Numbers */}
+                        {Array.from({ length: totalPages }, (_, i) => i)
+                          .filter(
+                            (i) =>
+                              i === 0 ||
+                              i === totalPages - 1 ||
+                              Math.abs(i - activePage) <= 2,
+                          )
+                          .reduce<{ type: "page" | "ellipsis"; value: number }[]>(
+                            (acc, page, idx, arr) => {
+                              if (idx > 0 && page - arr[idx - 1] > 1) {
+                                acc.push({ type: "ellipsis", value: arr[idx - 1] });
+                              }
+                              acc.push({ type: "page", value: page });
+                              return acc;
+                            },
+                            [],
+                          )
+                          .map((item) =>
+                            item.type === "ellipsis" ? (
+                              <span
+                                key={`ellipsis-after-${item.value}`}
+                                className="px-2 text-muted-foreground text-xs"
+                              >
+                                …
+                              </span>
+                            ) : (
+                              <button
+                                key={`page-${item.value}`}
+                                type="button"
+                                onClick={() => {
+                                  setCurrentPage(item.value);
+                                  window.scrollTo({ top: 0, behavior: "smooth" });
+                                }}
+                                className={`w-8 h-8 rounded-lg border text-xs font-semibold transition-all ${
+                                  activePage === item.value
+                                    ? "bg-primary text-primary-foreground border-primary shadow"
+                                    : "border-border hover:border-primary hover:text-primary bg-card/25"
+                                }`}
+                                data-ocid={`blog.pagination.page.${item.value + 1}`}
+                              >
+                                {item.value + 1}
+                              </button>
+                            ),
+                          )}
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setCurrentPage((p) => Math.min(totalPages - 1, p + 1));
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                          disabled={activePage >= totalPages - 1}
+                          className="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-border/80 text-xs font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[36px]"
+                          data-ocid="blog.pagination_next"
+                        >
+                          Next <ChevronRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                      <p className="text-[10px] text-muted-foreground">
+                        Showing articles {(activePage * BLOG_PAGE_SIZE) + 1}–{Math.min((activePage + 1) * BLOG_PAGE_SIZE, totalCount)} of {totalCount}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
-
-              {/* B2B Premium Newsletter Banner */}
-              {currentPage === 0 && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-r from-primary/10 via-primary/5 to-card/50 p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6"
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.05),transparent)]" />
-                  <div className="relative z-10 max-w-xl space-y-2">
-                    <h3 className="font-display text-lg md:text-2xl font-bold text-foreground">
-                      B2B Jewellery Sourcing Insights &amp; MOQ Reports
-                    </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                      Join 12,000+ international boutique buyers. Get weekly pricing updates, customs guidelines, and Jaipur wholesale catalogs directly in your inbox.
-                    </p>
-                  </div>
-                  <div className="relative z-10 w-full md:w-auto flex flex-col sm:flex-row gap-3 min-w-[280px] sm:min-w-[400px]">
-                    <input
-                      type="email"
-                      placeholder="Enter corporate email address"
-                      className="flex-grow px-5 py-3 rounded-xl bg-card border border-border text-xs md:text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary min-h-[44px]"
-                    />
-                    <button
-                      type="button"
-                      className="px-6 py-3 rounded-xl bg-primary hover:bg-primary/95 text-primary-foreground font-semibold text-xs md:text-sm shadow-md transition-all whitespace-nowrap min-h-[44px]"
-                    >
-                      Subscribe Insights
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Pagination Controls */}
-              {totalPages > 1 && (
-                <div
-                  className="flex flex-col items-center gap-4 pt-10"
-                  data-ocid="blog.pagination"
-                >
-                  <div className="flex items-center gap-2 flex-wrap justify-center">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCurrentPage((p) => Math.max(0, p - 1));
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
-                      disabled={activePage === 0}
-                      className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-border/80 text-xs md:text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[40px]"
-                      data-ocid="blog.pagination_prev"
-                    >
-                      <ChevronLeft className="w-4 h-4" /> Previous
-                    </button>
-
-                    {/* Page Numbers */}
-                    {Array.from({ length: totalPages }, (_, i) => i)
-                      .filter(
-                        (i) =>
-                          i === 0 ||
-                          i === totalPages - 1 ||
-                          Math.abs(i - activePage) <= 2,
-                      )
-                      .reduce<{ type: "page" | "ellipsis"; value: number }[]>(
-                        (acc, page, idx, arr) => {
-                          if (idx > 0 && page - arr[idx - 1] > 1) {
-                            acc.push({ type: "ellipsis", value: arr[idx - 1] });
-                          }
-                          acc.push({ type: "page", value: page });
-                          return acc;
-                        },
-                        [],
-                      )
-                      .map((item) =>
-                        item.type === "ellipsis" ? (
-                          <span
-                            key={`ellipsis-after-${item.value}`}
-                            className="px-2.5 text-muted-foreground text-sm"
-                          >
-                            …
-                          </span>
-                        ) : (
-                          <button
-                            key={`page-${item.value}`}
-                            type="button"
-                            onClick={() => {
-                              setCurrentPage(item.value);
-                              window.scrollTo({ top: 0, behavior: "smooth" });
-                            }}
-                            className={`w-10 h-10 rounded-xl border text-xs md:text-sm font-semibold transition-all ${
-                              activePage === item.value
-                                ? "bg-primary text-primary-foreground border-primary shadow"
-                                : "border-border hover:border-primary hover:text-primary bg-card/25"
-                            }`}
-                            data-ocid={`blog.pagination.page.${item.value + 1}`}
-                          >
-                            {item.value + 1}
-                          </button>
-                        ),
-                      )}
-
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCurrentPage((p) => Math.min(totalPages - 1, p + 1));
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
-                      disabled={activePage >= totalPages - 1}
-                      className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-border/80 text-xs md:text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[40px]"
-                      data-ocid="blog.pagination_next"
-                    >
-                      Next <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                  <p className="text-[11px] text-muted-foreground">
-                    Showing articles {(activePage * BLOG_PAGE_SIZE) + 1}–{Math.min((activePage + 1) * BLOG_PAGE_SIZE, totalCount)} of {totalCount}
-                  </p>
-                </div>
-              )}
             </div>
           )}
-        </section>
-
-        {/* B2B Sourcing Contact & QR Section */}
-        <section className="container px-4 py-16 border-t border-border/40">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
-            {/* Form Column */}
-            <div className="lg:col-span-7 bg-card/35 backdrop-blur-md border border-border/60 p-8 sm:p-10 rounded-3xl space-y-6">
-              <div className="space-y-2">
-                <span className="text-primary text-xs font-bold uppercase tracking-wider">Direct Wholesale Desk</span>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">Get In Touch</h2>
-                <p className="text-sm text-muted-foreground">
-                  Have specific imitation jewellery requirements, custom designs, or bulk export queries? Submit your sourcing inquiry below.
-                </p>
-              </div>
-
-              <form onSubmit={handleFormSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-xs font-semibold text-muted-foreground">Your Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      required
-                      placeholder="e.g. John Doe"
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[44px]"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label htmlFor="email" className="text-xs font-semibold text-muted-foreground">Corporate Email *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      placeholder="e.g. buyer@boutique.com"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[44px]"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label htmlFor="phone" className="text-xs font-semibold text-muted-foreground">Phone / WhatsApp Number *</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      required
-                      placeholder="e.g. +1 555-0199"
-                      value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[44px]"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label htmlFor="country" className="text-xs font-semibold text-muted-foreground">Country *</label>
-                    <input
-                      type="text"
-                      id="country"
-                      required
-                      placeholder="e.g. United States"
-                      value={form.country}
-                      onChange={(e) => setForm({ ...form, country: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all min-h-[44px]"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-xs font-semibold text-muted-foreground">Sourcing Requirements / Message *</label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={4}
-                    placeholder="Specify jewellery types, required quantities (MOQs), target delivery date, or custom manufacturing details..."
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-lg shadow-primary/10 transition-all min-h-[46px] disabled:opacity-50"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      Submitting Sourcing Inquiry...
-                    </>
-                  ) : (
-                    "Submit Sourcing Inquiry"
-                  )}
-                </button>
-              </form>
-            </div>
-
-            {/* QR Column */}
-            <div className="lg:col-span-5 bg-card/35 backdrop-blur-md border border-border/60 p-8 sm:p-10 rounded-3xl flex flex-col items-center justify-center text-center space-y-6 lg:min-h-[480px]">
-              <div className="space-y-2">
-                <span className="text-primary text-xs font-bold uppercase tracking-wider">Instant WhatsApp Chat</span>
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground">Scan QR Code</h3>
-                <p className="text-xs font-semibold text-primary tracking-widest uppercase mb-1">For Immediate Contact</p>
-                <p className="text-xs text-muted-foreground max-w-sm mx-auto leading-relaxed">
-                  Direct connection to our B2B export desk in Jaipur, India. Get instant digital catalogs, live product customisation assistance, and rapid custom quoting.
-                </p>
-              </div>
-
-              {/* Glowing QR Frame */}
-              <div className="relative group p-4 bg-white rounded-3xl shadow-xl border-2 border-primary/20 hover:border-primary/50 transition-all duration-500 max-w-[220px]">
-                <div className="absolute inset-0 -m-1 rounded-3xl bg-gradient-to-tr from-primary/10 to-primary/30 opacity-0 group-hover:opacity-100 blur-md transition-opacity -z-10" />
-                <img
-                  src="/assets/images/contact-qr.png"
-                  alt="Scan Gemora Global QR Code for Immediate Contact on WhatsApp"
-                  className="w-full h-auto rounded-2xl"
-                  width={200}
-                  height={200}
-                />
-              </div>
-
-              <div className="space-y-3 w-full">
-                <a
-                  href="https://wa.me/917976341419"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold shadow-lg shadow-green-500/10 hover:scale-[1.02] active:scale-[0.98] transition-all min-h-[46px]"
-                >
-                  Chat on WhatsApp (+91 7976341419)
-                </a>
-                <p className="text-[10px] text-muted-foreground">
-                  Available 24/7. Response within 10 minutes.
-                </p>
-              </div>
-            </div>
-
-          </div>
         </section>
       </main>
       <Footer />
