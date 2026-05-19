@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { type BlogPost } from "../utils/blogStore";
-import { blogService } from "../utils/blogService";
+import { blogService, getSafeBlogImage } from "../utils/blogService";
 import { useCanonical } from '../hooks/useCanonical';
 
 /** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
@@ -97,9 +97,7 @@ export default function BlogPostPage() {
     googlebot: post ? undefined : "noindex, follow",
     ogTitle: post ? post.title : "Page Not Found | Gemora Global",
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
-    ogImage:
-      post?.image ||
-      "https://www.gemoraglobal.co/images/og-banner.jpg",
+    ogImage: getSafeBlogImage(post),
     breadcrumbs: post
       ? [
           { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -131,9 +129,7 @@ export default function BlogPostPage() {
               url: "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
             },
           },
-          image:
-            post.image ||
-            "https://www.gemoraglobal.co/images/og-banner.jpg",
+          image: getSafeBlogImage(post),
           url: `https://www.gemoraglobal.co/blog/${post.slug}`,
           mainEntityOfPage: {
             "@type": "WebPage",
@@ -201,7 +197,7 @@ export default function BlogPostPage() {
         {/* Hero Image — full width, aspect-[16/9] on mobile */}
         <div className="relative w-full aspect-[16/9] md:h-96 overflow-hidden">
           <img
-            src={post.image}
+            src={getSafeBlogImage(post)}
             alt={post.title}
             className="w-full h-full object-cover"
             loading="eager"
@@ -404,7 +400,7 @@ export default function BlogPostPage() {
                   <Link to={`/blog/${rp.slug}`}>
                     <div className="relative overflow-hidden aspect-[16/9]">
                       <img
-                        src={rp.image}
+                        src={getSafeBlogImage(rp)}
                         alt={rp.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"

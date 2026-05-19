@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useCanonical } from '../hooks/useCanonical';
-import { blogService } from "../utils/blogService";
+import { blogService, getSafeBlogImage } from "../utils/blogService";
 import { type BlogPost } from "../utils/blogStore";
 
 const BLOG_PAGE_SIZE = 12;
@@ -490,10 +490,10 @@ export default function Blog() {
                     className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-colors duration-300"
                   >
                     <Link to={`/blog/${post.slug}`}>
-                      {post.image && (
+                      {getSafeBlogImage(post) && (
                         <div className="aspect-[16/9] overflow-hidden">
                           <img
-                            src={post.image}
+                            src={getSafeBlogImage(post)}
                             alt={`${post.title} — Gemora Global jewellery export blog`}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
