@@ -193,10 +193,32 @@ export default function Contact() {
             <a
               href="https://wa.me/917976341419"
               target="_blank"
-              className="block bg-green-500 text-white p-3 rounded text-center"
+              className="block bg-green-500 text-white p-3 rounded text-center font-semibold hover:bg-green-600 transition-colors"
             >
               Chat on WhatsApp
             </a>
+
+            {/* Glowing QR Code Card for Contact Page */}
+            <div className="bg-card/35 backdrop-blur-sm border border-border p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md mt-6">
+              <div className="space-y-2 text-left flex-grow">
+                <span className="text-primary text-[10px] font-bold uppercase tracking-wider">Instant Chat Connection</span>
+                <h4 className="font-display text-sm font-bold text-foreground">Scan QR Code For Immediate Contact</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Scan to chat directly with our wholesale export team on WhatsApp. Get catalog pricing, custom sampling, and MOQ details.
+                </p>
+              </div>
+
+              {/* Glowing QR Frame */}
+              <div className="relative group p-2 bg-white rounded-2xl shadow-md border border-primary/20 hover:border-primary/45 transition-all w-[120px] h-[120px] flex-shrink-0">
+                <img
+                  src="/assets/images/contact-qr.png"
+                  alt="Scan Gemora Global QR Code for Immediate Contact on WhatsApp"
+                  className="w-full h-auto rounded-xl"
+                  width={100}
+                  height={100}
+                />
+              </div>
+            </div>
 
             <div className="mt-8 h-[300px] w-full rounded-lg overflow-hidden border border-border">
               <iframe 
