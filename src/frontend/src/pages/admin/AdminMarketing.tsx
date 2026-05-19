@@ -378,9 +378,9 @@ export default function AdminMarketing() {
                       {page.name}
                     </p>
                     {isEditing ? (
-                      <div className="space-y-2">
+                      <div className="space-y-3">
                         <div>
-                          <Label>Title ({fields.title.length}/65)</Label>
+                          <Label className="text-slate-700 font-bold text-xs">Title ({fields.title.length}/65)</Label>
                           <Input
                             value={fields.title}
                             onChange={(e) =>
@@ -393,10 +393,11 @@ export default function AdminMarketing() {
                               }))
                             }
                             maxLength={65}
+                            style={{ background: "#fff", border: "1px solid #b0bec5" }}
                           />
                         </div>
                         <div>
-                          <Label>
+                          <Label className="text-slate-700 font-bold text-xs">
                             Description ({fields.description.length}/160)
                           </Label>
                           <Textarea
@@ -412,8 +413,69 @@ export default function AdminMarketing() {
                             }
                             maxLength={160}
                             rows={2}
+                            style={{ background: "#fff", border: "1px solid #b0bec5" }}
                           />
                         </div>
+                        
+                        {/* Google Live Search Snippet Preview during editing */}
+                        <div style={{ marginTop: 8 }}>
+                          <p style={{ fontSize: 11, fontWeight: 700, color: "#2e7d32", marginBottom: 4 }}>
+                            🔍 LIVE GOOGLE SNIPPET PREVIEW (CTR OPTIMIZED)
+                          </p>
+                          <div
+                            style={{
+                              padding: "12px 14px",
+                              border: "1px solid #dadce0",
+                              borderRadius: 8,
+                              background: "#fff",
+                              maxWidth: 580,
+                              fontFamily: "Arial, sans-serif",
+                              textAlign: "left",
+                              boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: 12,
+                                color: "#202124",
+                                lineHeight: "1.3",
+                                margin: "0 0 3px 0",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 4,
+                              }}
+                            >
+                              <span style={{ fontWeight: 600 }}>Gemora Global</span>
+                              <span style={{ color: "#70757a" }}>
+                                https://www.gemoraglobal.co › {page.id === "home" ? "" : page.id}
+                              </span>
+                            </p>
+                            <h4
+                              style={{
+                                fontSize: 18,
+                                color: "#1a0dab",
+                                fontWeight: 400,
+                                lineHeight: "1.25",
+                                margin: "0 0 4px 0",
+                                textDecoration: "none",
+                              }}
+                            >
+                              {fields.title || "Please enter a title"}
+                            </h4>
+                            <p
+                              style={{
+                                fontSize: 13,
+                                color: "#4d5156",
+                                lineHeight: "1.58",
+                                margin: 0,
+                                wordWrap: "break-word",
+                              }}
+                            >
+                              {fields.description || "Please enter a meta description..."}
+                            </p>
+                          </div>
+                        </div>
+
                         <button
                           type="button"
                           onClick={() => setEditingPage(null)}
@@ -426,6 +488,7 @@ export default function AdminMarketing() {
                             fontSize: 13,
                             fontWeight: 600,
                             cursor: "pointer",
+                            marginTop: 6
                           }}
                           data-ocid="admin.marketing.seo.save_button"
                         >
@@ -448,6 +511,64 @@ export default function AdminMarketing() {
                         >
                           {fields.description}
                         </p>
+
+                        {/* Google Live Search Snippet Preview during viewing */}
+                        <div style={{ marginTop: 10 }}>
+                          <p style={{ fontSize: 10, fontWeight: 700, color: "#1A237E", marginBottom: 4, opacity: 0.8 }}>
+                            Google Search Preview
+                          </p>
+                          <div
+                            style={{
+                              padding: "12px 14px",
+                              border: "1px solid #dadce0",
+                              borderRadius: 8,
+                              background: "#fff",
+                              maxWidth: 580,
+                              fontFamily: "Arial, sans-serif",
+                              textAlign: "left",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: 12,
+                                color: "#202124",
+                                lineHeight: "1.3",
+                                margin: "0 0 3px 0",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 4,
+                              }}
+                            >
+                              <span style={{ fontWeight: 600 }}>Gemora Global</span>
+                              <span style={{ color: "#70757a" }}>
+                                https://www.gemoraglobal.co › {page.id === "home" ? "" : page.id}
+                              </span>
+                            </p>
+                            <h4
+                              style={{
+                                fontSize: 18,
+                                color: "#1a0dab",
+                                fontWeight: 400,
+                                lineHeight: "1.25",
+                                margin: "0 0 4px 0",
+                                textDecoration: "none",
+                              }}
+                            >
+                              {fields.title}
+                            </h4>
+                            <p
+                              style={{
+                                fontSize: 13,
+                                color: "#4d5156",
+                                lineHeight: "1.58",
+                                margin: 0,
+                                wordWrap: "break-word",
+                              }}
+                            >
+                              {fields.description}
+                            </p>
+                          </div>
+                        </div>
                       </>
                     )}
                   </div>
