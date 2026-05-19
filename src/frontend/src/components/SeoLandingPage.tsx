@@ -321,6 +321,40 @@ export default function SeoLandingPage({
           <div className="text-muted-foreground leading-relaxed space-y-4 text-sm sm:text-base">
             {bodyContent}
           </div>
+
+          {/* B2B Sourcing Specifications Table for Google Featured Snippets and B2B buyers */}
+          <div className="mt-10 border border-blue-700/20 rounded-2xl overflow-hidden bg-card shadow-md max-w-3xl mx-auto">
+            <div className="bg-[#1A237E] px-5 py-3 text-white text-center">
+              <h3 className="font-bold text-sm sm:text-base uppercase tracking-wider">
+                Wholesale Sourcing & Manufacturing Specs
+              </h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs sm:text-sm text-left border-collapse">
+                <tbody>
+                  {[
+                    { label: "Minimum Order Quantity (MOQ)", val: "50 pieces per design (B2B wholesale)" },
+                    { label: "Pricing Structure", val: "Factory-direct B2B tiers (USD $1.50 – $15.00+ based on design)" },
+                    { label: "Plating & Durability", val: "18k/24k Gold, Rhodium, Rose Gold with Multi-Layer Anti-Tarnish coating" },
+                    { label: "Material Compliance", val: "Lead-free, Nickel-free, Cadmium-free (100% compliant for US, UK, UAE & EU)" },
+                    { label: "Manufacturing Location", val: "Jaipur, Rajasthan, India (Factory direct, no middlemen)" },
+                    { label: "Production Lead Time", val: "10 to 15 working days (Dependent on order size)" },
+                    { label: "Worldwide Shipping", val: "FedEx, DHL, UPS door-to-door. Full custom clearance documents managed" },
+                    { label: "Payment Terms", val: "T/T Bank Transfer, L/C, PayPal (50% advance deposit, 50% balance before dispatch)" }
+                  ].map((row, idx) => (
+                    <tr key={row.label} className={idx % 2 === 0 ? "bg-muted/10" : "bg-card"}>
+                      <td className="px-4 py-3 font-semibold text-primary border-b border-blue-700/10 w-1/3">
+                        {row.label}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground border-b border-blue-700/10">
+                        {row.val}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
