@@ -92,38 +92,66 @@ export function getSafeBlogImage(post: { id: number; slug: string; title: string
     return "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80";
   }
 
-  // Curated list of premium, verified, fast-loading Unsplash jewelry & trade photos
+  // 100% pure jewellery-only photos (40 unique URLs of high-end necklaces, jhumkas, chokers, bangles, rings)
   const images = {
+    // 10 stunning traditional Indian gold/bridal jewelry sets
     kundan: [
-      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80", // Gold kundan/polki bridal set
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80", // Traditional Indian red/gold necklace
-      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80", // Close-up details of gold plating
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80", // Ethnic gold & red bridal neckpiece
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80", // Traditional Indian gold choker
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80", // Close-up detail of Jaipur gold plating craft
+      "https://images.unsplash.com/photo-1685954625078-4db81d6cd202?auto=format&fit=crop&w=800&q=80", // Royal Kundan/Meenakari necklaces
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80", // Exquisite temple-style ethnic gold jewelry
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=80", // Traditional Indian gold bangles/kadhas
+      "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?auto=format&fit=crop&w=800&q=80", // Heritage gold plating set with pearls
+      "https://images.unsplash.com/photo-1626497746470-20ed6792330a?auto=format&fit=crop&w=800&q=80", // Heavy ethnic statement neckpiece
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80", // Traditional south Indian style gold necklace
+      "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80"  // Royal antique gold layered set
     ],
+    // 10 gorgeous rustic/silver oxidized boho jewelry pieces
     oxidised: [
-      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80", // Gorgeous silver oxidized jhumkas & rings
-      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80", // Handcrafted rustic neckpiece
-      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80", // Fine details of vintage silver finish
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80", // Handcrafted silver oxidized jhumkas
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80", // Vintage silver oxidized neckpiece
+      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80", // Antique ethnic silver finish details
+      "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=800&q=80", // Oxidized metallic boho necklace
+      "https://images.unsplash.com/photo-1543294001-f7cbfe92237e?auto=format&fit=crop&w=800&q=80", // Detailed antique metallic vintage pieces
+      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80", // Statement tribal silver neckpiece
+      "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80", // Heavy oxidized silver rings
+      "https://images.unsplash.com/photo-1611085583191-a3b1a30a8a3a?auto=format&fit=crop&w=800&q=80", // Silver boho stack rings & bangles
+      "https://images.unsplash.com/photo-1631557920190-706797f1f964?auto=format&fit=crop&w=800&q=80", // Handcrafted tribal silver armlets/bangles
+      "https://images.unsplash.com/photo-1633114128174-2f8aa4967942?auto=format&fit=crop&w=800&q=80"  // Multi-stone vintage silver ring details
     ],
+    // 10 sparkling American Diamond & CZ/Gold Plated modern jewelry pieces
     diamond: [
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80", // Sparkling CZ diamond bracelets & earrings
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80", // Luxury modern gold and stone settings
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80", // Premium crystals on black satin
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80", // Sparkling CZ diamond rings
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80", // Luxury modern gold and CZ layouts
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80", // Sparkling AD diamond choker details
+      "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?auto=format&fit=crop&w=800&q=80", // Crystal CZ necklaces
+      "https://images.unsplash.com/photo-1611085583191-a3b1a30a8a3a?auto=format&fit=crop&w=800&q=80", // Minimalist gold plated modern jewellery
+      "https://images.unsplash.com/photo-1635200845348-18e539958a5e?auto=format&fit=crop&w=800&q=80", // Designer gold plated rings
+      "https://images.unsplash.com/photo-1637416067365-2b5d7e8fe839?auto=format&fit=crop&w=800&q=80", // Sparkling CZ diamond studs
+      "https://images.unsplash.com/photo-1638805981949-666874284587?auto=format&fit=crop&w=800&q=80", // Minimalist luxury bracelets
+      "https://images.unsplash.com/photo-1642104704074-93d264f724cd?auto=format&fit=crop&w=800&q=80", // High-end CZ necklace set
+      "https://images.unsplash.com/photo-1644917992765-a8a2a2223a8a?auto=format&fit=crop&w=800&q=80"  // Gold plated modern luxury cuffs
     ],
-    business: [
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80", // Upscale jewelry showroom layout
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80", // Logistics center / B2B global building
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80", // Wholesale planning / premium trade operations
-    ],
-    packaging: [
-      "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=80", // Premium branded gift box opening
-      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80", // Beautiful jewelry box packaging and display
+    // 10 premium jewellery showroom & gorgeous display collections (for general, export, & wholesale guides)
+    general: [
+      "https://images.unsplash.com/photo-1588444839799-eb0c99e538c5?auto=format&fit=crop&w=800&q=80", // Beautiful jewelry display cabinets
+      "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80", // Elegant designer drop earrings
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80", // Fashion jewellery showcase layout
+      "https://images.unsplash.com/photo-1635200845348-18e539958a5e?auto=format&fit=crop&w=800&q=80", // Designer gold ring rows
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80", // Full necklace with matching ear studs
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80", // Jewelry collection counter displays
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80", // Exquisite ring collections
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80", // Handcrafted Indian traditional jhumki earrings
+      "https://images.unsplash.com/photo-1629190209673-f938f2a6409b?auto=format&fit=crop&w=800&q=80", // High-end crystal drop pendants
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80"  // Handmade gold plating detailed craft
     ]
   };
 
   const titleLower = post.title.toLowerCase();
   const categoryLower = (post.category || "").toLowerCase();
 
-  let chosenList = images.diamond; // default modern fashion jewellery look
+  let chosenList = images.general; // default premium fashion jewelry look
 
   // Categorize based on keywords
   if (
@@ -146,27 +174,14 @@ export function getSafeBlogImage(post: { id: number; slug: string; title: string
   ) {
     chosenList = images.oxidised;
   } else if (
-    titleLower.includes("packaging") ||
-    titleLower.includes("care") ||
-    titleLower.includes("quality") ||
-    titleLower.includes("box")
+    titleLower.includes("american diamond") ||
+    titleLower.includes("ad") ||
+    titleLower.includes("cz") ||
+    titleLower.includes("minimalist") ||
+    titleLower.includes("diamond") ||
+    categoryLower.includes("materials")
   ) {
-    chosenList = images.packaging;
-  } else if (
-    titleLower.includes("export") ||
-    titleLower.includes("import") ||
-    titleLower.includes("wholesale") ||
-    titleLower.includes("business") ||
-    titleLower.includes("market") ||
-    titleLower.includes("supplier") ||
-    titleLower.includes("manufacturer") ||
-    titleLower.includes("country") ||
-    categoryLower.includes("export") ||
-    categoryLower.includes("wholesale") ||
-    categoryLower.includes("business") ||
-    categoryLower.includes("manufacturing")
-  ) {
-    chosenList = images.business;
+    chosenList = images.diamond;
   }
 
   // Generate a deterministic integer hash from the unique slug to prevent adjacent duplicates
