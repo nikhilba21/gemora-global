@@ -339,12 +339,11 @@ export default function Footer() {
           style={{ color: "rgba(255,255,255,0.5)" }}
         >
           <span>
-            &copy; {year} Gemora Global Private Limited — Established 2011. Imitation Jewellery
-            Manufacturer &amp; Exporter, Jaipur, India. All rights reserved.
-          </span>
-          <span className="whitespace-nowrap">
-            Built with <span aria-hidden="true">&#10084;</span> using{" "}
-            
+            &copy; {year}{" "}
+            <Link to="/" className="hover:text-white underline transition-colors">
+              Gemora Global Private Limited
+            </Link>{" "}
+            — Established 2011. Imitation Jewellery Manufacturer &amp; Exporter, Jaipur, India. All rights reserved.
           </span>
         </div>
       </div>
