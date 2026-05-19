@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { type BlogPost } from "../utils/blogStore";
-import { blogService, getSafeBlogImage } from "../utils/blogService";
+import { blogService, getSafeBlogImage, handleImageError } from "../utils/blogService";
 import { useCanonical } from '../hooks/useCanonical';
 
 /** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
@@ -199,6 +199,7 @@ export default function BlogPostPage() {
           <img
             src={getSafeBlogImage(post)}
             alt={post.title}
+            onError={handleImageError}
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -402,6 +403,7 @@ export default function BlogPostPage() {
                       <img
                         src={getSafeBlogImage(rp)}
                         alt={rp.title}
+                        onError={handleImageError}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                         width={600}

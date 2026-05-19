@@ -2,6 +2,23 @@ import { BlogPost } from "../types/blog";
 import { BLOG_BATCHES } from "./blogStore";
 
 /**
+ * Resilient image loading fallback rotating among verified local jewelry assets
+ * to guarantee that no blog post ever displays a broken image.
+ */
+export function handleImageError(e: React.SyntheticEvent<HTMLImageElement, Event>) {
+  const fallbacks = [
+    "/assets/blog/jewellery-export-india.png",
+    "/assets/blog/jaipur-manufacturing-hub.png",
+    "/assets/blog/usa-jewellery-export.png",
+    "/assets/blog/jewellery-trends-2026.png"
+  ];
+  const currentSrc = e.currentTarget.src;
+  const filtered = fallbacks.filter(f => !currentSrc.includes(f));
+  const fallback = filtered[Math.floor(Math.random() * filtered.length)] || fallbacks[0];
+  e.currentTarget.src = fallback;
+}
+
+/**
  * Service to handle blog data loading and search.
  * This will eventually fetch from a JSON file or API to reduce bundle size and IDE lag.
  */

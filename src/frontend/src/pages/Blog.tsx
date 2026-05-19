@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 import { useActor } from "../hooks/useActor";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useCanonical } from '../hooks/useCanonical';
-import { blogService, getSafeBlogImage } from "../utils/blogService";
+import { blogService, getSafeBlogImage, handleImageError } from "../utils/blogService";
 import { type BlogPost } from "../utils/blogStore";
 
 const BLOG_PAGE_SIZE = 12;
@@ -113,8 +113,6 @@ export default function Blog() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const [backendPosts, setBackendPosts] = useState<BlogPost[]>([]);
-  const [totalPages, setTotalPages] = useState(0);
-  const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
@@ -124,24 +122,21 @@ export default function Blog() {
     const loadData = async () => {
       setIsLoading(true);
       try {
-        // 1. Ensure Batch 62 is loaded (dynamic layer example)
+        // 1. Load batch 62
         await blogService.loadBatchFromJson(62);
 
-        // 2. Fetch backend posts
-        const response = await fetch(`${API_BASE}/api/blog?page=${currentPage}&pageSize=${BLOG_PAGE_SIZE}`);
+        // 2. Fetch backend posts (fetch first 500 to enable dynamic client-side filtering/pagination)
+        const response = await fetch(`${API_BASE}/api/blog?page=0&pageSize=500`);
         const data = await response.json();
         const backendItems = (Array.isArray(data) ? data : (data.items || [])) as BlogPost[];
         
-        // 3. Combine with static/dynamic service posts
+        // 3. Combine with static batches
         const servicePosts = blogService.getAllPosts();
         const allPosts = [...servicePosts, ...backendItems];
         
         // Filter unique by slug
         const uniquePosts = Array.from(new Map(allPosts.map(p => [p.slug, p])).values());
-        
         setBackendPosts(uniquePosts);
-        setTotalPages(data.pages || Math.ceil(uniquePosts.length / BLOG_PAGE_SIZE) || 1);
-        setTotalCount(uniquePosts.length);
       } catch (error) {
         console.error("Failed to load blog data:", error);
         setBackendPosts(blogService.getAllPosts());
@@ -150,9 +145,9 @@ export default function Blog() {
       }
     };
     loadData();
-  }, [currentPage, API_BASE]);
+  }, [API_BASE]);
 
-  // Client-side category + search filter (on current page)
+  // Client-side category + search filter (across all combined posts)
   const filtered = backendPosts.filter((post) => {
     const matchCat =
       activeCategory === "All" || post.category === activeCategory;
@@ -165,10 +160,25 @@ export default function Blog() {
     return matchCat && matchSearch;
   });
 
+  // Calculate client-side pagination parameters dynamically based on current filter list
+  const totalCount = filtered.length;
+  const totalPages = Math.ceil(totalCount / BLOG_PAGE_SIZE) || 1;
+  const activePage = Math.min(currentPage, Math.max(0, totalPages - 1));
+
+  // Determine if page 1 displays a premium full-width "Spotlight Featured Card"
+  const showSpotlight = activePage === 0 && filtered.length > 0 && searchQuery === "";
+  const spotlightPost = showSpotlight ? filtered[0] : null;
+
+  // Slice the filtered articles. If showing a spotlight, exclude it from the grid items
+  const gridPosts = showSpotlight
+    ? filtered.slice(1, BLOG_PAGE_SIZE)
+    : filtered.slice(activePage * BLOG_PAGE_SIZE, (activePage + 1) * BLOG_PAGE_SIZE);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      {/* Static crawlable fallback — visible to search engines before JS runs */}
+      
+      {/* Static crawlable fallback for Google bot */}
       <noscript>
         <div style={{ padding: "24px", fontFamily: "sans-serif" }}>
           <h1>Jewellery Export Insights — Gemora Global Blog</h1>
@@ -176,204 +186,78 @@ export default function Blog() {
             Expert guides on imitation jewellery sourcing, export strategies,
             MOQ advice, and wholesale tips for global buyers from Jaipur, India.
           </p>
-          <h2>Blog Categories</h2>
-          <ul>
-            <li>Jewellery Export Guides</li>
-            <li>
-              Country Sourcing Strategies (UAE, USA, UK, Australia, Canada,
-              Singapore)
-            </li>
-            <li>Wholesale Buying Tips &amp; MOQ Advice</li>
-            <li>Fashion Jewellery Trends 2026</li>
-            <li>Manufacturing &amp; Quality</li>
-            <li>B2B Buyer Guides</li>
-            <li>Packaging &amp; Logistics</li>
-            <li>Business Growth for Exporters</li>
-          </ul>
           <h2>Latest Articles</h2>
           <ul>
-            <li>
-              <a href="/blog/how-to-import-imitation-jewellery-from-india">
-                How to Import Imitation Jewellery from India
-              </a>
-            </li>
-            <li>
-              <a href="/blog/best-imitation-jewellery-manufacturer-india">
-                Best Imitation Jewellery Manufacturer in India
-              </a>
-            </li>
-            <li>
-              <a href="/blog/wholesale-imitation-jewellery-suppliers-jaipur">
-                Wholesale Imitation Jewellery Suppliers in Jaipur
-              </a>
-            </li>
-            <li>
-              <a href="/blog/top-fashion-jewellery-trends-2026">
-                Top Fashion Jewellery Trends 2026
-              </a>
-            </li>
-            <li>
-              <a href="/blog/why-buy-fashion-jewellery-indian-manufacturers">
-                Why Buy Fashion Jewellery from Indian Manufacturers
-              </a>
-            </li>
-            <li>
-              <a href="/blog/wholesale-jewellery-exporter-to-uae">
-                Wholesale Jewellery Exporter to UAE
-              </a>
-            </li>
-            <li>
-              <a href="/blog/fashion-jewellery-suppliers-uk-retailers">
-                Fashion Jewellery Suppliers for UK Retailers
-              </a>
-            </li>
-            <li>
-              <a href="/blog/minimum-order-quantity-jewellery-export">
-                Minimum Order Quantity for Jewellery Export
-              </a>
-            </li>
-            <li>
-              <a href="/blog/how-to-start-imitation-jewellery-export-business">
-                How to Start an Imitation Jewellery Export Business
-              </a>
-            </li>
-            <li>
-              <a href="/blog/export-artificial-jewellery-jaipur-usa">
-                Exporting Artificial Jewellery from Jaipur to the USA
-              </a>
-            </li>
-            <li>
-              <a href="/blog/imitation-jewellery-export-documentation-checklist">
-                Export Documentation Checklist for Suppliers
-              </a>
-            </li>
-            <li>
-              <a href="/blog/find-international-buyers-imitation-jewellery">
-                How to Find International Buyers for Jewellery
-              </a>
-            </li>
-            <li>
-              <a href="/blog/hs-code-customs-duties-imitation-jewellery">
-                HS Codes and Customs Duties Explained
-              </a>
-            </li>
-            <li>
-              <a href="/blog/imitation-jewellery-trends-2025">
-                Top 10 Imitation Jewellery Trends 2025
-              </a>
-            </li>
-            <li>
-              <a href="/blog/artificial-jewellery-demand-usa-europe">
-                Demand for Artificial Jewellery in USA & Europe
-              </a>
-            </li>
-            <li>
-              <a href="/blog/fashion-jewellery-middle-east-rise">
-                The Rise of Fashion Jewellery in the Middle East
-              </a>
-            </li>
-            <li>
-              <a href="/blog/choose-imitation-jewellery-wholesale-supplier-india">
-                Choose the Right Wholesale Supplier from India
-              </a>
-            </li>
-            <li>
-              <a href="/blog/wholesale-kundan-jewellery-jaipur-guide">
-                Wholesale Kundan Jewellery: Ultimate Guide
-              </a>
-            </li>
-            <li>
-              <a href="/blog/oxidized-jewellery-bestseller-boutiques">
-                Why Oxidized Jewellery is a Global Bestseller
-              </a>
-            </li>
-            <li>
-              <a href="/blog/bridal-imitation-jewellery-sets-export">
-                Bridal Imitation Jewellery Sets: Hottest Export
-              </a>
-            </li>
-            <li>
-              <a href="/blog/american-diamond-jewellery-wholesale">
-                American Diamond Jewellery Wholesale Guide
-              </a>
-            </li>
+            {filtered.slice(0, 30).map(post => (
+              <li key={post.slug}>
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </noscript>
-      <main className="pt-16">
-        {/* Hero */}
-        <section className="relative py-12 md:py-20 overflow-hidden px-4">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
-          <div className="container relative z-10 text-center">
+
+      <main className="pt-16 pb-20">
+        {/* Header Hero Section */}
+        <section className="relative py-16 md:py-24 overflow-hidden px-4">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.08),rgba(255,255,255,0))]" />
+          <div className="container relative z-10 text-center max-w-4xl">
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-primary text-sm font-semibold tracking-widest uppercase mb-3"
+              className="text-primary text-xs md:text-sm font-semibold tracking-widest uppercase mb-4"
             >
-              Gemora Global Blog
+              Gemora Global B2B Journal
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight"
+              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight"
             >
-              Jewellery Insights — Export Guides, Trend Reports &amp; Sourcing
-              Advice
+              Jewellery Export Insights &amp; Sourcing Advice
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg mb-6"
+              className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg mb-8 leading-relaxed"
             >
-              The Gemora Global blog covers imitation jewellery sourcing guides,
-              export tips, trend reports, and MOQ advice for wholesale buyers in
-              UAE, France, USA, UK and Europe. Browse our{" "}
-              <Link to="/products" className="text-primary hover:underline">
-                product catalogue
-              </Link>{" "}
-              or read our{" "}
-              <Link to="/wholesale" className="text-primary hover:underline">
-                wholesale guide
-              </Link>{" "}
-              to get started.
+              Expert trend reports, factory sourcing guides, MOQ optimization, and customs strategies for international jewelry boutique owners.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="relative w-full max-w-md mx-auto"
+              className="relative w-full max-w-lg mx-auto"
             >
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
               <input
                 type="search"
-                placeholder="Search articles…"
+                placeholder="Search premium articles..."
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
                   setCurrentPage(0);
                 }}
                 data-ocid="blog.search_input"
-                className="w-full pl-11 pr-4 py-3 rounded-full bg-card border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary min-h-[44px]"
+                className="w-full pl-12 pr-5 py-4 rounded-2xl bg-card/65 border border-border/80 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-lg min-h-[48px]"
               />
             </motion.div>
           </div>
         </section>
 
-        {/* Category Filter */}
-        <section className="pb-6 px-4">
+        {/* Category Filters */}
+        <section className="container px-4 pb-12 border-b border-border/40">
           <div
-            className="flex gap-2 overflow-x-auto pb-2"
+            className="flex gap-2.5 overflow-x-auto pb-3"
             style={{
               WebkitOverflowScrolling: "touch",
               msOverflowStyle: "none",
               scrollbarWidth: "none",
             }}
-            role="tablist"
-            aria-label="Blog categories"
           >
             {CATEGORIES.map((cat) => (
               <button
@@ -386,10 +270,10 @@ export default function Blog() {
                 }}
                 type="button"
                 data-ocid={`blog.filter.${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 whitespace-nowrap flex-shrink-0 min-h-[36px] ${
+                className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/40 whitespace-nowrap flex-shrink-0 min-h-[38px] ${
                   activeCategory === cat
-                    ? "bg-primary text-primary-foreground border-primary shadow-sm"
-                    : "bg-card text-muted-foreground border-border hover:border-primary/50 hover:text-foreground"
+                    ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20 scale-[1.03]"
+                    : "bg-card/40 text-muted-foreground border-border/80 hover:border-primary/50 hover:text-foreground"
                 }`}
               >
                 {cat}
@@ -398,159 +282,195 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* Posts Grid */}
-        <section
-          className="container pb-16 md:pb-24 px-4"
-          data-ocid="blog.section"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 md:mb-8">
-            <h2 className="font-serif text-xl md:text-2xl font-bold">
-              {activeCategory === "All" ? "All Articles" : activeCategory}
-            </h2>
-            {!isLoading && totalCount > 0 && (
-              <p className="text-sm text-muted-foreground">
-                Showing{" "}
-                <span className="font-semibold text-foreground">
-                  {currentPage * BLOG_PAGE_SIZE + 1}–
-                  {Math.min((currentPage + 1) * BLOG_PAGE_SIZE, totalCount)}
-                </span>{" "}
-                of{" "}
-                <span className="font-semibold text-foreground">
-                  {totalCount}
-                </span>{" "}
-                articles
-              </p>
-            )}
-          </div>
-
+        {/* Main Content Area */}
+        <section className="container px-4 py-12" data-ocid="blog.section">
           {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border rounded-2xl overflow-hidden animate-pulse"
-                >
-                  <div className="aspect-[16/9] bg-muted" />
-                  <div className="p-5 space-y-3">
-                    <div className="h-4 bg-muted rounded w-1/4" />
-                    <div className="h-6 bg-muted rounded w-3/4" />
-                    <div className="h-4 bg-muted rounded" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : filtered.length === 0 ? (
-            <div
-              className="text-center py-16 md:py-20"
-              data-ocid="blog.empty_state"
-            >
-              <p className="text-4xl mb-4">📝</p>
-              {backendPosts.length === 0 ? (
-                <>
-                  <p className="text-muted-foreground text-base md:text-lg mb-4 font-medium">
-                    No blog posts yet.
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-6">
-                    Blog posts can be added from the admin panel.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p className="text-muted-foreground text-base md:text-lg mb-4">
-                    No articles found
-                    {activeCategory !== "All" ? ` in "${activeCategory}"` : ""}
-                    {searchQuery ? ` for "${searchQuery}"` : ""}.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setActiveCategory("All");
-                      setSearchQuery("");
-                    }}
-                    type="button"
-                    className="text-primary hover:underline text-sm min-h-[44px] px-4"
-                  >
-                    Clear filters
-                  </button>
-                </>
-              )}
-            </div>
-          ) : (
-            <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-                {filtered.map((post, i) => (
-                  <motion.article
-                    key={post.slug}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: Math.min(i * 0.05, 0.4),
-                    }}
-                    data-ocid={`blog.item.${currentPage * BLOG_PAGE_SIZE + i + 1}`}
-                    className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-colors duration-300"
-                  >
-                    <Link to={`/blog/${post.slug}`}>
-                      {getSafeBlogImage(post) && (
-                        <div className="aspect-[16/9] overflow-hidden">
-                          <img
-                            src={getSafeBlogImage(post)}
-                            alt={`${post.title} — Gemora Global jewellery export blog`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                            width={600}
-                            height={338}
-                          />
-                        </div>
-                      )}
-                      <div className="p-4 md:p-5">
-                        {post.category && (
-                          <span
-                            className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full border mb-3 ${
-                              categoryColors[post.category] ??
-                              "bg-primary/20 text-primary border-primary/30"
-                            }`}
-                          >
-                            {post.category}
-                          </span>
-                        )}
-                        <h3 className="font-bold text-base md:text-lg text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                          {post.title}
-                        </h3>
-                        {post.excerpt && (
-                          <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
-                            {post.excerpt}
-                          </p>
-                        )}
-                        <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-                          {post.author && (
-                            <span className="flex items-center gap-1">
-                              <User className="w-3 h-3" />
-                              {post.author}
-                            </span>
-                          )}
-                          {post.date && (
-                            <span className="flex items-center gap-1">
-                              <Calendar className="w-3 h-3" />
-                              {post.date}
-                            </span>
-                          )}
-                          {post.readTime && (
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
-                              {post.readTime}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.article>
+            <div className="space-y-12 animate-pulse">
+              <div className="h-96 bg-muted rounded-3xl" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[1, 2, 3].map(i => (
+                  <div key={i} className="h-72 bg-muted rounded-2xl" />
                 ))}
               </div>
+            </div>
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-20 bg-card/20 border border-border/50 rounded-3xl" data-ocid="blog.empty_state">
+              <p className="text-5xl mb-4">💎</p>
+              <p className="text-muted-foreground text-lg mb-3 font-semibold">No articles found</p>
+              <p className="text-muted-foreground text-sm max-w-sm mx-auto mb-6">
+                Try searching for a different jewellery term or clear active filters.
+              </p>
+              <button
+                onClick={() => {
+                  setActiveCategory("All");
+                  setSearchQuery("");
+                  setCurrentPage(0);
+                }}
+                type="button"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold shadow hover:bg-primary/95 transition-all"
+              >
+                Reset Filters
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-16">
+              
+              {/* spotlight featured card (BR Softech Style Hero Banner) */}
+              {showSpotlight && spotlightPost && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="group relative overflow-hidden rounded-3xl border border-border/85 bg-card/45 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <Link to={`/blog/${spotlightPost.slug}`} className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                    <div className="lg:col-span-7 aspect-[16/10] lg:aspect-auto lg:h-[480px] overflow-hidden relative">
+                      <img
+                        src={getSafeBlogImage(spotlightPost)}
+                        alt={spotlightPost.title}
+                        onError={handleImageError}
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                        loading="eager"
+                        fetchPriority="high"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-background/90 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow">
+                        Spotlight Article
+                      </div>
+                    </div>
+                    <div className="lg:col-span-5 p-6 sm:p-8 md:p-10 flex flex-col justify-center space-y-4">
+                      <span className={`inline-block self-start text-xs font-semibold px-3 py-1 rounded-full border ${categoryColors[spotlightPost.category] || "bg-primary/20 text-primary border-primary/30"}`}>
+                        {spotlightPost.category}
+                      </span>
+                      <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors duration-300 leading-snug">
+                        {spotlightPost.title}
+                      </h2>
+                      <p className="text-muted-foreground text-sm sm:text-base line-clamp-4 leading-relaxed">
+                        {spotlightPost.excerpt}
+                      </p>
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground pt-4 border-t border-border/50">
+                        <span className="flex items-center gap-1.5">
+                          <User className="w-3.5 h-3.5" />
+                          {spotlightPost.author}
+                        </span>
+                        <span>•</span>
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {spotlightPost.date}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              )}
 
-              {/* Pagination */}
+              {/* Grid Section */}
+              <div className="space-y-8">
+                <h2 className="font-display text-xl md:text-2xl font-bold text-foreground">
+                  {activeCategory === "All" ? "Latest Sourcing Guides" : `${activeCategory} Articles`}
+                </h2>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                  {gridPosts.map((post, i) => (
+                    <motion.article
+                      key={post.slug}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: Math.min(i * 0.05, 0.3),
+                      }}
+                      data-ocid={`blog.item.${currentPage * BLOG_PAGE_SIZE + i + 1}`}
+                      className="group bg-card/45 backdrop-blur-md border border-border/60 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 rounded-3xl overflow-hidden flex flex-col justify-between h-full"
+                    >
+                      <Link to={`/blog/${post.slug}`} className="flex flex-col h-full justify-between">
+                        <div>
+                          {getSafeBlogImage(post) && (
+                            <div className="aspect-[16/10] overflow-hidden relative">
+                              <img
+                                src={getSafeBlogImage(post)}
+                                alt={`${post.title} — Gemora Global B2B jewellery`}
+                                onError={handleImageError}
+                                className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                                loading="lazy"
+                                width={600}
+                                height={375}
+                              />
+                            </div>
+                          )}
+                          <div className="p-5 md:p-6 space-y-3">
+                            {post.category && (
+                              <span
+                                className={`inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full border uppercase tracking-wider ${
+                                  categoryColors[post.category] ??
+                                  "bg-primary/20 text-primary border-primary/30"
+                                }`}
+                              >
+                                {post.category}
+                              </span>
+                            )}
+                            <h3 className="font-bold text-base md:text-lg text-foreground leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                              {post.title}
+                            </h3>
+                            {post.excerpt && (
+                              <p className="text-muted-foreground text-xs md:text-sm line-clamp-3 leading-relaxed">
+                                {post.excerpt}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <div className="p-5 md:p-6 pt-0 mt-auto border-t border-border/30 flex items-center justify-between text-[11px] text-muted-foreground">
+                          <span className="flex items-center gap-1">
+                            <Calendar className="w-3 h-3" />
+                            {post.date}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3 h-3" />
+                            {post.readTime}
+                          </span>
+                        </div>
+                      </Link>
+                    </motion.article>
+                  ))}
+                </div>
+              </div>
+
+              {/* B2B Premium Newsletter Banner */}
+              {currentPage === 0 && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-r from-primary/10 via-primary/5 to-card/50 p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6"
+                >
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.05),transparent)]" />
+                  <div className="relative z-10 max-w-xl space-y-2">
+                    <h3 className="font-display text-lg md:text-2xl font-bold text-foreground">
+                      B2B Jewellery Sourcing Insights &amp; MOQ Reports
+                    </h3>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      Join 12,000+ international boutique buyers. Get weekly pricing updates, customs guidelines, and Jaipur wholesale catalogs directly in your inbox.
+                    </p>
+                  </div>
+                  <div className="relative z-10 w-full md:w-auto flex flex-col sm:flex-row gap-3 min-w-[280px] sm:min-w-[400px]">
+                    <input
+                      type="email"
+                      placeholder="Enter corporate email address"
+                      className="flex-grow px-5 py-3 rounded-xl bg-card border border-border text-xs md:text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary min-h-[44px]"
+                    />
+                    <button
+                      type="button"
+                      className="px-6 py-3 rounded-xl bg-primary hover:bg-primary/95 text-primary-foreground font-semibold text-xs md:text-sm shadow-md transition-all whitespace-nowrap min-h-[44px]"
+                    >
+                      Subscribe Insights
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Pagination Controls */}
               {totalPages > 1 && (
                 <div
-                  className="flex flex-col items-center gap-3 mt-10"
+                  className="flex flex-col items-center gap-4 pt-10"
                   data-ocid="blog.pagination"
                 >
                   <div className="flex items-center gap-2 flex-wrap justify-center">
@@ -560,20 +480,20 @@ export default function Blog() {
                         setCurrentPage((p) => Math.max(0, p - 1));
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
-                      disabled={currentPage === 0}
-                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px]"
+                      disabled={activePage === 0}
+                      className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-border/80 text-xs md:text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[40px]"
                       data-ocid="blog.pagination_prev"
                     >
                       <ChevronLeft className="w-4 h-4" /> Previous
                     </button>
 
-                    {/* Page number buttons — show up to 7 around current */}
+                    {/* Page Numbers */}
                     {Array.from({ length: totalPages }, (_, i) => i)
                       .filter(
                         (i) =>
                           i === 0 ||
                           i === totalPages - 1 ||
-                          Math.abs(i - currentPage) <= 2,
+                          Math.abs(i - activePage) <= 2,
                       )
                       .reduce<{ type: "page" | "ellipsis"; value: number }[]>(
                         (acc, page, idx, arr) => {
@@ -589,7 +509,7 @@ export default function Blog() {
                         item.type === "ellipsis" ? (
                           <span
                             key={`ellipsis-after-${item.value}`}
-                            className="px-2 text-muted-foreground text-sm"
+                            className="px-2.5 text-muted-foreground text-sm"
                           >
                             …
                           </span>
@@ -601,10 +521,10 @@ export default function Blog() {
                               setCurrentPage(item.value);
                               window.scrollTo({ top: 0, behavior: "smooth" });
                             }}
-                            className={`w-10 h-10 rounded-lg border text-sm font-medium transition-colors ${
-                              currentPage === item.value
-                                ? "bg-primary text-primary-foreground border-primary"
-                                : "border-border hover:border-primary hover:text-primary"
+                            className={`w-10 h-10 rounded-xl border text-xs md:text-sm font-semibold transition-all ${
+                              activePage === item.value
+                                ? "bg-primary text-primary-foreground border-primary shadow"
+                                : "border-border hover:border-primary hover:text-primary bg-card/25"
                             }`}
                             data-ocid={`blog.pagination.page.${item.value + 1}`}
                           >
@@ -619,19 +539,19 @@ export default function Blog() {
                         setCurrentPage((p) => Math.min(totalPages - 1, p + 1));
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
-                      disabled={currentPage >= totalPages - 1}
-                      className="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px]"
+                      disabled={activePage >= totalPages - 1}
+                      className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-border/80 text-xs md:text-sm font-medium hover:border-primary hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-not-allowed min-h-[40px]"
                       data-ocid="blog.pagination_next"
                     >
                       Next <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    Page {currentPage + 1} of {totalPages}
+                  <p className="text-[11px] text-muted-foreground">
+                    Showing articles {(activePage * BLOG_PAGE_SIZE) + 1}–{Math.min((activePage + 1) * BLOG_PAGE_SIZE, totalCount)} of {totalCount}
                   </p>
                 </div>
               )}
-            </>
+            </div>
           )}
         </section>
       </main>
