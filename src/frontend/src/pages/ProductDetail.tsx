@@ -65,6 +65,87 @@ function WAIcon({ className }: { className?: string }) {
   );
 }
 
+function ProductSeoContent({ product }: { product: any }) {
+  if (!product) return null;
+
+  const sub = product.subcategory || "Fashion Jewellery";
+  const name = product.name;
+
+  return (
+    <section className="mt-12 md:mt-16 border-t border-border pt-10 space-y-8">
+      <div>
+        <h2 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-4">
+          Premium Wholesaler Insights & Material Quality
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-10 text-sm leading-relaxed text-muted-foreground">
+          <div className="space-y-4">
+            <p>
+              Sourcing the exquisite <strong>{name}</strong> directly from our state-of-the-art Jaipur manufacturing workshop guarantees your retail store or online boutique accesses the absolute highest tier of craftsmanship. Every piece in our <strong>{sub}</strong> catalog is built using a premium brass or copper alloy base core, hand-crafted by veteran Karigars (artisans) who specialize in heritage glass-setting, Kundan inlay work, and micro-claw diamond placements.
+            </p>
+            <p>
+              To ensure global export compliance and maximum customer satisfaction, our workshop applies a proprietary, three-stage anti-tarnish micro-coating. This shields the precious plating—whether it be 18k yellow gold, protective rhodium, or rustic oxidized silver—from immediate environmental wear, preserving the initial luster and sparkle for years to come.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <p>
+              <strong>Professional Styling Recommendations:</strong> The elegant design profile of the {name} offers unparalleled versatility. For high-end bridal or festive retail selections, we suggest pairing these {sub} creations with deep-cut necklines, silk sarees, or embroidered designer lehengas. For modern everyday collections, its clean silhouette complements minimalist contemporary apparel, corporate suits, and evening cocktail wear seamlessly.
+            </p>
+            <p>
+              <strong>Direct Wholesaler Benefits:</strong> By purchasing directly from Gemora Global, you cut out all secondary middlemen markups, saving between 40% and 60% on B2B import margins. We offer complete custom brand labeling, customized plating thicknesses (up to 2.0 microns), and strict quality inspections before DHL or FedEx Express shipment dispatch.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Accordion FAQ Section */}
+      <div>
+        <div className="flex items-center gap-2 mb-6">
+          <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">
+            Frequently Asked B2B Questions
+          </h3>
+        </div>
+        <div className="space-y-3">
+          <details className="group border border-border rounded-xl p-4 bg-card/50 backdrop-blur-sm cursor-pointer transition-all duration-200 open:bg-card">
+            <summary className="flex justify-between items-center font-semibold text-sm sm:text-base text-foreground list-none">
+              <span>What is the minimum order quantity (MOQ) for {name}?</span>
+              <span className="text-primary transition-transform duration-200 group-open:rotate-180">
+                <ChevronRight className="w-5 h-5 flex-shrink-0" />
+              </span>
+            </summary>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed cursor-default">
+              Our standard MOQ for the {name} is {product.moq || "50 units per design"}. This lower entry threshold is engineered to allow boutique owners, boutique start-ups, and online sellers to diversify their product collections without tying up capital in excessive inventory.
+            </p>
+          </details>
+
+          <details className="group border border-border rounded-xl p-4 bg-card/50 backdrop-blur-sm cursor-pointer transition-all duration-200 open:bg-card">
+            <summary className="flex justify-between items-center font-semibold text-sm sm:text-base text-foreground list-none">
+              <span>Does this jewelry have an anti-tarnish micro-plating finish?</span>
+              <span className="text-primary transition-transform duration-200 group-open:rotate-180">
+                <ChevronRight className="w-5 h-5 flex-shrink-0" />
+              </span>
+            </summary>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed cursor-default">
+              Yes, absolutely. Gemora Global products undergo a rigorous 3-step quality assurance process, concluding with a proprietary anti-tarnish vacuum micro-coating. This coating protects the underlying precious metal plating. To ensure long-lasting durability, we recommend avoiding exposure to strong chemicals, liquid perfumes, and direct water contact.
+            </p>
+          </details>
+
+          <details className="group border border-border rounded-xl p-4 bg-card/50 backdrop-blur-sm cursor-pointer transition-all duration-200 open:bg-card">
+            <summary className="flex justify-between items-center font-semibold text-sm sm:text-base text-foreground list-none">
+              <span>How do you handle B2B shipping and import customs documentation?</span>
+              <span className="text-primary transition-transform duration-200 group-open:rotate-180">
+                <ChevronRight className="w-5 h-5 flex-shrink-0" />
+              </span>
+            </summary>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed cursor-default">
+              We ship door-to-door globally via premium express couriers like DHL Express and FedEx, delivering to destinations in the USA, UK, Europe, Australia, and UAE within 5 to 7 business days. We prepare and supply all critical trade documents, including the Commercial Invoice, detailed Packing List, and Certificate of Origin (COO), guaranteeing a frictionless customs clearance process.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function ProductDetail() {
   const { id } = useParams();
   const [activeImg, setActiveImg] = useState(0);
@@ -92,6 +173,21 @@ export default function ProductDetail() {
     } catch { /* ignore */ }
   };
 
+  const faqItems = product ? [
+    {
+      q: `What is the minimum order quantity (MOQ) for ${product.name}?`,
+      a: `Our standard MOQ for ${product.name} is ${product.moq || "50 units per design"}. This lower entry threshold is engineered to allow boutique owners, start-ups, and online sellers to diversify their B2B collections safely.`
+    },
+    {
+      q: `Does the ${product.name} have an anti-tarnish micro-plating finish?`,
+      a: "Yes! All premium Gemora Global jewellery creations undergo a proprietary 3-step quality check, concluding with an advanced vacuum anti-tarnish micro-coating. This protects the 18k gold, rhodium, or oxidized silver finish from premature tarnishing."
+    },
+    {
+      q: "How do you handle B2B shipping and customs documentation for international imports?",
+      a: "We ship globally door-to-door via DHL Express and FedEx Express with delivery in 5 to 7 business days. We prepare and supply all critical trade documentation—including the detailed Commercial Invoice, Packing List, and Certificate of Origin (COO)—guaranteeing frictionless customs clearance."
+    }
+  ] : [];
+
   usePageSEO({
     title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Product Not Found | Gemora Global",
     description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "The product you are looking for does not exist on Gemora Global.",
@@ -100,6 +196,7 @@ export default function ProductDetail() {
     googlebot: product ? undefined : "noindex, follow",
     ogImage: product?.imageUrls?.[0],
     product: product as any,
+    faqItems,
     breadcrumbs: [
       { name: "Home", url: "https://www.gemoraglobal.co/" },
       { name: "Products", url: "https://www.gemoraglobal.co/products" },
@@ -380,6 +477,9 @@ export default function ProductDetail() {
             </div>
           ))}
         </div>
+
+        {/* Premium B2B Content & FAQ Accordions */}
+        <ProductSeoContent product={product} />
 
         {/* Bulk Order Calculator */}
         <section className="mt-12 md:mt-16">
