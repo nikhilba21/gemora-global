@@ -15,6 +15,7 @@ import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product, Testimonial } from "../types";
 import { useCanonical } from '../hooks/useCanonical';
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 /** Remove Kanhai Jewels boilerplate text from product descriptions */
 function cleanText(text: string): string {
@@ -344,6 +345,7 @@ export default function Home() {
   const openWaInquiry = (p: Product) => {
     setWaProductName(p.name);
     setWaPopupOpen(true);
+    trackWhatsAppInquiry(p.name, "homepage_quickview");
   };
 
   usePageSEO({

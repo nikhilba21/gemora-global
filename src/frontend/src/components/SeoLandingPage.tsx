@@ -12,6 +12,7 @@ import type { BreadcrumbItem, FAQItem, HowToStep } from "../hooks/usePageSEO";
 import type { Testimonial } from "../types";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 export type { BreadcrumbItem, FAQItem, HowToStep };
 
@@ -205,6 +206,7 @@ export default function SeoLandingPage({
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    trackWhatsAppInquiry(h1, "inquiry_form");
     const text = [
       `Name: ${form.name}`,
       `Email: ${form.email}`,
@@ -268,6 +270,7 @@ export default function SeoLandingPage({
                 href={`https://wa.me/917976341419?text=Hi, I am interested in ${encodeURIComponent(targetKeyword)}. Please share your catalogue and pricing.`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppInquiry(h1, "hero_catalog")}
               >
                 💬 Get Catalogue on WhatsApp
               </a>
@@ -509,6 +512,7 @@ export default function SeoLandingPage({
                 href="https://wa.me/917976341419?text=Please%20share%20your%20wholesale%20jewellery%20catalogue%20and%20pricing."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppInquiry(h1, "bottom_catalog")}
               >
                 📚 Get Catalog via WhatsApp
               </a>

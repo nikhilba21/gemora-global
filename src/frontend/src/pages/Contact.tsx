@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 import { usePageContent } from "../hooks/usePageContent";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useCanonical } from '../hooks/useCanonical';
+import { trackFormInquiry } from "../utils/analytics";
 
 export default function Contact() {
   useCanonical();
@@ -69,6 +70,7 @@ export default function Contact() {
 
     onSuccess: () => {
       toast.success("Inquiry sent! We'll contact you shortly.");
+      trackFormInquiry("contact_page");
       setForm({
         name: "",
         companyName: "",
