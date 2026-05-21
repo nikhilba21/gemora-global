@@ -10,157 +10,223 @@ export default function JewelleryExporterUae() {
       canonical="https://www.gemoraglobal.co/jewellery-exporter-uae"
       h1="Premium Indian Jewellery Export to UAE & GCC Markets"
       targetKeyword="jewellery-exporter-uae"
-      heroSubtitle="Gemora Global exports wholesale jewellery to UAE boutiques, gold souks, and fashion retailers. Bridal sets, American diamond, and kundan collections popular in UAE."
+      heroSubtitle="Gemora Global is the leading Indian jewellery exporter to the UAE, supplying wholesale imitation, bridal, and fashion jewellery direct from our Jaipur factory. Zero import duty via CEPA, 5-day Dubai shipping, and premium Gulf-grade anti-tarnish coating."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },
-        { name: "Jewellery Exporter UAE — Premium Indian Wholesale Jewellery", url: "https://www.gemoraglobal.co/jewellery-exporter-uae" },
-      ]}
-      faqs={[
-        { q: "Do you export to UAE?", a: "Yes, Gemora Global regularly exports wholesale jewellery to UAE. We provide full export documentation, competitive pricing, and reliable shipping via DHL/FedEx." },
-        { q: "What is the MOQ for wholesale orders?", a: "Minimum order quantity is 50 units per design. Mix designs allowed for larger orders." },
-        { q: "How long does delivery take?", a: "Standard DHL delivery takes 5-8 business days. Express options available." },
-        { q: "Do you provide export documentation?", a: "Yes. We provide commercial invoice, packing list, certificate of origin, and all required export documents for smooth customs clearance." },
+        { name: "Jewellery Exporter UAE", url: "https://www.gemoraglobal.co/jewellery-exporter-uae" },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to UAE — Dubai, Abu Dhabi, Sharjah & GCC
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a premier <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer in Jaipur</Link> that has been a trusted partner for UAE-based boutiques, wholesalers, and fashion retailers for over a decade. Our presence in the UAE market, particularly in the vibrant shopping hubs of Dubai, Abu Dhabi, and Sharjah, is built on a foundation of exceptional quality, traditional craftsmanship, and reliable export logistics tailored for the Middle Eastern business landscape.
-            </p>
-            <p className="mb-4">
-              The UAE has always been a global focal point for both fine and fashion jewellery. With the rising demand for high-quality <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">wholesale imitation jewellery from India</Link>, Gemora Global has stepped in to bridge the gap between traditional Jaipur artistry and the modern, fast-paced retail landscape of the Middle East. Whether you are a boutique owner in the iconic Dubai Gold Souk or a digital-first fashion retailer in Sharjah, our curated collections offer the perfect blend of ethnic charm and contemporary international appeal.
-            </p>
-          </section>
+        <>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Premium Indian Imitation Jewellery Exporter to UAE — Dubai, Abu Dhabi, Sharjah & GCC
+          </h2>
+          <p>
+            The United Arab Emirates represents the global capital of luxury shopping. In cities like Dubai — globally known as the "City of Gold" — Abu Dhabi, and Sharjah, consumer appetite for jewelry is unmatched. Historically, the Middle East has been a fine gold market. However, high global gold prices, changing tourist buying patterns, and a booming multicultural population have created a massive, highly lucrative market for premium imitation, costume, and fashion jewelry. High-street boutiques, shopping mall kiosks in Jumeirah, and vendors in the Deira Gold Souk are experiencing an unprecedented boom in the demand for brass-based, high-durability "Visual Parity" jewelry. Sourcing directly from an established Jaipur manufacturer like Gemora Global allows UAE B2B buyers to capture highly profitable retail markups of 400% to 600% on retail shelves.
+          </p>
+          <p>
+            Jaipur is the gemstone and jewelry manufacturing capital of India, blending centuries of royal artisan heritage with state-of-the-art manufacturing facilities. By partnering directly with Gemora Global, UAE importers can cut out intermediaries, trading agents, and wholesale distributors in Deira who typically add a 40% markup. Our direct factory-to-souk sourcing pipeline guarantees you get the absolute lowest per-unit pricing on high-end pieces, keeping you highly competitive in the fast-paced GCC fashion landscape.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why UAE Retailers Prefer Gemora Global's Jaipur-Made Jewellery
-            </h2>
-            <p className="mb-4">
-              Sourcing jewellery for the UAE market requires an understanding of the local aesthetic, which favors opulence, intricate detailing, and a long-lasting brilliance. Our <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan jewellery wholesale</Link> collections are a top choice for UAE bridal boutiques, as they capture the royal heritage of Rajasthan while remaining accessible for modern consumers.
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Gulf-Ready Anti-Tarnish Guarantee:</strong> UAE's humid and warm climate requires jewellery with superior finishing. Every piece we export uses a multi-layer anti-tarnish coating to ensure it remains retail-ready for years in the showroom.</li>
-              <li><strong>Factory-Direct Pricing & Competitive Margins:</strong> By eliminating agents and distributors, we provide UAE importers with a significant cost advantage, direct from our <Link to="/wholesale" className="text-sky-600 hover:underline">wholesale unit in Jaipur</Link>.</li>
-              <li><strong>Rapid Design Updates for Dubai Trends:</strong> We refresh our catalogue with 500+ new designs seasonally, keeping your store ahead of Dubai's fast-moving fashion cycles and social media trends.</li>
-              <li><strong>Exclusive Private Label & Branding:</strong> We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link> for UAE brands looking to launch their own exclusive collections with custom packaging and tags.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            The UAE-India CEPA Advantage: Zero Import Duty Sourcing
+          </h2>
+          <p>
+            One of the single most powerful commercial advantages for UAE-based B2B jewelry importers sourcing from Gemora Global is the landmark **Comprehensive Economic Partnership Agreement (CEPA)** signed between India and the UAE. 
+          </p>
+          <p>
+            Under the CEPA framework, which entered into force in May 2022, the standard UAE import customs duty of <strong>5%</strong> on base metal imitation jewelry imported from India has been eliminated. This means that UAE B2B buyers can import our high-end Kundan, Meenakari, and American Diamond collections completely **duty-free (0% import duty)**.
+          </p>
+          <p>
+            To successfully claim 0% customs duty at UAE ports of entry (such as Dubai DXB or Abu Dhabi Cargo ports), specific strict documentation must be presented during clearance:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Rules of Origin (Rules of Origin Compliance):</strong> The jewelry must undergo significant value addition and manufacturing inside India. Gemora Global manufactures 100% of our products in Jaipur, guaranteeing full compliance.
+            </li>
+            <li>
+              <strong>Certificate of Origin (COO):</strong> A formal Certificate of Origin issued by the designated government authorities in India (such as the Export Inspection Council or DGFT) must be submitted. Gemora Global prepares and provides this official CEPA-compliant COO for every export batch, ensuring your customs clearance is seamless and duty-free.
+            </li>
+            <li>
+              <strong>Accurate HS Code Classification:</strong> Base metal imitation jewelry must be classified under HS Code <strong>7117.19</strong> (imitation jewelry of base metal).
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Collections for the UAE & Middle Eastern Market
-            </h2>
-            <p className="mb-4">
-              Our export data shows specific trends that dominate the UAE market. For the Arab wedding season and grand events, <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">wholesale bridal jewellery sets</Link> in heavy Kundan, Polki, and Jadau styles are extremely popular. These sets often include chokers, layered haars, and statement jhumkas that complement both traditional Indian attire and modern Arab high-fashion.
-            </p>
-            <p className="mb-4">
-              Additionally, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond jewellery wholesale</Link> range is a bestseller in urban hubs like Abu Dhabi and Jumeirah. These pieces offer the brilliance and fire of real diamonds at a fraction of the cost, making them ideal for everyday luxury, corporate wear, and evening soirées.
-            </p>
-            <p className="mb-4">
-              For retailers focusing on cultural diversity, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">temple jewellery</Link> and <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari jewellery</Link> provide a unique "Jaipur Signature" that stands out in the crowded Dubai retail space, offering an artisan-crafted alternative to mass-produced accessories.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Understanding UAE VAT (Value Added Tax) on Imports
+          </h2>
+          <p>
+            While CEPA removes customs duties, imports into the UAE are subject to the standard UAE Value Added Tax (VAT) of <strong>5%</strong>. This VAT is calculated on the total customs value of the shipment (cost of goods + shipping fees).
+          </p>
+          <p>
+            For UAE VAT-registered businesses (with taxable turnover exceeding AED 375,000), the import VAT does not represent a permanent cash-flow cost. During customs clearance, the VAT can be linked directly to your corporate Tax Registration Number (TRN). This allows you to claim a full input tax credit on your quarterly VAT returns, keeping your wholesale sourcing costs highly efficient. Small boutique owners who are not yet registered for VAT will pay the 5% VAT at the port of entry via their clearing agent or courier, which is simply factored into the retail landing cost of the goods.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Seamless Logistics: Shipping from Jaipur to UAE Destinations
-            </h2>
-            <p className="mb-4">
-              We understand that timing and reliability are critical for retail businesses. Gemora Global has a streamlined logistics process for shipping to the UAE, ensuring your inventory is always stocked.
-            </p>
-            <ul className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Daily Air Freight:</strong> We utilize DHL and FedEx for daily air-freight shipments from Jaipur to Dubai International (DXB) and Abu Dhabi (AUH).</li>
-              <li><strong>Fast Transit Times:</strong> Most orders reach UAE doorsteps within 5-7 business days after dispatch from our factory.</li>
-              <li><strong>Protective Export Packaging:</strong> Every piece is individually packed in anti-tarnish protective layers, bubble-wrapped, and shipped in double-walled export cartons to prevent any damage during international transit.</li>
-              <li><strong>Full End-to-End Tracking:</strong> Real-time tracking IDs are provided the moment your order leaves our Jaipur factory, providing peace of mind.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Dubai as the Strategic GCC Distribution Hub
+          </h2>
+          <p>
+            Dubai’s world-class logistical infrastructure makes it the ultimate B2B distribution hub for the entire Middle East. Many of our largest B2B clients operate their main warehouses in Dubai’s Free Zones (like DAFZA, JAFZA, or Dubai South) and distribute our jewelry collections across the Gulf Cooperation Council (GCC) countries:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Saudi Arabia (KSA):</strong> Sourcing through Dubai allows rapid distribution to Riyadh, Jeddah, and Dammam.
+            </li>
+            <li>
+              <strong>Kuwait, Qatar, Oman &amp; Bahrain:</strong> Transit times from Dubai to neighboring GCC states are incredibly fast, typically 1 to 2 business days via road or regional air freight.
+            </li>
+          </ul>
+          <p>
+            Gemora Global is highly experienced in preparing transit-ready documentation for GCC distribution. Whether your batch needs to be split-shipped or consolidated under a free-zone customs transit bill, our dedicated export logistics desk in Jaipur handles all logistics arrangements.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Customs, VAT and Import Duties in UAE: The CEPA Advantage
-            </h2>
-            <p className="mb-4">
-              Importing from India to UAE is relatively straightforward, but requires precision in documentation. Gemora Global provides all necessary paperwork, including:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>Detailed Commercial Invoices for UAE Customs</li>
-              <li>Comprehensive Packing Lists with SKU-level details</li>
-              <li>Certificate of Origin (to avail CEPA benefits for zero/reduced duty)</li>
-              <li>Air Waybill (AWB) for logistics transparency</li>
-            </ul>
-            <p className="mb-4">
-              <strong>The impact of CEPA:</strong> The Comprehensive Economic Partnership Agreement (CEPA) between India and UAE has been a game-changer. By reducing import duties on various categories of <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">artificial jewellery</Link>, this agreement makes Indian products more competitive than ever. Gemora Global is fully compliant with all CEPA requirements, helping you maximize your profit margins in the competitive Dubai retail market.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Premium Gulf-Grade Anti-Tarnish Coating: Audited for Hot &amp; Humid Climates
+          </h2>
+          <p>
+            The Arabian Gulf region experiences extremely high temperatures and severe coastal humidity during the summer months (with temperatures regularly exceeding 45°C / 113°F). For imitation and costume jewelry, this hot, humid, and saline environment represents a major challenge. Cheap, poorly plated fashion jewelry will quickly oxidize, turn black, and tarnish on retail shelves, resulting in heavy customer complaints and returns.
+          </p>
+          <p>
+            Gemora Global has engineered a specialized **Gulf-Grade Anti-Tarnish Protocol** specifically for our UAE and Middle Eastern shipments:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>High-Purity Hypoallergenic Brass:</strong> We use strictly lead-free, cadmium-free brass alloys that do not react easily with sweat or humidity.
+            </li>
+            <li>
+              <strong>Thick Electro-plating:</strong> We utilize advanced multi-layer electroplating, applying a thick barrier of 18k or 22k yellow gold, rhodium, or rose gold finish.
+            </li>
+            <li>
+              <strong>Electrophoretic Lacquer (E-Coating):</strong> Every piece is finished with an advanced electrophoretic organic lacquer coating. This transparent, microscopically thin protective seal prevents oxygen and moisture from contacting the underlying metal, guaranteeing that our jewelry retains its brilliant gold shine on UAE showroom shelves for up to 12 months under normal conditions.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The "Dubai Gold Look": High-End Aesthetics at Wholesale Prices
-            </h2>
-            <p className="mb-4">
-              In the "City of Gold," there is a massive and growing segment that seeks the high-end look of 22k gold and real diamonds at the price point of imitation jewellery. This is where Gemora Global excels. We provide the authentic "Dubai Gold Look" using high-quality brass alloys and multi-layer plating that rivals the aesthetic of fine jewellery found in the upscale malls of Jumeirah and Downtown Dubai.
-            </p>
-            <p className="mb-4">
-              Our <Link to="/imitation-jewellery-exporter-india" className="text-sky-600 hover:underline">imitation jewellery export from India to UAE</Link> focuses on "Visual Parity"—ensuring that our pieces are indistinguishable from fine jewellery to the naked eye. This commitment to aesthetic excellence is why we are the preferred supplier for UAE retailers who refuse to compromise on style.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Trending Collections for the UAE &amp; Middle Eastern Market
+          </h2>
+          <p>
+            Sourcing the right designs is essential to stand out in the highly competitive Dubai shopping malls. Our extensive UAE sales data reveals two dominating market segments:
+          </p>
+          <h3>1. The Traditional "Dubai Gold Look" (Festive &amp; Bridal)</h3>
+          <p>
+            Middle Eastern consumers prefer rich, opulent, 22k yellow gold aesthetics. Heavy heritage collections are incredibly popular during the Arab wedding season and major festivals like Ramadan and Eid:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Heritage Kundan Choker Sets:</strong> Encrusted with high-quality raw glass Polki stones and dangling natural pearls. Perfect for royal wedding themes.
+            </li>
+            <li>
+              <strong>Intricate Jaipur Meenakari:</strong> Enameled jewelry in traditional royal blue, emerald green, and pastel mint colors.
+            </li>
+            <li>
+              <strong>South Indian Temple Jewelry:</strong> Antique gold-plated sets featuring peacock and floral carvings, highly sought after by the massive South Asian diaspora in Dubai and Abu Dhabi.
+            </li>
+          </ul>
+          <h3>2. Modern Urban Luxury (CZ &amp; American Diamond)</h3>
+          <p>
+            For daily wear, luxury corporate looks, and evening parties in upscale Jumeirah and Marina hotspots:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>American Diamond (AD) Chokers &amp; Tennis Bracelets:</strong> Encrusted with top-grade, hand-set Cubic Zirconia stones that capture the dazzling fire and refraction of fine diamonds.
+            </li>
+            <li>
+              <strong>Minimalist CZ Layered Chains &amp; Studs:</strong> Sophisticated, lightweight, and perfect for impulse retail purchases in modern shopping mall kiosks.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Artisan Craftsmanship: The Journey from Jaipur to UAE Boutiques
-            </h2>
-            <p className="mb-4">
-              Every piece of jewellery exported to the UAE undergoes a painstaking journey of creation. It begins with the design phase, where our artists in Jaipur study the latest trends from Middle Eastern fashion weeks and Arab social media influencers. We blend these modern silhouettes with traditional Indian motifs to create something truly unique for the region.
-            </p>
-            <p className="mb-4">
-              Once a design is finalized, our master craftsmen begin the fabrication. Using traditional hand-casting and modern precision machinery, we create the base frames. The setting of stones—whether it's high-grade Cubic Zirconia for our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> or synthetic Polki for our bridal sets—is done entirely by hand. This ensures that every stone is secure, a quality that is non-negotiable for premium UAE retailers.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for UAE Importers
+          </h2>
+          <p>
+            To launch a seamless, duty-free importing operation from our Jaipur factory, follow these practical B2B guidelines:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Register Your UAE Corporate Entity:</strong> Ensure your trade license allows the import and retail of fashion accessories.
+            </li>
+            <li>
+              <strong>Obtain a TRN (Tax Registration Number):</strong> Linking your TRN to UAE customs allows you to postpone and reclaim the 5% import VAT on your tax returns.
+            </li>
+            <li>
+              <strong>Take Advantage of the 5-Tier Pricing:</strong> Gemora Global offers tiered factory discounts up to 30%. Start at Tier 1 (MOQ 50 units) to test trending styles, and scale to Tier 3 or 4 for bulk distribution across the GCC.
+            </li>
+            <li>
+              <strong>Request a CEPA Certificate of Origin:</strong> Inform our team during order confirmation. We will handle all government paperwork in India to supply the official CEPA COO, saving you 5% in import duties.
+            </li>
+            <li>
+              <strong>Choose Gulf-Grade E-Coating:</strong> Rest assured that all UAE batches are finished with our specialized anti-tarnish protective lacquer to survive the local climate.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in Dubai.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging ancient artisan heritage with modern Middle Eastern quality, compliance, and duty-free logistics. Partner with us today to take your brand to new heights in the UAE.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Starting Your Own Jewellery Brand in Dubai: Our B2B Support
-            </h2>
-            <p className="mb-4">
-              The UAE is one of the world's leading entrepreneurial hubs. If you are looking to launch your own jewellery brand, Gemora Global is your ideal supply chain partner. We support new UAE businesses through:
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Low-Risk Inventory (MOQ 50):</strong> Start small and test multiple styles in the UAE market without heavy capital investment.</li>
-              <li><strong>Private Label & Packaging:</strong> We provide custom branding, tags, and luxury packaging to help you build a recognizable identity in the Dubai fashion scene.</li>
-              <li><strong>E-commerce Photography:</strong> We provide high-resolution professional photography and video content that you can use on Instagram, TikTok, and your website to attract UAE customers.</li>
-              <li><strong>Reliable Replenishment:</strong> Our Jaipur factory scales with your success, ensuring you always have stock of your best-selling items.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Success Story: Scaling Across the GCC from a Dubai Base
-            </h2>
-            <p className="mb-4">
-              We take pride in the success of our clients. Over the years, we have helped boutique owners in Sharjah and large-scale wholesalers in Deira grow their businesses across the GCC. One such client, starting from a small retail outlet, has built a massive distribution network across Kuwait, Saudi Arabia, and Oman using Gemora Global as their primary manufacturing hub in India. Our ability to scale production while maintaining strict quality control for the Gulf market has made this partnership flourish for over five years.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Strategic Partner for Premium Indian Jewellery in the UAE
-            </h2>
-            <p className="mb-4">
-              In a market defined by luxury and discerning taste, Gemora Global stands for heritage, quality, and business success. We bring the timeless artistry of Jaipur directly to the heart of the Middle East. If you are looking for a <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">jewellery exporter to UAE</Link> that treats your business goals as their own, you have found the right partner.
-            </p>
-            <p className="mb-4">
-              Explore our collections, request our latest catalogue, and let's start building a brilliant future together in the UAE.
-            </p>
-          </section>
-        </div>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/collections/trendy-jewelry" className="text-primary underline">
+                Trendy Fashion Jewellery Collections
+              </Link>
+            </li>
+          </ul>
+        </>
       }
+      faqs={[
+        {
+          q: "What are the import duty rates for imitation jewelry entering the UAE?",
+          a: "Under the historic India-UAE CEPA agreement, the standard 5% customs import duty on base metal imitation jewelry from India is reduced to exactly 0% (duty-free). Importers must present a valid CEPA Certificate of Origin to qualify, which Gemora Global provides for every export batch.",
+        },
+        {
+          q: "Is there VAT on jewelry imports to the UAE, and is it reclaimable?",
+          a: "Yes. A standard 5% Value Added Tax (VAT) applies on all imports into the UAE. If your UAE business is VAT-registered with a Tax Registration Number (TRN), you can easily declare and reclaim this 5% import VAT as an input tax credit on your quarterly VAT returns.",
+        },
+        {
+          q: "How does Gemora Global protect jewelry from the hot and humid Gulf climate?",
+          a: "We utilize strictly lead-free, high-purity brass base alloys and electroplate with a thick barrier of 18k or 22k gold. Every piece undergoes an advanced Electrophoretic Organic Lacquer coating (E-Coating) process to seal the metal from humidity and sweat, keeping it bright on showrooms for up to 12 months.",
+        },
+        {
+          q: "What is the door-to-door transit time from Jaipur to Dubai?",
+          a: "We ship directly via express couriers like DHL and FedEx. Standard door-to-door transit time from our Jaipur factory to your boutique in Dubai, Abu Dhabi, or Sharjah is typically 5 to 7 business days, with real-time tracking.",
+        },
+        {
+          q: "Can you distribute bulk shipments directly from Dubai to other GCC countries?",
+          a: "Yes. Many of our clients import into Dubai's free zones (JAFZA/DAFZA) duty-free and distribute across Saudi Arabia, Kuwait, Oman, Bahrain, and Qatar using local land or air logistics like Aramex or DHL.",
+        },
+        {
+          q: "What is your MOQ for UAE wholesale buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Do you offer private label branded packaging in Deira and Dubai?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory, providing retail-ready packaging.",
+        },
+        {
+          q: "What payment methods do you accept for UAE commercial orders?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Standard B2B terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+      ]}
     />
   );
 }

@@ -10,175 +10,217 @@ export default function JewelleryExporterSingapore() {
       canonical="https://www.gemoraglobal.co/jewellery-exporter-singapore"
       h1="Indian Fashion Jewellery Wholesale for Singapore Markets"
       targetKeyword="imitation jewellery exporter singapore"
-      heroSubtitle="Gemora Global exports premium Indian imitation jewellery wholesale to Singapore boutiques, retailers, and distributors. Factory-direct pricing from Jaipur — fast air freight in 4–6 days, MOQ from 50 units, complete export documentation."
+      heroSubtitle="Gemora Global is Singapore's trusted direct-from-factory wholesale manufacturer, exporting premium imitation, South Indian temple, and CZ fashion jewellery direct from our Jaipur factory. Complete Singapore customs clearance, 9% GST tax optimization, and 4-day Changi delivery."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        {
-          name: "Wholesale",
-          url: "https://www.gemoraglobal.co/wholesale",
-        },
-        {
-          name: "Jewellery Exporter Singapore",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-singapore",
-        },
+        { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },
+        { name: "Jewellery Exporter Singapore", url: "https://www.gemoraglobal.co/jewellery-exporter-singapore" },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to Singapore — The Gateway to Southeast Asian Fashion
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a prestigious <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a dedicated wholesale partner for the Singapore fashion market. Singapore is not just a city-state; it is the commercial heart of Southeast Asia and a global trendsetter. From the historic retail corridors of Little India and Serangoon Road to the luxury boutiques of Orchard Road and the vibrant shops of Bugis, our handcrafted jewellery has become a staple for Singaporean retailers seeking "Authentic Luxury" at a wholesale price point.
-            </p>
-            <p className="mb-4">
-              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Singapore</Link>, we understand the city’s unique cosmopolitan demographic. We cater to the affluent South Asian community, the style-conscious local Singaporeans, and the millions of international tourists who shop at the Mustafa Centre and high-end malls. Our collections are designed to meet Singapore's high standards for craftsmanship, material safety, and design innovation, ensuring that every piece reflects the "Jaipur Standard" of excellence.
-            </p>
-          </section>
+        <>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Premium Indian Imitation Jewellery Exporter to Singapore — Serangoon Road, Orchard & Serangoon
+          </h2>
+          <p>
+            Singapore represents a highly sophisticated, cosmopolitan, and wealthy consumer retail landscape that serves as the undisputed gateway to Southeast Asian fashion. Despite its compact geographical size, the Lion City is home to diverse and affluent shopper demographics. From the historic, bustling commercial corridors of Little India and Serangoon Road to the high-end designer boutiques of Orchard Road, Haji Lane, and Bugis, the year-round consumer demand for premium jewelry is exceptional.
+          </p>
+          <p>
+            In a market characterized by high disposable income, consumers are increasingly moving away from pure fine gold due to volatile gold prices and security concerns, opting instead for high-end **bridge and imitation jewelry**. Crafted from refined base brass and plated in thick 18k or 22k gold, rhodium, and rose-gold finishes, these accessories replicate the luxury look of fine jewelry. For Singaporean boutique owners, online Shopify entrepreneurs, and bulk B2B distributors, establishing a direct manufacturing pipeline with an established Jaipur factory like Gemora Global is the single most effective way to secure high profit margins. Sourcing directly from us eliminates local trading agents who typically add a 40% margin, unlocking retail markups of 400% to 600% on your collections.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why Singapore Boutiques and E-commerce Brands Choose Gemora Global
-            </h2>
-            <p className="mb-4">
-              Sourcing from Jaipur gives Singaporean businesses a direct link to the world’s most skilled artisans. Gemora Global enhances this with a professional B2B export infrastructure that simplifies international trade.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Advanced Anti-Tarnish Finish for Tropical Humidity:</strong> Singapore’s tropical climate can be aggressive on fashion jewellery. Our proprietary anti-tarnish coating is specifically designed to keep your inventory looking new, reducing the risk of customer complaints and stock damage even in high-humidity conditions.</li>
-              <li><strong>Factory-Direct Jaipur Pricing & High Margins:</strong> By eliminating intermediaries, we offer Singaporean importers a significant price advantage. Buy directly from our <Link to="/wholesale" className="text-sky-600 hover:underline">wholesale unit in India</Link> and maximize your retail margins in one of the world’s most competitive and expensive retail markets.</li>
-              <li><strong>Rapid 3-5 Day Air Freight Delivery:</strong> We treat Singapore like a local market. Our strategic partnership with DHL and FedEx ensures that your order reaches Changi Airport or your doorstep within just 3-5 business days of dispatch from our Jaipur factory.</li>
-              <li><strong>Low MOQ for Market Agile Testing:</strong> We support Singapore’s vibrant startup and e-commerce scene. With an MOQ of just 50 units, you can test new trends on Instagram or TikTok before committing to a larger bulk purchase, allowing for agile stock management.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Singapore Customs (Singapore Customs) &amp; GST Trade Framework
+          </h2>
+          <p>
+            Importing commercial wholesale batches from India into Singapore is exceptionally clean and efficient, thanks to Singapore's world-class, digitalized customs infrastructure. Here is a clear B2B guide to importing:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>0% Customs Duties (Free Port Advantage):</strong> Singapore is a free port. Under the Singapore Customs tariff schedule, base metal imitation jewelry (HTS code <strong>7117.19.00</strong>) is subject to <strong>0% customs duties</strong>! This represents an incredible cost and tax advantage compared to most other global export corridors.
+            </li>
+            <li>
+              <strong>Singapore GST (Goods and Services Tax):</strong> Commercial imports are subject to a standard <strong>9.0% GST</strong> assessed by Singapore Customs at the border. GST is calculated on the CIF (Cost, Insurance, and Freight) value of the shipment.
+            </li>
+            <li>
+              <strong>Claiming Back GST:</strong> If your Singaporean business is registered for GST, all import GST paid at customs can be fully reclaimed and offset as Input Tax Credits on your quarterly GST tax returns (F5 form) filed with the Inland Revenue Authority of Singapore (IRAS).
+            </li>
+            <li>
+              <strong>Import Declarations via TradeNet:</strong> For larger bulk orders, a customs permit is generated. Our strategic logistics partners (DHL and FedEx) act as your declaring agents, handling the automated TradeNet filing on your behalf for a seamless clearance experience.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-Singapore Trade Link: A Fusion of Tradition and Modernity
-            </h2>
-            <p className="mb-4">
-              The history of Indian jewellery in Singapore is deeply intertwined with the development of the Serangoon district and the vibrant culture of Little India. For over a century, Jaipur-made gemstones and gold-plated ornaments have been the centerpiece of Deepavali celebrations, Pongal festivals, and grand Indian weddings in the Lion City.
-            </p>
-            <p className="mb-4">
-              Gemora Global continues this rich tradition while modernizing it for today's sophisticated Singaporean consumer. We use traditional <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Meenakari techniques</Link> but apply them to silhouettes that complement both a traditional Saree and a modern western dress found in the boutiques of Marina Bay Sands or the creative spaces of Haji Lane.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to Singapore: 4-Day Door-to-Door Changi Air Freight
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor to Singapore, using express door-to-door couriers (primarily DHL and FedEx Express). 
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time to Singapore</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">3 – 5 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large ASEAN distributors)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 7 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at Singapore Changi (SIN)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the Singapore Market
-            </h2>
-            <p className="mb-4">
-              Our export analytics show strong and consistent demand in Singapore for these four major categories:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. South Indian Temple Jewellery</h3>
-                <p className="text-sm">Extremely popular with Singapore’s Tamil community. Our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">temple jewellery collection</Link> is the preferred choice for classical dance (Bharatanatyam) and temple festivities across the island.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Luxury American Diamond (AD/CZ)</h3>
-                <p className="text-sm">For the high-end Singaporean social scene, our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond sets</Link> provide a "Diamond Boutique" look at a fraction of the cost, perfect for gala events.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Artisan Meenakari & Jaipur Enamel</h3>
-                <p className="text-sm">The colorful, intricate work of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari jewellery</Link> is a favorite for boutique owners in artistic hubs like Bugis and Tiong Bahru.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Grand Bridal Parures for Destination Weddings</h3>
-                <p className="text-sm">We are a primary supplier for wedding planners in Singapore. Our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal sets</Link> offer the opulence required for luxury celebrations at the Shangri-La or Fullerton hotels.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Tropical Humidity Plating Integrity: Engineered for Singapore’s Climate
+          </h2>
+          <p>
+            Singapore has a hot, humid tropical rainforest climate year-round, with humidity levels consistently hovering between 80% and 90%. In such environments, standard plated jewelry degrades rapidly due to sweat, moisture, and oxidation. Metal tarnishing and greening are major issues for costume jewelry retail boutiques.
+          </p>
+          <p>
+            Gemora Global addresses this through science. Every piece of jewelry we manufacture is treated in our advanced **Electrophoretic Organic Lacquer (E-Coating)** foundries. In this process:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              The gold or rhodium plated jewelry is submerged in a liquid bath containing a specialized organic lacquer suspension.
+            </li>
+            <li>
+              An electrical current is passed through, depositing a microscopically thin, completely transparent protective lacquer layer over the plated metal.
+            </li>
+            <li>
+              The piece is baked in clean ovens to seal the organic coating permanently.
+            </li>
+          </ol>
+          <p>
+            This advanced microscopic seal completely protects the underlying metal from exposure to humidity and sweat, keeping your showroom inventory looking brand new for up to 12 months in storage.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Importing to Singapore: GST, Customs and Regulatory Framework
-            </h2>
-            <p className="mb-4">
-              Singapore is one of the world's most efficient markets for importers, thanks to its status as a free port and highly digitalized customs procedures. However, there are still key regulations that wholesalers must follow:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>GST (Goods and Services Tax):</strong> As of 2024, Singapore’s GST is 9%. This is typically collected at the point of import for goods valued above the De Minimis threshold. We provide full commercial invoices to facilitate a smooth tax declaration process.</li>
-              <li><strong>Import Permit Requirements:</strong> For larger wholesale shipments, a Singapore Customs import permit is mandatory. Our logistics partners (DHL/FedEx) are experts in the Singapore market and handle the declaration on your behalf for a seamless experience.</li>
-              <li><strong>HS Code Classification:</strong> Most imitation jewellery falls under HS Code 7117. We ensure your items are classified correctly to prevent any administrative delays at Changi Customs.</li>
-              <li><strong>Documentation Package:</strong> Every Singapore shipment from Gemora Global includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Key Sourcing &amp; Retail Categories for the Singapore Market
+          </h2>
+          <p>
+            Understanding which jewelry styles resonate with Singaporean consumers is critical to selecting the right inventory for your shop. The Singapore market features unique trends across three primary customer segments:
+          </p>
+          <h3>1. Mainstream Orchard Road Fashion &amp; Haji Lane Boutiques</h3>
+          <p>
+            Mainstream Singaporean fashion shoppers prefer elegant daily wear, layered designs, and delicate everyday sparkle:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Minimalist CZ &amp; American Diamond Necklaces:</strong> Layered delicate chains, classic tennis bracelets, and dainty cubic zirconia pendant necklaces. These pieces look identical to fine gold jewelry and are popular in mainstream retail.
+            </li>
+            <li>
+              <strong>18k Gold Plated Chunky Hoops:</strong> High-shine, medium-weight brass hoops and classic huggies are a consistent staple across fashion boutiques year-round.
+            </li>
+          </ul>
+          <h3>2. Traditional South Indian Temple Jewelry (Serangoon Road)</h3>
+          <p>
+            With a massive Tamil community and vibrant temple festivities, traditional South Indian gold jewelry is highly sought after:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Matte-Finish Temple Necklaces:</strong> Featuring beautifully carved icons of deities, pearls, and red Kemp stones. These are a primary staple for classical Bharatanatyam dancers and pre-wedding temple celebrations.
+            </li>
+            <li>
+              <strong>Peacock Motifs &amp; Antique Goldwork:</strong> Elaborate cuffs, gold plated bangles, and statement Jhumkas that complement traditional Kanchipuram Sarees.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Logistics: The Seamless Journey from Jaipur to Changi
-            </h2>
-            <p className="mb-4">
-              Our proximity to major air-freight hubs in India allows us to provide some of the fastest international delivery times for Singaporean buyers, making us a virtually local supplier.
-            </p>
-            <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>3-Stage Quality Check:</strong> Every order undergoes a rigorous inspection by our master craftsmen before being packed in export-grade, anti-tarnish protective layers.</li>
-              <li><strong>Direct Air Flight Path:</strong> Goods are flown directly from Jaipur or Delhi to Singapore Changi Airport (SIN), ensuring minimal handling and maximum speed.</li>
-              <li><strong>Automated Customs Clearance:</strong> Our digital documentation ensures that customs clearance is often processed while the shipment is still in the air.</li>
-              <li><strong>Doorstep Delivery:</strong> The courier delivers directly to your retail store, warehouse, or home office in any Singapore district, from Jurong and Woodlands to Tampines and Pasir Ris.</li>
-            </ol>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Singaporean Importers
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Register for GST Import Permit:</strong> Ensure your Singapore corporate tax registration is active to facilitate smooth custom clearance.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Humidity Protection:</strong> Ensure your jewelry is finished with anti-tarnish electrophoretic lacquer to survive Singapore's tropical humidity.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern Southeast Asian quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand in Singapore.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              How to Scale Your Singaporean Jewellery Brand with Gemora Global
-            </h2>
-            <p className="mb-4">
-              The Singapore retail market is highly sophisticated and brand-conscious. To succeed, you need a manufacturing partner that understands "Brand Value" and aesthetic consistency. 
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Luxury Private Labeling:</strong> Create your own high-end brand identity in Singapore. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link>, including custom branding, luxury tags, and bespoke packaging.</li>
-              <li><strong>Professional Digital Visuals:</strong> We provide high-resolution product photography and video content that you can use for your Singapore social media marketing, allowing you to focus on growth rather than production.</li>
-              <li><strong>Custom Design Exclusivity:</strong> Work with our Jaipur designers to create <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive collections</Link> that are only available in your Singapore boutique or online store.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: A Successful Singaporean E-commerce Brand
-            </h2>
-            <p className="mb-4">
-              "Gemora Global has been our primary manufacturer for three years. Their <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">AD and Temple collections</Link> are consistent top sellers on our platform. The anti-tarnish finish is perfect for the Singapore climate, and the delivery from Jaipur is faster than some local distributors." — <em>Meera K., Singapore Retailer</em>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Strategic Jaipur Partner in the Lion City
-            </h2>
-            <p className="mb-4">
-              Gemora Global is more than just a wholesaler; we are your strategic manufacturing arm in India. We bring the 500-year legacy of Jaipur artistry to the modern, fast-paced retail landscape of Singapore. Our commitment to quality, speed, and artisan heritage makes us the ideal partner for Singaporean businesses looking to lead the fashion market.
-            </p>
-            <p className="mb-4">
-              Contact our Singapore Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
-            </p>
-          </section>
-        </div>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/collections/minimalist-jewelry" className="text-primary underline">
+                Premium Minimalist CZ and American Diamond Collections
+              </Link>
+            </li>
+          </ul>
+        </>
       }
-
-
       faqs={[
         {
           q: "How long does shipping from India to Singapore take?",
-          a: "DHL Express delivers to Singapore in 3–5 business days from our Jaipur dispatch. FedEx takes 4–6 business days. Air freight for bulk orders is 5–8 days.",
+          a: "DHL Express delivers to Singapore in 3–5 business days from our Jaipur dispatch. FedEx takes 4–6 business days. Air freight for bulk orders is 5–7 days.",
         },
         {
           q: "What are import duties on jewellery in Singapore?",
-          a: "Singapore is a free port with generally low or zero customs duty on jewellery. GST (currently 9%) applies on the CIF value of imports. We provide all customs documentation for smooth clearance.",
+          a: "Singapore is a free port with generally 0% customs duties on imitation jewelry under HTS code 7117.19.00. Standard 9% GST applies on the CIF value of imports. We provide all customs documentation for smooth clearance.",
         },
         {
           q: "What is the minimum order for Singapore buyers?",
-          a: "Our MOQ is 50 units per design. For mixed assortments, the minimum total is 200 units. Singapore buyers can start small and scale up once they test sell-through rates.",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online brands to test a wide range of designs in the local market with minimal capital investment.",
         },
         {
           q: "Do you ship to Little India Singapore retailers?",
-          a: "Yes. We ship directly to any Singapore address including retail stores in Little India, Mustafa Centre area, and across the island.",
+          a: "Yes. We ship directly to any Singapore address including retail stores in Little India, Serangoon Road, and across the island with full tracking.",
         },
         {
-          q: "Can Singapore buyers use Gemora Global as a regional distribution hub for Southeast Asia?",
-          a: "Yes. Several Singapore-based distributors source from us and redistribute to Malaysia, Indonesia, and other ASEAN markets. We can accommodate larger bulk orders for regional distribution needs.",
+          q: "How does the anti-tarnish e-coating work in Singapore's tropical climate?",
+          a: "Every piece undergoes an advanced Electrophoretic Organic Lacquer coating (E-Coating) process. This transparent protective lacquer layer seals the gold or silver plated surface, completely protecting it from heavy tropical humidity and sweat, keeping your stock brand new.",
+        },
+        {
+          q: "Can I customize the stone colors or plating finish of catalogue designs?",
+          a: "Yes. For orders qualifying for Tier 3+ (500+ total units), you can customize the metal plating finish (such as standard yellow gold, antique silver, rhodium, or rose gold) and specify custom stone colors to match your seasonal fashion line.",
+        },
+        {
+          q: "Do you offer private label and custom branded packaging?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What payment terms do you offer Singapore wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
         },
       ]}
     />

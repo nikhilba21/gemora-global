@@ -61,140 +61,143 @@ export default function JewelleryExporterSriLanka() {
         },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to Sri Lanka — Colombo, Kandy, Galle & Jaffna
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a distinguished <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a core wholesale partner for the Sri Lankan jewellery market. Sri Lanka, the "Pearl of the Indian Ocean," shares a profound cultural and aesthetic bond with India. From the historic Sea Street in Colombo to the vibrant wedding boutiques of Jaffna and Kandy, our handcrafted Indian jewellery is a cornerstone of Sri Lankan bridal tradition and contemporary fashion.
-            </p>
-            <p className="mb-4">
-              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Sri Lanka</Link>, we leverage the unique geographic and cultural proximity between our nations. We bridge the short distance across the Palk Strait, bringing Jaipur’s legendary artisan skills directly to Sri Lankan retailers, ensuring they have access to the same "Export-Quality" collections that Gemora Global supplies to London, New York, and Dubai.
-            </p>
-          </section>
+          <>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why Sri Lankan Boutiques and Wholesale Traders Choose Gemora Global
-            </h2>
-            <p className="mb-4">
-              Sri Lankan buyers require a manufacturer that understands the nuances of the local market—from the South Indian influence in the North to the modern, cosmopolitan trends of Colombo.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>South Indian Cultural Synergy:</strong> Given the shared heritage, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple Jewellery and antique gold collections</Link> are top performers in Sri Lanka, especially for traditional Hindu weddings and dance ceremonies.</li>
-              <li><strong>The "Proximity Advantage":</strong> Being India-based, we offer some of the fastest international shipping times to Sri Lanka. Orders from Jaipur reach Colombo in just 3-5 business days via DHL or FedEx.</li>
-              <li><strong>Anti-Tarnish Tropical Finish:</strong> Sri Lanka’s coastal humidity can be harsh on imitation jewellery. We apply a specialized, multi-layer anti-tarnish coating to ensure our pieces maintain their brilliant shine even in tropical conditions.</li>
-              <li><strong>Direct Factory Pricing:</strong> By eliminating middlemen and sourcing directly from our Jaipur unit, Sri Lankan wholesalers can offer competitive retail prices while maintaining high profit margins in the local market.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B imitation jewellery exporter Sri Lanka wholesale Colombo — Direct from our Jaipur Factory
+          </h2>
+          <p>
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Sri Lanka, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+          </p>
+          <p>
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
+          </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-Sri Lanka Trade Link: A Legacy of Excellence
-            </h2>
-            <p className="mb-4">
-              The trade of gems and jewellery between India and Sri Lanka dates back thousands of years. Gemora Global continues this legacy by supplying premium <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan, Meenakari, and AD (Cubic Zirconia) jewellery</Link> to Sri Lankan retailers who demand authenticity and durability.
-            </p>
-            <p className="mb-4">
-              Our designs are crafted to complement the diverse beauty of Sri Lankan attire—from the elegant Kandyan Sari to the traditional South Indian Pattu Pavadai. In Colombo’s elite circles, our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond and bridal collections</Link> are frequently chosen for their "Real Diamond" look and high-fashion appeal.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
+          </h2>
+          <p>
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the Sri Lankan Market
-            </h2>
-            <p className="mb-4">
-              Based on our trade volume with Sri Lankan partners, these four categories are currently in highest demand:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Traditional Temple & Antique Gold</h3>
-                <p className="text-sm">Deeply rooted in South Indian culture, our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple sets</Link> are essential for traditional weddings and classical dance performances in Sri Lanka.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Premium Bridal Kundan Parures</h3>
-                <p className="text-sm">For the grand Sri Lankan wedding market, our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal collections</Link> offer the weight and craftsmanship of gold at a fraction of the cost.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Contemporary American Diamond (CZ)</h3>
-                <p className="text-sm">A major trend in Colombo’s fashion scene, these pieces offer a "Diamond-Like" sparkle for gala events and modern parties.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Artisan Meenakari & Oxidised</h3>
-                <p className="text-sm">Popular in the artistic and boutique retail spaces of Galle and Kandy, our <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> offers unique, hand-painted elegance.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
+          </h2>
+          <p>
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Importing to Sri Lanka: Customs, VAT and Documentation
-            </h2>
-            <p className="mb-4">
-              While India and Sri Lanka share a Free Trade Agreement (ISFTA), it is important for wholesalers to understand the local import landscape managed by Sri Lanka Customs.
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>VAT and PAL:</strong> Imports into Sri Lanka are subject to Value Added Tax (VAT) and the Port and Airport Development Levy (PAL). We provide accurate documentation to help you clear your goods efficiently.</li>
-              <li><strong>ISFTA Benefits:</strong> We can provide the necessary certification to help you explore potential duty concessions under the India-Sri Lanka Free Trade Agreement where applicable.</li>
-              <li><strong>Customs Classification:</strong> Most imitation jewellery is classified under HS Code 7117. Our team ensures that your shipment is documented correctly to avoid any administrative delays in Colombo.</li>
-              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to Sri Lanka: Door-to-Door Air Freight Corridor
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Logistics: The Journey from our Jaipur Factory to Colombo
-            </h2>
-            <p className="mb-4">
-              Our logistics process is one of the most efficient in the industry, taking advantage of the direct air links between India and Sri Lanka.
-            </p>
-            <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Rigorous Quality Inspection:</strong> Every order is checked by our master craftsmen in Jaipur to ensure the finish and stone setting are perfect.</li>
-              <li><strong>Eco-Friendly Export Packaging:</strong> Goods are individually protected in anti-tarnish bags and shipped in high-grade export cartons for maximum protection during transit.</li>
-              <li><strong>Rapid Air Freight:</strong> Shipments are flown directly from Jaipur/Delhi to Bandaranaike International Airport (CMB) in Colombo.</li>
-              <li><strong>Direct Delivery:</strong> Our partners (DHL/FedEx) handle the customs clearance and deliver directly to your boutique in Pettah, Sea Street, or your retail store in Kandy or Galle.</li>
-            </ol>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              How to Grow Your Sri Lankan Jewellery Brand with Gemora Global
-            </h2>
-            <p className="mb-4">
-              The Sri Lankan retail market is evolving rapidly. We provide the manufacturing backbone you need to scale your brand.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Bespoke Manufacturing:</strong> Differentiate your brand in Colombo with <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> that are unique to your store.</li>
-              <li><strong>Private Label Services:</strong> Build a high-end brand identity. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded packaging that appeals to Sri Lankan luxury buyers.</li>
-              <li><strong>Marketing Support Assets:</strong> We provide professional photography and video content that you can use on Instagram and Facebook to engage with the Sri Lankan fashion community.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: A Successful Colombo-Based Retailer
-            </h2>
-            <p className="mb-4">
-              "Working with Gemora Global has allowed us to offer a variety of <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">Temple and Kundan jewellery</Link> that was previously unavailable in Colombo at this price point. Their quality is consistent, and the shipping from Jaipur is incredibly fast." — <em>Aruna S., Sri Lankan Retailer</em>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Strategic Manufacturing Partner in Sri Lanka
-            </h2>
-            <p className="mb-4">
-              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing arm in India. We bring the timeless artistry of Jaipur to the beautiful shores of Sri Lanka. 
-            </p>
-            <p className="mb-4">
-              Contact our Sri Lanka Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
-            </p>
-          </section>
-        </div>
-      }
-
-    />
-  );
-}
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+  
+        </>
+        }

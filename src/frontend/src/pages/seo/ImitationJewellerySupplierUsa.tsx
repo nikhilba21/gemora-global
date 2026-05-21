@@ -24,139 +24,143 @@ export default function ImitationJewellerySupplierUsa() {
         { q: "Do you provide export documentation?", a: "Yes. We provide commercial invoice, packing list, certificate of origin, and all required export documents for smooth customs clearance." },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Supplier to USA — NYC, LA, Chicago, Houston & Beyond
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a world-class <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a dedicated and professional wholesale supplier for the United States fashion market. From the bustling showroom streets of Manhattan’s fashion district to the trendsetting creative hubs of Los Angeles and the vibrant retail centers of Chicago and Houston, our handcrafted jewellery has found a place in the hearts of American consumers and the inventory of hundreds of boutiques, e-commerce stores, and high-street brands.
-            </p>
-            <p className="mb-4">
-              The US market for Indian jewellery has evolved significantly beyond its traditional roots. Today, American fashion consumers deeply appreciate the "Indo-Western" aesthetic, seamlessly blending the bold colors of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Jaipur Meenakari art</Link> with contemporary Western silhouettes. Gemora Global is at the forefront of this global trend, providing a robust <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">wholesale imitation jewellery export to USA</Link> that meets the rigorous quality, safety, and durability standards required by the most demanding American retailers.
-            </p>
-          </section>
+          <>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why US Boutiques, Amazon Sellers & Brands Choose Gemora Global
-            </h2>
-            <p className="mb-4">
-              For a US-based business, sourcing directly from India can often feel complex due to concerns about quality consistency, safety compliance, and shipping reliability. Gemora Global eliminates these barriers with a professionalized B2B export model designed for American operational standards.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Lead-Free, Nickel-Free & Prop 65 Compliance:</strong> We understand the importance of US consumer safety regulations. Our manufacturing process uses only skin-safe alloys and premium base metals that comply with international standards and are suitable for the US market's strict safety requirements.</li>
-              <li><strong>E-commerce & Fulfillment Ready Logistics:</strong> Whether you operate on Amazon, Etsy, or your own Shopify store, our <Link to="/bulk-jewellery-supplier" className="text-sky-600 hover:underline">bulk jewellery supply chain</Link> is optimized for fast turnover. With strategic partnerships with DHL and FedEx, we ensure your inventory reaches your US warehouse or doorstep in 7-10 business days.</li>
-              <li><strong>Advanced Anti-Tarnish "Global Guard" Finishing:</strong> Our proprietary coating technology ensures that your jewellery inventory stays sparkling in your warehouse and on the retail shelf, significantly reducing customer complaints, returns, and inventory degradation.</li>
-              <li><strong>Factory-Direct Jaipur Pricing for Maximum ROI:</strong> Cut out the expensive import agents and middleman markups. US retailers typically enjoy a 30-50% margin improvement when switching to our <Link to="/wholesale" className="text-sky-600 hover:underline">factory-direct wholesale model</Link>, allowing for more competitive pricing and better business growth.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B imitation jewellery supplier usa — Direct from our Jaipur Factory
+          </h2>
+          <p>
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in United States, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+          </p>
+          <p>
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
+          </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Growing Popularity of Indian Craftsmanship in the American Market
-            </h2>
-            <p className="mb-4">
-              The American fascination with Indian jewellery has moved from niche appreciation to mainstream fashion dominance in the digital age. Fashion influencers and celebrities in major hubs like NYC, LA, and Miami have embraced the vibrant, handcrafted nature of <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Polki-inspired styles</Link>. What was once considered primarily "ethnic wear" is now a sophisticated centerpiece of global fashion.
-            </p>
-            <p className="mb-4">
-              Gemora Global honors this cultural exchange by modernizing traditional Jaipur techniques for the Western aesthetic. Our master artisans use the same hand-setting methods once reserved for royal ornaments but apply them to designs that fit the American "Minimalist Luxury" or "Boho-Chic" market. This versatility is why we are recognized as a top-tier <Link to="/fashion-jewellery-exporter-india" className="text-sky-600 hover:underline">fashion jewellery exporter to the USA</Link>.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
+          </h2>
+          <p>
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the US Fashion Market
-            </h2>
-            <p className="mb-4">
-              Based on our extensive export data and feedback from American retail partners, we see three major growth areas in the US market:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Minimalist American Diamond (AD) Sophistication</h3>
-                <p className="text-sm">Elegant studs, thin tennis-style necklaces, and delicate bracelets from our <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond collection</Link> are high-volume staples for daily office and casual wear in the US.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Statement Bridal & Gala Excellence</h3>
-                <p className="text-sm">For the multi-billion dollar US South Asian wedding industry, our <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">wholesale bridal jewellery sets</Link> provide the opulence and authentic royal look required for grand celebrations.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Oxidised & Artisan Boho-Chic Art</h3>
-                <p className="text-sm">Extremely popular in California, Texas, and the Southwest, our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised jewellery</Link> pairs perfectly with contemporary denim and summer festival fashion.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Exclusive Custom Design & Branding</h3>
-                <p className="text-sm">We provide <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive custom manufacturing</Link> for US brands looking to launch signature collections with a unique competitive edge.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
+          </h2>
+          <p>
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The "De Minimis" Advantage: Importing to USA Duty-Free
-            </h2>
-            <p className="mb-4">
-              One of the most significant advantages for small and medium-sized US boutiques is the <strong>Section 321 De Minimis rule</strong>. This allows for shipments valued at $800 or less to be imported into the United States duty-free and with simplified entry procedures, provided they are sent to an individual or business in a single day.
-            </p>
-            <p className="mb-4">
-              Gemora Global helps you leverage this advantage by structuring your shipments to maximize tax efficiency and reduce overheads. For larger bulk orders, we provide full HTS (Harmonized Tariff Schedule) coding and professional documentation to ensure smooth and rapid customs clearance through major US hubs like JFK (New York), LAX (Los Angeles), and ORD (Chicago). We provide:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>Comprehensive Commercial Invoices for US Customs</li>
-              <li>Material Compliance Certifications (Lead/Nickel-free documentation)</li>
-              <li>Official Certificate of Origin from Jaipur, India</li>
-              <li>Detailed Air Waybills for end-to-end real-time tracking</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to United States: Door-to-Door Air Freight Corridor
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Ethical Manufacturing & Sustainability: The Jaipur Advantage
-            </h2>
-            <p className="mb-4">
-              The modern American consumer is increasingly conscious of the origins and ethics of their products. Gemora Global is deeply committed to ethical <Link to="/fashion-jewellery-manufacturer-india" className="text-sky-600 hover:underline">fashion jewellery manufacturing in India</Link>. Our Jaipur factory provides fair wages, safe and dignified working conditions, and actively supports the local artisan community. By sourcing from us, you can confidently tell your US customers that their jewellery is made with respect for the artisans and the environment.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              How to Build and Scale Your Jewellery Brand in the USA
-            </h2>
-            <p className="mb-4">
-              Launching and scaling a jewellery brand in the USA has never been more accessible. With the explosive growth of TikTok Shop, Instagram Shopping, and influencer marketing, you can reach millions of customers globally. Gemora Global serves as your reliable back-end manufacturing and logistics partner.
-            </p>
-            <ol className="list-decimal pl-6 space-y-3 mb-4">
-              <li><strong>Step 1: Curated Market Research:</strong> Use our <Link to="/catalogues" className="text-sky-600 hover:underline">extensive wholesale catalogues</Link> to identify styles that align with your specific brand identity and target demographic.</li>
-              <li><strong>Step 2: Risk-Mitigated Testing (MOQ 50):</strong> Start with a small order to verify our craftsmanship, durability, and the effectiveness of our anti-tarnish finish.</li>
-              <li><strong>Step 3: High-Impact Marketing Assets:</strong> We provide professional product photography to help you launch quickly, or you can use our samples for your own lifestyle shoots.</li>
-              <li><strong>Step 4: Rapid Replenishment & Growth:</strong> As your US brand gains traction, we handle the rapid replenishment of your best-selling designs, ensuring you never miss a sales opportunity.</li>
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Success Story: Scaling a US Brand with Jaipur Craftsmanship
-            </h2>
-            <p className="mb-4">
-              One of our most successful US clients began as a small boutique in Austin, Texas. They started by sourcing our <Link to="/temple-jewellery-manufacturer" className="text-sky-600 hover:underline">temple jewellery</Link> and <Link to="/antique-jewellery-wholesale-india" className="text-sky-600 hover:underline">antique collections</Link>. By focusing on premium quality and leveraging our reliable shipping, they scaled into a prominent national brand within three years. They attribute their high customer retention to the consistent artisanal quality provided by Gemora Global.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Strategic USA Export Partner for Premium Indian Jewellery
-            </h2>
-            <p className="mb-4">
-              Whether you are an established fashion brand in California or a new e-commerce entrepreneur in Florida, Gemora Global is dedicated to your success. We bring the timeless artistry and heritage of Jaipur directly to your doorstep in the USA. Our commitment to quality, compliance, and artisanal excellence makes us your ideal partner in the American fashion landscape.
-            </p>
-            <p className="mb-4">
-              Contact our USA Export Desk today to request our latest catalogue and start your partnership with India's most trusted <Link to="/imitation-jewellery-exporter-india" className="text-sky-600 hover:underline">imitation jewellery supplier</Link>.
-            </p>
-          </section>
-        </div>
-      }
-
-
-    />
-  );
-}
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+  
+        </>
+        }

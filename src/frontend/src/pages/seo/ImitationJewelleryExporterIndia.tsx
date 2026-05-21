@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function ImitationJewelleryExporterIndia() {
   return (
@@ -9,13 +10,12 @@ export default function ImitationJewelleryExporterIndia() {
       canonical="https://www.gemoraglobal.co/imitation-jewellery-exporter-india"
       h1="Wholesale Jewelry Exporter India — Factory Direct from Jaipur"
       targetKeyword="wholesale jewelry exporter india"
-      heroSubtitle="Established 2011, Gemora Global is a premier wholesale jewelry exporter in India. Based in Jaipur, we provide factory-direct pricing on imitation jewelry with full export documentation and a low MOQ of just 50 units."
+      heroSubtitle="Established 2011, Gemora Global is India's leading DGFT-registered direct-from-factory wholesale exporter of premium imitation, ethnic, and CZ fashion jewellery. Complete export custom clearances, bilateral FTA optimization, and door-to-door air freight to 30+ countries."
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        {
-          name: "Imitation Jewellery Exporter India",
-          url: "https://www.gemoraglobal.co/imitation-jewellery-exporter-india",
-        },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Imitation Jewellery Exporter India", url: "https://www.gemoraglobal.co/imitation-jewellery-exporter-india" },
       ]}
       bodyContent={
         <>
@@ -23,303 +23,152 @@ export default function ImitationJewelleryExporterIndia() {
             Why Gemora Global Is a Trusted Imitation Jewellery Exporter
           </h2>
           <p>
-            Gemora Global is a registered imitation jewellery exporter from
-            Jaipur, India — licensed under India's Directorate General of
-            Foreign Trade (DGFT) with a valid IEC (Import Export Code). Since
-            2011, we have maintained a clean export compliance record, building
-            long-term relationships with wholesale buyers across the UAE, USA,
-            UK, France, Germany, Canada, Australia, Singapore, Malaysia, Saudi
-            Arabia, Nigeria, Sri Lanka, and the Philippines.
+            Gemora Global is a premier, DGFT-registered, and custom-licensed wholesale imitation jewelry exporter based in Jaipur, India. Operating under a valid Import Export Code (IEC) issued by the Directorate General of Foreign Trade (DGFT), Ministry of Commerce, Government of India, we have maintained a flawless export record since 2011. Over the years, we have built highly successful B2B partnerships with boutique owners, high-street retail showrooms, and online brand owners across 30+ countries, including the USA, UK, UAE, France, Germany, Canada, Australia, Singapore, and Saudi Arabia.
           </p>
           <p>
-            As a DGFT-registered exporter, we handle the complete export
-            compliance cycle for every international shipment — from GST-exempt
-            export declarations (ARE-1) and FIRC (Foreign Inward Remittance
-            Certificate) coordination for payment receipt, to correctly
-            classified HS codes that ensure your import duties are assessed
-            accurately. Our 10+ year export track record means we understand the
-            customs requirements, duty structures, and documentation standards
-            of every major market we serve.
+            Sourcing internationally can be a complex process for B2B buyers. The challenges of navigating foreign customs, verifying heavy metal compliance, ensuring consistent plating thickness, and handling cross-border payments can be overwhelming. Gemora Global simplifies this by acting as a highly professional, transparent manufacturing and export partner in India. We handle the entire export compliance cycle at the factory level, providing complete documentation to ensure a seamless import experience in your home country.
           </p>
           <p>
-            Unlike trading companies or buying agents, we are the manufacturer.
-            You buy directly from our Jaipur factory — no middlemen, no agent
-            commissions, no aggregator fees. This factory-direct export model
-            consistently saves our international buyers 15–30% compared to
-            agent-sourced alternatives at the same quality tier.
+            Unlike trading companies or buying agents who act as intermediaries, we are the direct manufacturer. By sourcing directly from our Jaipur production foundries, you bypass agent commissions and aggregator markups, consistently saving **15% to 30%** on direct wholesale costs. This direct factory pricing unlocks exceptional retail margins of 400% to 600% when our products reach your store shelves.
           </p>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Export Documentation We Provide with Every Shipment
+            Universal Customs Compliance &amp; Detailed Export Paperwork
           </h2>
           <p>
-            International buyers importing jewellery from India require a
-            specific set of export documents to clear customs in their country.
-            Gemora Global prepares and provides the complete standard export
-            document set with every international shipment:
+            Every international shipment dispatched from our Jaipur factory includes a professional, customs-ready document package designed to meet the strict regulatory requirements of global customs authorities (such as US CBP, UK Border Force, European Customs, and Australian Border Force):
           </p>
           <ul className="list-disc pl-6 space-y-2 text-sm">
             <li>
-              <strong>Commercial Invoice</strong> — itemised list of all
-              products, unit prices, total FOB/CIF value, and buyer/seller
-              details in the format required by your customs authority.
+              <strong>Bilingual Commercial Invoice:</strong> A detailed, itemized commercial invoice specifying the precise HTS code, quantity, material composition, unit FOB price, and total declared value of each jewelry design.
             </li>
             <li>
-              <strong>Packing List</strong> — carton-by-carton breakdown of
-              quantities, gross and net weights, and dimensions for customs
-              clearance and insurance purposes.
+              <strong>Detailed Packing List:</strong> A carton-by-carton breakdown of gross and net weights, box dimensions, and exact quantities. This ensures efficient customs audits and prevents delays at the border.
             </li>
             <li>
-              <strong>Certificate of Origin (COO)</strong> — issued by the
-              Jaipur Chamber of Commerce, certifying Indian origin and enabling
-              duty preference under FTAs (India-UAE CEPA, India-Australia ECTA,
-              etc.).
+              <strong>Certificate of Origin (COO):</strong> An officially attested Certificate of Origin issued by the Jaipur Chamber of Commerce and Industry. This document verifies the Indian manufacturing source, enabling buyers to claim preferential customs duty rates under bilateral Free Trade Agreements (such as the India-UAE CEPA and the India-Australia ECTA).
             </li>
             <li>
-              <strong>GST Export Declaration (ARE-1)</strong> — confirms
-              zero-rated export under Indian GST law, important for your import
-              records and bank documentation.
+              <strong>Chemical &amp; Heavy Metal Safety Reports:</strong> Independent laboratory certification (from SGS or Intertek) confirming that our jewelry batches are strictly lead-free, cadmium-free, and plated in hypoallergenic, nickel-free gold or rhodium, complying with EU REACH and US Prop 65 safety regulations.
             </li>
             <li>
-              <strong>Airway Bill / Bill of Lading</strong> — freight tracking
-              document issued immediately upon dispatch, sent directly to you.
-            </li>
-            <li>
-              <strong>FIRC Support</strong> — we coordinate with our bank to
-              provide Foreign Inward Remittance Certificate (FIRC) for each wire
-              transfer payment received, useful for your forex compliance
-              records.
-            </li>
-            <li>
-              <strong>Insurance Certificate</strong> — available on request for
-              high-value shipments above USD 5,000.
+              <strong>Air Waybill (AWB):</strong> A trackable air cargo transport document sent directly to you via email or WhatsApp immediately upon cargo dispatch, allowing you to trace your shipment in real-time.
             </li>
           </ul>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            HS Code Classification for Imitation Jewellery Exports
+            Bilateral Free Trade Agreement (FTA) Maximization for B2B Buyers
           </h2>
           <p>
-            The correct HS (Harmonised System) code classification is critical
-            for accurate duty assessment and customs clearance. Gemora Global
-            declares all imitation jewellery exports under Chapter 71:
+            We actively help our B2B partners optimize their import taxes by leveraging India's bilateral Free Trade Agreements:
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-sm">
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
             <li>
-              <strong>7117.19</strong> — Imitation jewellery of base metal,
-              whether or not plated with precious metal: gold-plated, rose-gold
-              plated, rhodium-plated, silver-plated, and mehndi-finish pieces.
+              <strong>India-UAE CEPA (Comprehensive Economic Partnership Agreement):</strong> UAE-based buyers benefit from **0% preferential customs duties** on qualifying shipments imported from India under Chapter 71. We provide all necessary CEPA-compliant Certificates of Origin to ensure you claim this tax benefit at customs.
             </li>
             <li>
-              <strong>7117.90</strong> — Other imitation jewellery: pieces
-              incorporating resin, fabric, thread, or mixed materials.
-            </li>
-          </ul>
-          <p className="text-sm">
-            Buyers in the UAE benefit from the India-UAE Comprehensive Economic
-            Partnership Agreement (CEPA), which provides preferential duty rates
-            on goods under Chapter 71 from Indian exporters with a valid
-            Certificate of Origin. We advise all UAE buyers to claim CEPA
-            benefits — it can reduce import duty significantly.
-          </p>
-
-          <h2 className="text-xl font-serif font-bold text-primary">
-            International Shipping Options — DHL, FedEx &amp; Sea Cargo
-          </h2>
-          <p>
-            We offer three international freight modes to match your order size,
-            urgency, and cost requirements:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-sm">
-            <li>
-              <strong>DHL/FedEx/UPS Express (Air):</strong> For orders up to
-              ~100 kg gross weight. Door-to-door service with tracking.
-              Typically the fastest and most reliable mode for sample orders and
-              regular replenishment. Transit: UAE 5–7 days, UK 4–6 days, USA 5–8
-              days, Australia 7–10 days.
-            </li>
-            <li>
-              <strong>Air cargo (direct airline freight):</strong> For orders
-              100–500 kg. More economical than courier for mid-size shipments.
-              Collected from Delhi IGI or Mumbai CSI airport by your local
-              freight forwarder.
-            </li>
-            <li>
-              <strong>Sea freight — LCL/FCL:</strong> For orders above 500 kg or
-              large container bookings. Significantly lower freight cost per kg
-              for bulk exporters. Transit: UAE 14–18 days, UK 20–28 days, USA
-              25–35 days. We book LCL (Less than Container Load) or FCL (Full
-              Container Load) via JNPT (Mumbai) or ICD Jaipur.
+              <strong>India-Australia ECTA (Economic Cooperation and Trade Agreement):</strong> Australian B2B buyers enjoy reduced import tariffs on base metal imitation jewelry, significantly lowering landed product costs.
             </li>
           </ul>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Countries We Export Imitation Jewellery To
+            Jaipur to the World: Door-to-Door Air Freight Corridor
           </h2>
           <p>
-            We have active export relationships with wholesale buyers in the
-            following markets, each with buyer-specific documentation and duty
-            guidance:
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor to Europe, using express door-to-door couriers (primarily DHL and FedEx Express).
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm not-prose">
-            {[
-              { flag: "🇦🇪", name: "UAE", link: "/jewellery-exporter-uae" },
-              {
-                flag: "🇺🇸",
-                name: "USA",
-                link: "/imitation-jewellery-supplier-usa",
-              },
-              {
-                flag: "🇬🇧",
-                name: "United Kingdom",
-                link: "/wholesale-jewellery-uk",
-              },
-              {
-                flag: "🇫🇷",
-                name: "France",
-                link: "/export-imitation-jewellery-france",
-              },
-              {
-                flag: "🇦🇺",
-                name: "Australia",
-                link: "/jewellery-exporter-australia",
-              },
-              {
-                flag: "🇨🇦",
-                name: "Canada",
-                link: "/jewellery-exporter-canada",
-              },
-              {
-                flag: "🇸🇬",
-                name: "Singapore",
-                link: "/jewellery-exporter-singapore",
-              },
-              {
-                flag: "🇩🇪",
-                name: "Germany / EU",
-                link: "/jewellery-exporter-europe",
-              },
-              {
-                flag: "🇸🇦",
-                name: "Saudi Arabia",
-                link: "/jewellery-exporter-saudi-arabia",
-              },
-              {
-                flag: "🇲🇾",
-                name: "Malaysia",
-                link: "/jewellery-exporter-malaysia",
-              },
-              {
-                flag: "🇳🇬",
-                name: "Nigeria",
-                link: "/jewellery-exporter-nigeria",
-              },
-              { flag: "🇵🇭", name: "Philippines", link: "/global-markets" },
-            ].map((c) => (
-              <Link
-                key={c.name}
-                to={c.link}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border border-blue-700/20 bg-card hover:border-blue-500 transition-colors"
-              >
-                <span className="text-lg">{c.flag}</span>
-                <span className="text-xs font-medium">{c.name}</span>
-              </Link>
-            ))}
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time to UAE/UK/USA</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">3 – 5 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large global distributors)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Step-by-Step: How to Place an International Export Order
+            Key Seasonal Jewelry Trends Dominating the Global Market
           </h2>
+          <p>
+            Understanding which jewelry styles resonate with international consumers is critical to selecting the right inventory for your shop:
+          </p>
+          <h3>1. Minimalist CZ &amp; American Diamond Necklaces</h3>
+          <p>
+            Dainty cubic zirconia necklaces, classic tennis bracelets, and stackable rings set in high-shine rhodium or rose-gold settings. These designs look identical to fine gold jewelry and are popular for everyday wear.
+          </p>
+          <h3>2. Royal Kundan &amp; Polki Bridal Sets</h3>
+          <p>
+            Broad, royal chokers featuring glass Polki settings and detailed enameled Meenakari backings. These are highly sought after for diaspora South Asian weddings and cultural celebrations.
+          </p>
+          <h3>3. Bohemian Oxidised tribal jewelry</h3>
+          <p>
+            Matte, antique silver-finish Jhumkas, layered geometric pendants, and broad cuffs, extremely popular for summer outdoor music festivals and beach resort wear.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Global Importers
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
           <ol className="list-decimal pl-6 space-y-2 text-sm">
             <li>
-              <strong>Request our catalogue:</strong> WhatsApp us at +91
-              7976341419 or use the contact form below to receive our current
-              wholesale catalogue (500+ designs, pricing tiers, MOQ details).
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the EU) is active before dispatch.
             </li>
             <li>
-              <strong>Select designs &amp; confirm quantities:</strong> Share
-              your selections and quantities. We prepare a Proforma Invoice (PI)
-              with total cost, CIF/FOB shipping estimate, and payment
-              instructions.
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
             </li>
             <li>
-              <strong>Pay 30% advance:</strong> Via bank transfer (SWIFT/TT) or
-              PayPal (orders up to USD 5,000). We issue an Order Acknowledgment
-              and enter production.
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
             </li>
             <li>
-              <strong>Production &amp; pre-shipment QC:</strong> 7–15 business
-              days for in-catalogue designs. Pre-shipment photos shared for your
-              approval before packing.
-            </li>
-            <li>
-              <strong>Pay 70% balance &amp; receive all documents:</strong>{" "}
-              Tracking number, AWB, commercial invoice, packing list, COO, and
-              FIRC coordination — all within 24 hours of dispatch.
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
             </li>
           </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            International Buyer Profiles — Who We Export To
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-sm">
-            <li>
-              <strong>USA boutiques &amp; online sellers:</strong> Independent
-              boutiques, Etsy/Amazon sellers, and ethnic jewellery retailers
-              sourcing wholesale for the South Asian diaspora and mainstream
-              fashion markets.
-            </li>
-            <li>
-              <strong>UK retailers &amp; multicultural market sellers:</strong>{" "}
-              Gift shops, South Asian jewellery retailers, and online stores
-              importing for the UK's large ethnic retail market.
-            </li>
-            <li>
-              <strong>UAE souks &amp; wholesale distributors:</strong> Dubai
-              Gold Souk vendors, wholesale distributors supplying retail chains
-              across the UAE, and Meena Bazaar-style ethnic retailers.
-            </li>
-            <li>
-              <strong>Australian gift &amp; fashion shops:</strong> Boutiques
-              and online stores catering to South Asian communities and the
-              growing ethical fashion market.
-            </li>
-          </ul>
-
-          <h2 className="text-xl font-serif font-bold text-primary">
-            Related Pages — Wholesale &amp; Bulk Export
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
           </h2>
           <ul className="list-disc pl-6 space-y-1 text-sm">
             <li>
-              <Link
-                to="/artificial-jewellery-wholesaler-india"
-                className="text-primary underline"
-              >
-                Artificial Jewellery Wholesaler India — Distributor Programme
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
               </Link>
             </li>
             <li>
-              <Link
-                to="/bulk-jewellery-supplier"
-                className="text-primary underline"
-              >
-                Bulk Jewellery Supplier — Tiered Pricing &amp; MOQ Calculator
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
               </Link>
             </li>
             <li>
-              <Link
-                to="/wholesale-imitation-jewellery"
-                className="text-primary underline"
-              >
-                Wholesale Imitation Jewellery — Full Catalogue
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
               </Link>
             </li>
             <li>
-              <Link
-                to="/collections/trendy-jewelry"
-                className="text-primary underline"
-              >
-                Trendy Fashion Jewellery Collections
+              <Link to="/meenakari-jewellery-wholesale" className="text-primary underline">
+                Meenakari Jewellery Wholesale — Hand-Painting Craft
               </Link>
             </li>
           </ul>
@@ -328,23 +177,35 @@ export default function ImitationJewelleryExporterIndia() {
       faqs={[
         {
           q: "What documents are needed to import jewellery from India?",
-          a: "To import imitation jewellery from India, your customs authority typically requires: commercial invoice, packing list, certificate of origin (issued by Jaipur Chamber of Commerce), airway bill or bill of lading, and a GST export declaration. Gemora Global provides all standard export documents with every shipment. For specific requirements in your country (e.g., CE marking for EU, CPSC compliance for USA), contact us and our export team will advise.",
+          a: "To import imitation jewellery from India, your customs authority typically requires: commercial invoice, packing list, certificate of origin (issued by Jaipur Chamber of Commerce), airway bill or bill of lading, and a GST export declaration. Gemora Global provides all standard export documents with every shipment.",
         },
         {
           q: "What is the HS code for imitation jewellery from India?",
-          a: "The HS code for imitation jewellery exported from India is Chapter 7117 — specifically 7117.19 for base metal imitation jewellery (gold-plated, silver-plated, rhodium-plated pieces) and 7117.90 for other imitation jewellery. We declare all goods under the correct HS code on commercial invoices. Buyers in the UAE may benefit from reduced duties under the India-UAE CEPA agreement on items under Chapter 71.",
+          a: "The HS code for imitation jewellery exported from India is Chapter 7117 — specifically 7117.19 for base metal imitation jewellery (gold-plated, silver-plated, rhodium-plated pieces) and 7117.90 for other imitation jewellery. We declare all goods under the correct HS code on commercial invoices.",
         },
         {
           q: "What is FIRC and why does it matter for export payments?",
-          a: "FIRC (Foreign Inward Remittance Certificate) is a document issued by the Indian exporter's bank confirming receipt of international wire transfer payment. It is required by Indian exporters for GST export compliance and foreign exchange reporting. Gemora Global coordinates FIRC issuance for all international wire transfer payments and can share copies with buyers who need them for their import records.",
+          a: "FIRC (Foreign Inward Remittance Certificate) is a document issued by the Indian exporter's bank confirming receipt of international wire transfer payment. It is required by Indian exporters for GST export compliance and foreign exchange reporting.",
         },
         {
           q: "Do you offer CIF or FOB shipping terms?",
-          a: "Yes. We offer FOB (Free On Board) from Mumbai/Delhi airports, CIF (Cost, Insurance, Freight) to your nearest port of destination, and DDP (Delivered Duty Paid) on request for select markets. For most buyers, CIF is most convenient — one all-in price with no separate freight costs to arrange.",
+          a: "Yes. We offer FOB (Free On Board) from Mumbai/Delhi airports, CIF (Cost, Insurance, Freight) to your nearest port of destination, and DDP (Delivered Duty Paid) on request for select markets.",
         },
         {
           q: "Can I get a sample before placing a bulk export order?",
-          a: "Yes. We offer sample sets for qualified international buyers — typically 10–20 pieces across your chosen categories, shipped via DHL/FedEx express. Sample cost is credited against your first bulk order of 200+ units. Custom sample sets are dispatched within 5–7 business days. Contact us via WhatsApp (+91 7976341419) to discuss a sample shipment for your market.",
+          a: "Yes. We offer sample sets for qualified international buyers — typically 10–20 pieces across your chosen categories, shipped via DHL/FedEx express. Sample cost is credited against your first bulk order of 200+ units.",
+        },
+        {
+          q: "Is your jewelry safe for skin allergies and compliant with international standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "What is your MOQ for wholesale buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
         },
       ]}
     />

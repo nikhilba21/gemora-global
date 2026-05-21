@@ -61,139 +61,143 @@ export default function JewelleryExporterNigeria() {
         },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to Nigeria — Lagos, Abuja, Port Harcourt & Kano
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a leading <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a primary wholesale partner for the Nigerian fashion industry. Nigeria is the "Fashion Powerhouse" of Africa, where bold aesthetics, royal traditions, and a vibrant celebrity culture drive an insatiable demand for high-quality statement jewellery. From the bustling trade hubs of Balogun Market in Lagos to the elite boutiques of Victoria Island and Abuja, our jewellery is a symbol of status and style for the Nigerian "fashionista."
-            </p>
-            <p className="mb-4">
-              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Nigeria</Link>, we understand the "Bold and Beautiful" philosophy that defines West African style. We bridge the gap between the intricate artisan skills of Jaipur and the grand fashion spectacles of Nigeria, providing wholesale solutions that empower local retailers and distributors across the continent.
-            </p>
-          </section>
+          <>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why Nigerian Retailers and Nollywood Stylists Choose Gemora Global
-            </h2>
-            <p className="mb-4">
-              Nigeria’s fashion market is fast-paced and demands a manufacturer that can deliver "High-Impact" designs with consistent quality and reliable logistics.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Bold "Statement" Collections:</strong> Nigerian fashion is not about subtlety. Our collections are curated to include chunky necklaces, oversized earrings, and grand bridal sets that make an impact at any "Owambe" party or red-carpet event.</li>
-              <li><strong>West African Logistics Expertise:</strong> We have years of experience shipping to Nigeria. Our logistics team handles all the complexities of exporting from Jaipur to Lagos, ensuring your wholesale order reaches you in 10-15 business days via DHL or FedEx.</li>
-              <li><strong>Vibrant Color Palettes:</strong> Nigeria’s love for colorful attire (Aso-Ebi) requires matching jewellery. We offer an extensive range of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari and colored stone jewellery</Link> that perfectly complements Nigerian traditional fabrics like Lace and Ankara.</li>
-              <li><strong>Competitive Factory-Direct Pricing:</strong> By sourcing directly from our Jaipur factory, Nigerian wholesalers can achieve excellent retail markups, allowing them to scale their businesses in the competitive Lagos market.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B imitation jewellery exporter Nigeria wholesale Africa — Direct from our Jaipur Factory
+          </h2>
+          <p>
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Nigeria, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+          </p>
+          <p>
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
+          </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-Nigeria Connection: Bringing Royal Craft to the Afro-Fashion Hub
-            </h2>
-            <p className="mb-4">
-              Jaipur, the "Pink City" of India, and Nigeria share a deep cultural appreciation for "Jewellery as Heritage." In both cultures, jewellery is not just an accessory; it is a family heirloom and a marker of celebration. Gemora Global brings the 500-year-old heritage of <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and Polki art</Link> to Nigeria, where it is increasingly being integrated into modern Afro-bridal fashion.
-            </p>
-            <p className="mb-4">
-              Our designs are tailored for the "Owambe" culture—the legendary Nigerian parties where fashion is the centerpiece. Whether it is a gold-plated choker for a Yoruba wedding or a heavy stone set for an Igbo traditional marriage, our jewellery is designed to "shine" under the bright lights of Nigerian celebrations.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
+          </h2>
+          <p>
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the Nigerian Market
-            </h2>
-            <p className="mb-4">
-              Our export data indicates that these four categories are currently dominating the Nigerian market:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Grand Afro-Bridal Sets</h3>
-                <p className="text-sm">Complete <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal parures</Link> that offer the "Maharaja" look, adapted for the Nigerian bride’s unique style and grandeur.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Chunky Gold-Plated Chokers</h3>
-                <p className="text-sm">Bold, heavy gold-look necklaces are a staple in Lagos boutiques. Our <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated collection</Link> provides the required weight and shine.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Statement Meenakari & Color Fusion</h3>
-                <p className="text-sm">The vibrant colors of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari enamel art</Link> are perfect for matching the bright colors of traditional Nigerian attire.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Artisan Oxidised Collections</h3>
-                <p className="text-sm">Popular in the creative and artistic circles of Lekki and Abuja, our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised pieces</Link> offer a unique, bohemian vibe.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
+          </h2>
+          <p>
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Importing to Nigeria: Customs, SONCAP and Documentation
-            </h2>
-            <p className="mb-4">
-              Exporting to Nigeria requires a thorough understanding of local import regulations to ensure your goods are cleared quickly at the Murtala Muhammed International Airport (MMIA).
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Customs Duties:</strong> Nigeria has specific tariffs for fashion jewellery (HS Code 7117). We provide accurate documentation to help you navigate the Nigerian Customs Service (NCS) requirements.</li>
-              <li><strong>SONCAP Compliance:</strong> We ensure that our export-quality jewellery meets the standards required for the Standards Organisation of Nigeria Conformity Assessment Programme (SONCAP) where applicable.</li>
-              <li><strong>Form M & PAAR:</strong> We assist Nigerian wholesalers with the necessary proforma invoices and documentation required for Form M processing and Pre-Arrival Assessment Report (PAAR).</li>
-              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to Nigeria: Door-to-Door Air Freight Corridor
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Logistics: The Journey from our Jaipur Factory to Lagos & Beyond
-            </h2>
-            <p className="mb-4">
-              Our logistics flow is optimized for the African continent, ensuring that distance is never a barrier to your business growth.
-            </p>
-            <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Rigorous Quality Check:</strong> Every piece is inspected by our senior craftsmen in Jaipur to ensure it meets our "Export Standard."</li>
-              <li><strong>High-Security Export Packing:</strong> Goods are individually wrapped in anti-tarnish bags and shipped in reinforced export-grade cartons to withstand long-distance transit.</li>
-              <li><strong>Air Freight Transit:</strong> Shipments are flown directly from Jaipur/Delhi to major hubs like Lagos (LOS) or Abuja (ABV).</li>
-              <li><strong>Doorstep Delivery:</strong> Our partners (DHL/FedEx) handle the "Final Mile," delivering directly to your boutique in Victoria Island, your stall in Balogun Market, or your warehouse in Port Harcourt.</li>
-            </ol>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              How to Grow Your Nigerian Jewellery Brand with Gemora Global
-            </h2>
-            <p className="mb-4">
-              The Nigerian market is massive and highly rewarding for those who build a strong brand identity.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Custom Manufacturing:</strong> Stand out in the Lagos fashion scene with <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">exclusive designs</Link> that reflect your brand’s unique vision.</li>
-              <li><strong>Private Label Services:</strong> Build a luxury brand in Nigeria. We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label branding</Link>, including custom tags and branded packaging that resonates with the Nigerian market.</li>
-              <li><strong>Social Media Content:</strong> We provide professional photography and video assets that you can use on Instagram and TikTok to engage with the Nigerian fashion community and drive sales.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: A Successful Lagos-Based Boutique
-            </h2>
-            <p className="mb-4">
-              "Sourcing from Gemora Global has been a game-changer for our boutique in Lekki. Their <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal and statement collections</Link> are exactly what our Nigerian clients want. The quality is superior, and the shipping to Lagos is very reliable." — <em>Oluwatosin A., Nigerian Fashion Retailer</em>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Trusted Manufacturing Partner in West Africa
-            </h2>
-            <p className="mb-4">
-              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing partner in India. We bring the royal artistry of Jaipur to the heart of Africa’s fashion capital. 
-            </p>
-            <p className="mb-4">
-              Contact our Nigeria Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
-            </p>
-          </section>
-        </div>
-      }
-    />
-  );
-}
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+  
+        </>
+        }

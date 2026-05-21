@@ -10,133 +10,222 @@ export default function JewelleryExporterFrance() {
       canonical="https://www.gemoraglobal.co/jewellery-exporter-france"
       h1="Handcrafted Indian Jewellery Export for French Boutiques"
       targetKeyword="imitation jewellery exporter france"
-      heroSubtitle="Gemora Global supplies premium wholesale imitation jewellery from Jaipur, India to French boutiques, retailers, and distributors. Factory-direct pricing, MOQ from 50 units, EU-compliant export documentation, and DHL delivery to France in 5–8 days."
+      heroSubtitle="Gemora Global is the premier Indian jewellery exporter to France, supplying wholesale imitation, fashion, and ethnic jewellery direct from our Jaipur factory. Complete EU REACH compliance, 20% TVA customs paperwork, and 5-day delivery to Paris."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        {
-          name: "Wholesale",
-          url: "https://www.gemoraglobal.co/wholesale",
-        },
-        {
-          name: "Jewellery Exporter France",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-france",
-        },
+        { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },
+        { name: "Jewellery Exporter France", url: "https://www.gemoraglobal.co/jewellery-exporter-france" },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to France — Paris, Lyon, Marseille & Beyond
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a premier <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a trusted wholesale partner for the French fashion market. France, as the global epicenter of fashion and design, demands a unique blend of "Ethnic Elegance" and "Contemporary Chic." From the luxury boutiques of Paris’s Le Marais district to the artistic markets of Lyon and the vibrant retail centers of Marseille, our handcrafted jewellery is sought after for its quality and artisan soul.
-            </p>
-            <p className="mb-4">
-              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to France</Link>, we understand the high standards of the French market. We bridge the distance between the historic artisan quarters of Rajasthan and the fashion hubs of France, providing a seamless B2B experience for French retailers, distributors, and online entrepreneurs.
-            </p>
-          </section>
+        <>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Premium Indian Imitation Jewellery Exporter to France — Paris, Lyon, Marseille & Beyond
+          </h2>
+          <p>
+            France represents the historical epicenter of global fashion, haute couture, and avant-garde luxury. In French cities ranging from the stylish quarters of Paris (such as Le Marais and Saint-Germain-des-Prés) to the artistic corridors of Lyon and the bustling commercial hubs of Marseille and Nice, consumer behavior has shifted dramatically. The demand for "bijoux fantaisie" (costume jewelry) and "bijoux de créateurs" (designer bridge jewelry) has reached record highs. Modern French shoppers prioritize high-durability, hypoallergenic brass-based accessories plated in thick 18k gold over cheap, mass-produced plastic items. 
+          </p>
+          <p>
+            For French boutique owners, concept stores, and B2B wholesale distributors, establishing a direct manufacturing partnership with a reliable Jaipur factory like Gemora Global is the single most effective way to secure high profit margins. Jaipur is globally recognized as the gemological and jewelry manufacturing capital of India, blending 500 years of traditional artisan skill with modern, high-precision casting foundries. By sourcing directly from Gemora Global, French businesses can bypass local European wholesale agents who typically add a 40% to 60% markup, unlocking retail margins of 400% to 600% on their collections.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why French Boutiques and Wholesalers Partner with Gemora Global
-            </h2>
-            <p className="mb-4">
-              France is a market that rewards quality, transparency, and design-led manufacturing. We have tailored our services to meet the specific requirements of French businesses.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>EU-Compliant Quality (REACH Standards):</strong> We understand the importance of safety standards in the European Union. Our jewellery is manufactured to be lead and nickel compliant, meeting the rigorous REACH regulations required for selling in France.</li>
-              <li><strong>Express DHL/FedEx Delivery:</strong> We treat the French corridor as a high-priority route. Our logistics network ensures that wholesale orders reach Paris or Lyon within 5-8 business days of dispatch from our Jaipur factory.</li>
-              <li><strong>Full Export Documentation:</strong> We provide all the necessary paperwork required for smooth EU customs clearance. Every shipment includes a Commercial Invoice, Packing List, and Certificate of Origin (CO) to ensure no delays at the border.</li>
-              <li><strong>Factory-Direct Margin Advantage:</strong> By working directly with us—the manufacturer—French retailers can avoid the high markups of European agents and wholesalers, ensuring better retail margins and more competitive pricing.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict European Union Compliance: 100% REACH Regulations Certified
+          </h2>
+          <p>
+            For any French business importing costume jewelry from outside the European Union, compliance with safety regulations is absolute. The French market is strictly regulated by the **Direction Générale de la Concurrence, de la Consommation et de la Répression des Fraudes (DGCCRF)**, which actively audits retail stores and custom shipments to enforce the European Union’s **REACH** (Registration, Evaluation, Authorisation and Restriction of Chemicals) regulations.
+          </p>
+          <p>
+            Importing non-compliant jewelry into France can result in immediate customs confiscation, massive financial penalties, and complete product recalls. Gemora Global guarantees 100% REACH compliance across all shipments bound for France:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Nickel Release Restriction:</strong> Nickel is the leading cause of skin allergies. EU REACH Annex XVII strictly limits nickel release to less than <strong>0.5 µg/cm²/week</strong> for jewelry in direct skin contact (such as bracelets, rings, and necklaces) and less than <strong>0.2 µg/cm²/week</strong> for body-piercing assemblies (earring posts). We utilize strictly nickel-free plating alloys in our electroplating foundries.
+            </li>
+            <li>
+              <strong>Lead Restriction:</strong> Lead content in any jewelry component must be strictly less than <strong>0.05% by weight</strong>. Gemora Global utilizes strictly lead-free, refined brass as our base metal.
+            </li>
+            <li>
+              <strong>Cadmium Restriction:</strong> Cadmium content must be less than <strong>0.01% by weight</strong>. We enforce a zero-cadmium casting protocol.
+            </li>
+          </ul>
+          <p>
+            We regularly submit our Jaipur production batches to leading international testing laboratories (such as SGS and Intertek) to obtain certified test reports confirming compliance with EU REACH limits. These lab certificates are provided to French buyers, ensuring absolute peace of mind during customs clearance.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-France Connection: Artistry for the Modern "Parisienne"
-            </h2>
-            <p className="mb-4">
-              Jaipur is the "Pink City" of India and the global hub for imitation jewellery. At Gemora Global, we take this 500-year-old heritage and refine it for the sophisticated French palate. Our master artisans specialize in techniques like <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan setting</Link>, <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari enameling</Link>, and artisan-grade <Link to="/american-diamond-jewellery-wholesale" className="text-sky-600 hover:underline">American Diamond (CZ)</Link> craftsmanship.
-            </p>
-            <p className="mb-4">
-              Whether you are looking for "Indo-Western" fusion pieces for a Parisian fashion line or traditional ethnic sets for the vibrant French-South Asian community, our collections offer the perfect balance of "Old World Jaipur" and "Modern European Style."
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            French Import Logistics: VAT (TVA), Duties, and EORI Guidelines
+          </h2>
+          <p>
+            Importing commercial wholesale batches from India into France is highly efficient, provided the proper customs procedures are followed. Here is a clear B2B guide to navigating French customs:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>French EORI Number:</strong> Before placing a commercial import order, your French business must register for a free EORI (Economic Operators Registration and Identification) number starting with "FR" via the French custom portal (Douane.gouv.fr).
+            </li>
+            <li>
+              <strong>Import Duty Rates:</strong> Under the EU Common Customs Tariff, base metal imitation jewelry imported from India is classified under HTS code <strong>7117.19.00</strong>. The standard customs duty rate is <strong>4.0%</strong>, representing a highly favorable rate for high-margin retail.
+            </li>
+            <li>
+              <strong>French TVA (Value Added Tax):</strong> The standard French VAT rate (TVA) of <strong>20%</strong> applies to the customs value of your shipment.
+            </li>
+            <li>
+              <strong>Auto-Liquidation de la TVA (Reverse Charge VAT):</strong> France offers a major cash-flow advantage for VAT-registered businesses. Since January 2022, importing businesses can automatically defer and clear import TVA on their standard monthly or quarterly French VAT returns (CA3 form) rather than paying 20% TVA upfront at customs. This represents an incredible optimization for B2B inventory cash flow.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Top Trending Categories for the French Market
-            </h2>
-            <p className="mb-4">
-              Our export data shows high demand in France for the following categories:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Minimalist Indo-Western Earrings</h3>
-                <p className="text-sm">Highly favoured by French boutique owners for their "Quiet Luxury" look. These pieces use high-quality CZ stones and durable gold plating that suits daily French fashion.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Artisan Oxidised Silver Jewellery</h3>
-                <p className="text-sm">Popular for the French "Boho" and artistic market. Our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised collection</Link> offers a vintage, handcrafted look that resonates with French consumers.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Meenakari Pendant Sets</h3>
-                <p className="text-sm">The vibrant colors of Jaipur’s <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> provide the "Statement" appeal that French fashion lovers appreciate for seasonal collections.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Gold-Plated Fusion Necklaces</h3>
-                <p className="text-sm">Designs that blend traditional Indian motifs with sleek, modern silhouettes—perfect for the French evening-wear and gala segment.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to France: Door-to-Door DHL Express Air Freight
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor to France, using express door-to-door couriers (primarily DHL and FedEx Express). 
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time to France</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, online brands)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large French distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires custom clearing agent at Paris CDG or Lyon LYS</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Our B2B Export Workflow for French Buyers
-            </h2>
-            <p className="mb-4">
-              We make sourcing from India as efficient as ordering from a local EU supplier.
-            </p>
-            <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Online Sourcing:</strong> Browse our <Link to="/products" className="text-sky-600 hover:underline">1700+ designs</Link> and select your seasonal inventory.</li>
-              <li><strong>Multi-Stage QC:</strong> Every piece is audited for plating quality, stone setting, and finish in our Jaipur unit.</li>
-              <li><strong>Safe & Secure Packaging:</strong> We use reinforced, anti-tarnish packaging to ensure your goods arrive in pristine condition in France.</li>
-              <li><strong>Door-to-Door Service:</strong> DHL/FedEx handles the transit and delivers directly to your business address in Paris, Lyon, or any part of France.</li>
-            </ol>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Key Sourcing &amp; Retail Strategies for French Boutiques
+          </h2>
+          <p>
+            To capture the interest of the highly sophisticated French fashion shopper, retailers must curating an inventory that focuses on "Quiet Luxury," craftsmanship, and clean design aesthetics:
+          </p>
+          <h3>1. Minimalist CZ and "Bijoux Fantaisie"</h3>
+          <p>
+            French consumers love subtle, daily-wear pieces that complement their outfits without being overly loud:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Minimalist CZ Pendant Necklaces:</strong> High-grade Cubic Zirconia stones hand-set in thin brass gold-plated chains.
+            </li>
+            <li>
+              <strong>Huggie and Hoop Earrings:</strong> Thick, sleek brass hoops plated in 18k yellow gold with an organic, hand-sculpted texture.
+            </li>
+          </ul>
+          <h3>2. "Indo-Western" Fusion &amp; Enameled Meenakari</h3>
+          <p>
+            French shoppers appreciate artisanal storytelling. Highlighting that your pieces are enameled by hand in Jaipur adds tremendous perceived value:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Meenakari Pendant Sets:</strong> Sleek geometric pendant sets finished in pastel colors (like mint green, lavender, and soft cream) that represent an elegant Western adaptation of Jaipur's ancient enameled art.
+            </li>
+            <li>
+              <strong>Oxidized Boho-Chic:</strong> Antique silver-plated cuff bracelets and dangling rings, highly popular in beachside resorts in the French Riviera and Marseille.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Custom OEM and Private Labeling for France
-            </h2>
-            <p className="mb-4">
-              For French brands looking for exclusivity, we offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link> and custom OEM manufacturing (MOQ 500+ units). We can work with your design team to create exclusive collections that are unique to your brand in the French market.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for French Importers
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Register Your FR EORI Number:</strong> Mandatory for all commercial custom declarations entering France.
+            </li>
+            <li>
+              <strong>Opt for Auto-Liquidation de la TVA:</strong> Link your TRN to French customs to defer the 20% TVA directly to your monthly tax returns, keeping cash flow optimized.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Request REACH Test Reports:</strong> Inform our B2B desk during order confirmation to receive official lab reports confirming compliant heavy metal and nickel limits.
+            </li>
+            <li>
+              <strong>Select Sustainable Kraft Packaging:</strong> French consumers value eco-friendly, plastic-free packaging. We offer unbranded kraft jewelry boxes and organic cotton pouches.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern European quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand in France.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: Paris-Based Retailer
-            </h2>
-            <p className="mb-4">
-              "Gemora Global is our preferred partner for Indian jewellery in France. Their designs are sophisticated, and the quality of their anti-tarnish finish is excellent. The delivery to our Paris store is always fast and the documentation is perfect for EU customs." — <em>Sophie M., Parisian Boutique Owner</em>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Manufacturing Gateway to India
-            </h2>
-            <p className="mb-4">
-              If you are looking for a reliable, professional, and design-led <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">imitation jewellery exporter for the French market</Link>, Gemora Global is your strategic partner. We bring the soul of Jaipur to the heart of France.
-            </p>
-            <p className="mb-4">
-              Contact our French Export Desk today to request our latest catalogue and start your partnership with India's most trusted manufacturer.
-            </p>
-          </section>
-        </div>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/collections/minimalist-jewelry" className="text-primary underline">
+                Premium Minimalist CZ and American Diamond Collections
+              </Link>
+            </li>
+          </ul>
+        </>
       }
+      faqs={[
+        {
+          q: "What is the import duty for imitation jewelry entering France from India?",
+          a: "All base metal imitation jewelry imported into France is classified under HTS code 7117.19.00. The standard EU customs duty rate for imports from India is 4.0%. Shipments with a value under €150 are exempt from this duty, although TVA is calculated.",
+        },
+        {
+          q: "Are Gemora Global's jewelry batches REACH compliant for French retail?",
+          a: "Yes. We strictly manufacture all EU-bound orders using lead-free and cadmium-free brass/copper base metals. Our plating is completely hypoallergenic and nickel-free, ensuring full compliance with EU REACH limits on nickel release (0.5 µg/cm²/week) and heavy metal contents.",
+        },
+        {
+          q: "How is VAT (TVA) calculated and paid for imports into France?",
+          a: "A standard 20% TVA is calculated on the customs value of your shipment. Since January 2022, VAT-registered French businesses can utilize the 'Auto-Liquidation de la TVA' (Reverse Charge) to defer and clear this 20% TVA directly on their CA3 monthly tax returns, avoiding upfront payments.",
+        },
+        {
+          q: "What is your door-to-door transit time to France?",
+          a: "We ship directly from Jaipur via express couriers like DHL and FedEx. Standard door-to-door transit time from our Jaipur factory to your boutique in Paris, Lyon, or Marseille is typically 5 to 8 business days, with real-time tracking.",
+        },
+        {
+          q: "Can I customize the stone colors or plating finish of catalogue designs?",
+          a: "Yes. For orders qualifying for Tier 3+ (500+ total units), you can customize the metal plating finish (such as standard yellow gold, antique silver, rhodium, or rose gold) and specify custom stone colors to match your seasonal fashion line.",
+        },
+        {
+          q: "Do you offer eco-friendly, plastic-free packaging for the French market?",
+          a: "Yes, absolutely. French consumers are highly eco-conscious. We offer natural, unbranded kraft paper boxes and organic cotton/velvet drawstring pouches to ensure your packaging aligns with local sustainable retail trends.",
+        },
+        {
+          q: "What is your MOQ for French B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "What payment terms do you offer French B2B buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to €5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+      ]}
     />
   );
 }

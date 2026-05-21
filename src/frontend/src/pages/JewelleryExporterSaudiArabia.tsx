@@ -14,14 +14,8 @@ export default function JewelleryExporterSaudiArabia() {
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        {
-          name: "Wholesale",
-          url: "https://www.gemoraglobal.co/wholesale",
-        },
-        {
-          name: "Jewellery Exporter Saudi Arabia",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia",
-        },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Jewellery Exporter Saudi Arabia", url: "https://www.gemoraglobal.co/jewellery-exporter-saudi-arabia" },
       ]}
       schema={{
         "@context": "https://schema.org",
@@ -41,11 +35,11 @@ export default function JewelleryExporterSaudiArabia() {
       faqs={[
         {
           q: "Can Gemora Global export jewellery directly to Saudi Arabia?",
-          a: "Yes. Gemora Global exports wholesale imitation jewellery directly to Riyadh, Jeddah, Dammam, Mecca, and Medina via DHL, FedEx, and India Post EMS. We provide full GCC export documentation including commercial invoice, packing list, Certificate of Origin, and Halal-compatible material declaration for Saudi customs clearance.",
+          a: "Yes. Gemora Global exports wholesale imitation jewellery directly to Riyadh, Jeddah, Dammam, Mecca, and Medina via DHL, FedEx, and air freight. We provide full GCC export documentation including SASO-compliant commercial invoices, packing lists, Certificate of Origin, and chemical declarations for swift Saudi customs clearance.",
         },
         {
           q: "What are the best-selling jewellery styles for Saudi Arabia?",
-          a: "Gold-plated heavy jewellery sets, Kundan bridal parures, and American Diamond statement necklaces are top-selling in Saudi Arabia. Bridal season around Eid and winter months generates the highest demand. Pearl-accented and layered gold necklaces are popular in mainstream KSA fashion boutiques.",
+          a: "Gold-plated heavy jewellery sets, Kundan bridal parures, and American Diamond (CZ) statement necklaces are top-selling in Saudi Arabia. Bridal season around Eid and winter months generates the highest demand. Pearl-accented and layered gold necklaces are highly popular in mainstream KSA mall boutiques.",
         },
         {
           q: "Is there a Hajj/Umrah buying season for jewellery in Saudi Arabia?",
@@ -53,148 +47,209 @@ export default function JewelleryExporterSaudiArabia() {
         },
         {
           q: "What payment terms do you offer for Saudi Arabia buyers?",
-          a: "We accept international wire transfer (T/T) in USD or SAR. Payment terms are typically 50% advance and 50% before dispatch for new buyers. Established KSA accounts can qualify for 30-day credit terms after the third order.",
+          a: "We accept secure international bank wire transfers (SWIFT/TT) directly in USD or SAR. Our standard B2B terms are 30% advance deposit upon order confirmation and design queue allocation, and the remaining 70% paid after final pre-shipment quality control approval.",
         },
         {
           q: "How long does shipping from India to Saudi Arabia take?",
-          a: "DHL Express delivers to Riyadh and Jeddah in 7–10 business days from our Jaipur factory. FedEx International Priority takes 7–12 days. Economy via India Post EMS takes 20–35 days. We recommend DHL for time-sensitive Eid and wedding season shipments.",
+          a: "DHL Express delivers to Riyadh and Jeddah in 5–8 business days from our Jaipur factory. FedEx International Priority takes 7–10 days. All shipments include full door-to-door tracking and automated custom clearance support.",
+        },
+        {
+          q: "Do you assist KSA buyers with SABER platform registration?",
+          a: "Yes, absolutely. We provide all the necessary technical specifications, heavy metal conformity declarations, and SASO compliance certificates required by Saudi importers to easily register their imported products on the official SABER platform.",
+        },
+        {
+          q: "What is your MOQ for Saudi Arabian wholesale buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online brands to test a wide range of designs in the local KSA market with minimal capital investment.",
+        },
+        {
+          q: "Are the jewelry items plated with real gold and resistant to sweat?",
+          a: "Yes. We utilize premium 18k or 22k yellow gold electroplating on high-purity brass. Furthermore, all KSA-bound orders are finished with our advanced Electrophoretic Lacquer e-coating anti-tarnish barrier to prevent tarnishing in the hot Gulf climate.",
         },
       ]}
       bodyContent={
-        <div className="space-y-8 text-sm md:text-base">
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Premium Indian Imitation Jewellery Exporter to Saudi Arabia — Riyadh, Jeddah, Dammam & Mecca
-            </h2>
-            <p className="mb-4">
-              Gemora Global is a premier <Link to="/imitation-jewellery-manufacturer-jaipur" className="text-sky-600 hover:underline">imitation jewellery manufacturer based in Jaipur, India</Link>, serving as a cornerstone wholesale supplier for the Kingdom of Saudi Arabia (KSA). Saudi Arabia is the undisputed leader of the Middle Eastern jewellery market, where the fusion of tradition and ultra-modern luxury creates a unique space for high-quality Indian craftsmanship. From the luxury retailers in Riyadh’s Kingdom Centre to the vibrant gold souks of Jeddah and Dammam, our jewellery is highly sought after for its "Royal Jaipur" aesthetic and superior finish.
-            </p>
-            <p className="mb-4">
-              As a specialized <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-sky-600 hover:underline">jewellery exporter to Saudi Arabia</Link>, we understand the Kingdom’s preference for ornate, grand, and culturally significant designs. We bridge the distance between Jaipur’s historic workshops and the sophisticated retail landscape of KSA, ensuring that our partners receive only the finest "Export-Grade" collections that meet the rigorous standards of the Saudi market.
-            </p>
-          </section>
+        <>
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Premium Indian Imitation Jewellery Exporter to Saudi Arabia — Riyadh, Jeddah, Dammam & Mecca
+          </h2>
+          <p>
+            The Kingdom of Saudi Arabia (KSA) stands as the largest, most prosperous, and culturally significant luxury consumer market in the Middle East. Driven by historic cultural heritage, grand wedding celebrations, and the ambitious societal transformations of **Saudi Vision 2030**, the retail demand for high-end fashion and costume jewelry is soaring. Across high-end retail malls in Riyadh (such as Kingdom Centre and Riyadh Park), the bustling commercial lanes of Jeddah, and gold souks in Dammam, modern Saudi consumers are shifting from classic solid gold accessories toward **premium bridge jewelry**. High-purity brass-based accessories plated in thick 18k or 22k yellow gold provide the majestic look of real gold jewelry at an accessible cost, making them ideal for frequent gifting, seasonal styling, and grand occasions.
+          </p>
+          <p>
+            For Saudi boutique owners, commercial wholesale traders, and online retailers, establishing a direct sourcing pipeline with a Jaipur manufacturer like Gemora Global is the single most effective way to secure high profit margins. Jaipur is the gemological and jewelry manufacturing capital of India, blending centuries of royal craftsmanship with high-precision casting. Sourcing directly from us bypasses Middle Eastern trading agents in Dubai who typically add a 40% margin, unlocking retail markups of 400% to 600% on your collections.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Why Saudi Arabian Retailers and Mall Boutiques Choose Gemora Global
-            </h2>
-            <p className="mb-4">
-              Sourcing for the Saudi market requires a manufacturing partner that combines artistic excellence with logistical precision and regulatory compliance.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Grand "Gulf-Spec" Designs:</strong> Our collections for the KSA market are curated to reflect the "Bold and Ornate" style preferred in the Gulf. We offer heavy-look <Link to="/kundan-jewellery-wholesale" className="text-sky-600 hover:underline">Kundan and bridal sets</Link> that match the grandeur of Saudi celebrations.</li>
-              <li><strong>Vision 2030 Ready:</strong> As Saudi Arabia transforms its retail sector under Vision 2030, we provide modern, Indo-Western designs that appeal to the younger, globally-connected Saudi consumer.</li>
-              <li><strong>Reliable KSA Logistics via DHL & FedEx:</strong> We offer efficient door-to-door delivery from Jaipur to all major Saudi cities, including Riyadh, Jeddah, Dammam, and Medina, in just 7-10 business days.</li>
-              <li><strong>Full GCC Export Documentation:</strong> We provide all necessary paperwork, including SASO-compliant invoices and Certificates of Origin, ensuring a seamless customs clearance process in the Kingdom.</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Saudi Regulatory Compliance: SABER Platform and SASO Guidelines
+          </h2>
+          <p>
+            To clear customs smoothly and sell commercially in the Kingdom, all imported costume jewelry must adhere strictly to the guidelines set by the **Saudi Standards, Metrology and Quality Organization (SASO)**. Saudi customs authorities enforce a highly digitalized import clearance workflow through the official **SABER electronic platform**.
+          </p>
+          <p>
+            Failing to comply with SASO chemical safety standards or entering incomplete product descriptions on SABER will result in immediate shipment confiscation at customs, heavy commercial fines, and immediate return of goods. Gemora Global guarantees 100% SASO compliance across all shipments bound for Saudi Arabia:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Hypoallergenic Nickel-Free Foundries:</strong> SASO standards strictly limit the use of nickel to prevent skin allergies. We utilize strictly nickel-free plating alloys in our electroplating foundries, guaranteeing a hypoallergenic product for KSA consumers.
+            </li>
+            <li>
+              <strong>Strict Lead and Cadmium Restrictions:</strong> Lead content in all base alloys must remain strictly under <strong>0.05% by weight</strong>, and cadmium must be under <strong>0.01%</strong>. We enforce a zero-lead, zero-cadmium casting protocol using refined brass.
+            </li>
+            <li>
+              <strong>SABER Documentation Package:</strong> We provide all the necessary technical descriptions, product photographs, material declarations, and testing reports required by your customs broker to easily register the import batch and obtain the Certificate of Conformity (CoC) on SABER.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              The Jaipur-KSA Connection: Crafting Heritage for the Kingdom
-            </h2>
-            <p className="mb-4">
-              The relationship between India and Saudi Arabia is built on centuries of trade in gemstones and precious metals. Gemora Global honors this deep connection by supplying high-quality <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari, Kundan, and American Diamond jewellery</Link> to Saudi retailers who value the intricate handiwork of Jaipur’s master artisans.
-            </p>
-            <p className="mb-4">
-              In a market where "Gold is King," our high-quality <Link to="/gold-plated-jewellery-wholesale-india" className="text-sky-600 hover:underline">gold-plated collections</Link> offer an accessible yet equally stunning alternative. Our designs are frequently used in the "Gifting Culture" of Saudi Arabia, where jewellery is a traditional token of respect and celebration during Eid and weddings.
-            </p>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            ZATCA Guidelines: Duties, VAT, and Customs Procedures in KSA
+          </h2>
+          <p>
+            Importing commercial wholesale batches from India into Saudi Arabia is highly efficient when aligned with the regulations of the **Zakat, Tax and Customs Authority (ZATCA)**. Here is a clear B2B guide to importing:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Commercial Registration &amp; Tax Number:</strong> To import commercially, your business must hold a valid Commercial Registration (CR) issued by the Ministry of Commerce and a VAT Registration Number issued by ZATCA.
+            </li>
+            <li>
+              <strong>Customs Duty Rates:</strong> Under the unified GCC Customs Tariff, imitation jewelry imported from India is classified under HTS code <strong>7117.19.00</strong>. The standard customs duty rate in the GCC Customs Union is <strong>5.0%</strong> of the CIF value.
+            </li>
+            <li>
+              <strong>Saudi VAT (Value Added Tax):</strong> Imports are subject to a flat <strong>15% VAT</strong> calculated on the sum of the customs value and the customs duty. 
+            </li>
+            <li>
+              <strong>Landed Cost Optimization:</strong> We optimize your commercial invoices by detailing shipping and insurance costs separately, ensuring your ZATCA customs assessment is highly accurate, minimizing upfront duty overheads.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Trending Categories for the Saudi Arabian Market
-            </h2>
-            <p className="mb-4">
-              Based on our extensive export volume to KSA, these four categories are the highest performers:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">1. Ornate Royal Bridal Sets</h3>
-                <p className="text-sm">Massive, multi-layered <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal sets</Link> that offer the "Maharaja" look, adapted for the grand scale of Saudi weddings.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">2. Premium American Diamond (CZ)</h3>
-                <p className="text-sm">High-clarity Cubic Zirconia pieces that offer a "Real Diamond" look, perfect for the high-end mall boutiques in Riyadh and Jeddah.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">3. Traditional Jaipur Meenakari</h3>
-                <p className="text-sm">The colorful enamel work of <Link to="/meenakari-jewellery-wholesale" className="text-sky-600 hover:underline">Meenakari art</Link> is highly appreciated for its artisan value and vibrant appeal.</p>
-              </div>
-              <div className="p-4 border border-border rounded-lg">
-                <h3 className="font-bold text-primary mb-2">4. Artisan Oxidised Silver</h3>
-                <p className="text-sm">A growing trend among Saudi youth, our <Link to="/oxidised-jewellery-wholesale" className="text-sky-600 hover:underline">oxidised collections</Link> offer a unique, bohemian alternative to traditional gold.</p>
-              </div>
-            </div>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Logistics: Jaipur to KSA Door-to-Door DHL Express
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor to Saudi Arabia, using express door-to-door couriers (primarily DHL and FedEx Express). 
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time to KSA</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, mall showrooms)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large Saudi wholesalers)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at Riyadh (RUH) or Jeddah (JED)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Importing to KSA: Customs, VAT and Regulatory Compliance
-            </h2>
-            <p className="mb-4">
-              Importing jewellery into Saudi Arabia requires adherence to the regulations set by the Zakat, Tax and Customs Authority (ZATCA).
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>VAT (Value Added Tax):</strong> Saudi Arabia applies a 15% VAT on imported goods. We provide detailed commercial invoices to help you calculate your landed costs accurately.</li>
-              <li><strong>Customs Duties:</strong> Most imitation jewellery falls under HS Code 7117. We ensure your items are classified correctly to minimize delays at Saudi customs.</li>
-              <li><strong>SABER & SASO:</strong> We assist Saudi wholesalers with the documentation required for registration on the SABER platform and ensure conformity with SASO standards.</li>
-              <li><strong>Documentation Package:</strong> Every shipment includes a Commercial Invoice, Packing List, Certificate of Origin, and Air Waybill (AWB).</li>
-            </ul>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Key Seasonal Jewelry Trends Dominating the Saudi Market
+          </h2>
+          <p>
+            Understanding KSA's unique retail seasons and consumer tastes is critical to curating a highly profitable inventory:
+          </p>
+          <h3>1. The Festive Eid Peaks (Ramadan, Eid Al-Fitr &amp; Eid Al-Adha)</h3>
+          <p>
+            The holy month of Ramadan and the subsequent Eid festivals represent the single largest consumer retail spike in KSA. Families host grand social gatherings and gift jewelry to loved ones.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Layered Gold-Plated Necklaces:</strong> Elegant multi-tiered gold necklaces encrusted with delicate pearls and rubies that match traditional Kaftans and Abayas.
+            </li>
+            <li>
+              <strong>CZ Solitaire Bangles &amp; Bracelets:</strong> Sleek high-refraction Cubic Zirconia bangles plated in 18k yellow gold and rose gold.
+            </li>
+          </ul>
+          <h3>2. The Hajj and Umrah Gifting Sector (Mecca &amp; Medina)</h3>
+          <p>
+            With millions of pilgrims visiting Mecca and Medina year-round, there is a massive market for high-volume, affordable gifting jewelry:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Allah Pendant Necklaces:</strong> Beautiful brass pendants featuring enameled calligraphic scripts set inside CZ borders.
+            </li>
+            <li>
+              <strong>Daily Wear CZ Rings &amp; Studs:</strong> Sold in bulk quantities at highly accessible retail price points for pilgrims to purchase as gifts for their families back home.
+            </li>
+          </ul>
+          <h3>3. The Royal Saudi Wedding Season</h3>
+          <p>
+            Saudi weddings are legendary for their scale and aesthetic opulence, driving massive demand for heavy jewelry:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Royal Kundan Bridal Parures:</strong> Majestic chokers and long Rani Haars featuring enameled Meenakari backing and matching heavy earrings.
+            </li>
+            <li>
+              <strong>Heavy American Diamond Chokers:</strong> Rhodium-plated, high-shine statement CZ chokers that offer the brilliant sparkle of platinum and diamond sets under showroom lighting.
+            </li>
+          </ul>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Logistics: The Journey from our Jaipur Factory to the Heart of Riyadh
-            </h2>
-            <p className="mb-4">
-              Our logistics process is designed for speed and security, ensuring that your wholesale inventory is always ready for peak seasons like Eid Al-Fitr and Eid Al-Adha.
-            </p>
-            <ol className="list-decimal pl-6 space-y-2 mb-4">
-              <li><strong>Stringent Quality Check:</strong> Every order is inspected by our senior craftsmen in Jaipur for finish, stone setting, and durability.</li>
-              <li><strong>Premium Export Packaging:</strong> Goods are individually wrapped in anti-tarnish bags and shipped in heavy-duty export cartons to ensure they arrive in pristine condition.</li>
-              <li><strong>Direct Air Freight:</strong> Shipments are flown directly to King Khalid International Airport (RUH) in Riyadh or King Abdulaziz International Airport (JED) in Jeddah.</li>
-              <li><strong>Seamless Final Delivery:</strong> Our partners (DHL/FedEx) handle the "Final Mile," delivering directly to your store, warehouse, or office in any Saudi city.</li>
-            </ol>
-          </section>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Saudi Arabian Importers
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Commercial Registration (CR) &amp; VAT Number:</strong> Ensure your KSA corporate tax registration is active to facilitate ZATCA customs clearance.
+            </li>
+            <li>
+              <strong>Leverage Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various designs with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Request SABER Registration Assets:</strong> Inform our B2B desk during order confirmation to receive SASO-compliant technical descriptions and material safety sheets.
+            </li>
+            <li>
+              <strong>Choose E-Coating for Climate Protection:</strong> Ensure your jewelry is finished with anti-tarnish electrophoretic lacquer to survive the hot and humid Gulf summer climate.
+            </li>
+            <li>
+              <strong>Select Velvet-Lined Branded Boxes:</strong> Premium packaging is essential in the luxury KSA retail sector. We offer custom logo printing on velvet-lined gift boxes directly at our factory.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern Middle Eastern quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand in Saudi Arabia.
+          </p>
 
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Scaling Your Saudi Arabian Jewellery Brand with Gemora Global
-            </h2>
-            <p className="mb-4">
-              The Saudi market is one of the most rewarding in the world for those who build a premium brand presence.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 mb-4">
-              <li><strong>Custom Design & OEM:</strong> Create <Link to="/custom-jewellery-manufacturer" className="text-sky-600 hover:underline">bespoke collections</Link> that are unique to your Saudi brand, giving you a distinct advantage in the Kingdom’s luxury market.</li>
-              <li><strong>Private Label & Premium Packaging:</strong> We offer <Link to="/private-label-jewellery-india" className="text-sky-600 hover:underline">private label services</Link>, including luxury branded boxes and tags that appeal to the high standards of Saudi consumers.</li>
-              <li><strong>Digital Visual Assets:</strong> We provide high-resolution photography and video content that you can use on Instagram and Snapchat to engage with the Saudi fashion community.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Client Testimonial: A Leading Riyadh-Based Retailer
-            </h2>
-            <p className="mb-4">
-              "Gemora Global has been our primary manufacturer for over five years. Their <Link to="/bridal-jewellery-wholesale" className="text-sky-600 hover:underline">bridal and American Diamond collections</Link> are top performers in our Riyadh mall boutiques. Their attention to detail and reliable shipping make them a perfect partner." — <em>Fahad A., KSA Retailer</em>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-primary mb-4">
-              Conclusion: Your Strategic Manufacturing Partner in the Kingdom
-            </h2>
-            <p className="mb-4">
-              Gemora Global is more than just a wholesaler; we are your dedicated manufacturing arm in India. We bring the royal artistry of Jaipur to the prosperous heart of Saudi Arabia. 
-            </p>
-            <p className="mb-4">
-              Contact our Saudi Arabia Export Desk today to request our latest catalogue and start your journey with India's most trusted <Link to="/fashion-jewellery-exporter" className="text-sky-600 hover:underline">wholesale jewellery exporter</Link>.
-            </p>
-          </section>
-        </div>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/collections/minimalist-jewelry" className="text-primary underline">
+                Premium Minimalist CZ and American Diamond Collections
+              </Link>
+            </li>
+          </ul>
+        </>
       }
-
     />
   );
 }

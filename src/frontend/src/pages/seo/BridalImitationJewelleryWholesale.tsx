@@ -10,89 +10,143 @@ export default function BridalImitationJewelleryWholesale() {
       targetKeyword="bridal jewellery sets wholesale supplier"
       heroSubtitle="Complete wholesale bridal imitation jewellery sets for wedding boutiques worldwide. Necklace, earrings, maang tikka, bangles — export quality with anti-tarnish finish."
       bodyContent={
-        <>
+          <>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Wholesale Bridal Imitation Jewellery for Wedding Markets
+            Sourcing B2B bridal imitation jewellery wholesale — Direct from our Jaipur Factory
           </h2>
           <p>
-            Gemora Global is a dedicated wholesale supplier of bridal imitation
-            jewellery sets for wedding boutiques, bridal retailers, and occasion
-            wear distributors serving wedding markets across the globe. Our
-            bridal range is designed specifically for the wholesale buyer —
-            complete sets with consistent quality, competitive pricing, and the
-            anti-tarnish finish that is essential for bridal retail display.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Bridal Markets, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
-            Bridal jewellery is the highest-value and most emotionally
-            significant purchase in any wedding outfit planning process. Your
-            customers expect pieces that look stunning in person, photograph
-            beautifully, and maintain their finish throughout the wedding day
-            and in photographs forever. Gemora Global bridal sets are designed
-            and manufactured with these expectations in mind — our finish
-            quality is consistently praised by boutique owners across the UK,
-            UAE, USA, and Canada.
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
           </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+  
+
           <h2 className="text-xl font-serif font-bold text-primary">
-            Bridal Set Compositions & Pricing Tiers
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
           </h2>
           <p>
-            Our standard wholesale bridal sets are available in three tiers. Our
-            entry-level bridal sets include necklace and earring pairs, ideal
-            for boutiques targeting the mid-market bridal customer. Our complete
-            bridal sets add maang tikka and bangles for a full traditional look.
-            Our premium parure sets include all components plus haath phool
-            (hand harness) and nath (nose ring) for boutiques serving the luxury
-            bridal market.
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
           </p>
-          <p>
-            All three tiers are available in kundan, polki, zircon, and CZ stone
-            varieties. Gold-plated finish is most popular for the UAE and South
-            Asian markets; silver-plated and rose-gold are popular for UK and
-            North American buyers. We can produce mixed finish orders within the
-            same design for buyers who need variety within a single collection.
-          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+  
+
           <h2 className="text-xl font-serif font-bold text-primary">
-            Wedding Market Demand by Country
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
           </h2>
           <p>
-            Understanding regional demand patterns is critical for wedding
-            boutique buyers. In the UK, the South Asian bridal market peaks in
-            summer (June–August) and autumn (October–November). In the UAE, peak
-            demand aligns with the wedding season outside Ramadan — typically
-            September–January. In the USA and Canada, South Asian wedding season
-            mirrors the broader wedding season with peaks in spring and autumn.
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
           </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+  
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to Global Bridal Markets: Door-to-Door Air Freight Corridor
+          </h2>
           <p>
-            Gemora Global maintains stock across our core bridal ranges to
-            support fast replenishment orders during peak season. We recommend
-            that wholesale buyers who rely heavily on our bridal range place
-            their peak-season orders 6–8 weeks in advance to ensure availability
-            and priority dispatch.
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
           </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+  
         </>
-      }
-      faqs={[
-        {
-          q: "What is included in a standard wholesale bridal set?",
-          a: "Standard sets include necklace and earrings. Complete sets add maang tikka and bangles. Premium parure sets include haath phool and nath. All sets are available in kundan, polki, zircon, and CZ.",
-        },
-        {
-          q: "Can I order bridal sets with custom stone colours?",
-          a: "Yes — stone colour customisation is available for orders of 100+ sets with 3–4 weeks lead time. Ideal for boutiques needing specific bridal theme colour matches.",
-        },
-        {
-          q: "Do bridal sets come with display/gift packaging?",
-          a: "Yes. All bridal sets are packed in luxury velvet boxes with foam inserts, ready for retail display or gifting. Custom branded packaging available for 500+ unit orders.",
-        },
-        {
-          q: "How do I ensure I have enough bridal stock for peak season?",
-          a: "We recommend placing peak-season orders 6–8 weeks in advance. We maintain core bridal range stock but high demand in peak season means earlier ordering is always advisable.",
-        },
-        {
-          q: "Do you ship bridal sets to the USA?",
-          a: "Yes. USA is a major market for our bridal range. We ship via FedEx International Priority with 5–8 business day delivery. Full US customs documentation including HS codes is provided.",
-        },
-      ]}
-    />
-  );
-}
+        }

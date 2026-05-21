@@ -10,93 +10,143 @@ export default function FashionJewelleryExporter() {
       targetKeyword="fashion jewellery exporter worldwide"
       heroSubtitle="Export-quality fashion jewellery from India. Seasonal trend-driven designs for boutiques and fashion retailers in UAE, France, UK, USA, and across the globe."
       bodyContent={
-        <>
+          <>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Fashion Jewellery Export — India's Trendsetting Supplier
+            Sourcing B2B fashion jewellery exporter — Direct from our Jaipur Factory
           </h2>
           <p>
-            Gemora Global is a leading fashion jewellery exporter from India,
-            supplying trend-driven artificial jewellery designs to boutiques,
-            fashion retailers, and wholesale distributors across the UAE,
-            France, UK, USA, Germany, and Australia. Our design philosophy
-            bridges the gap between traditional Indian jewellery craftsmanship
-            and the contemporary fashion demands of international retail markets
-            in 2026 and beyond.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Wholesale Supply, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
-            As a fashion jewellery exporter, our strongest differentiator is our
-            seasonal design refresh cycle. Our in-house design studio releases
-            3–4 new collections per year, tracking runway reports from Paris,
-            Dubai, Milan, and New York. This ensures that our wholesale buyers
-            always have access to fashion-forward inventory that resonates with
-            their customers — whether they are selling in a Paris boutique, a
-            London fashion market, or an online store shipping to the USA.
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
           </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+  
+
           <h2 className="text-xl font-serif font-bold text-primary">
-            Fashion Jewellery Trends 2026
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
           </h2>
           <p>
-            Key fashion jewellery trends for export markets in 2026 include
-            layered minimal chain necklaces, oversized geometric earrings, bold
-            statement cuffs, colourful enamel work, and Indo-Western fusion
-            pieces that appeal to both the diaspora market and mainstream
-            fashion buyers. Our 2026 collections have been designed with these
-            trends at their core, while also maintaining our core range of
-            traditional kundan, meenakari, and polki pieces that remain
-            perennial bestsellers in Middle Eastern and South Asian markets.
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
           </p>
-          <p>
-            European buyers — particularly those in France, Germany, and the
-            Netherlands — have shown strong demand for our minimal contemporary
-            range: delicate chain layering pieces, architectural geometric
-            earrings, and oxidised silver-finish collections. We produce these
-            pieces specifically for the European market's aesthetic preferences,
-            with lighter weight, cleaner lines, and smaller stone settings.
-          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+  
+
           <h2 className="text-xl font-serif font-bold text-primary">
-            Middle East & UAE Fashion Jewellery Demand
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
           </h2>
           <p>
-            The UAE remains one of our highest-value export markets for fashion
-            jewellery. Dubai's fashion retail scene demands bold statement
-            pieces, premium goldwork, and occasion-specific collections for Eid,
-            Ramadan, and the festive season. Our UAE buyers typically order
-            across our full range — from everyday minimal pieces for Dubai's
-            cosmopolitan fashion retail sector to traditional heavy sets for the
-            South Asian wedding market.
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
           </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+  
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to Global Wholesale Supply: Door-to-Door Air Freight Corridor
+          </h2>
           <p>
-            For fashion boutiques in the UAE looking for a reliable artificial
-            jewellery wholesale supplier from India, Gemora Global offers air
-            freight delivery in 5–7 business days with all UAE customs
-            documentation prepared by our export team. We understand the
-            specific requirements of UAE import procedures and can advise on HS
-            code classification for fashion jewellery imports into the GCC.
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
           </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+  
         </>
-      }
-      faqs={[
-        {
-          q: "How often do you release new fashion jewellery collections?",
-          a: "We release 3–4 new collections per year — typically aligned with Spring/Summer, Autumn/Winter, festive season (Eid/Diwali), and bridal season. Wholesale buyers receive early access to new collections.",
-        },
-        {
-          q: "Do you export fashion jewellery to France?",
-          a: "Yes. France and Western Europe is a key market for us. We advise on EU import compliance for fashion jewellery and can assist with CE marking guidance.",
-        },
-        {
-          q: "What materials are used in your fashion jewellery?",
-          a: "We use high-quality alloy bases with gold or silver plating, plus CZ, zircon, glass stone, enamel, and kundan work depending on the design. All pieces have anti-tarnish coating.",
-        },
-        {
-          q: "Can I order mixed designs in one wholesale shipment?",
-          a: "Yes. You can mix different designs and categories in a single order as long as each design meets the 50-unit minimum.",
-        },
-        {
-          q: "Do you have a lookbook or digital catalogue for fashion buyers?",
-          a: "Yes. Request our current season's lookbook via WhatsApp or email and we will send the full digital catalogue with wholesale prices within a few hours.",
-        },
-      ]}
-    />
-  );
-}
+        }
