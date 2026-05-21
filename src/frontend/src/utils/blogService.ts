@@ -1,5 +1,5 @@
 import { BlogPost } from "../types/blog";
-import { BLOG_BATCHES } from "./blogStore";
+import { BLOG_BATCHES, DEFAULT_POSTS } from "./blogStore";
 
 /**
  * Resilient image loading fallback rotating among verified local jewelry assets
@@ -27,8 +27,8 @@ class BlogService {
   private allPosts: BlogPost[] = [];
 
   private constructor() {
-    // Initially populate from static batches
-    this.allPosts = Object.values(BLOG_BATCHES).flat();
+    // Initially populate from static batches and default posts
+    this.allPosts = [...DEFAULT_POSTS, ...Object.values(BLOG_BATCHES).flat()];
   }
 
   public static getInstance(): BlogService {

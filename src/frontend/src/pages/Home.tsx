@@ -16,6 +16,7 @@ import { usePageSEO } from "../hooks/usePageSEO";
 import type { Category, Product, Testimonial } from "../types";
 import { useCanonical } from '../hooks/useCanonical';
 import { trackWhatsAppInquiry } from "../utils/analytics";
+import { getSafeBlogImage } from "../utils/blogService";
 
 /** Remove Kanhai Jewels boilerplate text from product descriptions */
 function cleanText(text: string): string {
@@ -1502,7 +1503,7 @@ export default function Home() {
               <article key={post.slug} className="group flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300">
                 <Link to={`/blog/${post.slug}`} className="aspect-[16/10] overflow-hidden">
                   <img 
-                    src={post.image} 
+                    src={getSafeBlogImage({ id: 0, slug: post.slug, title: post.title, category: post.category })} 
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"

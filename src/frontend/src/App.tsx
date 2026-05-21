@@ -252,7 +252,6 @@ export default function App() {
         
         {/* Phase 2: Redirects to Wholesale Jewellery Export India Guide */}
         <Route path="/blog/how-to-start-imitation-jewellery-export-business" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
-        <Route path="/blog/moq-explained-wholesale-jewellery-buyers" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
         <Route path="/blog/export-artificial-jewellery-jaipur-usa" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
         <Route path="/blog/imitation-jewellery-export-documentation-checklist" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
         <Route path="/blog/find-international-buyers-imitation-jewellery" element={<Navigate replace to="/blog/wholesale-jewellery-export-india-guide" />} />
