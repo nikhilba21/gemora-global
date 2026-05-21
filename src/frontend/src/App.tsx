@@ -278,6 +278,7 @@ export default function App() {
           path="/return-refund-cancellation-policy"
           element={<ReturnRefundPolicy />}
         />
+        <Route path="/return-refund-policy" element={<Navigate replace to="/return-refund-cancellation-policy" />} />
         <Route path="/return-policy" element={<ReturnRefundPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/terms-conditions" element={<TermsAndConditions />} />

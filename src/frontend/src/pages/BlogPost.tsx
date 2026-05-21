@@ -93,8 +93,8 @@ export default function BlogPostPage() {
     canonical: post
       ? `https://www.gemoraglobal.co/blog/${post.slug}`
       : "https://www.gemoraglobal.co/blog",
-    robots: post ? "index, follow" : "noindex, follow",
-    googlebot: post ? undefined : "noindex, follow",
+    robots: isLoading ? "index, follow" : (post ? "index, follow" : "noindex, follow"),
+    googlebot: isLoading ? undefined : (post ? undefined : "noindex, follow"),
     ogTitle: post ? post.title : "Page Not Found | Gemora Global",
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage: getSafeBlogImage(post),
