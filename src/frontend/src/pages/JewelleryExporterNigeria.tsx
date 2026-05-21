@@ -14,60 +14,50 @@ export default function JewelleryExporterNigeria() {
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        {
-          name: "Wholesale",
-          url: "https://www.gemoraglobal.co/wholesale",
-        },
-        {
-          name: "Jewellery Exporter Nigeria",
-          url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria",
-        },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Nigeria", url: "https://www.gemoraglobal.co/jewellery-exporter-nigeria" }
       ]}
-      schema={{
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Wholesale Imitation Jewellery Export to Nigeria",
-        description:
-          "Premium wholesale imitation jewellery from India for Nigerian boutiques, Lagos fashion retailers, and West African distributors. Colourful statement pieces, gold-plated and oxidised styles. MOQ 50 units.",
-        provider: { "@type": "Organization", name: "Gemora Global" },
-        areaServed: "NG",
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "USD",
-          price: "2.00",
-          availability: "https://schema.org/InStock",
-        },
-      }}
       faqs={[
         {
-          q: "Can Gemora Global ship wholesale jewellery to Nigeria?",
-          a: "Yes. Gemora Global ships wholesale imitation jewellery to Lagos, Abuja, Port Harcourt, Kano, and all major Nigerian cities via DHL and FedEx. We provide full export documentation. Please note that Nigerian customs duties on jewellery imports should be confirmed with your local customs agent.",
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
         },
         {
-          q: "What jewellery styles are popular in Nigeria's fashion market?",
-          a: "Nigeria's fashion market favours bold, colourful statement jewellery — large chunky necklaces, oversized earrings, coloured stone sets, and vibrant Meenakari pieces. Gold-plated bangles, bracelets, and layered necklaces are consistently popular. For the Afro-bridal market, elaborate gold and gemstone-look bridal sets sell extremely well.",
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
         },
         {
-          q: "What is the minimum order for Nigeria buyers?",
-          a: "Our standard MOQ is 50 units per design. For Nigerian fashion boutiques and market traders ordering mixed assortments, we accommodate 200-unit total orders mixed across designs. Volume discounts apply from 200+ units.",
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
         },
         {
-          q: "How do you ship to Nigeria and how long does it take?",
-          a: "We ship to Nigeria via DHL Express (10–15 business days from Jaipur to Lagos) and FedEx International (12–18 days). Economy shipping options are available at lower cost for non-urgent orders. All shipments include tracking and insurance.",
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
         },
         {
-          q: "Can your jewellery be used for West African distribution across multiple countries?",
-          a: "Yes. Several Nigeria-based distributors source from Gemora Global and distribute to Ghana, Ivory Coast, Cameroon, Senegal, and other West African markets. We accommodate larger bulk orders for regional distribution requirements.",
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
         },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to Nigeria take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
       ]}
       bodyContent={
-          <>
-
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sourcing B2B imitation jewellery exporter Nigeria wholesale Africa — Direct from our Jaipur Factory
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
           </h2>
           <p>
-            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Nigeria, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
             Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
@@ -75,7 +65,6 @@ export default function JewelleryExporterNigeria() {
           <p>
             Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
           </p>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
@@ -94,7 +83,6 @@ export default function JewelleryExporterNigeria() {
               <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
             </li>
           </ul>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
@@ -113,10 +101,9 @@ export default function JewelleryExporterNigeria() {
               <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
             </li>
           </ol>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Jaipur to Nigeria: Door-to-Door Air Freight Corridor
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
           </h2>
           <p>
             Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
@@ -147,7 +134,6 @@ export default function JewelleryExporterNigeria() {
               </tbody>
             </table>
           </div>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Actionable B2B Sourcing Checklist for Brand Owners
@@ -198,6 +184,8 @@ export default function JewelleryExporterNigeria() {
               </Link>
             </li>
           </ul>
-  
         </>
-        }
+      }
+    />
+  );
+}

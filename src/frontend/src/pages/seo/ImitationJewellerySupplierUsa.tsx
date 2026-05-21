@@ -14,23 +14,50 @@ export default function ImitationJewellerySupplierUsa() {
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        { name: "Export Markets", url: "https://www.gemoraglobal.co/export" },
-        { name: "Imitation Jewellery Supplier USA — Factory Direct from Jaipur, India", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "United States", url: "https://www.gemoraglobal.co/imitation-jewellery-supplier-usa" }
       ]}
       faqs={[
-        { q: "Do you export to USA?", a: "Yes, Gemora Global regularly exports wholesale jewellery to USA. We provide full export documentation, competitive pricing, and reliable shipping via DHL/FedEx." },
-        { q: "What is the MOQ for wholesale orders?", a: "Minimum order quantity is 50 units per design. Mix designs allowed for larger orders." },
-        { q: "How long does delivery take?", a: "Standard DHL delivery takes 5-8 business days. Express options available." },
-        { q: "Do you provide export documentation?", a: "Yes. We provide commercial invoice, packing list, certificate of origin, and all required export documents for smooth customs clearance." },
+        {
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+        {
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to United States take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
       ]}
       bodyContent={
-          <>
-
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sourcing B2B imitation jewellery supplier usa — Direct from our Jaipur Factory
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
           </h2>
           <p>
-            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in United States, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
             Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
@@ -38,7 +65,6 @@ export default function ImitationJewellerySupplierUsa() {
           <p>
             Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
           </p>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
@@ -57,7 +83,6 @@ export default function ImitationJewellerySupplierUsa() {
               <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
             </li>
           </ul>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
@@ -76,10 +101,9 @@ export default function ImitationJewellerySupplierUsa() {
               <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
             </li>
           </ol>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Jaipur to United States: Door-to-Door Air Freight Corridor
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
           </h2>
           <p>
             Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
@@ -110,7 +134,6 @@ export default function ImitationJewellerySupplierUsa() {
               </tbody>
             </table>
           </div>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Actionable B2B Sourcing Checklist for Brand Owners
@@ -161,6 +184,8 @@ export default function ImitationJewellerySupplierUsa() {
               </Link>
             </li>
           </ul>
-  
         </>
-        }
+      }
+    />
+  );
+}

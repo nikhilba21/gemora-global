@@ -1,587 +1,191 @@
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-
-import { ChevronDown, ChevronRight, Filter, Grid2X2, Grid3X3, Search, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { usePageSEO } from "../hooks/usePageSEO";
-
-const PAGE_SIZE = 24;
-
-// Category slug → background accent color
-const CAT_COLORS: Record<string, string> = {
-  "imitation-jewellery": "#8B5CF6",
-  "antique-jewellery": "#B45309",
-  "kundan-jewellery": "#D97706",
-  "american-diamond-jewellery": "#6366F1",
-  "indo-western-jewellery": "#EC4899",
-  "oxidised-jewellery": "#64748B",
-  "western-jewellery": "#0EA5E9",
-};
-
-interface Category { id: number; name: string; slug: string; description: string; imageUrl: string; sortOrder: number; }
-interface Product { id: number | bigint; name: string; categoryId: number | bigint; imageUrls: string[]; moq: string; subcategory?: string; sku?: string; featured: boolean; }
+import { Link } from "react-router-dom";
+import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
 export default function Products() {
-  const { categorySlug } = useParams<{ categorySlug?: string }>();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const subcategoryParam = searchParams.get("sub") || "";
-  const pageParam = parseInt(searchParams.get("page") || "0");
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set([categorySlug || ""]));
-  const [gridCols, setGridCols] = useState<3 | 4>(4);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortBy, setSortBy] = useState("newest");
-
-  const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
-    || 'https://gemora-global-2.onrender.com';
-
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [allSubcats, setAllSubcats] = useState<Record<string, { subcategory: string; count: number }[]>>({});
-  const [products, setProducts] = useState<Product[]>([]);
-  const [totalPages, setTotalPages] = useState(0);
-  const [totalCount, setTotalCount] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Active category object
-  const activeCategory = useMemo(() =>
-    categories.find(c => c.slug === categorySlug) || null,
-    [categories, categorySlug]
-  );
-
-  usePageSEO({
-    title: subcategoryParam
-      ? `${subcategoryParam} — ${activeCategory?.name || "All"} Wholesale`
-      : activeCategory
-        ? `${activeCategory.name} Wholesale Jaipur | Gemora Global`
-        : "Wholesale Imitation Jewellery Collections | Gemora Global",
-    description: activeCategory
-      ? activeCategory.description || `Browse our latest collection of wholesale ${activeCategory.name} from Jaipur. MOQ 50 units, anti-tarnish finish, global export.`
-      : "Browse over 500+ wholesale imitation jewellery designs in Kundan, Bridal, Antique, and Fashion styles from Gemora Global Jaipur.",
-    canonical: activeCategory 
-      ? `https://www.gemoraglobal.co/products/${activeCategory.slug}`
-      : "https://www.gemoraglobal.co/products",
-    category: activeCategory ? (activeCategory as any) : undefined,
-    breadcrumbs: [
-      { name: "Home", url: "https://www.gemoraglobal.co/" },
-      { name: "Products", url: "https://www.gemoraglobal.co/products" },
-      ...(activeCategory ? [{ name: activeCategory.name, url: `https://www.gemoraglobal.co/products/${activeCategory.slug}` }] : []),
-      ...(subcategoryParam ? [{ name: subcategoryParam, url: window.location.href }] : []),
-    ],
-  });
-
-  // Fetch categories once
-  useEffect(() => {
-    fetch(`${API_BASE}/api/categories`)
-      .then(r => r.json())
-      .then(data => setCategories(data))
-      .catch(() => {});
-  }, [API_BASE]);
-
-  // Fetch subcategories for all categories
-  useEffect(() => {
-    if (!categories.length) return;
-    const fetchAll = async () => {
-      const result: Record<string, { subcategory: string; count: number }[]> = {};
-      for (const cat of categories) {
-        try {
-          const r = await fetch(`${API_BASE}/api/categories/${cat.slug}/subcategories`);
-          result[cat.slug] = await r.json();
-        } catch { result[cat.slug] = []; }
-      }
-      setAllSubcats(result);
-    };
-    fetchAll();
-  }, [categories, API_BASE]);
-
-  // Fetch products on filter change
-  useEffect(() => {
-    setIsLoading(true);
-    const params = new URLSearchParams({
-      page: String(pageParam),
-      pageSize: String(PAGE_SIZE),
-    });
-    if (activeCategory) params.set('categoryId', String(activeCategory.id));
-    if (subcategoryParam) params.set('subcategory', subcategoryParam);
-
-    fetch(`${API_BASE}/api/products?${params}`)
-      .then(r => r.json())
-      .then(data => {
-        const items = Array.isArray(data) ? data : (data.items || []);
-        const total = data.total || items.length;
-        const pages = data.pages || Math.ceil(total / PAGE_SIZE) || 1;
-        setProducts(items.map((p: Record<string,unknown>) => ({
-          ...p,
-          imageUrls: typeof p.imageUrls === 'string' ? JSON.parse(p.imageUrls as string) : (p.imageUrls || []),
-          featured: p.featured === 1 || p.featured === true,
-          isNewArrival: p.isNewArrival === 1 || p.isNewArrival === true,
-        } as Product)));
-        setTotalPages(Number(pages));
-        setTotalCount(Number(total));
-      })
-      .catch(() => setProducts([]))
-      .finally(() => setIsLoading(false));
-  }, [activeCategory, pageParam, subcategoryParam, API_BASE]);
-
-  // Filter and Sort products
-  const displayProducts = useMemo(() => {
-    let filtered = products;
-    
-    // Search filter
-    if (searchQuery) {
-      const lowerQuery = searchQuery.toLowerCase();
-      filtered = products.filter(p => 
-        p.name.toLowerCase().includes(lowerQuery) || 
-        (p.sku && p.sku.toLowerCase().includes(lowerQuery))
-      );
-    }
-    
-    // Sort logic
-    return [...filtered].sort((a, b) => {
-      if (sortBy === "name-asc") return a.name.localeCompare(b.name);
-      if (sortBy === "name-desc") return b.name.localeCompare(a.name);
-      if (sortBy === "newest") return Number(b.id) - Number(a.id);
-      return 0;
-    });
-  }, [products, searchQuery, sortBy]);
-
-  function toggleCat(slug: string) {
-    setExpandedCats(prev => {
-      const n = new Set(prev);
-      if (n.has(slug)) n.delete(slug); else n.add(slug);
-      return n;
-    });
-  }
-
-  function setPage(p: number) {
-    setSearchParams(prev => { prev.set("page", String(p)); return prev; });
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  function setSubcat(sub: string) {
-    setSearchParams(prev => {
-      if (sub) prev.set("sub", sub); else prev.delete("sub");
-      prev.set("page", "0");
-      return prev;
-    });
-  }
-
-  // Sidebar — categories + subcategories
-  const Sidebar = () => (
-    <aside className="w-full md:w-64 flex-shrink-0">
-      <div className="sticky top-20">
-        {/* Search */}
-        <div className="relative mb-4">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 text-sm border rounded-lg bg-background focus:outline-none focus:ring-1 focus:ring-primary"
-          />
-          {searchQuery && (
-            <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2">
-              <X className="w-3 h-3 text-muted-foreground" />
-            </button>
-          )}
-        </div>
-
-        {/* All Products link */}
-        <Link
-          to="/products"
-          className="block px-3 py-2 rounded-lg text-sm font-medium mb-1 transition-colors hover:bg-muted"
-        >
-          <span className="flex items-center gap-2">
-            <Filter className="w-4 h-4" />
-            Back to Categories
-          </span>
-        </Link>
-
-        {/* Category list with subcategories */}
-        {categories.map(cat => {
-          const isActive = cat.slug === categorySlug;
-          const isExpanded = expandedCats.has(cat.slug);
-          const subs = allSubcats[cat.slug] || [];
-          const accentColor = CAT_COLORS[cat.slug] || "#6366F1";
-
-          return (
-            <div key={cat.id} className="mb-1">
-              {/* Category row */}
-              <div className="flex items-center">
-                <Link
-                  to={`/products/${cat.slug}`}
-                  onClick={() => { setExpandedCats(prev => new Set([...prev, cat.slug])); setSubcat(""); }}
-                  className={`flex-1 flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive ? "text-primary-foreground" : "hover:bg-muted"}`}
-                  style={isActive ? { backgroundColor: accentColor } : {}}
-                >
-                  <span
-                    className="w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: isActive ? "white" : accentColor }}
-                  />
-                  {cat.name}
-                </Link>
-                {subs.length > 0 && (
-                  <button
-                    onClick={() => toggleCat(cat.slug)}
-                    className="p-2 hover:bg-muted rounded-lg"
-                  >
-                    {isExpanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
-                  </button>
-                )}
-              </div>
-
-              {/* Subcategories */}
-              {isExpanded && subs.length > 0 && (
-                <div className="ml-5 mt-0.5 space-y-0.5 border-l border-border pl-3">
-                  <Link
-                    to={`/products/${cat.slug}`}
-                    onClick={() => setSubcat("")}
-                    className={`block px-2 py-1.5 text-xs rounded transition-colors ${isActive && !subcategoryParam ? "font-semibold text-primary" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
-                  >
-                    All {cat.name}
-                  </Link>
-                  {subs.map(sub => (
-                    <button
-                      key={sub.subcategory}
-                      onClick={() => { setSubcat(sub.subcategory); }}
-                      className={`w-full text-left flex items-center justify-between px-2 py-1.5 text-xs rounded transition-colors ${isActive && subcategoryParam === sub.subcategory ? "font-semibold text-primary bg-primary/10" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
-                    >
-                      <span>{sub.subcategory}</span>
-                      <span className="text-xs opacity-50">{sub.count}</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </aside>
-  );
-
-  // Category Grid (Shown when no category is selected)
-  const CategoryGrid = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6 md:py-10">
-      {categories.map(cat => {
-        const accentColor = CAT_COLORS[cat.slug] || "#6366F1";
-        return (
-          <Link
-            key={cat.id}
-            to={`/products/${cat.slug}`}
-            className="group relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1 active:scale-95 bg-muted"
-          >
-            <img
-              src={cat.imageUrl || "/placeholder.jpg"}
-              alt={cat.name}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-              loading="lazy"
-            />
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-            
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div 
-                className="w-10 h-1 rounded-full mb-4 transition-all group-hover:w-16"
-                style={{ backgroundColor: accentColor }}
-              />
-              <h3 className="text-white text-2xl font-bold font-serif mb-2 tracking-tight group-hover:translate-x-1 transition-transform">{cat.name}</h3>
-              <p className="text-white/70 text-xs line-clamp-2 mb-6 group-hover:text-white/90 transition-colors">
-                {cat.description || `Explore our premium collection of ${cat.name} — Jaipur quality.`}
-              </p>
-              <div className="flex items-center gap-2 text-white text-sm font-semibold group-hover:gap-3 transition-all">
-                <span>View Products</span>
-                <ChevronRight className="w-4 h-4 bg-white/20 rounded-full p-0.5" />
-              </div>
-            </div>
-            
-            {/* Badge indicating category */}
-            <div className="absolute top-4 left-4">
-              <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
-                Collection
-              </span>
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  );
-
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <div className="pt-16">
-        {/* Header */}
-        <div className="bg-card border-b py-6 px-4">
-          <div className="container px-0">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
-              <Link to="/" className="hover:text-foreground">Home</Link>
-              <ChevronRight className="w-3 h-3" />
-              <Link to="/products" className="hover:text-foreground">Products</Link>
-              {activeCategory && (
-                <>
-                  <ChevronRight className="w-3 h-3" />
-                  <span className="text-foreground">{activeCategory.name}</span>
-                </>
-              )}
-              {subcategoryParam && (
-                <>
-                  <ChevronRight className="w-3 h-3" />
-                  <span className="text-foreground">{subcategoryParam}</span>
-                </>
-              )}
-            </nav>
-
-            <h1 className="font-serif text-2xl md:text-3xl font-bold">
-              {!categorySlug 
-                ? "Our Jewellery Collections" 
-                : (subcategoryParam ? `${subcategoryParam} — ${activeCategory?.name || "All"}` : activeCategory?.name)
-              }
-            </h1>
-            {!categorySlug ? (
-              <p className="text-muted-foreground text-sm mt-1 max-w-2xl">
-                Browse our curated collections of wholesale imitation jewellery, handcrafted in Jaipur.
-              </p>
-            ) : activeCategory?.description && !subcategoryParam && (
-              <p className="text-muted-foreground text-sm mt-1 max-w-2xl">{activeCategory.description}</p>
-            )}
-          </div>
-        </div>
-
-        <div className="container px-4">
-          {!categorySlug ? (
-            <CategoryGrid />
-          ) : (
-            <div className="flex gap-6 py-6">
-              {/* Desktop sidebar */}
-              <div className="hidden md:block">
-                <Sidebar />
-              </div>
-
-              {/* Main content */}
-              <div className="flex-1 min-w-0">
-                {/* Toolbar */}
-                <div className="flex items-center justify-between mb-4 gap-3">
-                  <div className="flex items-center gap-2">
-                    {/* Mobile filter toggle */}
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="md:hidden"
-                      onClick={() => setSidebarOpen(true)}
-                    >
-                      <Filter className="w-4 h-4 mr-2" /> Filter
-                    </Button>
-                    <span className="text-sm text-muted-foreground">
-                      {isLoading ? "Loading..." : `${totalCount.toLocaleString()} products`}
-                    </span>
-                    {subcategoryParam && (
-                      <button
-                        onClick={() => setSubcat("")}
-                        className="flex items-center gap-1 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
-                      >
-                        {subcategoryParam} <X className="w-3 h-3" />
-                      </button>
-                    )}
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex items-center gap-3">
-                    <select
-                      className="text-xs md:text-sm border rounded-lg bg-background px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer"
-                      value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value)}
-                    >
-                      <option value="newest">Newest First</option>
-                      <option value="name-asc">Name A-Z</option>
-                      <option value="name-desc">Name Z-A</option>
-                    </select>
-
-                    {/* Grid toggle */}
-                    <div className="flex items-center gap-1 border rounded-lg p-1">
-                      <button
-                        onClick={() => setGridCols(3)}
-                        className={`p-1 rounded ${gridCols === 3 ? "bg-muted" : ""}`}
-                      >
-                        <Grid3X3 className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => setGridCols(4)}
-                        className={`p-1 rounded ${gridCols === 4 ? "bg-muted" : ""}`}
-                      >
-                        <Grid2X2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Subcategory Tabs */}
-                {activeCategory && allSubcats[activeCategory.slug]?.length > 0 && (
-                  <div className="flex flex-wrap items-center gap-2 mb-6">
-                    <button
-                      onClick={() => setSubcat("")}
-                      className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${!subcategoryParam ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
-                    >
-                      All {activeCategory.name}
-                    </button>
-                    {allSubcats[activeCategory.slug].map(sub => (
-                      <button
-                        key={sub.subcategory}
-                        onClick={() => setSubcat(sub.subcategory)}
-                        className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all border ${subcategoryParam === sub.subcategory ? "bg-primary text-primary-foreground border-primary shadow-sm" : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"}`}
-                      >
-                        {sub.subcategory}
-                        <span className={`ml-2 text-[10px] ${subcategoryParam === sub.subcategory ? "text-white/70" : "text-muted-foreground/60"}`}>
-                          {sub.count}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-
-                {/* Product Grid */}
-                {isLoading ? (
-                  <div className={`grid grid-cols-2 sm:grid-cols-${gridCols === 3 ? 3 : 2} lg:grid-cols-${gridCols} gap-3`}>
-                    {Array.from({ length: 12 }).map((_, i) => (
-                      <div key={i} className="rounded-xl overflow-hidden border">
-                        <Skeleton className="aspect-square" />
-                        <div className="p-3 space-y-2">
-                          <Skeleton className="h-4 w-full" />
-                          <Skeleton className="h-3 w-2/3" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : displayProducts.length === 0 ? (
-                  <div className="text-center py-20 text-muted-foreground">
-                    <p className="text-4xl mb-4">💍</p>
-                    <p className="font-medium">No products found</p>
-                    <p className="text-sm mt-1">Try a different category or filter</p>
-                    <Button asChild className="mt-4">
-                      <Link to="/products">View All Categories</Link>
-                    </Button>
-                  </div>
-                ) : (
-                  <>
-                    <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-${gridCols} gap-3`}>
-                      {displayProducts.map((product) => (
-                        <ProductCard key={String(product.id)} product={product} />
-                      ))}
-                    </div>
-
-                    {/* Pagination */}
-                    {totalPages > 1 && (
-                      <div className="flex items-center justify-center gap-2 mt-8">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={pageParam === 0}
-                          onClick={() => setPage(pageParam - 1)}
-                        >
-                          Previous
-                        </Button>
-                        {Array.from({ length: Math.min(totalPages, 7) }).map((_, i) => {
-                          const p = i;
-                          return (
-                            <Button
-                              key={p}
-                              variant={pageParam === p ? "default" : "outline"}
-                              size="sm"
-                              onClick={() => setPage(p)}
-                              className="w-9"
-                            >
-                              {p + 1}
-                            </Button>
-                          );
-                        })}
-                        {totalPages > 7 && <span className="text-muted-foreground">...</span>}
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          disabled={pageParam >= totalPages - 1}
-                          onClick={() => setPage(pageParam + 1)}
-                        >
-                          Next
-                        </Button>
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Mobile sidebar overlay */}
-      {sidebarOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setSidebarOpen(false)} />
-          <div className="absolute left-0 top-0 bottom-0 w-72 bg-background overflow-y-auto p-4">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="font-bold">Filter by Category</h2>
-              <button onClick={() => setSidebarOpen(false)}><X className="w-5 h-5" /></button>
-            </div>
-            <Sidebar />
-          </div>
-        </div>
-      )}
-
-      <Footer />
-    </div>
-  );
-}
-
-// Product Card Component
-function ProductCard({ product }: { product: Product }) {
-  const img = product.imageUrls?.[0];
-  const name = product.name || "";
-
-  return (
-    <Link
-      to={`/products/item/${String(product.id)}`}
-      className="group rounded-xl overflow-hidden border border-border hover:border-primary/50 hover:shadow-md transition-all bg-card"
-    >
-      <div className="aspect-square overflow-hidden bg-muted relative">
-        {img ? (
-          <img
-            src={img}
-            alt={`${name} — wholesale imitation jewellery India`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-            width={300}
-            height={300}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-muted-foreground/30 text-4xl">💍</div>
-        )}
-        {product.featured && (
-          <span className="absolute top-2 left-2 bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full">Featured</span>
-        )}
-      </div>
-      <div className="p-3">
-        <p className="text-sm font-medium leading-tight line-clamp-2 group-hover:text-primary transition-colors">
-          {name}
-        </p>
-        <div className="flex items-center justify-between mt-1">
-          <p className="text-[10px] text-muted-foreground truncate mr-2">
-            {product.subcategory || "Jewellery"}
+    <SeoLandingPage
+      title="B2B Imitation Jewelry Products | Gemora Global Jaipur"
+      metaDescription="Premium wholesale jewelry direct from factory. MOQ 50 units. Exporting to Global Product Range and worldwide."
+      canonical="https://www.gemoraglobal.co/products"
+      h1="B2B Imitation Jewelry Products | Gemora Global Jaipur"
+      targetKeyword="imitation jewelry products wholesale"
+      heroSubtitle="Direct wholesale exporter of premium jewelry from Jaipur. Safe heavy metal limits, complete custom clearances, and fast air freight to Global Product Range."
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
+      breadcrumbs={[
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Global Product Range", url: "https://www.gemoraglobal.co/products" }
+      ]}
+      faqs={[
+        {
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+        {
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to Global Product Range take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
+      ]}
+      bodyContent={
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
+          </h2>
+          <p>
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
-          {product.sku && (
-            <p className="text-[10px] text-primary/70 font-mono font-medium">
-              {product.sku}
-            </p>
-          )}
-        </div>
-        <div className="flex items-center justify-between mt-2">
-          <span className="text-xs text-muted-foreground">MOQ: {product.moq || "50 units"}</span>
-          <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Wholesale</span>
-        </div>
-      </div>
-    </Link>
+          <p>
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
+          </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
+          </h2>
+          <p>
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
+          </h2>
+          <p>
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
+              </Link>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+        </>
+      }
+    />
   );
 }

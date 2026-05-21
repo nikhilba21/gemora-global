@@ -1,436 +1,191 @@
-import api from '../lib/api';
-import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
-import { motion } from "motion/react";
-import { useEffect, useRef } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { usePageSEO } from "../hooks/usePageSEO";
-import { type BlogPost } from "../utils/blogStore";
-import { blogService, getSafeBlogImage, handleImageError } from "../utils/blogService";
-import { useCanonical } from '../hooks/useCanonical';
+import { Link } from "react-router-dom";
+import SeoLandingPage from "../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 
-/** Renders HTML blog content safely using a DOM ref (avoids dangerouslySetInnerHTML lint rule). */
-function HtmlContent({
-  html,
-  className,
-}: { html: string; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (ref.current) ref.current.innerHTML = html;
-  }, [html]);
-  return <div ref={ref} className={className} />;
-}
-
-const categoryColors: Record<string, string> = {
-  Trends: "bg-sky-500/20 text-sky-400 border-sky-500/30",
-  "Business Guide": "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
-  "Industry Insights": "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  Collections: "bg-rose-500/20 text-rose-400 border-rose-500/30",
-  "Export Tips": "bg-violet-500/20 text-violet-400 border-violet-500/30",
-  "Product Care": "bg-teal-500/20 text-teal-400 border-teal-500/30",
-  "Export Guides": "bg-amber-500/20 text-amber-400 border-amber-500/30",
-  "Market Trends": "bg-purple-500/20 text-purple-400 border-purple-500/30",
-  "Buyer Guides": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-  "Country Strategy": "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
-  "Product Guide": "bg-pink-500/20 text-pink-400 border-pink-500/30",
-  Pricing: "bg-orange-500/20 text-orange-400 border-orange-500/30",
-  "Supplier Info": "bg-lime-500/20 text-lime-400 border-lime-500/30",
-  Quality: "bg-green-500/20 text-green-400 border-green-500/30",
-  Packaging: "bg-fuchsia-500/20 text-fuchsia-400 border-fuchsia-500/30",
-  "Online Selling": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-};
-
-export default function BlogPostPage() {
-  useCanonical();
-  const { slug } = useParams() as { slug: string };
-
-  const { data: post, isLoading: isPostLoading } = useQuery({
-    queryKey: ["blogPost", slug],
-    queryFn: async () => {
-      // 1. Try backend API first
-      try {
-        const backendResult = await api.getBlogPost(slug);
-        // Only return if it has content (indicates a successful fetch)
-        if (backendResult && (backendResult as BlogPost).content) {
-          return backendResult as BlogPost;
-        }
-      } catch (e) {
-        console.warn("Backend blog fetch failed, falling back to service", e);
-      }
-
-      // 2. Fallback to BlogService (handles static batches)
-      const serviceResult = await blogService.getPostBySlugAsync(slug);
-      return serviceResult;
-    },
-    enabled: !!slug,
-  });
-
-  const { data: allBackendPostsRes } = useQuery({
-    queryKey: ["blogPosts"],
-    queryFn: () => api.getBlogPosts({page:'0',pageSize:'500'}),
-    enabled: true,
-  });
-  const allBackendPosts = allBackendPostsRes?.items || [];
-
-  const isLoading = isPostLoading;
-
-  const related = (() => {
-    if (!post) return [];
-    const all = blogService.getAllPosts();
-    return all
-      .filter((p) => p.slug !== slug)
-      .filter((p) => p.category === post?.category)
-      .slice(0, 3);
-  })();
-
-  usePageSEO({
-    title: post ? `${post.title} | Gemora Global` : "Page Not Found | Gemora Global",
-    description: post
-      ? (post.excerpt || '').slice(0, 155)
-      : "The blog page you are looking for does not exist on Gemora Global.",
-    canonical: post
-      ? `https://www.gemoraglobal.co/blog/${post.slug}`
-      : "https://www.gemoraglobal.co/blog",
-    robots: isLoading ? "index, follow" : (post ? "index, follow" : "noindex, follow"),
-    googlebot: isLoading ? undefined : (post ? undefined : "noindex, follow"),
-    ogTitle: post ? post.title : "Page Not Found | Gemora Global",
-    ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
-    ogImage: getSafeBlogImage(post),
-    breadcrumbs: post
-      ? [
-          { name: "Home", url: "https://www.gemoraglobal.co/" },
-          { name: "Blog", url: "https://www.gemoraglobal.co/blog" },
-          {
-            name: post.title,
-            url: `https://www.gemoraglobal.co/blog/${post.slug}`,
-          },
-        ]
-      : undefined,
-    schema: post
-      ? {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: post.title,
-          name: post.title,
-          description: (post.excerpt || '').slice(0, 155),
-          datePublished: post.date || new Date().toISOString().split("T")[0],
-          dateModified: post.date || new Date().toISOString().split("T")[0],
-          author: {
-            "@type": "Person",
-            name: post.author || "Gemora Global",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Gemora Global",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://www.gemoraglobal.co/assets/uploads/logo-removebg-preview-1.png",
-            },
-          },
-          image: getSafeBlogImage(post),
-          url: `https://www.gemoraglobal.co/blog/${post.slug}`,
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `https://www.gemoraglobal.co/blog/${post.slug}`,
-          },
-          keywords: `imitation jewellery, wholesale jewellery India, fashion jewellery exporter, ${post.category || "jewellery export"}`,
-          inLanguage: "en",
-        }
-      : undefined,
-  });
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <Navbar />
-        <main className="pt-16">
-          <div className="relative h-56 sm:h-72 md:h-96 bg-muted animate-pulse" />
-          <div className="container max-w-3xl px-4 py-8 md:py-12 space-y-4">
-            <div className="h-8 bg-muted rounded w-2/3 animate-pulse" />
-            <div className="h-4 bg-muted rounded animate-pulse" />
-            <div className="h-4 bg-muted rounded w-5/6 animate-pulse" />
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
-        <Navbar />
-        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
-          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/30 backdrop-blur-md rounded-2xl border border-border/50 shadow-xl">
-            <div className="mx-auto w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center text-destructive mb-4">
-              <span className="text-2xl font-bold">404</span>
-            </div>
-            <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Blog Post Not Found
-            </h1>
-            <p className="text-muted-foreground text-sm sm:text-base max-w-sm mx-auto leading-relaxed">
-              We couldn't find the blog post you are looking for. It might have been renamed, moved, or deleted.
-            </p>
-            <div className="pt-4">
-              <Link
-                to="/blog"
-                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[44px]"
-              >
-                Return to Blog
-              </Link>
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  const isHtmlContent = post.content?.includes("<") ?? false;
-
+export default function BlogPost() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main className="pt-16">
-        {/* Hero Image — full width, aspect-[16/9] on mobile */}
-        <div className="relative w-full aspect-[16/9] md:h-96 overflow-hidden">
-          <img
-            src={getSafeBlogImage(post)}
-            alt={post.title}
-            onError={handleImageError}
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchPriority="high"
-            width={1200}
-            height={500}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        </div>
+    <SeoLandingPage
+      title="Wholesale Jewelry Export Insights & Trends | Gemora Global"
+      metaDescription="Premium wholesale jewelry direct from factory. MOQ 50 units. Exporting to Global Market Trends and worldwide."
+      canonical="https://www.gemoraglobal.co/blog-post"
+      h1="Wholesale Jewelry Export Insights & Trends | Gemora Global"
+      targetKeyword="wholesale jewelry export insights"
+      heroSubtitle="Direct wholesale exporter of premium jewelry from Jaipur. Safe heavy metal limits, complete custom clearances, and fast air freight to Global Market Trends."
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
+      breadcrumbs={[
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Global Market Trends", url: "https://www.gemoraglobal.co/blog-post" }
+      ]}
+      faqs={[
+        {
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+        {
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to Global Market Trends take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
+      ]}
+      bodyContent={
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
+          </h2>
+          <p>
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+          </p>
+          <p>
+            Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
+          </p>
+          <p>
+            Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
+          </p>
 
-        {/* Article — max-w-3xl, single column, padded on mobile */}
-        <article className="container max-w-3xl py-8 md:py-12 px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link
-              to="/blog"
-              data-ocid="blogpost.link"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary text-sm mb-5 transition-colors min-h-[44px]"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Link>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
+          </h2>
+          <p>
+            Importing commercial jewelry into international markets requires strict compliance with local consumer safety regulations (such as US Proposition 65, European REACH Regulations, and Australian ACCC guidelines). Customs authorities routinely conduct chemical audits on imports, and non-compliant shipments containing high traces of hazardous heavy metals are seized and destroyed.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <strong>Hypoallergenic Plating Alloys:</strong> To prevent skin allergies and contact dermatitis, our electroplating lines utilize strictly nickel-free gold, rhodium, and rose-gold plating baths.
+            </li>
+            <li>
+              <strong>Lead &amp; Cadmium Safe Bases:</strong> We utilize strictly lead-free and cadmium-free brass or copper base alloys, verifying that lead content remains strictly below <strong>0.05% by weight</strong>.
+            </li>
+            <li>
+              <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
+            </li>
+          </ul>
 
-            <span
-              className={`inline-block text-xs font-semibold px-3 py-1 rounded-full border mb-4 ${categoryColors[post.category] ?? "bg-primary/20 text-primary border-primary/30"}`}
-            >
-              {post.category}
-            </span>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
+          </h2>
+          <p>
+            Varying climates—from dry, cold northern regions to hot, highly humid tropical zones—can heavily accelerate the oxidation and tarnishing of plated fashion accessories. Gemora Global treats all jewelry batches in our advanced **Electrophoretic Organic Lacquer (E-Coating)** ovens:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Electro-Chemical Bath:</strong> Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer over the entire metal frame.
+            </li>
+            <li>
+              <strong>Oven Curing:</strong> The pieces are baked to cure the lacquer layer, creating a transparent, durable barrier that seals the jewelry from air, sweat, cosmetics, and moisture.
+            </li>
+            <li>
+              <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
+            </li>
+          </ol>
 
-            {/* Title: text-xl on mobile, text-3xl on lg+ */}
-            <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
-              {post.title}
-            </h1>
-
-            {/* Author/date/readTime — flex-wrap on mobile */}
-            <div className="flex flex-wrap items-center gap-3 md:gap-5 text-sm text-muted-foreground border-b border-border pb-5 mb-6 md:mb-8">
-              <span className="flex items-center gap-1.5">
-                <User className="w-4 h-4 flex-shrink-0" />
-                {post.author}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 flex-shrink-0" />
-                {post.date}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 flex-shrink-0" />
-                {post.readTime}
-              </span>
-            </div>
-
-            {/* Body text — text-base (16px) on mobile */}
-            {isHtmlContent ? (
-              <HtmlContent
-                html={post.content}
-                className="prose prose-invert prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-a:text-primary prose-strong:text-foreground max-w-none leading-relaxed text-base"
-              />
-            ) : (
-              <div className="prose prose-invert max-w-none space-y-5">
-                {post.content
-                  .split("\n\n")
-                  .filter(Boolean)
-                  .map((para, paraIndex) => (
-                    <motion.p
-                      key={para.slice(0, 40)}
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.4,
-                        delay: 0.1 + paraIndex * 0.07,
-                      }}
-                      className="text-muted-foreground leading-relaxed text-base"
-                    >
-                      {para}
-                    </motion.p>
-                  ))}
-              </div>
-            )}
-          </motion.div>
-        </article>
-
-        {/* ── Contextual SEO Interlinking Section ──────────────── */}
-        <section className="container max-w-3xl px-4 py-8 md:py-10">
-          <div className="border border-border rounded-2xl p-5 md:p-8 bg-card/50">
-            <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-4">
-              Explore Wholesale Jewellery Categories
-            </h3>
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-              Gemora Global offers factory-direct pricing on a wide range of{" "}
-              <Link to="/wholesale-imitation-jewellery-manufacturer-exporter-india" className="text-primary hover:underline">
-                wholesale imitation jewellery
-              </Link>{" "}
-              from Jaipur, India. Browse our top categories:
-            </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {[
-                { label: "Kundan Jewellery", to: "/kundan-jewellery-wholesale" },
-                { label: "Bridal Jewellery Sets", to: "/bridal-jewellery-wholesale" },
-                { label: "Oxidised Jewellery", to: "/oxidised-jewellery-wholesale" },
-                { label: "Fashion Jewellery", to: "/fashion-jewellery-exporter" },
-                { label: "Temple Jewellery", to: "/temple-jewellery-manufacturer" },
-                { label: "American Diamond", to: "/american-diamond-jewellery-wholesale" },
-                { label: "Antique Jewellery", to: "/antique-jewellery-wholesale-india" },
-                { label: "Meenakari Jewellery", to: "/meenakari-jewellery-wholesale" },
-                { label: "Gold Plated Jewellery", to: "/gold-plated-jewellery-wholesale-india" },
-                { label: "Artificial Jewellery", to: "/artificial-jewellery-wholesale" },
-              ].map((cat) => (
-                <Link
-                  key={cat.to}
-                  to={cat.to}
-                  className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-colors"
-                >
-                  {cat.label}
-                </Link>
-              ))}
-            </div>
-
-            <h4 className="font-semibold text-sm text-foreground mb-3">
-              We Export To
-            </h4>
-            <div className="flex flex-wrap gap-2 mb-5">
-              {[
-                { label: "🇺🇸 USA", to: "/imitation-jewellery-supplier-usa" },
-                { label: "🇬🇧 UK", to: "/jewellery-supplier-uk" },
-                { label: "🇦🇪 UAE", to: "/jewellery-exporter-uae" },
-                { label: "🇦🇺 Australia", to: "/jewellery-exporter-australia" },
-                { label: "🇨🇦 Canada", to: "/jewellery-exporter-canada" },
-                { label: "🇸🇬 Singapore", to: "/jewellery-exporter-singapore" },
-                { label: "🇪🇺 Europe", to: "/jewellery-exporter-europe" },
-              ].map((country) => (
-                <Link
-                  key={country.to}
-                  to={country.to}
-                  className="inline-block text-xs font-medium px-3 py-1.5 rounded-full border border-border bg-muted/50 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-                >
-                  {country.label}
-                </Link>
-              ))}
-            </div>
-
-            <p className="text-xs text-muted-foreground">
-              Looking for bulk pricing?{" "}
-              <Link to="/wholesale" className="text-primary hover:underline font-medium">
-                View our wholesale guide
-              </Link>{" "}
-              or{" "}
-              <Link to="/contact" className="text-primary hover:underline font-medium">
-                request a quote today
-              </Link>.
-            </p>
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
+          </h2>
+          <p>
+            Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
+          </p>
+          <div className="overflow-x-auto rounded-xl border border-blue-700/20 not-prose my-4">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-primary/10 border-b border-blue-700/20">
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Shipping Method</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Typical Weight</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Transit Time</th>
+                  <th className="text-left px-4 py-3 font-semibold text-foreground">Customs Brokerage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-blue-700/10 bg-background">
+                  <td className="px-4 py-3 font-semibold text-primary">Express Courier (DHL/FedEx)</td>
+                  <td className="px-4 py-3 text-foreground">10 kg – 150 kg (Boutiques, e-commerce)</td>
+                  <td className="px-4 py-3 text-foreground">5 – 8 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Handled automatically by courier (Door-to-Door)</td>
+                </tr>
+                <tr className="border-b border-blue-700/10 bg-card">
+                  <td className="px-4 py-3 font-semibold text-primary">Air Cargo (Airport-to-Airport)</td>
+                  <td className="px-4 py-3 text-foreground">150 kg+ (Large B2B distributors)</td>
+                  <td className="px-4 py-3 text-foreground">7 – 10 business days</td>
+                  <td className="px-4 py-3 text-muted-foreground">Requires customs broker at destination airport</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </section>
 
-        {/* CTA */}
-        <section className="bg-primary/10 border-y border-primary/20 py-10 md:py-12 px-4">
-          <div className="container text-center">
-            <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2">
-              Interested in wholesale jewellery sourcing?
-            </h3>
-            <p className="text-muted-foreground mb-6 text-sm md:text-base">
-              Our export team is ready to assist with custom designs, bulk
-              pricing, and fast shipping. Browse our{" "}
-              <Link to="/products" className="text-primary hover:underline">
-                product catalogue
-              </Link>{" "}
-              or view our{" "}
-              <Link to="/wholesale" className="text-primary hover:underline">
-                wholesale guide
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Actionable B2B Sourcing Checklist for Brand Owners
+          </h2>
+          <p>
+            To launch a highly successful, compliant, and cost-effective importing operation from our Jaipur factory, follow these practical steps:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm">
+            <li>
+              <strong>Verify Local Customs Registrations:</strong> Ensure your corporate customs registration (such as an EORI number in the UK/EU) is active before dispatch.
+            </li>
+            <li>
+              <strong>Utilize Gemora Global's 5-Tier Wholesale Discounts:</strong> Start at Tier 1 (MOQ 50 units) to test various styles with minimal investment, and scale to Tier 3 or 4 for bulk discounts up to 30%.
+            </li>
+            <li>
+              <strong>Specify E-Coating for Climate Protection:</strong> Our electrophoretic lacquer e-coating seals the gold plating from sweat and salt-air corrosion, ensuring high durability.
+            </li>
+            <li>
+              <strong>Design Custom Luxury Packaging:</strong> For high-volume brands (Tier 4+), we can custom-brand your velvet pouches and hard boxes in Jaipur, saving you substantial packaging overheads in your home country.
+            </li>
+          </ol>
+          <p>
+            Gemora Global stands ready as your highly trusted B2B partner in Jaipur, merging traditional craftsmanship with modern international quality, safety, and logistical excellence. Partner with us today to elevate your fashion brand.
+          </p>
+
+          <h2 className="text-xl font-serif font-bold text-primary">
+            Related Pages — Wholesale, Export &amp; Custom Sourcing
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-sm">
+            <li>
+              <Link to="/bulk-jewellery-supplier" className="text-primary underline">
+                Bulk Jewelry Supplier India — Pricing Tiers &amp; Operations
               </Link>
-              .
-            </p>
-            <Link
-              to="/contact"
-              data-ocid="blogpost.primary_button"
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground font-semibold px-7 py-3 rounded-full hover:bg-primary/90 transition-colors min-h-[44px] w-full sm:w-auto"
-            >
-              Contact Us for Wholesale
-            </Link>
-          </div>
-        </section>
-
-        {/* Related Posts — grid-cols-1 mobile, grid-cols-2 md */}
-        {related.length > 0 && (
-          <section className="container px-4 py-12 md:py-16">
-            <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8">
-              Related Articles
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
-              {related.map((rp, i) => (
-                <motion.article
-                  key={rp.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  data-ocid={`blogpost.related.item.${i + 1}`}
-                  className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-colors"
-                >
-                  <Link to={`/blog/${rp.slug}`}>
-                    <div className="relative overflow-hidden aspect-[16/9]">
-                      <img
-                        src={getSafeBlogImage(rp)}
-                        alt={rp.title}
-                        onError={handleImageError}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                        width={600}
-                        height={338}
-                      />
-                      <span
-                        className={`absolute top-2 left-2 text-xs font-semibold px-2 py-0.5 rounded-full border ${categoryColors[rp.category] ?? "bg-primary/20 text-primary border-primary/30"}`}
-                      >
-                        {rp.category}
-                      </span>
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-display text-sm font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                        {rp.title}
-                      </h3>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        {rp.date}
-                      </p>
-                    </div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-          </section>
-        )}
-      </main>
-      <Footer />
-    </div>
+            </li>
+            <li>
+              <Link to="/imitation-jewellery-exporter-india" className="text-primary underline">
+                Imitation Jewellery Exporter India — Global Logistics Checklist
+              </Link>
+            </li>
+            <li>
+              <Link to="/private-label-jewellery-india" className="text-primary underline">
+                Private Label Jewellery India — Custom OEM &amp; CAD Molding
+              </Link>
+            </li>
+            <li>
+              <Link to="/kundan-jewellery-wholesale" className="text-primary underline">
+                Kundan Jewellery Wholesale — Royal Sourcing Advantage
+              </Link>
+            </li>
+          </ul>
+        </>
+      }
+    />
   );
 }

@@ -1,27 +1,8 @@
-import React from 'react';
-import SeoLandingPage from '../../components/SeoLandingPage';
-import { BASE_URL } from '../../hooks/usePageSEO';
+import { Link } from "react-router-dom";
+import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
-const FAQ = [
-  {
-    q: "Why should I buy factory direct jewelry from Jaipur?",
-    a: "Buying factory direct from Jaipur allows you to eliminate middleman margins (saving 40-60%), ensures direct quality control, and gives you access to the latest designs 3-4 months before they hit international wholesale markets."
-  },
-  {
-    q: "What is the MOQ for factory direct orders?",
-    a: "Our factory direct MOQ is just 50 units per design. This is specifically designed for boutiques and online retailers who want to keep their inventory fresh without high capital risk."
-  },
-  {
-    q: "Do you offer private labeling for factory orders?",
-    a: "Yes, we offer complete private label services including custom branding, packaging, and exclusive design manufacturing for orders over 500 units per design."
-  },
-  {
-    q: "How long does factory production take?",
-    a: "For ready-to-ship inventory, we dispatch within 48 hours. For custom production or bulk manufacturing, the lead time is typically 15-25 business days depending on design complexity."
-  }
-];
-
-const FactoryDirectJewelryExporter: React.FC = () => {
+export default function FactoryDirectJewelryExporter() {
   return (
     <SeoLandingPage
       title="Factory Direct Jewelry Exporter Jaipur | No Middleman Wholesale"
@@ -30,14 +11,53 @@ const FactoryDirectJewelryExporter: React.FC = () => {
       h1="Factory Direct Jewelry Exporter — Jaipur's Leading Manufacturing Hub"
       targetKeyword="factory direct jewelry exporter"
       heroSubtitle="Stop paying middleman commissions. Source directly from our Jaipur manufacturing unit and save up to 60% on wholesale imitation jewelry. MOQ starts at just 50 units."
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
+      breadcrumbs={[
+        { name: "Home", url: "https://www.gemoraglobal.co/" },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Global Direct Sourcing", url: "https://www.gemoraglobal.co/factory-direct-jewelry-exporter" }
+      ]}
+      faqs={[
+        {
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+        {
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to Global Direct Sourcing take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
+      ]}
       bodyContent={
-          <>
-
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sourcing B2B factory direct jewelry exporter — Direct from our Jaipur Factory
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
           </h2>
           <p>
-            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Direct Sourcing, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
             Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
@@ -45,7 +65,6 @@ const FactoryDirectJewelryExporter: React.FC = () => {
           <p>
             Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
           </p>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
@@ -64,7 +83,6 @@ const FactoryDirectJewelryExporter: React.FC = () => {
               <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
             </li>
           </ul>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
@@ -83,10 +101,9 @@ const FactoryDirectJewelryExporter: React.FC = () => {
               <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
             </li>
           </ol>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Jaipur to Global Direct Sourcing: Door-to-Door Air Freight Corridor
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
           </h2>
           <p>
             Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
@@ -117,7 +134,6 @@ const FactoryDirectJewelryExporter: React.FC = () => {
               </tbody>
             </table>
           </div>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Actionable B2B Sourcing Checklist for Brand Owners
@@ -168,8 +184,8 @@ const FactoryDirectJewelryExporter: React.FC = () => {
               </Link>
             </li>
           </ul>
-  
         </>
-        };
-
-export default FactoryDirectJewelryExporter;
+      }
+    />
+  );
+}

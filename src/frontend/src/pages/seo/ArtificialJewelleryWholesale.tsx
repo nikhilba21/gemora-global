@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import SeoLandingPage from "../../components/SeoLandingPage";
+import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 
 export default function ArtificialJewelleryWholesale() {
   return (
@@ -9,27 +11,53 @@ export default function ArtificialJewelleryWholesale() {
       h1="Artificial Jewellery Wholesale — India's Top Manufacturer & Exporter"
       targetKeyword="artificial jewellery wholesale"
       heroSubtitle="Gemora Global is India's top artificial jewellery wholesale manufacturer. 1700+ designs, factory-direct pricing, anti-tarnish gold & rhodium plating. MOQ 50 units. Trusted by 500+ retailers in USA, UK, UAE, and 30 other countries. Est. 2011."
-
+      hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
-        { name: "Products", url: "https://www.gemoraglobal.co/products" },
-        { name: "Artificial Jewellery Wholesale", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" },
+        { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
+        { name: "Global Wholesalers", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" }
       ]}
       faqs={[
-        { q: "What is artificial jewellery wholesale?", a: "Artificial jewellery wholesale refers to bulk purchasing of non-precious fashion jewellery — made from brass, zinc alloy, copper, or other base metals with gold, silver, or rhodium plating and decorative stone setting. Also called imitation jewellery, costume jewellery, or fashion jewellery." },
-        { q: "What is the minimum order for artificial jewellery wholesale from India?", a: "Gemora Global's minimum order is 50 units per design. Mix-and-match across designs available. No minimum per design for orders above 500 total pieces." },
-        { q: "How is artificial jewellery wholesale priced?", a: "Factory wholesale prices at Gemora Global range from ₹80 to ₹2,400 per piece ($1 to $29 USD) depending on design, material, stone count, and plating. Volume discounts of 10–25% for orders above 1,000 pieces." },
-        { q: "How do I find a reliable artificial jewellery wholesale supplier in India?", a: "Key factors: verify factory credentials, request samples before bulk order, check export history and references, confirm quality control process, and ensure proper export documentation capability. Gemora Global provides all documentation and offers sample orders." },
-        { q: "Which artificial jewellery categories sell best internationally?", a: "Top export categories are: earrings (40% of orders), necklace sets (25%), bangles and bracelets (15%), rings (10%), and bridal sets (10%). American diamond and kundan jewellery have the highest international demand." },
+        {
+          q: "What is your MOQ for B2B buyers?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+        },
+        {
+          q: "Is your jewellery compliant with international safety standards?",
+          a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
+        },
+        {
+          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
+          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+        },
+        {
+          q: "What payment terms do you offer wholesale buyers?",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
+        },
+        {
+          q: "Do you offer private label branded packaging directly at the factory?",
+          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
+        },
+        {
+          q: "What is the HTS code for imitation jewelry imported from India?",
+          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
+        },
+        {
+          q: "Can I get a custom sample before placing a bulk order?",
+          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
+        },
+        {
+          q: "How long does shipping from Jaipur to Global Wholesalers take?",
+          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+        }
       ]}
       bodyContent={
-          <>
-
-          <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sourcing B2B artificial jewellery wholesale — Direct from our Jaipur Factory
+        <>
+<h2 className="text-xl font-serif font-bold text-primary mt-0">
+            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
           </h2>
           <p>
-            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Wholesalers, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
             Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
@@ -37,7 +65,6 @@ export default function ArtificialJewelleryWholesale() {
           <p>
             Whether you are catering to a high-end metropolitan fashion boutique, a busy online Shopify storefront, or a traditional wedding retail showroom, our collections offer the ultimate combination of design variety, structural durability, and B2B profitability.
           </p>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Strict Material Safety Compliance: Lead-Free, Cadmium-Free &amp; Nickel-Free Plating
@@ -56,7 +83,6 @@ export default function ArtificialJewelleryWholesale() {
               <strong>Third-Party Laboratory Testing:</strong> Gemora Global regularly submits production batches to leading international laboratories (such as SGS and Intertek) to obtain certified compliance reports, facilitating smooth customs clearance.
             </li>
           </ul>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Advanced Climate Protection: Electrophoretic E-Coating for Long-Term Durability
@@ -75,10 +101,9 @@ export default function ArtificialJewelleryWholesale() {
               <strong>Extended Display Life:</strong> This advanced seal extends display showroom storage life by up to 12 months, drastically reducing product returns for your brand.
             </li>
           </ol>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Jaipur to Global Wholesalers: Door-to-Door Air Freight Corridor
+            Jaipur to ${market}: Door-to-Door Air Freight Corridor
           </h2>
           <p>
             Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
@@ -109,7 +134,6 @@ export default function ArtificialJewelleryWholesale() {
               </tbody>
             </table>
           </div>
-  
 
           <h2 className="text-xl font-serif font-bold text-primary">
             Actionable B2B Sourcing Checklist for Brand Owners
@@ -160,6 +184,8 @@ export default function ArtificialJewelleryWholesale() {
               </Link>
             </li>
           </ul>
-  
         </>
-        }
+      }
+    />
+  );
+}
