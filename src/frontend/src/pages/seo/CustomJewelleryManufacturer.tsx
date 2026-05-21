@@ -54,10 +54,10 @@ export default function CustomJewelleryManufacturer() {
       bodyContent={
         <>
 <h2 className="text-xl font-serif font-bold text-primary mt-0">
-            Sourcing B2B ${keyword} — Direct from our Jaipur Factory
+            Sourcing B2B custom jewellery manufacturer india — Direct from our Jaipur Factory
           </h2>
           <p>
-            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in ${market}, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
+            The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Custom Manufacturing, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins.
           </p>
           <p>
             Jaipur is the gemological and jewelry manufacturing capital of India, combining advanced electroplating foundries with generations of skilled artisans who have preserved ancient jewelry craft techniques for over 500 years. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves.
@@ -103,7 +103,7 @@ export default function CustomJewelleryManufacturer() {
           </ol>
 
           <h2 className="text-xl font-serif font-bold text-primary">
-            Jaipur to ${market}: Door-to-Door Air Freight Corridor
+            Jaipur to Global Custom Manufacturing: Door-to-Door Air Freight Corridor
           </h2>
           <p>
             Due to the compact and highly valuable nature of jewelry, air freight is the standard, highly secure logistics method. Gemora Global has a deeply optimized air logistics corridor using express door-to-door couriers (primarily DHL and FedEx Express).
