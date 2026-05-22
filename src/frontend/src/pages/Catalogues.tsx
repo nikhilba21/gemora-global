@@ -393,7 +393,7 @@ export default function Catalogues() {
                           Browse Album
                         </a>
                         <a
-                          href={`https://wa.me/919910646932?text=Hi%20Gemora%20Global%2C%20I%20am%20interested%20in%20sourcing%20from%20your%20collection%3A%20${encodeURIComponent(album.title)}%20(${album.link})`}
+                          href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20interested%20in%20sourcing%20from%20your%20collection%3A%20${encodeURIComponent(album.title)}%20(${album.link})`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center justify-center gap-1 py-2.5 px-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm active:scale-[0.98] transition-all"
@@ -499,7 +499,7 @@ export default function Catalogues() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <a
-              href="https://wa.me/919910646932?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20join%20your%200%20investment%20reseller%20program%20and%20Dream%20Business%20program%20for%20online%20sellers."
+              href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20join%20your%200%20investment%20reseller%20program%20and%20Dream%20Business%20program%20for%20online%20sellers."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md shadow-emerald-600/10 min-h-[44px] text-sm w-full sm:w-auto"
@@ -507,11 +507,11 @@ export default function Catalogues() {
               Start Selling (Join WhatsApp)
             </a>
             <a
-              href="tel:+919910646932"
+              href="tel:+917976341419"
               className="inline-flex items-center justify-center gap-2 bg-indigo-950 text-white hover:bg-indigo-900 font-bold px-6 py-3 rounded-xl transition-all shadow-md min-h-[44px] text-sm w-full sm:w-auto"
             >
               <PhoneCall className="w-4 h-4 text-accent" />
-              Call +91 9910646932
+              Call +91 7976341419
             </a>
           </div>
         </div>
