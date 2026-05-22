@@ -92,6 +92,7 @@ export const api = {
 
   // Catalogues
   getCatalogues: () => apiFetch<Catalogue[]>('/api/catalogues'),
+  getGooglePhotos: (url: string) => apiFetch<{ images: string[] }>(`/api/catalogues/google-photos?url=${encodeURIComponent(url)}`),
   createCatalogue: (data: Partial<Catalogue>) => apiFetch<Catalogue>('/api/catalogues', { method: 'POST', body: JSON.stringify(data) }),
   deleteCatalogue: (id: number) => apiFetch(`/api/catalogues/${id}`, { method: 'DELETE' }),
 

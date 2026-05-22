@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { BookOpen, Download, FileText, Calendar, ExternalLink, Search, Sparkles, PhoneCall } from "lucide-react";
-import { useState, useMemo } from "react";
+import { BookOpen, Download, FileText, Calendar, ExternalLink, Search, Sparkles, PhoneCall, X, Loader2, ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -9,7 +9,6 @@ import { usePageSEO } from "../hooks/usePageSEO";
 import api from "../lib/api";
 import type { Catalogue } from "../lib/api";
 
-// Curated list of user's Google Photos albums
 interface GoogleAlbum {
   title: string;
   description: string;
@@ -198,16 +197,13 @@ export default function Catalogues() {
     description:
       "Browse our 21 Google Photos live collections and download wholesale imitation jewellery catalogues. Free B2B catalogues for Kundan, AD, Western and anti-tarnish jewelry.",
     canonical: "https://www.gemoraglobal.co/catalogues",
-    ogTitle: "Wholesale Jewellery Catalogues — Gemora Global",
-    ogDescription:
-      "Explore 21 highly curated digital collections and download catalogues directly from Jaipur's leading wholesale imitation jewelry manufacturer.",
     breadcrumbs: [
       { name: "Home", url: "https://www.gemoraglobal.co/" },
       { name: "Catalogues", url: "https://www.gemoraglobal.co/catalogues" },
     ],
   });
 
-  const { data: catalogues, isLoading } = useQuery<Catalogue[]>({
+  const { data: catalogues } = useQuery<Catalogue[]>({
     queryKey: ["catalogues"],
     queryFn: () => api.getCatalogues(),
   });
@@ -215,18 +211,23 @@ export default function Catalogues() {
   const [search, setSearch] = useState("");
   const [activeTab, setActiveTab] = useState<"All" | "AD" | "Traditional" | "Western" | "PDF">("All");
 
+  // Real-time album viewer states
+  const [selectedAlbum, setSelectedAlbum] = useState<GoogleAlbum | null>(null);
+  const [albumImages, setAlbumImages] = useState<string[]>([]);
+  const [loadingAlbum, setLoadingAlbum] = useState(false);
+  const [albumError, setAlbumError] = useState("");
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
   const pdfCatalogues = Array.isArray(catalogues) ? catalogues : [];
 
-  // Filter Google Albums and PDF Catalogues
+  // Filter Google Albums
   const filteredAlbums = useMemo(() => {
     return GOOGLE_ALBUMS.filter(album => {
-      // Tab matching
       if (activeTab === "AD" && album.category !== "American Diamond (AD)") return false;
       if (activeTab === "Traditional" && album.category !== "Traditional & Kundan") return false;
       if (activeTab === "Western" && album.category !== "Western & Daily Wear") return false;
       if (activeTab === "PDF") return false;
 
-      // Search matching
       const query = search.toLowerCase();
       return (
         album.title.toLowerCase().includes(query) ||
@@ -247,30 +248,61 @@ export default function Catalogues() {
     });
   }, [pdfCatalogues, search, activeTab]);
 
+  // Load Album Images dynamically
+  const handleOpenAlbum = async (album: GoogleAlbum) => {
+    setSelectedAlbum(album);
+    setLoadingAlbum(true);
+    setAlbumError("");
+    setAlbumImages([]);
+    try {
+      const data = await api.getGooglePhotos(album.link);
+      if (data && Array.isArray(data.images) && data.images.length > 0) {
+        // Appending quality parameters to make loading faster
+        const formatted = data.images.map(url => `${url}=w600-h600-c`);
+        setAlbumImages(formatted);
+      } else {
+        setAlbumError("No images found in this live collection yet.");
+      }
+    } catch (e) {
+      setAlbumError("Failed to fetch live collection. Please open in Google Photos instead.");
+    } finally {
+      setLoadingAlbum(false);
+    }
+  };
+
+  // Lock scroll when modal is active
+  useEffect(() => {
+    if (selectedAlbum || lightboxIdx !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [selectedAlbum, lightboxIdx]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
       {/* Hero */}
       <section className="pt-20 pb-10 md:pt-24 md:pb-14 bg-primary text-white relative overflow-hidden">
-        {/* Background glow effects */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-700/20 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="container px-4 md:px-6 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold mb-5 backdrop-blur-sm">
             <BookOpen className="w-3.5 h-3.5 text-accent animate-pulse" />
-            Live B2B Catalogs &amp; Digital Portfolios
+            Live B2B Catalogs &amp; Real-time Sync
           </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             Explore Wholesale Jewellery Collections
           </h1>
           <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
-            Browse our 21 live digital Google Photos albums featuring 5,000+ ready stock designs, or download direct PDF specifications. Start your dream online jewelry business today with <strong>0 investment</strong>!
+            Browse our 21 live digital collections synced straight from our factory. Start your dream online reselling business with <strong>0 investment</strong>! Any new stocks added are automatically tagged and updated.
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-xs">
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">🚀 0 Investment Start</span>
-            <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">📸 21 Live Albums</span>
+            <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">📸 Real-time Sync</span>
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">💎 5,000+ Active Designs</span>
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">🌍 Global Export Desk</span>
           </div>
@@ -281,7 +313,6 @@ export default function Catalogues() {
       <section className="container px-4 md:px-6 py-6 border-b border-border bg-card/30 backdrop-blur-sm sticky top-[64px] z-30">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
           
-          {/* Tabs */}
           <div className="flex flex-wrap gap-1.5 self-start w-full lg:w-auto">
             {[
               { id: "All", label: "All Collections" },
@@ -304,7 +335,6 @@ export default function Catalogues() {
             ))}
           </div>
 
-          {/* Search bar */}
           <div className="relative w-full lg:w-[320px]">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
@@ -322,7 +352,6 @@ export default function Catalogues() {
       {/* Grid Content */}
       <section className="container px-4 md:px-6 py-8 md:py-12">
         
-        {/* If no search results found */}
         {filteredAlbums.length === 0 && filteredPdfs.length === 0 ? (
           <div className="text-center py-20 bg-card/20 rounded-3xl border border-dashed border-border max-w-xl mx-auto">
             <FileText className="w-12 h-12 mx-auto text-muted-foreground/45 mb-4 animate-bounce" />
@@ -356,7 +385,6 @@ export default function Catalogues() {
                       className="group rounded-2xl border border-border/80 bg-card hover:border-primary/45 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between"
                     >
                       <div>
-                        {/* Header Image Accent */}
                         <div
                           className="h-[100px] w-full flex items-center justify-between p-4 text-white relative group-hover:opacity-95 transition-opacity"
                           style={{ background: album.imageGradient }}
@@ -365,12 +393,11 @@ export default function Catalogues() {
                           <span className="text-[10px] font-bold tracking-wider uppercase bg-white/20 border border-white/25 px-2 py-0.5 rounded-full backdrop-blur-sm">
                             {album.category}
                           </span>
-                          <span className="text-[10px] font-extrabold uppercase bg-accent text-indigo-950 px-2.5 py-1 rounded-full shadow-sm">
-                            {album.tag}
+                          <span className="text-[10px] font-extrabold uppercase bg-accent text-indigo-950 px-2.5 py-1 rounded-full shadow-sm animate-pulse">
+                            Live Sync
                           </span>
                         </div>
 
-                        {/* Details */}
                         <div className="p-5">
                           <h3 className="font-serif font-bold text-base sm:text-lg text-indigo-950 mb-1.5 group-hover:text-primary transition-colors">
                             {album.title}
@@ -381,25 +408,22 @@ export default function Catalogues() {
                         </div>
                       </div>
 
-                      {/* Dual Action Buttons */}
-                      <div className="p-5 pt-0 border-t border-border/20 mt-4 flex flex-col sm:flex-row gap-2">
+                      <div className="p-5 pt-0 border-t border-border/20 mt-4 flex gap-2">
+                        <button
+                          onClick={() => handleOpenAlbum(album)}
+                          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-indigo-950 text-white hover:bg-indigo-900 shadow-sm active:scale-[0.98] transition-all"
+                        >
+                          <Eye className="w-4 h-4 text-accent" />
+                          Browse on Website
+                        </button>
                         <a
                           href={album.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-indigo-950 text-white hover:bg-indigo-900 shadow-sm active:scale-[0.98] transition-all"
+                          className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl font-bold text-xs border border-indigo-950/20 text-indigo-950 hover:bg-indigo-50 active:scale-[0.98] transition-all"
+                          title="Open album directly on Google Photos App"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />
-                          Browse Album
-                        </a>
-                        <a
-                          href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20interested%20in%20sourcing%20from%20your%20collection%3A%20${encodeURIComponent(album.title)}%20(${album.link})`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-1 py-2.5 px-3.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm active:scale-[0.98] transition-all"
-                          title="Inquire about bulk pricing & MOQ for this collection"
-                        >
-                          Inquire
                         </a>
                       </div>
                     </div>
@@ -424,7 +448,6 @@ export default function Catalogues() {
                       className="group rounded-2xl border border-border bg-card hover:border-primary/45 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between"
                     >
                       <div className="p-6">
-                        {/* Icon */}
                         <div
                           className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
                           style={{ background: "#e8eaf6" }}
@@ -432,19 +455,16 @@ export default function Catalogues() {
                           <FileText className="w-6 h-6 text-primary" />
                         </div>
 
-                        {/* Title */}
                         <h3 className="font-semibold text-sm sm:text-base text-indigo-950 mb-1 line-clamp-2">
                           {cat.title}
                         </h3>
 
-                        {/* Description */}
                         {cat.description && (
                           <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
                             {cat.description}
                           </p>
                         )}
 
-                        {/* Meta */}
                         <div className="flex items-center gap-3 text-[10px] text-muted-foreground mb-4">
                           {cat.fileName && (
                             <span className="flex items-center gap-1 truncate max-w-[120px]">
@@ -461,7 +481,6 @@ export default function Catalogues() {
                         </div>
                       </div>
 
-                      {/* Download */}
                       {cat.fileUrl && (
                         <div className="p-6 pt-0">
                           <a
@@ -484,6 +503,173 @@ export default function Catalogues() {
           </div>
         )}
       </section>
+
+      {/* ── REAL-TIME ALBUM PHOTOS MODAL ── */}
+      {selectedAlbum && (
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-card w-full max-w-6xl h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-border">
+            
+            {/* Modal Header */}
+            <div className="p-6 border-b border-border flex justify-between items-center bg-muted/20">
+              <div>
+                <h3 className="font-serif font-bold text-lg sm:text-xl text-indigo-950 flex items-center gap-2">
+                  {selectedAlbum.title}
+                  <span className="text-[10px] font-bold uppercase bg-primary/10 border border-primary/20 text-primary px-2.5 py-0.5 rounded-full">
+                    Live Stock
+                  </span>
+                </h3>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  {selectedAlbum.description}
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedAlbum(null)}
+                className="p-2 hover:bg-muted rounded-full transition-colors"
+              >
+                <X className="w-5 h-5 text-muted-foreground" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="flex-1 overflow-y-auto p-6 bg-background">
+              {loadingAlbum ? (
+                <div className="h-full flex flex-col items-center justify-center gap-3">
+                  <Loader2 className="w-10 h-10 text-primary animate-spin" />
+                  <p className="text-sm font-semibold text-muted-foreground">Syncing images from Google Photos in real-time...</p>
+                </div>
+              ) : albumError ? (
+                <div className="h-full flex flex-col items-center justify-center gap-4 text-center max-w-md mx-auto">
+                  <span className="text-4xl">⚠️</span>
+                  <p className="text-sm font-semibold text-red-500">{albumError}</p>
+                  <a
+                    href={selectedAlbum.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold px-6 py-2.5 rounded-xl shadow-md"
+                  >
+                    Open Album on Google Photos
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Dynamic Alert Banner */}
+                  <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 text-xs rounded-2xl p-4 flex items-center gap-3">
+                    <span className="text-lg">📢</span>
+                    <p className="leading-relaxed">
+                      This collection is linked directly to our design workshop. Any new pieces added to the workshop are synced here automatically. <strong>First 8 designs are tagged with "NEW"!</strong> Click any image to open full preview.
+                    </p>
+                  </div>
+
+                  {/* Photo Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    {albumImages.map((imageUrl, idx) => (
+                      <div
+                        key={idx}
+                        className="relative group border border-border/80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-card aspect-square"
+                        onClick={() => setLightboxIdx(idx)}
+                      >
+                        <img
+                          src={imageUrl}
+                          alt={`${selectedAlbum.title} design ${idx + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        
+                        {/* Automated 'NEW' Arrival Badge on first 8 images */}
+                        {idx < 8 && (
+                          <div className="absolute top-2.5 left-2.5 bg-green-600 text-white font-extrabold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md animate-pulse">
+                            NEW
+                          </div>
+                        )}
+
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="bg-white/90 text-indigo-950 font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
+                            <Eye className="w-3.5 h-3.5" /> View
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-5 border-t border-border/80 bg-muted/20 flex flex-col sm:flex-row justify-between items-center gap-3">
+              <span className="text-xs text-muted-foreground font-medium">
+                Showing {albumImages.length} live stock designs
+              </span>
+              <a
+                href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20am%20interested%20in%20sourcing%20designs%20from%20your%20live%20collection%3A%20${encodeURIComponent(selectedAlbum.title)}%20(${selectedAlbum.link})`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold px-6 py-3 rounded-xl transition-all shadow-md"
+              >
+                Inquire wholesale price for this entire collection
+              </a>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ── DYNAMIC LIGHTBOX FOR MODAL GRID ── */}
+      {lightboxIdx !== null && selectedAlbum && albumImages.length > 0 && (
+        <div
+          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center backdrop-blur-md"
+          onClick={() => setLightboxIdx(null)}
+        >
+          <button
+            onClick={() => setLightboxIdx(null)}
+            className="absolute right-6 top-6 text-white hover:bg-white/20 p-2.5 rounded-full bg-black/40 z-50 transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <div className="relative max-w-5xl mx-auto px-4 flex items-center justify-center w-full h-[80vh]" onClick={(e) => e.stopPropagation()}>
+            
+            <button
+              className="absolute left-4 md:left-8 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-12 w-12 flex items-center justify-center transition-colors"
+              onClick={() => setLightboxIdx(prev => prev! > 0 ? prev! - 1 : albumImages.length - 1)}
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+
+            <div className="relative flex flex-col items-center gap-4">
+              <img
+                src={albumImages[lightboxIdx]?.replace('=w600-h600-c', '=w1200-h1200')}
+                className="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-2xl border border-white/5"
+                alt={`${selectedAlbum.title} design`}
+              />
+              
+              {/* Image specific CTA */}
+              <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-3 w-full max-w-md shadow-2xl justify-between">
+                <div className="text-left">
+                  <p className="text-white text-xs font-bold">{selectedAlbum.title} - Design #{lightboxIdx + 1}</p>
+                  <p className="text-[10px] text-white/60">MOQ: 12 Pieces per design</p>
+                </div>
+                <a
+                  href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20inquire%20about%20this%20specific%20jewellery%20design%20from%20your%20${encodeURIComponent(selectedAlbum.title)}%20collection.%20Image%20URL%3A%20${encodeURIComponent(albumImages[lightboxIdx]?.replace('=w600-h600-c', ''))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] uppercase tracking-wider px-4 py-2.5 rounded-xl shadow-md transition-colors"
+                >
+                  Inquire Single Design
+                </a>
+              </div>
+            </div>
+
+            <button
+              className="absolute right-4 md:right-8 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-12 w-12 flex items-center justify-center transition-colors"
+              onClick={() => setLightboxIdx(prev => prev! < albumImages.length - 1 ? prev! + 1 : 0)}
+            >
+              <ChevronRight className="w-8 h-8" />
+            </button>
+
+          </div>
+        </div>
+      )}
 
       {/* Dream Business / MOQ 0 Investment CTA Section */}
       <section className="bg-primary/5 border-y border-primary/10 py-12 md:py-16 px-4">

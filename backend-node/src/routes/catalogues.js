@@ -9,6 +9,37 @@ router.get('/', async (req, res) => {
     res.json(r.rows);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
+
+router.get('/google-photos', async (req, res) => {
+  try {
+    const { url } = req.query;
+    if (!url) return res.status(400).json({ error: 'url required' });
+
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch Google Photos shared album: ${response.statusText}`);
+    }
+
+    const html = await response.text();
+    const regex = /(https:\/\/lh3\.googleusercontent\.com\/pw\/[A-Za-z0-9_\-]+)/g;
+    const matches = [];
+    let match;
+    while ((match = regex.exec(html)) !== null) {
+      if (!matches.includes(match[1])) {
+        matches.push(match[1]);
+      }
+    }
+
+    res.json({ images: matches });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 router.post('/', requireAdmin, async (req, res) => {
   try {
     const { title,description='',fileUrl='',fileName='',uploadedAt='' } = req.body;
