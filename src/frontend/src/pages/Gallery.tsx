@@ -58,6 +58,7 @@ interface GoogleAlbum {
   tag: string;
   category: "American Diamond (AD)" | "Traditional & Kundan" | "Western & Daily Wear";
   imageGradient: string;
+  startCode?: string;
 }
 
 const GOOGLE_ALBUMS: GoogleAlbum[] = [
@@ -67,7 +68,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/Cz2ytRVKiouKsFmc8",
     tag: "Sweat-Proof",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #1A237E 0%, #3949AB 100%)"
+    imageGradient: "linear-gradient(135deg, #1A237E 0%, #3949AB 100%)",
+    startCode: "RJ-10"
   },
   {
     title: "Western Chain Pendants",
@@ -75,7 +77,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/FtFV6vNkAkocU5Zv5",
     tag: "Minimalist",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #004D40 0%, #00897B 100%)"
+    imageGradient: "linear-gradient(135deg, #004D40 0%, #00897B 100%)",
+    startCode: "RJ250"
   },
   {
     title: "Mix Catalog Bestsellers",
@@ -83,7 +86,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/X75FaHaVQHXrtqEJ8",
     tag: "Trending",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #E65100 0%, #FB8C00 100%)"
+    imageGradient: "linear-gradient(135deg, #E65100 0%, #FB8C00 100%)",
+    startCode: "RJ380"
   },
   {
     title: "Western Earrings",
@@ -91,7 +95,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/8aFtqebYHgQKoVAi6",
     tag: "Bestseller",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #311B92 0%, #5E35B1 100%)"
+    imageGradient: "linear-gradient(135deg, #311B92 0%, #5E35B1 100%)",
+    startCode: "RJ450"
   },
   {
     title: "Fancy AD Sets",
@@ -99,7 +104,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/iv1THmavUGXVMg2i6",
     tag: "Premium CZ",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #01579B 0%, #039BE5 100%)"
+    imageGradient: "linear-gradient(135deg, #01579B 0%, #039BE5 100%)",
+    startCode: "N500"
   },
   {
     title: "AD Mangalsutra",
@@ -107,7 +113,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/1XdMr2LVnRH5eVMd7",
     tag: "Modern Ethnic",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #006064 0%, #00ACC1 100%)"
+    imageGradient: "linear-gradient(135deg, #006064 0%, #00ACC1 100%)",
+    startCode: "N620"
   },
   {
     title: "Gold Finish Oxidised Jewellery",
@@ -115,7 +122,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/PHAFyneiniaZgcGTA",
     tag: "Dual-Tone Gold",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #BF360C 0%, #F4511E 100%)"
+    imageGradient: "linear-gradient(135deg, #BF360C 0%, #F4511E 100%)",
+    startCode: "RJ680"
   },
   {
     title: "Kashmiri & Kundan Earrings",
@@ -123,7 +131,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/8ssX1T798ZHgzoTq5",
     tag: "Heritage Craft",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #1B5E20 0%, #43A047 100%)"
+    imageGradient: "linear-gradient(135deg, #1B5E20 0%, #43A047 100%)",
+    startCode: "RJ790"
   },
   {
     title: "AD Pendant Set",
@@ -131,7 +140,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/hdXTqef433MszszW9",
     tag: "Lightweight",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #0D47A1 0%, #1E88E5 100%)"
+    imageGradient: "linear-gradient(135deg, #0D47A1 0%, #1E88E5 100%)",
+    startCode: "N850"
   },
   {
     title: "Bracelet Cuff & AD",
@@ -139,7 +149,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/C13MGEHnBYEkKQef8",
     tag: "CZ Bracelets",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #4A148C 0%, #8E24AA 100%)"
+    imageGradient: "linear-gradient(135deg, #4A148C 0%, #8E24AA 100%)",
+    startCode: "N900"
   },
   {
     title: "AD Rings Collection",
@@ -147,7 +158,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/LZEPJEcVJ7x3AYDs6",
     tag: "Adjustable",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #004D40 0%, #00796B 100%)"
+    imageGradient: "linear-gradient(135deg, #004D40 0%, #00796B 100%)",
+    startCode: "N1050"
   },
   {
     title: "Gold Finish Mangalsutra",
@@ -155,7 +167,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/GPzKd6t7bMAhd4jQ7",
     tag: "Traditional Gold",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #827717 0%, #AFB42B 100%)"
+    imageGradient: "linear-gradient(135deg, #827717 0%, #AFB42B 100%)",
+    startCode: "RJ1200"
   },
   {
     title: "Men's Jewellery",
@@ -163,7 +176,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/m2zj5Z4MfGDZkSgu9",
     tag: "Bold Masculine",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #212121 0%, #757575 100%)"
+    imageGradient: "linear-gradient(135deg, #212121 0%, #757575 100%)",
+    startCode: "RJ1350"
   },
   {
     title: "Chains Unisex",
@@ -171,7 +185,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/Sew49rvGb8cNWgGZ6",
     tag: "Unisex Links",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #1A237E 0%, #283593 100%)"
+    imageGradient: "linear-gradient(135deg, #1A237E 0%, #283593 100%)",
+    startCode: "RJ1420"
   },
   {
     title: "Colour Stone Pendants",
@@ -179,7 +194,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/ahLtBbcugaEXmDnW7",
     tag: "Vibrant CZ",
     category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #004D40 0%, #00695C 100%)"
+    imageGradient: "linear-gradient(135deg, #004D40 0%, #00695C 100%)",
+    startCode: "RJ1550"
   },
   {
     title: "Gold Finish Jewellery Set",
@@ -187,7 +203,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/z9tBaSUX7cMKyU5r8",
     tag: "Bridal Polish",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #FF6F00 0%, #FFB300 100%)"
+    imageGradient: "linear-gradient(135deg, #FF6F00 0%, #FFB300 100%)",
+    startCode: "RJ1680"
   },
   {
     title: "Rajwadi Style Jewellery",
@@ -195,7 +212,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/RBLZNVKH7xWY2WUu7",
     tag: "Rajwadi Antique",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #5D4037 0%, #8D6E63 100%)"
+    imageGradient: "linear-gradient(135deg, #5D4037 0%, #8D6E63 100%)",
+    startCode: "RJ1850"
   },
   {
     title: "Kundan Jewellery Set",
@@ -203,7 +221,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/wHAnzTFUy1kMEhxd9",
     tag: "Kundan Bridal",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%)"
+    imageGradient: "linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%)",
+    startCode: "RJ2000"
   },
   {
     title: "Pearl Jewellery Set",
@@ -211,7 +230,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/3g8NnbsAodMHy8Ny8",
     tag: "Pearl Elegance",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #37474F 0%, #78909C 100%)"
+    imageGradient: "linear-gradient(135deg, #37474F 0%, #78909C 100%)",
+    startCode: "RJ2200"
   },
   {
     title: "AD Jewellery Set",
@@ -219,7 +239,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/yFW4LGzFz4XxfPUY9",
     tag: "Dazzling CZ",
     category: "American Diamond (AD)",
-    imageGradient: "linear-gradient(135deg, #01579B 0%, #0288D1 100%)"
+    imageGradient: "linear-gradient(135deg, #01579B 0%, #0288D1 100%)",
+    startCode: "N2350"
   },
   {
     title: "GS Oxidized Earrings",
@@ -227,7 +248,8 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     link: "https://photos.app.goo.gl/9pCy9tq7RXbAWoQd9",
     tag: "German Silver",
     category: "Traditional & Kundan",
-    imageGradient: "linear-gradient(135deg, #263238 0%, #546E7A 100%)"
+    imageGradient: "linear-gradient(135deg, #263238 0%, #546E7A 100%)",
+    startCode: "RJ2500"
   }
 ];
 
@@ -299,6 +321,7 @@ export default function Gallery() {
   const [loadingAlbum, setLoadingAlbum] = useState(false);
   const [albumError, setAlbumError] = useState("");
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const [startCodeTrigger, setStartCodeTrigger] = useState(0);
 
   // Filter Google Albums
   const filteredAlbums = useMemo(() => {
@@ -346,6 +369,47 @@ export default function Gallery() {
     }
     return () => { document.body.style.overflow = ""; };
   }, [selectedAlbum, lightboxIdx]);
+
+  const getAlbumStartingCode = (album: GoogleAlbum) => {
+    // Check localStorage first
+    const saved = localStorage.getItem(`gemora_start_code_${album.title}`);
+    const rawCode = saved !== null ? saved : (album.startCode || "");
+    const match = rawCode.match(/([A-Z]{1,3})[-]?([0-9]+)/i);
+    if (match) {
+      return {
+        prefix: match[1],
+        startNum: parseInt(match[2], 10),
+        hasHyphen: rawCode.includes("-")
+      };
+    }
+    const fallbackMatch = (album.title + " " + album.description).match(/([A-Z]{1,3})[-]?([0-9]+)/i);
+    if (fallbackMatch) {
+      return {
+        prefix: fallbackMatch[1],
+        startNum: parseInt(fallbackMatch[2], 10),
+        hasHyphen: rawCode.includes("-")
+      };
+    }
+    return {
+      prefix: "RJ",
+      startNum: 10,
+      hasHyphen: true
+    };
+  };
+
+  const getCodeForImage = (album: GoogleAlbum, idx: number) => {
+    const start = getAlbumStartingCode(album);
+    const connector = start.hasHyphen ? "-" : "";
+    return `${start.prefix}${connector}${start.startNum + idx}`;
+  };
+
+  // Automatically synchronize calculation input when active Lightbox image index changes
+  useEffect(() => {
+    if (lightboxIdx !== null && selectedAlbum) {
+      const code = getCodeForImage(selectedAlbum, lightboxIdx);
+      setCalcInput(code);
+    }
+  }, [lightboxIdx, selectedAlbum, startCodeTrigger]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -683,6 +747,31 @@ export default function Gallery() {
                     </p>
                   </div>
 
+                  {/* Watermark Code Sync Control Tool */}
+                  <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs animate-fadeIn">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">📸</span>
+                      <div>
+                        <p className="font-semibold text-indigo-950">Watermark Alignment Tool</p>
+                        <p className="text-[11px] text-indigo-600">Ensure the calculated codes match your photo watermarks exactly.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 w-full sm:w-auto">
+                      <span className="font-medium text-indigo-900 shrink-0">Photo Start Code:</span>
+                      <input
+                        type="text"
+                        value={localStorage.getItem(`gemora_start_code_${selectedAlbum.title}`) ?? selectedAlbum.startCode ?? ""}
+                        placeholder="e.g. RJ-10"
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          localStorage.setItem(`gemora_start_code_${selectedAlbum.title}`, val);
+                          setStartCodeTrigger(prev => prev + 1);
+                        }}
+                        className="w-28 px-3 py-1.5 bg-white border border-indigo-200 rounded-xl font-bold text-indigo-950 text-center outline-none focus:border-indigo-400 shadow-sm"
+                      />
+                    </div>
+                  </div>
+
                   {/* Photo Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     {albumImages.map((imageUrl, idx) => (
@@ -704,6 +793,27 @@ export default function Gallery() {
                             NEW
                           </div>
                         )}
+
+                        {/* Automated Price Tag overlaid at the bottom */}
+                        {(() => {
+                          const imgCode = getCodeForImage(selectedAlbum, idx);
+                          const priceRes = calculatePrice(imgCode, selectedCountry);
+                          if (priceRes) {
+                            return (
+                              <div className="absolute bottom-2 left-2 right-2 bg-slate-950/85 backdrop-blur-md border border-white/10 rounded-xl px-2.5 py-1.5 flex justify-between items-center text-white text-[9px] sm:text-[10px] shadow-lg transition-transform duration-300 group-hover:translate-y-[-2px]">
+                                <span className="font-bold text-accent">{imgCode}</span>
+                                <span className="font-sans font-bold text-emerald-400">
+                                  {priceRes.currencySymbol}
+                                  {priceRes.finalPrice.toLocaleString(undefined, {
+                                    minimumFractionDigits: priceRes.currency === "INR" ? 0 : 2,
+                                    maximumFractionDigits: priceRes.currency === "INR" ? 0 : 2
+                                  })}
+                                </span>
+                              </div>
+                            );
+                          }
+                          return null;
+                        })()}
 
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <span className="bg-white/90 text-indigo-950 font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
