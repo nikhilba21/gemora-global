@@ -8,6 +8,49 @@ import { useCanonical } from "../hooks/useCanonical";
 import { usePageSEO } from "../hooks/usePageSEO";
 import api from "../lib/api";
 
+interface CountrySetting {
+  code: string;
+  name: string;
+  flag: string;
+  currency: string;
+  currencySymbol: string;
+  active: boolean;
+  customPricing: boolean;
+  priceMultiplier: string;
+}
+
+const DEFAULT_COUNTRIES: CountrySetting[] = [
+  { code: "IN", name: "India", flag: "🇮🇳", currency: "INR", currencySymbol: "₹", active: true, customPricing: false, priceMultiplier: "1.0" },
+  { code: "US", name: "USA", flag: "🇺🇸", currency: "USD", currencySymbol: "$", active: true, customPricing: true, priceMultiplier: "1.2" },
+  { code: "GB", name: "UK", flag: "🇬🇧", currency: "GBP", currencySymbol: "£", active: true, customPricing: true, priceMultiplier: "1.1" },
+  { code: "AE", name: "UAE", flag: "🇦🇪", currency: "AED", currencySymbol: "AED", active: true, customPricing: true, priceMultiplier: "1.15" },
+  { code: "AU", name: "Australia", flag: "🇦🇺", currency: "AUD", currencySymbol: "A$", active: true, customPricing: false, priceMultiplier: "1.25" },
+  { code: "CA", name: "Canada", flag: "🇨🇦", currency: "CAD", currencySymbol: "C$", active: true, customPricing: false, priceMultiplier: "1.2" },
+  { code: "SG", name: "Singapore", flag: "🇸🇬", currency: "SGD", currencySymbol: "S$", active: true, customPricing: false, priceMultiplier: "1.15" },
+  { code: "MY", name: "Malaysia", flag: "🇲🇾", currency: "MYR", currencySymbol: "RM", active: true, customPricing: false, priceMultiplier: "1.1" },
+  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", currency: "SAR", currencySymbol: "SAR", active: true, customPricing: false, priceMultiplier: "1.2" },
+  { code: "NG", name: "Nigeria", flag: "🇳🇬", currency: "NGN", currencySymbol: "₦", active: true, customPricing: false, priceMultiplier: "1.3" },
+  { code: "LK", name: "Sri Lanka", flag: "🇱🇰", currency: "LKR", currencySymbol: "Rs", active: true, customPricing: false, priceMultiplier: "1.1" },
+  { code: "KW", name: "Kuwait", flag: "🇰🇼", currency: "KWD", currencySymbol: "KD", active: true, customPricing: false, priceMultiplier: "1.2" },
+  { code: "FR", name: "France/Europe", flag: "🇫🇷", currency: "EUR", currencySymbol: "€", active: true, customPricing: true, priceMultiplier: "1.15" }
+];
+
+const EXCHANGE_RATES: Record<string, number> = {
+  INR: 1.0,
+  USD: 0.012,
+  GBP: 0.0095,
+  AED: 0.044,
+  AUD: 0.018,
+  CAD: 0.016,
+  SGD: 0.016,
+  MYR: 0.056,
+  SAR: 0.045,
+  NGN: 18.0,
+  LKR: 3.6,
+  KWD: 0.0037,
+  EUR: 0.011
+};
+
 interface GoogleAlbum {
   title: string;
   description: string;
@@ -191,6 +234,55 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
 export default function Gallery() {
   useCanonical();
 
+  // Country & Pricing Calculator States
+  const [countriesList] = useState<CountrySetting[]>(() => {
+    try {
+      const s = localStorage.getItem("gemora_country_settings");
+      return s ? JSON.parse(s) : DEFAULT_COUNTRIES;
+    } catch {
+      return DEFAULT_COUNTRIES;
+    }
+  });
+
+  const [selectedCountry, setSelectedCountry] = useState<CountrySetting>(() => {
+    try {
+      const storedCode = localStorage.getItem("gemora_user_country");
+      const activeCountries = countriesList.filter(c => c.active);
+      const found = activeCountries.find(c => c.code === storedCode);
+      if (found) return found;
+      return activeCountries.find(c => c.code === "US") || activeCountries[0];
+    } catch {
+      return countriesList[0];
+    }
+  });
+
+  const [calcInput, setCalcInput] = useState("");
+
+  const calculatePrice = (codeStr: string, country: CountrySetting) => {
+    if (!codeStr) return null;
+    const match = codeStr.match(/([A-Z]{0,3})[-]?([0-9]+)/i);
+    if (!match) return null;
+    
+    const prefix = match[1].toUpperCase();
+    const num = parseInt(match[2], 10);
+    if (isNaN(num)) return null;
+
+    const basePriceINR = num * 10;
+    const rate = EXCHANGE_RATES[country.currency] || 0.012;
+    const multiplier = parseFloat(country.priceMultiplier) || 1.0;
+    
+    const finalPrice = basePriceINR * rate * multiplier;
+    
+    return {
+      basePriceINR,
+      finalPrice,
+      currencySymbol: country.currencySymbol,
+      currency: country.currency,
+      prefix,
+      num
+    };
+  };
+
   usePageSEO({
     title: "Imitation Jewellery Photo Gallery — Live Stock Catalogues | Gemora Global",
     description:
@@ -280,6 +372,105 @@ export default function Gallery() {
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">📸 Live Auto-Sync</span>
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">💎 5,000+ Active Designs</span>
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">🌍 Global Export Desk</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── B2B PRICING CALCULATOR SECTION ── */}
+      <section className="container px-4 md:px-6 py-6 mt-4">
+        <div className="bg-gradient-to-r from-indigo-950 to-slate-900 rounded-3xl p-6 md:p-8 text-white relative overflow-hidden shadow-xl border border-indigo-900/50">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+          
+          <div className="relative z-10 grid grid-cols-12 gap-6 items-center">
+            <div className="md:col-span-6 col-span-12 space-y-3">
+              <span className="text-[10px] font-extrabold uppercase bg-accent/20 border border-accent/30 text-accent px-3 py-1 rounded-full tracking-wider inline-block">
+                B2B Global Trade Utility
+              </span>
+              <h2 className="font-serif text-xl sm:text-2xl font-bold tracking-tight">
+                Live Wholesale Pricing Calculator
+              </h2>
+              <p className="text-xs text-white/70 leading-relaxed max-w-md">
+                Every gallery design has a unique code (e.g. <strong>RJ250</strong>, <strong>N180</strong>) watermarked physically on the image. Select your target export market below and type the code to calculate the direct workshop wholesale price.
+              </p>
+            </div>
+
+            <div className="md:col-span-6 col-span-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 md:p-6 space-y-4">
+              <div className="grid grid-cols-2 gap-3">
+                {/* Country Dropdown */}
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-bold text-white/60 uppercase">Target Country</label>
+                  <select
+                    value={selectedCountry.code}
+                    onChange={(e) => {
+                      const found = countriesList.find(c => c.code === e.target.value);
+                      if (found) {
+                        setSelectedCountry(found);
+                        localStorage.setItem("gemora_user_country", found.code);
+                      }
+                    }}
+                    className="w-full text-xs bg-slate-900/80 border border-white/15 rounded-xl px-3 py-2.5 text-white outline-none focus:border-accent/50 cursor-pointer"
+                  >
+                    {countriesList.filter(c => c.active).map(c => (
+                      <option key={c.code} value={c.code} className="bg-slate-950 text-white">
+                        {c.flag} {c.name} ({c.currency})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Code Input */}
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-bold text-white/60 uppercase">Image Code</label>
+                  <input
+                    type="text"
+                    placeholder="e.g. RJ250"
+                    value={calcInput}
+                    onChange={(e) => setCalcInput(e.target.value)}
+                    className="w-full text-xs bg-slate-900/80 border border-white/15 rounded-xl px-3 py-2.5 text-white placeholder-white/35 outline-none focus:border-accent/50"
+                  />
+                </div>
+              </div>
+
+              {/* Real-time Pricing Result Box */}
+              {calcInput.trim() ? (
+                (() => {
+                  const result = calculatePrice(calcInput, selectedCountry);
+                  if (result) {
+                    return (
+                      <div className="bg-emerald-600/10 border border-emerald-500/20 rounded-xl p-4 flex items-center justify-between animate-fadeIn">
+                        <div>
+                          <p className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Wholesale B2B Price</p>
+                          <p className="font-sans font-bold text-xl sm:text-2xl text-white mt-1">
+                            {result.currencySymbol}
+                            {result.finalPrice.toLocaleString(undefined, {
+                              minimumFractionDigits: result.currency === "INR" ? 0 : 2,
+                              maximumFractionDigits: result.currency === "INR" ? 0 : 2
+                            })}{" "}
+                            <span className="text-xs font-semibold text-white/60">{result.currency}</span>
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <span className="inline-block text-[9px] font-bold bg-white/10 px-2 py-0.5 rounded-full text-white/80">
+                            Base: ₹{result.basePriceINR.toLocaleString()} INR
+                          </span>
+                          <p className="text-[9px] text-white/50 mt-1">Multiplier: {selectedCountry.priceMultiplier}x</p>
+                        </div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 text-center text-xs text-amber-300">
+                      Could not detect code. Please enter letters followed by digits (e.g. RJ120).
+                    </div>
+                  );
+                })()
+              ) : (
+                <div className="bg-slate-900/40 border border-white/5 rounded-xl p-4 text-center text-xs text-white/40 italic">
+                  Enter a code above to view live localized wholesale pricing.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -408,7 +599,7 @@ export default function Gallery() {
           <div className="bg-card w-full max-w-6xl h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-border">
             
             {/* Modal Header */}
-            <div className="p-6 border-b border-border flex justify-between items-center bg-muted/20">
+            <div className="p-6 border-b border-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-muted/20">
               <div>
                 <h3 className="font-serif font-bold text-lg sm:text-xl text-indigo-950 flex items-center gap-2">
                   {selectedAlbum.title}
@@ -416,13 +607,55 @@ export default function Gallery() {
                     Live Stock
                   </span>
                 </h3>
-                <p className="text-xs text-muted-foreground mt-0.5">
+                <p className="text-xs text-muted-foreground mt-0.5 max-w-xl">
                   {selectedAlbum.description}
                 </p>
               </div>
+
+              {/* Modal quick calculator */}
+              <div className="flex flex-wrap items-center gap-2 w-full md:w-auto bg-card border border-border rounded-2xl p-2.5 shadow-sm">
+                <span className="text-[10px] font-bold text-indigo-950 uppercase pl-1.5 hidden sm:inline">Pricing Calc:</span>
+                <input
+                  type="text"
+                  placeholder="Type code (e.g. RJ150)"
+                  value={calcInput}
+                  onChange={(e) => setCalcInput(e.target.value)}
+                  className="text-xs bg-muted/50 border border-border rounded-xl px-3 py-1.5 w-32 focus:border-primary/50 outline-none text-indigo-950 font-medium"
+                />
+                
+                {calcInput.trim() && (() => {
+                  const result = calculatePrice(calcInput, selectedCountry);
+                  return result ? (
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-800 text-xs font-bold rounded-xl px-3 py-1.5 animate-fadeIn">
+                      {result.currencySymbol}
+                      {result.finalPrice.toLocaleString(undefined, {
+                        minimumFractionDigits: result.currency === "INR" ? 0 : 2,
+                        maximumFractionDigits: result.currency === "INR" ? 0 : 2
+                      })}
+                    </div>
+                  ) : null;
+                })()}
+                
+                <select
+                  value={selectedCountry.code}
+                  onChange={(e) => {
+                    const found = countriesList.find(c => c.code === e.target.value);
+                    if (found) {
+                      setSelectedCountry(found);
+                      localStorage.setItem("gemora_user_country", found.code);
+                    }
+                  }}
+                  className="text-xs bg-muted/50 border border-border rounded-xl px-2 py-1.5 outline-none cursor-pointer text-indigo-950 font-semibold"
+                >
+                  {countriesList.filter(c => c.active).map(c => (
+                    <option key={c.code} value={c.code}>{c.flag} {c.currency}</option>
+                  ))}
+                </select>
+              </div>
+              
               <button
                 onClick={() => setSelectedAlbum(null)}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
+                className="p-2 hover:bg-muted rounded-full transition-colors self-end md:self-center"
               >
                 <X className="w-5 h-5 text-muted-foreground" />
               </button>
@@ -533,19 +766,82 @@ export default function Gallery() {
               />
               
               {/* Image specific CTA */}
-              <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row items-center gap-3 w-full max-w-md shadow-2xl justify-between">
-                <div className="text-left">
-                  <p className="text-white text-xs font-bold">{selectedAlbum.title} - Design #{lightboxIdx + 1}</p>
-                  <p className="text-[10px] text-white/60">MOQ: 12 Pieces per design</p>
+              <div className="bg-black/70 backdrop-blur-md border border-white/10 rounded-3xl p-5 flex flex-col gap-4 w-full max-w-lg shadow-2xl animate-fadeIn">
+                <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                  <div>
+                    <p className="text-white text-xs font-bold">{selectedAlbum.title}</p>
+                    <p className="text-[10px] text-white/50">Design #{lightboxIdx + 1} — MOQ: 12 Pcs</p>
+                  </div>
+                  <span className="text-[10px] font-extrabold uppercase bg-accent/20 border border-accent/30 text-accent px-2 py-0.5 rounded-full">
+                    Wholesale B2B
+                  </span>
                 </div>
-                <a
-                  href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20inquire%20about%20this%20specific%20jewellery%20design%20from%20your%20${encodeURIComponent(selectedAlbum.title)}%20collection.%20Image%20URL%3A%20${encodeURIComponent(albumImages[lightboxIdx]?.replace('=w600-h600-c', ''))}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] uppercase tracking-wider px-4 py-2.5 rounded-xl shadow-md transition-colors"
-                >
-                  Inquire Single Design
-                </a>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-bold text-white/60 uppercase">Select Country</label>
+                    <select
+                      value={selectedCountry.code}
+                      onChange={(e) => {
+                        const found = countriesList.find(c => c.code === e.target.value);
+                        if (found) {
+                          setSelectedCountry(found);
+                          localStorage.setItem("gemora_user_country", found.code);
+                        }
+                      }}
+                      className="w-full text-xs bg-slate-900 border border-white/15 rounded-xl px-2 py-2 text-white outline-none cursor-pointer"
+                    >
+                      {countriesList.filter(c => c.active).map(c => (
+                        <option key={c.code} value={c.code}>{c.flag} {c.name}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[9px] font-bold text-white/60 uppercase">Type Code From Photo</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. RJ150"
+                      value={calcInput}
+                      onChange={(e) => setCalcInput(e.target.value)}
+                      className="w-full text-xs bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none"
+                    />
+                  </div>
+                </div>
+
+                {/* Calculation Result */}
+                {calcInput.trim() && (() => {
+                  const result = calculatePrice(calcInput, selectedCountry);
+                  return result ? (
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center justify-between text-white animate-fadeIn">
+                      <div>
+                        <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">Calculated Price</span>
+                        <p className="font-sans font-bold text-lg text-white">
+                          {result.currencySymbol}
+                          {result.finalPrice.toLocaleString(undefined, {
+                            minimumFractionDigits: result.currency === "INR" ? 0 : 2,
+                            maximumFractionDigits: result.currency === "INR" ? 0 : 2
+                          })}{" "}
+                          <span className="text-[10px] text-white/60">{result.currency}</span>
+                        </p>
+                      </div>
+                      <span className="text-[9px] bg-white/10 px-2 py-0.5 rounded-full text-white/80">
+                        Base: ₹{result.basePriceINR.toLocaleString()} INR
+                      </span>
+                    </div>
+                  ) : null;
+                })()}
+
+                <div className="flex gap-2 pt-2 border-t border-white/5">
+                  <a
+                    href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20inquire%20about%20design%20%23${lightboxIdx + 1}%20with%20code%20${calcInput || "N/A"}%20from%20your%20${encodeURIComponent(selectedAlbum.title)}%20collection.%20Image%20URL%3A%20${encodeURIComponent(albumImages[lightboxIdx]?.replace('=w600-h600-c', ''))}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-[10px] uppercase tracking-wider py-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    💬 Order on WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
 
