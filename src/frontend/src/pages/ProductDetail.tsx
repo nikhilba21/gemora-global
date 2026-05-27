@@ -151,7 +151,7 @@ export default function ProductDetail() {
   const [activeImg, setActiveImg] = useState(0);
   const [copied, setCopied] = useState(false);
 
-  const { data: product, isLoading } = useQuery<Product>({
+  const { data: product, isLoading, isSuccess } = useQuery<Product>({
     queryKey: ["product", id],
     queryFn: () => api.getProduct(id as string),
     enabled: !!id,
@@ -192,8 +192,8 @@ export default function ProductDetail() {
     title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Product Not Found | Gemora Global",
     description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "The product you are looking for does not exist on Gemora Global.",
     canonical: product ? `https://www.gemoraglobal.co/products/item/${product.id}` : undefined,
-    robots: isLoading ? "index, follow" : (product ? "index, follow" : "noindex, follow"),
-    googlebot: isLoading ? undefined : (product ? undefined : "noindex, follow"),
+    robots: isLoading ? "index, follow" : (isSuccess && !product ? "noindex, follow" : "index, follow"),
+    googlebot: isLoading ? undefined : (isSuccess && !product ? "noindex, follow" : undefined),
     ogImage: product?.imageUrls?.[0],
     product: product as any,
     faqItems,

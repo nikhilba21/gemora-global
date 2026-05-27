@@ -46,7 +46,7 @@ export default function BlogPostPage() {
   useCanonical();
   const { slug } = useParams() as { slug: string };
 
-  const { data: post, isLoading: isPostLoading } = useQuery({
+  const { data: post, isLoading: isPostLoading, isSuccess } = useQuery({
     queryKey: ["blogPost", slug],
     queryFn: async () => {
       // 1. Try backend API first
@@ -93,8 +93,8 @@ export default function BlogPostPage() {
     canonical: post
       ? `https://www.gemoraglobal.co/blog/${post.slug}`
       : "https://www.gemoraglobal.co/blog",
-    robots: isLoading ? "index, follow" : (post ? "index, follow" : "noindex, follow"),
-    googlebot: isLoading ? undefined : (post ? undefined : "noindex, follow"),
+    robots: isLoading ? "index, follow" : (isSuccess && !post ? "noindex, follow" : "index, follow"),
+    googlebot: isLoading ? undefined : (isSuccess && !post ? "noindex, follow" : undefined),
     ogTitle: post ? post.title : "Page Not Found | Gemora Global",
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage: getSafeBlogImage(post),

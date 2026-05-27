@@ -62,7 +62,7 @@ function removeOldHreflang() {
 export function useCanonical(overridePath?: string) {
   const location = useLocation();
   const path = overridePath || location.pathname;
-  const canonical = `${BASE}${path === '/' ? '' : path}`.replace(/\/$/, '') || BASE + '/';
+  const canonical = path === '/' ? `${BASE}/` : `${BASE}${path.replace(/\/$/, '')}`;
 
   useEffect(() => {
     // Set canonical

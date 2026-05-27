@@ -109,9 +109,12 @@ export function usePageSEO(options: PageSEOOptions) {
       : DEFAULT_DESCRIPTION;
 
   // Dynamic self-referencing canonical
-  const canonical =
-    canonicalProp ??
-    (typeof window !== "undefined" ? window.location.href : BASE_URL);
+  const cleanHref = typeof window !== "undefined"
+    ? (window.location.pathname === "/"
+        ? BASE_URL + "/"
+        : BASE_URL + window.location.pathname.replace(/\/$/, ""))
+    : BASE_URL;
+  const canonical = (canonicalProp ?? cleanHref) || BASE_URL;
 
   useEffect(() => {
     const prevTitle = document.title;
