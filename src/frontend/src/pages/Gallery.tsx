@@ -749,107 +749,123 @@ export default function Gallery() {
             <X className="w-6 h-6" />
           </button>
 
-          <div className="relative max-w-5xl mx-auto px-4 flex items-center justify-center w-full h-[80vh]" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-6xl mx-auto px-4 w-full flex items-center justify-center py-8 md:py-0 overflow-y-auto max-h-[90vh] md:max-h-none md:overflow-visible" onClick={(e) => e.stopPropagation()}>
             
             <button
-              className="absolute left-4 md:left-8 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-12 w-12 flex items-center justify-center transition-colors"
+              className="absolute left-2 md:left-4 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-10 w-10 md:h-12 md:w-12 flex items-center justify-center transition-colors"
               onClick={() => setLightboxIdx(prev => prev! > 0 ? prev! - 1 : albumImages.length - 1)}
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
             </button>
 
-            <div className="relative flex flex-col items-center gap-4">
-              <img
-                src={albumImages[lightboxIdx]?.replace('=w600-h600-c', '=w1200-h1200')}
-                className="max-h-[70vh] max-w-full object-contain rounded-2xl shadow-2xl border border-white/5"
-                alt={`${selectedAlbum.title} design`}
-              />
+            {/* Grid Container for Image and CTA Panel */}
+            <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-center justify-center max-w-5xl">
               
-              {/* Image specific CTA */}
-              <div className="bg-black/70 backdrop-blur-md border border-white/10 rounded-3xl p-5 flex flex-col gap-4 w-full max-w-lg shadow-2xl animate-fadeIn">
-                <div className="flex justify-between items-center border-b border-white/10 pb-3">
-                  <div>
-                    <p className="text-white text-xs font-bold">{selectedAlbum.title}</p>
-                    <p className="text-[10px] text-white/50">Design #{lightboxIdx + 1} — MOQ: 12 Pcs</p>
-                  </div>
-                  <span className="text-[10px] font-extrabold uppercase bg-accent/20 border border-accent/30 text-accent px-2 py-0.5 rounded-full">
-                    Wholesale B2B
-                  </span>
-                </div>
+              {/* Left Column: Image */}
+              <div className="col-span-1 md:col-span-7 flex justify-center items-center h-full max-h-[40vh] md:max-h-[80vh]">
+                <img
+                  src={albumImages[lightboxIdx]?.replace('=w600-h600-c', '=w1200-h1200')}
+                  className="max-h-[40vh] md:max-h-[75vh] max-w-full object-contain rounded-2xl shadow-2xl border border-white/10 animate-fadeIn"
+                  alt={`${selectedAlbum.title} design`}
+                />
+              </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-white/60 uppercase">Select Country</label>
-                    <select
-                      value={selectedCountry.code}
-                      onChange={(e) => {
-                        const found = countriesList.find(c => c.code === e.target.value);
-                        if (found) {
-                          setSelectedCountry(found);
-                          localStorage.setItem("gemora_user_country", found.code);
-                        }
-                      }}
-                      className="w-full text-xs bg-slate-900 border border-white/15 rounded-xl px-2 py-2 text-white outline-none cursor-pointer"
-                    >
-                      {countriesList.filter(c => c.active).map(c => (
-                        <option key={c.code} value={c.code}>{c.flag} {c.name}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[9px] font-bold text-white/60 uppercase">Type Code From Photo</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. RJ150"
-                      value={calcInput}
-                      onChange={(e) => setCalcInput(e.target.value)}
-                      className="w-full text-xs bg-slate-900 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none"
-                    />
-                  </div>
-                </div>
-
-                {/* Calculation Result */}
-                {calcInput.trim() && (() => {
-                  const result = calculatePrice(calcInput, selectedCountry);
-                  return result ? (
-                    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center justify-between text-white animate-fadeIn">
-                      <div>
-                        <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">Calculated Price</span>
-                        <p className="font-sans font-bold text-lg text-white">
-                          {result.currencySymbol}
-                          {result.finalPrice.toLocaleString(undefined, {
-                            minimumFractionDigits: result.currency === "INR" ? 0 : 2,
-                            maximumFractionDigits: result.currency === "INR" ? 0 : 2
-                          })}{" "}
-                          <span className="text-[10px] text-white/60">{result.currency}</span>
-                        </p>
-                      </div>
-                      <span className="text-[9px] bg-white/10 px-2 py-0.5 rounded-full text-white/80">
-                        Base: ₹{result.basePriceINR.toLocaleString()} INR
-                      </span>
+              {/* Right Column: B2B Pricing Panel */}
+              <div className="col-span-1 md:col-span-5 flex justify-center w-full animate-fadeIn">
+                <div className="bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-3xl p-5 flex flex-col gap-4 w-full shadow-2xl">
+                  <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                    <div>
+                      <p className="text-white text-xs font-bold">{selectedAlbum.title}</p>
+                      <p className="text-[10px] text-white/50">Design #{lightboxIdx + 1} — MOQ: 12 Pcs</p>
                     </div>
-                  ) : null;
-                })()}
+                    <span className="text-[10px] font-extrabold uppercase bg-accent/20 border border-accent/30 text-accent px-2.5 py-0.5 rounded-full">
+                      Wholesale B2B
+                    </span>
+                  </div>
 
-                <div className="flex gap-2 pt-2 border-t border-white/5">
-                  <a
-                    href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20inquire%20about%20design%20%23${lightboxIdx + 1}%20with%20code%20${calcInput || "N/A"}%20from%20your%20${encodeURIComponent(selectedAlbum.title)}%20collection.%20Image%20URL%3A%20${encodeURIComponent(albumImages[lightboxIdx]?.replace('=w600-h600-c', ''))}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-[10px] uppercase tracking-wider py-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5"
-                  >
-                    💬 Order on WhatsApp
-                  </a>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="space-y-1">
+                      <label className="text-[9px] font-bold text-white/60 uppercase">Select Country</label>
+                      <select
+                        value={selectedCountry.code}
+                        onChange={(e) => {
+                          const found = countriesList.find(c => c.code === e.target.value);
+                          if (found) {
+                            setSelectedCountry(found);
+                            localStorage.setItem("gemora_user_country", found.code);
+                          }
+                        }}
+                        className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-2 py-2 text-white outline-none cursor-pointer"
+                      >
+                        {countriesList.filter(c => c.active).map(c => (
+                          <option key={c.code} value={c.code} className="bg-slate-950">{c.flag} {c.name}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="text-[9px] font-bold text-white/60 uppercase">Type Code From Photo</label>
+                      <input
+                        type="text"
+                        placeholder="e.g. RJ150"
+                        value={calcInput}
+                        onChange={(e) => setCalcInput(e.target.value)}
+                        className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Calculation Result */}
+                  {calcInput.trim() ? (() => {
+                    const result = calculatePrice(calcInput, selectedCountry);
+                    return result ? (
+                      <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center justify-between text-white animate-fadeIn">
+                        <div>
+                          <span className="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">Calculated Price</span>
+                          <p className="font-sans font-bold text-base sm:text-lg text-white">
+                            {result.currencySymbol}
+                            {result.finalPrice.toLocaleString(undefined, {
+                              minimumFractionDigits: result.currency === "INR" ? 0 : 2,
+                              maximumFractionDigits: result.currency === "INR" ? 0 : 2
+                            })}{" "}
+                            <span className="text-[10px] text-white/60">{result.currency}</span>
+                          </p>
+                        </div>
+                        <span className="text-[9px] bg-white/10 px-2 py-0.5 rounded-full text-white/80">
+                          Base: ₹{result.basePriceINR.toLocaleString()} INR
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-2 text-center text-[10px] text-amber-300">
+                        Could not detect code format.
+                      </div>
+                    );
+                  })() : (
+                    <div className="bg-white/5 border border-white/5 rounded-xl p-3 text-center text-[10px] text-white/40 italic">
+                      Type code from photo to see live wholesale price.
+                    </div>
+                  )}
+
+                  <div className="flex gap-2 pt-2 border-t border-white/5">
+                    <a
+                      href={`https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20want%20to%20inquire%20about%20design%20%23${lightboxIdx + 1}%20with%20code%20${calcInput || "N/A"}%20from%20your%20${encodeURIComponent(selectedAlbum.title)}%20collection.%20Image%20URL%3A%20${encodeURIComponent(albumImages[lightboxIdx]?.replace('=w600-h600-c', ''))}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-[10px] uppercase tracking-wider py-3 rounded-xl shadow-md transition-colors flex items-center justify-center gap-1.5"
+                    >
+                      💬 Order on WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
+
             </div>
 
             <button
-              className="absolute right-4 md:right-8 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-12 w-12 flex items-center justify-center transition-colors"
+              className="absolute right-2 md:right-4 text-white hover:bg-white/20 z-50 rounded-full bg-black/40 h-10 w-10 md:h-12 md:w-12 flex items-center justify-center transition-colors"
               onClick={() => setLightboxIdx(prev => prev! < albumImages.length - 1 ? prev! + 1 : 0)}
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
             </button>
 
           </div>
