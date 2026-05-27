@@ -321,7 +321,11 @@ export default function Gallery() {
   const [loadingAlbum, setLoadingAlbum] = useState(false);
   const [albumError, setAlbumError] = useState("");
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
-  const [startCodeTrigger, setStartCodeTrigger] = useState(0);
+
+  // Automatically reset calculation input when a new lightbox image is opened
+  useEffect(() => {
+    setCalcInput("");
+  }, [lightboxIdx]);
 
   // Filter Google Albums
   const filteredAlbums = useMemo(() => {
@@ -369,47 +373,6 @@ export default function Gallery() {
     }
     return () => { document.body.style.overflow = ""; };
   }, [selectedAlbum, lightboxIdx]);
-
-  const getAlbumStartingCode = (album: GoogleAlbum) => {
-    // Check localStorage first
-    const saved = localStorage.getItem(`gemora_start_code_${album.title}`);
-    const rawCode = saved !== null ? saved : (album.startCode || "");
-    const match = rawCode.match(/([A-Z]{1,3})[-]?([0-9]+)/i);
-    if (match) {
-      return {
-        prefix: match[1],
-        startNum: parseInt(match[2], 10),
-        hasHyphen: rawCode.includes("-")
-      };
-    }
-    const fallbackMatch = (album.title + " " + album.description).match(/([A-Z]{1,3})[-]?([0-9]+)/i);
-    if (fallbackMatch) {
-      return {
-        prefix: fallbackMatch[1],
-        startNum: parseInt(fallbackMatch[2], 10),
-        hasHyphen: rawCode.includes("-")
-      };
-    }
-    return {
-      prefix: "RJ",
-      startNum: 10,
-      hasHyphen: true
-    };
-  };
-
-  const getCodeForImage = (album: GoogleAlbum, idx: number) => {
-    const start = getAlbumStartingCode(album);
-    const connector = start.hasHyphen ? "-" : "";
-    return `${start.prefix}${connector}${start.startNum + idx}`;
-  };
-
-  // Automatically synchronize calculation input when active Lightbox image index changes
-  useEffect(() => {
-    if (lightboxIdx !== null && selectedAlbum) {
-      const code = getCodeForImage(selectedAlbum, lightboxIdx);
-      setCalcInput(code);
-    }
-  }, [lightboxIdx, selectedAlbum, startCodeTrigger]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -747,31 +710,6 @@ export default function Gallery() {
                     </p>
                   </div>
 
-                  {/* Watermark Code Sync Control Tool */}
-                  <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs animate-fadeIn">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">📸</span>
-                      <div>
-                        <p className="font-semibold text-indigo-950">Watermark Alignment Tool</p>
-                        <p className="text-[11px] text-indigo-600">Ensure the calculated codes match your photo watermarks exactly.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 w-full sm:w-auto">
-                      <span className="font-medium text-indigo-900 shrink-0">Photo Start Code:</span>
-                      <input
-                        type="text"
-                        value={localStorage.getItem(`gemora_start_code_${selectedAlbum.title}`) ?? selectedAlbum.startCode ?? ""}
-                        placeholder="e.g. RJ-10"
-                        onChange={(e) => {
-                          const val = e.target.value;
-                          localStorage.setItem(`gemora_start_code_${selectedAlbum.title}`, val);
-                          setStartCodeTrigger(prev => prev + 1);
-                        }}
-                        className="w-28 px-3 py-1.5 bg-white border border-indigo-200 rounded-xl font-bold text-indigo-950 text-center outline-none focus:border-indigo-400 shadow-sm"
-                      />
-                    </div>
-                  </div>
-
                   {/* Photo Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                     {albumImages.map((imageUrl, idx) => (
@@ -793,27 +731,6 @@ export default function Gallery() {
                             NEW
                           </div>
                         )}
-
-                        {/* Automated Price Tag overlaid at the bottom */}
-                        {(() => {
-                          const imgCode = getCodeForImage(selectedAlbum, idx);
-                          const priceRes = calculatePrice(imgCode, selectedCountry);
-                          if (priceRes) {
-                            return (
-                              <div className="absolute bottom-2 left-2 right-2 bg-slate-950/85 backdrop-blur-md border border-white/10 rounded-xl px-2.5 py-1.5 flex justify-between items-center text-white text-[9px] sm:text-[10px] shadow-lg transition-transform duration-300 group-hover:translate-y-[-2px]">
-                                <span className="font-bold text-accent">{imgCode}</span>
-                                <span className="font-sans font-bold text-emerald-400">
-                                  {priceRes.currencySymbol}
-                                  {priceRes.finalPrice.toLocaleString(undefined, {
-                                    minimumFractionDigits: priceRes.currency === "INR" ? 0 : 2,
-                                    maximumFractionDigits: priceRes.currency === "INR" ? 0 : 2
-                                  })}
-                                </span>
-                              </div>
-                            );
-                          }
-                          return null;
-                        })()}
 
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <span className="bg-white/90 text-indigo-950 font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
@@ -914,13 +831,16 @@ export default function Gallery() {
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-[9px] font-bold text-white/60 uppercase">Type Code From Photo</label>
+                      <label className="text-[9px] font-bold text-white/60 uppercase flex items-center justify-between">
+                        <span>Type Code From Photo</span>
+                        <span className="text-[8px] text-emerald-400 font-bold lowercase normal-case">💡 Hint: Type only number</span>
+                      </label>
                       <input
                         type="text"
-                        placeholder="e.g. RJ150"
+                        placeholder="e.g. RJ-15 or just type 15"
                         value={calcInput}
                         onChange={(e) => setCalcInput(e.target.value)}
-                        className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none"
+                        className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none focus:border-emerald-500/50"
                       />
                     </div>
                   </div>
@@ -952,7 +872,7 @@ export default function Gallery() {
                     );
                   })() : (
                     <div className="bg-white/5 border border-white/5 rounded-xl p-3 text-center text-[10px] text-white/40 italic">
-                      Type code from photo to see live wholesale price.
+                      💡 Type the number shown on the photo (e.g. 15) to see live wholesale price.
                     </div>
                   )}
 
