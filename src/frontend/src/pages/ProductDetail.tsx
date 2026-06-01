@@ -1,7 +1,7 @@
 import api from "../lib/api";
 import type { Product } from "../lib/api";
 import { useQuery } from "@tanstack/react-query";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BulkOrderCalculator from "../components/BulkOrderCalculator";
@@ -223,33 +223,7 @@ export default function ProductDetail() {
   }
 
   if (!product) {
-    return (
-      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
-        <Navbar />
-        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
-          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/30 backdrop-blur-md rounded-2xl border border-border/50 shadow-xl">
-            <div className="mx-auto w-16 h-16 rounded-full bg-destructive/10 flex items-center justify-center text-destructive mb-4">
-              <span className="text-2xl font-bold">404</span>
-            </div>
-            <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-              Product Not Found
-            </h1>
-            <p className="text-muted-foreground text-sm sm:text-base max-w-sm mx-auto leading-relaxed">
-              The wholesale jewellery piece you are looking for doesn't exist or is currently unavailable.
-            </p>
-            <div className="pt-4">
-              <Link
-                to="/products"
-                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[44px]"
-              >
-                Browse All Products
-              </Link>
-            </div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
+    return <Navigate to="/404" replace />;
   }
 
   const images = product.imageUrls?.length > 0 ? product.imageUrls : ["/placeholder.jpg"];

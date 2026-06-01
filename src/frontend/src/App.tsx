@@ -257,6 +257,7 @@ export default function App() {
         <Route path="/return-policy" element={<ReturnRefundPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/terms-conditions" element={<TermsAndConditions />} />
+        <Route path="/404" element={<NotFound />} />
 
         {/* Collection pages */}
         <Route path="/collections/trendy-jewelry" element={<TrendyJewelry />} />

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { BASE_URL, usePageSEO } from "../../hooks/usePageSEO";
@@ -356,7 +356,9 @@ const RELATED_COLLECTIONS = [
 ];
 
 export default function ProgrammaticCollection() {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug: paramSlug } = useParams<{ slug: string }>();
+  const locationSlug = typeof window !== "undefined" ? window.location.pathname.split("/").pop() : undefined;
+  const slug = paramSlug || locationSlug || "";
   const config = slug ? COLLECTION_MAP[slug] : undefined;
 
   const title = config?.title ?? "Fashion Jewelry Collection | Gemora Global";
@@ -379,24 +381,7 @@ export default function ProgrammaticCollection() {
   });
 
   if (!config) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Navbar />
-        <div className="pt-16 container px-4 py-20 text-center">
-          <h1 className="font-serif text-3xl font-bold mb-4">
-            Collection Not Found
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            This collection doesn't exist yet. Browse all our jewelry
-            categories.
-          </p>
-          <Button asChild className="bg-primary text-primary-foreground">
-            <Link to="/products">View All Products</Link>
-          </Button>
-        </div>
-        <Footer />
-      </div>
-    );
+    return <Navigate to="/404" replace />;
   }
 
   return (
