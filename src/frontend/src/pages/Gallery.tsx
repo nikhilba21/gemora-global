@@ -477,12 +477,6 @@ export default function Gallery() {
                             <span className="text-xs font-semibold text-white/60">{result.currency}</span>
                           </p>
                         </div>
-                        <div className="text-right">
-                          <span className="inline-block text-[9px] font-bold bg-white/10 px-2 py-0.5 rounded-full text-white/80">
-                            Base: ₹{result.basePriceINR.toLocaleString()} INR
-                          </span>
-                          <p className="text-[9px] text-white/50 mt-1">Multiplier: {selectedCountry.priceMultiplier}x</p>
-                        </div>
                       </div>
                     );
                   }
