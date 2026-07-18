@@ -21,18 +21,18 @@ interface CountrySetting {
 
 const DEFAULT_COUNTRIES: CountrySetting[] = [
   { code: "IN", name: "India", flag: "🇮🇳", currency: "INR", currencySymbol: "₹", active: true, customPricing: false, priceMultiplier: "1.0" },
-  { code: "US", name: "USA", flag: "🇺🇸", currency: "USD", currencySymbol: "$", active: true, customPricing: true, priceMultiplier: "1.2" },
-  { code: "GB", name: "UK", flag: "🇬🇧", currency: "GBP", currencySymbol: "£", active: true, customPricing: true, priceMultiplier: "1.1" },
-  { code: "AE", name: "UAE", flag: "🇦🇪", currency: "AED", currencySymbol: "AED", active: true, customPricing: true, priceMultiplier: "1.15" },
-  { code: "AU", name: "Australia", flag: "🇦🇺", currency: "AUD", currencySymbol: "A$", active: true, customPricing: false, priceMultiplier: "1.25" },
-  { code: "CA", name: "Canada", flag: "🇨🇦", currency: "CAD", currencySymbol: "C$", active: true, customPricing: false, priceMultiplier: "1.2" },
-  { code: "SG", name: "Singapore", flag: "🇸🇬", currency: "SGD", currencySymbol: "S$", active: true, customPricing: false, priceMultiplier: "1.15" },
-  { code: "MY", name: "Malaysia", flag: "🇲🇾", currency: "MYR", currencySymbol: "RM", active: true, customPricing: false, priceMultiplier: "1.1" },
-  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", currency: "SAR", currencySymbol: "SAR", active: true, customPricing: false, priceMultiplier: "1.2" },
-  { code: "NG", name: "Nigeria", flag: "🇳🇬", currency: "NGN", currencySymbol: "₦", active: true, customPricing: false, priceMultiplier: "1.3" },
-  { code: "LK", name: "Sri Lanka", flag: "🇱🇰", currency: "LKR", currencySymbol: "Rs", active: true, customPricing: false, priceMultiplier: "1.1" },
-  { code: "KW", name: "Kuwait", flag: "🇰🇼", currency: "KWD", currencySymbol: "KD", active: true, customPricing: false, priceMultiplier: "1.2" },
-  { code: "FR", name: "France/Europe", flag: "🇫🇷", currency: "EUR", currencySymbol: "€", active: true, customPricing: true, priceMultiplier: "1.15" }
+  { code: "US", name: "USA", flag: "🇺🇸", currency: "USD", currencySymbol: "$", active: true, customPricing: true, priceMultiplier: "2.0" },
+  { code: "GB", name: "UK", flag: "🇬🇧", currency: "GBP", currencySymbol: "£", active: true, customPricing: true, priceMultiplier: "2.0" },
+  { code: "AE", name: "UAE", flag: "🇦🇪", currency: "AED", currencySymbol: "AED", active: true, customPricing: true, priceMultiplier: "2.0" },
+  { code: "AU", name: "Australia", flag: "🇦🇺", currency: "AUD", currencySymbol: "A$", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "CA", name: "Canada", flag: "🇨🇦", currency: "CAD", currencySymbol: "C$", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "SG", name: "Singapore", flag: "🇸🇬", currency: "SGD", currencySymbol: "S$", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "MY", name: "Malaysia", flag: "🇲🇾", currency: "MYR", currencySymbol: "RM", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", currency: "SAR", currencySymbol: "SAR", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "NG", name: "Nigeria", flag: "🇳🇬", currency: "NGN", currencySymbol: "₦", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "LK", name: "Sri Lanka", flag: "🇱🇰", currency: "LKR", currencySymbol: "Rs", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "KW", name: "Kuwait", flag: "🇰🇼", currency: "KWD", currencySymbol: "KD", active: true, customPricing: false, priceMultiplier: "2.0" },
+  { code: "FR", name: "France/Europe", flag: "🇫🇷", currency: "EUR", currencySymbol: "€", active: true, customPricing: true, priceMultiplier: "2.0" }
 ];
 
 const EXCHANGE_RATES: Record<string, number> = {
