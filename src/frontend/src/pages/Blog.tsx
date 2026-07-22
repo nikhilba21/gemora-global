@@ -186,8 +186,40 @@ export default function Blog() {
     loadData();
   }, [API_BASE]);
 
+  // Helper to determine if a post is newly published (within the last 48 hours)
+  const checkIsNew = (dateStr: string): boolean => {
+    const now = new Date();
+    let publishDate: Date;
+    if (dateStr.includes("T")) {
+      publishDate = new Date(dateStr);
+    } else {
+      publishDate = new Date(`${dateStr}T09:00:00+05:30`);
+    }
+    if (isNaN(publishDate.getTime())) return false;
+    return now.getTime() - publishDate.getTime() <= 48 * 60 * 60 * 1000 && publishDate <= now;
+  };
+
   // Client-side category + search filter (across all combined posts)
   const filtered = backendPosts.filter((post) => {
+    // 1. Check if post is scheduled in the future
+    const now = new Date();
+    let publishDate: Date;
+    if (post.date.includes("T")) {
+      publishDate = new Date(post.date);
+    } else {
+      // Treat YYYY-MM-DD as YYYY-MM-DDT09:00:00+05:30 (India Standard Time)
+      publishDate = new Date(`${post.date}T09:00:00+05:30`);
+    }
+    
+    // If publishDate is invalid, default to showing it
+    if (isNaN(publishDate.getTime())) {
+      publishDate = new Date(0);
+    }
+    
+    if (publishDate > now) {
+      return false; // Skip future scheduled posts
+    }
+
     const matchCat =
       activeCategory === "All" || post.category === activeCategory;
     const q = searchQuery.toLowerCase();
@@ -376,6 +408,11 @@ export default function Blog() {
                       <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow">
                         Spotlight Article
                       </div>
+                      {checkIsNew(spotlightPost.date) && (
+                        <div className="absolute top-4 right-4 bg-red-500 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow animate-pulse">
+                          NEW
+                        </div>
+                      )}
                     </div>
                     <div className="lg:col-span-5 p-6 sm:p-8 md:p-10 flex flex-col justify-center space-y-4">
                       <span className={`inline-block self-start text-xs font-semibold px-3 py-1 rounded-full border ${categoryColors[spotlightPost.category] || "bg-primary/20 text-primary border-primary/30"}`}>
@@ -571,6 +608,11 @@ export default function Blog() {
                                     width={600}
                                     height={375}
                                   />
+                                  {checkIsNew(post.date) && (
+                                    <span className="absolute top-3 right-3 bg-red-500 text-white text-[9px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full shadow z-10 animate-pulse">
+                                      NEW
+                                    </span>
+                                  )}
                                 </div>
                               )}
                               <div className="p-5 space-y-3">

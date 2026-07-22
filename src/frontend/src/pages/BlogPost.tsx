@@ -79,9 +79,19 @@ export default function BlogPostPage() {
   const related = (() => {
     if (!post) return [];
     const all = blogService.getAllPosts();
+    const now = new Date();
     return all
       .filter((p) => p.slug !== slug)
       .filter((p) => p.category === post?.category)
+      .filter((p) => {
+        let pDate: Date;
+        if (p.date.includes("T")) {
+          pDate = new Date(p.date);
+        } else {
+          pDate = new Date(`${p.date}T09:00:00+05:30`);
+        }
+        return isNaN(pDate.getTime()) || pDate <= now;
+      })
       .slice(0, 3);
   })();
 
@@ -158,7 +168,19 @@ export default function BlogPostPage() {
     );
   }
 
-  if (!post) {
+  const isFuturePost = (() => {
+    if (!post || !post.date) return false;
+    const now = new Date();
+    let publishDate: Date;
+    if (post.date.includes("T")) {
+      publishDate = new Date(post.date);
+    } else {
+      publishDate = new Date(`${post.date}T09:00:00+05:30`);
+    }
+    return !isNaN(publishDate.getTime()) && publishDate > now;
+  })();
+
+  if (!post || isFuturePost) {
     return <Navigate to="/404" replace />;
   }
 
