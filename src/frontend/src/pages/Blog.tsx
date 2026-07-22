@@ -175,6 +175,22 @@ export default function Blog() {
         
         // Filter unique by slug
         const uniquePosts = Array.from(new Map(allPosts.map(p => [p.slug, p])).values());
+        
+        // Sort uniquePosts by date descending (safely)
+        uniquePosts.sort((a, b) => {
+          let timeA = 0;
+          if (a.date) {
+            const parsed = a.date.includes("T") ? new Date(a.date) : new Date(`${a.date}T09:00:00+05:30`);
+            timeA = isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+          }
+          let timeB = 0;
+          if (b.date) {
+            const parsed = b.date.includes("T") ? new Date(b.date) : new Date(`${b.date}T09:00:00+05:30`);
+            timeB = isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+          }
+          return timeB - timeA;
+        });
+
         setBackendPosts(uniquePosts);
       } catch (error) {
         console.error("Failed to load blog data:", error);
