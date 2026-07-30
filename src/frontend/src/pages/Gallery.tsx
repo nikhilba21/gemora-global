@@ -855,9 +855,6 @@ export default function Gallery() {
                             <span className="text-[10px] text-white/60">{result.currency}</span>
                           </p>
                         </div>
-                        <span className="text-[9px] bg-white/10 px-2 py-0.5 rounded-full text-white/80">
-                          Base: ₹{result.basePriceINR.toLocaleString()} INR
-                        </span>
                       </div>
                     ) : (
                       <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-2 text-center text-[10px] text-amber-300">
