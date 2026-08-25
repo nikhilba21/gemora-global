@@ -261,6 +261,40 @@ export function usePageSEO(options: PageSEOOptions) {
       priceRange: "$$",
     });
 
+    // WholesaleStore schema — B2B Wholesale Exporter & Manufacturer
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "WholesaleStore",
+      "@id": `${BASE_URL}/#wholesalestore`,
+      name: "Gemora Global - Wholesale Imitation Jewellery Exporter",
+      image: `${BASE_URL}/images/og-banner.jpg`,
+      telephone: "+91-7976341419",
+      email: "globalgemora@gmail.com",
+      url: BASE_URL,
+      priceRange: "$$",
+      paymentAccepted: "Bank Transfer, T/T, L/C, PayPal, Credit Card",
+      currenciesAccepted: "USD, EUR, GBP, AED, CAD, AUD, INR",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "P.NO - 66 MAA HINGLAJ NAGAR B LALARPURA, Gandhi Path Rd, WEST, Vaishali Nagar",
+        addressLocality: "Jaipur",
+        addressRegion: "Rajasthan",
+        postalCode: "302021",
+        addressCountry: "IN",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Wholesale Imitation Jewellery Catalogues 2026",
+        itemListElement: [
+          { "@type": "OfferCatalog", name: "Wholesale Kundan Jewellery" },
+          { "@type": "OfferCatalog", name: "Wholesale Bridal Jewellery Sets" },
+          { "@type": "OfferCatalog", name: "Wholesale Oxidised Jewellery" },
+          { "@type": "OfferCatalog", name: "Wholesale American Diamond Jewellery" },
+          { "@type": "OfferCatalog", name: "Wholesale Antique & Temple Jewellery" },
+        ],
+      },
+    });
+
     // WebSite schema with SearchAction — homepage only
     if (isHomepage) {
       schemas.push({
