@@ -44,21 +44,7 @@ export default function BulkQuoteCart() {
 
   return (
     <>
-      {/* Floating cart button */}
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        aria-label={`Open quote cart — ${totalItems} items`}
-        className="fixed bottom-[88px] right-4 sm:right-6 z-40 w-14 h-14 bg-[#1A237E] hover:bg-[#1A237E]/90 text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 active:scale-95"
-        data-ocid="quote-cart.open_button"
-      >
-        <ShoppingCart className="w-6 h-6" />
-        {totalItems > 0 && (
-          <span className="absolute -top-1 -right-1 bg-[#42A5F5] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center leading-none">
-            {totalItems > 9 ? "9+" : totalItems}
-          </span>
-        )}
-      </button>
+      {/* Floating cart button removed as requested */}
 
       {/* Backdrop */}
       {isOpen && (
