@@ -5,6 +5,7 @@ import AdminGuard from "./components/AdminGuard";
 import BulkQuoteCart from "./components/BulkQuoteCart";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
+import StickyLeadBar from "./components/StickyLeadBar";
 import { useActor } from "./hooks/useActor";
 
 // Loading component
@@ -665,6 +666,7 @@ export default function App() {
       </Suspense>
       <WhatsAppButton />
       <BulkQuoteCart />
+      <StickyLeadBar />
       <Toaster />
     </BrowserRouter>
   );
