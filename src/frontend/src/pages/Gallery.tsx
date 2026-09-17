@@ -20,7 +20,6 @@ interface CountrySetting {
 }
 
 const DEFAULT_COUNTRIES: CountrySetting[] = [
-  { code: "IN", name: "India", flag: "🇮🇳", currency: "INR", currencySymbol: "₹", active: true, customPricing: false, priceMultiplier: "1.0" },
   { code: "US", name: "USA", flag: "🇺🇸", currency: "USD", currencySymbol: "$", active: true, customPricing: true, priceMultiplier: "2.0" },
   { code: "GB", name: "UK", flag: "🇬🇧", currency: "GBP", currencySymbol: "£", active: true, customPricing: true, priceMultiplier: "2.0" },
   { code: "AE", name: "UAE", flag: "🇦🇪", currency: "AED", currencySymbol: "AED", active: true, customPricing: true, priceMultiplier: "2.0" },
@@ -305,7 +304,8 @@ export default function Gallery() {
   const [countriesList] = useState<CountrySetting[]>(() => {
     try {
       const s = localStorage.getItem("gemora_country_settings");
-      return s ? JSON.parse(s) : DEFAULT_COUNTRIES;
+      const list: CountrySetting[] = s ? JSON.parse(s) : DEFAULT_COUNTRIES;
+      return list.filter(c => c.code !== "IN");
     } catch {
       return DEFAULT_COUNTRIES;
     }
@@ -314,12 +314,12 @@ export default function Gallery() {
   const [selectedCountry, setSelectedCountry] = useState<CountrySetting>(() => {
     try {
       const storedCode = localStorage.getItem("gemora_user_country");
-      const activeCountries = countriesList.filter(c => c.active);
+      const activeCountries = countriesList.filter(c => c.active && c.code !== "IN");
       const found = activeCountries.find(c => c.code === storedCode);
       if (found) return found;
-      return activeCountries.find(c => c.code === "US") || activeCountries[0];
+      return activeCountries.find(c => c.code === "US") || activeCountries[0] || DEFAULT_COUNTRIES[0];
     } catch {
-      return countriesList[0];
+      return DEFAULT_COUNTRIES[0];
     }
   });
 
@@ -483,7 +483,7 @@ export default function Gallery() {
                     }}
                     className="w-full text-xs bg-slate-900/80 border border-white/15 rounded-xl px-3 py-2.5 text-white outline-none focus:border-accent/50 cursor-pointer"
                   >
-                    {countriesList.filter(c => c.active).map(c => (
+                    {countriesList.filter(c => c.active && c.code !== "IN").map(c => (
                       <option key={c.code} value={c.code} className="bg-slate-950 text-white">
                         {c.flag} {c.name} ({c.currency})
                       </option>
@@ -713,7 +713,7 @@ export default function Gallery() {
                   }}
                   className="text-xs bg-muted/50 border border-border rounded-xl px-2 py-1.5 outline-none cursor-pointer text-indigo-950 font-semibold"
                 >
-                  {countriesList.filter(c => c.active).map(c => (
+                  {countriesList.filter(c => c.active && c.code !== "IN").map(c => (
                     <option key={c.code} value={c.code}>{c.flag} {c.currency}</option>
                   ))}
                 </select>
@@ -863,7 +863,7 @@ export default function Gallery() {
                         }}
                         className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-2 py-2 text-white outline-none cursor-pointer"
                       >
-                        {countriesList.filter(c => c.active).map(c => (
+                        {countriesList.filter(c => c.active && c.code !== "IN").map(c => (
                           <option key={c.code} value={c.code} className="bg-slate-950">{c.flag} {c.name}</option>
                         ))}
                       </select>

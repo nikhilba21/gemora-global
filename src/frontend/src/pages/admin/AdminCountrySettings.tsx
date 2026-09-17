@@ -15,16 +15,6 @@ interface CountrySetting {
 
 const DEFAULT_COUNTRIES: CountrySetting[] = [
   {
-    code: "IN",
-    name: "India",
-    flag: "🇮🇳",
-    currency: "INR",
-    currencySymbol: "₹",
-    active: true,
-    customPricing: false,
-    priceMultiplier: "1.0",
-  },
-  {
     code: "US",
     name: "USA",
     flag: "🇺🇸",
@@ -150,7 +140,8 @@ export default function AdminCountrySettings() {
   const [countries, setCountries] = useState<CountrySetting[]>(() => {
     try {
       const s = localStorage.getItem("gemora_country_settings");
-      return s ? JSON.parse(s) : DEFAULT_COUNTRIES;
+      const list: CountrySetting[] = s ? JSON.parse(s) : DEFAULT_COUNTRIES;
+      return list.filter((c: CountrySetting) => c.code !== "IN");
     } catch {
       return DEFAULT_COUNTRIES;
     }
