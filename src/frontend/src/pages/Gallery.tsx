@@ -108,15 +108,6 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     startCode: "RJ-280"
   },
   {
-    title: "Mix Jewellery Channel",
-    description: "Join our exclusive WhatsApp channel for live updates on trending mix jewellery collections.",
-    link: "https://whatsapp.com/channel/0029VbB2tVmFsn0aU3xI6N2o",
-    tag: "WhatsApp Live",
-    category: "Western & Daily Wear",
-    imageGradient: "linear-gradient(135deg, #2E7D32 0%, #43A047 100%)",
-    startCode: "RJ-350"
-  },
-  {
     title: "Oxidised Kundan Earrings",
     description: "Antique oxidised earrings with exquisite Kundan stone settings and beadwork.",
     link: "https://photos.app.goo.gl/9pCy9tq7RXbAWoQd9",
