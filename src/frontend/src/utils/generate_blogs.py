@@ -341,5 +341,11 @@ def main():
     except Exception as e:
         print(f"Error writing to target file: {e}")
 
+    try:
+        from auto_sitemap_updater import auto_update_all_sitemaps
+        auto_update_all_sitemaps()
+    except Exception as e:
+        print(f"Auto sitemap update error: {e}")
+
 if __name__ == "__main__":
     main()
