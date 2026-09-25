@@ -350,30 +350,6 @@ export default function Gallery() {
     };
   };
 
-  const getPhotoPriceInfo = (album: GoogleAlbum, idx: number, country: CountrySetting) => {
-    let prefix = "RJ";
-    let num = (idx + 1) * 15;
-    if (album.startCode) {
-      const match = album.startCode.match(/([A-Z]{0,3})[-]?([0-9]+)/i);
-      if (match) {
-        prefix = match[1].toUpperCase() || "RJ";
-        num = parseInt(match[2], 10) + idx;
-      }
-    }
-    const code = `${prefix}-${num}`;
-    const basePriceINR = num * 10;
-    const rate = EXCHANGE_RATES[country.currency] || 0.012;
-    const multiplier = parseFloat(country.priceMultiplier) || 1.0;
-    const finalPrice = basePriceINR * rate * multiplier;
-
-    return {
-      code,
-      finalPrice,
-      currencySymbol: country.currencySymbol,
-      currency: country.currency
-    };
-  };
-
   usePageSEO({
     title: "Imitation Jewellery Photo Gallery — Live Stock Catalogues | Gemora Global",
     description:
@@ -775,50 +751,33 @@ export default function Gallery() {
 
                   {/* Photo Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    {albumImages.map((imageUrl, idx) => {
-                      const priceInfo = getPhotoPriceInfo(selectedAlbum, idx, selectedCountry);
-                      return (
-                        <div
-                          key={idx}
-                          className="relative group border border-border/80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-card aspect-square"
-                          onClick={() => {
-                            setLightboxIdx(idx);
-                            setCalcInput(priceInfo.code);
-                          }}
-                        >
-                          <img
-                            src={imageUrl}
-                            alt={`${selectedAlbum.title} design ${idx + 1}`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                          
-                          {/* Automated 'NEW' Arrival Badge on first 8 images */}
-                          {idx < 8 && (
-                            <div className="absolute top-2.5 left-2.5 bg-green-600 text-white font-extrabold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md animate-pulse z-10">
-                              NEW
-                            </div>
-                          )}
-
-                          {/* Design Code Badge Top Right */}
-                          <div className="absolute top-2.5 right-2.5 bg-slate-900/80 text-white/90 backdrop-blur-md text-[9px] font-mono font-semibold px-2 py-0.5 rounded-md border border-white/10 z-10">
-                            {priceInfo.code}
+                    {albumImages.map((imageUrl, idx) => (
+                      <div
+                        key={idx}
+                        className="relative group border border-border/80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-card aspect-square"
+                        onClick={() => setLightboxIdx(idx)}
+                      >
+                        <img
+                          src={imageUrl}
+                          alt={`${selectedAlbum.title} design ${idx + 1}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        
+                        {/* Automated 'NEW' Arrival Badge on first 8 images */}
+                        {idx < 8 && (
+                          <div className="absolute top-2.5 left-2.5 bg-green-600 text-white font-extrabold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full shadow-md animate-pulse">
+                            NEW
                           </div>
+                        )}
 
-                          {/* Live Wholesale Price Tag Bottom Left */}
-                          <div className="absolute bottom-2.5 left-2.5 bg-slate-950/90 text-emerald-400 backdrop-blur-md font-extrabold text-[10px] sm:text-xs px-2.5 py-1 rounded-xl border border-emerald-500/30 shadow-lg flex items-center gap-1 z-10">
-                            <span>{priceInfo.currencySymbol}{priceInfo.finalPrice.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-                            <span className="text-[9px] text-white/60 font-semibold">{priceInfo.currency}</span>
-                          </div>
-
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                            <span className="bg-white/90 text-indigo-950 font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
-                              <Eye className="w-3.5 h-3.5" /> View & Calculate
-                            </span>
-                          </div>
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="bg-white/90 text-indigo-950 font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
+                            <Eye className="w-3.5 h-3.5" /> View
+                          </span>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
