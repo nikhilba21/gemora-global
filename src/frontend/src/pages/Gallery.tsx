@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import { useCanonical } from "../hooks/useCanonical";
 import { usePageSEO } from "../hooks/usePageSEO";
 import api from "../lib/api";
+import { scanImageCode } from "../utils/imageOcr";
 
 interface CountrySetting {
   code: string;
@@ -324,6 +325,24 @@ export default function Gallery() {
   });
 
   const [calcInput, setCalcInput] = useState("");
+  const [isScanningOcr, setIsScanningOcr] = useState(false);
+
+  useEffect(() => {
+    if (lightboxIdx !== null && selectedAlbum && albumImages[lightboxIdx]) {
+      const currentUrl = albumImages[lightboxIdx];
+      setIsScanningOcr(true);
+      scanImageCode(currentUrl)
+        .then((detectedCode) => {
+          if (detectedCode) {
+            setCalcInput(detectedCode);
+          }
+          setIsScanningOcr(false);
+        })
+        .catch(() => {
+          setIsScanningOcr(false);
+        });
+    }
+  }, [lightboxIdx, selectedAlbum, albumImages]);
 
   const calculatePrice = (codeStr: string, country: CountrySetting) => {
     if (!codeStr) return null;
@@ -871,12 +890,25 @@ export default function Gallery() {
 
                     <div className="space-y-1">
                       <label className="text-[9px] font-bold text-white/60 uppercase flex items-center justify-between">
-                        <span>Type Code From Photo</span>
-                        <span className="text-[8px] text-emerald-400 font-bold lowercase normal-case">💡 Hint: Type only number</span>
+                        <span>Code From Photo</span>
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            if (lightboxIdx === null || !albumImages[lightboxIdx]) return;
+                            setIsScanningOcr(true);
+                            const detected = await scanImageCode(albumImages[lightboxIdx]);
+                            if (detected) setCalcInput(detected);
+                            setIsScanningOcr(false);
+                          }}
+                          className="text-[9px] bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 font-bold px-2 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1 transition-colors cursor-pointer"
+                        >
+                          {isScanningOcr ? <Loader2 className="w-2.5 h-2.5 animate-spin text-emerald-400" /> : <Sparkles className="w-2.5 h-2.5 text-emerald-400" />}
+                          <span>{isScanningOcr ? "Scanning..." : "Auto Detect"}</span>
+                        </button>
                       </label>
                       <input
                         type="text"
-                        placeholder="e.g. RJ-15 or just type 15"
+                        placeholder="e.g. RJ-37 or type 37"
                         value={calcInput}
                         onChange={(e) => setCalcInput(e.target.value)}
                         className="w-full text-xs bg-slate-950 border border-white/15 rounded-xl px-3 py-2 text-white placeholder-white/35 outline-none focus:border-emerald-500/50"
