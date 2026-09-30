@@ -378,8 +378,8 @@ export function usePageSEO(options: PageSEOOptions) {
           "@type": "AggregateRating",
           ratingValue: "4.9",
           reviewCount: "142",
-          bestRating": "5",
-          worstRating": "1",
+          bestRating: "5",
+          worstRating: "1",
         },
         review: [
           {
