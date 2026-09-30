@@ -387,7 +387,7 @@ export function usePageSEO(options: PageSEOOptions) {
             reviewRating: {
               "@type": "Rating",
               ratingValue: "5",
-              bestRating": "5",
+              bestRating: "5",
             },
             author: {
               "@type": "Person",
