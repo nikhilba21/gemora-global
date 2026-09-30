@@ -394,7 +394,7 @@ export function usePageSEO(options: PageSEOOptions) {
               name: "Gemora Global Buyer",
             },
             datePublished: "2026-08-15",
-            reviewBody": "Excellent wholesale quality and fast export clearance.",
+            reviewBody: "Excellent wholesale quality and fast export clearance.",
           },
         ],
         offers: {
