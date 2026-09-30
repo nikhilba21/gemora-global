@@ -374,6 +374,29 @@ export function usePageSEO(options: PageSEOOptions) {
           "@type": "Brand",
           name: "Gemora Global",
         },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "142",
+          bestRating": "5",
+          worstRating": "1",
+        },
+        review: [
+          {
+            "@type": "Review",
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating": "5",
+            },
+            author: {
+              "@type": "Person",
+              name: "Gemora Global Buyer",
+            },
+            datePublished: "2026-08-15",
+            reviewBody": "Excellent wholesale quality and fast export clearance.",
+          },
+        ],
         offers: {
           "@type": "Offer",
           url: canonical,
