@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 export default function BridalJewelleryWholesale() {
   return (
     <SeoLandingPage
-      title="Bridal Jewellery Wholesale Supplier India | Gemora"
-      metaDescription="Complete wholesale bridal jewellery sets from India. Source premium Kundan, Polki, and Zircon bridal sets for wedding boutiques. Factory-direct pricing, custom colours, global shipping."
+      title="Bridal Jewellery Wholesale | Kundan & Polki Sets | Export Ready"
+      metaDescription="Wholesale bridal jewellery sets from Jaipur. Kundan, Polki, American Diamond bridal sets. MOQ 10 sets, anti-tarnish, export packaging. Global delivery."
       canonical="https://www.gemoraglobal.co/bridal-jewellery-wholesale"
-      h1="Bridal Jewellery Wholesale — Complete Sets from India"
-      targetKeyword="bridal imitation jewellery wholesale"
-      heroSubtitle="Gemora Global is India's leading wholesale manufacturer and exporter of premium complete B2B bridal jewellery sets. Direct-from-factory pricing on royal Kundan, Polki enameled, and micro-CZ bridal sets. Five-tier bulk discounts from MOQ 50 sets — express worldwide door-to-door logistics."
+      h1="Bridal Jewellery Wholesale – Complete Sets for Global Boutiques"
+      targetKeyword="bridal jewellery wholesale"
+      heroSubtitle="Source complete 5-piece and 7-piece Indian bridal jewellery sets direct from Jaipur manufacturer. Royal Kundan, Meenakari, and American Diamond bridal sets for wedding boutiques, rentals, and global exporters."
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },
@@ -17,6 +17,35 @@ export default function BridalJewelleryWholesale() {
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ B2B Bridal Wholesale Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">👑</span>
+                <strong className="text-primary font-bold">MOQ 10 Bridal Sets</strong>
+                <span className="text-muted-foreground text-xs">Low MOQ for wedding parure sets</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⏱️</span>
+                <strong className="text-primary font-bold">10–15 Days Custom Lead Time</strong>
+                <span className="text-muted-foreground text-xs">Custom color matching available</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✨</span>
+                <strong className="text-primary font-bold">Anti-Tarnish Plated</strong>
+                <span className="text-muted-foreground text-xs">Ideal for high-ROI rental business</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">📦</span>
+                <strong className="text-primary font-bold">Export Box Packaging</strong>
+                <span className="text-muted-foreground text-xs">Custom velvet boxes & inserts</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             Why Bridal Imitation Jewelry represents the Highest-Ticket B2B Category
           </h2>

@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function JewelleryExporterUae() {
   return (
     <SeoLandingPage
-      title="Jewellery Exporter to UAE | Indian Wholesale Bridal & Fashion"
-      metaDescription="Trusted Indian jewellery exporter to Dubai, Abu Dhabi, and Sharjah. We supply wholesale Kundan and Bridal sets to UAE boutiques with express 5-day delivery."
+      title="Imitation Jewellery Supplier UAE | Wholesale from India | Gemora Global"
+      metaDescription="Trusted imitation jewellery supplier for UAE boutiques. Fast shipping from Jaipur, MOQ 50, anti-tarnish quality. Kundan, bridal & fashion jewellery."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-uae"
-      h1="Premium Indian Jewellery Export to UAE & GCC Markets"
-      targetKeyword="jewellery-exporter-uae"
-      heroSubtitle="Gemora Global is the leading Indian jewellery exporter to the UAE, supplying wholesale imitation, bridal, and fashion jewellery direct from our Jaipur factory. Zero import duty via CEPA, 5-day Dubai shipping, and premium Gulf-grade anti-tarnish coating."
+      h1="Imitation Jewellery Supplier UAE – Direct Wholesale from Jaipur"
+      targetKeyword="imitation jewellery supplier UAE"
+      heroSubtitle="Direct factory wholesale imitation jewellery supplier for Dubai, Abu Dhabi & UAE fashion boutiques. Zero import duty via CEPA, 3–5 day express Dubai shipping, and anti-tarnish Kundan, bridal & CZ jewellery. MOQ 50 units."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -19,6 +19,35 @@ export default function JewelleryExporterUae() {
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              🇦🇪 UAE B2B Export Highlights & Local Shipping
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🤝</span>
+                <strong className="text-primary font-bold">CEPA Zero Duty</strong>
+                <span className="text-muted-foreground text-xs">Duty-free import to Dubai & UAE</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">3–5 Days Dubai Shipping</strong>
+                <span className="text-muted-foreground text-xs">Express Air via DHL/FedEx</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">👑</span>
+                <strong className="text-primary font-bold">Kundan & Heavy Bridal</strong>
+                <span className="text-muted-foreground text-xs">Top selling for GCC weddings</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct factory wholesale</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             Premium Indian Imitation Jewellery Exporter to UAE — Dubai, Abu Dhabi, Sharjah & GCC
           </h2>

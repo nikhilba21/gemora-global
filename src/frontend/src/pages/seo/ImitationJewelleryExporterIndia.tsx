@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function ImitationJewelleryExporterIndia() {
   return (
     <SeoLandingPage
-      title="Wholesale Jewelry Exporter India | MOQ 50 Units | Gemora Global"
-      metaDescription="Leading wholesale jewelry exporter in India. Source kundan, meenakari and bridal imitation jewelry directly from Jaipur factory. MOQ 50 units. Exporting to 30+ countries."
+      title="Imitation Jewellery Exporter India | Artificial Jewellery Export | Gemora Global"
+      metaDescription="Leading imitation jewellery exporter from Jaipur, India. Export quality artificial jewellery to 30+ countries. MOQ 50, full documentation, DHL/FedEx shipping."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-exporter-india"
-      h1="Wholesale Jewelry Exporter India — Factory Direct from Jaipur"
-      targetKeyword="wholesale jewelry exporter india"
-      heroSubtitle="Established 2011, Gemora Global is India's leading DGFT-registered direct-from-factory wholesale exporter of premium imitation, ethnic, and CZ fashion jewellery. Complete export custom clearances, bilateral FTA optimization, and door-to-door air freight to 30+ countries."
+      h1="Imitation Jewellery Exporter from India – Gemora Global"
+      targetKeyword="imitation jewellery exporter india"
+      heroSubtitle="Gemora Global is a premier DGFT-registered imitation jewellery exporter from Jaipur, India. Factory-direct Kundan, Polki, AD, and Oxidised jewellery exported to 30+ countries with full custom documentation and door-to-door express air delivery."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -19,6 +19,35 @@ export default function ImitationJewelleryExporterIndia() {
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ B2B Export Credentials & Standards
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">📜</span>
+                <strong className="text-primary font-bold">HS Code 7117.19</strong>
+                <span className="text-muted-foreground text-xs">Standard export classification</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🌍</span>
+                <strong className="text-primary font-bold">30+ Export Countries</strong>
+                <span className="text-muted-foreground text-xs">USA, UK, UAE, Canada, EU</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">📄</span>
+                <strong className="text-primary font-bold">Complete Documentation</strong>
+                <span className="text-muted-foreground text-xs">Invoice, COO, AWB, Duty forms</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">DHL / FedEx Express</strong>
+                <span className="text-muted-foreground text-xs">3–5 business days air delivery</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             Why Gemora Global Is a Trusted Imitation Jewellery Exporter
           </h2>

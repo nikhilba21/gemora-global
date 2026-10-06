@@ -4,25 +4,54 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function JhumkaEarringsWholesale() {
   return (
     <SeoLandingPage
-      title="Jhumka Earrings Wholesale Bulk | Jaipur Manufacturer | Gemora Global"
-      metaDescription="Leading Jhumka earrings wholesale supplier in India. Source bulk kundan, meenakari, and oxidized Jhumkas directly from manufacturer. MOQ 50 units. Worldwide shipping."
-      canonical="https://www.gemoraglobal.co/jhumka-earrings-wholesale-bulk"
-      h1="Jhumka Earrings Wholesale Bulk"
-      targetKeyword="jhumka earrings wholesale bulk"
-      heroSubtitle="Discover the largest collection of Jhumka earrings at wholesale prices. Gemora Global is a leading Jaipur manufacturer of ethnic and modern Jhumkas. MOQ 50 units per design."
+      title="Jhumka Earrings Wholesale | Traditional & Modern Designs | MOQ 50"
+      metaDescription="Wholesale jhumka earrings from Jaipur manufacturer. Traditional, modern & bridal jhumkas. Factory prices, anti-tarnish, export quality. MOQ 50 units."
+      canonical="https://www.gemoraglobal.co/jhumka-earrings-wholesale"
+      h1="Jhumka Earrings Wholesale – Direct from Jaipur Factory"
+      targetKeyword="jhumka earrings wholesale"
+      heroSubtitle="Explore India's largest wholesale jhumka earrings catalogue direct from Jaipur factory. Traditional Kundan, Oxidised silver, Meenakari, and American Diamond jhumkas with anti-tarnish finishing. MOQ 50 units."
       hreflangs={[
-        { lang: "en", url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale-bulk" },
-        { lang: "x-default", url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale-bulk" },
+        { lang: "en", url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale" },
+        { lang: "x-default", url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale" },
       ]}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         {
           name: "Jhumka Earrings Wholesale",
-          url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale-bulk",
+          url: "https://www.gemoraglobal.co/jhumka-earrings-wholesale",
         },
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ Jhumka Earrings Wholesale Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Pairs</strong>
+                <span className="text-muted-foreground text-xs">Mix & match designs</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⏱️</span>
+                <strong className="text-primary font-bold">10–15 Days Dispatch</strong>
+                <span className="text-muted-foreground text-xs">Ready stock dispatches in 48h</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✨</span>
+                <strong className="text-primary font-bold">Anti-Tarnish Plating</strong>
+                <span className="text-muted-foreground text-xs">Hypoallergenic & lead-free</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">Global Express Air</strong>
+                <span className="text-muted-foreground text-xs">3–5 days to UAE, UK, USA</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             The Timeless Appeal and Royal History of Jhumka Earrings
           </h2>

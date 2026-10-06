@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function ImitationJewellerySupplierUsa() {
   return (
     <SeoLandingPage
-      title="Artificial Jewelry Bulk Supplier USA Export | Gemora Global"
-      metaDescription="Premium artificial jewelry bulk supplier for USA export. Source handcrafted Indian fashion jewelry with DHL shipping and 50 unit MOQ."
+      title="Imitation Jewellery Supplier USA | Wholesale from India | Gemora Global"
+      metaDescription="Top imitation jewellery supplier for USA boutiques & Amazon sellers. Direct from Jaipur, MOQ 50, anti-tarnish e-coating. Fast DHL express shipping."
       canonical="https://www.gemoraglobal.co/imitation-jewellery-supplier-usa"
-      h1="Artificial Jewelry Bulk Supplier for USA Export"
-      targetKeyword="artificial jewelry bulk supplier usa export"
-      heroSubtitle="Gemora Global is the most trusted artificial jewelry bulk supplier for USA boutiques, Amazon sellers, and fashion retailers. Factory-direct USA export from Jaipur."
+      h1="Imitation Jewellery Supplier USA – Direct Wholesale from Jaipur"
+      targetKeyword="imitation jewellery supplier USA"
+      heroSubtitle="Leading wholesale imitation jewellery supplier for US fashion boutiques, Amazon & Shopify sellers. Factory-direct from Jaipur, US Prop 65 compliant lead & nickel free, fast 3–5 day DHL express shipping to NYC, Dallas, LA & Chicago."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -53,8 +53,37 @@ export default function ImitationJewellerySupplierUsa() {
       ]}
       bodyContent={
         <>
-<h2 className="text-xl font-serif font-bold text-primary mt-0">
-            1. Sourcing B2B imitation jewellery supplier usa — Direct from our Jaipur Factory
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              🇺🇸 USA B2B Sourcing & Export Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🛡️</span>
+                <strong className="text-primary font-bold">US Prop 65 Compliant</strong>
+                <span className="text-muted-foreground text-xs">Lead-free & nickel-free</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">3–5 Days DHL Express</strong>
+                <span className="text-muted-foreground text-xs">Direct door-to-door to US cities</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">📦</span>
+                <strong className="text-primary font-bold">Amazon FBA Prep</strong>
+                <span className="text-muted-foreground text-xs">Polybagging & barcode labeling</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct Jaipur factory prices</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            1. Sourcing Artificial Jewelry Wholesale for USA Boutiques & Sellers
           </h2>
           <p>
             The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in United States, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves. Sourcing B2B imitation jewellery supplier usa has never been more straightforward or highly lucrative when aligning your business directly with a verified, primary source.

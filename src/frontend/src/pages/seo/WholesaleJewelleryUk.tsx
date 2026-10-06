@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function WholesaleJewelleryUk() {
   return (
     <SeoLandingPage
-      title="Indian Wholesale Jewellery Supplier UK | Handcrafted in Jaipur"
-      metaDescription="Direct source for wholesale imitation jewellery in London, Birmingham, and Manchester. Gemora Global offers 1700+ designs with DHL delivery to UK boutiques."
+      title="Wholesale Jewellery Exporter UK | Artificial Jewellery Supplier | Gemora Global"
+      metaDescription="Supplying UK fashion retailers & boutiques with anti-tarnish artificial jewellery from Jaipur, India. Lead-free, nickel-free, MOQ 50. 3-5 days air shipping."
       canonical="https://www.gemoraglobal.co/wholesale-jewellery-uk"
-      h1="Bespoke Indian Wholesale Jewellery for the UK Market"
-      targetKeyword="wholesale-jewellery-uk"
-      heroSubtitle="Gemora Global is the UK's leading direct-from-factory wholesale partner for premium Indian imitation, ethnic, and CZ fashion jewellery. Complete HMRC compliance, post-Brexit EORI documentation, and 5-day express air freight to UK boutiques."
+      h1="Wholesale Jewellery Exporter UK – Direct from Jaipur Factory"
+      targetKeyword="wholesale jewellery exporter UK"
+      heroSubtitle="Direct-from-factory wholesale artificial & Indian jewellery supplier to London, Birmingham, Manchester & UK retailers. UK REACH compliant nickel & lead free, Postponed VAT Accounting ready, 3–5 day express air shipping."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -41,6 +41,35 @@ export default function WholesaleJewelleryUk() {
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              🇬🇧 UK B2B Sourcing & Shipping Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🛡️</span>
+                <strong className="text-primary font-bold">UK REACH Compliant</strong>
+                <span className="text-muted-foreground text-xs">Nickel, lead & cadmium free</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">3–5 Days UK Air Delivery</strong>
+                <span className="text-muted-foreground text-xs">London, Birmingham, Manchester</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🧾</span>
+                <strong className="text-primary font-bold">PVA Accounting Ready</strong>
+                <span className="text-muted-foreground text-xs">Postponed import VAT support</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct factory pricing</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             Leading Wholesale Jewellery Supplier for the UK — London, Birmingham, Manchester &amp; Glasgow
           </h2>

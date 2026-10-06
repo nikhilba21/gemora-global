@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 export default function JewelleryExporterMalaysia() {
   return (
     <SeoLandingPage
-      title="Jewellery Exporter to Malaysia | Indian Wholesale Fashion Supplier"
-      metaDescription="Premium Indian imitation jewellery exporter for Kuala Lumpur and Little India markets. Source handcrafted Temple and Bridal jewellery for Malaysian boutiques with fast shipping."
+      title="Imitation Jewellery Supplier Malaysia | Wholesale India Export | Gemora Global"
+      metaDescription="Direct factory wholesale artificial jewellery supplier to Kuala Lumpur, Penang & Malaysian retailers. Kundan, jhumka, bridal sets. MOQ 50."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-malaysia"
-      h1="Indian Ethnic Jewellery Wholesale for Malaysia &amp; SE Asia"
-      targetKeyword="imitation jewellery exporter Malaysia wholesale"
-      heroSubtitle="Gemora Global is Malaysia's trusted direct-from-factory wholesale partner for premium Indian imitation, temple, and bridal fashion jewellery. Supplying boutiques, Little India retailers, and e-commerce platforms across Kuala Lumpur, Penang, and Johor Bahru with AIFTA optimization."
+      h1="Imitation Jewellery Supplier Malaysia – Factory Direct Wholesale"
+      targetKeyword="imitation jewellery supplier Malaysia"
+      heroSubtitle="Direct factory wholesale artificial & Indian jewellery supplier to Kuala Lumpur, Penang, Little India & Malaysian retailers. AIFTA Form AI duty optimization, express air shipping, anti-tarnish Kundan, Temple & Jhumka jewellery. MOQ 50 units."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -68,8 +68,37 @@ export default function JewelleryExporterMalaysia() {
       ]}
       bodyContent={
         <>
-<h2 className="text-xl font-serif font-bold text-primary mt-0">
-            1. Sourcing B2B imitation jewellery exporter Malaysia wholesale Penang — Direct from our Jaipur Factory
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              🇲🇾 Malaysia B2B Wholesale Highlights & Shipping
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🤝</span>
+                <strong className="text-primary font-bold">AIFTA Form AI Ready</strong>
+                <span className="text-muted-foreground text-xs">Duty concessions for Malaysian buyers</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">3–5 Days Air Shipping</strong>
+                <span className="text-muted-foreground text-xs">Kuala Lumpur, Penang & Johor</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🌺</span>
+                <strong className="text-primary font-bold">Festive & Ethnic Range</strong>
+                <span className="text-muted-foreground text-xs">Diwali, Hari Raya & Wedding collections</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct factory pricing</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            1. Sourcing B2B Artificial & Indian Jewellery Wholesale for Malaysia
           </h2>
           <p>
             The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Malaysia, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves. Sourcing B2B imitation jewellery exporter Malaysia wholesale Penang has never been more straightforward or highly lucrative when aligning your business directly with a verified, primary source.

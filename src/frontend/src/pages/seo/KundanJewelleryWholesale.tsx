@@ -4,14 +4,43 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function KundanJewelleryWholesale() {
   return (
     <SeoLandingPage
-      title="Kundan Jewelry Exporter | Wholesale MOQ 50 Units | Gemora Global"
-      metaDescription="Leading Kundan jewelry exporter from Jaipur. Source bulk kundan necklace sets directly from Gemora Global factory. Low MOQ 50 units & global export to USA, UK, UAE."
+      title="Kundan Jewellery Wholesale | Traditional Jaipur Designs | MOQ 50"
+      metaDescription="Wholesale Kundan jewellery from Jaipur manufacturer. Traditional & modern Kundan sets. Factory direct, anti-tarnish, export ready. MOQ 50 units."
       canonical="https://www.gemoraglobal.co/kundan-jewellery-wholesale"
-      h1="Kundan Jewelry Exporter — Wholesale MOQ 50 Units"
-      targetKeyword="kundan jewelry exporter"
-      heroSubtitle="Gemora Global is the leading kundan jewelry exporter and wholesale manufacturer from Jaipur, India. Handcrafted B2B kundan bridal sets, Rani Haars, and chandbalis direct from our factory. Five-tier bulk pricing from MOQ 50 units — worldwide door-to-door express delivery."
+      h1="Kundan Jewellery Wholesale – Handcrafted Jaipur Designs"
+      targetKeyword="kundan jewellery wholesale"
+      heroSubtitle="Source authentic Jaipur Kundan & Polki jewellery wholesale direct from factory. Chokers, bridal sets, Rani Haars, and Meenakari Kundan pieces with anti-tarnish coating. MOQ 50 units."
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ Jaipur Kundan Wholesale Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">👑</span>
+                <strong className="text-primary font-bold">Authentic Jaipur Craft</strong>
+                <span className="text-muted-foreground text-xs">Handcrafted Polki & Kundan</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct factory pricing</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✨</span>
+                <strong className="text-primary font-bold">Anti-Tarnish E-Coating</strong>
+                <span className="text-muted-foreground text-xs">18k/22k Gold micro-plated</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🎨</span>
+                <strong className="text-primary font-bold">Meenakari Backing</strong>
+                <span className="text-muted-foreground text-xs">Traditional enameled reverse</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             The Royal Heritage and Global Appeal of Kundan Jewellery
           </h2>

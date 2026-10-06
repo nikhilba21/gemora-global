@@ -5,12 +5,12 @@ import { EXPORT_HREFLANG_CLUSTER } from "../lib/seo-constants";
 export default function JewelleryExporterNigeria() {
   return (
     <SeoLandingPage
-      title="Jewellery Exporter to Nigeria | Indian Wholesale Fashion for Lagos"
-      metaDescription="Premium Indian imitation jewellery exporter for Lagos and Abuja markets. Source handcrafted statement jewellery and gold-plated sets for Nigerian boutiques with 50 unit MOQ."
+      title="Imitation Jewellery Supplier Nigeria | Wholesale India Exporter | Gemora Global"
+      metaDescription="Exporting heavy Kundan, bridal & gold-plated fashion jewellery to Lagos & Nigerian boutiques. Factory direct wholesale pricing, MOQ 50."
       canonical="https://www.gemoraglobal.co/jewellery-exporter-nigeria"
-      h1="Indian Fashion Jewellery Wholesale for Nigeria & West Africa"
-      targetKeyword="imitation jewellery exporter Nigeria wholesale Africa"
-      heroSubtitle="Gemora Global exports premium wholesale Indian imitation jewellery from Jaipur to Nigerian boutiques, Lagos fashion retailers, and West African distributors. Colourful statement pieces, gold-plated sets, and bridal collections suited for Nigeria's vibrant fashion market. MOQ from 50 units, factory-direct pricing."
+      h1="Imitation Jewellery Supplier Nigeria – Direct Wholesale from Jaipur"
+      targetKeyword="imitation jewellery supplier Nigeria"
+      heroSubtitle="Exporting high-shine gold-plated, heavy Kundan, and statement bridal fashion jewellery from Jaipur directly to Lagos, Abuja, and Nigerian boutiques. Factory direct wholesale pricing, anti-tarnish coating, MOQ 50 units."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -53,8 +53,37 @@ export default function JewelleryExporterNigeria() {
       ]}
       bodyContent={
         <>
-<h2 className="text-xl font-serif font-bold text-primary mt-0">
-            1. Sourcing B2B imitation jewellery exporter Nigeria wholesale Africa — Direct from our Jaipur Factory
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              🇳🇬 Nigeria B2B Sourcing & Shipping Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✨</span>
+                <strong className="text-primary font-bold">24k High-Shine Gold Plating</strong>
+                <span className="text-muted-foreground text-xs">Vibrant statement designs</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">5–7 Days Lagos Air Cargo</strong>
+                <span className="text-muted-foreground text-xs">DHL/FedEx express door-to-door</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">👑</span>
+                <strong className="text-primary font-bold">Heavy Bridal & Asoebi</strong>
+                <span className="text-muted-foreground text-xs">Matching traditional wedding sets</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Direct factory wholesale prices</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            1. Sourcing B2B Artificial & Gold-Plated Jewellery Wholesale for Nigeria
           </h2>
           <p>
             The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Nigeria, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves. Sourcing B2B imitation jewellery exporter Nigeria wholesale Africa has never been more straightforward or highly lucrative when aligning your business directly with a verified, primary source.

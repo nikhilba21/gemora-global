@@ -5,56 +5,77 @@ import { EXPORT_HREFLANG_CLUSTER } from "../../lib/seo-constants";
 export default function ArtificialJewelleryWholesale() {
   return (
     <SeoLandingPage
-      title="Artificial Jewellery Wholesale | India's Top Supplier — Gemora Global"
-      metaDescription="Buy artificial jewellery wholesale from India's leading manufacturer Gemora Global, Jaipur. 1700+ designs, anti-tarnish, MOQ 50 units. Export to USA, UK, UAE, Australia."
+      title="Artificial Jewellery Wholesale | Factory Direct Jaipur | MOQ 50"
+      metaDescription="Buy artificial jewellery wholesale from Jaipur manufacturer. MOQ 50 units, anti-tarnish, export ready. 500+ designs for boutiques & distributors worldwide."
       canonical="https://www.gemoraglobal.co/artificial-jewellery-wholesale"
-      h1="Artificial Jewellery Wholesale — India's Top Manufacturer & Exporter"
+      h1="Artificial Jewellery Wholesale – Factory Direct from Jaipur"
       targetKeyword="artificial jewellery wholesale"
-      heroSubtitle="Gemora Global is India's top artificial jewellery wholesale manufacturer. 1700+ designs, factory-direct pricing, anti-tarnish gold & rhodium plating. MOQ 50 units. Trusted by 500+ retailers in USA, UK, UAE, and 30 other countries. Est. 2011."
+      heroSubtitle="Buy artificial jewellery wholesale directly from our Jaipur manufacturing unit. Eliminate middleman markups, access 500+ anti-tarnish designs, start with MOQ 50 units, and enjoy fast express air shipping to 30+ countries worldwide."
       hreflangs={EXPORT_HREFLANG_CLUSTER}
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Wholesale", url: "https://www.gemoraglobal.co/wholesale" },
-        { name: "Global Wholesalers", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" }
+        { name: "Artificial Jewellery Wholesale", url: "https://www.gemoraglobal.co/artificial-jewellery-wholesale" }
       ]}
       faqs={[
         {
-          q: "What is your MOQ for B2B buyers?",
-          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online Shopify brands to test a wide range of designs in the local market with minimal capital investment.",
+          q: "What is the Minimum Order Quantity (MOQ)?",
+          a: "Our MOQ is exceptionally low at just 50 units per design. This enables boutique owners and online stores to test diverse styles with minimal risk.",
+        },
+        {
+          q: "What is your typical production and order lead time?",
+          a: "Ready-to-ship stock dispatches within 48 hours. Custom bulk production orders take 10 to 15 working days depending on order size.",
         },
         {
           q: "Is your jewellery compliant with international safety standards?",
           a: "Yes. All our jewelry is cast in refined, lead-free and cadmium-free brass alloys, and plated in strictly hypoallergenic, nickel-free gold or rhodium baths, ensuring full compliance with EU REACH and US Prop 65 safety regulations.",
         },
         {
-          q: "How does the anti-tarnish E-Coating protect plated jewelry?",
-          a: "Plated pieces are submerged in an organic lacquer bath under electrical currents, depositing a microscopic protective layer. This transparent seal prevents sweat, moisture, and air from reacting with the gold plating, extending showroom storage life by up to 12 months.",
+          q: "Do you offer private label manufacturing and custom logo packaging?",
+          a: "Yes! We provide custom private label branding, custom logo velvet pouches, box inserts, and OEM design manufacturing directly from our Jaipur factory.",
+        },
+        {
+          q: "Which countries do you export and ship to?",
+          a: "We ship worldwide to 30+ countries including USA, UK, UAE, Australia, Canada, Singapore, France, Germany, Malaysia, and Nigeria via DHL & FedEx Express (3–5 business days).",
         },
         {
           q: "What payment terms do you offer wholesale buyers?",
-          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal (up to $5,000). Our standard terms are 30% advance deposit on order confirmation, and the remaining 70% paid after final pre-shipment quality control approval.",
-        },
-        {
-          q: "Do you offer private label branded packaging directly at the factory?",
-          a: "Yes. For orders reaching Tier 4 (1,000+ units), we can fully brand and customize your velvet pouches, card inserts, and folding gift boxes with your brand logo and corporate colors directly at our Jaipur factory.",
-        },
-        {
-          q: "What is the HTS code for imitation jewelry imported from India?",
-          a: "Imitation jewelry is classified under Chapter 7117 — specifically 7117.19 for base metal jewelry and 7117.90 for other materials. We ensure all shipping paperwork features the correct HTS code.",
-        },
-        {
-          q: "Can I get a custom sample before placing a bulk order?",
-          a: "Yes. We offer sample sets for qualified B2B buyers, shipped via DHL Express. Sample costs are fully credited against your first bulk order.",
-        },
-        {
-          q: "How long does shipping from Jaipur to Global Wholesalers take?",
-          a: "Express shipping via DHL or FedEx takes 5–8 business days from our Jaipur factory to major global markets.",
+          a: "We accept secure international bank wire transfers (SWIFT/TT), credit cards, and PayPal. Standard terms are 30% advance deposit and 70% before final dispatch.",
         }
       ]}
       bodyContent={
         <>
-<h2 className="text-xl font-serif font-bold text-primary mt-0">
-            1. Sourcing B2B artificial jewellery wholesale — Direct from our Jaipur Factory
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ Key B2B Wholesale Benefits
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Low capital entry for boutiques</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⏱️</span>
+                <strong className="text-primary font-bold">10–15 Days Lead Time</strong>
+                <span className="text-muted-foreground text-xs">Fast production & dispatch</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✨</span>
+                <strong className="text-primary font-bold">Anti-Tarnish E-Coating</strong>
+                <span className="text-muted-foreground text-xs">12+ months tarnish barrier</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🏷️</span>
+                <strong className="text-primary font-bold">Private Label Available</strong>
+                <span className="text-muted-foreground text-xs">Custom logo packaging</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 className="text-xl font-serif font-bold text-primary mt-0">
+            1. Sourcing Artificial Jewellery Wholesale — Direct from our Jaipur Factory
           </h2>
           <p>
             The global fashion accessory and bridge jewelry retail market is experiencing a massive growth wave, heavily driven by shifting consumer preferences towards expressive, affordable luxury. Traditional fine jewelry is increasingly being reserved for high-security storage, while high-quality **costume, bridal, and imitation jewelry** dominates everyday wear and festive styling. For boutiques, e-commerce brand owners, and B2B distributors in Global Wholesalers, establishing a direct manufacturing partnership with our Jaipur factory is the single most effective way to secure high profit margins. Sourcing directly from Gemora Global eliminates high-cost local trading agents who typically add a 40% margin, unlocking retail markups ranging from 400% to 600% when our products reach your store shelves. Sourcing B2B artificial jewellery wholesale has never been more straightforward or highly lucrative when aligning your business directly with a verified, primary source.

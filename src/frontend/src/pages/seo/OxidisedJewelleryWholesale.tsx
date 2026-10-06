@@ -4,12 +4,12 @@ import SeoLandingPage from "../../components/SeoLandingPage";
 export default function OxidisedJewelleryWholesale() {
   return (
     <SeoLandingPage
-      title="Oxidised Jewellery Wholesale India | Gemora Global"
-      metaDescription="Premium oxidised jewellery wholesale from India. Antique silver-finish necklaces, earrings & bracelets in bulk. Low MOQ, worldwide export from Jaipur."
+      title="Oxidised Jewellery Wholesale | Silver Look Ethnic Designs | Export"
+      metaDescription="Wholesale oxidised jewellery from Jaipur. Ethnic, boho & traditional oxidised pieces. Lightweight, anti-tarnish, MOQ 50. Perfect for global ethnic markets."
       canonical="https://www.gemoraglobal.co/oxidised-jewellery-wholesale"
-      h1="Oxidised Jewellery Wholesale Supplier India"
+      h1="Oxidised Jewellery Wholesale – German Silver & Ethnic Boho Designs"
       targetKeyword="oxidised jewellery wholesale"
-      heroSubtitle="Gemora Global is India's leading direct-from-factory wholesale manufacturer and exporter of premium oxidised tribal, boho, and German silver jewellery. Handcrafted antique silver-finish Jhumkas, statement necklaces, bracelets, and rings. Low MOQ of 50 units — worldwide door-to-door express logistics."
+      heroSubtitle="Direct factory wholesale oxidised silver jewellery manufacturer in Jaipur. Ethnic Jhumkas, boho neckpieces, bangles, and statement rings with anti-tarnish protective lacquer. MOQ 50 units."
       breadcrumbs={[
         { name: "Home", url: "https://www.gemoraglobal.co/" },
         { name: "Products", url: "https://www.gemoraglobal.co/products" },
@@ -17,6 +17,35 @@ export default function OxidisedJewelleryWholesale() {
       ]}
       bodyContent={
         <>
+          {/* Key Benefits Callout Box */}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-4 sm:p-6 mb-8 not-prose">
+            <h3 className="text-base sm:text-lg font-bold text-primary mb-3 text-center sm:text-left">
+              ⭐ Oxidised Jewellery Wholesale Highlights
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs sm:text-sm">
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🌿</span>
+                <strong className="text-primary font-bold">German Silver & Boho</strong>
+                <span className="text-muted-foreground text-xs">Rustic antique finish</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">⚡</span>
+                <strong className="text-primary font-bold">MOQ 50 Units</strong>
+                <span className="text-muted-foreground text-xs">Low minimum wholesale</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">🪶</span>
+                <strong className="text-primary font-bold">Lightweight & Comfortable</strong>
+                <span className="text-muted-foreground text-xs">Ideal for daily wear & festivals</span>
+              </div>
+              <div className="bg-background p-3 rounded-lg border border-primary/10 flex flex-col items-center text-center">
+                <span className="text-lg mb-1">✈️</span>
+                <strong className="text-primary font-bold">Global Shipping</strong>
+                <span className="text-muted-foreground text-xs">Express air to UK, USA, UAE</span>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-xl font-serif font-bold text-primary mt-0">
             The Bohemian Revolution: Sourcing the Darkened Aesthetic of Antique Silver
           </h2>
