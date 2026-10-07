@@ -23,6 +23,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/peridot-meaning-stone-of-renewal",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/symbolism-in-design-hidden-language-motifs",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
       "source": "/blog/global-delivery-solutions-for-wholesalers",
       "destination": "/wholesale-imitation-jewellery-manufacturer-exporter-india",
       "permanent": true
