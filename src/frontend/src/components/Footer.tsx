@@ -30,6 +30,8 @@ function InstagramIcon() {
 /* ── SEO-Optimized Footer Link Data ─────────────────────────────────────────── */
 
 const WHOLESALE_CATEGORIES = [
+  { label: "Artificial Jewellery Wholesale", to: "/artificial-jewellery-wholesale" },
+  { label: "Jhumka Earrings Wholesale", to: "/jhumka-earrings-wholesale" },
   { label: "Wholesale Kundan Jewelry Exporter", to: "/kundan-jewellery-wholesale" },
   { label: "Wholesale Bridal Jewelry Sets", to: "/wholesale-bridal-jewelry-sets" },
   { label: "Wholesale Necklace Sets Exporter", to: "/necklace-sets-wholesale-exporter" },
@@ -47,6 +49,7 @@ const WHOLESALE_CATEGORIES = [
 ];
 
 const MANUFACTURER_EXPORTER = [
+  { label: "Imitation Jewellery Exporter", to: "/imitation-jewellery-exporter" },
   { label: "Artificial Jewelry Manufacturer Jaipur", to: "/imitation-jewellery-manufacturer-jaipur" },
   { label: "Wholesale Jewelry Exporter India", to: "/imitation-jewellery-exporter-india" },
   { label: "Jewelry Wholesale No Middleman", to: "/wholesale-jewelry-no-middleman" },
