@@ -95,6 +95,29 @@ export default function BlogPostPage() {
       .slice(0, 3);
   })();
 
+  const isNavratriPost = post
+    ? (post.title + " " + post.slug + " " + (post.content || "")).toLowerCase().includes("navratri") ||
+      (post.title + " " + post.slug + " " + (post.content || "")).toLowerCase().includes("garba") ||
+      (post.title + " " + post.slug + " " + (post.content || "")).toLowerCase().includes("dandiya")
+    : false;
+
+  const navratriFaqItems = isNavratriPost
+    ? [
+        {
+          q: "What is the Minimum Order Quantity (MOQ) for Navratri & Garba Wholesale Jewellery?",
+          a: "The minimum order quantity (MOQ) is 50 units per design. Gemora Global offers factory-direct bulk pricing on Jaipur oxidised silver chokers, jhumkas, and Kundan sets for boutiques worldwide.",
+        },
+        {
+          q: "How fast can Navratri wholesale shipments be delivered to USA, UK, UAE & Canada?",
+          a: "Shipments are dispatched directly from our Jaipur factory via DHL Express, FedEx Priority, and UPS with door-to-door delivery in 3 to 5 business days.",
+        },
+        {
+          q: "Is Gemora Global's Navratri oxidised jewellery anti-tarnish and nickel-free?",
+          a: "Yes, all oxidised silver, Kundan, and gold-plated jewellery items feature an organic protective e-coating layer and are 100% lead-free, nickel-free, and hypoallergenic.",
+        },
+      ]
+    : undefined;
+
   usePageSEO({
     title: post ? `${post.title} | Gemora Global` : "Page Not Found | Gemora Global",
     description: post
@@ -108,6 +131,7 @@ export default function BlogPostPage() {
     ogTitle: post ? post.title : "Page Not Found | Gemora Global",
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage: getSafeBlogImage(post),
+    faqItems: navratriFaqItems,
     breadcrumbs: post
       ? [
           { name: "Home", url: "https://www.gemoraglobal.co/" },
@@ -247,6 +271,48 @@ export default function BlogPostPage() {
                 {post.readTime}
               </span>
             </div>
+
+            {/* Navratri Peak Season Express Stock Banner */}
+            {isNavratriPost && (
+              <div className="my-8 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-purple-500/10 p-6 md:p-8 shadow-xl relative overflow-hidden">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <div className="space-y-2 max-w-xl">
+                    <div className="inline-block bg-amber-500 text-black text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-1">
+                      🔥 Navratri Express Dispatch Available
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-amber-300">
+                      Looking for Wholesale Navratri & Garba Jewellery Stock?
+                    </h3>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      Gemora Global provides factory-direct bulk supply on Jaipur Oxidised Silver Chokers, Mirror-Work Jhumkas, Meenakari & Kundan Sets with <strong className="text-foreground">MOQ 50 units</strong> and 3-5 days express air cargo shipping to USA, UK, UAE, Canada, Australia & worldwide.
+                    </p>
+                    <div className="flex flex-wrap gap-2 pt-2 text-xs text-amber-200/90 font-medium">
+                      <span>✓ Anti-Tarnish E-Coated</span>
+                      <span>•</span>
+                      <span>✓ 3-5 Days DHL/FedEx</span>
+                      <span>•</span>
+                      <span>✓ Factory Direct Pricing</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto flex-shrink-0">
+                    <Link
+                      to="/collections/oxidised-jewelry"
+                      className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-amber-500 text-black font-semibold text-xs hover:bg-amber-400 transition-all shadow-md text-center"
+                    >
+                      View Oxidised Stock
+                    </Link>
+                    <a
+                      href="https://wa.me/917976341419?text=Hi%20Gemora%20Global,%20I%20am%20looking%20for%20Navratri%20Wholesale%20Jewellery%20Stock"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs hover:bg-emerald-500 transition-all shadow-md text-center"
+                    >
+                      WhatsApp Express Quote
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Body text — text-base (16px) on mobile */}
             {isHtmlContent ? (
