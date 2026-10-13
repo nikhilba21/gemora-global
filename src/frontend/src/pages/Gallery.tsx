@@ -54,6 +54,7 @@ interface GoogleAlbum {
   title: string;
   description: string;
   link: string;
+  links?: string[];
   tag: string;
   category: "American Diamond (AD)" | "Traditional & Kundan" | "Western & Daily Wear";
   imageGradient: string;
@@ -69,6 +70,19 @@ const GOOGLE_ALBUMS: GoogleAlbum[] = [
     category: "Traditional & Kundan",
     imageGradient: "linear-gradient(135deg, #8E24AA 0%, #D81B60 100%)",
     startCode: "RJ-10"
+  },
+  {
+    title: "RJ-Jhumka Collection",
+    description: "Traditional and designer jhumkas featuring regular drops and small top handcrafted designs.",
+    link: "https://photos.google.com/share/AF1QipMI8L47wrFwCj4-v9-d-Tq6VF4IOakV_AE93xRp7TawzSa4ikLaae0EnaB1h2aH4Q?key=ZWM5c2RZU25sbTJwRzcwWGRVMWVRRzVTQjZxMEVR",
+    links: [
+      "https://photos.google.com/share/AF1QipMI8L47wrFwCj4-v9-d-Tq6VF4IOakV_AE93xRp7TawzSa4ikLaae0EnaB1h2aH4Q?key=ZWM5c2RZU25sbTJwRzcwWGRVMWVRRzVTQjZxMEVR",
+      "https://photos.google.com/share/AF1QipMqmZwNEbtUUPSKOXYax5T2sEgUuTBD8tQ7hM8uFS3AwxvCp1lvn6oAtFGe0VqKbA?key=aUZMR2YxemF4T1d2d2cyX0RmVnZaVXZ2clUxelJR"
+    ],
+    tag: "Royal Jhumkas",
+    category: "Traditional & Kundan",
+    imageGradient: "linear-gradient(135deg, #880E4F 0%, #C2185B 100%)",
+    startCode: "RJ-25"
   },
   {
     title: "RJ-Anti Tarnish Imported Jewellery",
@@ -353,7 +367,7 @@ export default function Gallery() {
   usePageSEO({
     title: "Imitation Jewellery Photo Gallery — Live Stock Catalogues | Gemora Global",
     description:
-      "Explore our 21 live digital jewelry gallery collections. Synced directly from our workshop. Browse real-time new arrivals for Kundan, Bridal, AD, and Anti-tarnish jewelry.",
+      `Explore our ${GOOGLE_ALBUMS.length} live digital jewelry gallery collections. Synced directly from our workshop. Browse real-time new arrivals for Kundan, Bridal, AD, and Anti-tarnish jewelry.`,
     canonical: "https://www.gemoraglobal.co/gallery",
   });
 
@@ -388,22 +402,61 @@ export default function Gallery() {
     });
   }, [search, activeTab]);
 
-  // Load Album Images dynamically
+  // Load Album Images dynamically (supports single or multiple URLs + instant data caching)
   const handleOpenAlbum = async (album: GoogleAlbum) => {
     setSelectedAlbum(album);
     setLoadingAlbum(true);
     setAlbumError("");
     setAlbumImages([]);
     try {
-      const data = await api.getGooglePhotos(album.link);
-      if (data && Array.isArray(data.images) && data.images.length > 0) {
-        const formatted = data.images.map(url => `${url}=w600-h600-c`);
-        setAlbumImages(formatted);
+      const combined: string[] = [];
+      const seen = new Set<string>();
+
+      // Instant preloaded dataset for large collections like RJ-Jhumka Collection (695 items)
+      if (album.title === "RJ-Jhumka Collection") {
+        try {
+          const preRes = await fetch("/data/jhumkaPhotos.json");
+          if (preRes.ok) {
+            const preData = await preRes.json();
+            if (Array.isArray(preData.images) && preData.images.length > 0) {
+              for (const url of preData.images) {
+                if (!seen.has(url)) {
+                  seen.add(url);
+                  combined.push(`${url}=w600-h600-c`);
+                }
+              }
+              setAlbumImages([...combined]);
+            }
+          }
+        } catch (_) {}
+      }
+
+      // Live fetch from Google Photos via backend proxy
+      const urls = album.links && album.links.length > 0 ? album.links : [album.link];
+      const results = await Promise.all(
+        urls.map(u => api.getGooglePhotos(u).catch(() => ({ images: [] })))
+      );
+
+      for (const res of results) {
+        if (res && Array.isArray(res.images)) {
+          for (const url of res.images) {
+            if (!seen.has(url)) {
+              seen.add(url);
+              combined.push(`${url}=w600-h600-c`);
+            }
+          }
+        }
+      }
+
+      if (combined.length > 0) {
+        setAlbumImages(combined);
       } else {
         setAlbumError("No images found in this live collection yet.");
       }
     } catch (e) {
-      setAlbumError("Failed to fetch live collection. Please try again later.");
+      if (albumImages.length === 0) {
+        setAlbumError("Failed to fetch live collection. Please try again later.");
+      }
     } finally {
       setLoadingAlbum(false);
     }
@@ -437,7 +490,7 @@ export default function Gallery() {
             Jewellery Design Gallery
           </h1>
           <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto mb-6 leading-relaxed">
-            Explore our 21 live digital gallery collections synced straight from our factory. Start your dream online reselling business with <strong>0 investment</strong>! Any new stocks added are automatically tagged and updated.
+            Explore our {GOOGLE_ALBUMS.length} live digital gallery collections synced straight from our factory. Start your dream online reselling business with <strong>0 investment</strong>! Any new stocks added are automatically tagged and updated.
           </p>
           <div className="flex flex-wrap justify-center gap-2 text-xs">
             <span className="bg-white/15 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm">🚀 0 Investment Start</span>
