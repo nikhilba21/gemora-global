@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 export default function WhatsAppButton() {
   const location = useLocation();
@@ -10,6 +11,7 @@ export default function WhatsAppButton() {
       href={`https://wa.me/917976341419?text=${prefilledMessage}`}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppInquiry(location.pathname, "floating_button")}
       className="fixed bottom-[135px] md:bottom-[96px] right-4 sm:right-6 z-50 flex items-center gap-2 px-4 py-3 rounded-full bg-green-600 hover:bg-green-500 text-white shadow-2xl transition-all duration-300 hover:scale-105 group border border-green-400/30"
       aria-label="Chat on WhatsApp for Wholesale Price List"
     >

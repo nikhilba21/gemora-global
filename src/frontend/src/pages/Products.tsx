@@ -63,7 +63,9 @@ export default function Products() {
       : "Browse over 500+ wholesale imitation jewellery designs in Kundan, Bridal, Antique, and Fashion styles from Gemora Global Jaipur.",
     canonical: activeCategory 
       ? `https://www.gemoraglobal.co/products/${activeCategory.slug}`
-      : "https://www.gemoraglobal.co/products",
+      : categorySlug
+        ? `https://www.gemoraglobal.co/products/${categorySlug}`
+        : "https://www.gemoraglobal.co/products",
     category: activeCategory ? (activeCategory as any) : undefined,
     breadcrumbs: [
       { name: "Home", url: "https://www.gemoraglobal.co/" },

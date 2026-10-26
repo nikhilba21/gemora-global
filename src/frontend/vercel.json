@@ -23,13 +23,8 @@
       "permanent": true
     },
     {
-      "source": "/blog/peridot-meaning-stone-of-renewal",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
-      "source": "/blog/symbolism-in-design-hidden-language-motifs",
-      "destination": "/blog",
+      "source": "/return-policy",
+      "destination": "/return-refund-cancellation-policy",
       "permanent": true
     },
     {

@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { FlaskConical, Mail, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { trackWhatsAppInquiry, trackFormInquiry } from "../utils/analytics";
 
 const WHATSAPP_ICON = (
   <svg
@@ -127,6 +128,7 @@ export default function RequestSampleModal({
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+    trackWhatsAppInquiry(productName || "sample_request", "sample_request_whatsapp");
     const msg = buildMessage();
     window.open(
       `https://wa.me/917976341419?text=${encodeURIComponent(msg)}`,
@@ -139,6 +141,7 @@ export default function RequestSampleModal({
   const handleEmail = (e: React.MouseEvent) => {
     e.preventDefault();
     if (!validate()) return;
+    trackFormInquiry(productName || "sample_request_email");
     const subject = `Sample Request: ${productName}`;
     const body = buildMessage();
     window.open(

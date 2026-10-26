@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 import WhatsAppInquiryPopup from "./WhatsAppInquiryPopup";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 export default function StickyLeadBar() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function StickyLeadBar() {
           href={`https://wa.me/917976341419?text=${prefilledMessage}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppInquiry("mobile_sticky_bar", "sticky_quote")}
           className="flex-1 inline-flex items-center justify-center gap-1.5 bg-green-600 hover:bg-green-500 text-white font-bold text-xs py-2.5 px-3 rounded-xl shadow-md transition-all active:scale-95"
         >
           <MessageCircle className="w-4 h-4 fill-white flex-shrink-0" />

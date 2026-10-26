@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 interface WhatsAppInquiryPopupProps {
   isOpen: boolean;
@@ -87,6 +88,8 @@ export default function WhatsAppInquiryPopup({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+
+    trackWhatsAppInquiry(productName || "catalog_popup", "popup_submission");
 
     const parts = [
       `Hi GEMORA GLOBAL! I am interested in: ${productName}.`,

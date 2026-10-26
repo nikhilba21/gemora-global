@@ -27,7 +27,6 @@ ALL_PAGE_ROUTES = [
     ("/imitation-jewellery-supplier-usa", "0.9", "weekly"),
     ("/wholesale-jewellery-uk", "0.9", "weekly"),
     ("/jewellery-exporter-uae", "0.9", "weekly"),
-    ("/imitation-jewellery-supplier-uae", "0.9", "weekly"),
     ("/jewellery-exporter-australia", "0.9", "weekly"),
     ("/jewellery-exporter-canada", "0.9", "weekly"),
     ("/jewellery-exporter-singapore", "0.9", "weekly"),
@@ -163,7 +162,22 @@ def auto_update_all_sitemaps():
         '  </url>'
     ]
     
+    # Load redirects from vercel.json to ensure no redirected URL enters sitemaps
+    vercel_path = os.path.join(public_dir, "..", "vercel.json")
+    redirected_paths = set()
+    if os.path.exists(vercel_path):
+        try:
+            with open(vercel_path, "r", encoding="utf-8") as vf:
+                vdata = json.load(vf)
+                for r in vdata.get("redirects", []):
+                    redirected_paths.add(r.get("source"))
+        except Exception as e:
+            print(f"Error loading vercel.json: {e}")
+
     for slug, d_str in sorted_blogs:
+        blog_path = f"/blog/{slug}"
+        if blog_path in redirected_paths:
+            continue
         xml_lines.append('  <url>')
         xml_lines.append(f'    <loc>{BASE_URL}/blog/{slug}</loc>')
         xml_lines.append(f'    <lastmod>{d_str}</lastmod>')
