@@ -4,6 +4,7 @@ import { FileText, MessageCircle, ShoppingCart, Trash2, X } from "lucide-react";
 import { useState } from "react";
 import { useQuoteCart } from "../hooks/useQuoteCart";
 import PDFQuoteGenerator from "./PDFQuoteGenerator";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 export default function BulkQuoteCart() {
   const {
@@ -22,6 +23,7 @@ export default function BulkQuoteCart() {
 
   const handleWhatsAppQuote = () => {
     if (items.length === 0) return;
+    trackWhatsAppInquiry("bulk_quote_cart", "cart_whatsapp_quote");
     const itemLines = items.map(
       (item) =>
         `• ${item.productName} (${item.category}): ${item.quantity} pcs`,

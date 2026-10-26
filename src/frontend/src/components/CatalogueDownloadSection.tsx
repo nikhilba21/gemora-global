@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Download, FileText, Loader2, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import api, { type Catalogue } from "../lib/api";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 
 export default function CatalogueDownloadSection({ limit }: { limit?: number }) {
   const { data: catalogues, isLoading } = useQuery<Catalogue[]>({
@@ -35,6 +36,7 @@ export default function CatalogueDownloadSection({ limit }: { limit?: number }) 
           href="https://wa.me/917976341419?text=Hi%20Gemora%20Global%2C%20I%20need%20the%20latest%20wholesale%20catalogue"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppInquiry("catalogues_section", "whatsapp_catalogue_request")}
           className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-full transition-colors"
         >
           Request via WhatsApp

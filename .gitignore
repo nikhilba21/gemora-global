@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Production build outputs
+dist/
+build/
+out/
+.output/
+
+# Vite & bundler caches
+.vite/
+.vite-temp/
+.turbo/
+.cache/
+
+# Testing & coverage
+coverage/
+*.lcov
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE & OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Scratch & temporary analysis scripts
+scratch/
+__pycache__/
+*.pyc
+
+# Motoko / DFX build artifacts
+.dfx/
+.mops/

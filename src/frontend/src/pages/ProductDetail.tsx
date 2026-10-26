@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import BulkOrderCalculator from "../components/BulkOrderCalculator";
 import { usePageSEO } from "../hooks/usePageSEO";
 import { useState } from "react";
+import { trackWhatsAppInquiry } from "../utils/analytics";
 import {
   Share2,
   Package,
@@ -381,6 +382,7 @@ export default function ProductDetail() {
             {/* CTAs */}
             <div className="flex flex-col gap-2.5">
               <a href={waInquiry} target="_blank" rel="noopener noreferrer"
+                onClick={() => trackWhatsAppInquiry(product.name, "product_page_inquiry")}
                 className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-white text-sm transition-all hover:opacity-90 active:scale-[0.98]"
                 style={{ background: "#25D366" }} data-ocid="product.whatsapp_inquiry">
                 <WAIcon className="w-5 h-5" /> WhatsApp Inquiry
@@ -390,19 +392,26 @@ export default function ProductDetail() {
                 <button type="button"
                   className="flex items-center justify-center gap-1.5 py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-primary/5"
                   style={{ borderColor: "#1A237E", color: "#1A237E" }}
-                  onClick={() => window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to add ${product.name} to my quote.`)}`, "_blank")}
+                  onClick={() => {
+                    trackWhatsAppInquiry(product.name, "product_add_to_quote");
+                    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to add ${product.name} to my quote.`)}`, "_blank");
+                  }}
                   data-ocid="product.add_to_quote">
                   <Plus className="w-4 h-4" /> Add to Quote
                 </button>
                 <button type="button"
                   className="flex items-center justify-center gap-1.5 py-3 rounded-xl font-semibold text-sm border border-border transition-all hover:bg-muted/50"
-                  onClick={() => window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to request a sample of ${product.name}.`)}`, "_blank")}
+                  onClick={() => {
+                    trackWhatsAppInquiry(product.name, "product_request_sample");
+                    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi, I'd like to request a sample of ${product.name}.`)}`, "_blank");
+                  }}
                   data-ocid="product.request_sample">
                   <Package className="w-4 h-4" /> Request Sample
                 </button>
               </div>
 
               <a href={waSend} target="_blank" rel="noopener noreferrer"
+                onClick={() => trackWhatsAppInquiry(product.name, "product_send_inquiry")}
                 className="flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-white text-sm transition-all hover:opacity-90"
                 style={{ background: "#1A237E" }} data-ocid="product.send_inquiry">
                 <Send className="w-4 h-4" /> Send Inquiry →
