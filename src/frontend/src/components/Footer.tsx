@@ -95,7 +95,7 @@ const BLOG_LINKS = [
   { label: "Bridal Jewellery for International Buyers", to: "/blog/bridal-jewellery-collections-international-buyers" },
   { label: "Export Jewellery India to USA Guide", to: "/blog/export-jewellery-india-usa-guide" },
   { label: "Wholesale Jewelry MOQ 50 Units Guide", to: "/blog/wholesale-jewelry-moq-50-units-guide" },
-  { label: "Kundan Jewelry Wholesale Guide 2026", to: "/blog/kundan-jewelry-wholesale-guide-2026" },
+  { label: "Kundan Jewelry Wholesale Guide 2026", to: "/blog/wholesale-kundan-jewellery-jaipur-guide" },
   { label: "How to Import Jewelry from India", to: "/blog/how-to-import-jewelry-from-india-guide" },
 ];
 

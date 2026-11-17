@@ -156,6 +156,8 @@ export default function ProductDetail() {
     queryKey: ["product", id],
     queryFn: () => api.getProduct(id as string),
     enabled: !!id,
+    retry: 2,
+    staleTime: 1000 * 60 * 30,
   });
 
   const { data: allProductsData } = useQuery({
@@ -190,18 +192,24 @@ export default function ProductDetail() {
   ] : [];
 
   usePageSEO({
-    title: product ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global` : "Product Not Found | Gemora Global",
-    description: product ? (`${product.name} wholesale from Jaipur, India. ${product.moq} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155) : "The product you are looking for does not exist on Gemora Global.",
-    canonical: product ? `https://www.gemoraglobal.co/products/item/${product.id}` : undefined,
-    robots: isLoading ? "index, follow" : (isSuccess && !product ? "noindex, follow" : "index, follow"),
-    googlebot: isLoading ? undefined : (isSuccess && !product ? "noindex, follow" : undefined),
+    title: product
+      ? `${product.name} | Wholesale Imitation Jewellery | Gemora Global`
+      : isLoading
+        ? `Wholesale Jewellery Design #${id} | Gemora Global Jaipur`
+        : `Wholesale Jewellery Design #${id} | Gemora Global`,
+    description: product
+      ? (`${product.name} wholesale from Jaipur, India. ${product.moq || "50 units"} MOQ. Anti-tarnish gold plating. Ideal for boutiques and distributors. Shipping worldwide.`).substring(0, 155)
+      : `Handcrafted wholesale imitation jewellery design #${id} from Jaipur, India. Anti-tarnish gold plating, export quality, MOQ 50 units. Worldwide express shipping.`,
+    canonical: `https://www.gemoraglobal.co/products/item/${id}`,
+    robots: (isSuccess && !product) ? "noindex, follow" : "index, follow",
+    googlebot: (isSuccess && !product) ? "noindex, follow" : undefined,
     ogImage: product?.imageUrls?.[0],
     product: product as any,
     faqItems,
     breadcrumbs: [
       { name: "Home", url: "https://www.gemoraglobal.co/" },
       { name: "Products", url: "https://www.gemoraglobal.co/products" },
-      ...(product ? [{ name: product.name, url: `https://www.gemoraglobal.co/products/item/${product.id}` }] : []),
+      { name: product ? product.name : `Design #${id}`, url: `https://www.gemoraglobal.co/products/item/${id}` },
     ],
   });
 
@@ -209,13 +217,30 @@ export default function ProductDetail() {
     return (
       <div className="min-h-screen bg-background">
         <Navbar />
-        <div className="container py-10 grid md:grid-cols-2 gap-10">
-          <div className="h-[500px] bg-muted rounded-2xl animate-pulse" />
-          <div className="space-y-4 pt-4">
-            <div className="h-4 w-48 bg-muted rounded animate-pulse" />
-            <div className="h-8 w-full bg-muted rounded animate-pulse" />
-            <div className="h-20 w-full bg-muted rounded animate-pulse" />
-            <div className="h-16 w-full bg-muted rounded animate-pulse" />
+        <div className="container py-8 md:py-10">
+          <nav className="flex items-center gap-1.5 text-xs text-muted-foreground mb-6">
+            <Link to="/" className="hover:text-foreground">Home</Link>
+            <ChevronRight className="w-3 h-3" />
+            <Link to="/products" className="hover:text-foreground">Products</Link>
+            <ChevronRight className="w-3 h-3" />
+            <span className="text-foreground">Item #{id}</span>
+          </nav>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="h-[450px] bg-muted/60 rounded-2xl animate-pulse flex items-center justify-center text-muted-foreground/40 text-sm">
+              Loading Product Imagery...
+            </div>
+            <div className="space-y-4 pt-2">
+              <span className="inline-block text-xs uppercase tracking-wider font-semibold text-primary/80 bg-primary/10 px-3 py-1 rounded-full">
+                Jaipur Wholesale Collection
+              </span>
+              <h1 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+                Wholesale Jewellery Design #{id}
+              </h1>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Premium factory-direct wholesale imitation jewellery piece handcrafted by master Karigars in Jaipur, India. Features proprietary anti-tarnish micro-coating, 50-unit minimum order quantity, and insured worldwide door-to-door express delivery.
+              </p>
+              <div className="h-28 bg-muted/40 rounded-xl animate-pulse" />
+            </div>
           </div>
         </div>
         <Footer />
@@ -224,7 +249,38 @@ export default function ProductDetail() {
   }
 
   if (!product) {
-    return <Navigate to="/404" replace />;
+    return (
+      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
+        <Navbar />
+        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
+          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/40 backdrop-blur-md rounded-2xl border border-border shadow-lg">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              Design Currently In Production or Restocking
+            </h1>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+              Design #{id} is currently being restocked or updated in our Jaipur ateliers. Explore our available wholesale collections or contact our export team directly via WhatsApp for the latest live catalogue.
+            </p>
+            <div className="pt-2 flex flex-wrap justify-center gap-3">
+              <Link
+                to="/products"
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-md hover:bg-primary/90 transition-all min-h-[44px]"
+              >
+                Browse All Wholesale Products
+              </Link>
+              <a
+                href={`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi Gemora Global, I am inquiring about product item #${id} from your wholesale catalogue.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-green-600 text-white px-6 py-3 text-sm font-semibold tracking-wide shadow-md hover:bg-green-500 transition-all min-h-[44px]"
+              >
+                Inquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   const images = product.imageUrls?.length > 0 ? product.imageUrls : ["/placeholder.jpg"];

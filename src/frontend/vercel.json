@@ -28,6 +28,26 @@
       "permanent": true
     },
     {
+      "source": "/products/1001",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kundan-jewelry-wholesale-guide-2026",
+      "destination": "/blog/wholesale-kundan-jewellery-jaipur-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/top-imitation-jewellery-trends-export-2026",
+      "destination": "/blog/top-imitation-jewellery-trends-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-label-jewellery-india-guide",
+      "destination": "/blog/private-label-jewellery-indian-suppliers",
+      "permanent": true
+    },
+    {
       "source": "/blog/global-delivery-solutions-for-wholesalers",
       "destination": "/wholesale-imitation-jewellery-manufacturer-exporter-india",
       "permanent": true

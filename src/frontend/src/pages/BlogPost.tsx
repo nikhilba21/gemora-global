@@ -118,30 +118,37 @@ export default function BlogPostPage() {
       ]
     : undefined;
 
+  // Convert slug to readable title fallback on frame 0
+  const readableSlugTitle = slug
+    ? slug
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (l) => l.toUpperCase())
+    : "Wholesale Jewellery Guide";
+
   usePageSEO({
-    title: post ? `${post.title} | Gemora Global` : "Page Not Found | Gemora Global",
+    title: post
+      ? `${post.title} | Gemora Global`
+      : isLoading
+        ? `${readableSlugTitle} | Gemora Global Blog`
+        : "Wholesale Jewellery Insights | Gemora Global",
     description: post
       ? (post.excerpt || '').slice(0, 155)
-      : "The blog page you are looking for does not exist on Gemora Global.",
-    canonical: post
-      ? `https://www.gemoraglobal.co/blog/${post.slug}`
-      : "https://www.gemoraglobal.co/blog",
-    robots: isLoading ? "index, follow" : (isSuccess && !post ? "noindex, follow" : "index, follow"),
-    googlebot: isLoading ? undefined : (isSuccess && !post ? "noindex, follow" : undefined),
-    ogTitle: post ? post.title : "Page Not Found | Gemora Global",
+      : `Wholesale jewellery guide on ${readableSlugTitle}. Expert manufacturing, export insights, and styling tips from Gemora Global Jaipur.`,
+    canonical: `https://www.gemoraglobal.co/blog/${slug}`,
+    robots: (isSuccess && !post) ? "noindex, follow" : "index, follow",
+    googlebot: (isSuccess && !post) ? "noindex, follow" : undefined,
+    ogTitle: post ? post.title : `${readableSlugTitle} | Gemora Global`,
     ogDescription: post ? (post.excerpt || '').slice(0, 155) : undefined,
     ogImage: getSafeBlogImage(post),
     faqItems: navratriFaqItems,
-    breadcrumbs: post
-      ? [
-          { name: "Home", url: "https://www.gemoraglobal.co/" },
-          { name: "Blog", url: "https://www.gemoraglobal.co/blog" },
-          {
-            name: post.title,
-            url: `https://www.gemoraglobal.co/blog/${post.slug}`,
-          },
-        ]
-      : undefined,
+    breadcrumbs: [
+      { name: "Home", url: "https://www.gemoraglobal.co/" },
+      { name: "Blog", url: "https://www.gemoraglobal.co/blog" },
+      {
+        name: post ? post.title : readableSlugTitle,
+        url: `https://www.gemoraglobal.co/blog/${slug}`,
+      },
+    ],
     schema: post
       ? {
           "@context": "https://schema.org",
@@ -179,12 +186,16 @@ export default function BlogPostPage() {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Navbar />
-        <main className="pt-16">
-          <div className="relative h-56 sm:h-72 md:h-96 bg-muted animate-pulse" />
+        <main className="pt-20">
           <div className="container max-w-3xl px-4 py-8 md:py-12 space-y-4">
-            <div className="h-8 bg-muted rounded w-2/3 animate-pulse" />
-            <div className="h-4 bg-muted rounded animate-pulse" />
-            <div className="h-4 bg-muted rounded w-5/6 animate-pulse" />
+            <span className="inline-block text-xs uppercase tracking-wider font-semibold text-primary/80 bg-primary/10 px-3 py-1 rounded-full">
+              Gemora Global Wholesale Insights
+            </span>
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+              {readableSlugTitle}
+            </h1>
+            <div className="h-4 bg-muted rounded w-2/3 animate-pulse" />
+            <div className="h-48 bg-muted/60 rounded-xl animate-pulse mt-4" />
           </div>
         </main>
         <Footer />
@@ -192,20 +203,37 @@ export default function BlogPostPage() {
     );
   }
 
-  const isFuturePost = (() => {
-    if (!post || !post.date) return false;
-    const now = new Date();
-    let publishDate: Date;
-    if (post.date.includes("T")) {
-      publishDate = new Date(post.date);
-    } else {
-      publishDate = new Date(`${post.date}T09:00:00+05:30`);
-    }
-    return !isNaN(publishDate.getTime()) && publishDate > now;
-  })();
-
-  if (!post || isFuturePost) {
-    return <Navigate to="/404" replace />;
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
+        <Navbar />
+        <main className="pt-24 pb-16 flex-grow flex items-center justify-center">
+          <div className="container max-w-xl px-6 py-12 text-center space-y-6 bg-card/40 backdrop-blur-md rounded-2xl border border-border shadow-lg">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
+              Article In Review & Publishing
+            </h1>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+              This B2B wholesale guide is currently undergoing editorial review and scheduled updates. Browse our latest published guides or connect with our team on WhatsApp for immediate export catalogues.
+            </p>
+            <div className="pt-2 flex flex-wrap justify-center gap-3">
+              <Link
+                to="/blog"
+                className="inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold tracking-wide shadow-md hover:bg-primary/90 transition-all min-h-[44px]"
+              >
+                Browse All Guides
+              </Link>
+              <Link
+                to="/wholesale"
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold tracking-wide hover:bg-muted transition-all min-h-[44px]"
+              >
+                Wholesale Information
+              </Link>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   const isHtmlContent = post.content?.includes("<") ?? false;

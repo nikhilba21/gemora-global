@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 import { ChevronDown, ChevronRight, Filter, Grid2X2, Grid3X3, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { usePageSEO } from "../hooks/usePageSEO";
@@ -24,6 +24,16 @@ const CAT_COLORS: Record<string, string> = {
 interface Category { id: number; name: string; slug: string; description: string; imageUrl: string; sortOrder: number; }
 interface Product { id: number | bigint; name: string; categoryId: number | bigint; imageUrls: string[]; moq: string; subcategory?: string; sku?: string; featured: boolean; }
 
+const DEFAULT_CATEGORIES: Category[] = [
+  { id: 11, name: "Imitation Jewellery", slug: "imitation-jewellery", description: "Jaipur's finest imitation jewellery wholesale collection. Export-grade bridal, festive, and daily wear designs.", imageUrl: "/assets/categories/imitation.jpg", sortOrder: 1 },
+  { id: 12, name: "Antique Jewellery", slug: "antique-jewellery", description: "Traditional Jaipur antique jewellery wholesale. Matte gold and mehndi finish chokers, necklaces, and bangles.", imageUrl: "/assets/categories/antique.jpg", sortOrder: 2 },
+  { id: 13, name: "Kundan Jewellery", slug: "kundan-jewellery", description: "Handcrafted Jadau Kundan and Meenakari bridal jewellery sets from Jaipur artisans. MOQ 50 units.", imageUrl: "/assets/categories/kundan.jpg", sortOrder: 3 },
+  { id: 14, name: "American Diamond Jewellery", slug: "american-diamond-jewellery", description: "Wholesale CZ and American Diamond jewellery with 18k rhodium and rose gold micro-plating.", imageUrl: "/assets/categories/ad.jpg", sortOrder: 4 },
+  { id: 15, name: "Indo Western Jewellery", slug: "indo-western-jewellery", description: "Contemporary fusion Indo-Western jewellery for international retail boutiques and fashion brands.", imageUrl: "/assets/categories/indo-western.jpg", sortOrder: 5 },
+  { id: 16, name: "Western Jewellery", slug: "western-jewellery", description: "Modern minimalist and anti-tarnish western jewellery collections for global distribution.", imageUrl: "/assets/categories/western.jpg", sortOrder: 6 },
+  { id: 17, name: "Oxidised Jewellery", slug: "oxidised-jewellery", description: "Authentic German silver and tribal oxidised jewellery manufactured in Jaipur. Worldwide shipping.", imageUrl: "/assets/categories/oxidised.jpg", sortOrder: 7 },
+];
+
 export default function Products() {
   const { categorySlug } = useParams<{ categorySlug?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -39,14 +49,14 @@ export default function Products() {
   const API_BASE = (import.meta as { env: Record<string,string> }).env?.VITE_API_URL
     || 'https://gemora-global-2.onrender.com';
 
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [categories, setCategories] = useState<Category[]>(DEFAULT_CATEGORIES);
   const [allSubcats, setAllSubcats] = useState<Record<string, { subcategory: string; count: number }[]>>({});
   const [products, setProducts] = useState<Product[]>([]);
   const [totalPages, setTotalPages] = useState(0);
   const [totalCount, setTotalCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Active category object
+  // Active category object (immediately available from DEFAULT_CATEGORIES on frame 0)
   const activeCategory = useMemo(() =>
     categories.find(c => c.slug === categorySlug) || null,
     [categories, categorySlug]
@@ -311,6 +321,10 @@ export default function Products() {
       })}
     </div>
   );
+
+  if (categorySlug && /^\d+$/.test(categorySlug)) {
+    return <Navigate to="/products" replace />;
+  }
 
   return (
     <div className="min-h-screen bg-background">

@@ -1284,7 +1284,7 @@ export default function Home() {
                 excerpt:
                   "What boutiques in UAE, France, and UK are buying this season — from Kundan sets to minimal Indo Western jewellery.",
                 category: "Trends",
-                slug: "top-imitation-jewellery-trends-export-2026",
+                slug: "top-imitation-jewellery-trends-2026",
               },
               {
                 title:
