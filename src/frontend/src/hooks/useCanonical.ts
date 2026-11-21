@@ -47,6 +47,8 @@ const CANONICAL_REDIRECT_MAP: Record<string, string> = {
   '/export-markets/uae': '/jewellery-exporter-uae',
   '/export-markets/australia': '/jewellery-exporter-australia',
   '/export-markets/usa': '/imitation-jewellery-supplier-usa',
+  '/jewellery-exporter-usa': '/imitation-jewellery-supplier-usa',
+  '/jewellery-exporter-to-usa': '/imitation-jewellery-supplier-usa',
   '/export-markets/uk': '/wholesale-jewellery-uk',
   '/export-markets/singapore': '/jewellery-exporter-singapore',
   '/export-markets/france': '/jewellery-exporter-france',

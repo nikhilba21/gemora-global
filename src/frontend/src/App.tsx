@@ -614,6 +614,14 @@ export default function App() {
           element={<ImitationJewellerySupplierUsa />}
         />
         <Route
+          path="/jewellery-exporter-usa"
+          element={<Navigate to="/imitation-jewellery-supplier-usa" replace />}
+        />
+        <Route
+          path="/jewellery-exporter-to-usa"
+          element={<Navigate to="/imitation-jewellery-supplier-usa" replace />}
+        />
+        <Route
           path="/imitation-jewellery-manufacturer-jaipur"
           element={<ImitationJewelleryManufacturerJaipur />}
         />

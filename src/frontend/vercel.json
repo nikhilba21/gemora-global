@@ -153,6 +153,11 @@
       "permanent": true
     },
     {
+      "source": "/jewellery-exporter-usa",
+      "destination": "/imitation-jewellery-supplier-usa",
+      "permanent": true
+    },
+    {
       "source": "/export-markets/uk",
       "destination": "/wholesale-jewellery-uk",
       "permanent": true
