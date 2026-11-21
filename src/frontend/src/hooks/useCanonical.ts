@@ -41,6 +41,32 @@ const COUNTRY_HREFLANG: Record<string, string[]> = {
   '/wholesale-jewellery-exporter-to-uae':  ['en-ae', 'en'],
 };
 
+// Canonical destination mapping for redirected legacy paths
+const CANONICAL_REDIRECT_MAP: Record<string, string> = {
+  '/export-markets/canada': '/jewellery-exporter-canada',
+  '/export-markets/uae': '/jewellery-exporter-uae',
+  '/export-markets/australia': '/jewellery-exporter-australia',
+  '/export-markets/usa': '/imitation-jewellery-supplier-usa',
+  '/export-markets/uk': '/wholesale-jewellery-uk',
+  '/export-markets/singapore': '/jewellery-exporter-singapore',
+  '/export-markets/france': '/jewellery-exporter-france',
+  '/export-markets/malaysia': '/jewellery-exporter-malaysia',
+  '/export-markets/saudi-arabia': '/jewellery-exporter-saudi-arabia',
+  '/export-markets/kuwait': '/jewellery-exporter-kuwait',
+  '/export-markets/nigeria': '/jewellery-exporter-nigeria',
+  '/export-markets/sri-lanka': '/jewellery-exporter-sri-lanka',
+  '/imitation-jewellery-supplier-uae': '/jewellery-exporter-uae',
+  '/export-indian-fashion-jewellery-australia': '/jewellery-exporter-australia',
+  '/export-imitation-jewellery-germany-eu': '/jewellery-exporter-europe',
+  '/export-imitation-jewellery-singapore': '/jewellery-exporter-singapore',
+  '/export-imitation-jewellery-canada': '/jewellery-exporter-canada',
+  '/export-imitation-jewellery-france': '/jewellery-exporter-france',
+  '/imitation-jewellery-manufacturer-india': '/wholesale-imitation-jewellery-manufacturer-exporter-india',
+  '/blog/global-delivery-solutions-for-wholesalers': '/wholesale-imitation-jewellery-manufacturer-exporter-india',
+  '/return-policy': '/return-refund-cancellation-policy',
+  '/products/1001': '/products',
+};
+
 function setOrCreate(rel: string, href: string, hreflang?: string) {
   const selector = hreflang
     ? `link[rel="alternate"][hreflang="${hreflang}"]`
@@ -61,7 +87,8 @@ function removeOldHreflang() {
 
 export function useCanonical(overridePath?: string) {
   const location = useLocation();
-  const path = overridePath || location.pathname;
+  const rawPath = overridePath || location.pathname;
+  const path = CANONICAL_REDIRECT_MAP[rawPath] || rawPath;
   const canonical = path === '/' ? `${BASE}/` : `${BASE}${path.replace(/\/$/, '')}`;
 
   useEffect(() => {

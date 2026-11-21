@@ -158,14 +158,14 @@ export default function BraceletsCollection() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Our{" "}
               <Link
-                to="/imitation-jewellery-supplier-uae"
+                to="/jewellery-exporter-uae"
                 className="text-primary hover:underline"
               >
                 UAE bangle buyers
               </Link>{" "}
               favour gold-plated sets with intricate filigree work. Our{" "}
               <Link
-                to="/jewellery-supplier-uk"
+                to="/wholesale-jewellery-uk"
                 className="text-primary hover:underline"
               >
                 UK buyers

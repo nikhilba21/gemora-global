@@ -34,11 +34,11 @@ const SERVICE_LINKS = [
   },
   {
     label: "Imitation Jewellery Manufacturer India",
-    to: "/imitation-jewellery-manufacturer-india",
+    to: "/wholesale-imitation-jewellery-manufacturer-exporter-india",
   },
   {
-    label: "Artificial Jewellery Wholesaler India",
-    to: "/artificial-jewellery-wholesaler-india",
+    label: "Jewellery Exporter Australia",
+    to: "/jewellery-exporter-australia",
   },
   {
     label: "Fashion Jewellery Exporter India",
@@ -54,8 +54,8 @@ const SERVICE_LINKS = [
     to: "/imitation-jewellery-exporter-india",
   },
   {
-    label: "Wholesale Imitation Jewellery",
-    to: "/wholesale-imitation-jewellery",
+    label: "Jewellery Exporter Canada",
+    to: "/jewellery-exporter-canada",
   },
   { label: "Bridal Jewellery Wholesale", to: "/bridal-jewellery-wholesale" },
   { label: "Fashion Jewellery Exporter", to: "/fashion-jewellery-exporter" },
@@ -64,8 +64,8 @@ const SERVICE_LINKS = [
     to: "/custom-jewellery-manufacturer",
   },
   {
-    label: "Wholesale Imitation Jewellery India",
-    to: "/wholesale-imitation-jewellery-india",
+    label: "Jewellery Exporter Singapore",
+    to: "/jewellery-exporter-singapore",
   },
   {
     label: "Fashion Jewellery Manufacturer India",
@@ -76,8 +76,8 @@ const SERVICE_LINKS = [
     to: "/bridal-imitation-jewellery-wholesale",
   },
   { label: "Bulk Jewellery Supplier", to: "/bulk-jewellery-supplier" },
-  { label: "Jewellery Exporter to USA", to: "/jewellery-exporter-to-usa" },
-  { label: "Jewellery Supplier UK", to: "/jewellery-supplier-uk" },
+  { label: "Jewellery Exporter Europe", to: "/jewellery-exporter-europe" },
+  { label: "Jewellery Exporter Malaysia", to: "/jewellery-exporter-malaysia" },
   { label: "Jewellery Exporter UAE", to: "/jewellery-exporter-uae" },
   {
     label: "Private Label Jewellery India",

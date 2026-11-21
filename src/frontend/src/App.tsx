@@ -638,7 +638,7 @@ export default function App() {
         <Route path="/jhumka-earrings-wholesale-bulk" element={<JhumkaEarringsWholesale />} />
         <Route path="/jhumka-earrings-wholesale" element={<JhumkaEarringsWholesale />} />
         <Route path="/imitation-jewellery-exporter" element={<ImitationJewelleryExporterIndia />} />
-        <Route path="/imitation-jewellery-supplier-uae" element={<JewelleryExporterUae />} />
+        <Route path="/imitation-jewellery-supplier-uae" element={<Navigate to="/jewellery-exporter-uae" replace />} />
         <Route path="/wholesale-jewelry-no-middleman" element={<NoMiddlemanJewelryWholesale />} />
         <Route
           path="/jewellery-exporter-australia"

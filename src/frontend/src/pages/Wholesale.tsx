@@ -799,12 +799,12 @@ export default function Wholesale() {
               {
                 flag: "🇫🇷",
                 country: "France",
-                to: "/export-imitation-jewellery-france",
+                to: "/jewellery-exporter-france",
               },
               {
                 flag: "🇦🇪",
                 country: "UAE",
-                to: "/imitation-jewellery-supplier-uae",
+                to: "/jewellery-exporter-uae",
               },
               {
                 flag: "🇺🇸",
@@ -815,27 +815,27 @@ export default function Wholesale() {
               {
                 flag: "🇩🇪",
                 country: "Germany",
-                to: "/export-imitation-jewellery-germany-eu",
+                to: "/jewellery-exporter-europe",
               },
               {
                 flag: "🇨🇦",
                 country: "Canada",
-                to: "/export-imitation-jewellery-canada",
+                to: "/jewellery-exporter-canada",
               },
               {
                 flag: "🇦🇺",
                 country: "Australia",
-                to: "/export-indian-fashion-jewellery-australia",
+                to: "/jewellery-exporter-australia",
               },
               {
                 flag: "🇸🇬",
                 country: "Singapore",
-                to: "/export-imitation-jewellery-singapore",
+                to: "/jewellery-exporter-singapore",
               },
-              { flag: "🇲🇾", country: "Malaysia", to: "/global-markets" },
-              { flag: "🇸🇦", country: "Saudi Arabia", to: "/global-markets" },
-              { flag: "🇳🇬", country: "Nigeria", to: "/global-markets" },
-              { flag: "🌍", country: "More", to: "/global-markets" },
+              { flag: "🇲🇾", country: "Malaysia", to: "/jewellery-exporter-malaysia" },
+              { flag: "🇸🇦", country: "Saudi Arabia", to: "/jewellery-exporter-saudi-arabia" },
+              { flag: "🇳🇬", country: "Nigeria", to: "/jewellery-exporter-nigeria" },
+              { flag: "🌍", country: "More", to: "/export" },
             ].map((m) => (
               <Link
                 key={m.country}

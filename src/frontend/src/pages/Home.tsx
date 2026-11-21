@@ -802,7 +802,7 @@ export default function Home() {
             </Link>
             ,{" "}
             <Link
-              to="/imitation-jewellery-supplier-uae"
+              to="/jewellery-exporter-uae"
               className="text-primary hover:underline"
             >
               UAE boutique
@@ -985,38 +985,38 @@ export default function Home() {
               {
                 flag: "🇺🇸",
                 country: "USA",
-                to: "/export-markets/usa",
+                to: "/imitation-jewellery-supplier-usa",
               },
-              { flag: "🇬🇧", country: "UK", to: "/export-markets/uk" },
+              { flag: "🇬🇧", country: "UK", to: "/wholesale-jewellery-uk" },
               {
                 flag: "🇦🇪",
                 country: "UAE",
-                to: "/export-markets/uae",
+                to: "/jewellery-exporter-uae",
               },
               {
                 flag: "🇦🇺",
                 country: "Australia",
-                to: "/export-markets/australia",
+                to: "/jewellery-exporter-australia",
               },
               {
                 flag: "🇩🇪",
                 country: "Germany",
-                to: "/export-imitation-jewellery-germany-eu",
+                to: "/jewellery-exporter-europe",
               },
               {
                 flag: "🇨🇦",
                 country: "Canada",
-                to: "/export-markets/canada",
+                to: "/jewellery-exporter-canada",
               },
               {
                 flag: "🇸🇬",
                 country: "Singapore",
-                to: "/export-markets/singapore",
+                to: "/jewellery-exporter-singapore",
               },
               {
                 flag: "🇫🇷",
                 country: "France",
-                to: "/export-markets/france",
+                to: "/jewellery-exporter-france",
               },
             ].map((m) => (
               <Link

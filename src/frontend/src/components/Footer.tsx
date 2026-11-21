@@ -165,7 +165,7 @@ export default function Footer() {
           </Link>{" "}
           to buyers in{" "}
           <Link to="/imitation-jewellery-supplier-usa" className="text-white/80 hover:text-[#D4AF37] underline">USA</Link>,{" "}
-          <Link to="/jewellery-supplier-uk" className="text-white/80 hover:text-[#D4AF37] underline">UK</Link>,{" "}
+          <Link to="/wholesale-jewellery-uk" className="text-white/80 hover:text-[#D4AF37] underline">UK</Link>,{" "}
           <Link to="/jewellery-exporter-uae" className="text-white/80 hover:text-[#D4AF37] underline">UAE</Link>,{" "}
           <Link to="/jewellery-exporter-australia" className="text-white/80 hover:text-[#D4AF37] underline">Australia</Link>,{" "}
           <Link to="/jewellery-exporter-canada" className="text-white/80 hover:text-[#D4AF37] underline">Canada</Link>,{" "}

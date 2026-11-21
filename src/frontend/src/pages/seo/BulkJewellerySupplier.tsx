@@ -372,7 +372,7 @@ export default function BulkJewellerySupplier() {
             </li>
             <li>
               <Link
-                to="/artificial-jewellery-wholesaler-india"
+                to="/wholesale-imitation-jewellery-manufacturer-exporter-india"
                 className="text-primary underline"
               >
                 Artificial Jewellery Wholesaler India — Distributor Programme

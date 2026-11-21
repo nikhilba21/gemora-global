@@ -414,7 +414,7 @@ export default function BlogPostPage() {
             <div className="flex flex-wrap gap-2 mb-5">
               {[
                 { label: "🇺🇸 USA", to: "/imitation-jewellery-supplier-usa" },
-                { label: "🇬🇧 UK", to: "/jewellery-supplier-uk" },
+                { label: "🇬🇧 UK", to: "/wholesale-jewellery-uk" },
                 { label: "🇦🇪 UAE", to: "/jewellery-exporter-uae" },
                 { label: "🇦🇺 Australia", to: "/jewellery-exporter-australia" },
                 { label: "🇨🇦 Canada", to: "/jewellery-exporter-canada" },

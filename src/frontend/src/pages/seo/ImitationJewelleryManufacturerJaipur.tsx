@@ -29,7 +29,7 @@ export default function ImitationJewelleryManufacturerJaipur() {
           <p>
             As a Jaipur-based{" "}
             <Link
-              to="/imitation-jewellery-manufacturer-india"
+              to="/wholesale-imitation-jewellery-manufacturer-exporter-india"
               className="text-primary underline"
             >
               imitation jewellery manufacturer

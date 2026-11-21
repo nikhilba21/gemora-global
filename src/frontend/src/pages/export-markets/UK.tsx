@@ -6,7 +6,7 @@ export default function UK() {
   useCanonical();
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/jewellery-supplier-uk", { replace: true });
+    navigate("/wholesale-jewellery-uk", { replace: true });
   }, [navigate]);
   return null;
 }

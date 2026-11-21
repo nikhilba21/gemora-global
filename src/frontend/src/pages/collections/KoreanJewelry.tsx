@@ -156,7 +156,7 @@ export default function KoreanJewelry() {
               on white or marble backgrounds — our pieces photograph like
               ₹10,000 fine jewelry, even though they're affordable{" "}
               <Link
-                to="/wholesale-imitation-jewellery"
+                to="/wholesale-imitation-jewellery-manufacturer-exporter-india"
                 className="text-primary hover:underline"
               >
                 wholesale imitation jewelry

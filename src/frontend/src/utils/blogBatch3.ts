@@ -69,7 +69,7 @@ export const BLOG_BATCH_3 = [
   <li>JAFZA (Jebel Ali Free Zone) offers tax-free re-export opportunities</li>
   <li>Dubai Jewellery Group and DJWE trade show are key networking events</li>
 </ul>
-<p>Shipping from Jaipur to Dubai is well-established, with multiple freight forwarders specialising in <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>. For UAE wholesale pricing and minimum order quantities, visit our <a href="/export-markets/uae">UAE export page</a>.</p>
+<p>Shipping from Jaipur to Dubai is well-established, with multiple freight forwarders specialising in <a href="/wholesale-jewellery-exporter-to-uae">Jewellery Export</a>. For UAE wholesale pricing and minimum order quantities, visit our <a href="/jewellery-exporter-uae">UAE export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
@@ -157,7 +157,7 @@ export const BLOG_BATCH_3 = [
 <p>Minimalist gold jewellery also sells well year-round in Australian boutiques, particularly layered necklaces and thin hoop earrings. Beach-inspired and shell jewellery is a seasonal bestseller.</p>
 
 <h2>Australia Import Process and Shipping</h2>
-<p>Australia's import threshold is A$1,000 — shipments above this value attract GST (10%) and potential customs duties. Most small wholesale orders ship under this threshold. Air freight from Jaipur to Sydney or Melbourne takes 5-10 business days via standard courier services. Seasonal buying peaks in August-September for summer stock and March-April for autumn. For Australia wholesale enquiries, visit our <a href="/export-markets/australia">Australia export page</a>.</p>
+<p>Australia's import threshold is A$1,000 — shipments above this value attract GST (10%) and potential customs duties. Most small wholesale orders ship under this threshold. Air freight from Jaipur to Sydney or Melbourne takes 5-10 business days via standard courier services. Seasonal buying peaks in August-September for summer stock and March-April for autumn. For Australia wholesale enquiries, visit our <a href="/jewellery-exporter-australia">Australia export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
@@ -200,7 +200,7 @@ export const BLOG_BATCH_3 = [
 <p>Canadian retailers increasingly source directly from Indian manufacturers to reduce costs and improve margins. <a href="/">Gemora Global</a> ships regularly to Canada with full commercial documentation for customs clearance.</p>
 
 <h2>Shipping and Import Duties</h2>
-<p>Air freight from India to Toronto, Vancouver, or Calgary takes 6-12 business days. MFN import duties on HS 7117 (imitation jewellery) are typically 8-15% — CEPA provides reductions for qualifying Indian exporters. GST/HST applies at the point of import. For Canada wholesale pricing and catalogue access, visit our <a href="/export-markets/canada">Canada export page</a>.</p>
+<p>Air freight from India to Toronto, Vancouver, or Calgary takes 6-12 business days. MFN import duties on HS 7117 (imitation jewellery) are typically 8-15% — CEPA provides reductions for qualifying Indian exporters. GST/HST applies at the point of import. For Canada wholesale pricing and catalogue access, visit our <a href="/jewellery-exporter-canada">Canada export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>

@@ -567,7 +567,7 @@ export default function ProductDetail() {
           <div className="flex flex-wrap gap-2">
             {[
               { label: "🇺🇸 Supplier USA", to: "/imitation-jewellery-supplier-usa" },
-              { label: "🇬🇧 Supplier UK", to: "/jewellery-supplier-uk" },
+              { label: "🇬🇧 Supplier UK", to: "/wholesale-jewellery-uk" },
               { label: "🇦🇪 Exporter UAE", to: "/jewellery-exporter-uae" },
               { label: "🇦🇺 Exporter Australia", to: "/jewellery-exporter-australia" },
               { label: "🇨🇦 Exporter Canada", to: "/jewellery-exporter-canada" },

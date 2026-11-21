@@ -154,7 +154,7 @@ export default function PartyWearJewelry() {
               supply party jewellery to boutiques in Dubai Mall, Abu Dhabi, and
               Sharjah. DDP shipping available.{" "}
               <Link
-                to="/export-markets/uae"
+                to="/jewellery-exporter-uae"
                 className="text-primary hover:underline"
               >
                 Learn about UAE export services →
@@ -167,7 +167,7 @@ export default function PartyWearJewelry() {
               also supply contemporary crystal party sets for mainstream UK
               fashion boutiques.{" "}
               <Link
-                to="/export-markets/uk"
+                to="/wholesale-jewellery-uk"
                 className="text-primary hover:underline"
               >
                 Learn about UK export services →
@@ -179,7 +179,7 @@ export default function PartyWearJewelry() {
               California regularly source our party jewelry collections. We
               offer DHL express shipping with 5–7 day delivery to USA.{" "}
               <Link
-                to="/export-markets/usa"
+                to="/imitation-jewellery-supplier-usa"
                 className="text-primary hover:underline"
               >
                 Learn about USA export services →
