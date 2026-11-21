@@ -156,7 +156,7 @@ export default function ProductDetail() {
     queryKey: ["product", id],
     queryFn: () => api.getProduct(id as string),
     enabled: !!id,
-    retry: 2,
+    retry: 1,
     staleTime: 1000 * 60 * 30,
   });
 

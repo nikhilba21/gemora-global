@@ -25,7 +25,7 @@ export const BLOG_BATCH_3 = [
   <li>HS Code 7117 applies — import duties range from 7-11% depending on material</li>
   <li>CPSC safety standards must be met for children's jewellery</li>
 </ul>
-<p>Indian manufacturers supplying the USA must provide material safety certifications. <a href="/">Gemora Global</a> ensures all export-ready pieces meet US compliance standards. For USA wholesale sourcing, visit our <a href="/export-markets/usa">USA export page</a>.</p>
+<p>Indian manufacturers supplying the USA must provide material safety certifications. <a href="/">Gemora Global</a> ensures all export-ready pieces meet US compliance standards. For USA wholesale sourcing, visit our <a href="/imitation-jewellery-supplier-usa">USA export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
@@ -113,7 +113,7 @@ export const BLOG_BATCH_3 = [
 <p>Popular styles in the UK include minimal gold chains, layered delicate necklaces, statement earrings, and Y2K revival pieces. UK fashion buyers follow social media trends closely — collections updated seasonally perform best.</p>
 
 <h2>UK Import After Brexit</h2>
-<p>Since Brexit, UK import rules operate independently from the EU. Importers pay UK Global Tariff duties (typically 2-4% for HS 7117 jewellery) plus 20% VAT. Air freight from India to the UK takes 5-7 business days. Rules of origin documentation are required to benefit from any preferential rates. For UK wholesale sourcing and catalogues, visit our <a href="/export-markets/uk">UK export page</a>.</p>
+<p>Since Brexit, UK import rules operate independently from the EU. Importers pay UK Global Tariff duties (typically 2-4% for HS 7117 jewellery) plus 20% VAT. Air freight from India to the UK takes 5-7 business days. Rules of origin documentation are required to benefit from any preferential rates. For UK wholesale sourcing and catalogues, visit our <a href="/wholesale-jewellery-uk">UK export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
@@ -244,7 +244,7 @@ export const BLOG_BATCH_3 = [
 <p>Popular European styles vary by country: minimalist Scandinavian designs in Germany and Netherlands, elegant layered pieces in France, bold statement jewellery in Italy. All require the same baseline REACH compliance.</p>
 
 <h2>EU Import Duties and Logistics</h2>
-<p>Import duties on HS 7117 imitation jewellery entering the EU are typically 2-4% under the EU's Common External Tariff. Air freight from Jaipur to Frankfurt, Amsterdam, or Paris takes 5-8 business days. For European wholesale buyers, <a href="/">Gemora Global</a> provides full REACH compliance documentation. Visit our <a href="/export-markets/france">Europe export page</a> for details.</p>
+<p>Import duties on HS 7117 imitation jewellery entering the EU are typically 2-4% under the EU's Common External Tariff. Air freight from Jaipur to Frankfurt, Amsterdam, or Paris takes 5-8 business days. For European wholesale buyers, <a href="/">Gemora Global</a> provides full REACH compliance documentation. Visit our <a href="/jewellery-exporter-europe">Europe export page</a> for details.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
@@ -420,7 +420,7 @@ export const BLOG_BATCH_3 = [
 <p>Little India in Singapore has a thriving <a href="/wholesale">Wholesale Jewellery</a> market where Indian exporters have established strong buyer relationships over decades. Direct partnerships with Little India retailers and online Singapore stores are common for <a href="/">Gemora Global</a>.</p>
 
 <h2>Import Duties and Shipping</h2>
-<p>Singapore has one of the world's most open import regimes — import duties on jewellery are generally zero. GST of 9% applies at import. Air freight from Jaipur to Singapore Changi Airport takes just 3-5 business days, making it one of the fastest corridors in Asia. For Singapore wholesale sourcing and pricing, visit our <a href="/export-markets/singapore">Singapore export page</a>.</p>
+<p>Singapore has one of the world's most open import regimes — import duties on jewellery are generally zero. GST of 9% applies at import. Air freight from Jaipur to Singapore Changi Airport takes just 3-5 business days, making it one of the fastest corridors in Asia. For Singapore wholesale sourcing and pricing, visit our <a href="/jewellery-exporter-singapore">Singapore export page</a>.</p>
 
 <p>Contact <a href="/">Gemora Global</a> on WhatsApp: <a href="https://wa.me/917976341419">+91 7976341419</a></p>
     <h2>Frequently Asked Questions</h2>
