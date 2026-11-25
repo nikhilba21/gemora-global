@@ -76,13 +76,23 @@ router.post('/whatsapp', async (req, res) => {
       const name = item.name && item.name.trim() ? item.name.trim() : `WhatsApp Buyer (${phone.slice(-4)})`;
       const source = item.source || (requirement.toLowerCase().includes('gemora global') ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Incoming');
 
-      // Check if lead already exists by phone
-      const existing = await query('SELECT id FROM inquiries WHERE whatsapp=$1 OR whatsapp=$2 LIMIT 1', [phone, rawPhone]);
+      // Check if lead already exists by normalized phone digits (matches regardless of spaces, +91, or 0)
+      const digitsOnly = phone.replace(/\D/g, '');
+      const last10 = digitsOnly.length >= 10 ? digitsOnly.slice(-10) : digitsOnly;
+
+      const existing = await query(
+        `SELECT id, name, requirement FROM inquiries 
+         WHERE regexp_replace(whatsapp, '\\D', '', 'g') = $1
+            OR (length(regexp_replace(whatsapp, '\\D', '', 'g')) >= 10 AND length($2) >= 10 AND RIGHT(regexp_replace(whatsapp, '\\D', '', 'g'), 10) = $2)
+         ORDER BY id DESC LIMIT 1`,
+        [digitsOnly, last10]
+      );
+
       if (existing.rows.length > 0) {
         existingCount++;
-        // If has newer message/requirement, update it
+        // Update requirement & country if newer info provided
         if (requirement && requirement !== 'Incoming WhatsApp Lead') {
-          await query('UPDATE inquiries SET requirement=$1 WHERE id=$2', [requirement, existing.rows[0].id]);
+          await query('UPDATE inquiries SET requirement=$1, country=$2 WHERE id=$3', [requirement, country, existing.rows[0].id]);
         }
       } else {
         await query(
@@ -93,9 +103,40 @@ router.post('/whatsapp', async (req, res) => {
       }
     }
 
+    // Auto-clean any previously duplicated rows by phone digits in database
+    try {
+      await query(`
+        DELETE FROM inquiries a USING inquiries b
+        WHERE a.id < b.id 
+          AND length(regexp_replace(a.whatsapp, '\\D', '', 'g')) >= 8
+          AND regexp_replace(a.whatsapp, '\\D', '', 'g') = regexp_replace(b.whatsapp, '\\D', '', 'g')
+      `);
+    } catch (cleanErr) {
+      console.warn('Auto-dedupe cleanup warning:', cleanErr.message);
+    }
+
     res.json({ success: true, addedCount, existingCount, totalReceived: rawItems.length });
   } catch (e) {
     console.error('WhatsApp sync error:', e);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// Dedicated deduplication route for Admin cleanup
+router.post('/dedupe', requireAdmin, async (req, res) => {
+  try {
+    const result = await query(`
+      DELETE FROM inquiries a USING inquiries b
+      WHERE a.id < b.id 
+        AND length(regexp_replace(a.whatsapp, '\\D', '', 'g')) >= 8
+        AND (
+          regexp_replace(a.whatsapp, '\\D', '', 'g') = regexp_replace(b.whatsapp, '\\D', '', 'g')
+          OR (length(regexp_replace(a.whatsapp, '\\D', '', 'g')) >= 10 AND length(regexp_replace(b.whatsapp, '\\D', '', 'g')) >= 10 AND RIGHT(regexp_replace(a.whatsapp, '\\D', '', 'g'), 10) = RIGHT(regexp_replace(b.whatsapp, '\\D', '', 'g'), 10))
+        )
+      RETURNING a.id
+    `);
+    res.json({ success: true, removedCount: result.rowCount || 0 });
+  } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });

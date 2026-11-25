@@ -362,100 +362,103 @@ export function getCountryFlag(country?: string): string {
   return "🌐";
 }
 
-// WhatsApp Web 1-Click Sync Script & Bookmarklet (Safe for WhatsApp Web CSP)
-const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(function(){
+// WhatsApp Web Deep Auto-Scroll Sync Script & Bookmarklet
+const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(async function(){
   try {
-    let box = document.getElementById('gm-sync-box');
-    if (!box) {
-      box = document.createElement('div');
-      box.id = 'gm-sync-box';
-      box.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999999;background:#1A237E;color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.5);font-family:sans-serif;font-size:13px;max-width:360px;border:2px solid #D4AF37;line-height:1.5;';
-      document.body.appendChild(box);
+    let b = document.getElementById('gm-sync-box');
+    if (!b) {
+      b = document.createElement('div');
+      b.id = 'gm-sync-box';
+      b.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999999;background:#1A237E;color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.5);font-family:sans-serif;font-size:13px;max-width:380px;border:2px solid #D4AF37;line-height:1.5;';
+      document.body.appendChild(b);
     }
-    box.innerHTML = '<b style="color:#D4AF37;">⚡ Gemora CRM Scanner</b><br/>Scanning WhatsApp chats for unsaved numbers...';
+    b.innerHTML = '<b style="color:#D4AF37;">⚡ Gemora Deep Chat Scanner</b><br/>Starting auto-scroll scanner...';
 
     const leads = [];
     const seen = new Set();
+    const phoneRegex = /\\+?[0-9][0-9\\s\\-().]{7,20}[0-9]/;
+    let isStopped = false;
 
-    // 1. Scan individual chat elements
-    const chatElements = document.querySelectorAll(
-      '#pane-side div[role="listitem"], #pane-side div[role="row"], #pane-side div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"], div[role="listitem"]'
-    );
-
-    chatElements.forEach(el => {
-      const text = (el.innerText || '').trim();
-      const match = text.match(/\\+?[0-9][0-9\\s\\-().]{7,20}[0-9]/);
-      if (match) {
-        const rawPhone = match[0].trim();
-        const digits = rawPhone.replace(/\\D/g, '');
-        if (digits.length >= 8 && digits.length <= 16 && !seen.has(digits)) {
-          seen.add(digits);
-          const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
-          const isGemora = /gemora\\s*global/i.test(text);
-          const firstLine = lines[0] || '';
-          const isFirstLinePhone = /^\\+?[0-9]/.test(firstLine);
-          const senderName = isFirstLinePhone ? '' : firstLine;
-          const lastMsg = lines.slice(1).join(' ') || (isGemora ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat');
-          
-          leads.push({
-            whatsapp: rawPhone,
-            name: senderName,
-            requirement: lastMsg,
-            source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
-          });
-        }
-      }
-    });
-
-    // 2. Fallback: Scan full side panel text directly if elements were not caught
-    if (leads.length === 0) {
-      const pane = document.getElementById('pane-side') || document.body;
-      const fullText = pane.innerText || '';
-      const lines = fullText.split('\\n').map(l => l.trim()).filter(Boolean);
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        const match = line.match(/\\+?[0-9][0-9\\s\\-().]{7,20}[0-9]/);
+    // Scan currently visible chat rows in WhatsApp Web
+    function scanVisible() {
+      const items = document.querySelectorAll(
+        '#pane-side div[role="listitem"], #pane-side div[role="row"], #pane-side div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"], div[role="listitem"]'
+      );
+      items.forEach(el => {
+        const text = (el.innerText || '').trim();
+        const match = text.match(phoneRegex);
         if (match) {
-          const rawPhone = match[0].trim();
-          const digits = rawPhone.replace(/\\D/g, '');
-          if (digits.length >= 8 && digits.length <= 16 && !seen.has(digits)) {
-            seen.add(digits);
-            const nextSnippet = lines.slice(i + 1, i + 3).join(' ');
-            const isGemora = /gemora\\s*global/i.test(line + ' ' + nextSnippet);
+          const raw = match[0].trim();
+          const d = raw.replace(/\\D/g, '');
+          const last10 = d.length >= 10 ? d.slice(-10) : d;
+          if (d.length >= 8 && d.length <= 16 && !seen.has(last10)) {
+            seen.add(last10);
+            const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
+            const isG = /gemora\\s*global/i.test(text);
+            const first = lines[0] || '';
+            const isNum = /^\\+?[0-9]/.test(first);
             leads.push({
-              whatsapp: rawPhone,
-              name: '',
-              requirement: nextSnippet || (isGemora ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat'),
-              source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
+              whatsapp: raw,
+              name: isNum ? '' : first,
+              requirement: lines.slice(1).join(' ') || (isG ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat'),
+              source: isG ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
             });
           }
         }
+      });
+    }
+
+    scanVisible();
+
+    b.innerHTML = '<b style="color:#D4AF37;">⚡ Gemora Deep Chat Scanner</b><br/>Found <b style="color:#34D399;font-size:16px;" id="gm-lead-count">' + leads.length + '</b> unsaved leads.<br/><span style="color:#93c5fd;font-size:11px;" id="gm-status">Auto-scrolling your chat list to capture all chats...</span><br/><button id="gm-stop-btn" style="margin-top:10px;padding:6px 14px;background:#D4AF37;color:#1A237E;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">⏹️ Finish &amp; Sync (' + leads.length + ' Leads)</button>';
+
+    const stopBtn = document.getElementById('gm-stop-btn');
+    if (stopBtn) {
+      stopBtn.onclick = () => { isStopped = true; };
+    }
+
+    // Scroll through virtualized WhatsApp Web list
+    const pane = document.getElementById('pane-side') || document.body;
+    let lastScroll = -1;
+    let stuckCount = 0;
+    const maxRounds = 50;
+
+    for (let round = 0; round < maxRounds && !isStopped; round++) {
+      pane.scrollTop += 650;
+      await new Promise(r => setTimeout(r, 450));
+      scanVisible();
+
+      const countEl = document.getElementById('gm-lead-count');
+      if (countEl) countEl.innerText = leads.length;
+      const btn = document.getElementById('gm-stop-btn');
+      if (btn) btn.innerText = '⏹️ Finish & Sync (' + leads.length + ' Leads)';
+
+      if (pane.scrollTop === lastScroll) {
+        stuckCount++;
+        if (stuckCount >= 3) break;
+      } else {
+        stuckCount = 0;
       }
+      lastScroll = pane.scrollTop;
     }
 
     if (leads.length === 0) {
-      box.innerHTML = '<b style="color:#f87171;">⚠️ No chats found</b><br/>Please open WhatsApp Web chat list on the left side, then run again.';
-      setTimeout(() => { if (box) box.remove(); }, 6000);
+      b.innerHTML = '<b style="color:#f87171;">⚠️ No chats found</b><br/>Please open WhatsApp Web chat list on the left side, then run again.';
+      setTimeout(() => { if (b) b.remove(); }, 6000);
       return;
     }
 
-    // Save to clipboard as fallback
-    try {
-      navigator.clipboard.writeText(JSON.stringify(leads));
-    } catch(e) {}
-
+    try { navigator.clipboard.writeText(JSON.stringify(leads)); } catch(e) {}
     const syncUrl = 'https://www.gemoraglobal.co/admin/whatsapp-leads#sync=' + encodeURIComponent(JSON.stringify(leads));
-    
-    box.innerHTML = '<b style="color:#34D399;">✅ Found ' + leads.length + ' WhatsApp Leads!</b><br/>Opening Gemora CRM to save...<br/><a href="' + syncUrl + '" target="_blank" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#D4AF37;color:#1A237E;font-weight:bold;border-radius:6px;text-decoration:none;">👉 Click here to save leads in CRM</a>';
+
+    b.innerHTML = '<b style="color:#34D399;font-size:15px;">✅ Scan Complete!</b><br/>Captured <b style="color:#fff;font-size:15px;">' + leads.length + '</b> Unsaved Leads.<br/>Opening Gemora CRM to save...<br/><a href="' + syncUrl + '" target="_blank" style="display:inline-block;margin-top:10px;padding:7px 14px;background:#D4AF37;color:#1A237E;font-weight:bold;border-radius:6px;text-decoration:none;">👉 Click here to save ' + leads.length + ' leads in CRM</a>';
 
     try {
       const w = window.open(syncUrl, '_blank');
-      if (w) {
-        setTimeout(() => { if (box) box.remove(); }, 6000);
-      }
+      if (w) setTimeout(() => { if (b) b.remove(); }, 8000);
     } catch(e) {}
   } catch(err) {
-    alert('Gemora Sync Error: ' + err.message);
+    alert('Gemora Scanner Error: ' + err.message);
   }
 })();`;
 
@@ -588,20 +591,28 @@ export default function AdminWhatsAppLeads() {
       });
   }, [rawInquiries]);
 
-  // Combine backend leads + custom/imported leads (avoiding duplicates by phone)
+  // Combine backend leads + custom/imported leads (strictly deduplicating by phone digits)
   const allLeads: WhatsAppLead[] = useMemo(() => {
     const map = new Map<string, WhatsAppLead>();
 
+    // Deduplication key: last 10 digits if available, else all digits
+    const getDedupeKey = (phone: string): string => {
+      const d = (phone || '').replace(/\D/g, '');
+      return d.length >= 10 ? d.slice(-10) : d;
+    };
+
     // 1. Add backend inquiries
     backendLeads.forEach((l) => {
-      const cleanPhone = sanitizeWhatsAppNumber(l.whatsapp);
-      if (cleanPhone) map.set(cleanPhone, l);
+      const key = getDedupeKey(l.whatsapp);
+      if (key && !map.has(key)) {
+        map.set(key, l);
+      }
     });
 
     // 2. Add / merge custom leads (custom leads take priority on CRM stage & notes)
     customLeads.forEach((cl) => {
-      const cleanPhone = sanitizeWhatsAppNumber(cl.whatsapp);
-      if (cleanPhone) {
+      const key = getDedupeKey(cl.whatsapp);
+      if (key) {
         // Auto-fix country if defaulted or missing and phone number has an international dial code
         let country = cl.country;
         if (!country || country === "India" || country === "Global") {
@@ -611,9 +622,9 @@ export default function AdminWhatsAppLeads() {
           }
         }
         const resolvedLead = { ...cl, country: country || "India" };
-        const existing = map.get(cleanPhone);
+        const existing = map.get(key);
         if (existing) {
-          map.set(cleanPhone, {
+          map.set(key, {
             ...existing,
             ...resolvedLead,
             notes: resolvedLead.notes || existing.notes,
@@ -621,7 +632,7 @@ export default function AdminWhatsAppLeads() {
             pipelineStage: resolvedLead.pipelineStage || existing.pipelineStage,
           });
         } else {
-          map.set(cleanPhone, resolvedLead);
+          map.set(key, resolvedLead);
         }
       }
     });
@@ -981,6 +992,31 @@ export default function AdminWhatsAppLeads() {
     document.body.removeChild(link);
 
     toast.success(`Exported ${filteredLeads.length} leads to CSV`);
+  };
+
+  // Deduplicate and clean all leads across database and local storage
+  const handleDedupeLeads = async () => {
+    try {
+      toast.loading("Cleaning duplicates...", { id: "dedupe-loading" });
+      const res = await api.dedupeInquiries().catch(() => ({ success: true, removedCount: 0 }));
+      
+      // Clean customLeads in local storage by last 10 digits
+      const seen = new Set<string>();
+      const cleanedCustom = customLeads.filter((cl) => {
+        const d = (cl.whatsapp || '').replace(/\D/g, '');
+        const key = d.length >= 10 ? d.slice(-10) : d;
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      persistCustomLeads(cleanedCustom);
+      qc.invalidateQueries({ queryKey: ["inquiries"] });
+      toast.dismiss("dedupe-loading");
+      toast.success(`Duplicate cleanup complete! Removed ${res.removedCount || 0} duplicate entries.`);
+    } catch (e: any) {
+      toast.dismiss("dedupe-loading");
+      toast.error("Deduplication error: " + (e.message || "Unknown error"));
+    }
   };
 
   // Parse Google Contacts CSV or vCard (.vcf)
@@ -1578,6 +1614,17 @@ export default function AdminWhatsAppLeads() {
           >
             <Download className="w-4 h-4 mr-1.5" />
             Export CSV
+          </Button>
+
+          <Button
+            onClick={handleDedupeLeads}
+            variant="outline"
+            size="sm"
+            className="border-amber-300 text-amber-800 bg-amber-50/70 hover:bg-amber-100 font-medium"
+            title="Clean duplicate phone numbers across CRM"
+          >
+            <RefreshCw className="w-4 h-4 mr-1.5 text-amber-600" />
+            Clean Duplicates
           </Button>
 
           <Button

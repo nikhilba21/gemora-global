@@ -68,6 +68,7 @@ export const api = {
   updateInquiryStatus: (id: number, status: string) => apiFetch(`/api/inquiries/${id}/status`, { method: 'PATCH', body: JSON.stringify({ status }) }),
   updateInquiryCRM: (id: number, data: Partial<Inquiry>) => apiFetch(`/api/inquiries/${id}/crm`, { method: 'PATCH', body: JSON.stringify(data) }),
   deleteInquiry: (id: number) => apiFetch(`/api/inquiries/${id}`, { method: 'DELETE' }),
+  dedupeInquiries: () => apiFetch<{ success: boolean; removedCount: number }>('/api/inquiries/dedupe', { method: 'POST' }),
 
   // Gallery
   getGallery: (itemType?: string) => apiFetch<GalleryItem[]>(`/api/gallery${itemType ? `?itemType=${itemType}` : ''}`),
