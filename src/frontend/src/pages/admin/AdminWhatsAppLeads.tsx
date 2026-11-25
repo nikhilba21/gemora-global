@@ -55,6 +55,8 @@ import {
   Layers,
   PhoneCall,
   Flame,
+  Zap,
+  RefreshCw,
 } from "lucide-react";
 
 export type PipelineStage =
@@ -377,6 +379,12 @@ export default function AdminWhatsAppLeads() {
   const [activeLeadForNotes, setActiveLeadForNotes] =
     useState<WhatsAppLead | null>(null);
   const [tempNotes, setTempNotes] = useState("");
+
+  // WhatsApp Auto-Sync Modal States
+  const [isAutoSyncModalOpen, setIsAutoSyncModalOpen] = useState(false);
+  const [autoSyncTab, setAutoSyncTab] = useState<"bookmarklet" | "paste" | "webhook">("bookmarklet");
+  const [autoSyncPasteText, setAutoSyncPasteText] = useState("");
+  const [isAutoSyncing, setIsAutoSyncing] = useState(false);
 
   // Templates
   const [templates, setTemplates] = useState(DEFAULT_TEMPLATES);
@@ -1182,6 +1190,107 @@ export default function AdminWhatsAppLeads() {
     toast.success(`Parsed ${parsed.length} contacts from pasted text!`);
   };
 
+  // Auto-Sync WhatsApp Pasted Chats / Unsaved numbers
+  const handleAutoSyncPastedChats = async () => {
+    if (!autoSyncPasteText.trim()) {
+      toast.error("Please paste WhatsApp chat text or numbers first");
+      return;
+    }
+
+    setIsAutoSyncing(true);
+    try {
+      const lines = autoSyncPasteText.split(/\r?\n/);
+      const parsed: Array<{
+        name: string;
+        whatsapp: string;
+        country: string;
+        requirement: string;
+        source: string;
+      }> = [];
+
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+
+        // Search for phone numbers in the line
+        const phoneMatch = trimmed.match(/(?:\+?\d{1,4}[\s\-\.]?)?\(?\d{2,5}\)?[\s\-\.]?\d{2,5}[\s\-\.]?\d{2,6}/);
+        if (phoneMatch) {
+          const rawPhone = phoneMatch[0];
+          const cleanPhone = sanitizeWhatsAppNumber(rawPhone);
+          if (cleanPhone && cleanPhone.length >= 8) {
+            const isGemora = /gemora\s*global/i.test(trimmed);
+            const detectedCountry = detectCountryFromPhone(rawPhone);
+            
+            // Extract message requirement
+            let msgText = trimmed.replace(phoneMatch[0], "").replace(/^[,\-\:\s\[\]\d\/apAPmM\.]+/, "").trim();
+            if (!msgText) {
+              msgText = isGemora ? "Wholesale inquiry mentioning Gemora Global" : "Incoming WhatsApp Lead";
+            }
+
+            parsed.push({
+              name: `WhatsApp Buyer (+${cleanPhone.slice(-4)})`,
+              whatsapp: rawPhone,
+              country: detectedCountry,
+              requirement: msgText,
+              source: isGemora ? "WhatsApp (Gemora Global Text)" : "WhatsApp Unsaved Lead",
+            });
+          }
+        }
+      }
+
+      if (parsed.length === 0) {
+        toast.warning("No phone numbers or WhatsApp messages detected in pasted text.");
+        setIsAutoSyncing(false);
+        return;
+      }
+
+      // Sync with backend API
+      try {
+        await api.syncWhatsAppLeads(parsed);
+      } catch (err) {
+        console.warn("Backend whatsapp sync fallback to local storage", err);
+      }
+
+      // Also persist locally in custom leads
+      const existingPhones = new Set(allLeads.map((l) => sanitizeWhatsAppNumber(l.whatsapp)));
+      const newLeads: WhatsAppLead[] = [];
+      let newCount = 0;
+
+      for (const p of parsed) {
+        const clean = sanitizeWhatsAppNumber(p.whatsapp);
+        if (!existingPhones.has(clean)) {
+          existingPhones.add(clean);
+          newCount++;
+          newLeads.push({
+            id: `wa_sync_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+            name: p.name,
+            whatsapp: p.whatsapp,
+            country: p.country,
+            requirement: p.requirement,
+            source: p.source,
+            pipelineStage: "New",
+            createdAt: new Date().toISOString(),
+            lastContactedAt: null,
+            isCustom: true,
+          });
+        }
+      }
+
+      if (newLeads.length > 0) {
+        persistCustomLeads([...newLeads, ...customLeads]);
+      }
+      qc.invalidateQueries({ queryKey: ["inquiries"] });
+
+      toast.success(`Successfully synced ${parsed.length} WhatsApp chats! (${newCount} new leads added)`);
+      setAutoSyncPasteText("");
+      setIsAutoSyncModalOpen(false);
+    } catch (e: any) {
+      toast.error("Failed to parse WhatsApp text: " + (e.message || "Unknown error"));
+    } finally {
+      setIsAutoSyncing(false);
+    }
+  };
+
   // Execute Bulk Import
   const handleExecuteImport = async () => {
     if (parsedImportList.length === 0) {
@@ -1286,6 +1395,15 @@ export default function AdminWhatsAppLeads() {
           >
             <Sparkles className="w-4 h-4 mr-1.5 text-amber-500" />
             Quick Templates
+          </Button>
+
+          <Button
+            onClick={() => setIsAutoSyncModalOpen(true)}
+            size="sm"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium shadow-sm flex items-center gap-1.5"
+          >
+            <Zap className="w-4 h-4 text-amber-300 animate-pulse" />
+            Auto-Sync WhatsApp
           </Button>
 
           <Button
@@ -2199,6 +2317,272 @@ export default function AdminWhatsAppLeads() {
               className="bg-[#1A237E] text-white"
             >
               Done
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* MODAL: WhatsApp Auto-Sync & Unsaved Leads Extractor */}
+      <Dialog
+        open={isAutoSyncModalOpen}
+        onOpenChange={setIsAutoSyncModalOpen}
+      >
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <span className="p-1.5 bg-emerald-100 text-emerald-700 rounded-lg text-lg">
+                ⚡
+              </span>
+              WhatsApp Auto-Sync &amp; Unsaved Leads Extractor
+            </DialogTitle>
+            <DialogDescription className="text-xs text-slate-500">
+              Automatically import unsaved numbers and incoming messages mentioning &quot;Gemora Global&quot; directly into your CRM.
+            </DialogDescription>
+          </DialogHeader>
+
+          {/* Tabs */}
+          <div className="flex border-b border-slate-200 mt-2">
+            <button
+              onClick={() => setAutoSyncTab("bookmarklet")}
+              className={`pb-2.5 px-4 font-semibold text-xs border-b-2 transition-colors flex items-center gap-1.5 ${
+                autoSyncTab === "bookmarklet"
+                  ? "border-emerald-600 text-emerald-700"
+                  : "border-transparent text-slate-500 hover:text-slate-800"
+              }`}
+            >
+              <Zap className="w-3.5 h-3.5" />
+              WhatsApp Web 1-Click Sync (Recommended)
+            </button>
+            <button
+              onClick={() => setAutoSyncTab("paste")}
+              className={`pb-2.5 px-4 font-semibold text-xs border-b-2 transition-colors flex items-center gap-1.5 ${
+                autoSyncTab === "paste"
+                  ? "border-emerald-600 text-emerald-700"
+                  : "border-transparent text-slate-500 hover:text-slate-800"
+              }`}
+            >
+              <FileText className="w-3.5 h-3.5" />
+              Paste Chats / Unsaved Numbers
+            </button>
+            <button
+              onClick={() => setAutoSyncTab("webhook")}
+              className={`pb-2.5 px-4 font-semibold text-xs border-b-2 transition-colors flex items-center gap-1.5 ${
+                autoSyncTab === "webhook"
+                  ? "border-emerald-600 text-emerald-700"
+                  : "border-transparent text-slate-500 hover:text-slate-800"
+              }`}
+            >
+              <Globe className="w-3.5 h-3.5" />
+              24/7 Cloud Webhook
+            </button>
+          </div>
+
+          {/* TAB 1: WhatsApp Web 1-Click Sync */}
+          {autoSyncTab === "bookmarklet" && (
+            <div className="py-3 space-y-4 text-xs">
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50/70 p-4 rounded-xl border border-emerald-200 space-y-3">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                      <span className="p-1 bg-emerald-600 text-white rounded text-xs">Step 1</span>
+                      Drag this Button to your Bookmarks Bar (Ctrl + Shift + B):
+                    </h4>
+                    <p className="text-slate-600 text-xs mt-1">
+                      Drag and drop the green button below into your browser bookmark bar. It works on Chrome, Edge, Brave, and Firefox.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2 pb-1 text-center">
+                  <a
+                    href="javascript:(function(){const E='https://gemora-global-2.onrender.com/api/inquiries/whatsapp';let b=document.getElementById('gm-sync');if(!b){b=document.createElement('div');b.id='gm-sync';b.style.cssText='position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';document.body.appendChild(b);}b.innerHTML='<b style=\"color:#D4AF37;\">⚡ Gemora CRM Auto-Sync</b><br/>Scanning chats for unsaved numbers &amp; Gemora Global messages...';const leads=[];const seen=new Set();document.querySelectorAll('div[role=\"listitem\"], div[data-testid=\"cell-frame-container\"], #pane-side div[tabindex=\"-1\"]').forEach(el=>{const t=(el.innerText||'').trim();const m=t.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);if(m){const num=m[0];const d=num.replace(/[^\\d+]/g,'');if(d.length>=8&&!seen.has(d)){seen.add(d);const lines=t.split('\\n').filter(Boolean);const isGemora=/gemora\\s*global/i.test(t);leads.push({whatsapp:num,name:/^\\+?\\d/.test(lines[0]||'')?'':lines[0],requirement:isGemora?lines.slice(1).join(' '):lines.slice(1).join(' '),source:isGemora?'WhatsApp (Gemora Global Text)':'WhatsApp Unsaved Lead'});}}});if(!leads.length){b.innerHTML='<b style=\"color:#f87171;\">⚠️ No chats found</b><br/>Open your WhatsApp Web chat list, then click again.';setTimeout(()=>b.remove(),6000);return;}b.innerHTML='<b style=\"color:#D4AF37;\">Found '+leads.length+' leads!</b><br/>Sending to Gemora CRM...';fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({leads})}).then(r=>r.json()).then(d=>{b.style.background='#065F46';b.innerHTML='<b style=\"color:#34D399;\">✅ Synced '+leads.length+' WhatsApp Chats!</b><br/>Added '+((d&&d.addedCount)||leads.length)+' leads to Gemora CRM.';setTimeout(()=>b.remove(),7000);}).catch(e=>{b.style.background='#7F1D1D';b.innerHTML='<b>❌ Error:</b> '+e.message;setTimeout(()=>b.remove(),7000);});})();"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toast.info("Drag this button into your Bookmarks Bar at the top of your browser!");
+                    }}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold text-sm shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all cursor-grab border-2 border-emerald-400 select-none"
+                    title="Drag me to your Bookmarks Bar!"
+                  >
+                    <Zap className="w-4 h-4 text-amber-300" />
+                    ⚡ Sync WhatsApp Leads to Gemora CRM
+                  </a>
+                  <p className="text-[11px] text-slate-500 mt-2">
+                    Tip: Press <strong>Ctrl + Shift + B</strong> on Windows to show the Bookmarks bar, then drag the button above into it.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                <h4 className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                  <span className="p-1 bg-[#1A237E] text-white rounded text-xs">Step 2</span>
+                  How to Use on WhatsApp Web (web.whatsapp.com):
+                </h4>
+                <ol className="list-decimal pl-5 space-y-2 text-slate-600">
+                  <li>
+                    Open <strong>web.whatsapp.com</strong> in your browser and connect your WhatsApp Business account.
+                  </li>
+                  <li>
+                    Whenever you receive new messages or have unsaved numbers in your chat list, simply click the <strong>&quot;⚡ Sync WhatsApp Leads to Gemora CRM&quot;</strong> bookmark.
+                  </li>
+                  <li>
+                    A floating notification will pop up on WhatsApp Web scanning all chats, automatically extracting unsaved numbers and messages containing <strong>&quot;Gemora Global&quot;</strong>.
+                  </li>
+                  <li>
+                    In 1-second, all new leads are automatically saved to your Gemora CRM with detected country flags!
+                  </li>
+                </ol>
+
+                <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
+                  <span className="text-[11px] text-slate-500">
+                    Prefer running script in DevTools Console (F12)?
+                  </span>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="text-xs h-7"
+                    onClick={() => {
+                      const code = `(function(){const E='https://gemora-global-2.onrender.com/api/inquiries/whatsapp';let b=document.getElementById('gm-sync');if(!b){b=document.createElement('div');b.id='gm-sync';b.style.cssText='position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';document.body.appendChild(b);}b.innerHTML='<b style=\"color:#D4AF37;\">⚡ Gemora CRM Auto-Sync</b><br/>Scanning chats for unsaved numbers & Gemora Global messages...';const leads=[];const seen=new Set();document.querySelectorAll('div[role=\"listitem\"], div[data-testid=\"cell-frame-container\"], #pane-side div[tabindex=\"-1\"]').forEach(el=>{const t=(el.innerText||'').trim();const m=t.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);if(m){const num=m[0];const d=num.replace(/[^\\d+]/g,'');if(d.length>=8&&!seen.has(d)){seen.add(d);const lines=t.split('\\n').filter(Boolean);const isGemora=/gemora\\s*global/i.test(t);leads.push({whatsapp:num,name:/^\\+?\\d/.test(lines[0]||'')?'':lines[0],requirement:isGemora?lines.slice(1).join(' '):lines.slice(1).join(' '),source:isGemora?'WhatsApp (Gemora Global Text)':'WhatsApp Unsaved Lead'});}}});if(!leads.length){b.innerHTML='<b style=\"color:#f87171;\">⚠️ No chats found</b><br/>Open your WhatsApp Web chat list, then click again.';setTimeout(()=>b.remove(),6000);return;}b.innerHTML='<b style=\"color:#D4AF37;\">Found '+leads.length+' leads!</b><br/>Sending to Gemora CRM...';fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({leads})}).then(r=>r.json()).then(d=>{b.style.background='#065F46';b.innerHTML='<b style=\"color:#34D399;\">✅ Synced '+leads.length+' WhatsApp Chats!</b><br/>Added '+((d&&d.addedCount)||leads.length)+' leads to Gemora CRM.';setTimeout(()=>b.remove(),7000);}).catch(e=>{b.style.background='#7F1D1D';b.innerHTML='<b>❌ Error:</b> '+e.message;setTimeout(()=>b.remove(),7000);});})();`;
+                      navigator.clipboard.writeText(code);
+                      toast.success("Script copied! Paste it into WhatsApp Web DevTools Console (F12) and press Enter.");
+                    }}
+                  >
+                    <Copy className="w-3 h-3 mr-1" />
+                    Copy Console Script
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 2: Paste WhatsApp Chats / Unsaved Numbers */}
+          {autoSyncTab === "paste" && (
+            <div className="py-3 space-y-3 text-xs">
+              <div>
+                <label className="font-semibold text-slate-800 block mb-1">
+                  Paste WhatsApp Chat Text, Exported Chats, or Unsaved Numbers:
+                </label>
+                <p className="text-[11px] text-slate-500 mb-2">
+                  You can copy chat logs from phone or desktop WhatsApp, or paste any list of phone numbers. The scanner automatically detects phone numbers, country, and messages mentioning &quot;Gemora Global&quot;.
+                </p>
+                <Textarea
+                  rows={6}
+                  value={autoSyncPasteText}
+                  onChange={(e) => setAutoSyncPasteText(e.target.value)}
+                  placeholder="Example:&#10;+91 98765 43210: Hi Gemora Global, I need latest bridal catalog&#10;+33 7 44 56 48 69: Do you ship imitation jewellery to Paris?&#10;+94750523021&#10;[25/11/26] +971 50 123 4567: Please share quotation"
+                  className="font-mono text-xs"
+                />
+              </div>
+
+              <div className="flex justify-end gap-2 pt-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setAutoSyncPasteText("")}
+                >
+                  Clear
+                </Button>
+                <Button
+                  type="button"
+                  disabled={!autoSyncPasteText.trim() || isAutoSyncing}
+                  onClick={handleAutoSyncPastedChats}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
+                >
+                  {isAutoSyncing ? "Scanning & Syncing..." : "⚡ Auto-Detect & Import Unsaved Leads"}
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 3: 24/7 Cloud Webhook */}
+          {autoSyncTab === "webhook" && (
+            <div className="py-3 space-y-3.5 text-xs text-slate-600">
+              <div className="bg-blue-50/70 p-3.5 rounded-xl border border-blue-200">
+                <h4 className="font-bold text-blue-900 text-xs flex items-center gap-1.5 mb-1">
+                  <Globe className="w-4 h-4 text-blue-600" />
+                  24/7 Automated Cloud Webhook Receiver
+                </h4>
+                <p className="text-blue-800 text-[11px]">
+                  If you use Meta WhatsApp Business Cloud API, Twilio, Wasapi, or automation tools (like n8n, Make, or Zapier), any incoming message sent to your WhatsApp Business number can be automatically pushed to this CRM in real time 24/7.
+                </p>
+              </div>
+
+              <div className="space-y-2 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                <div>
+                  <span className="text-[11px] font-semibold text-slate-700">Webhook Receiver URL:</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <input
+                      readOnly
+                      value="https://gemora-global-2.onrender.com/api/inquiries/webhook"
+                      className="bg-white border rounded px-2.5 py-1 text-xs font-mono w-full text-slate-800 select-all"
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="h-7 text-xs flex-shrink-0"
+                      onClick={() => {
+                        navigator.clipboard.writeText("https://gemora-global-2.onrender.com/api/inquiries/webhook");
+                        toast.success("Webhook URL copied!");
+                      }}
+                    >
+                      <Copy className="w-3 h-3 mr-1" />
+                      Copy
+                    </Button>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] font-semibold text-slate-700">Meta Webhook Verify Token:</span>
+                  <div className="flex items-center gap-2 mt-1">
+                    <input
+                      readOnly
+                      value="gemora_whatsapp_webhook_2026"
+                      className="bg-white border rounded px-2.5 py-1 text-xs font-mono w-full text-slate-800 select-all"
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      className="h-7 text-xs flex-shrink-0"
+                      onClick={() => {
+                        navigator.clipboard.writeText("gemora_whatsapp_webhook_2026");
+                        toast.success("Token copied!");
+                      }}
+                    >
+                      <Copy className="w-3 h-3 mr-1" />
+                      Copy
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-1.5 text-slate-600 bg-white p-3 rounded-lg border text-[11px]">
+                <p className="font-semibold text-slate-800">
+                  ⚡ How Automatic Message Capture Works:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>
+                    When an unsaved buyer sends a message mentioning <strong>&quot;Gemora Global&quot;</strong>, the CRM marks the source as <strong>&quot;WhatsApp (Gemora Global Text)&quot;</strong>.
+                  </li>
+                  <li>
+                    Their phone number country is automatically detected from the dial code.
+                  </li>
+                  <li>
+                    The lead appears at the top of your CRM with a pulsing blue badge for immediate follow-up.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          <DialogFooter className="pt-2">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setIsAutoSyncModalOpen(false)}
+            >
+              Close
             </Button>
           </DialogFooter>
         </DialogContent>

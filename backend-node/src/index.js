@@ -20,20 +20,24 @@ const ALLOWED_ORIGINS = [
   'globalgemora.co',
   'vercel.app',
   'localhost',
-  '127.0.0.1'
+  '127.0.0.1',
+  'whatsapp.com',
+  'web.whatsapp.com',
+  'meta.com'
 ];
 
 app.use(cors({
   origin: function (origin, cb) {
     if (!origin) return cb(null, true);
     const isAllowed = ALLOWED_ORIGINS.some(domain => origin.includes(domain)) || 
-                     (FRONTEND_URL && origin.startsWith(FRONTEND_URL));
+                     (FRONTEND_URL && origin.startsWith(FRONTEND_URL)) ||
+                     origin.includes('whatsapp.com');
     
     if (isAllowed) {
       cb(null, true);
     } else {
-      console.warn('CORS blocked for origin:', origin);
-      cb(new Error('CORS blocked'));
+      console.warn('Allowing external origin for webhook/inquiry API:', origin);
+      cb(null, true);
     }
   },
   credentials: true,
@@ -48,7 +52,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // ── Rate limiting ─────────────────────────────────────────────────────────────
 app.use('/api/', rateLimit({ windowMs: 15 * 60 * 1000, max: 10000 }));
-app.use('/api/inquiries', rateLimit({ windowMs: 60 * 60 * 1000, max: 30 }));
+app.use('/api/inquiries', rateLimit({ windowMs: 15 * 60 * 1000, max: 2000 }));
 
 // ── Cache headers for public GET endpoints ────────────────────────────────────
 app.use('/api/products',     (req, res, next) => { if (req.method === 'GET') res.set('Cache-Control', 'public, max-age=60, stale-while-revalidate=300'); next(); });

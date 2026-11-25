@@ -63,6 +63,7 @@ export const api = {
 
   // Inquiries
   submitInquiry: (data: Record<string, unknown>) => apiFetch('/api/inquiries', { method: 'POST', body: JSON.stringify(data) }),
+  syncWhatsAppLeads: (leads: Array<Record<string, unknown>>) => apiFetch<{ success: boolean; addedCount: number; existingCount: number }>('/api/inquiries/whatsapp', { method: 'POST', body: JSON.stringify({ leads }) }),
   getInquiries: () => apiFetch<Inquiry[]>('/api/inquiries'),
   updateInquiryStatus: (id: number, status: string) => apiFetch(`/api/inquiries/${id}/status`, { method: 'PATCH', body: JSON.stringify({ status }) }),
   updateInquiryCRM: (id: number, data: Partial<Inquiry>) => apiFetch(`/api/inquiries/${id}/crm`, { method: 'PATCH', body: JSON.stringify(data) }),
