@@ -377,22 +377,24 @@ const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(function(){
     const leads = [];
     const seen = new Set();
 
-    // Scan all chat elements in WhatsApp Web
+    // 1. Scan individual chat elements
     const chatElements = document.querySelectorAll(
       '#pane-side div[role="listitem"], #pane-side div[role="row"], #pane-side div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"], div[role="listitem"]'
     );
 
     chatElements.forEach(el => {
       const text = (el.innerText || '').trim();
-      const match = text.match(/(?:\\+?\\d{1,4}[\\s\\-\\.]?)?\\(?\\d{2,5}\\)?[\\s\\-\\.]?\\d{2,5}[\\s\\-\\.]?\\d{2,6}/);
+      const match = text.match(/\\+?[0-9][0-9\\s\\-().]{7,20}[0-9]/);
       if (match) {
-        const rawPhone = match[0];
-        const digits = rawPhone.replace(/[^\\d+]/g, '');
-        if (digits.replace(/\\D/g, '').length >= 8 && !seen.has(digits)) {
+        const rawPhone = match[0].trim();
+        const digits = rawPhone.replace(/\\D/g, '');
+        if (digits.length >= 8 && digits.length <= 16 && !seen.has(digits)) {
           seen.add(digits);
-          const lines = text.split('\\n').filter(Boolean);
+          const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
           const isGemora = /gemora\\s*global/i.test(text);
-          const senderName = /^\\+?\\d/.test(lines[0] || '') ? '' : lines[0];
+          const firstLine = lines[0] || '';
+          const isFirstLinePhone = /^\\+?[0-9]/.test(firstLine);
+          const senderName = isFirstLinePhone ? '' : firstLine;
           const lastMsg = lines.slice(1).join(' ') || (isGemora ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat');
           
           leads.push({
@@ -404,6 +406,32 @@ const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(function(){
         }
       }
     });
+
+    // 2. Fallback: Scan full side panel text directly if elements were not caught
+    if (leads.length === 0) {
+      const pane = document.getElementById('pane-side') || document.body;
+      const fullText = pane.innerText || '';
+      const lines = fullText.split('\\n').map(l => l.trim()).filter(Boolean);
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const match = line.match(/\\+?[0-9][0-9\\s\\-().]{7,20}[0-9]/);
+        if (match) {
+          const rawPhone = match[0].trim();
+          const digits = rawPhone.replace(/\\D/g, '');
+          if (digits.length >= 8 && digits.length <= 16 && !seen.has(digits)) {
+            seen.add(digits);
+            const nextSnippet = lines.slice(i + 1, i + 3).join(' ');
+            const isGemora = /gemora\\s*global/i.test(line + ' ' + nextSnippet);
+            leads.push({
+              whatsapp: rawPhone,
+              name: '',
+              requirement: nextSnippet || (isGemora ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat'),
+              source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
+            });
+          }
+        }
+      }
+    }
 
     if (leads.length === 0) {
       box.innerHTML = '<b style="color:#f87171;">⚠️ No chats found</b><br/>Please open WhatsApp Web chat list on the left side, then run again.';
