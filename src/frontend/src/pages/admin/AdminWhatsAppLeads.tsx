@@ -212,6 +212,99 @@ export function formatPhoneNumber(num: string): string {
   return `+${clean}`;
 }
 
+// Helper: Auto-detect Country from phone number prefix
+export function detectCountryFromPhone(phone: string): string {
+  if (!phone) return "India";
+  const cleaned = phone.replace(/[^\d+]/g, "").trim();
+  let code = cleaned;
+  if (code.startsWith("00")) {
+    code = "+" + code.substring(2);
+  } else if (!code.startsWith("+")) {
+    code = "+" + code;
+  }
+
+  // Common international prefixes
+  if (code.startsWith("+91")) return "India";
+  if (code.startsWith("+971")) return "UAE";
+  if (code.startsWith("+966")) return "Saudi Arabia";
+  if (code.startsWith("+974")) return "Qatar";
+  if (code.startsWith("+965")) return "Kuwait";
+  if (code.startsWith("+968")) return "Oman";
+  if (code.startsWith("+973")) return "Bahrain";
+  if (code.startsWith("+44")) return "United Kingdom";
+  if (code.startsWith("+33")) return "France";
+  if (code.startsWith("+31")) return "Netherlands";
+  if (code.startsWith("+49")) return "Germany";
+  if (code.startsWith("+39")) return "Italy";
+  if (code.startsWith("+34")) return "Spain";
+  if (code.startsWith("+32")) return "Belgium";
+  if (code.startsWith("+41")) return "Switzerland";
+  if (code.startsWith("+43")) return "Austria";
+  if (code.startsWith("+46")) return "Sweden";
+  if (code.startsWith("+47")) return "Norway";
+  if (code.startsWith("+45")) return "Denmark";
+  if (code.startsWith("+353")) return "Ireland";
+  if (code.startsWith("+351")) return "Portugal";
+  if (code.startsWith("+30")) return "Greece";
+  if (code.startsWith("+48")) return "Poland";
+  if (code.startsWith("+61")) return "Australia";
+  if (code.startsWith("+64")) return "New Zealand";
+  if (code.startsWith("+65")) return "Singapore";
+  if (code.startsWith("+60")) return "Malaysia";
+  if (code.startsWith("+62")) return "Indonesia";
+  if (code.startsWith("+66")) return "Thailand";
+  if (code.startsWith("+84")) return "Vietnam";
+  if (code.startsWith("+81")) return "Japan";
+  if (code.startsWith("+82")) return "South Korea";
+  if (code.startsWith("+86")) return "China";
+  if (code.startsWith("+852")) return "Hong Kong";
+  if (code.startsWith("+27")) return "South Africa";
+  if (code.startsWith("+234")) return "Nigeria";
+  if (code.startsWith("+254")) return "Kenya";
+  if (code.startsWith("+20")) return "Egypt";
+  if (code.startsWith("+55")) return "Brazil";
+  if (code.startsWith("+52")) return "Mexico";
+  if (code.startsWith("+7")) return "Russia / Kazakhstan";
+  if (code.startsWith("+90")) return "Turkey";
+  if (code.startsWith("+94")) return "Sri Lanka";
+  if (code.startsWith("+880")) return "Bangladesh";
+  if (code.startsWith("+977")) return "Nepal";
+  if (code.startsWith("+92")) return "Pakistan";
+  if (code.startsWith("+1")) return "USA / Canada";
+
+  const rawDigits = cleaned.replace(/\D/g, "");
+  if (rawDigits.length === 10 && /^[6-9]/.test(rawDigits)) {
+    return "India";
+  }
+
+  return "International";
+}
+
+// Helper: Decode Quoted-Printable vCard strings (e.g. =E0=A4=... or =20)
+function decodeQuotedPrintable(raw: string): string {
+  try {
+    const cleaned = raw.replace(/=\r?\n/g, "");
+    const percentEncoded = cleaned.replace(/=([0-9A-Fa-f]{2})/g, "%$1");
+    return decodeURIComponent(percentEncoded);
+  } catch {
+    return raw.replace(/=([0-9A-Fa-f]{2})/g, (_, hex) =>
+      String.fromCharCode(parseInt(hex, 16))
+    );
+  }
+}
+
+// Helper: Clean, unescape, and decode vCard values
+function cleanVCardValue(val: string, isQuotedPrintable: boolean = false): string {
+  if (!val) return "";
+  let res = val.trim();
+  if (isQuotedPrintable || (res.includes("=") && /=[0-9A-Fa-f]{2}/.test(res))) {
+    res = decodeQuotedPrintable(res);
+  }
+  return res
+    .replace(/\\([,;\\nN])/g, (_, ch) => (ch.toLowerCase() === "n" ? " " : ch))
+    .trim();
+}
+
 export default function AdminWhatsAppLeads() {
   const qc = useQueryClient();
 
@@ -666,56 +759,143 @@ export default function AdminWhatsAppLeads() {
           notes?: string;
         }> = [];
 
-        const cards = text.split(/BEGIN:VCARD/i).slice(1);
+        // Unfold folded lines per RFC 6350 (lines starting with space or tab continue previous line)
+        const unfoldedText = text.replace(/\r?\n[ \t]+/g, "");
+        const cards = unfoldedText.split(/BEGIN:VCARD/i).slice(1);
+
         for (const card of cards) {
           let name = "";
+          let orgName = "";
           let phone = "";
           let email = "";
           let notes = "";
 
           const lines = card.split(/\r?\n/);
-          for (const line of lines) {
-            if (/^FN:/i.test(line)) {
-              name = line.substring(3).trim();
-            } else if (!name && /^N:/i.test(line)) {
-              const parts = line.substring(2).split(";").filter(Boolean);
-              name = parts.reverse().join(" ").trim();
-            } else if (/^TEL/i.test(line)) {
-              const val = line.split(":").slice(1).join(":").trim();
-              if (val && !phone) phone = val;
-            } else if (/^EMAIL/i.test(line)) {
-              const val = line.split(":").slice(1).join(":").trim();
-              if (val && !email) email = val;
-            } else if (/^NOTE:/i.test(line)) {
-              notes = line.substring(5).trim();
+          for (const rawLine of lines) {
+            const line = rawLine.trim();
+            if (!line) continue;
+
+            // Formatted Name: FN;CHARSET=UTF-8:... or FN:... or item1.FN:...
+            const fnMatch = line.match(/^(?:item\d+\.)?FN(?:;([^:]*))?:(.*)$/i);
+            if (fnMatch) {
+              const params = fnMatch[1] || "";
+              const rawVal = fnMatch[2] || "";
+              const isQP = /ENCODING=QUOTED-PRINTABLE/i.test(params);
+              const parsedName = cleanVCardValue(rawVal, isQP);
+              if (parsedName && !name) {
+                name = parsedName;
+              }
+              continue;
+            }
+
+            // Structured Name: N;CHARSET=UTF-8:Family;Given;Middle;Prefix;Suffix
+            const nMatch = line.match(/^(?:item\d+\.)?N(?:;([^:]*))?:(.*)$/i);
+            if (nMatch && !name) {
+              const params = nMatch[1] || "";
+              const rawVal = nMatch[2] || "";
+              const isQP = /ENCODING=QUOTED-PRINTABLE/i.test(params);
+              const parts = rawVal
+                .split(";")
+                .map((p) => cleanVCardValue(p, isQP))
+                .filter(Boolean);
+              if (parts.length >= 2) {
+                const family = parts[0] || "";
+                const given = parts[1] || "";
+                const middle = parts[2] || "";
+                name = [given, middle, family].filter(Boolean).join(" ").trim();
+              } else if (parts.length === 1) {
+                name = parts[0];
+              }
+              continue;
+            }
+
+            // Organization Name (ORG)
+            const orgMatch = line.match(/^(?:item\d+\.)?ORG(?:;([^:]*))?:(.*)$/i);
+            if (orgMatch) {
+              const params = orgMatch[1] || "";
+              const rawVal = orgMatch[2] || "";
+              const isQP = /ENCODING=QUOTED-PRINTABLE/i.test(params);
+              const parsedOrg = cleanVCardValue(rawVal.split(";")[0], isQP);
+              if (parsedOrg && !orgName) {
+                orgName = parsedOrg;
+              }
+              continue;
+            }
+
+            // Phone: TEL;TYPE=CELL;PREF:+... or item1.TEL:...
+            const telMatch = line.match(/^(?:item\d+\.)?TEL(?:;[^:]*)?:(.*)$/i);
+            if (telMatch) {
+              const rawTel = telMatch[1].trim();
+              if (rawTel && !phone && sanitizeWhatsAppNumber(rawTel)) {
+                phone = rawTel;
+              }
+              continue;
+            }
+
+            // Email: EMAIL;TYPE=INTERNET:...
+            const emailMatch = line.match(/^(?:item\d+\.)?EMAIL(?:;[^:]*)?:(.*)$/i);
+            if (emailMatch) {
+              const rawEmail = emailMatch[1].trim();
+              if (rawEmail && !email) {
+                email = rawEmail;
+              }
+              continue;
+            }
+
+            // Note: NOTE:...
+            const noteMatch = line.match(/^(?:item\d+\.)?NOTE(?:;([^:]*))?:(.*)$/i);
+            if (noteMatch) {
+              const params = noteMatch[1] || "";
+              const rawVal = noteMatch[2] || "";
+              const isQP = /ENCODING=QUOTED-PRINTABLE/i.test(params);
+              const parsedNote = cleanVCardValue(rawVal, isQP);
+              if (parsedNote && !notes) {
+                notes = parsedNote;
+              }
+              continue;
             }
           }
 
+          // Fallback name if FN & N are absent but ORG is present
+          if (!name && orgName) {
+            name = orgName;
+          }
+
           if (phone && sanitizeWhatsAppNumber(phone)) {
+            const detectedCountry = detectCountryFromPhone(phone);
+            const fallbackName = name
+              ? name
+              : `WhatsApp Buyer (+${sanitizeWhatsAppNumber(phone).slice(-4)})`;
+
             vcardContacts.push({
-              name: name || "Google Contact",
+              name: fallbackName,
               whatsapp: phone,
-              country: "India",
-              email,
-              notes,
+              country: detectedCountry,
+              email: email || undefined,
+              notes: notes || undefined,
             });
           }
         }
 
         setParsedImportList(vcardContacts);
-        toast.success(
-          `Found ${vcardContacts.length} valid contacts from vCard!`
-        );
+        if (vcardContacts.length > 0) {
+          toast.success(`Found ${vcardContacts.length} contacts with names & numbers from vCard!`);
+        } else {
+          toast.warning("No contacts with valid phone numbers found in vCard.");
+        }
       } else {
-        // Parse Google Contacts CSV
+        // Strip UTF-8 BOM if present
+        const cleanText = text.replace(/^\ufeff/, "");
+
+        // Parse CSV rows handling quotes
         const rows: string[][] = [];
         let currentRow: string[] = [];
         let currentCell = "";
         let insideQuotes = false;
 
-        for (let i = 0; i < text.length; i++) {
-          const char = text[i];
-          const nextChar = text[i + 1];
+        for (let i = 0; i < cleanText.length; i++) {
+          const char = cleanText[i];
+          const nextChar = cleanText[i + 1];
 
           if (char === '"') {
             if (insideQuotes && nextChar === '"') {
@@ -749,16 +929,25 @@ export default function AdminWhatsAppLeads() {
           return;
         }
 
-        const headers = rows[0].map((h) => h.toLowerCase());
+        const headers = rows[0].map((h) =>
+          h.toLowerCase().trim().replace(/^"/, "").replace(/"$/, "")
+        );
 
         // Find column indices
         const nameIdx = headers.findIndex(
-          (h) => h === "name" || h.includes("display name") || h === "full name"
+          (h) => h === "name" || h === "display name" || h === "full name" || h.includes("display name")
         );
-        const givenNameIdx = headers.findIndex((h) => h.includes("given name"));
-        const familyNameIdx = headers.findIndex((h) => h.includes("family name"));
+        const firstNameIdx = headers.findIndex(
+          (h) => h === "first name" || h === "given name" || h.includes("first name") || h.includes("given name")
+        );
+        const lastNameIdx = headers.findIndex(
+          (h) => h === "last name" || h === "family name" || h.includes("last name") || h.includes("family name")
+        );
+        const companyIdx = headers.findIndex(
+          (h) => h === "company" || h === "organization" || h.includes("organization name") || h.includes("company name")
+        );
 
-        // Look for phone columns
+        // Phone column indices
         const phoneIndices: number[] = [];
         headers.forEach((h, idx) => {
           if (
@@ -771,12 +960,16 @@ export default function AdminWhatsAppLeads() {
           }
         });
 
-        // Email & Country & Notes
+        // Email, Country, Notes
         const countryIdx = headers.findIndex(
           (h) => h.includes("country") || h.includes("region")
         );
-        const emailIdx = headers.findIndex((h) => h.includes("e-mail") || h === "email");
-        const notesIdx = headers.findIndex((h) => h.includes("notes") || h === "note");
+        const emailIdx = headers.findIndex(
+          (h) => h.includes("e-mail") || h === "email"
+        );
+        const notesIdx = headers.findIndex(
+          (h) => h.includes("notes") || h === "note"
+        );
 
         const parsed: Array<{
           name: string;
@@ -788,18 +981,21 @@ export default function AdminWhatsAppLeads() {
 
         for (let r = 1; r < rows.length; r++) {
           const row = rows[r];
-          let contactName = nameIdx !== -1 ? row[nameIdx] : "";
-          if (!contactName && givenNameIdx !== -1) {
-            const given = row[givenNameIdx] || "";
-            const fam = familyNameIdx !== -1 ? row[familyNameIdx] || "" : "";
-            contactName = `${given} ${fam}`.trim();
+          let contactName = nameIdx !== -1 ? (row[nameIdx] || "").trim() : "";
+          if (!contactName && firstNameIdx !== -1) {
+            const first = (row[firstNameIdx] || "").trim();
+            const last = lastNameIdx !== -1 ? (row[lastNameIdx] || "").trim() : "";
+            contactName = `${first} ${last}`.trim();
+          }
+          if (!contactName && companyIdx !== -1) {
+            contactName = (row[companyIdx] || "").trim();
           }
 
           // Search first available valid phone number
           let phoneVal = "";
           for (const pIdx of phoneIndices) {
             if (row[pIdx] && sanitizeWhatsAppNumber(row[pIdx])) {
-              phoneVal = row[pIdx];
+              phoneVal = row[pIdx].trim();
               break;
             }
           }
@@ -807,9 +1003,9 @@ export default function AdminWhatsAppLeads() {
           // Fallback: search any column that looks like a phone number
           if (!phoneVal) {
             for (let c = 0; c < row.length; c++) {
-              const cell = row[c];
+              const cell = (row[c] || "").trim();
               const digitsOnly = cell.replace(/\D/g, "");
-              if (digitsOnly.length >= 10 && digitsOnly.length <= 14) {
+              if (digitsOnly.length >= 10 && digitsOnly.length <= 15) {
                 phoneVal = cell;
                 break;
               }
@@ -817,12 +1013,17 @@ export default function AdminWhatsAppLeads() {
           }
 
           if (phoneVal && sanitizeWhatsAppNumber(phoneVal)) {
+            let rowCountry = countryIdx !== -1 && row[countryIdx] ? row[countryIdx].trim() : "";
+            if (!rowCountry || rowCountry.toLowerCase() === "india") {
+              rowCountry = detectCountryFromPhone(phoneVal);
+            }
+
             parsed.push({
-              name: contactName || "Google Contact",
+              name: contactName || `WhatsApp Buyer (+${sanitizeWhatsAppNumber(phoneVal).slice(-4)})`,
               whatsapp: phoneVal,
-              country: countryIdx !== -1 && row[countryIdx] ? row[countryIdx] : "India",
-              email: emailIdx !== -1 ? row[emailIdx] : undefined,
-              notes: notesIdx !== -1 ? row[notesIdx] : undefined,
+              country: rowCountry,
+              email: emailIdx !== -1 && row[emailIdx] ? row[emailIdx].trim() : undefined,
+              notes: notesIdx !== -1 && row[notesIdx] ? row[notesIdx].trim() : undefined,
             });
           }
         }
@@ -865,7 +1066,7 @@ export default function AdminWhatsAppLeads() {
         // e.g. "Rahul, 9876543210, India" or "9876543210, Rahul"
         let name = parts[0];
         let phone = parts[1];
-        let country = parts[2] || "India";
+        let country = parts[2] ? parts[2].trim() : "";
         let notes = parts[3] || "";
 
         // If part[0] is digits, flip
@@ -876,16 +1077,24 @@ export default function AdminWhatsAppLeads() {
         }
 
         if (sanitizeWhatsAppNumber(phone)) {
-          parsed.push({ name: name || "Contact", whatsapp: phone, country, notes });
+          if (!country) {
+            country = detectCountryFromPhone(phone);
+          }
+          parsed.push({
+            name: name || `WhatsApp Buyer (+${sanitizeWhatsAppNumber(phone).slice(-4)})`,
+            whatsapp: phone,
+            country,
+            notes,
+          });
         }
       } else {
         // Single phone on a line
         const digits = line.replace(/[^\d+]/g, "");
         if (digits.length >= 10) {
           parsed.push({
-            name: "Direct WhatsApp Lead",
+            name: `Direct Buyer (+${digits.slice(-4)})`,
             whatsapp: line.trim(),
-            country: "India",
+            country: detectCountryFromPhone(line.trim()),
           });
         }
       }
@@ -1535,32 +1744,71 @@ export default function AdminWhatsAppLeads() {
                 </div>
               </div>
 
-              {/* Sample preview table */}
-              <div className="max-h-40 overflow-y-auto border border-slate-100 rounded text-xs">
+              {/* Sample preview table with editable names and removal */}
+              <div className="flex items-center justify-between text-[11px] text-slate-500 px-1">
+                <span>Previewing first {Math.min(parsedImportList.length, 50)} contacts (names can be edited directly):</span>
+                <button
+                  type="button"
+                  onClick={() => setParsedImportList([])}
+                  className="text-red-600 hover:text-red-700 underline font-medium"
+                >
+                  Clear All
+                </button>
+              </div>
+
+              <div className="max-h-64 overflow-y-auto border border-slate-200 rounded-lg text-xs">
                 <table className="w-full">
-                  <thead className="bg-slate-50 border-b text-[11px] text-slate-500">
+                  <thead className="bg-slate-50 border-b text-[11px] text-slate-600 sticky top-0 z-10 shadow-sm">
                     <tr>
-                      <th className="p-1.5 text-left">Name</th>
-                      <th className="p-1.5 text-left">Phone</th>
-                      <th className="p-1.5 text-left">Country</th>
+                      <th className="p-2 text-left font-semibold">Contact / Buyer Name</th>
+                      <th className="p-2 text-left font-semibold">Phone (WhatsApp)</th>
+                      <th className="p-2 text-left font-semibold">Country</th>
+                      <th className="p-2 text-center font-semibold w-10">Action</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {parsedImportList.slice(0, 10).map((c, i) => (
-                      <tr key={i} className="border-b border-slate-50">
-                        <td className="p-1.5 font-medium">{c.name}</td>
-                        <td className="p-1.5 font-mono text-slate-600">
+                  <tbody className="divide-y divide-slate-100">
+                    {parsedImportList.slice(0, 50).map((c, i) => (
+                      <tr key={i} className="hover:bg-slate-50/60 transition-colors">
+                        <td className="p-1.5">
+                          <Input
+                            className="h-7 text-xs font-medium py-1 px-2 border-slate-200 bg-white"
+                            value={c.name}
+                            onChange={(e) => {
+                              const updated = [...parsedImportList];
+                              updated[i] = { ...updated[i], name: e.target.value };
+                              setParsedImportList(updated);
+                            }}
+                          />
+                        </td>
+                        <td className="p-1.5 font-mono text-slate-700 text-xs">
                           {c.whatsapp}
                         </td>
-                        <td className="p-1.5 text-slate-500">{c.country}</td>
+                        <td className="p-1.5">
+                          <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">
+                            {c.country || "India"}
+                          </span>
+                        </td>
+                        <td className="p-1.5 text-center">
+                          <button
+                            type="button"
+                            title="Remove from import"
+                            onClick={() => {
+                              const updated = parsedImportList.filter((_, idx) => idx !== i);
+                              setParsedImportList(updated);
+                            }}
+                            className="text-slate-400 hover:text-red-600 p-1 transition-colors"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-              {parsedImportList.length > 10 && (
-                <p className="text-[11px] text-slate-400 text-center">
-                  ...and {parsedImportList.length - 10} more contacts.
+              {parsedImportList.length > 50 && (
+                <p className="text-[11px] text-slate-400 text-center font-medium">
+                  ...and {parsedImportList.length - 50} more contacts ready for 1-click import.
                 </p>
               )}
             </div>
