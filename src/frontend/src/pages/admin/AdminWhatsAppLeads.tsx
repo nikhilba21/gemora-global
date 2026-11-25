@@ -362,6 +362,68 @@ export function getCountryFlag(country?: string): string {
   return "🌐";
 }
 
+// WhatsApp Web 1-Click Sync Script & Encoded Bookmarklet (Safe for JSX)
+const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(function(){
+  const API_URL = 'https://gemora-global-2.onrender.com/api/inquiries/whatsapp';
+  let box = document.getElementById('gm-sync-box');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'gm-sync-box';
+    box.style.cssText = 'position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';
+    document.body.appendChild(box);
+  }
+  box.textContent = '⚡ Gemora CRM: Scanning chats for unsaved numbers...';
+  const leads = [];
+  const seen = new Set();
+  document.querySelectorAll('div[role="listitem"], div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"]').forEach(el => {
+    const text = (el.innerText || '').trim();
+    const match = text.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);
+    if (match) {
+      const num = match[0];
+      const digits = num.replace(/[^\\d+]/g, '');
+      if (digits.length >= 8 && !seen.has(digits)) {
+        seen.add(digits);
+        const lines = text.split('\\n').filter(Boolean);
+        const isGemora = /gemora\\s*global/i.test(text);
+        leads.push({
+          whatsapp: num,
+          name: /^\\+?\\d/.test(lines[0] || '') ? '' : lines[0],
+          requirement: lines.slice(1).join(' ') || 'Incoming WhatsApp Lead',
+          source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
+        });
+      }
+    }
+  });
+  if (!leads.length) {
+    box.textContent = '⚠️ No chats found. Open your WhatsApp Web chat list, then click again.';
+    setTimeout(() => box.remove(), 6000);
+    return;
+  }
+  box.textContent = '⚡ Found ' + leads.length + ' leads! Sending to Gemora CRM...';
+  fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ leads })
+  })
+  .then(res => res.json())
+  .then(data => {
+    box.style.background = '#065F46';
+    box.textContent = '✅ Synced ' + leads.length + ' WhatsApp Chats! Added ' + ((data && data.addedCount) || leads.length) + ' leads to Gemora CRM.';
+    setTimeout(() => box.remove(), 7000);
+  })
+  .catch(err => {
+    box.style.background = '#7F1D1D';
+    box.textContent = '❌ Error syncing to Gemora CRM: ' + err.message;
+    setTimeout(() => box.remove(), 7000);
+  });
+})();`;
+
+const WHATSAPP_SYNC_BOOKMARKLET_HREF =
+  "javascript:" +
+  encodeURIComponent(
+    WHATSAPP_SYNC_CONSOLE_SCRIPT.replace(/\s+/g, " ").trim()
+  );
+
 export default function AdminWhatsAppLeads() {
   const qc = useQueryClient();
 
@@ -2395,7 +2457,7 @@ export default function AdminWhatsAppLeads() {
 
                 <div className="pt-2 pb-1 text-center">
                   <a
-                    href="javascript:(function(){const E='https://gemora-global-2.onrender.com/api/inquiries/whatsapp';let b=document.getElementById('gm-sync');if(!b){b=document.createElement('div');b.id='gm-sync';b.style.cssText='position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';document.body.appendChild(b);}b.innerHTML='<b style=\"color:#D4AF37;\">⚡ Gemora CRM Auto-Sync</b><br/>Scanning chats for unsaved numbers &amp; Gemora Global messages...';const leads=[];const seen=new Set();document.querySelectorAll('div[role=\"listitem\"], div[data-testid=\"cell-frame-container\"], #pane-side div[tabindex=\"-1\"]').forEach(el=>{const t=(el.innerText||'').trim();const m=t.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);if(m){const num=m[0];const d=num.replace(/[^\\d+]/g,'');if(d.length>=8&&!seen.has(d)){seen.add(d);const lines=t.split('\\n').filter(Boolean);const isGemora=/gemora\\s*global/i.test(t);leads.push({whatsapp:num,name:/^\\+?\\d/.test(lines[0]||'')?'':lines[0],requirement:isGemora?lines.slice(1).join(' '):lines.slice(1).join(' '),source:isGemora?'WhatsApp (Gemora Global Text)':'WhatsApp Unsaved Lead'});}}});if(!leads.length){b.innerHTML='<b style=\"color:#f87171;\">⚠️ No chats found</b><br/>Open your WhatsApp Web chat list, then click again.';setTimeout(()=>b.remove(),6000);return;}b.innerHTML='<b style=\"color:#D4AF37;\">Found '+leads.length+' leads!</b><br/>Sending to Gemora CRM...';fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({leads})}).then(r=>r.json()).then(d=>{b.style.background='#065F46';b.innerHTML='<b style=\"color:#34D399;\">✅ Synced '+leads.length+' WhatsApp Chats!</b><br/>Added '+((d&&d.addedCount)||leads.length)+' leads to Gemora CRM.';setTimeout(()=>b.remove(),7000);}).catch(e=>{b.style.background='#7F1D1D';b.innerHTML='<b>❌ Error:</b> '+e.message;setTimeout(()=>b.remove(),7000);});})();"
+                    href={WHATSAPP_SYNC_BOOKMARKLET_HREF}
                     onClick={(e) => {
                       e.preventDefault();
                       toast.info("Drag this button into your Bookmarks Bar at the top of your browser!");
@@ -2442,8 +2504,7 @@ export default function AdminWhatsAppLeads() {
                     size="sm"
                     className="text-xs h-7"
                     onClick={() => {
-                      const code = `(function(){const E='https://gemora-global-2.onrender.com/api/inquiries/whatsapp';let b=document.getElementById('gm-sync');if(!b){b=document.createElement('div');b.id='gm-sync';b.style.cssText='position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 22px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';document.body.appendChild(b);}b.innerHTML='<b style=\"color:#D4AF37;\">⚡ Gemora CRM Auto-Sync</b><br/>Scanning chats for unsaved numbers & Gemora Global messages...';const leads=[];const seen=new Set();document.querySelectorAll('div[role=\"listitem\"], div[data-testid=\"cell-frame-container\"], #pane-side div[tabindex=\"-1\"]').forEach(el=>{const t=(el.innerText||'').trim();const m=t.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);if(m){const num=m[0];const d=num.replace(/[^\\d+]/g,'');if(d.length>=8&&!seen.has(d)){seen.add(d);const lines=t.split('\\n').filter(Boolean);const isGemora=/gemora\\s*global/i.test(t);leads.push({whatsapp:num,name:/^\\+?\\d/.test(lines[0]||'')?'':lines[0],requirement:isGemora?lines.slice(1).join(' '):lines.slice(1).join(' '),source:isGemora?'WhatsApp (Gemora Global Text)':'WhatsApp Unsaved Lead'});}}});if(!leads.length){b.innerHTML='<b style=\"color:#f87171;\">⚠️ No chats found</b><br/>Open your WhatsApp Web chat list, then click again.';setTimeout(()=>b.remove(),6000);return;}b.innerHTML='<b style=\"color:#D4AF37;\">Found '+leads.length+' leads!</b><br/>Sending to Gemora CRM...';fetch(E,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({leads})}).then(r=>r.json()).then(d=>{b.style.background='#065F46';b.innerHTML='<b style=\"color:#34D399;\">✅ Synced '+leads.length+' WhatsApp Chats!</b><br/>Added '+((d&&d.addedCount)||leads.length)+' leads to Gemora CRM.';setTimeout(()=>b.remove(),7000);}).catch(e=>{b.style.background='#7F1D1D';b.innerHTML='<b>❌ Error:</b> '+e.message;setTimeout(()=>b.remove(),7000);});})();`;
-                      navigator.clipboard.writeText(code);
+                      navigator.clipboard.writeText(WHATSAPP_SYNC_CONSOLE_SCRIPT);
                       toast.success("Script copied! Paste it into WhatsApp Web DevTools Console (F12) and press Enter.");
                     }}
                   >
