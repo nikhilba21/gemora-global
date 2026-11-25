@@ -362,67 +362,77 @@ export function getCountryFlag(country?: string): string {
   return "🌐";
 }
 
-// WhatsApp Web 1-Click Sync Script & Encoded Bookmarklet (Safe for JSX)
+// WhatsApp Web 1-Click Sync Script & Bookmarklet (Safe for WhatsApp Web CSP)
 const WHATSAPP_SYNC_CONSOLE_SCRIPT = `(function(){
-  const API_URL = 'https://gemora-global-2.onrender.com/api/inquiries/whatsapp';
-  let box = document.getElementById('gm-sync-box');
-  if (!box) {
-    box = document.createElement('div');
-    box.id = 'gm-sync-box';
-    box.style.cssText = 'position:fixed;top:20px;right:20px;z-index:999999;background:#1A237E;color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.4);font-family:sans-serif;font-size:13px;max-width:340px;border:1px solid #D4AF37;line-height:1.5;';
-    document.body.appendChild(box);
-  }
-  box.textContent = '⚡ Gemora CRM: Scanning chats for unsaved numbers...';
-  const leads = [];
-  const seen = new Set();
-  document.querySelectorAll('div[role="listitem"], div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"]').forEach(el => {
-    const text = (el.innerText || '').trim();
-    const match = text.match(/\\+?\\d{1,4}[\\s\\-\\.]?\\(?\\d{1,4}\\)?[\\s\\-\\.]?\\d{2,4}[\\s\\-\\.]?\\d{2,9}/);
-    if (match) {
-      const num = match[0];
-      const digits = num.replace(/[^\\d+]/g, '');
-      if (digits.length >= 8 && !seen.has(digits)) {
-        seen.add(digits);
-        const lines = text.split('\\n').filter(Boolean);
-        const isGemora = /gemora\\s*global/i.test(text);
-        leads.push({
-          whatsapp: num,
-          name: /^\\+?\\d/.test(lines[0] || '') ? '' : lines[0],
-          requirement: lines.slice(1).join(' ') || 'Incoming WhatsApp Lead',
-          source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
-        });
-      }
+  try {
+    let box = document.getElementById('gm-sync-box');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'gm-sync-box';
+      box.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999999;background:#1A237E;color:#fff;padding:16px 20px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.5);font-family:sans-serif;font-size:13px;max-width:360px;border:2px solid #D4AF37;line-height:1.5;';
+      document.body.appendChild(box);
     }
-  });
-  if (!leads.length) {
-    box.textContent = '⚠️ No chats found. Open your WhatsApp Web chat list, then click again.';
-    setTimeout(() => box.remove(), 6000);
-    return;
+    box.innerHTML = '<b style="color:#D4AF37;">⚡ Gemora CRM Scanner</b><br/>Scanning WhatsApp chats for unsaved numbers...';
+
+    const leads = [];
+    const seen = new Set();
+
+    // Scan all chat elements in WhatsApp Web
+    const chatElements = document.querySelectorAll(
+      '#pane-side div[role="listitem"], #pane-side div[role="row"], #pane-side div[data-testid="cell-frame-container"], #pane-side div[tabindex="-1"], div[role="listitem"]'
+    );
+
+    chatElements.forEach(el => {
+      const text = (el.innerText || '').trim();
+      const match = text.match(/(?:\\+?\\d{1,4}[\\s\\-\\.]?)?\\(?\\d{2,5}\\)?[\\s\\-\\.]?\\d{2,5}[\\s\\-\\.]?\\d{2,6}/);
+      if (match) {
+        const rawPhone = match[0];
+        const digits = rawPhone.replace(/[^\\d+]/g, '');
+        if (digits.replace(/\\D/g, '').length >= 8 && !seen.has(digits)) {
+          seen.add(digits);
+          const lines = text.split('\\n').filter(Boolean);
+          const isGemora = /gemora\\s*global/i.test(text);
+          const senderName = /^\\+?\\d/.test(lines[0] || '') ? '' : lines[0];
+          const lastMsg = lines.slice(1).join(' ') || (isGemora ? 'Inquiry mentioning Gemora Global' : 'Incoming WhatsApp Chat');
+          
+          leads.push({
+            whatsapp: rawPhone,
+            name: senderName,
+            requirement: lastMsg,
+            source: isGemora ? 'WhatsApp (Gemora Global Text)' : 'WhatsApp Unsaved Lead'
+          });
+        }
+      }
+    });
+
+    if (leads.length === 0) {
+      box.innerHTML = '<b style="color:#f87171;">⚠️ No chats found</b><br/>Please open WhatsApp Web chat list on the left side, then run again.';
+      setTimeout(() => { if (box) box.remove(); }, 6000);
+      return;
+    }
+
+    // Save to clipboard as fallback
+    try {
+      navigator.clipboard.writeText(JSON.stringify(leads));
+    } catch(e) {}
+
+    const syncUrl = 'https://www.gemoraglobal.co/admin/whatsapp-leads#sync=' + encodeURIComponent(JSON.stringify(leads));
+    
+    box.innerHTML = '<b style="color:#34D399;">✅ Found ' + leads.length + ' WhatsApp Leads!</b><br/>Opening Gemora CRM to save...<br/><a href="' + syncUrl + '" target="_blank" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#D4AF37;color:#1A237E;font-weight:bold;border-radius:6px;text-decoration:none;">👉 Click here to save leads in CRM</a>';
+
+    try {
+      const w = window.open(syncUrl, '_blank');
+      if (w) {
+        setTimeout(() => { if (box) box.remove(); }, 6000);
+      }
+    } catch(e) {}
+  } catch(err) {
+    alert('Gemora Sync Error: ' + err.message);
   }
-  box.textContent = '⚡ Found ' + leads.length + ' leads! Sending to Gemora CRM...';
-  fetch(API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ leads })
-  })
-  .then(res => res.json())
-  .then(data => {
-    box.style.background = '#065F46';
-    box.textContent = '✅ Synced ' + leads.length + ' WhatsApp Chats! Added ' + ((data && data.addedCount) || leads.length) + ' leads to Gemora CRM.';
-    setTimeout(() => box.remove(), 7000);
-  })
-  .catch(err => {
-    box.style.background = '#7F1D1D';
-    box.textContent = '❌ Error syncing to Gemora CRM: ' + err.message;
-    setTimeout(() => box.remove(), 7000);
-  });
 })();`;
 
 const WHATSAPP_SYNC_BOOKMARKLET_HREF =
-  "javascript:" +
-  encodeURIComponent(
-    WHATSAPP_SYNC_CONSOLE_SCRIPT.replace(/\s+/g, " ").trim()
-  );
+  "javascript:" + WHATSAPP_SYNC_CONSOLE_SCRIPT.replace(/\s+/g, " ").trim();
 
 export default function AdminWhatsAppLeads() {
   const qc = useQueryClient();
@@ -594,6 +604,60 @@ export default function AdminWhatsAppLeads() {
       return tB - tA;
     });
   }, [backendLeads, customLeads]);
+
+  // Auto-import WhatsApp leads from URL hash (#sync=...) when triggered by WhatsApp Web Script
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash;
+    if (hash && hash.startsWith("#sync=")) {
+      try {
+        const rawJson = decodeURIComponent(hash.slice(6));
+        const leads = JSON.parse(rawJson);
+        if (Array.isArray(leads) && leads.length > 0) {
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
+          const toastId = toast.loading(`⚡ Syncing ${leads.length} leads from WhatsApp Web...`);
+
+          api.syncWhatsAppLeads(leads)
+            .then((res: any) => {
+              toast.dismiss(toastId);
+              const added = res?.addedCount ?? leads.length;
+              toast.success(`✅ Successfully synced ${added} WhatsApp leads to CRM!`, { duration: 6000 });
+              qc.invalidateQueries({ queryKey: ["inquiries"] });
+            })
+            .catch((err) => {
+              toast.dismiss(toastId);
+              console.warn("Backend sync failed, storing locally", err);
+              const existingPhones = new Set(allLeads.map((l) => sanitizeWhatsAppNumber(l.whatsapp)));
+              const newCustom: WhatsAppLead[] = [];
+              leads.forEach((l: any, idx: number) => {
+                const phone = l.whatsapp || l.phone || "";
+                const clean = sanitizeWhatsAppNumber(phone);
+                if (clean && !existingPhones.has(clean)) {
+                  existingPhones.add(clean);
+                  newCustom.push({
+                    id: `sync_${Date.now()}_${idx}`,
+                    name: l.name || `WhatsApp Buyer (+${clean.slice(-4)})`,
+                    whatsapp: phone,
+                    country: l.country || detectCountryFromPhone(phone),
+                    source: l.source || "WhatsApp Direct",
+                    pipelineStage: "New",
+                    requirement: l.requirement || "Incoming WhatsApp Lead",
+                    createdAt: new Date().toISOString(),
+                    isCustom: true,
+                  });
+                }
+              });
+              if (newCustom.length > 0) {
+                persistCustomLeads([...newCustom, ...customLeads]);
+                toast.success(`✅ Saved ${newCustom.length} WhatsApp leads to CRM!`, { duration: 6000 });
+              }
+            });
+        }
+      } catch (e) {
+        console.error("Failed to parse #sync URL payload", e);
+      }
+    }
+  }, [qc, allLeads, customLeads]);
 
   // Filtered leads based on search, stage, source, and country
   const filteredLeads = useMemo(() => {
@@ -2442,76 +2506,95 @@ export default function AdminWhatsAppLeads() {
           {/* TAB 1: WhatsApp Web 1-Click Sync */}
           {autoSyncTab === "bookmarklet" && (
             <div className="py-3 space-y-4 text-xs">
+              {/* PRIMARY METHOD: WhatsApp Web Console Script */}
               <div className="bg-gradient-to-br from-emerald-50 to-teal-50/70 p-4 rounded-xl border border-emerald-200 space-y-3">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-                      <span className="p-1 bg-emerald-600 text-white rounded text-xs">Step 1</span>
-                      Drag this Button to your Bookmarks Bar (Ctrl + Shift + B):
+                      <span className="p-1 bg-emerald-600 text-white rounded text-xs">Method 1</span>
+                      WhatsApp Web Script (Fastest &amp; 100% Guaranteed):
                     </h4>
                     <p className="text-slate-600 text-xs mt-1">
-                      Drag and drop the green button below into your browser bookmark bar. It works on Chrome, Edge, Brave, and Firefox.
+                      Run this directly on <strong>web.whatsapp.com</strong> to scan all unsaved numbers &amp; &quot;Gemora Global&quot; texts.
                     </p>
                   </div>
+                  <Button
+                    type="button"
+                    size="sm"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs h-9 flex-shrink-0 shadow"
+                    onClick={() => {
+                      navigator.clipboard.writeText(WHATSAPP_SYNC_CONSOLE_SCRIPT);
+                      toast.success("Script copied! Now paste into WhatsApp Web Console (F12) and press Enter.");
+                    }}
+                  >
+                    <Copy className="w-4 h-4 mr-1.5" />
+                    📋 Copy WhatsApp Web Script
+                  </Button>
                 </div>
 
-                <div className="pt-2 pb-1 text-center">
-                  <a
-                    href={WHATSAPP_SYNC_BOOKMARKLET_HREF}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toast.info("Drag this button into your Bookmarks Bar at the top of your browser!");
-                    }}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold text-sm shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all cursor-grab border-2 border-emerald-400 select-none"
-                    title="Drag me to your Bookmarks Bar!"
-                  >
-                    <Zap className="w-4 h-4 text-amber-300" />
-                    ⚡ Sync WhatsApp Leads to Gemora CRM
-                  </a>
-                  <p className="text-[11px] text-slate-500 mt-2">
-                    Tip: Press <strong>Ctrl + Shift + B</strong> on Windows to show the Bookmarks bar, then drag the button above into it.
+                <div className="bg-white p-3 rounded-lg border border-emerald-200 space-y-1.5 text-slate-700 text-xs">
+                  <p className="font-semibold text-slate-900">How to run in 3 quick steps:</p>
+                  <ol className="list-decimal pl-5 space-y-1 text-slate-600">
+                    <li>
+                      Open <strong>[web.whatsapp.com](https://web.whatsapp.com)</strong> in Chrome / Edge / Brave.
+                    </li>
+                    <li>
+                      Press <strong>F12</strong> on your keyboard (or Right-Click anywhere on WhatsApp Web &rarr; click <strong>Inspect</strong> &rarr; click <strong>Console</strong> tab).
+                    </li>
+                    <li>
+                      Click the green <strong>&quot;📋 Copy WhatsApp Web Script&quot;</strong> button above, then in the WhatsApp Console press <strong>Ctrl + V</strong> and hit <strong>Enter</strong>!
+                    </li>
+                  </ol>
+                  <p className="text-[11px] text-emerald-800 pt-1">
+                    ⚡ <em>A gold notification will pop up on WhatsApp Web scanning chats, and all unsaved numbers + &quot;Gemora Global&quot; messages will be saved into CRM immediately!</em>
                   </p>
                 </div>
               </div>
 
+              {/* SECONDARY METHOD: Browser Bookmarklet */}
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
-                <h4 className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                  <span className="p-1 bg-[#1A237E] text-white rounded text-xs">Step 2</span>
-                  How to Use on WhatsApp Web (web.whatsapp.com):
-                </h4>
-                <ol className="list-decimal pl-5 space-y-2 text-slate-600">
-                  <li>
-                    Open <strong>web.whatsapp.com</strong> in your browser and connect your WhatsApp Business account.
-                  </li>
-                  <li>
-                    Whenever you receive new messages or have unsaved numbers in your chat list, simply click the <strong>&quot;⚡ Sync WhatsApp Leads to Gemora CRM&quot;</strong> bookmark.
-                  </li>
-                  <li>
-                    A floating notification will pop up on WhatsApp Web scanning all chats, automatically extracting unsaved numbers and messages containing <strong>&quot;Gemora Global&quot;</strong>.
-                  </li>
-                  <li>
-                    In 1-second, all new leads are automatically saved to your Gemora CRM with detected country flags!
-                  </li>
-                </ol>
-
-                <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-500">
-                    Prefer running script in DevTools Console (F12)?
-                  </span>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                      <span className="p-1 bg-[#1A237E] text-white rounded text-xs">Method 2</span>
+                      Permanent Browser Bookmark (1-Click Sync):
+                    </h4>
+                    <p className="text-slate-500 text-[11px] mt-0.5">
+                      Modern Chrome blocks dragging bookmark links, so create the bookmark manually once:
+                    </p>
+                  </div>
                   <Button
                     type="button"
                     variant="outline"
                     size="sm"
-                    className="text-xs h-7"
+                    className="text-xs h-8 flex-shrink-0 border-slate-300"
                     onClick={() => {
-                      navigator.clipboard.writeText(WHATSAPP_SYNC_CONSOLE_SCRIPT);
-                      toast.success("Script copied! Paste it into WhatsApp Web DevTools Console (F12) and press Enter.");
+                      navigator.clipboard.writeText(WHATSAPP_SYNC_BOOKMARKLET_HREF);
+                      toast.success("Bookmark URL copied! Create a new bookmark in Chrome and paste this in the URL field.");
                     }}
                   >
-                    <Copy className="w-3 h-3 mr-1" />
-                    Copy Console Script
+                    <Copy className="w-3.5 h-3.5 mr-1" />
+                    Copy Bookmark URL
                   </Button>
                 </div>
+
+                <ol className="list-decimal pl-5 space-y-1.5 text-slate-600 text-xs">
+                  <li>
+                    Press <strong>Ctrl + Shift + B</strong> to show your browser Bookmarks Bar.
+                  </li>
+                  <li>
+                    Right-click on the Bookmarks Bar &rarr; click <strong>&quot;Add page...&quot;</strong> (or &quot;Add bookmark&quot;).
+                  </li>
+                  <li>
+                    <strong>Name:</strong> <code>⚡ Gemora CRM Sync</code>
+                  </li>
+                  <li>
+                    <strong>URL:</strong> Click <strong>&quot;Copy Bookmark URL&quot;</strong> button above and paste (<code>Ctrl + V</code>) into the URL box, then click <strong>Save</strong>.
+                  </li>
+                  <li>
+                    Now open <strong>web.whatsapp.com</strong> and click the <strong>&quot;⚡ Gemora CRM Sync&quot;</strong> bookmark in your bookmarks bar anytime to sync!
+                  </li>
+                </ol>
               </div>
             </div>
           )}
