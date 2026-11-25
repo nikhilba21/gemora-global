@@ -305,6 +305,61 @@ function cleanVCardValue(val: string, isQuotedPrintable: boolean = false): strin
     .trim();
 }
 
+// Helper: Get Flag emoji for country
+export function getCountryFlag(country?: string): string {
+  if (!country) return "🇮🇳";
+  const c = country.toLowerCase().trim();
+  if (c.includes("india")) return "🇮🇳";
+  if (c.includes("uae") || c.includes("dubai") || c.includes("emirates")) return "🇦🇪";
+  if (c.includes("saudi")) return "🇸🇦";
+  if (c.includes("qatar")) return "🇶🇦";
+  if (c.includes("kuwait")) return "🇰🇼";
+  if (c.includes("oman")) return "🇴🇲";
+  if (c.includes("bahrain")) return "🇧🇭";
+  if (c.includes("france")) return "🇫🇷";
+  if (c.includes("netherlands") || c.includes("holland")) return "🇳🇱";
+  if (c.includes("germany")) return "🇩🇪";
+  if (c.includes("italy")) return "🇮🇹";
+  if (c.includes("spain")) return "🇪🇸";
+  if (c.includes("uk") || c.includes("united kingdom") || c.includes("britain") || c.includes("england")) return "🇬🇧";
+  if (c.includes("usa") || c.includes("united states") || c.includes("america")) return "🇺🇸";
+  if (c.includes("canada")) return "🇨🇦";
+  if (c.includes("australia")) return "🇦🇺";
+  if (c.includes("new zealand")) return "🇳🇿";
+  if (c.includes("singapore")) return "🇸🇬";
+  if (c.includes("malaysia")) return "🇲🇾";
+  if (c.includes("indonesia")) return "🇮🇩";
+  if (c.includes("thailand")) return "🇹🇭";
+  if (c.includes("vietnam")) return "🇻🇳";
+  if (c.includes("japan")) return "🇯🇵";
+  if (c.includes("korea")) return "🇰🇷";
+  if (c.includes("china")) return "🇨🇳";
+  if (c.includes("hong kong")) return "🇭🇰";
+  if (c.includes("south africa")) return "🇿🇦";
+  if (c.includes("nigeria")) return "🇳🇬";
+  if (c.includes("kenya")) return "🇰🇪";
+  if (c.includes("egypt")) return "🇪🇬";
+  if (c.includes("sri lanka")) return "🇱🇰";
+  if (c.includes("bangladesh")) return "🇧🇩";
+  if (c.includes("nepal")) return "🇳🇵";
+  if (c.includes("pakistan")) return "🇵🇰";
+  if (c.includes("turkey")) return "🇹🇷";
+  if (c.includes("russia")) return "🇷🇺";
+  if (c.includes("belgium")) return "🇧🇪";
+  if (c.includes("switzerland")) return "🇨🇭";
+  if (c.includes("austria")) return "🇦🇹";
+  if (c.includes("sweden")) return "🇸🇪";
+  if (c.includes("norway")) return "🇳🇴";
+  if (c.includes("denmark")) return "🇩🇰";
+  if (c.includes("ireland")) return "🇮🇪";
+  if (c.includes("portugal")) return "🇵🇹";
+  if (c.includes("poland")) return "🇵🇱";
+  if (c.includes("greece")) return "🇬🇷";
+  if (c.includes("brazil")) return "🇧🇷";
+  if (c.includes("mexico")) return "🇲🇽";
+  return "🌐";
+}
+
 export default function AdminWhatsAppLeads() {
   const qc = useQueryClient();
 
@@ -312,6 +367,7 @@ export default function AdminWhatsAppLeads() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedStage, setSelectedStage] = useState<string>("ALL");
   const [selectedSource, setSelectedSource] = useState<string>("ALL");
+  const [selectedCountry, setSelectedCountry] = useState<string>("ALL");
 
   // Modals
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
@@ -438,17 +494,26 @@ export default function AdminWhatsAppLeads() {
     customLeads.forEach((cl) => {
       const cleanPhone = sanitizeWhatsAppNumber(cl.whatsapp);
       if (cleanPhone) {
+        // Auto-fix country if defaulted or missing and phone number has an international dial code
+        let country = cl.country;
+        if (!country || country === "India" || country === "Global") {
+          const detected = detectCountryFromPhone(cl.whatsapp);
+          if (detected && detected !== "International") {
+            country = detected;
+          }
+        }
+        const resolvedLead = { ...cl, country: country || "India" };
         const existing = map.get(cleanPhone);
         if (existing) {
           map.set(cleanPhone, {
             ...existing,
-            ...cl,
-            notes: cl.notes || existing.notes,
-            lastContactedAt: cl.lastContactedAt || existing.lastContactedAt,
-            pipelineStage: cl.pipelineStage || existing.pipelineStage,
+            ...resolvedLead,
+            notes: resolvedLead.notes || existing.notes,
+            lastContactedAt: resolvedLead.lastContactedAt || existing.lastContactedAt,
+            pipelineStage: resolvedLead.pipelineStage || existing.pipelineStage,
           });
         } else {
-          map.set(cleanPhone, cl);
+          map.set(cleanPhone, resolvedLead);
         }
       }
     });
@@ -460,7 +525,7 @@ export default function AdminWhatsAppLeads() {
     });
   }, [backendLeads, customLeads]);
 
-  // Filtered leads based on search, stage, and source
+  // Filtered leads based on search, stage, source, and country
   const filteredLeads = useMemo(() => {
     return allLeads.filter((lead) => {
       // Stage filter
@@ -469,6 +534,10 @@ export default function AdminWhatsAppLeads() {
       }
       // Source filter
       if (selectedSource !== "ALL" && lead.source !== selectedSource) {
+        return false;
+      }
+      // Country filter
+      if (selectedCountry !== "ALL" && (lead.country || "India") !== selectedCountry) {
         return false;
       }
       // Search query
@@ -489,7 +558,7 @@ export default function AdminWhatsAppLeads() {
       }
       return true;
     });
-  }, [allLeads, selectedStage, selectedSource, searchQuery]);
+  }, [allLeads, selectedStage, selectedSource, selectedCountry, searchQuery]);
 
   // Summary Metrics
   const metrics = useMemo(() => {
@@ -513,6 +582,15 @@ export default function AdminWhatsAppLeads() {
       if (l.source) s.add(l.source);
     });
     return Array.from(s);
+  }, [allLeads]);
+
+  // Unique countries for filter dropdown
+  const uniqueCountries = useMemo(() => {
+    const s = new Set<string>();
+    allLeads.forEach((l) => {
+      if (l.country) s.add(l.country);
+    });
+    return Array.from(s).sort();
   }, [allLeads]);
 
   // Update lead stage
@@ -1335,7 +1413,7 @@ export default function AdminWhatsAppLeads() {
 
             {/* Source filter */}
             <Select value={selectedSource} onValueChange={setSelectedSource}>
-              <SelectTrigger className="h-9 w-[160px] bg-white border-slate-200 text-xs">
+              <SelectTrigger className="h-9 w-[140px] bg-white border-slate-200 text-xs">
                 <SelectValue placeholder="Filter Source" />
               </SelectTrigger>
               <SelectContent>
@@ -1348,7 +1426,22 @@ export default function AdminWhatsAppLeads() {
               </SelectContent>
             </Select>
 
-            {(searchQuery || selectedStage !== "ALL" || selectedSource !== "ALL") && (
+            {/* Country filter */}
+            <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+              <SelectTrigger className="h-9 w-[150px] bg-white border-slate-200 text-xs">
+                <SelectValue placeholder="Filter Country" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="ALL">All Countries</SelectItem>
+                {uniqueCountries.map((c) => (
+                  <SelectItem key={c} value={c}>
+                    {getCountryFlag(c)} {c}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            {(searchQuery || selectedStage !== "ALL" || selectedSource !== "ALL" || selectedCountry !== "ALL") && (
               <Button
                 variant="ghost"
                 size="sm"
@@ -1356,6 +1449,7 @@ export default function AdminWhatsAppLeads() {
                   setSearchQuery("");
                   setSelectedStage("ALL");
                   setSelectedSource("ALL");
+                  setSelectedCountry("ALL");
                 }}
                 className="text-xs h-9 text-slate-500 hover:text-slate-800"
               >
@@ -1375,7 +1469,7 @@ export default function AdminWhatsAppLeads() {
               No WhatsApp Leads Found
             </h3>
             <p className="text-sm text-slate-500 max-w-md mx-auto mb-5">
-              {searchQuery || selectedStage !== "ALL"
+              {searchQuery || selectedStage !== "ALL" || selectedSource !== "ALL" || selectedCountry !== "ALL"
                 ? "No leads matched your filter criteria. Try clearing search filters."
                 : "Start managing WhatsApp leads by importing from Google Contacts or adding a lead manually."}
             </p>
@@ -1400,29 +1494,29 @@ export default function AdminWhatsAppLeads() {
             </div>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <Table>
+          <div className="overflow-x-auto relative">
+            <Table className="w-full text-left border-collapse">
               <TableHeader>
-                <TableRow className="bg-slate-50 border-b border-slate-200">
-                  <TableHead className="w-[200px] text-slate-800 font-bold text-xs">
-                    Buyer &amp; Location
+                <TableRow className="bg-slate-50/90 border-b border-slate-200">
+                  <TableHead className="w-[180px] text-slate-800 font-bold text-xs py-3 pl-4">
+                    Buyer &amp; Source
                   </TableHead>
-                  <TableHead className="w-[160px] text-slate-800 font-bold text-xs">
+                  <TableHead className="w-[130px] text-slate-800 font-bold text-xs py-3">
+                    Country
+                  </TableHead>
+                  <TableHead className="w-[150px] text-slate-800 font-bold text-xs py-3">
                     WhatsApp Number
                   </TableHead>
-                  <TableHead className="w-[170px] text-slate-800 font-bold text-xs">
+                  <TableHead className="w-[130px] text-slate-800 font-bold text-xs py-3">
                     Pipeline Stage
                   </TableHead>
-                  <TableHead className="w-[130px] text-slate-800 font-bold text-xs">
-                    Source
-                  </TableHead>
-                  <TableHead className="text-slate-800 font-bold text-xs">
+                  <TableHead className="text-slate-800 font-bold text-xs py-3 min-w-[150px]">
                     Requirement &amp; Notes
                   </TableHead>
-                  <TableHead className="w-[130px] text-slate-800 font-bold text-xs">
+                  <TableHead className="w-[90px] text-slate-800 font-bold text-xs py-3">
                     Last Contact
                   </TableHead>
-                  <TableHead className="w-[170px] text-right text-slate-800 font-bold text-xs">
+                  <TableHead className="w-[120px] text-right text-slate-800 font-bold text-xs py-3 pr-4 sticky right-0 bg-slate-50/95 backdrop-blur-sm z-10 shadow-[-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
                     Action
                   </TableHead>
                 </TableRow>
@@ -1440,40 +1534,52 @@ export default function AdminWhatsAppLeads() {
                         isNew ? "bg-blue-50/20" : ""
                       }`}
                     >
-                      {/* Buyer Name & Country */}
-                      <TableCell className="align-top py-3">
-                        <div className="font-semibold text-slate-900 text-sm flex items-center gap-1.5">
+                      {/* Buyer Name & Source */}
+                      <TableCell className="align-middle py-2.5 pl-4">
+                        <div
+                          className="font-semibold text-slate-900 text-xs flex items-center gap-1.5 truncate max-w-[165px]"
+                          title={lead.name}
+                        >
                           {isNew && (
                             <span
                               className="w-2 h-2 rounded-full bg-blue-500 animate-pulse flex-shrink-0"
                               title="New Uncontacted Lead"
                             />
                           )}
-                          <span>{lead.name}</span>
+                          <span className="truncate">{lead.name}</span>
                         </div>
-                        <div className="flex items-center gap-1.5 text-xs text-slate-500 mt-0.5">
-                          <Globe className="w-3 h-3 text-slate-400" />
-                          <span>{lead.country || "Global Buyer"}</span>
+                        <div className="flex items-center gap-1 mt-0.5">
+                          <span className="text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-medium border border-slate-200/50 truncate max-w-[140px]">
+                            {lead.source}
+                          </span>
                         </div>
-                        {lead.email && (
-                          <div className="text-[11px] text-slate-400 truncate max-w-[170px]">
-                            {lead.email}
-                          </div>
-                        )}
+                      </TableCell>
+
+                      {/* Country (Dedicated Column with Flag) */}
+                      <TableCell className="align-middle py-2.5">
+                        <div
+                          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200/60 max-w-[120px] truncate"
+                          title={lead.country || "India"}
+                        >
+                          <span className="text-sm leading-none flex-shrink-0">
+                            {getCountryFlag(lead.country)}
+                          </span>
+                          <span className="truncate">{lead.country || "India"}</span>
+                        </div>
                       </TableCell>
 
                       {/* WhatsApp / Phone */}
-                      <TableCell className="align-top py-3">
-                        <div className="font-mono text-xs font-semibold text-slate-800">
+                      <TableCell className="align-middle py-2.5">
+                        <div className="font-mono text-xs font-semibold text-slate-800 truncate">
                           {formatPhoneNumber(lead.whatsapp)}
                         </div>
-                        <div className="flex items-center gap-2 mt-1">
+                        <div className="flex items-center gap-2 mt-0.5">
                           <a
                             href={`tel:${sanitizeWhatsAppNumber(lead.whatsapp)}`}
-                            className="inline-flex items-center gap-1 text-[11px] text-slate-500 hover:text-primary transition-colors"
+                            className="inline-flex items-center gap-0.5 text-[10px] text-slate-500 hover:text-primary transition-colors"
                             title="Call Phone"
                           >
-                            <PhoneCall className="w-3 h-3 text-slate-400" /> Call
+                            <PhoneCall className="w-2.5 h-2.5 text-slate-400" /> Call
                           </a>
                           <button
                             onClick={() => {
@@ -1482,16 +1588,16 @@ export default function AdminWhatsAppLeads() {
                               );
                               toast.success("Phone copied!");
                             }}
-                            className="inline-flex items-center gap-0.5 text-[11px] text-slate-400 hover:text-slate-600"
+                            className="inline-flex items-center gap-0.5 text-[10px] text-slate-400 hover:text-slate-600"
                             title="Copy number"
                           >
-                            <Copy className="w-2.5 h-2.5" />
+                            <Copy className="w-2.5 h-2.5" /> Copy
                           </button>
                         </div>
                       </TableCell>
 
                       {/* Pipeline Stage Select */}
-                      <TableCell className="align-top py-3">
+                      <TableCell className="align-middle py-2.5">
                         <Select
                           value={lead.pipelineStage}
                           onValueChange={(val) =>
@@ -1499,7 +1605,7 @@ export default function AdminWhatsAppLeads() {
                           }
                         >
                           <SelectTrigger
-                            className={`h-7 text-xs font-semibold border ${stageStyle.bg} ${stageStyle.text} ${stageStyle.border} rounded-md`}
+                            className={`h-7 text-xs font-semibold border ${stageStyle.bg} ${stageStyle.text} ${stageStyle.border} rounded-md w-[120px]`}
                           >
                             <SelectValue />
                           </SelectTrigger>
@@ -1513,18 +1619,8 @@ export default function AdminWhatsAppLeads() {
                         </Select>
                       </TableCell>
 
-                      {/* Source */}
-                      <TableCell className="align-top py-3">
-                        <Badge
-                          variant="secondary"
-                          className="text-[10px] font-medium bg-slate-100 text-slate-700 border-none"
-                        >
-                          {lead.source}
-                        </Badge>
-                      </TableCell>
-
                       {/* Requirement & Notes Preview */}
-                      <TableCell className="align-top py-3">
+                      <TableCell className="align-middle py-2.5">
                         <div
                           onClick={() => {
                             setActiveLeadForNotes(lead);
@@ -1535,11 +1631,11 @@ export default function AdminWhatsAppLeads() {
                           title="Click to view/edit notes"
                         >
                           {lead.requirement && (
-                            <p className="text-xs text-slate-700 font-medium line-clamp-1">
+                            <p className="text-xs text-slate-700 font-medium truncate">
                               {lead.requirement}
                             </p>
                           )}
-                          <p className="text-[11px] text-slate-500 line-clamp-1 italic group-hover:text-primary transition-colors flex items-center gap-1 mt-0.5">
+                          <p className="text-[11px] text-slate-500 truncate italic group-hover:text-primary transition-colors flex items-center gap-1">
                             <FileText className="w-2.5 h-2.5 flex-shrink-0 text-slate-400" />
                             {lead.notes
                               ? lead.notes
@@ -1549,11 +1645,11 @@ export default function AdminWhatsAppLeads() {
                       </TableCell>
 
                       {/* Last Contacted */}
-                      <TableCell className="align-top py-3 text-xs text-slate-500">
+                      <TableCell className="align-middle py-2.5 text-xs text-slate-500">
                         {lead.lastContactedAt ? (
-                          <div className="flex items-center gap-1 text-slate-600">
-                            <Clock className="w-3 h-3 text-slate-400" />
-                            <span>
+                          <div className="flex items-center gap-1 text-slate-600 text-[11px]">
+                            <Clock className="w-3 h-3 text-slate-400 flex-shrink-0" />
+                            <span className="truncate">
                               {new Date(lead.lastContactedAt).toLocaleDateString(
                                 undefined,
                                 { month: "short", day: "numeric" }
@@ -1567,13 +1663,13 @@ export default function AdminWhatsAppLeads() {
                         )}
                       </TableCell>
 
-                      {/* Actions: Direct WhatsApp Chat */}
-                      <TableCell className="align-top py-3 text-right">
+                      {/* Actions: Direct WhatsApp Chat & Delete (Sticky Right) */}
+                      <TableCell className="align-middle py-2.5 text-right pr-4 sticky right-0 bg-white/95 backdrop-blur-sm z-10 shadow-[-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
                         <div className="flex items-center justify-end gap-1.5">
                           <Button
                             onClick={() => handleOpenWhatsApp(lead)}
                             size="sm"
-                            className="bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs h-8 px-3 shadow-sm rounded-lg flex items-center gap-1.5"
+                            className="bg-[#25D366] hover:bg-[#20ba59] text-white font-semibold text-xs h-7 px-2.5 shadow-sm rounded-md flex items-center gap-1 flex-shrink-0"
                             title="Single-click to open chat on WhatsApp"
                           >
                             <MessageCircle className="w-3.5 h-3.5 fill-current" />
@@ -1582,7 +1678,7 @@ export default function AdminWhatsAppLeads() {
 
                           <button
                             onClick={() => handleDeleteLead(lead)}
-                            className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-md transition-colors"
+                            className="p-1.5 text-slate-400 hover:text-rose-600 hover:bg-rose-50 rounded-md transition-colors flex-shrink-0"
                             title="Delete Lead"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
