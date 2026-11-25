@@ -128,6 +128,7 @@ export default function AdminDashboard() {
       {/* Quick Actions */}
       <div className="flex flex-wrap gap-2 mb-5">
         {[
+          { label: "💬 WhatsApp Leads", to: "/admin/whatsapp-leads", color: "#128C7E" },
           { label: "Add Product", to: "/admin/products", color: "#1A237E" },
           { label: "View Inquiries", to: "/admin/inquiries", color: "#2e7d32" },
           { label: "Add Blog Post", to: "/admin/blog", color: "#e65100" },

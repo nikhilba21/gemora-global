@@ -35,6 +35,7 @@ const NAV_GROUPS: NavGroup[] = [
     title: "COMMERCE",
     items: [
       { label: "Orders", to: "/admin/orders", icon: "🛒" },
+      { label: "WhatsApp Leads & CRM", to: "/admin/whatsapp-leads", icon: "💬" },
       { label: "Customers / CRM", to: "/admin/customers", icon: "👥" },
       { label: "Enquiries", to: "/admin/inquiries", icon: "📨" },
       { label: "Marketing", to: "/admin/marketing", icon: "📣" },
