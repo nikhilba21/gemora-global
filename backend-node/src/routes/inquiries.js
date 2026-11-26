@@ -236,11 +236,37 @@ router.patch('/:id/status', requireAdmin, async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-router.patch('/:id/crm', requireAdmin, async (req, res) => {
+router.put('/:id', requireAdmin, async (req, res) => {
   try {
-    const { source, qualified, pipelineStage, assignedTo } = req.body;
+    const { name, whatsapp, country, requirement, source, pipelineStage, qualified, assignedTo } = req.body;
     const updates = [];
     const params = [];
+    if (name !== undefined) { params.push(name); updates.push(`name=$${params.length}`); }
+    if (whatsapp !== undefined) { params.push(whatsapp); updates.push(`whatsapp=$${params.length}`); }
+    if (country !== undefined) { params.push(country); updates.push(`country=$${params.length}`); }
+    if (requirement !== undefined) { params.push(requirement); updates.push(`requirement=$${params.length}`); }
+    if (source !== undefined) { params.push(source); updates.push(`source=$${params.length}`); }
+    if (pipelineStage !== undefined) { params.push(pipelineStage); updates.push(`"pipelineStage"=$${params.length}`); }
+    if (qualified !== undefined) { params.push(qualified); updates.push(`qualified=$${params.length}`); }
+    if (assignedTo !== undefined) { params.push(assignedTo); updates.push(`"assignedTo"=$${params.length}`); }
+    
+    if (updates.length === 0) return res.json({ success: true, message: 'no fields to update' });
+    
+    params.push(req.params.id);
+    await query(`UPDATE inquiries SET ${updates.join(', ')} WHERE id=$${params.length}`, params);
+    res.json({ success: true });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+router.patch('/:id/crm', requireAdmin, async (req, res) => {
+  try {
+    const { name, whatsapp, country, requirement, source, qualified, pipelineStage, assignedTo } = req.body;
+    const updates = [];
+    const params = [];
+    if (name !== undefined) { params.push(name); updates.push(`name=$${params.length}`); }
+    if (whatsapp !== undefined) { params.push(whatsapp); updates.push(`whatsapp=$${params.length}`); }
+    if (country !== undefined) { params.push(country); updates.push(`country=$${params.length}`); }
+    if (requirement !== undefined) { params.push(requirement); updates.push(`requirement=$${params.length}`); }
     if (source !== undefined) { params.push(source); updates.push(`source=$${params.length}`); }
     if (qualified !== undefined) { params.push(qualified); updates.push(`qualified=$${params.length}`); }
     if (pipelineStage !== undefined) { params.push(pipelineStage); updates.push(`"pipelineStage"=$${params.length}`); }

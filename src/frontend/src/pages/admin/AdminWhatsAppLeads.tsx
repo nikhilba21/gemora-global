@@ -214,6 +214,13 @@ export function formatPhoneNumber(num: string): string {
   return `+${clean}`;
 }
 
+// Helper: Normalized deduplication key (last 10 digits if >= 10, else all digits)
+export function getPhoneDedupeKey(phone: string): string {
+  if (!phone) return "";
+  const digits = phone.replace(/\D/g, "");
+  return digits.length >= 10 ? digits.slice(-10) : digits;
+}
+
 // Helper: Auto-detect Country from phone number prefix
 export function detectCountryFromPhone(phone: string): string {
   if (!phone) return "India";
@@ -482,6 +489,18 @@ export default function AdminWhatsAppLeads() {
   const [activeLeadForNotes, setActiveLeadForNotes] =
     useState<WhatsAppLead | null>(null);
   const [tempNotes, setTempNotes] = useState("");
+
+  // Edit Lead Modal States
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editingLead, setEditingLead] = useState<WhatsAppLead | null>(null);
+  const [editForm, setEditForm] = useState({
+    name: "",
+    whatsapp: "",
+    country: "India",
+    requirement: "",
+    pipelineStage: "New" as PipelineStage,
+    source: "WhatsApp Direct",
+  });
 
   // WhatsApp Auto-Sync Modal States
   const [isAutoSyncModalOpen, setIsAutoSyncModalOpen] = useState(false);
@@ -895,6 +914,84 @@ export default function AdminWhatsAppLeads() {
       pipelineStage: "New",
       notes: "",
     });
+  };
+
+  // Open Edit Modal for a Lead
+  const handleOpenEditModal = (lead: WhatsAppLead) => {
+    setEditingLead(lead);
+    setEditForm({
+      name: lead.name,
+      whatsapp: lead.whatsapp,
+      country: lead.country || detectCountryFromPhone(lead.whatsapp) || "India",
+      requirement: lead.requirement || "",
+      pipelineStage: lead.pipelineStage || "New",
+      source: lead.source || "WhatsApp Direct",
+    });
+    setIsEditModalOpen(true);
+  };
+
+  // Save Edited Lead (Updates Name, Phone Number, Country, Requirement, Stage)
+  const handleSaveEditLead = async () => {
+    if (!editingLead) return;
+    if (!editForm.name.trim() || !editForm.whatsapp.trim()) {
+      toast.error("Name and Phone number are required");
+      return;
+    }
+
+    const oldPhoneKey = getPhoneDedupeKey(editingLead.whatsapp);
+    const newPhoneKey = getPhoneDedupeKey(editForm.whatsapp);
+    const detectedCountry = editForm.country || detectCountryFromPhone(editForm.whatsapp) || "India";
+
+    // 1. If backend ID exists, update backend database
+    if (editingLead.id && !String(editingLead.id).startsWith("lead_") && !String(editingLead.id).startsWith("sync_")) {
+      try {
+        await api.updateInquiry(Number(editingLead.id), {
+          name: editForm.name.trim(),
+          whatsapp: editForm.whatsapp.trim(),
+          country: detectedCountry,
+          requirement: editForm.requirement.trim(),
+          pipelineStage: editForm.pipelineStage,
+          source: editForm.source,
+        });
+        qc.invalidateQueries({ queryKey: ["inquiries"] });
+      } catch (err: any) {
+        console.warn("Backend update failed, falling back to local update", err);
+      }
+    }
+
+    // 2. Update customLeads in local storage
+    const updatedCustom = customLeads.map((cl) => {
+      const clKey = getPhoneDedupeKey(cl.whatsapp);
+      if (clKey === oldPhoneKey || cl.id === editingLead.id) {
+        return {
+          ...cl,
+          name: editForm.name.trim(),
+          whatsapp: editForm.whatsapp.trim(),
+          country: detectedCountry,
+          requirement: editForm.requirement.trim(),
+          pipelineStage: editForm.pipelineStage,
+        };
+      }
+      return cl;
+    });
+
+    if (!updatedCustom.some((cl) => getPhoneDedupeKey(cl.whatsapp) === newPhoneKey || cl.id === editingLead.id)) {
+      updatedCustom.push({
+        ...editingLead,
+        name: editForm.name.trim(),
+        whatsapp: editForm.whatsapp.trim(),
+        country: detectedCountry,
+        requirement: editForm.requirement.trim(),
+        pipelineStage: editForm.pipelineStage,
+      });
+    }
+
+    persistCustomLeads(updatedCustom);
+    qc.invalidateQueries({ queryKey: ["inquiries"] });
+
+    toast.success(`Updated ${editForm.name}'s details successfully!`);
+    setIsEditModalOpen(false);
+    setEditingLead(null);
   };
 
   // Save Notes for Lead
@@ -1856,8 +1953,9 @@ export default function AdminWhatsAppLeads() {
                       {/* Buyer Name & Source */}
                       <TableCell className="align-middle py-2.5 pl-4">
                         <div
-                          className="font-semibold text-slate-900 text-xs flex items-center gap-1.5 truncate max-w-[165px]"
-                          title={lead.name}
+                          onClick={() => handleOpenEditModal(lead)}
+                          className="font-semibold text-slate-900 text-xs flex items-center gap-1.5 truncate max-w-[165px] group/name cursor-pointer"
+                          title="Click to edit Name & WhatsApp Number"
                         >
                           {isNew && (
                             <span
@@ -1865,7 +1963,10 @@ export default function AdminWhatsAppLeads() {
                               title="New Uncontacted Lead"
                             />
                           )}
-                          <span className="truncate">{lead.name}</span>
+                          <span className="truncate group-hover/name:text-blue-600 group-hover/name:underline">
+                            {lead.name}
+                          </span>
+                          <Edit3 className="w-3 h-3 text-slate-300 opacity-0 group-hover/name:opacity-100 text-blue-500 transition-opacity flex-shrink-0" />
                         </div>
                         <div className="flex items-center gap-1 mt-0.5">
                           <span className="text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded font-medium border border-slate-200/50 truncate max-w-[140px]">
@@ -1877,8 +1978,9 @@ export default function AdminWhatsAppLeads() {
                       {/* Country (Dedicated Column with Flag) */}
                       <TableCell className="align-middle py-2.5">
                         <div
-                          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200/60 max-w-[120px] truncate"
-                          title={lead.country || "India"}
+                          onClick={() => handleOpenEditModal(lead)}
+                          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-semibold bg-slate-100 hover:bg-slate-200/70 text-slate-800 border border-slate-200/60 max-w-[120px] truncate cursor-pointer transition-colors"
+                          title="Click to edit Country & details"
                         >
                           <span className="text-sm leading-none flex-shrink-0">
                             {getCountryFlag(lead.country)}
@@ -1889,8 +1991,15 @@ export default function AdminWhatsAppLeads() {
 
                       {/* WhatsApp / Phone */}
                       <TableCell className="align-middle py-2.5">
-                        <div className="font-mono text-xs font-semibold text-slate-800 truncate">
-                          {formatPhoneNumber(lead.whatsapp)}
+                        <div
+                          onClick={() => handleOpenEditModal(lead)}
+                          className="font-mono text-xs font-semibold text-slate-800 truncate flex items-center gap-1.5 group/phone cursor-pointer"
+                          title="Click to edit Name & WhatsApp Number"
+                        >
+                          <span className="group-hover/phone:text-blue-600 group-hover/phone:underline">
+                            {formatPhoneNumber(lead.whatsapp)}
+                          </span>
+                          <Edit3 className="w-3 h-3 text-slate-300 opacity-0 group-hover/phone:opacity-100 text-blue-500 transition-opacity flex-shrink-0" />
                         </div>
                         <div className="flex items-center gap-2 mt-0.5">
                           <a
@@ -1982,7 +2091,7 @@ export default function AdminWhatsAppLeads() {
                         )}
                       </TableCell>
 
-                      {/* Actions: Direct WhatsApp Chat & Delete (Sticky Right) */}
+                      {/* Actions: Direct WhatsApp Chat, Edit & Delete (Sticky Right) */}
                       <TableCell className="align-middle py-2.5 text-right pr-4 sticky right-0 bg-white/95 backdrop-blur-sm z-10 shadow-[-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
                         <div className="flex items-center justify-end gap-1.5">
                           <Button
@@ -1994,6 +2103,14 @@ export default function AdminWhatsAppLeads() {
                             <MessageCircle className="w-3.5 h-3.5 fill-current" />
                             Chat
                           </Button>
+
+                          <button
+                            onClick={() => handleOpenEditModal(lead)}
+                            className="p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors flex-shrink-0"
+                            title="Edit Name, Phone & Details"
+                          >
+                            <Edit3 className="w-3.5 h-3.5" />
+                          </button>
 
                           <button
                             onClick={() => handleDeleteLead(lead)}
@@ -2804,6 +2921,153 @@ export default function AdminWhatsAppLeads() {
               Close
             </Button>
           </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* MODAL: Edit Lead (Name, WhatsApp Number, Country, Requirement, Stage) */}
+      <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-lg font-bold text-slate-900">
+              <span className="p-1.5 bg-blue-100 text-blue-700 rounded-lg text-base">
+                ✏️
+              </span>
+              Edit Lead Details
+            </DialogTitle>
+            <DialogDescription className="text-xs text-slate-500">
+              Update buyer name, WhatsApp phone number, country, and requirement details.
+            </DialogDescription>
+          </DialogHeader>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSaveEditLead();
+            }}
+            className="space-y-3.5 py-2"
+          >
+            {/* Buyer Name */}
+            <div>
+              <label className="text-xs font-semibold text-slate-700 block mb-1">
+                Buyer / Customer Name <span className="text-rose-500">*</span>
+              </label>
+              <Input
+                required
+                value={editForm.name}
+                onChange={(e) =>
+                  setEditForm({ ...editForm, name: e.target.value })
+                }
+                placeholder="e.g. Pooja Sharma / Dubai Boutique"
+                className="text-xs h-9"
+              />
+            </div>
+
+            {/* WhatsApp / Phone Number */}
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="text-xs font-semibold text-slate-700">
+                  WhatsApp / Phone Number <span className="text-rose-500">*</span>
+                </label>
+                {editForm.whatsapp && (
+                  <span className="text-[11px] font-mono text-slate-500">
+                    Preview: {formatPhoneNumber(editForm.whatsapp)}
+                  </span>
+                )}
+              </div>
+              <Input
+                required
+                value={editForm.whatsapp}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  const detected = detectCountryFromPhone(val);
+                  setEditForm({
+                    ...editForm,
+                    whatsapp: val,
+                    country: detected && detected !== "International" ? detected : editForm.country,
+                  });
+                }}
+                placeholder="e.g. +91 98765 43210 or +971 50 123 4567"
+                className="text-xs h-9 font-mono"
+              />
+            </div>
+
+            {/* Country & Pipeline Stage in 2 Columns */}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
+                  Country ({getCountryFlag(editForm.country)})
+                </label>
+                <Input
+                  value={editForm.country}
+                  onChange={(e) =>
+                    setEditForm({ ...editForm, country: e.target.value })
+                  }
+                  placeholder="e.g. India, UAE, USA"
+                  className="text-xs h-9"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-semibold text-slate-700 block mb-1">
+                  Pipeline Stage
+                </label>
+                <Select
+                  value={editForm.pipelineStage}
+                  onValueChange={(val) =>
+                    setEditForm({
+                      ...editForm,
+                      pipelineStage: val as PipelineStage,
+                    })
+                  }
+                >
+                  <SelectTrigger className="h-9 text-xs">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {PIPELINE_STAGES.map((st) => (
+                      <SelectItem key={st} value={st} className="text-xs">
+                        {STAGE_CONFIG[st].icon} {st}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Requirement / Inquiry Details */}
+            <div>
+              <label className="text-xs font-semibold text-slate-700 block mb-1">
+                Inquiry Requirement / Message
+              </label>
+              <Textarea
+                rows={3}
+                value={editForm.requirement}
+                onChange={(e) =>
+                  setEditForm({ ...editForm, requirement: e.target.value })
+                }
+                placeholder="Customer requirement, designs requested, catalog, etc."
+                className="text-xs font-sans"
+              />
+            </div>
+
+            <DialogFooter className="pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => setIsEditModalOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                size="sm"
+                className="bg-[#1A237E] hover:bg-[#111868] text-white font-medium"
+              >
+                Save Changes
+              </Button>
+            </DialogFooter>
+          </form>
         </DialogContent>
       </Dialog>
     </AdminLayout>
