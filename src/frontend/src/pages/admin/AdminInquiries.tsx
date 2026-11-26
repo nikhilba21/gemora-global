@@ -28,7 +28,7 @@ import { useState } from 'react';
 import { toast } from "sonner";
 import AdminLayout from "../../components/AdminLayout";
 import type { Inquiry } from "../../types";
-import { ExternalLink, MessageCircle, User, Globe, Phone, FileText } from "lucide-react";
+import { ExternalLink, MessageCircle, User, Globe, Phone, FileText, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 
 const STATUS_COLORS: Record<string, string> = {
   new: "bg-blue-500/20 text-blue-600 border-blue-500/30",
@@ -39,6 +39,8 @@ const STATUS_COLORS: Record<string, string> = {
 export default function AdminInquiries() {
   const qc = useQueryClient();
   const [selectedInquiry, setSelectedInquiry] = useState<Inquiry | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 20;
 
   const { data: rawInquiries } = useQuery<Inquiry[]>({
     queryKey: ["inquiries"],
@@ -46,6 +48,8 @@ export default function AdminInquiries() {
     enabled: true,
   });
   const inquiries = Array.isArray(rawInquiries) ? rawInquiries : ((rawInquiries as any)?.items || []);
+  const totalPages = Math.max(1, Math.ceil(inquiries.length / pageSize));
+  const paginatedInquiries = inquiries.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   const crmMut = useMutation({
     mutationFn: ({ id, data }: { id: bigint; data: Partial<Inquiry> }) =>
@@ -67,7 +71,7 @@ export default function AdminInquiries() {
       <div className="flex items-center justify-between mb-6">
         <h1 className="font-serif text-2xl font-bold text-primary">CRM / Lead Pipeline</h1>
         <Badge variant="outline" className="text-muted-foreground">
-          {inquiries.length} Inquiries
+          {inquiries.length} Inquiries (Page {currentPage} of {totalPages})
         </Badge>
       </div>
 
@@ -84,7 +88,7 @@ export default function AdminInquiries() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {inquiries?.map((inq, i) => (
+            {paginatedInquiries?.map((inq, i) => (
               <TableRow 
                 key={String(inq.id)} 
                 className="hover:bg-slate-50 cursor-pointer transition-colors border-b"
@@ -172,6 +176,56 @@ export default function AdminInquiries() {
             )}
           </TableBody>
         </Table>
+
+        {/* Pagination Bar */}
+        {inquiries.length > pageSize && (
+          <div className="flex items-center justify-between px-4 py-3 bg-slate-50 border-t border-border text-xs">
+            <span className="text-slate-600">
+              Showing <strong>{(currentPage - 1) * pageSize + 1}</strong> to <strong>{Math.min(currentPage * pageSize, inquiries.length)}</strong> of <strong>{inquiries.length}</strong> inquiries
+            </span>
+            <div className="flex items-center gap-1">
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage <= 1}
+                onClick={() => setCurrentPage(1)}
+                className="h-7 w-7 p-0"
+              >
+                <ChevronsLeft className="w-3.5 h-3.5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage <= 1}
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                className="h-7 px-2 text-xs flex items-center gap-1"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" /> Prev
+              </Button>
+              <span className="px-2 font-semibold text-slate-700">
+                {currentPage} / {totalPages}
+              </span>
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage >= totalPages}
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                className="h-7 px-2 text-xs flex items-center gap-1"
+              >
+                Next <ChevronRight className="w-3.5 h-3.5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                disabled={currentPage >= totalPages}
+                onClick={() => setCurrentPage(totalPages)}
+                className="h-7 w-7 p-0"
+              >
+                <ChevronsRight className="w-3.5 h-3.5" />
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Detail Popup */}

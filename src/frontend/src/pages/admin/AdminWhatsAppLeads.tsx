@@ -52,6 +52,10 @@ import {
   HelpCircle,
   ExternalLink,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
   Layers,
   PhoneCall,
   Flame,
@@ -481,6 +485,10 @@ export default function AdminWhatsAppLeads() {
   const [selectedSource, setSelectedSource] = useState<string>("ALL");
   const [selectedCountry, setSelectedCountry] = useState<string>("ALL");
 
+  // Pagination states (20 leads per page by default)
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState<number>(20);
+
   // Modals
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
@@ -751,6 +759,44 @@ export default function AdminWhatsAppLeads() {
       return true;
     });
   }, [allLeads, selectedStage, selectedSource, selectedCountry, searchQuery]);
+
+  // Reset to first page when search filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedStage, selectedSource, selectedCountry, pageSize]);
+
+  // Total pages calculation (guaranteed >= 1)
+  const totalPages = Math.max(1, Math.ceil(filteredLeads.length / pageSize));
+
+  // Ensure current page is valid when total pages changes
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [totalPages, currentPage]);
+
+  // Sliced leads for the active page (default 20 per page)
+  const paginatedLeads = useMemo(() => {
+    const startIndex = (currentPage - 1) * pageSize;
+    return filteredLeads.slice(startIndex, startIndex + pageSize);
+  }, [filteredLeads, currentPage, pageSize]);
+
+  // Intelligent page numbers list with ellipsis
+  const pageNumbers = useMemo(() => {
+    const pages: (number | "...")[] = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if (currentPage > 3) pages.push("...");
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+      for (let i = start; i <= end; i++) pages.push(i);
+      if (currentPage < totalPages - 2) pages.push("...");
+      pages.push(totalPages);
+    }
+    return pages;
+  }, [totalPages, currentPage]);
 
   // Summary Metrics
   const metrics = useMemo(() => {
@@ -1872,6 +1918,14 @@ export default function AdminWhatsAppLeads() {
                 Reset
               </Button>
             )}
+
+            {filteredLeads.length > 0 && (
+              <span className="text-[11px] font-medium text-slate-500 bg-slate-100 border border-slate-200 px-2.5 py-1.5 rounded-md hidden md:inline-flex items-center gap-1.5 shadow-sm">
+                <span>Page <strong className="text-slate-800 font-semibold">{currentPage}</strong> of <strong className="text-slate-800 font-semibold">{totalPages}</strong></span>
+                <span className="text-slate-300">•</span>
+                <span>{filteredLeads.length} leads</span>
+              </span>
+            )}
           </div>
         </div>
 
@@ -1938,7 +1992,7 @@ export default function AdminWhatsAppLeads() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {filteredLeads.map((lead) => {
+                {paginatedLeads.map((lead) => {
                   const stageStyle =
                     STAGE_CONFIG[lead.pipelineStage] || STAGE_CONFIG["New"];
                   const isNew = lead.pipelineStage === "New";
@@ -2126,6 +2180,115 @@ export default function AdminWhatsAppLeads() {
                 })}
               </TableBody>
             </Table>
+
+            {/* Pagination Controls Bar */}
+            {filteredLeads.length > 0 && (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 px-4 py-3 bg-slate-50/90 border-t border-slate-200 text-xs select-none">
+                <div className="flex items-center gap-3 text-slate-600">
+                  <span>
+                    Showing{" "}
+                    <strong className="text-slate-900 font-semibold">
+                      {(currentPage - 1) * pageSize + 1}
+                    </strong>{" "}
+                    to{" "}
+                    <strong className="text-slate-900 font-semibold">
+                      {Math.min(currentPage * pageSize, filteredLeads.length)}
+                    </strong>{" "}
+                    of{" "}
+                    <strong className="text-slate-900 font-semibold">
+                      {filteredLeads.length}
+                    </strong>{" "}
+                    leads
+                  </span>
+                  <span className="text-slate-300">|</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-slate-500">Per page:</span>
+                    <select
+                      value={pageSize}
+                      onChange={(e) => {
+                        setPageSize(Number(e.target.value));
+                        setCurrentPage(1);
+                      }}
+                      className="h-7 text-xs bg-white border border-slate-200 rounded px-2 py-0.5 text-slate-700 font-semibold focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer shadow-sm"
+                    >
+                      <option value={20}>20 leads</option>
+                      <option value={50}>50 leads</option>
+                      <option value={100}>100 leads</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Page Navigation */}
+                <div className="flex items-center gap-1">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={currentPage <= 1}
+                    onClick={() => setCurrentPage(1)}
+                    className="h-7 w-7 p-0 text-slate-600 disabled:opacity-40"
+                    title="First Page"
+                  >
+                    <ChevronsLeft className="w-3.5 h-3.5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={currentPage <= 1}
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    className="h-7 px-2.5 text-xs flex items-center gap-1 text-slate-600 disabled:opacity-40"
+                  >
+                    <ChevronLeft className="w-3.5 h-3.5" />
+                    Prev
+                  </Button>
+
+                  {/* Page Numbers */}
+                  <div className="flex items-center gap-1 mx-1">
+                    {pageNumbers.map((p, idx) =>
+                      p === "..." ? (
+                        <span key={`dots-${idx}`} className="px-1.5 text-slate-400 font-medium select-none">
+                          ...
+                        </span>
+                      ) : (
+                        <Button
+                          key={`page-${p}`}
+                          variant={currentPage === p ? "default" : "outline"}
+                          size="sm"
+                          onClick={() => setCurrentPage(Number(p))}
+                          className={`h-7 min-w-[28px] px-2 text-xs font-semibold ${
+                            currentPage === p
+                              ? "bg-[#1A237E] hover:bg-[#111868] text-white shadow-sm"
+                              : "text-slate-700 hover:bg-slate-100"
+                          }`}
+                        >
+                          {p}
+                        </Button>
+                      )
+                    )}
+                  </div>
+
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={currentPage >= totalPages}
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    className="h-7 px-2.5 text-xs flex items-center gap-1 text-slate-600 disabled:opacity-40"
+                  >
+                    Next
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={currentPage >= totalPages}
+                    onClick={() => setCurrentPage(totalPages)}
+                    className="h-7 w-7 p-0 text-slate-600 disabled:opacity-40"
+                    title="Last Page"
+                  >
+                    <ChevronsRight className="w-3.5 h-3.5" />
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
